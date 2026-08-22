@@ -4509,3 +4509,65 @@ single-family scale.
 - Marital-consolidation shape: (H+W) → H alone; the mirror of run 18's
   H → W. Family title rearrangements come in both directions; both are
   NOMINAL-class non-sales.
+
+# RANDOM-DOCUMENT RUN 24 — RC_1051736 · DEED MADE 1910, RECORDED 1918
+
+2 pages, printed Wood-Harmon form deed (Vol 396 pp.543-544) — THE SAME
+SUBDIVISION AS RUN 12 (South New York, Addition Number Four, Map
+995-B; same officers Leonidas Keever VP / J.H. Storer Secretary; same
+printed covenant scheme; same 1915-01-01 sunset). Made 1910-03-22, ack
+1910-03-29 (James N. Dunlop, Commissioner of Deeds, NY County),
+RECORDED 1918-01-03 — an EIGHT-YEAR recording delay. WOOD HARMON
+RICHMOND REALTY COMPANY → JOHN DEVINCENZO (of the City and State of
+New York; return "For Grantee, 31 Le Roy St. N.Y.C."), lots 48+49 in
+Block 408 (Decatur Avenue at Caswell Avenue, 40x100 each... two lots
+40-ft combined frontage), $1 recital, min-cost covenants $2,500
+one-family / $3,500 double — HIGHER than run 12's $2,000/$3,000: the
+scheme's parameters were priced PER DEED, not uniform across the
+subdivision.
+
+## R24-1 — THE EIGHT-YEAR RECORDING GAP (recording date is a filing fact)
+
+Made 1910, recorded 1918. The lag family now spans: 2 days (run 18) →
+22 days (run 23) → 58 days (run 17) → EIGHT YEARS. Consequences:
+(1) chronology keyed on recording dates misdates this transfer by
+nearly a decade — the event date is the instrument's, the recording
+date is only when the county learned of it; (2) the covenant scheme
+EXPIRED (1915 sunset) between execution and recording — the deed
+entered the record already carrying dead restrictions; an
+extraction that stamps state-at-recording must evaluate terms against
+BOTH clocks; (3) the By Document year-tree files by RECORDING date
+(this 1910 event lives in the 1918 folder) — corpus-level: era
+sampling by folder year samples recording eras, not event eras.
+
+## R24-2 — TEMPLATE CORPUS CONFIRMED (same form, different fills)
+
+Random draw hit the same Wood-Harmon printed form twice in 13 runs
+(12: lots 15+16 block 4?2, Emma Walden, $2,000/$3,000; 24: lots 48+49
+block 408, John Devincenzo, $2,500/$3,500). The printed text is
+IDENTICAL; only the fills differ. At-scale extraction consequence: the
+subdivision's hundreds of deeds are one TEMPLATE plus per-deed fills —
+dedupe the boilerplate, diff the blanks, and the per-deed cost
+collapses; the fills that vary (min-cost!) are exactly the data. Also
+strengthens R12-3: rd keys these plan lots as tax lots 48/49 in block
+408 — second same-numbered adoption in this subdivision.
+
+## CONFIRMATIONS
+
+- rd: key 5004080048;5004080049 ✓ book 396/page 543 ✓ recorded
+  1/3/1918 ✓ · ZERO party fields (pre-war boundary holds) · amount
+  $0.00 · instrument blank.
+- Vol 396 spans runs 12 (p.339, rec. 1912) and 24 (p.543, rec. 1918) —
+  a liber is a shelf that fills across YEARS; volume number alone does
+  not date a document.
+- No stamps: the instrument is a 1910 conveyance (R12-2's no-witness
+  era) — the 1918 recording did not retro-stamp it; price
+  unavailable-by-era, second confirmed member.
+- Printed-form strikethroughs ("or intended to be filed" struck — the
+  map WAS by then filed; the assessments-lien clause struck) — the
+  form predates the map filing; even boilerplate carries date
+  evidence.
+- Person-scale: Keever resides Brooklyn (consistent with run 12);
+  developer's right-to-build-bigger reserved on the same named
+  streets (Richmond Turnpike, Merrill Avenue, Watchogue Road, Wyona
+  Avenue) — the subdivision's master plan restated verbatim.
