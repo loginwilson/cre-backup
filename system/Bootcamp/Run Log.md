@@ -13,3 +13,4 @@ run 15 · RC_1023 · 2026-08-22 · 5/5 pages · 0 new columns · streak 12 · 19
 run 16 · FT_2750004791475 · 2026-08-22 · 5/5 pages · 0 new columns · streak 13 · first OCCUPANCY + first Bronx + G-037 exercised · reader: fable-5 direct-pdf
 run 17 · RC_2825423 · 2026-08-22 · 7/7 pages · 0 new columns · streak 14 · 2026 freshness frontier + trust transfer + true-zero price · reader: fable-5 direct-pdf
 run 18 · BK_6620005200246 · 2026-08-22 · 3/3 pages · 0 new columns · streak 15 · BK_ namespace decoded + backer recovery + cut frame · reader: fable-5 direct-pdf
+run 19 · RC_1024032 · 2026-08-22 · 4/4 pages · 0 new columns · streak 16 · 1951 warranty deed + stamp read at 400dpi + block-suffix namespace · reader: fable-5 direct-pdf

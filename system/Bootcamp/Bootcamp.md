@@ -4161,3 +4161,75 @@ date. Two-day gap here; run 17 showed 58 days — the gap is real data.
 - True-zero non-sale, 1966 edition: interspousal, $10, no tax — the
   NOMINAL flag's ancestor; family transfers look identical across six
   decades and two boroughs.
+
+# RANDOM-DOCUMENT RUN 19 — RC_1024032 · WARRANTY DEED · 1951
+
+4 pages, typed liber transcription (Liber 1168 pp.497-500), Statutory
+Form A (Title Guarantee and Trust Co). Made 1951-08-24, ack same day
+(notary S. Robert Molinari, Richmond, term expires 1952-03-30),
+recorded 1951-08-28 10:24 AM: EUGENE REYNOLDS (180 Dongan Street, West
+Brighton) → GEORGE J. LOOS and MARY E. LOOS, his wife (24 Sterling
+Ave., New Dorp) — lots 56 and 57 on "Map of New Dorp Park" (H. S.
+Thomson and Son, filed 1925-05-19 as Map No. 1484), block 939-A on the
+map / indexed under 939-L / rd key block 939. $10 recital + FEDERAL
+DOCUMENTARY STAMP. WARRANTY deed: five full covenants (seizin, quiet
+enjoyment, free of encumbrances, further assurance, warranty) + Lien
+Law §13 — the covenant LADDER distinguishes it from B&S. Subject-to
+recites the JULY 25, 1916 Board of Estimate resolutions — the original
+NYC Zoning Resolution appearing as a deed recital. Prior: Hyatt Holding
+Corporation deed 1950-08-31, liber 1130 p.426.
+
+## R19-1 — CROP-AND-LOOK CONVERTS UNREADABLE → READ (the stamp at 400dpi)
+
+At 120dpi the documentary stamp was an inky blur — "present,
+denomination unread." One 400dpi crop later: UNITED STATES INTERNAL
+REVENUE · DOCUMENTARY · ONE DOLLAR. The stamps rule now runs in the
+film era: $1.00 of tax at the 1951 schedule (⚠ era context: 55¢ per
+$500 or fraction) implies a consideration band around $500-$1,000 —
+though $1.00 is not an integer multiple of 55¢, so either a companion
+stamp sits unseen elsewhere on the original or usage was rounded;
+banked as a BAND with the friction stated, never forced to divide
+(never repair a number). Two New Dorp lots for about a thousand 1951
+dollars. Extraction pipeline consequence: stamp regions get a
+high-resolution pass BEFORE any 'unread' verdict — same law as the
+VLM crop discipline, now proven on revenue stamps.
+
+## R19-2 — THE BLOCK-SUFFIX NAMESPACE (939-A vs 939-L vs 939)
+
+Three block designations for one parcel IN ONE DOCUMENT: the filed
+map's own block ("BLOCK NUMBER 939 A"), the county index's land-map
+block ("indexed under Block Number 939 L", both this deed's stamp and
+the prior deed's recital), and rd's modern key (block 939, suffix
+gone). Old Richmond land-map blocks carried LETTER SUFFIXES that the
+modern renumbering collapsed. Namespace family member: a mid-century
+block cite without its suffix-era context can point at the wrong
+sub-block; resolution across the renumbering seam must map
+suffixed→plain, and rd's key is the rosetta row.
+
+## R19-3 — THE PARTY-COVERAGE BOUNDARY: BETWEEN 1944 AND 1951
+
+1912 row: zero parties. 1944 row: zero parties. 1951 row: ALL THREE
+parties, surname-first, correctly split. The Richmond index's party
+coverage begins somewhere in 1945-1951; before the boundary, party
+reach is extraction-only (R12/R14 lesson), after it the index carries
+names. Worth a cheap measured sweep someday (count party-bearing rows
+per year); until then the boundary is bracketed by bootcamp evidence.
+
+## CONFIRMATIONS
+
+- rd: liber/page/date/type exact ✓ · block-scope key 5009390000 (map
+  lots 56/57 have no tax-lot identity) ✓ · amount $0.00 while the stamp
+  witnesses a real consideration — amount-blind index, fourth era.
+- instrument "1800" — internal number absent from the face; namespace
+  family (verify by liber/page).
+- The 1916 Zoning Resolution as subject-to recital — ENVELOPE's
+  regulatory regime surfacing inside a TITLE instrument; a recital
+  (observes), not a creation; the deed-side echo of what the live ZR
+  feed carries today.
+- Husband-and-wife grantees ("his wife" = tenancy by the entirety
+  implied, not stated — held as legal default, not asserted as text).
+- Warranty vs B&S distinguished BY THE COVENANT LADDER (five covenants
+  present) — instrument self-identifies beyond its title line.
+- Chain: Hyatt Holding Corp (1950, 1130/426) — corporate subdivider one
+  step behind a homeowner sale; New Dorp Park map 1484 (1925) joins the
+  filed-map registry list.
