@@ -5421,3 +5421,83 @@ the bottleneck, not reading. 800 tokens/page instead of 250 roughly
 TRIPLES wall-clock on the cluster — the difference between a long
 weekend and most of a month. Verbosity in the spec is a compute
 decision as much as a schema decision.
+
+# RANDOM-DOCUMENT RUN 35 — RC_1050386 · GASOLINE-STATION LEASE · 1956
+
+6 pages, Texaco form CT:R-441 (Liber 1361 pp.453-458). Agreement dated
+1956-07-18, acks 1956-07-2? (both New York County; day partly
+obscured), recorded 1956-08-01 (fee $9, examined M.T.B.). STATEN
+ISLAND OIL COMPANY, INC. (250 Meredith Avenue, S.I.; John Leopold,
+President; attest Ilma H. Leopold, Secretary [surname shared — NO
+relationship stated]) leases to THE TEXAS COMPANY, a Delaware
+corporation (205 East 42nd Street) the service station at 5801 Amboy
+Road, Princess Bay — NW corner Amboy Road & Foster Road, USC&GS
+coordinates on the corner (S 47808.509, W 44032.546). FIFTEEN YEARS
+from 1956-08-01. RENT $285.00/month, payable monthly in advance.
+Improvements listed as leased: 1 two-bay stucco service-station
+building, 4 x 550-gallon underground tanks, 2 computer pumps (a lift
+and an air compressor STRUCK from the list).
+
+## R35-1 — THE FULL LEASE STATES RENT (the memorandum contrast, measured)
+
+Run 16 (1995 memorandum): rent omitted BY DESIGN, `unavailable`
+forever. Run 35 (1956 full lease): "$285.00 Dollars per month payable
+monthly in advance" typed on the page. SAME function (OCCUPANCY·
+creates), OPPOSITE quantity availability — so the OCCUPANCY price
+witness depends on WHICH ARTIFACT was recorded, not on the era or the
+deal. Extraction rule: a LEASE type may carry rent; a MEMORANDUM type
+may not; never treat a missing rent as a read failure without first
+classifying the artifact. (⚠ Two data points, not a measured rate —
+worth a typed sweep later: what fraction of recorded LEASE rows state
+rent?)
+
+## R35-2 — LEASE-AND-SUBLEASE-BACK (the same premises, both directions, same day)
+
+Rider (2-A) recites a SUB-LEASE dated the SAME DAY, 1956-07-18, from
+THE TEXAS COMPANY as lessor back to STATEN ISLAND OIL COMPANY as
+lessee, covering the SAME premises — and gives the lessor a 30-day
+cancellation right if that sublease is ever terminated other than for
+Staten Island Oil's default, CONDITIONED on Staten Island Oil first
+paying in full its indebtedness to the FIRST NATIONAL CITY BANK OF
+JERSEY CITY. Two OCCUPANCY rows run simultaneously in opposite
+directions between the same two parties, plus a CAPITAL fact about a
+third party (a bank owed money, disclosed only here — R16-3's
+"lease packages leak debt" family, 39 years earlier). The operator
+keeps running the station; the oil major holds the leasehold. Any
+occupancy model that assumes one tenant per premises at a time
+MISREADS this shape.
+
+## R35-3 — AN OPTION TO PURCHASE, PRICE STRUCK OUT (the deleted-term state)
+
+¶9 grants lessee "the exclusive right, at lessee's option, to purchase
+the demised premises... free and clear of all liens and encumbrances
+(including leases which were not on the premises at the date of this
+lease) at any time during the term" — with a RIGHT OF FIRST REFUSAL
+mechanic (bona fide offer → 30 days to match) and a full title/survey
+delivery regime. The PRICE LINE (¶9(a) "for the sum of ______") is
+BLANK and ¶10 (Application of Accrued Rentals to Purchase Price) is
+STRUCK THROUGH. So: the option EXISTS (right-of-first-refusal branch
+operative) while the FIXED-PRICE branch is unpriced/deleted. State the
+row honestly — TITLE·(option) with quantity `unavailable — line left
+blank`, NOT "option at $0" and NOT "no option". A struck clause and a
+blank line are DIFFERENT states and both are different from absent.
+
+## CONFIRMATIONS
+
+- rd: LEASE ✓ liber 1361/453 ✓ 8/1/1956 ✓ parties 2/2 ✓ · key
+  5068960000 BLOCK-scope (no lot on the record page read) · amount
+  $0.00 while the document states $285/mo — the amount-blind index
+  holds for LEASE rows (R20-3: amounts are for MORTGAGE rows).
+- Term shapes accumulate: 15 years + extension option (¶11, term
+  length UNREAD — the line is faint) + holdover→month-to-month (¶12).
+- Lessee-favoring machinery worth banking as claims: termination if
+  petroleum distribution is restricted by law/ordinance (¶6 — a
+  REGULATORY-RISK exit), condemnation apportionment, rent-offset
+  against lessor's debts (¶3), removal of lessee property within 30
+  days after term (¶5).
+- Corporate execution both sides (seals + boards); ¶18 lists NINE
+  Texaco officer titles who may bind the company — the authority layer
+  enumerated inside the lease.
+- Struck equipment items (lift, air compressor) — the strike layer
+  again (run 34's exhibit, run 20's caps): equipment lists are
+  negotiated.
