@@ -4087,3 +4087,77 @@ in the CONVENTION, not the transcription.)
   her interest. Banked as chain expectation.
 - 58-day execution→recording lag measured — the freshness product's
   caveat: recording date ≠ event date; both are carried.
+
+# RANDOM-DOCUMENT RUN 18 — BK_6620005200246 · DEED · 1966 (BRONX REC BOOK)
+
+3 pages, film — a NEW ID NAMESPACE decoded: BK_ = Bronx City Register
+"REC." book series; the id parses year 66 + borough 2 + book 0052 +
+page 00246, matching the frame stamps (REC. 52 PAGE 246-247) and rd's
+reel_page "52-246". Bargain & Sale deed dated 1966-04-16, ack same day
+(notary S. Paul Squitieri, Bronx), recorded 1966-04-18 9:14 AM (G.
+Michael Morris, Acting City Register; fee $6.00; "NOT SUBJECT TO MTGE
+TAX"; RETURN RPT # NONE): JOHN T. RIGNEY → MARGARET M. RIGNEY, both of
+1529 Hone Avenue, Bronx — an interspousal transfer, $10 recital, no
+consideration (the 1966 twin of run 17's trust transfer: same
+family-rearrangement shape, sixty years apart). Section 15 / block 4067
+/ lot 28. Premises described from a PRE-ANNEXATION filed map ("Map of
+Property ... situated in the Town of Westchester," Cornelius J. L.
+Lynch C.E., filed with the REGISTER OF WESTCHESTER COUNTY — the east
+Bronx was Westchester until annexation), party-wall metes on Lincoln
+Street. Prior: Ezekial Varian deed 1947-02-11, Bronx Liber 1517 p.110
+"of Conveyances."
+
+## R18-1 — BK_ = THE BRONX REC-BOOK SERIES (id namespaces are per-custodian-era)
+
+Four id families now decoded in the store: RC_ (Richmond, internal id),
+FT_ (ACRIS film reel), BK_ (Bronx REC book/page, self-describing id),
+16-digit (born-digital ACRIS). The BK_ id is a CITE, not an opaque
+id — book and page are recoverable from the id itself, so a BK_ doc can
+be verified against its frame stamps with zero lookups. Directory
+sharding (BK_6\6200) is id-prefix, not year — the By Document tree has
+two filing conventions.
+
+## R18-2 — THE BACKER RECOVERS THE CUT FRAME (film defect + built-in redundancy)
+
+Page 1's left column is cut off by the film edge — grantor, premises
+opening, and half the metes are unreadable on the operative page. But
+liber-era instruments carry their own abstract: the BACKER (endorsement
+panel) restates parties, date, instrument type, county, address, and
+block/lot, and the ack restates the grantor. Every operative fact
+survived via redundancy INSIDE the instrument. Extraction rule: a
+damaged operative page is not a dead document — read the backer and
+ack as the recovery channel, then mark which channel each fact came
+from.
+
+## R18-3 — doc_date COPIED FROM RECORDING DATE (film index date family)
+
+rd doc_date = recorded = 4/18/1966, but the instrument is DATED
+4/16/1966 (made and acknowledged). The film-era index did not carry a
+true document date — it cloned the recording date. Family member to
+"79% of FT_ have NO document_date": when film doc_date EQUALS recorded
+exactly, treat it as unwitnessed and let the instrument supply the true
+date. Two-day gap here; run 17 showed 58 days — the gap is real data.
+
+## CONFIRMATIONS
+
+- Key 2040670028 ✓ — and it CONFIRMED the held-at-moderate handwritten
+  "BLOCK 4067" reading (rd as verifier, R4-4 discipline working as
+  designed).
+- Index party defects, twice in one row: "MARGARET MRIGNEY"
+  (concatenation — initial glued to surname) and name-order
+  inconsistency (party 1 surname-first, party 2 given-first) — the
+  dual-entry/casing family keeps growing; identity resolution must
+  normalize per-party, not per-row.
+- Duplicate film frame: pages 2 and 3 are the SAME liber page (REC 52
+  PAGE 247) — frame count ≠ page count; dedupe before any per-page
+  claim, or backers double-count.
+- remarks "D BOOK/PAGES: 182/88" matches NOTHING on the instrument
+  (prior deed is Liber 1517/110) — unresolved index cross-reference,
+  banked as a claim with unknown referent, not silently dropped.
+- Cross-county filed map: a WESTCHESTER-registry map governs BRONX
+  parcels (pre-annexation) — the filed-map namespace family's
+  cross-county member; map cites must carry their REGISTRY, not just
+  their number.
+- True-zero non-sale, 1966 edition: interspousal, $10, no tax — the
+  NOMINAL flag's ancestor; family transfers look identical across six
+  decades and two boroughs.
