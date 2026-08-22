@@ -21,3 +21,8 @@ run 23 · RC_1009281 · 2026-08-22 · 2/2 pages · 0 new columns · streak 20 ·
 run 24 · RC_1051736 · 2026-08-22 · 2/2 pages · 0 new columns · streak 21 · 1910 deed recorded 1918: the 8-year gap + template corpus · reader: fable-5 direct-pdf
 run 25 · RC_1010265 · 2026-08-22 · 3/3 pages · 0 new columns · streak 22 · FIRST SATISFACTION: debt death cert + agent-for-co-lenders ceiling · reader: fable-5 direct-pdf
 run 26 · 2003040100272005 · 2026-08-22 · 6/6 pages · 0 new columns · streak 23 · G-037 native instrument: per-parcel rank + capped yield · reader: fable-5 direct-pdf
+run 27 · RC_1058987 · 2026-08-22 · 3/3 pages · 0 new columns · streak 24 · estate-tax lien release: off-record liens + death as title event · reader: fable-5 direct-pdf
+run 28 · RC_1020720 · 2026-08-22 · 4/4 pages · 0 new columns · streak 25 · first UCC: securitization hop + trust-name truncation · reader: fable-5 direct-pdf
+run 29 · RC_1046067 · 2026-08-22 · 3/3 pages · 0 new columns · streak 26 · sidewalk waiver: DOB artifact in deed room + two-map block namespace · reader: fable-5 direct-pdf
+run 30 · FT_2950006980095 · 2026-08-22 · 1/1 page · 0 new columns · streak 27 · UCC termination: co-op debt layer + references array + f/k/a index · reader: fable-5 direct-pdf
+run 31 · RC_1012471 · 2026-08-22 · 3/3 pages · 0 new columns · streak 28 · tax lien discharge: securitized arrears + R/LIEN spans statutes · reader: fable-5 direct-pdf

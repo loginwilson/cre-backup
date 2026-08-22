@@ -4707,3 +4707,287 @@ omits.)
   satisfied) — a lender RELATIONSHIP signal.
 - 13-month execution→recording lag (family: 2d · 22d · 58d · 13mo ·
   8yr).
+
+# RANDOM-DOCUMENT RUN 27 — RC_1058987 · RELEASE OF LIEN OF ESTATE TAX · 1950
+
+3 pages (Liber 1125 pp.472-474), form TT 139 (5-50) — a NEW
+INSTRUMENT-MAKER CLASS: the STATE OF NEW YORK, Department of Taxation
+and Finance, Transfer and Estate Tax Section, recorded in the county
+liber. Estate of JOHN H. PRICE, died 1942-03-23, resident of Richmond
+County. Per Tax Law §249-bb, the Article 10-C estate-tax lien is
+released as to lots 15+16 on the "Map of lots, Property of Benjamin
+Williams, situate at Tottenville" (S.J. Mason, surveyor, 1903-05-01),
+James Street at Broadway, Fifth Ward — bounded by "lands now or
+formerly of [Anderson] Fisher" (adjoiner-name boundaries). Chain
+recital: same premises as Benjamin Williams and Mary Wheeler Williams
+→ CROWELL B. PRICE, deed 1908-01-20, recorded 1908-10-12, Liber 353
+of Deeds p.279. Issued under the STATE TAX COMMISSION seal 1950-07-21
+by H. V. Delaney, Deputy Commissioner — NO notary, NO ack; recorded
+1950-07-27. Return: Jerome Otis Ellis, 56 Bay Street, St. George.
+
+## R27-1 — LIENS BORN OFF-RECORD (the release is the lien's only witness)
+
+The estate-tax lien attached AT DEATH (1942) by operation of law — no
+instrument was ever recorded creating it. Its RELEASE is the record's
+first and only sighting. CAPITAL rows can be born off-record
+(statutory liens: estate tax, property tax, mechanic's-lien
+relation-back); their releases both close them and DATE them (date of
+death recited = the off-record creation date). A chain-walker that
+requires a creates-instrument for every release will orphan these;
+the release's recitals are the creation evidence.
+
+## R27-2 — DEATH IS A TITLE EVENT WITH NO INSTRUMENT
+
+John H. Price acquired this land with NO recorded deed (the 1908 deed
+runs to Crowell B. Price; John holds at death in 1942 — inheritance or
+an unrecorded link), and at his death title passed to heirs — again
+with no instrument. The county record is SILENT at both joints; a
+state tax form eight years later is the only trace. Surrogate's Court
+(probate) is a MISSING CUSTODIAN for the multi-source roadmap: wills,
+letters, and estate files are where these off-record title events
+live. For stakeholder resolution: a decedent's name on a 1950 release
+implies an HEIR CLASS holding title since 1942 — people the record
+never names.
+
+## CONFIRMATIONS
+
+- rd: key 5080210000 = backer's "Block 8021" ✓ (block-scope) ·
+  R/LIEN ✓ liber 1125/472 ✓ 7/27/1950 ✓ · amount $0.00 · instrument
+  "2459" internal.
+- THE DECEDENT IS INDEXED AS GRANTEE (PRICE JOHN H, eight years dead)
+  — the index models the release as State → decedent; stakeholder
+  caution: an index party can be a dead person standing in for an
+  unnamed heir class.
+- Government instrument anatomy: seal + officer signature, no
+  notary/ack — the authority-instrument execution class (runs 14/16
+  adjacent: trustee and USPS forms; this one purest).
+- Adjoiner-name boundaries ("lands now or formerly of Fisher") — a
+  description namespace older than lot numbers; the 1903 Tottenville
+  map (Benjamin Williams property) joins the filed-map registry.
+- Death→release lag: 8 years (the estate cleared its lien only when
+  needed — likely a 1950 sale pending; the NEXT deed in this liber
+  range would confirm).
+
+# RANDOM-DOCUMENT RUN 28 — RC_1020720 · UCC3 ASSIGNMENT · 2013
+
+4 pages, born-digital (LAND DOC 484078, fee code 288-UCC BLOCK) — the
+FIRST UCC instrument drawn, and it is the SECURITIZATION PIPELINE in
+miniature. National form UCC3: amendment to initial financing
+statement #464215 (filed 2013-02-14, Richmond County — the
+origination cluster's fixture filing). Box 4 ASSIGNMENT (full):
+FEDERAL HOME LOAN MORTGAGE CORPORATION (Freddie Mac, McLean VA), as
+secured party of record, assigns to DEUTSCHE BANK TRUST COMPANY
+AMERICAS, AS TRUSTEE FOR THE REGISTERED HOLDERS OF BANC OF AMERICA
+MERRILL LYNCH COMMERCIAL MORTGAGE INC., MULTIFAMILY MORTGAGE
+PASS-THROUGH CERTIFICATES, SERIES 2013-K713 (Santa Ana, CA). Debtor:
+650 VICTORY BOULEVARD LLC c/o SAMSON MANAGEMENT LLC (Rego Park) —
+"Victory Apartments (Account No. 708282687)", 650 Victory Boulevard
+(block 589 lot 35). Filed by Anderson McCoy & Orta (Oklahoma City).
+Recorded 2013-06-26. Exhibit A: USC&GS corner coordinates + "Victory
+Boulevard, formerly Richmond Turnpike" (street-rename family).
+
+## R28-1 — THE SECURITIZATION HOP (originate → agency → trust, 4 months)
+
+Feb 2013: loan + fixture filing born. By June: Freddie Mac holds it
+and assigns into a K-series CMBS trust. The lender the record now
+shows is a TRUSTEE-FOR-A-SERIES — the beneficial owners are
+certificate holders, unreachable by design (the institutional twin of
+run 25's co-lender ceiling). For the reach ladder: when the holder is
+"trustee for Series X", the actionable stakeholder is the SERVICER
+(not of record; lives in trust documents off-record). The debt
+biography gains a standard edge type: the agency-to-trust hop,
+usually ~months after origination, usually via national filing shops.
+
+## R28-2 — INDEX TRUNCATION, MODERN EDITION (the trust name doesn't fit)
+
+rd party: "DEUTSCHE BANK TRUST COMPANY AMERICAS, AS TR" — the series
+identity (2013-K713), the part that actually identifies the beneficial
+vehicle, is CUT OFF. The film era truncated long personal names (R7
+family); the digital era truncates securitization trust names — same
+trap, new clothes. Trust-series identity must come from the DOCUMENT;
+an index-name join on truncated trustee strings will merge every
+Deutsche-as-trustee series in the county into one phantom lender.
+
+## CONFIRMATIONS
+
+- rd: key 5005890035 ✓ UCC ✓ 6/26/2013 ✓ land doc 484078 ✓ · SIX
+  party rows for THREE parties (dual-entry with TWO role vocabularies:
+  DEBTOR/LENDER + Mortgagor/Mortgagee — the casing family's role-
+  vocabulary cousin) · amount $0.00.
+- Cover compresses the assignee to "And Others" under LENDER —
+  cover-vs-index-vs-document party coverage differs AGAIN (R16-3
+  family).
+- UCC1 #464215 (2013-02-14) banked as chain expectation — the
+  origination cluster (mortgage + AL&R + UCC1, same date) should sit
+  at adjacent land docs.
+- Operator unmask: "c/o Samson Management LLC" — the property
+  MANAGER rides the debtor's address block; stakeholder graph gains
+  the operator edge without any instrument naming it as such.
+- Fixture-filing anatomy: UCC recorded in COUNTY REAL-ESTATE records
+  with block & lot ("UCC WITH BLOCK & LOT" type) — the land-records
+  twin of the state-level UCC; both exist, only this one is
+  parcel-keyed.
+
+# RANDOM-DOCUMENT RUN 29 — RC_1046067 · SIDEWALK WAIVER (CO PIPELINE) · 1972
+
+3 pages incl. survey-sketch page (Liber 2008 pp.99-101), city form
+M-169-A/MP-53. MARIO FORTE (4 Cayuga Avenue), fee owner of 204-208
+Dongan Hills Avenue (typed: TAX MAP block 3549, lots 73-77), built or
+is building and applied to the Commissioner of BUILDINGS for a
+CERTIFICATE OF OCCUPANCY; sidewalks/curbs sit at other than the
+legally established lines and grades; the Commissioner of HIGHWAYS
+refused to certify (City Charter §230, General City Law §36), which
+would force a BOARD OF STANDARDS AND APPEALS appeal — so instead, in
+consideration of Highways' CONSENT TO THE CO, the owner (1) waives all
+claims against the CITY OF NEW YORK arising from that consent, (2)
+covenants to install/conform sidewalks at his own cost WHENEVER the
+Commissioner may hereafter direct, and (3) makes it "a covenant
+running with the land" binding heirs, successors and assigns.
+Executed 1972-09-15 (ack Richmond, notary Robert E. Morri[s]),
+recorded 1972-10-03. Return: Norman Redlich, CORPORATION COUNSEL.
+
+## R29-1 — A DOB ARTIFACT IN THE DEED ROOM (the CO pipeline records land covenants)
+
+The Certificate-of-Occupancy process — DOB/Highways/BSA machinery —
+deposited a PERPETUAL ENCUMBRANCE in the county land records: the
+covenant (no sunset, binds successors) obliges every future owner of
+these lots to rebuild sidewalks at the Commissioner's direction. Three
+lessons: (1) permit-pipeline instruments (waivers, BSA consents,
+restrictive declarations) live in LEGAL INSTRUMENTS, not just agency
+files — the multi-source join already exists inside our own corpus;
+(2) the waiver SUBSTITUTED for a BSA appeal — entitlement machinery
+avoided by covenant is invisible in BSA's own records; (3) ENCUMBRANCE
+·creates by a one-party instrument (owner covenants TO the City — the
+index models it Grantor FORTE / Grantee CITY OF NEW YORK).
+
+## R29-2 — TWO OFFICIAL BLOCK NUMBERS, TWO MAPS, ONE INSTRUMENT
+
+The typed body: "designated on the TAX MAP ... Block 3549, Lots
+73-77." The clerk's certification: indexed "BLOCK 3540V ON THE LAND
+MAP OF THE COUNTY OF RICHMOND." rd key: 5035400000 (block 3540,
+block-scope) — the INDEX RIDES THE LAND MAP. R19-2 completed: the
+suffix blocks (939-L, 375-L, 3540-V) are the COUNTY LAND MAP's
+namespace, coexisting with the city TAX MAP's numbers on the same
+instruments; a tax-block query (3549) would MISS this waiver entirely.
+The land-map↔tax-map concordance is a first-class translation table
+the parcel spine needs for pre-renumbering Richmond.
+
+## CONFIRMATIONS
+
+- rd: WAIVER ✓ 10/3/1972 ✓ liber 2008/99 ✓ parties Forte → City of
+  New York ✓ · amount $0.00 · instrument "4583" internal.
+- The multi-ack printed form (individual/corporate/partnership blanks;
+  only individual executed) — form anatomy, one event.
+- Survey-sketch PAGE recorded as part of the instrument (dimensions
+  58.88 x 57.62 x 47.55 x 58.00) — instruments can carry drawings;
+  extraction must expect non-text pages mid-instrument.
+- Corporation Counsel as return-to: the CITY is the drafting party on
+  its own form — government-counterparty instruments cluster under
+  form numbers (M-169-A, MP-53) that identify the PROGRAM, not the
+  parcel.
+
+# RANDOM-DOCUMENT RUN 30 — FT_2950006980095 · UCC3 TERMINATION · 2000 (BRONX)
+
+1 page, film (old NY Standard Form UCC3, pre-revision). Box B
+TERMINATION: TELEBANK f/k/a METROPOLITAN BANK FOR SAVINGS, FSB
+(Arlington, VA; signed Victoria A. Wu) no longer claims the security
+interest under financing statement 95PX02172 filed 1995-04-04, Bronx.
+Debtors JOHN D. DUFFY and MARGARITA RODRIGUEZ, 5900 Arlington Avenue
+#11W, Riverdale. Handwritten block 5953 lot 230; recorded 2000-01-06.
+A five-year loan life, dead by termination — the UCC lifecycle's
+satisfaction.
+
+## R30-1 — CO-OP DEBT LIVES ONLY IN THE UCC LAYER (index CONFIRMS)
+
+Individual debtors + apartment unit + the rd row's OWN FIELD:
+collateral = "COOPERATIVE". Co-op apartment loans are security
+interests in SHARES + proprietary lease — personal property; they
+never touch the mortgage records. The UCC family (INITIAL COOP UCC1 →
+continuations → termination) IS the co-op debt ledger. Any debt
+product that reads only mortgages reports every co-op apartment in
+the city as debt-free. Termination = COLLATERAL·releases (full),
+secured-party-only execution, targeting by file number + filed date
+(satisfaction's addressing pattern, UCC dialect).
+
+## R30-2 — THE UCC INDEX ROW IS THE RICHEST YET (fields no other type has)
+
+This film-era row carries: `collateral` (asset class!), `expiration`,
+`file_nbr` (county TX-number — 00TX00054, a NEW namespace beside the
+PX financing-statement number), and a `references` ARRAY of doc_id +
+file_nbr pairs linking related UCC filings — machine-readable chain
+edges IN THE INDEX (the UCC cousin of run 26's cover cross-reference
+block). UCC rows are pre-joined; the walker should consume
+`references` before reading a page.
+
+## R30-3 — THE INDEX KEEPS THE OLD NAME (f/k/a on the secured side)
+
+Document: "TELEBANK f/k/a METROPOLITAN BANK FOR SAVINGS." Index
+party: "METROPOLITAN BANK FOR SAVINGS, FSB" — the FORMER name only.
+The index was keyed from the original 1995 filing's name and never
+learned the rename. Corporate-succession family (N/K/A run 13, run
+18's REC books): joins on current names miss index rows still wearing
+the old ones; the alias table needs BOTH directions.
+
+## CONFIRMATIONS
+
+- BBL 2059530230 ✓ (block 5953 lot 230 = the handwritten fill) ·
+  borough BRONX ✓ 1/6/2000 ✓ 1 page ✓ · keyed_by/key empty (film
+  rides parcels — run 16/20 pattern).
+- Address discrepancy: typed debtor address 5900 Arlington #11W vs
+  index parcel address 5800 ARLINGTON AVENUE — one is wrong; the
+  block/lot fill governed the keying; banked as defect, not repaired.
+- "Index in Real Estate Records" checkbox UNCHECKED yet block/lot
+  handwritten and honored — clerk PRACTICE outruns the form's own
+  checkboxes; what the clerk did outranks what the form says was
+  asked.
+- Early internet-bank sighting (Telebank, 1999-2000) as co-op lender
+  successor — lender-population drift visible even in one frame.
+
+# RANDOM-DOCUMENT RUN 31 — RC_1012471 · TAX LIEN DISCHARGE · 2018
+
+3 pages, born-digital (LAND DOC 709639, fee code 25-ASSIGN,AGREE,REL).
+THE BANK OF NEW YORK MELLON, as Collateral Agent and Custodian
+(Corporate Trust Department ABS; Jacqueline Kuhn, Vice President,
+signed 2018-06-20, notary Jonathan Kaplan NY County), certifies it is
+record owner of Tax Liens ASSIGNED TO IT BY THE CITY OF NEW YORK per
+Tax Lien Certificate dated 2009-08-18 (recorded 2009-08-20, Land Doc
+305076), assigned 2011-06-30 (recorded 2011-08-22, Land Doc 392195) —
+and that the lien on 30 Vineland Avenue (block 5715 lot 40) IS PAID;
+discharged of record. "Duplicate Original" stamp. Presenter: Fein,
+Such, Kahn & Shepard P.C. (Parsippany, NJ). Recorded 2018-08-10.
+
+## R31-1 — TAX ARREARS BECOME TRADED DEBT (VALUE → CAPITAL, recited chain)
+
+NYC sells delinquent property-tax liens into securitization trusts
+(the NYCTL program); BNYM holds them as custodian. The full lifecycle
+is recited with land-doc cites: City certificate (2009) → trust
+assignment (2011) → paid → discharge (2018) — a NINE-YEAR lien life.
+The login's instinct confirmed in the record itself: VALUE-function
+delinquency literally converts into a CAPITAL-function traded lien;
+a tax-lien certificate on a parcel is a DISTRESS EVENT, its discharge
+a recovery event, and the years between are carry. Same recited-chain
+economics as run 21's Schedule B, government edition.
+
+## R31-2 — ONE TYPE CODE, TWO STATUTES (R/LIEN spans 1950 and 2018)
+
+Run 27 (1950): estate-tax lien, born at death, state-issued, no
+notary. Run 31 (2018): property-tax lien, sold to an ABS trust,
+bank-issued, notarized. Same rd type (R/LIEN), utterly different
+machinery — the type code names a SHELF, and 46 years of bootcamp
+evidence now says every shelf mixes species; the instrument body is
+the only classifier that survives eras.
+
+## CONFIRMATIONS
+
+- rd: key 5057150040 ✓ R/LIEN ✓ 8/10/2018 ✓ land doc 709639 ✓ ·
+  dual-entry casing quadruple AGAIN (ASSIGNOR/Assignor x2 — third
+  instance, now routine) · amount $0.00.
+- Cover roles ASSIGNOR/ASSIGNEE on a DISCHARGE — the fee-code family
+  (25-ASSIGN,AGREE,REL) lends its role vocabulary to everything it
+  shelves (R15-3 family).
+- Chain cites banked: Land Docs 305076 (certificate) + 392195
+  (assignment) — the parcel's distress period 2009-2018 is fully
+  addressable.
+- "Duplicate Original" stamp — artifact-state claim (the recorded copy
+  is a counterpart, fine); uniform-ack form names its own statute
+  (post-1999 uniform acknowledgment) — modern ack anatomy.
