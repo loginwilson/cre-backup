@@ -15,7 +15,10 @@ are the constitution; this skill is only the trigger.
 
 - **no argument** — ONE iteration, then stop and report. The
   watch-and-monitor mode: the login likes to push back mid-run, and the
-  best rules have come from exactly that.
+  best rules have come from exactly that. **Deliver report + why-pass
+  WITHOUT a self-grade** — the login prompts for the grade after
+  reading (outside-the-momentum grading is more objective; login
+  2026-08-22). Grade only when asked.
 - **a number N** — N consecutive iterations, each complete (recorded and
   graded) before the next begins. Batching changes the PACING, never the
   DELIVERY: every run in the batch gets the FULL verdict format (anybody
@@ -85,6 +88,15 @@ Agreement = free verification. Disagreement = a finding, never smoothed.
 ⚠ Negative claims about the index require READING the full index field
 (R7-4 — the parties list must be printed in full before any claim about
 it). If the document cites package siblings, pull their rd rows too.
+
+## 3a · THE ASSUMPTION LAW (Bootcamp.md, 2026-08-22)
+
+Every delivered statement is READ (anchored), VERIFIED (two witnesses),
+or INFERRED — and inferences are MARKED IN THE SENTENCE. Unknown beats
+wrong: "too faint to read" is a deliverable; a guess is corpus poison.
+rd can settle a faint reading but never upgrades unread → read (mark
+"accepted, rd sole witness"). If something cannot be done, say so as
+the result.
 
 ## 4 · VERDICTS — grade the three tests honestly
 

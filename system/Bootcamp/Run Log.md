@@ -29,3 +29,5 @@ run 31 · RC_1012471 · 2026-08-22 · 3/3 pages · 0 new columns · streak 28 ·
 run 32 · FT_2850003884985 · 2026-08-22 · 2/2 frames (2 instruments) · 0 new columns · streak 29 · UCC continuation: lapse clock + two-floor co-op stack + index lifecycle graph · reader: fable-5 direct-pdf
 run 33 · BK_6640023700437 · 2026-08-22 · 2/2 frames · 0 new columns · streak 30 · first assignment: estate distributes debt + BK_ borough digit + capacity suffix · reader: fable-5 direct-pdf
 run 33 amended · grade A− → B+ · heirs over-claim + single-look + vacuous-✓ rules added
+protocol · assumption law + grading protocol recorded (single=grade-on-prompt, auto=self-grade)
+backward re-check · 4 banked defects corrected in place + 4 chat over-claims acknowledged · narrative-layer pattern identified

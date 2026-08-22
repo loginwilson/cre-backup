@@ -4051,12 +4051,14 @@ cover's numbers it is). The citation namespaces by era: Patents → liber
 
 "$0 never verifies" is a rule about SALES. Here zero is affirmatively
 witnessed three ways — RETT $0 + RPT $0 (coded lines) + RP-5217 "Full
-Sale Price: 0" — and the context (grantor → her own irrevocable trust,
-same address, trustee is family) says NON-SALE: a beneficial transfer.
+Sale Price: 0" — and the context (grantor → her own irrevocable trust;
+⚠ INFERRED: trustee shares surname + address, relationship UNSTATED in
+the document) says NON-SALE: a beneficial transfer.
 The event is real TITLE·transfers; the price is TRUE ZERO, not hidden.
 Flag NOMINAL (excluded from comps, per the nominal-deed discipline);
-the trust unmask is the product: legal owner becomes the trust, the
-beneficial family stays. RP-5217 condition boxes checked "J None" — not
+the trust unmask is the product: legal owner becomes the trust; the
+beneficiaries are NOT named in the deed (the trust agreement, unrecorded,
+holds them). RP-5217 condition boxes checked "J None" — not
 even "sale between relatives" — the CHECKBOX layer under-reports;
 context and deed text outrank the form's self-description.
 
@@ -4351,8 +4353,11 @@ consolidated to $3,000,000 via Mortgage ASSUMPTION Consolidation
 Extension Modification and Security Agreement — with the last three
 instruments "intended to be recorded simultaneously herewith".
 2,800,000 + 200,000 = 3,000,000 ✓. The story: WaMu dies, JPM inherits,
-sells the note to a debt buyer, borrower entity changes (MM Lake → 135
-Lake, assumption), bridge lender, bank refi. ONE recital replaces nine
+sells the note to Island Properties NYC LLC (⚠ INFERRED role: a
+note-purchaser by pattern — the record shows only the assignments, not
+its business), borrower entity changes (MM Lake → 135 Lake,
+assumption), then W Financial (⚠ same caveat), then bank refi. ONE
+recital replaces nine
 separate document walks — recited chains are the cheapest resolution
 shortcut in the corpus, and the §255 affidavit repeats it ALL a second
 time with per-instrument tax paid handwritten in ($61,950.06 checks as
@@ -4740,8 +4745,9 @@ the release's recitals are the creation evidence.
 
 John H. Price acquired this land with NO recorded deed (the 1908 deed
 runs to Crowell B. Price; John holds at death in 1942 — inheritance or
-an unrecorded link), and at his death title passed to heirs — again
-with no instrument. The county record is SILENT at both joints; a
+an unrecorded link), and at his death title passed by operation of law
+to his heirs OR devisees (which of the two, only the Surrogate's file
+knows) — again with no instrument. The county record is SILENT at both joints; a
 state tax form eight years later is the only trace. Surrogate's Court
 (probate) is a MISSING CUSTODIAN for the multi-source roadmap: wills,
 letters, and estate files are where these off-record title events
@@ -5106,8 +5112,9 @@ MORTGAGE INTEREST and DID leave an instrument — because a mortgage is
 personalty the administrator must assign to distribute. CAPITAL·
 assigns, consideration $1 + "to distribute the estate", authority =
 Letters of Administration (Surrogate's file cited). Holder-side
-consequences: Fannie's half → THREE heirs while ISIDOR BERMAN still
-holds his — the mortgage now has FOUR holders across two families, and
+consequences: Fannie's interest → THREE DISTRIBUTEES (⚠ heirship
+inferred, not stated — see addendum) while ISIDOR BERMAN still
+holds his — the mortgage now has FOUR holders, and
 its future satisfaction needs all of them. Inheritance FRAGMENTS the
 holder side; resolution must let one CAPITAL row's holder slot become
 a set with fractional interests.
@@ -5164,3 +5171,73 @@ his assignor role entirely.
    confirmation strength, the reconciliation mark for that field is
    "accepted (rd sole witness)", never "✓". Agreement must be earned
    by two independent readings or labeled as one-witness.
+
+# THE ASSUMPTION LAW + THE GRADING PROTOCOL (login, 2026-08-22 evening)
+
+## THE ASSUMPTION LAW — the hallucination concern, stated as bootcamp law
+
+"You really need to make sure not to assume. And if you do it needs to
+be very clear... It is worse to overstate a false claim than to say
+you don't know."
+
+- Every statement in a delivered verdict is one of THREE kinds, and
+  the kind must be VISIBLE: (1) READ — the document says it, anchored;
+  (2) VERIFIED — two independent witnesses agree (doc+rd, doc+doc,
+  doc+arithmetic); (3) INFERRED — context suggests it, and it is
+  MARKED as inference IN THE SENTENCE ("presumably", "⚠ HYPOTHESIS",
+  "the document does not say"). An unmarked inference is a defect even
+  when it is probably true (run 33's "heirs").
+- The rd is a HELP when stuck — a field there can settle a faint
+  reading (liber digits, blocks). But rd never upgrades an unread
+  document value to "read"; it makes it "accepted (rd sole witness)".
+- IF SOMETHING CANNOT BE DONE, SAY SO AS THE RESULT. "The film is too
+  faint to read the amount" is a deliverable; a guessed amount is
+  corpus poison. Unknown > wrong, always, at any speed.
+
+## THE GRADING PROTOCOL — who grades, when
+
+- SINGLE RUNS (login monitoring): deliver the report — anybody test,
+  data table, event test, WHY-PASS — and STOP. No self-grade at
+  delivery. The login prompts for the grade after reading; grading
+  prompted from outside the run's momentum is more objective (run 33
+  proved it: the self-grade missed what the login's question caught).
+- BATCH / OVERNIGHT (auto loop, login away): self-grade every run in
+  full (report + why + grade + miss ledger), because no one is there
+  to prompt and a half-graded run is worse than a self-graded one.
+- The why-pass stays in BOTH modes.
+
+# BACKWARD RE-CHECK 2026-08-22 (evening) — THE ASSUMPTION AUDIT
+
+Login: "Should you review any that you graded in the same breath?" The
+assumption law was re-run over every entry delivered today (runs
+12-33). FOUR banked defects found and corrected IN PLACE:
+
+- Run 17: "trustee is family" / "the beneficial family stays" → the
+  deed states NO relationship between Lisa and James Argenziano (same
+  surname + same address = inference); beneficiaries live in the
+  unrecorded trust agreement. CORRECTED.
+- Run 21: Island Properties NYC LLC called "a debt buyer" → role
+  inferred from pattern; the record shows only assignments. MARKED.
+- Run 27: "title passed to heirs" → heirs OR devisees; only the
+  Surrogate's file knows which. CORRECTED.
+- Run 33: entry's own text repeated "THREE heirs" that its addendum
+  had corrected → now "three distributees, heirship inferred."
+
+CHAT-DELIVERY over-claims acknowledged (not in the banked record, but
+said to the login today — the render layer is also a delivery):
+- Run 24: "held the paper in a drawer" — the CAUSE of the 8-year
+  recording delay is unknown (escrow, loss, re-recording all possible).
+- Run 30: "paid off" — a UCC termination proves the secured party
+  released its claim, NOT that the debt was paid.
+- Run 32: "the building refinanced" — cause of the 1994 termination
+  unknown; only the termination itself is witnessed.
+- Run 28: "run by Samson Management" — c/o address = management
+  inferred, not stated.
+
+Grades already issued stand as issued EXCEPT run 33 (amended B+
+earlier); the audit's lesson is prospective: the assumption law now
+runs at COMPOSE time, and same-breath grading ends per the grading
+protocol. Pattern note: every defect found was a RELATIONSHIP or
+MOTIVE claim (family, heirship, business role, cause of delay/death of
+liens) — the narrative layer's temptations; quantities, dates, cites
+and functions survived the audit clean across all 22 runs.
