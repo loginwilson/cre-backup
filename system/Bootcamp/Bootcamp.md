@@ -4233,3 +4233,84 @@ per year); until then the boundary is bracketed by bootcamp evidence.
 - Chain: Hyatt Holding Corp (1950, 1130/426) — corporate subdivider one
   step behind a homeowner sale; New Dorp Park map 1484 (1925) joins the
   filed-map registry list.
+
+# RANDOM-DOCUMENT RUN 20 — FT_2860007560086 · PURCHASE MONEY MORTGAGE · 2001 (BRONX)
+
+24 pages + 1 duplicate frame (REEL 1850 PG 450-473), film at the ACRIS
+seam — the first full COMMERCIAL LOAN PACKAGE drawn. 2001-02-16:
+CARPENTER REALTY LLC (2578 East Tremont Avenue) borrows $975,000
+PURCHASE MONEY from ASTORIA FEDERAL SAVINGS AND LOAN ASSOCIATION
+against 4305 Carpenter Avenue (Bronx block 5034 lot 28; Map of
+Jacksonville No. 783; metes note the corner of "Catherine Street (now
+called Carpenter Avenue)" — a street rename inside the description).
+Recorded 2001-03-15. Signed VITO SACCHETTI, Managing Member — seven
+times; ack Nassau County (notary Sheldon Goldklang). Terms assembled
+across NINE parts: Form 3033 substrate + ARM rider (7.625% initial,
+5-yr Treasury + 2.50%, FLOOR at 7.625%, first change 2006-03-01) +
+Balloon rider (DUE IN FULL 2016-03-01; payments computed as if maturity
+were 2028-03-01) + Prepayment rider ($7,800/yr free, 5-4-3-2-1% ladder
+RESETTING at years 5/10/15 with 90-day windows) + EXCULPATORY rider
+(non-recourse at origination; carve-outs: environmental guaranty +
+fraud) + ASSIGNMENT OF RENTS rider (absolute, and citing a "more formal
+and detailed" A of L&R executed contemporaneously) + Financial
+Statements rider (typed insert: personal financials of VITO SACCHETTI)
++ Environmental rider (CERCLA/RCRA reps) + Lender's rider (DELETES
+reinstatement §19/§22, +5% default rate, "No Obligation To Occupy",
+forfeiture, FNMA-void clause).
+
+## R20-1 — THE RIDER LAYER IS THE OPERATIVE LAYER
+
+The printed Fannie/Freddie uniform form is a SUBSTRATE; the deal lives
+in the riders, which add, strike, and even DELETE printed sections
+(§19/§22 gone; §25 checkbox declares "does not cover 1-6 family";
+printed ARM caps struck and a floor typed in). A reader that stops at
+the form reports a consumer home loan; the riders make it a
+non-recourse commercial balloon with a rate floor. Extraction rule:
+riders are read WITH the form as one instrument, and rider text
+OUTRANKS printed text wherever they touch (the instrument's own §26
+says so: "this Rider ... will control").
+
+## R20-2 — THE TAX CLASSIFIES THE BUILDING (four witnesses agree)
+
+MTGE TAX $26,812.50 = 2.75% x $975,000 EXACTLY (the over-$500k
+commercial/multifamily rate). Agreeing: the "premises are NOT improved
+by a one-to-six family dwelling" stamp, the circled "over 6" dwelling
+type, and the §25 checkbox. The mortgage RATE SCHEDULE itself is an
+asset-class witness: 2.75% says multifamily/commercial as loudly as
+any use code — and it arrived self-checked to the penny (P-4).
+
+## R20-3 — AMOUNT-BLINDNESS IS DOC-TYPE-DEPENDENT (first non-zero in 20 runs)
+
+rd amount: $975,000.00 ✓ — after nineteen runs of $0.00. The index
+carries amounts FOR MORTGAGES and not for deeds/leases/releases; the
+blindness is per-type, not per-era. But the debt PRODUCT is still
+index-dark: balloon date, floor, prepay ladder, non-recourse — all
+rider-only. The index knows the loan's SIZE; only extraction knows its
+SHAPE and its 2016 maturity.
+
+## R20-4 — THE SPE UNMASKED BY ITS OWN RIDERS
+
+Carpenter Realty LLC discloses its human seven signatures deep: VITO
+SACCHETTI, Managing Member, and the Financial Statements rider's typed
+insert binds HIS personal financials to the loan — a quasi-guarantor
+signal. The borrower-SPE join (the throughline's hinge) is served by
+the loan package itself: riders name the person the deed never will.
+
+## CONFIRMATIONS
+
+- rd: MORTGAGE ✓ 3/15/2001 ✓ BRONX ✓ reel 1850-450 ✓ parties 2/2 ✓ BBL
+  2050340028 ✓ · pages "25" = FRAME count (duplicate frames 5-6
+  counted; cover's own page count says 24) · "ENTIRE LOT" vs cover's
+  P/O partial marker — held as ambiguity, Schedule A metes govern.
+- Loan-number trio on one instrument (3-0000064646 /
+  09999-0000064646 / servicing 9732458) — the lender's OWN numbers are
+  a namespace family too; none is the recording identity.
+- Balloon + amortization shadow: payments sized on a 2028 schedule,
+  due 2016 — remaining-balance-at-balloon is computable from the two.
+- Sibling expectations banked: same-day purchase DEED (PMM recital),
+  the "more formal" Assignment of Leases and Rents, the Hazardous
+  Material Guaranty (named in the exculpatory carve-out) — three
+  instruments to expect within reel range.
+- Street rename captured (Catherine → Carpenter Avenue) — description
+  namespaces drift WITHIN one parcel's papers; IDENTITY claims carry
+  both names.
