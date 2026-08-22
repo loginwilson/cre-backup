@@ -1,0 +1,110 @@
+---
+name: bootcamp
+description: Run one full extraction-bootcamp iteration per the P-5 loop — draw a random completed document from the store, read it cold, reconcile against its rd row, grade it against the three tests, record entries in Bootcamp.md, and bank. Use when the user types /bootcamp (optionally /bootcamp N for N consecutive iterations, e.g. overnight learning runs).
+---
+
+# THE BOOTCAMP LOOP — one iteration of P-5
+
+**The law is `D:\CRE Decoding System\Bootcamp\Bootcamp.md`. Read it in full
+before the first iteration of a session** (three Read calls, ~2,900 lines) —
+"a rule not loaded at the right moment does not exist." The three tests, the
+four process laws (P-1..P-4), the loop itself (P-5), and every G/R/M entry
+are the constitution; this skill is only the trigger.
+
+If the user passed a number N, run N consecutive iterations, each complete
+before the next begins. Default 1.
+
+## 1 · DRAW — random from the disk store, coverage-aware
+
+Check `D:\CRE Decoding System\Bootcamp\Run Log.md` for eras/types already
+drawn. Sample from disk (NEVER a nav-table scan — both attempts to sample
+"complete" rows from the hot table had to be killed):
+
+```python
+import pathlib, random
+random.seed()
+S = pathlib.Path(r"D:/CRE Decoding System/02 Acquisitions/Legal Instruments Acquisition/By Document")
+years = [d for d in S.iterdir() if d.is_dir()]
+picks = []
+for _ in range(10):
+    p = random.choice(years)
+    for _ in range(4):
+        kids = [k for k in p.iterdir() if k.is_dir()]
+        if not kids: break
+        p = random.choice(kids)
+    if p.is_dir():
+        pdfs = list(p.glob("*.pdf"))
+        if pdfs: picks.append(random.choice(pdfs))
+print(random.choice(picks))
+```
+
+Prefer an unseen shape (era/type/length) among the picks; never prefer ease.
+
+## 2 · READ COLD — every page, no rd fields in view
+
+Small pdfs: Read the file directly. Large ones: render via fitz at dpi=120
+into the scratchpad and Read each page image (pdftoppm is not installed):
+
+```python
+import fitz, pathlib
+doc = fitz.open(SRC); print("pages:", len(doc))
+for i in range(len(doc)):
+    doc[i].get_pixmap(dpi=120).save(OUT / f"p{i+1:03d}.png")
+```
+
+Maintain the open-events ledger (P-1) — events open until a later page
+closes them or the last page confirms `unread`. Load reading guards
+(G-003/029, R4-4) now; composing guards (G-015..023, R-004, G-018) when
+building rows; render guards (G-024/025/026/036/036a) when writing the
+summary.
+
+## 3 · RECONCILE — the rd row, field by field
+
+One indexed lookup (safe on the hot table):
+
+```python
+con.execute("SELECT id, keyed_by, key, recorded_details FROM navigation WHERE id=?", (DOC_ID,))
+```
+
+Agreement = free verification. Disagreement = a finding, never smoothed.
+⚠ Negative claims about the index require READING the full index field
+(R7-4 — the parties list must be printed in full before any claim about
+it). If the document cites package siblings, pull their rd rows too.
+
+## 4 · VERDICTS — grade the three tests honestly
+
+Deliver to the user in this exact shape: **1 · The anybody test** (the
+summary — real names exact, real terms taught in place, no felt
+complexity) · **2 · The data test** (the event table, eleven columns,
+anchored, five-state honest, plus claims) · **3 · The event test** (all
+eleven functions asked of every page; ledger closed empty or honestly).
+Then a candid GRADE with the miss ledger — an unflagged miss found later
+costs double.
+
+## 5 · WHY-PASS
+
+Ask "why does it matter" of everything kept — as a FILTER it selects
+claims; as an ANSWER it may only produce LABELED HYPOTHESES.
+
+## 6 · ADJUST — write the entries
+
+Append the run to Bootcamp.md (`# RANDOM-DOCUMENT RUN <n> — <id> ...`,
+R<n>-x findings with teaching anchors, CONFIRMATIONS block) and stamp
+`Run Log.md`. Judgment calls go to the RULINGS QUEUE marked
+`ruling: pending` (P-3) — never decided silently. A wrong recorded
+finding is corrected in place, loudly, the same day.
+
+## 7 · BANK
+
+`powershell -NoProfile -ExecutionPolicy Bypass -File C:\dev\cre-backup\refresh.ps1`
+(or note that the nightly sync will carry it).
+
+## Standing constraints
+
+- No nav-table scans; indexed lookups only. Never touch the acquisition
+  lanes or their throughput.
+- The streak (consecutive runs forcing zero schema changes) is measured
+  across runs; report its new value each run.
+- Cost note for long overnight chains: each long document costs real
+  context; if context runs low mid-iteration, finish and record the
+  current run before starting another.
