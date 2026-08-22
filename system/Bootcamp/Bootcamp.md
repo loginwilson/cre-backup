@@ -3418,3 +3418,259 @@ The streak (runs with zero schema changes) is measured ACROSS this loop;
 grading is INSIDE it. The loop is what a production harness will one day
 execute with a VLM in step 2 - which is why every step must stay
 mechanical enough to hand off.
+
+---
+
+# RANDOM-DOCUMENT RUN 10 — `RC_1041792` (Richmond blk 782, DEED, 2 pp, 1933/1938)
+
+Deepest era yet, and a new ARTIFACT CLASS: not a scan of the instrument but
+the clerk's TYPEWRITTEN TRANSCRIPTION into Liber 810 pp.240-241 (pre-
+photostat practice: deeds were retyped into bound volumes; "(ER)" =
+examiner's initials). Cold read 2/2, reconciled. **Zero new columns, zero
+new vocabulary — streak: seven consecutive.** Instrument 1563 · made
+1933-10-14 · recorded 1938-10-21 10:30 AM.
+
+    WARRANTY-COVENANT DEED (five covenants, "will forever warrant")
+    ENRICO VERANZINI and ANNA VERANZINI, his wife
+      -> ALBERT RUSSO and DESDAMONA RUSSO, his wife, "of the same place"
+    Willowbrook Road plot (metes vs Francesco Damiano's line) · Section 2,
+    Block 782 · $100 recited · federal stamp "$1.00 cancelled" (clerk-
+    transcribed) -> bound <= $1,000 at 50c/$500 · SUBJECT TO a $3,000
+    record mortgage · Anna signs BY HER X MARK
+
+## R10-1 — THE LIBER TRANSCRIPTION IS A DIFFERENT WITNESS CLASS
+
+Nothing on these pages is an image of the instrument: signatures are typed
+names + "(L.S.)", the tax stamp survives only as the clerk's words "(Stamp
+$1.00 cancelled)", and the fee/instrument metadata ride as parentheticals
+inside prose. Consequences: (a) every fact is SINGLE-WITNESS by
+construction — there is no original to cross-read, so the two-witness
+doctrine cannot apply within the document; (b) transcription errors are
+undetectable locally and only neighboring instruments can corroborate
+(R-002's chain-as-reader is the ONLY verifier for this era); (c) the
+clerk's parentheticals are structured metadata wearing prose — extract
+them deliberately (No. / FEE / stamp / "(For RICHARD CONDON, 29
+Broadway)" = the return-to).
+
+## R10-2 — A DEED CAN CARRY A RELEASE OF A RECORDED CONTRACT (the land-contract era)
+
+Mid-description: "an Agreement between them dated August 20th, 1931, for
+purchase of the aforesaid described premises IS HEREBY CANCELLED; said
+agreement was recorded... in Liber 727 page 463 of Deeds." The Russos had
+been buying ON CONTRACT since 1931; this deed completes the purchase and
+extinguishes the recorded contract — TWO rows, one event: TITLE·transfers
+(the fee) + ENCUMBRANCE·releases (the 1931 recorded purchase agreement,
+ancestor Liber 727/463 — a recorded contract clouds title regardless of
+owner, so ENCUMBRANCE by the definitions table). The land-contract era
+means deeds of this vintage routinely close a years-long story the index
+shows as two unrelated instruments seven years apart.
+
+## R10-3 — THE PRE-WAR INDEX HAS NO PARTIES AT ALL
+
+The rd row carries book/page/type/date/block — and NOT ONE party row. The
+Veranzinis and Russos exist nowhere but the liber page. M-001 measured
+party coverage as thin (19%); 1938 shows the floor: ZERO. Any party-keyed
+search is blind before some era boundary; the DOCUMENT is not just the
+best witness here, it is the ONLY one. (The index amount $0.00 also holds
+G-010's film-era scope.)
+
+## CONFIRMATIONS
+
+- **D-3's new extreme: 1,833 days** sign->record (1933->1938, the
+  Depression era) — the gap now spans 0 to 1,833 days across ten runs;
+  any pipeline assumption of "recorded shortly after signed" is dead on
+  arrival in this corpus.
+- G-016 bound, on a transcribed stamp: consideration > $100 recited,
+  <= $1,000 by the $1.00 federal stamp at 50c/$500 — the bound survives
+  transcription because the CLERK recorded the stamp's value in words.
+- Subject-to recital: observes · ENCUMBRANCE · the $3,000 record
+  mortgage (unidentified — no liber cite; `unread` pointer, resolvable
+  by the block's chain).
+- "Her X mark": Anna Veranzini signed by mark — a literacy/capacity
+  claim (C-001 family), and the witness/notary GEORGE J. PALMER is both
+  witness AND notary (hub pattern, fifth sighting, 1933 edition).
+- Block-scope key 5007820000 ✓ (R5-3 five decades before run 5's case).
+
+### R10 addendum — RENDER MISS, CAUGHT BY THE LOGIN (G-026's shape, person-scale)
+
+The run's chat summary wrote "Anna couldn't write." The record proves her
+X MARK, witnessed — the mark is the fact; illiteracy is its usual but not
+only cause (infirmity and custom also signed by mark). The md entry was
+hedged ("a literacy/capacity claim"); the SUMMARY flattened it — the row
+honest, the sentence over-claiming, G-026's laundering one level down (a
+person's capacity instead of a quantity's split). RULE SHARPENED: facts
+about PERSONS (capacity, literacy, relationship, control) get the same
+render discipline as quantities — the sentence states the evidence ("signed
+by her X mark") and may name the usual meaning only AS the usual meaning.
+"His wife" needed no hedge - the instrument recites it verbatim.
+
+### P-5 step 5, SHARPENED (login 2026-08-22: "the why it matters is
+### regarding the document or the events of said document")
+
+The why-pass has TWO whys with different owners, never blended:
+
+    EVENT-WHY     asked of rows and claims. Every answer must terminate
+                  at a function, a chain, or a derivation question -
+                  "why does the tenancy matter" = survivorship moves
+                  title with no recorded paper (the TITLE row's future).
+                  A why that cannot find its event names a keep that
+                  should not have been kept. THIS is the why-pass.
+    PIPELINE-WHY  asked of the DOCUMENT as artifact - what it teaches
+                  about reading, acquiring, indexing (liber = single-
+                  witness class; film covers at the end; pre-war index
+                  partyless). These are R-ENTRIES - they belong to the
+                  harness and the freeze decision, and NO parcel's chain
+                  ever contains one.
+
+The grade judges both; the why-pass reports only the first; the second
+lands as findings. Blending them is how a reader ends up narrating method
+in a summary (G-030's failure) or losing a pipeline lesson inside a
+parcel story.
+
+---
+
+# RANDOM-DOCUMENT RUN 11 — `FT_2970000594197` (Bronx 3214/66, EXT&MOD, 8 pp, 1983/84)
+
+Film-era EXTENSION AND MODIFICATION OF MORTGAGE — the modification shape's
+first bootcamp. Cold read 8/8, reconciled. **Zero new columns, zero new
+vocabulary — streak: eight consecutive.** Reel 542/496-503 · as of
+1983-12-31 · Parnes ack 1984-03-31 · bank ack 1984-04-16 · recorded
+1984-04-30 13:06.
+
+    EMIGRANT SAVINGS BANK (successor by merger to Prudential Savings
+    Bank) & HOWARD PARNES (455 Central Park Ave, Scarsdale) — owner,
+    "now owns the premises" · 2505 Aqueduct Avenue, Bronx (NW corner
+    W 190th St) · Section 11, Block 3214, Lot 66
+
+## R11-1 — THE LIBER SERIES IS A NAMESPACE, AND THE INDEX KEEPS ONE CITE OF SIX
+
+The recital chains SIX ancestors: L.1300 Mp.429 · L.2810 Mp.109 · Consol.
+Agmt L.2810 Mp.103 · L.3364 Mp.338 · Consol. Agmt L.3368 Mp.177 · L.3855
+Mp.259 — "Mp." = the MORTGAGES liber, a different book series from run
+10's "Liber 727 of DEEDS": same numbers, different shelves; a cite
+without its SERIES is ambiguous (the namespace family's fifth member).
+And the rd remarks holds "EXT.& MOD. L. 1300 MP. 429,ETAL" — ONE cite
+plus etal. FIVE ancestors exist only in the document. M-002 refined: the
+index's citation rung UNDER-COUNTS; the document is the citation
+authority, the index only the hint that citations exist.
+
+## R11-2 — NON-RECOURSE ARRIVES BY EXTENSION (the exculpation clause)
+
+Page 2: the bank "agrees to enforce payment... SOLELY AGAINST THE
+PROPERTY... and waives its right to enforce payment thereof by
+DEFICIENCY or other personal judgment against the party of the second
+part or any other person." A 1983 extension converted a recourse debt to
+NON-RECOURSE — the lien survives, the personal claim dies. Captured as a
+TERM-CLASS CLAIM on the CAPITAL row (anchored); resolution should carry
+recourse/non-recourse wherever stated, because it changes what a default
+can reach — a fact lenders and brokers price directly.
+
+## R11-3 — TWO SIGNING CLOCKS ON ONE INSTRUMENT
+
+as-of 1983-12-31 · Parnes acknowledged 1984-03-31 (Westchester) · the
+bank 1984-04-16 (New York Co.) · recorded 1984-04-30. The parties signed
+SIXTEEN DAYS APART — "executed" is not even one date per instrument; it
+is one date PER SIGNATORY. D-3 extended: the provenance slots hold
+signed-per-party when the acks differ; the earliest binds nobody until
+the last, and the as-of predates them all by a quarter.
+
+## CONFIRMATIONS
+
+- qty_role discipline (L-2) live: consolidated face $250,000 vs unpaid
+  $60,493.17 — the row carries the UNPAID balance; the face is a recited
+  claim. A single-row reading would report 4x the real debt.
+- THE RATE IS STATED, twice: 8-1/2% to 1984-01-15, 13-1/2% after — the
+  Volcker-era repricing visible in one clause; extension = refi at +5
+  points. New maturity 1987-01-01; payment $2,052.85/mo; prepayment 1%
+  premium on 30 days notice; due-on-sale option.
+- Register catch-all again: rd type "AGREEMENT" for an instrument whose
+  own cover says EXTENSION AND MODIFICATION OF MORTGAGE (D-6a family) —
+  the form line outranks the type code (G-008).
+- Bank signer's name partially legible (Arthur D. McC—land, VP) — held
+  at moderate confidence, not asserted (G-004).
+- Reconciliation: pages 8 ✓ reel 542-496 ✓ BBL 2032140066 ✓ parties ✓ ·
+  amount $0.00 (film scope holds) · keyed_by EMPTY (pre-trigger debt).
+
+### P-5 step 5, RENDER RULE (login 2026-08-22: "after each why a more
+### simple concise one sentence of it")
+
+Every event-why is delivered as a PAIR: the technical why (terminating at
+its function/chain/derivation question) followed by ONE plain sentence —
+the anybody test applied to the reasoning itself. If the plain sentence
+cannot be written, the why is not yet understood; if it needs two
+sentences, the why is probably two whys. The pair reads:
+
+    WHY   [technical: where it terminates and what consumes it]
+    =     [one sentence anyone understands]
+
+# RANDOM-DOCUMENT RUN 12 — RC_1002473 · DEED · Vol 396 PG 339 (1912)
+
+2 pages, liber transcription era. WOOD HARMON RICHMOND REALTY COMPANY →
+EMMA WALDEN (335 Bloomfield Street, Hoboken, NJ), lots 15 and 16 on the
+1906 plan "SOUTH NEW YORK, Addition Number Four" (surveyed by Lewis T.
+Haney; filed 1907-07-05 as Map No. 995-B). $1 recited. Made 1912-09-03,
+acknowledged 1912-09-05 (Leonidas Keever, VP, before Elizabeth Roth,
+Commissioner of Deeds, New York County; attest John H. Storer,
+Secretary), recorded 1912-09-25 9 A.M. (C. Livingston Bostwick, Clerk).
+Return "For Grantee". Rd: keyed_by=parcel, key=5004120015;5004120016,
+book/page/date exact, amount $0.00, ZERO party fields (all keys printed
+— R7-4 satisfied; the negative claim is safe).
+
+## R12-1 — THE SUNSET COVENANT (an encumbrance with an expiry date)
+
+The deed carries a full developer restriction scheme — dwelling-only
+(detached/semi-detached), minimum cost $2,000 one-family / $3,000
+double, ≥2 stories, cellar required, no flat roof, 15-ft setback from
+Woodbine Avenue, stable ≥60 ft back, fence pre-approval by a company
+officer, a prohibited-uses list (livery/milkman's stables, piggery,
+slaughter house, forge, gunpowder/glue/varnish works, bone boiling,
+tannery, brewery, distillery, HOSPITAL, noxious trades), and no liquor
+sales — and then kills itself: "all restrictions and covenants ... shall
+continue in force until the first day of January, 1915, and no longer."
+ENCUMBRANCE·creates with term = expires 1915-01-01. The existing term
+slot holds it (0 new columns), but the DERIVATION consequence is the
+lesson: an expired scheme is EXTINCT — today's parcels carry none of
+this, and a decoder that surfaces a 1912 no-liquor covenant as a live
+restriction fails the product. Mirrors the stage model's renewals/expiry
+logic: terms have clocks, and the clock's state at READ TIME is part of
+the answer.
+
+## R12-2 — THE NO-WITNESS PRICE (a third price state, by era)
+
+$1 "and other valuable considerations" recited; NO tax stamp anywhere on
+either page. FACT: this document offers zero price witness. ⚠ HYPOTHESIS
+(era context, not read from the page): 1912 sits in a gap where no
+federal conveyance stamp was required and NY's transfer tax did not yet
+exist — deeds of this window may be UNWITNESSABLE as a class, not merely
+unread. Distinct states: unread (witness exists, not yet read) vs
+unavailable (no witness regime existed to consult). The stamps-rule
+("$0 never verifies, stamps rule") presumes a stamp REGIME; where none
+existed, price resolves `unavailable` honestly instead of hanging
+forever as unread. G-026 discipline applied: the mark on the page is the
+fact; the era explanation is labeled.
+
+## R12-3 — MAP LOTS THAT BECAME TAX LOTS (the namespace's benign case)
+
+The deed conveys PLAN lots 15 and 16 (Map No. 995-B); the rd key asserts
+TAX lots 5004120015 and 5004120016 — block 412, lots 15 and 16. Same
+numbers. ⚠ HYPOTHESIS: the Staten Island tax map adopted the filed-plan
+lot numbers in this block, so plan-lot = tax-lot here. Even if true, the
+ROUTE-3 GUARD stands unchanged: the deed cites the MAP namespace and the
+key asserts the TAX namespace — their agreement is a fact about THIS
+block, verified by the county's own keying, never a license to equate
+the namespaces elsewhere (the 1889 and 1870 runs prove they diverge).
+
+## CONFIRMATIONS
+
+- Zero-parties rd row, 1912 (trap family member 3, previously seen
+  pre-war): Wood Harmon and Emma Walden exist ONLY in the document — the
+  index cannot surface this deed by any party search. Party coverage for
+  this era comes from extraction alone.
+- Printed-form deed with handwritten fills: the covenants are PRINTED
+  (the developer's standard scheme), the parties/lots/dates handwritten
+  — form text repeats across the subdivision's deeds, a future
+  cross-document compression signal for extraction at scale.
+- amount $0.00 with $1 recital: consistent with R12-2; no disagreement.
+- Reconciliation: book 396 ✓ page 339 ✓ recorded 9/25/1912 ✓ DEED ✓
+  image present ✓ · keyed_by=parcel (both lots keyed — multi-parcel key
+  observed working).
