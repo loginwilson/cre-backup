@@ -1,5 +1,3 @@
--- Legal Instruments.db schema + triggers (the PROCESS, exported 2026-08-22)
-
 -- trigger: key_on_rd
 CREATE TRIGGER key_on_rd AFTER UPDATE OF recorded_details ON navigation
 WHEN COALESCE(NEW.recorded_details,'') != ''

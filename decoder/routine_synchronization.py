@@ -417,5 +417,23 @@ def main():
     elif a.dry:
         print("\n(dry - nothing landed)")
 
+    # THE BRAIN BANKS ITSELF (login 2026-08-22: "work the push into py so we
+    # never miss important details"). Every sync day also refreshes the
+    # off-drive backup: py/md/json from both roots + the db schema/triggers
+    # -> C:\dev\cre-backup -> github.com/loginwilson/cre-backup. The pdfs
+    # and dbs are re-derivable; the PROCESS is not, and it changes daily.
+    # Guarded: a dead network or a git hiccup must never fail the sync -
+    # the backup reports and the next day's run retries by design.
+    if not a.dry:
+        try:
+            r = subprocess.run(
+                ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass",
+                 "-File", r"C:\dev\cre-backup\refresh.ps1"],
+                capture_output=True, text=True, timeout=900)
+            tail = (r.stdout or "").strip().splitlines()
+            print("BACKUP · " + (tail[-1] if tail else f"exit {r.returncode}"))
+        except Exception as e:
+            print(f"BACKUP · skipped ({e}) - next sync retries")
+
 
 main()
