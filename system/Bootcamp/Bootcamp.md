@@ -4397,3 +4397,64 @@ doubles its parties.
   GHB), the $200,000 gap mortgage, and the Assumption-CEMA — all
   "simultaneously herewith", land doc serials likely adjacent to
   435472.
+
+# RANDOM-DOCUMENT RUN 22 — RC_1022240 · B&S DEED, SUBJECT-TO · 1958
+
+2 pages, high-contrast PHOTOSTAT (448KB for 2 pages — density is the
+artifact's own warning). Made September 1958, ack 9/04(?), recorded
+1958-09-11 10:39 AM, Liber 1433 p.435: HOWARD C. FOGH and MARION E.
+FOGH, his wife → MAX J. REIMAN — ALL THREE at 188 Slosson Avenue (an
+intra-household transfer; relationship unstated, not asserted). A
+20-foot PARTY-WALL ROWHOUSE on Chandler Avenue (party wall on BOTH
+courses), described with USC&GS coordinates stamped on the street
+intersection itself (S 15904.075, W 22785.048 — run 14's coordinate
+system in residential use). $10 recital + TWO federal documentary
+stamps. SUBJECT TO a declaration of easement (1942-05-18, rec
+1942-05-29, Liber 847 p.513) AND "a First Mortgage on said premises
+owned and held by THE BOWERY SAVINGS BANK dated the 31st day of May,
+1946." Notary/witness Eugene V. P. Ferretti (12 Bay St). Marion's typed
+name struck and corrected by hand at signature.
+
+## R22-1 — SUBJECT-TO: TITLE MOVES, THE DEBT STAYS
+
+The rowhouse sold WITHOUT satisfying the 1946 Bowery Savings mortgage —
+conveyed "subject to" it (no assumption stated). Chain consequences:
+(1) the lien crosses the title transfer intact — resolution must carry
+CAPITAL rows across TITLE events, never close them at sale; (2) the
+recital is a LIVE-DEBT WITNESS: it proves the 1946 mortgage was still
+outstanding twelve years in (1958) — deed recitals date-stamp debt
+survival exactly like run 16's consent balances; (3) the buyer's
+equity, not the buyer, bears the debt — a default forecloses Reiman's
+house on Fogh's loan. Subject-to recitals are a debt-timeline source.
+
+## R22-2 — UNREAD-BY-SOURCE vs UNREAD-BY-RENDER (the crop law's limit)
+
+Two documentary stamps PRESENT; the R19-1 high-dpi crop was applied —
+and the denominations are crushed to solid black by the photostat's
+threshold. R19's crop cures RENDER-limited unreadability; nothing
+cures information the SOURCE destroyed. The claim records the
+condition ("stamps present, denominations illegible on photostat;
+better copy could read") so a later, better artifact can settle it —
+the same design as the VLM disagreement-distribution: unread states
+carry WHY they are unread. Weak bound only: two stamps ≥ ~$1.10 tax →
+consideration real, not nominal, magnitude unknown.
+
+## CONFIRMATIONS
+
+- Liber digit caught by the verifier: cold read leaned "1483" on the
+  degraded margin stamp; rd asserts 1433 — a photostat 8/3 confusion,
+  flagged and corrected at reconciliation (R4-4 doing its job; the
+  miss ledger charges it).
+- Block-suffix collapse, second instance: backer "Block 375 L on the
+  Land Map" → rd key 5003750000 (plain 375, block-scope) — R19-2's
+  suffixed→plain mapping confirmed as a PATTERN, not a one-off.
+- Party coverage 1958: full (3 parties, surname-first) — consistent
+  with the 1945-51 boundary bracket (R19-3).
+- Same-address triangle (both grantors + grantee at 188 Slosson) with
+  REAL stamps — not nominal, relationship unknown, both facts banked
+  separately without a bridging story (G-026 discipline).
+- amount $0.00 + instrument "1221" internal — familiar families.
+- 1942 easement declaration (Liber 847/513) banked as chain cite;
+  street-corner coordinates; joint "they" ack; hand-corrected
+  signature name (MARION E. over struck type) — execution-layer
+  corrections are part of the record.
