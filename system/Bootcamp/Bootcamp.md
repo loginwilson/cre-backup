@@ -3878,3 +3878,73 @@ pre-war era: the type code is a shelf, the document is the function.
   reach ladder), 1916 assembly deeds (Winsor 459/322, Winants estate
   459/326, Crocheron [459?]/327), water grants 469/294 + 478/490, land
   grants Timalot (Patents 54/66) and Winant (Patents 44/150).
+
+# RANDOM-DOCUMENT RUN 15 — RC_1023 · RELEASE OF PART OF MORTGAGED PREMISES · 1975
+
+5 pages, printed N.Y.B.T.U. Form 8034 with typed fills (Liber 2113
+pp.358-362; p.359 is the form's blank verso — a legitimately empty
+liber page). Made 1975-02-13, ack 1975-02-19 (notary Steven P. Howard,
+Richmond), recorded 1975-02-28 (Augustine R. Casey, County Clerk;
+Chicago Title; return to Holzka, Donahue & Kuhn, P.C., 358 St. Marks
+Place). NORTHFIELD SAVINGS BANK (221 Richmond Avenue; Paul E. Proske,
+President, resides 246 Douglas Road; Marion Piper, Secretary) releases
+to LBS CONSTRUCTION COMPANY, INC. (19 Laredo Avenue) for $18,750.00 a
+~200 x 65 ft parcel (Leverett/Elverton/Doane corner, block 5442) out of
+the $350,000 mortgage of 1974-08-16 (liber 2073 mtges p.326), "the
+residue of the mortgaged lands" remaining as security. Released bundle
+includes appurtenant ingress/egress easement over Elverton and Doane
+Avenues to Leverett Avenue, "a legally opened city street" — the other
+two are not.
+
+## R15-1 — THE PRICED PARTIAL RELEASE (sales velocity before DOB existed)
+
+Run 14's release was $1 ceremonial; this one is $18,750 REAL — the
+construction-loan mechanic: builder mortgages the tract, builds, sells,
+and the bank releases lot-by-lot FOR MONEY as houses close. The cadence
+of REL rows against one mortgage is the project's SALES VELOCITY, and
+each release price is a paydown-scale signal (~5.4% of face here).
+⚠ Signal, not accounting: the release price is what the bank charged to
+release, not necessarily the principal reduction — remaining-debt still
+needs statements (G-022); the CADENCE is the derivation product. A
+1975 subdivision's absorption rate is fully readable from the deeds
+liber alone.
+
+## R15-2 — TYPE-CODE VOCABULARY HAS A TIMELINE (REL in 1975, DEED in 1944)
+
+The same function (partial release of mortgage lien) is shelved as
+"DEED" in 1944 (R14-4) and correctly as "REL" in 1975. The register's
+type vocabulary IMPROVES over time — so the reliability of the
+type→function shortcut is itself era-dependent, and any accuracy
+measured on modern rows says nothing about pre-war rows. The function
+always comes from the document; the code's trustworthiness has a
+timeline that extraction should eventually measure per-era, not assume.
+
+## R15-3 — INDEX ROLES NAME THE UNDERLYING RELATIONSHIP, NOT THE INSTRUMENT'S DIRECTION
+
+The REL row's parties: Mortgagor LBS, Mortgagee Northfield — but the
+RELEASE runs Northfield → LBS. The index's role vocabulary stays
+anchored to the MORTGAGE relationship even on instruments that act
+against it. Consistent with the orientation law (rows keep
+obligor→holder); a direction-from-roles heuristic would reverse every
+release, satisfaction, and assignment-back. Direction comes from the
+instrument's operative words; roles identify the relationship acted on.
+
+## CONFIRMATIONS
+
+- Block-scope key again: 5054420000 (block 5442 lot 0000), cover's lot
+  field blank — multi-lot tract released mid-subdivision, no single lot
+  to key.
+- instrument "11239" vs face received-stamp "No. 19538" — the
+  number-namespace family; verified by liber/page + date.
+- amount $0.00 with $18,750 stated consideration AND a $350,000 cited
+  mortgage — amount-blind index (R13-4 family), third consecutive era.
+- Recorded in the DEEDS series ("Deeds, and Indexed under Block Number
+  5442" stamp) though it acts on a mortgage — the two-shelf lesson
+  (R11-1) from the deeds side; the mortgage lives at liber 2073 mtges,
+  the release at liber 2113 deeds. A cite without its SERIES is
+  ambiguous.
+- Unused blank ack forms + subscribing-witness form on the printed
+  instrument — form-anatomy noise, correctly yielding no events.
+- Chain expectations banked: the 1974 $350,000 construction mortgage
+  (2073/326), sibling releases against it (cadence!), and LBS's sale
+  deeds out of block 5442 that these releases enabled.
