@@ -4314,3 +4314,86 @@ the loan package itself: riders name the person the deed never will.
 - Street rename captured (Catherine → Carpenter Avenue) — description
   namespaces drift WITHIN one parcel's papers; IDENTITY claims carry
   both names.
+
+# RANDOM-DOCUMENT RUN 21 — RC_1052597 · ASSIGNMENT OF LEASES AND RENTS · 2012
+
+21 pages, born-digital modern Richmond (LAND DOC# 435472, fee code
+25-ASSIGN,AGREE,REL). Made 2012-06-21, recorded 2012-07-23: 135 LAKE
+AVENUE REALTY LLC (27 Downing Street, Manhattan; ANDREW B. LEIDER,
+Member and Manager) assigns to GREATER HUDSON BANK, N.A. (Middletown)
+the lessor's interest in all leases and rents of the industrial
+property at 175 Lake Avenue (block 1161 lots 1 + 12), securing a
+$3,000,000 Consolidated Restated Mortgage Note. Absolute assignment
+with revocable license back; attorney-in-fact; RPL §291-f; conflict →
+mortgage prevails; terminates on satisfaction. Ack Rockland County
+(notary Thomas Scuderi = record-and-return attorney Thomas M. Scuderi,
+Esq., Connell Foley LLP — the notary-is-counsel pattern, third
+sighting). Run 20 banked "expect the formal AL&R as its own
+instrument"; the very next draw IS one — the instrument class closed
+itself.
+
+## R21-1 — SCHEDULE B IS A DEBT BIOGRAPHY (nine instruments in one recital)
+
+The chain, verbatim with doc numbers: (a) MM LAKE AVENUE LLC →
+WASHINGTON MUTUAL $2,212,500 (2008-03-26, #2008-248012) → assigned by
+JP MORGAN CHASE "as successor by merger to Washington Mutual" AND
+AGAIN as "JP Morgan Chase, a national association" (#2010-349745 +
+#2010-349746 — the SAME assignment recorded twice in two grantor
+styles: post-collapse CURATIVE DOUBLING) → ISLAND PROPERTIES NYC LLC →
+HRC FUND V. REIT LLC (again doubled: #2010-349747 + #2010-349748) +
+Spreader (#2010-349742); (b) gap $605,813.25 (#2010-349741), CEMA to
+$2,800,000 (#2010-349744), assigned → W FINANCIAL FUND, L.P.
+(#2011-396663); (c) gap $500,000 with ANDREW LEIDER personally
+(#2011-396664), CEMA to $3,300,000 (#2011-396665); (d) gap $200,000
+(#2012-422566); four assigned → GREATER HUDSON BANK with OUTSTANDING
+BALANCE $2,800,000 as of 2012-06-20; (e) new $200,000; five
+consolidated to $3,000,000 via Mortgage ASSUMPTION Consolidation
+Extension Modification and Security Agreement — with the last three
+instruments "intended to be recorded simultaneously herewith".
+2,800,000 + 200,000 = 3,000,000 ✓. The story: WaMu dies, JPM inherits,
+sells the note to a debt buyer, borrower entity changes (MM Lake → 135
+Lake, assumption), bridge lender, bank refi. ONE recital replaces nine
+separate document walks — recited chains are the cheapest resolution
+shortcut in the corpus, and the §255 affidavit repeats it ALL a second
+time with per-instrument tax paid handwritten in ($61,950.06 checks as
+2.8% of $2,212,500).
+
+## R21-2 — DONUT PARCELS (the collateral is a shape, not a lot list)
+
+Schedule A: Parcel A = ALL of lot 1 EXCEPTING three described parcels
+("For Info Only: commonly known as" lots 10, 15, 20); Parcel B = lot
+12 excepting one more. Plus: DUAL BEARINGS per course ("south 76°28'06"
+east (deed) (south 76°41'06" east U.S. Std.)"), a deed-vs-tax-map
+distance (117.38 deed vs 122.38 tax map), and a boundary on "Staten
+Island Rapid Transit's Land". IDENTITY lesson: modern collateral
+descriptions can be lot-minus-lots; the "commonly known as" labels are
+informational, the metes are operative; and one course can carry two
+bearing conventions and two distances, each tagged to its authority.
+
+## R21-3 — DUAL-ENTRY BY CASING, MEASURED ON THE ROW (4 rows / 2 parties)
+
+rd parties: ASSIGNEE/ASSIGNOR (uppercase) + Assignor/Assignee
+(mixed-case) — the same two parties twice. The R7 dual-entry casing
+family caught red-handed in a reconciliation: party COUNTING from
+index rows must dedupe case-insensitively or every modern assignment
+doubles its parties.
+
+## CONFIRMATIONS
+
+- rd: key BOTH lots (5011610001;5011610012) ✓ · instrument = LAND DOC
+  435472 ✓ · A/LEASE ✓ · 7/23/2012 ✓ · amount $0.00 for a $3,000,000
+  security instrument — R20-3 holds (amounts are for MORTGAGE-type
+  rows only).
+- Modern Richmond citation namespace unified: instruments cite each
+  other as "#YYYY-SERIAL" (#2012-422566) while rd stores the bare
+  serial (435472) — one namespace, two renderings.
+- Balance snapshot: $2,800,000 outstanding at assignment (R16-3's
+  lease-package balance disclosure, Richmond edition) — plus reps that
+  rents are not prepaid beyond one month and leases unmodified.
+- Leader unmasked TWICE: signs as Member and Manager AND appears as
+  personal co-mortgagor on chain items (c)+(d) — the SPE's human is in
+  the debt, not just behind it.
+- Sibling expectations banked: Assignment of Mortgage (W Financial →
+  GHB), the $200,000 gap mortgage, and the Assumption-CEMA — all
+  "simultaneously herewith", land doc serials likely adjacent to
+  435472.

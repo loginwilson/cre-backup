@@ -15,3 +15,4 @@ run 17 · RC_2825423 · 2026-08-22 · 7/7 pages · 0 new columns · streak 14 ·
 run 18 · BK_6620005200246 · 2026-08-22 · 3/3 pages · 0 new columns · streak 15 · BK_ namespace decoded + backer recovery + cut frame · reader: fable-5 direct-pdf
 run 19 · RC_1024032 · 2026-08-22 · 4/4 pages · 0 new columns · streak 16 · 1951 warranty deed + stamp read at 400dpi + block-suffix namespace · reader: fable-5 direct-pdf
 run 20 · FT_2860007560086 · 2026-08-22 · 25/25 frames · 0 new columns · streak 17 · commercial package: riders rule, tax classifies, first non-zero amount · reader: fable-5 direct-pdf
+run 21 · RC_1052597 · 2026-08-22 · 21/21 pages · 0 new columns · streak 18 · AL&R + nine-instrument crisis chain + donut parcels · reader: fable-5 direct-pdf
