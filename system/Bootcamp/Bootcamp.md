@@ -5501,3 +5501,64 @@ blank line are DIFFERENT states and both are different from absent.
 - Struck equipment items (lift, air compressor) — the strike layer
   again (run 34's exhibit, run 20's caps): equipment lists are
   negotiated.
+
+## R35 GRADE (login-prompted, cold checklist) — B, five misses
+
+1. ⚠ REPEATED THE NAMED DEFECT CLASS. Delivered: "this was how the oil
+   majors did business: Texaco controlled the site and its gasoline
+   supply while the local operator kept pumping gas." THE DOCUMENT SAYS
+   NONE OF IT — an industry-MOTIVE claim asserted flat, two hours after
+   the audit named motive claims as the defect class and one run after
+   R34-3 flagged the same shape (era context asserted flat). A rule that
+   exists and is not applied at the composing moment does not exist
+   (the unaddressable-config failure, inside the bootcamp itself).
+   COMPOSE-TIME CHECK ADDED: before delivering any sentence containing
+   "was how", "because", "in order to", "so that", or an industry/era
+   generalization — locate the anchor or mark it ⚠ INFERRED.
+2. PERSON/ENTITY CONFLATION x2: "Leopold didn't leave" and "before
+   Leopold could cancel" — the sublease runs to STATEN ISLAND OIL
+   COMPANY and the cancellation right is the LESSOR CORPORATION's. In a
+   corpus whose product is the stakeholder graph, an officer is never a
+   shorthand for his corporation.
+3. NON-CANONICAL FUNCTION VERB: row 3 delivered as "TITLE·(option)" —
+   invented, outside the controlled vocabulary. CORRECTED: a purchase
+   option + right of first refusal is ENCUMBRANCE·creates (burdens the
+   land, restricts free alienation, binds successors per para 16; it
+   does NOT move title). Row content was right; the label broke the
+   grammar. Lexicon discipline: if no canonical verb fits, that is a
+   RULING to queue, never a verb to coin.
+4. CROP RULE NOT APPLIED on the worst film since run 33. Rent and term
+   survive on the document's OWN redundancy (spelled + numeral:
+   "Two Hundred Eighty Five ($285.00)", "Fifteen (15)") — genuine
+   two-channel witnessing — but "5801 AMBOY ROAD", the property's
+   IDENTITY, was read once at one size. Degraded film triggers the
+   second look, and identity strings are load-bearing.
+5. DROPPED A REAL TERM + ADDED A FACT in one phrase: "two pumps out
+   front" for "2 COMPUTER PUMPS" (a 1950s term: pumps with a mechanical
+   price calculator) — R34's keep-the-instrument's-noun lesson, plus an
+   unstated location. Teach the real term in place (G-036a); never
+   decorate.
+
+CLEAN: three solid findings; blank-vs-struck-vs-absent handled
+precisely; shared-surname officers marked relationship-unstated; unread
+extension term reported unread; "accepted, rd sole witness" applied
+correctly for the first time on the block key.
+
+### THE COMPOSE-TIME TRIGGER LIST (from R35's repeat offense)
+
+The assumption law failed not for lack of a rule but for lack of a
+TRIGGER — nothing fired while composing the sentence. These words are
+the trigger; when one appears in a draft sentence, stop and either
+anchor it or mark it ⚠ INFERRED:
+
+    "was how" · "because" · "in order to" · "so that" · "which is why"
+    "typically" · "at the time" · "in those days" · "the practice was"
+    any industry, era, or market generalization
+    any RELATIONSHIP word (wife, son, family, partner, related)
+    any ROLE word not printed on the page (manager, operator, buyer,
+      investor, developer)
+    any MOTIVE ("wanted to", "needed to", "so they could")
+
+Make the bad state unrepresentable rather than detected (P-2 family):
+the trigger list belongs in the extraction PROMPT, so the VLM cannot
+emit a motive sentence without an anchor slot to fill.
