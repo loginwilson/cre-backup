@@ -26,3 +26,4 @@ run 28 · RC_1020720 · 2026-08-22 · 4/4 pages · 0 new columns · streak 25 ·
 run 29 · RC_1046067 · 2026-08-22 · 3/3 pages · 0 new columns · streak 26 · sidewalk waiver: DOB artifact in deed room + two-map block namespace · reader: fable-5 direct-pdf
 run 30 · FT_2950006980095 · 2026-08-22 · 1/1 page · 0 new columns · streak 27 · UCC termination: co-op debt layer + references array + f/k/a index · reader: fable-5 direct-pdf
 run 31 · RC_1012471 · 2026-08-22 · 3/3 pages · 0 new columns · streak 28 · tax lien discharge: securitized arrears + R/LIEN spans statutes · reader: fable-5 direct-pdf
+run 32 · FT_2850003884985 · 2026-08-22 · 2/2 frames (2 instruments) · 0 new columns · streak 29 · UCC continuation: lapse clock + two-floor co-op stack + index lifecycle graph · reader: fable-5 direct-pdf

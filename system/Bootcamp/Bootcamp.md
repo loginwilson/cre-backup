@@ -4991,3 +4991,84 @@ the only classifier that survives eras.
 - "Duplicate Original" stamp — artifact-state claim (the recorded copy
   is a counterpart, fine); uniform-ack form names its own statute
   (post-1999 uniform acknowledgment) — modern ack anatomy.
+
+### P-5 RENDER RULE (login 2026-08-22): BATCHES KEEP THE FULL FORMAT
+
+"I am impressed with your speed, but do want to keep the same format
+instead of shortened when you are doing batches." A batch changes the
+PACING, never the DELIVERY: every run in an N-run or auto batch gets
+the complete verdict — anybody test, data table, event test, grade
+with miss ledger, why-pass pairs. The one-line Run Log note is for
+progress tracking DURING the batch; it never substitutes for the full
+verdicts at delivery. A shortened verdict hides exactly the misses the
+grade exists to surface.
+
+# RANDOM-DOCUMENT RUN 32 — FT_2850003884985 · UCC3 CONTINUATION · 1991 (BRONX)
+
+2 frames = TWO INSTRUMENTS in one doc id: the 1991-04-12 UCC3
+CONTINUATION (file 91PX02431; Florence Stokes, Asst. Vice President)
+AND, imaged behind it, the ORIGINAL 1986-04-22 UCC1 it continues
+(86PX02585, 1:41 PM). Debtor: 3530 OWNERS CORP. — the CO-OP
+CORPORATION itself (3530 Henry Hudson Parkway East, Bronx; section 19
+block 5795 lot 518). Secured party: THE MANHATTAN SAVINGS BANK, "Re:
+Mtg #212189-5" (the bank's loan number joining the UCC to the
+building's underlying mortgage). Collateral: all fixtures, equipment
+and articles of personal property attached to or used in operating the
+premises + products; original filed WITHOUT debtor signature (under
+security agreement authority); indexed in the real-estate records.
+Continuation filed TEN DAYS before the five-year lapse.
+
+## R32-1 — THE LAPSE CLOCK (a non-event that kills liens, and renewal as velocity)
+
+UCC financing statements DIE at five years unless continued in the
+pre-lapse window. This continuation, filed 10 days before the
+anniversary, is COLLATERAL·modifies (term extended) — but the deeper
+lesson is the event that leaves NO instrument: a lapse. Like death
+(run 27), the clock changes the world without paperwork; derivation
+must compute lapse from ABSENCE (no continuation by year 5 → the
+security interest is dead, silently). And a filed continuation is the
+purest renewal-as-velocity signal: the lender still cares, the loan
+still lives.
+
+## R32-2 — THE CO-OP DEBT STACK HAS TWO FLOORS (and the index labels them)
+
+Run 30: unit-level share loan (index collateral "COOPERATIVE"). Run
+32: the CORPORATION's own underlying-mortgage fixture filing (index
+collateral "FIXTURE FILING"). Same building type, two debt layers —
+unit owners' share loans + the co-op corp's building debt — and the
+index's collateral vocabulary distinguishes them cleanly. "____ Owners
+Corp." at its own street address is the co-op-corporation identity
+marker: the entity IS the building.
+
+## R32-3 — THE INDEX RECONSTRUCTS THE LIFECYCLE (references + expiration)
+
+The rd row links BACKWARD (86PX02585, the 1986 original, its FT_ doc
+id given) and FORWARD (94TX00121 — a TX-family number: the
+TERMINATION), and its `expiration` field reads 3/3/1994 — NOT the
+statutory lapse date (1996-04-22 after continuation) but the ACTUAL
+death date, backfilled from the termination. Created 1986 → continued
+1991 → terminated 1994-03-03: the full arc assembled from ONE index
+row before reading any page. UCC rows are a self-contained lifecycle
+graph; the walker reads `references` + `expiration` FIRST, then
+documents only where the graph is silent. (⚠ `expiration` is
+OVERLOADED: statutory lapse on live rows, actual termination date on
+dead ones — read it as "when this stopped mattering," verify which by
+the references.)
+
+## CONFIRMATIONS
+
+- rd: type ✓ 2 pages ✓ 4/12/1991 ✓ BRONX ✓ file 91PX02431 ✓ BBL
+  2057950518 ✓ parties 2 ✓ (no dual-entry on this film row).
+- Two instruments in one doc id — the INVERSE of duplicate frames
+  (R18/R20): frame count ≠ instrument count in BOTH directions; the
+  reader identifies instruments by their own headers, never by file
+  boundaries.
+- "Re: Mtg #212189-5" — lender loan-number namespace joining the UCC
+  to the underlying mortgage (run 20's loan-number trio family; here
+  it is the JOIN HINT between two recorded instruments).
+- Both filings signed by the BANK only (original under
+  security-agreement authority, continuation by Asst. VP) — UCC
+  execution anatomy: the debtor can be signature-absent from its own
+  lien's whole life.
+- Timing discipline: continuation at year 4.97 of 5 — the pre-lapse
+  window practice measured.

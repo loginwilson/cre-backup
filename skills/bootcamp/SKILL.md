@@ -17,7 +17,10 @@ are the constitution; this skill is only the trigger.
   watch-and-monitor mode: the login likes to push back mid-run, and the
   best rules have come from exactly that.
 - **a number N** — N consecutive iterations, each complete (recorded and
-  graded) before the next begins.
+  graded) before the next begins. Batching changes the PACING, never the
+  DELIVERY: every run in the batch gets the FULL verdict format (anybody
+  test, data table, event test, grade + miss ledger, why-pass pairs) —
+  never a shortened digest (login 2026-08-22).
 - **`auto` / `until-back`** — the overnight mode: keep running full
   iterations back-to-back until the login sends a message; ALWAYS finish
   and record the current run before stopping (a half-recorded run is
