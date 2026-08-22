@@ -5141,3 +5141,26 @@ his assignor role entirely.
 - Draw-method upgrade (login): consult the RD ROW FIRST for type/
   pages/path — the db is readable during acquisition (WAL readers are
   free; only scans and writes are barred); no filesystem globs.
+
+## R33 ADDENDUM — SELF-AUDIT (login asked; corrections, same day)
+
+1. GRADE AMENDED A− → B+. The delivered summary called the three
+   assignees "her three heirs" — THE DOCUMENT NEVER SAYS HEIRS. It
+   says they paid $1 and the purpose was "to distribute the estate";
+   heirship is an INFERENCE (strong, unproven). G-026 family violation
+   in the render layer, unflagged at delivery → double cost. The
+   stakeholder lesson sharpened: distributee ≠ heir; the Surrogate's
+   file, not this instrument, knows who the heirs are.
+2. PROCESS MISS: single-look values on the faintest artifact yet. The
+   $10,000, "Isidor Berman," "Maurice Weiner" were read once at one
+   render size. The crop law (R19-1, CLAUDE.md rule 3) applies to
+   AMOUNTS AND NAMES on degraded film, not just stamps — new reflex:
+   on faint film, every load-bearing value gets a second look at
+   higher dpi before delivery. (Mitigation held: the chain join rides
+   the liber/page cite, double-witnessed by the index remark.)
+3. VACUOUS RECONCILIATION: rd's BBL was ACCEPTED, not confirmed — the
+   premises reading was too faint to independently verify block
+   15935. Rule: when the document-side reading of a field is below
+   confirmation strength, the reconciliation mark for that field is
+   "accepted (rd sole witness)", never "✓". Agreement must be earned
+   by two independent readings or labeled as one-witness.
