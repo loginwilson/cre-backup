@@ -5072,3 +5072,72 @@ the references.)
   lien's whole life.
 - Timing discipline: continuation at year 4.97 of 5 — the pre-lapse
   window practice measured.
+
+# RANDOM-DOCUMENT RUN 33 — BK_6640023700437 · ASSIGNMENT OF MORTGAGE · 1966 (QUEENS)
+
+2 frames, faint film (REC 237 pp.437-438), Statutory Form 1
+(Assignment of Mortgage Without Covenant, Security Title and Guaranty
+Co.) — the FIRST assignment read directly (10% of corpus), and an
+ESTATE-DISTRIBUTION one: GEORGE ARONS (24 Audubon Blvd., Island Park),
+as ADMINISTRATOR of the Estate of FANNIE ARONOWITZ (died 1965-12-10, a
+Nassau resident; Letters of Administration, NASSAU COUNTY SURROGATE'S
+COURT, file no. faint), for One Dollar "and to distribute the estate,"
+assigns to SYLVIA HOROWITZ (275 E. Walnut St., Long Beach), LEE
+GREENBERG (64 E. Market St., Long Beach), and GEORGE ARONS himself the
+decedent's interest in a mortgage made by BEACH STREET REALTY CORP. to
+FANNIE ARONOWITZ and ISIDOR BERMAN, $10,000, dated 1961-05-01,
+recorded 1961-05-05 in QUEENS Liber 7847 of Mortgages p.600, covering
+158 Beach 64th Street, Far Rockaway (75x100). Executed Sept 1966, ack
+Nassau (notary Maurice Weiner[?]), recorded 1966-09-23.
+
+## R33-1 — THE BK_ ID ENCODES BOROUGH (digit 3), CONFIRMED BY RD
+
+BK_66|4|00237|00437 = year 66 · borough 4 · book 237 · page 437 — and
+rd says QUEENS, BBL 4159350037. With run 18 (digit 2 = Bronx), the
+parse is confirmed across two boroughs: the BK_ family is the
+city-wide REC-book series, self-describing to year+borough+book+page.
+The corpus now spans FOUR boroughs (Richmond, Bronx, Manhattan,
+Queens).
+
+## R33-2 — DEATH DISTRIBUTES DEBT (the Surrogate's machinery records here)
+
+Run 27: death moved TITLE with no instrument. Run 33: death moved a
+MORTGAGE INTEREST and DID leave an instrument — because a mortgage is
+personalty the administrator must assign to distribute. CAPITAL·
+assigns, consideration $1 + "to distribute the estate", authority =
+Letters of Administration (Surrogate's file cited). Holder-side
+consequences: Fannie's half → THREE heirs while ISIDOR BERMAN still
+holds his — the mortgage now has FOUR holders across two families, and
+its future satisfaction needs all of them. Inheritance FRAGMENTS the
+holder side; resolution must let one CAPITAL row's holder slot become
+a set with fractional interests.
+
+## R33-3 — THE CAPACITY SUFFIX PARTY ("ARONOWITZ,FANNIE (ADMTR OF)")
+
+The index's assignor is the DECEDENT with a capacity tag appended —
+the administrator's own name (George Arons) appears only as assignee.
+Party-name strings carry CAPACITY IN-BAND ("(ADMTR OF)", and by
+implication EXR OF, TRSTE OF, GDN OF...) — a parsing family: strip and
+bank the capacity, resolve the estate as the acting entity, and find
+the human in the document. A name-match on "George Arons" would MISS
+his assignor role entirely.
+
+## CONFIRMATIONS
+
+- rd: QUEENS ✓ BBL 4159350037 ✓ reel_page 237-437 ✓ type ✓ 2 pages ✓ ·
+  amount $0.00 (the $10,000 lives in the body) · doc_date = recorded
+  (film clone family R18-3; execution was days earlier, faint).
+- remarks "A L7847 PG600 BOOK/PAGES: 290/311": the FIRST cross-ref
+  ("A L7847 PG600") is the assigned mortgage — VERIFIED against the
+  document's own cite; the second (290/311) points into the REC books
+  (referent unverified — likely a related assignment/satisfaction).
+  Run 18's mystery "D BOOK/PAGES: 182/88" now has a family: film-index
+  remarks carry typed chain cross-references, prefix-coded (A=
+  assignment target, D=deed?), partially verifiable and worth
+  harvesting.
+- Private individuals as LENDERS (Fannie + Isidor, 1961 — seller
+  financing profile) — the holder population includes people, not just
+  banks; the reach ladder's lender rung can be an estate.
+- Draw-method upgrade (login): consult the RD ROW FIRST for type/
+  pages/path — the db is readable during acquisition (WAL readers are
+  free; only scans and writes are barred); no filesystem globs.
