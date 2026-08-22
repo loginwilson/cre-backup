@@ -5342,3 +5342,82 @@ hypothesis only).
   counterparty who signs nothing).
 - Notary surname = declarant surname (Frank E. / William KARPELES) —
   observation only, relationship unstated (assumption law applied).
+
+## R34 GRADE (login-prompted, cold checklist) — A−, three delivery misses
+
+1. EXECUTION DATE: the witness clause day is BLANK ("this ____ day of
+   December, 1975"); only the ack carries 19th. Delivered table said
+   "executed 1975-12-19" unqualified. CORRECT ENTRY: ack 1975-12-19,
+   execution date line blank. D-3 family — when the execution clause is
+   unfilled, the ack dates APPEARANCE, not signing, and the row says so.
+2. "RESIDENTIAL UNITS" → "houses" in the summary: the divisor is units,
+   the $75 cap is per PARCEL, and the dwelling is a TWO-FAMILY — whether
+   the parcel counts as one unit or two is UNRESOLVED on the page. The
+   paraphrase silently resolved it. Keep the instrument's own noun when
+   the noun carries arithmetic.
+3. ERA CONTEXT asserted flat ("parts of Staten Island had no city
+   sewer"). The supported claim is narrower and enough: THIS parcel
+   could not reach the City sewer by gravity — which is why the sunset
+   is event-shaped. Background knowledge is an inference like any other.
+
+CLEAN: no relationship/motive claim in the run (the audit's defect
+class); reconciliation ✓s earned on a legible typed artifact; the three
+findings anchored.
+
+# THE LENGTH LAW — bootcamp verdict vs DB record (login 2026-08-22)
+
+Login: "details are good to understand, but the db is designed to
+DISTILL documents and if we get too long it would defeat its purpose."
+Correct, and the two artifacts must never be conflated:
+
+- THE BOOTCAMP VERDICT is a TEACHING artifact — long on purpose, exists
+  to prove understanding, expose misses to grading, and mint rules.
+  NEVER stored in the corpus.
+- THE DB RECORD is a DISTILLATION — rows a machine joins, counts, and
+  reasons over. Already ~30:1 vs the verdict (run 20: 27 pages → 2 rows;
+  run 21: 21 pages → 1 row + recited chain). The ROWS are not the bloat
+  risk; CLAIMS are.
+
+## The claim gate (extends "extract only what has a slot")
+
+A claim earns storage if it (a) fills a slot in some row's
+subject/function/quantity/term, (b) is a CHAIN EDGE (cite to another
+instrument), or (c) CHANGES WHAT A BROKER WOULD DO. Test (c) kills the
+noise: "notary Frank E. Karpeles, Richmond County" fails all three at
+10M-document scale; "$75/yr cap, lien each January 1" passes (a)+(c).
+Run 34 under the gate = 1 event row + ~8-10 claims.
+
+## Verbatim is the paid exception
+
+Most claims are STRUCTURED VALUES, not sentences. Store verbatim only
+where THE WORDS ARE THE FACT — sunset clauses, exculpation,
+subordination conditions — because a paraphrase cannot be re-litigated
+and silently loses meaning (run 34's "residential units" → "houses"
+proved the failure mode in one word). Anchors (document_id + page +
+region) are ADDRESSING, not verbosity: mandatory always.
+
+## THE SUMMARY IS GENERATED FROM THE ROWS, NOT WRITTEN BESIDE THEM
+
+1-2 sentences per document, composed AFTER the table, FROM the table.
+Two effects at once: length is capped structurally, and the summary
+becomes a COMPLETENESS CHECK — if the sentence needs a fact the rows
+lack, the rows are incomplete; if the rows cannot produce a coherent
+sentence, extraction failed. The anybody test survives into production
+as a TEST, not as stored prose, and the DB can never hold a paragraph
+that disagrees with its own table.
+
+## Budget = a SIGNAL, not a cap
+
+Working spec budget: 1-5 event rows · <=15 claims · <=3 sentences per
+document. Exceeding it is diagnostic, never an error: either the
+document is a PACKAGE that should be split into component instruments
+(run 20's nine riders, run 21's Schedule B), or the claim gate is not
+being applied. Never truncate to hit the number — split or gate.
+
+## The compute argument (why terseness is throughput)
+
+At ~60M pages, OUTPUT tokens dominate the extraction run: generation is
+the bottleneck, not reading. 800 tokens/page instead of 250 roughly
+TRIPLES wall-clock on the cluster — the difference between a long
+weekend and most of a month. Verbosity in the spec is a compute
+decision as much as a schema decision.

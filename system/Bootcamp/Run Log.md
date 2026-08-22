@@ -32,4 +32,5 @@ run 33 amended · grade A− → B+ · heirs over-claim + single-look + vacuous-
 protocol · assumption law + grading protocol recorded (single=grade-on-prompt, auto=self-grade)
 backward re-check · 4 banked defects corrected in place + 4 chat over-claims acknowledged · narrative-layer pattern identified
 protocol · overnight grade rotation adopted (grade N-1 at iteration open; last run left for login)
-run 34 · RC_1032054 · 2026-08-22 · 5/5 pages · 0 new columns · streak 31 · grade: PENDING LOGIN · first declaration: recurring lien generator + event sunset + struck exhibit · reader: fable-5 direct-pdf
+run 34 · RC_1032054 · 2026-08-22 · 5/5 pages · 0 new columns · streak 31 · grade A− (3 delivery misses) · first declaration: recurring lien generator + event sunset + struck exhibit · reader: fable-5 direct-pdf
+law · THE LENGTH LAW recorded (verdict vs record; claim gate a/b/c; summary generated from rows as completeness check; budget=signal)
