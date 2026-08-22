@@ -17,3 +17,4 @@ run 19 · RC_1024032 · 2026-08-22 · 4/4 pages · 0 new columns · streak 16 ·
 run 20 · FT_2860007560086 · 2026-08-22 · 25/25 frames · 0 new columns · streak 17 · commercial package: riders rule, tax classifies, first non-zero amount · reader: fable-5 direct-pdf
 run 21 · RC_1052597 · 2026-08-22 · 21/21 pages · 0 new columns · streak 18 · AL&R + nine-instrument crisis chain + donut parcels · reader: fable-5 direct-pdf
 run 22 · RC_1022240 · 2026-08-22 · 2/2 pages · 0 new columns · streak 19 · 1958 subject-to deed + photostat stamp limit + liber digit catch · reader: fable-5 direct-pdf
+run 23 · RC_1009281 · 2026-08-22 · 2/2 pages · 0 new columns · streak 20 · 1968 RETT gap + same-name identity case + X-mark · reader: fable-5 direct-pdf

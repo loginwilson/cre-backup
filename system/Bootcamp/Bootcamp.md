@@ -4458,3 +4458,54 @@ consideration real, not nominal, magnitude unknown.
   street-corner coordinates; joint "they" ack; hand-corrected
   signature name (MARION E. over struck type) — execution-layer
   corrections are part of the record.
+
+# RANDOM-DOCUMENT RUN 23 — RC_1009281 · B&S DEED · 1968 (THE RETT GAP)
+
+2 pages, N.Y.B.T.U. Form 8002. Made 1968-04-02, ack same day, recorded
+1968-04-24 (Liber 1815 p.418 — cold read wobbled 1815/1875, rd
+settled 1815; R22's digit lesson reused): ANIELLO PALMIERI and SANTA
+PALMIERI, his wife (106 Blackford Avenue) → ANIELLO PALMIERI (491
+Netherlands Avenue). Lots 47+48 (50x100 each) on "Map of Cannon Plot
+and adjacent property, L.W. Freeman, Surveyor," filed 1892-02-01 in
+MAP CASE 628 — an 1892 filed map cited by CASE number (new member of
+the map-citation namespace: Map No. vs Map Case). SANTA SIGNED WITH
+HER MARK (X) — second X-mark in the corpus (G-026 applied: the mark is
+the fact, cause unasserted). Notary Isaac H. Beck = return-to (492
+Richmond Avenue) — notary-is-counsel, fourth sighting. Section 3,
+block 1101, lot blank on backer.
+
+## R23-1 — THE SECOND NO-WITNESS WINDOW (Jan-Jul 1968)
+
+NO stamps on a 1968 conveyance: the federal documentary stamp DIED
+1967-12-31, and ⚠ (era context, hypothesis) the NYS transfer tax
+began mid-1968 — leaving a months-long gap where NO price-witness
+regime existed. R12-2's 1902-1914 gap has a modern sibling: price
+resolves `unavailable — no witness regime` for deeds in the window.
+The witness-regime TIMELINE is now three-epoch: fed stamps (to 1967) →
+GAP (early 1968) → RETT (from 1968). Worth one authoritative check of
+the exact RETT start date when the ZR-style live-source rule can be
+applied to tax law.
+
+## R23-2 — SAME NAME, TWO ADDRESSES, ONE DOCUMENT (identity's hard case)
+
+Grantor Aniello (106 Blackford) vs grantee Aniello (491 Netherlands):
+same man consolidating title out of the marriage, or father deeding to
+son? THE DOCUMENT DOES NOT SAY, and rd renders both as byte-identical
+"PALMIERI ANIELLO" rows — the index cannot separate them even
+intra-document. Identity resolution law: a PERSON is not a name; the
+addresses are the only distinguishing witness here and MUST ride the
+party claim. Any name-keyed reach ladder merges these two (possibly
+distinct) people silently — the 0.3% name-matching lesson at
+single-family scale.
+
+## CONFIRMATIONS
+
+- Block-scope key 5011010000 (backer lot blank) · instrument "7769"
+  internal · amount $0.00 · DEED ✓ 4/24/1968 ✓ parties 3/3 ✓.
+- 1892 filed map STILL the operative description in 1968 (76 years on)
+  — filed-map lots outlive generations; Map Case 628 joins the
+  registry list.
+- Recording lag 22 days (made 4/2, recorded 4/24); joint "they" ack.
+- Marital-consolidation shape: (H+W) → H alone; the mirror of run 18's
+  H → W. Family title rearrangements come in both directions; both are
+  NOMINAL-class non-sales.
