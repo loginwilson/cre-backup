@@ -4640,3 +4640,70 @@ history is its refinance cadence.
   principal (never geocode a registered agent).
 - Exam Friday 1/19 → recorded Monday 1/22 11:24 AM — modern clerk
   pipeline latency measured again (run 17: 1 day).
+
+# RANDOM-DOCUMENT RUN 26 — 2003040100272005 · SUBORDINATION OF MORTGAGE · 2003/2004 (MANHATTAN)
+
+6 pages, born-digital ACRIS (CRFN 2004000210771) — G-037'S NATIVE
+INSTRUMENT, drawn from the Draw Board. Blumberg form A311 dated
+2003-03-18, recorded 2004-04-07 8:17:53 PM (13-month lag; the digital
+cover carries the TRUE doc date — film cloned it, digital keeps it).
+34-38 Mulberry Street, Manhattan block 164 lot 3 (THREE address rows,
+ONE BBL — an assemblage of addresses on a single tax lot; rd parcels
+mirror all three). EASTBANK, N.A. (Simon Tam, Vice President; ack NY
+County, notary Anthony P. Colombini) holds the EXISTING mortgage —
+2001-09-05, PARK MING REALTY, LLC and NG FOOK REALTY, INC. (two
+co-borrower entities), $700,000, recorded Reel 3483 p.2033 on
+2002-04-01 — and for $1 subordinates it to THE CHINESE AMERICAN BANK's
+about-to-be-signed NEW mortgage of $3,800,000.
+
+## R26-1 — RANK IS PER-PARCEL (typed ¶7 scopes the yield)
+
+"This Subordination shall apply only the Property described in
+Schedule A and shall not cover the premises known as 41 Canal Street
+a/k/a 5 Ludlow Street." The existing lien BLANKETS multiple properties;
+the rank-yield applies to ONE of them. G-037 refined: priority is a
+property of (lien, parcel) PAIRS — one lien can be second on Mulberry
+and still first on Canal. Resolution's ladder is built per-parcel, and
+a subordination row must carry its parcel scope. (Bonus intel: the
+exclusion accidentally discloses the borrowers' OTHER holding.)
+
+## R26-2 — THE YIELD HAS A CEILING (quantity is the cap, not n/a)
+
+"The maximum amount of the lien of the Existing Mortgage that is
+subordinated is the amount secured by the New Mortgage and interest"
+(+ enumerated advances). The rank movement is CAPPED at $3,800,000 +
+interest + advances — above that exposure, the old priority resumes.
+G-037's "quantity = n/a-amount" refined by the instrument itself: the
+subordination row's quantity slot holds the CAP. Applies to
+extensions/renewals/modifications of the New Mortgage (the yield
+follows the new lien's life).
+
+## R26-3 — THE COVER'S CROSS-REFERENCE BLOCK (namespace seam bridged for free)
+
+The digital cover carries "CROSS REFERENCE DATA: MANHATTAN Year 2002
+Reel 3483 Page 2033" — a STRUCTURED pointer from the CRFN era into the
+reel era, naming exactly the instrument this subordination acts on.
+Chain edges across the namespace seam arrive machine-readable on the
+cover; extraction takes them before reading a word of the body. (And
+the body confirms: same reel/page, plus parties and amount the cover
+omits.)
+
+## CONFIRMATIONS
+
+- rd: key 1001640003 ✓ type ✓ CRFN ✓ doc_date 3/18/2003 (real, not
+  cloned) ✓ recorded WITH TIMESTAMP (8:17:53 PM — evening batch) ·
+  amount $0.00 (subordination untaxed, unamounted — the $3.8M cap
+  lives only in the body) · parties 2, roles empty.
+- Two co-borrower ENTITIES on one mortgage (Park Ming Realty LLC + Ng
+  Fook Realty Inc) — multi-entity borrower side; identity resolution
+  must allow >1 obligor per CAPITAL row.
+- Schedule A metes in INTERIOR-ANGLE form ("forming an angle of 89°
+  33' 30\" with...") — the exact course format metes.py cannot walk
+  (Greenpoint lesson), now confirmed in Manhattan digital-era
+  instruments; the limitation is corpus-wide, not Richmond-specific.
+- Debt story for the parcel: $700k (2001) → subordinated beneath $3.8M
+  (2003) — a 5.4x leverage jump on a Chinatown assemblage; the old
+  bank stayed in rather than being taken out (subordinate, not
+  satisfied) — a lender RELATIONSHIP signal.
+- 13-month execution→recording lag (family: 2d · 22d · 58d · 13mo ·
+  8yr).
