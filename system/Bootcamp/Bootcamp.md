@@ -5255,3 +5255,90 @@ degraded film. Sequence: grade N-1 → report N → grade N (next
 iteration) → ... The final run of the night is left UNGRADED for the
 login to grade in the morning — the human stays in the calibration
 loop. Single-run mode unchanged: login prompts the grade.
+
+# RANDOM-DOCUMENT RUN 34 — RC_1032054 · DECLARATION OF COVENANTS · 1976
+
+5 pages, typed (Liber 2145 pp.475-479) — the first DECLARATION drawn:
+a PRIVATE UTILITY LIEN REGIME. SPRINGVILLE CONSTRUCTION CORP. (2701
+Goethals Road North) owns a sewage PUMPING STATION + private sanitary
+sewer lines ("Sewage Disposal System", installed by prior owner
+SPRINGVILLE ASSOCIATES). WILLIAM KARPELES (24 Jones Street), owner of
+the abutting parcel (Exhibit B: Jones Street metes; "Tax Block 2156,
+Lot 72 and part of 73"), about to erect a TWO-FAMILY dwelling, needs
+hookup via the Jones Street manhole. Springville's price: the parcel
+must carry an ANNUAL CHARGE that becomes a LIEN. So Karpeles DECLARES
+(1975-12-19 [day READ from ack fill], recorded 1976-01-22 2:08 PM;
+notary FRANK E. KARPELES — surname shared with declarant, relationship
+UNSTATED; return to Angelo Scopellito, Esq., Garden City): annual
+charge fixed by Springville, payable Jan 1 in advance, MAX $75.00/yr,
+becoming a lien on the parcel each Jan 1 until paid, enforcement
+vested in Springville; charge = pro-rata share (total pumping-station
+operating cost ÷ connected residential units, itemized: salaries,
+materials, taxes, overhead, engineering, repairs, trucking); increases
+allowed within the cap to recoup losses; deeds and mortgages of the
+parcel CARRY the covenants "as if inserted"; the assessment lien
+SELF-SUBORDINATES to institutional first mortgages on three express
+conditions (recognized-lender, mortgage-budget-collects-the-charge,
+foreclosure-wipes-accrued-but-not-future); covenants run UNTIL AN
+EVENT — gravity discharge into the City Sewer System, or City
+acquisition of the pumping station — "whichever occurs earlier."
+
+## R34-1 — THE RECURRING LIEN GENERATOR (a covenant that mints CAPITAL rows)
+
+One ENCUMBRANCE·creates row births an open-ended SERIES of future
+liens: every January 1, a new charge-lien arises on the parcel by
+covenant + calendar, no instrument recorded (R27's off-record family,
+here PRIVATE and RECURRING). Derivation: the parcel's encumbrance
+state includes machine-generated liens whose existence is computed
+from the covenant + the calendar + (unknowable from the record)
+payment; the record can say "a lien MAY stand" but never "none does."
+The regime even prices itself: cost-sharing formula + $75 cap +
+loss-recoupment — a private utility's rate card recorded in the deed
+room.
+
+## R34-2 — THE EVENT-BASED SUNSET (the term family completes)
+
+Run 12: sunset by DATE (1915-01-01). Run 34: sunset by EVENT (gravity
+sewer OR municipal acquisition, whichever first). Terms now come in
+three time-shapes: date-bounded, event-bounded, perpetual (run 29).
+An event-bounded term is UNDECIDABLE from the instrument alone —
+whether Jones Street ever got a gravity sewer lives in DEP/city
+records (multi-source join), so the covenant's live/extinct state is
+honestly `unresolved` until an outside witness arrives. (Contrast run
+12: a date sunset self-decides at read time.)
+
+## R34-3 — A WHOLE EXHIBIT STRUCK THROUGH (the deletion layer scales)
+
+Exhibit "A" — the PUMPING STATION's parcel description (Arlene
+Street/Dawson Circle metes, still legible) — is crossed out line by
+line; Exhibit "B" stands. The strike-layer family (run 20's struck ARM
+caps, run 24's struck form phrases) now includes ENTIRE EXHIBITS:
+reading struck text as operative here would attach the covenant to
+the WRONG PARCEL (the station's own lot). Extraction law: every text
+region carries a struck/unstruck state, and struck text is banked as
+deleted-but-legible, never as operative. WHY it was struck is
+UNSTATED (⚠ plausibly to avoid clouding Springville's parcel — 
+hypothesis only).
+
+## CONFIRMATIONS
+
+- rd: DECLARATION ✓ liber 2145/475 ✓ 1/22/1976 ✓ · key 5021560000 =
+  BLOCK-scope though Exhibit B names "Lot 72 and part of 73" — the
+  PARTIAL LOT ("part of 73") likely defeated lot-keying (⚠ inference);
+  a lot-72 query would miss this declaration.
+- Priority machinery written INTO the covenant (self-subordination
+  with conditions) — G-037's ladder shaped by the instrument itself;
+  the three conditions include a MORTGAGE-SIDE duty (the lender's
+  budget must collect the charge) — a covenant reaching into future
+  lenders' servicing.
+- "Deeds and mortgages shall carry these covenants as if inserted" —
+  the declaration binds instruments not yet written; chain-walkers
+  should EXPECT the charge to surface in later deeds of block 2156
+  lot 72 (banked as forward expectation).
+- Springville Associates → Springville Construction Corp. (prior owner
+  installed the system) — corporate-succession family, sponsor-side.
+- One-party instrument (declarant only signs; beneficiary consideration
+  $1 FROM Springville) — the run-29 shape (owner covenants to a
+  counterparty who signs nothing).
+- Notary surname = declarant surname (Frank E. / William KARPELES) —
+  observation only, relationship unstated (assumption law applied).
