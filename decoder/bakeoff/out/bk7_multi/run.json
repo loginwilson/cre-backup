@@ -1,0 +1,20 @@
+{
+ "tag": "bk7_multi",
+ "src": "C:\\Users\\smile\\Downloads\\Source Folder (Real Estate Data)\\Decoder Prompt\\decoder\\bakeoff\\pages_bk7\\BK",
+ "angles": [
+  0,
+  90,
+  180,
+  270
+ ],
+ "side": 1440,
+ "pages": [
+  {
+   "page": "p007.png",
+   "lines": 307,
+   "sec": 267.8,
+   "status": "ok"
+  }
+ ],
+ "sec": 267.9
+}

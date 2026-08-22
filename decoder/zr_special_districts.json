@@ -1,0 +1,406 @@
+{
+ "125": [
+  "125th Street District",
+  "97-00"
+ ],
+ "BPC": [
+  "Battery Park City District",
+  "84-00"
+ ],
+ "BR": [
+  "Bay Ridge District",
+  "114-00"
+ ],
+ "BSC": [
+  "Bay Street Corridor District",
+  "135-00"
+ ],
+ "BNY": [
+  "Brooklyn Navy Yard",
+  "144-00"
+ ],
+ "CD": [
+  "City Island District",
+  "112-00"
+ ],
+ "CL": [
+  "Clinton District",
+  "96-00"
+ ],
+ "CP": [
+  "College Point District",
+  "126-00"
+ ],
+ "CI": [
+  "Coney Island District",
+  "131-00"
+ ],
+ "CO": [
+  "Coney Island Mixed Use District",
+  "106-00"
+ ],
+ "DB": [
+  "Downtown Brooklyn District",
+  "101-00"
+ ],
+ "DFR": [
+  "Downtown Far Rockaway District",
+  "136-00"
+ ],
+ "DJ": [
+  "Downtown Jamaica District",
+  "115-00"
+ ],
+ "ETC": [
+  "Eastchester-East Tremont Corridor District",
+  "145-00"
+ ],
+ "EHC": [
+  "East Harlem Corridors District",
+  "138-00"
+ ],
+ "EC-1": [
+  "Enhanced Commercial District - 1",
+  "132-00"
+ ],
+ "EC-4": [
+  "Enhanced Commercial District - 4",
+  "132-00"
+ ],
+ "FW": [
+  "Flushing West District",
+  "127-00"
+ ],
+ "FH": [
+  "Forest Hills District",
+  "86-00"
+ ],
+ "GI": [
+  "Governors Island District",
+  "134-00"
+ ],
+ "G": [
+  "Greenwich Street Development District",
+  "86-00"
+ ],
+ "C": [
+  "Grand Concourse District",
+  "122-00"
+ ],
+ "HRW": [
+  "Harlem River Waterfront District",
+  "87-00"
+ ],
+ "HS": [
+  "Hillsides Preservation District",
+  "119-00"
+ ],
+ "HRP": [
+  "Hudson River Park",
+  "89-00"
+ ],
+ "HSQ": [
+  "Hudson Square District",
+  "88-00"
+ ],
+ "HY": [
+  "Hudson Yards District",
+  "93-00"
+ ],
+ "HP": [
+  "Hunters Point Mixed Use District",
+  "117-00"
+ ],
+ "IN": [
+  "Inwood Special District",
+  "142-00"
+ ],
+ "J": [
+  "Jerome Corridor District",
+  "141-00"
+ ],
+ "LC": [
+  "Limited Commercial District",
+  "83-00"
+ ],
+ "L": [
+  "Lincoln Square District",
+  "82-00"
+ ],
+ "LI": [
+  "Little Italy District",
+  "109-00"
+ ],
+ "LIC": [
+  "Long Island City Mixed Use District",
+  "117-00"
+ ],
+ "LM": [
+  "Lower Manhattan District",
+  "91-00"
+ ],
+ "MP": [
+  "Madison Avenue Preservation District",
+  "99-00"
+ ],
+ "MMU": [
+  "Manhattanville Mixed Use District",
+  "104-00"
+ ],
+ "MID": [
+  "Midtown District",
+  "81-00"
+ ],
+ "MSX": [
+  "Midtown South Mixed Use District",
+  "121-00"
+ ],
+ "MX-1": [
+  "Mixed Use District - 1",
+  "123-00"
+ ],
+ "MX-2": [
+  "Mixed Use District - 2 Fulton Ferry",
+  "123-00"
+ ],
+ "MX-4": [
+  "Mixed Use District - 4",
+  "123-00"
+ ],
+ "MX-5": [
+  "Mixed Use District - 5",
+  "123-00"
+ ],
+ "MX-6": [
+  "Mixed Use District - 6",
+  "123-00"
+ ],
+ "MX-7": [
+  "Mixed Use District - 7",
+  "123-00"
+ ],
+ "MX-8": [
+  "Mixed Use District - 8",
+  "123-00"
+ ],
+ "MX-10": [
+  "Mixed Use District - 10",
+  "123-00"
+ ],
+ "MX-11": [
+  "Mixed Use District - 11",
+  "123-00"
+ ],
+ "MX-12": [
+  "Mixed Use District - 12",
+  "123-00"
+ ],
+ "MX-13": [
+  "Mixed Use District - 13",
+  "123-00"
+ ],
+ "MX-14": [
+  "Mixed Use District - 14",
+  "123-00"
+ ],
+ "MX-15": [
+  "Mixed Use District - 15",
+  "123-00"
+ ],
+ "MX-16": [
+  "Mixed Use District - 16",
+  "123-00"
+ ],
+ "MX-17": [
+  "Mixed Use District - 17",
+  "123-00"
+ ],
+ "MX-18": [
+  "Mixed Use District - 18",
+  "123-00"
+ ],
+ "MX-19": [
+  "Mixed Use District - 19",
+  "123-00"
+ ],
+ "MX-21": [
+  "Mixed Use District - 21",
+  "123-00"
+ ],
+ "MX-22": [
+  "Mixed Use District - 22",
+  "123-00"
+ ],
+ "MX-23": [
+  "Mixed Use District - 23",
+  "123-00"
+ ],
+ "MX-24": [
+  "Mixed Use District - 24",
+  "123-00"
+ ],
+ "MX-25": [
+  "Mixed Use District - 25",
+  "123-00"
+ ],
+ "MX-26": [
+  "Mixed Use District - 26",
+  "123-00"
+ ],
+ "MX-27": [
+  "Mixed Use District - 27",
+  "123-00"
+ ],
+ "NA-1": [
+  "Natural Area District - 1",
+  "105-00"
+ ],
+ "NA-2": [
+  "Natural Area District - 2",
+  "105-00"
+ ],
+ "NA-3": [
+  "Natural Area District - 3",
+  "105-00"
+ ],
+ "NA-4": [
+  "Natural Area District - 4",
+  "105-00"
+ ],
+ "OP": [
+  "Ocean Parkway District",
+  "113-00"
+ ],
+ "PI": [
+  "Park Improvement District",
+  "92-00"
+ ],
+ "PC": [
+  "Planned Community Preservation District",
+  "103-00"
+ ],
+ "SV-1": [
+  "Scenic View District",
+  "102-00"
+ ],
+ "SB": [
+  "Sheepshead Bay District",
+  "94-00"
+ ],
+ "SNX": [
+  "SoHo-NoHo Mixed Use District",
+  "143-00"
+ ],
+ "SRD": [
+  "South Richmond Development District",
+  "107-00"
+ ],
+ "SHP": [
+  "Southern Hunters Point District",
+  "125-00"
+ ],
+ "SRI": [
+  "Southern Roosevelt Island District",
+  "133-00"
+ ],
+ "SG": [
+  "St. George District",
+  "128-00"
+ ],
+ "SW": [
+  "Stapleton Waterfront District",
+  "116-00"
+ ],
+ "TA": [
+  "Transit Land Use District",
+  "95-00"
+ ],
+ "TMU": [
+  "Tribeca Mixed Use District",
+  "111-00"
+ ],
+ "US": [
+  "Union Square District",
+  "118-00"
+ ],
+ "U": [
+  "United Nations Development District",
+  "85-00"
+ ],
+ "WP": [
+  "Willets Point District",
+  "124-00"
+ ],
+ "AA": [
+  "Atlantic Avenue District",
+  "104-00"
+ ],
+ "BC": [
+  "Brooklyn Center Development District",
+  "89-00"
+ ],
+ "F": [
+  "Fifth Avenue District",
+  "87-00"
+ ],
+ "FR": [
+  "Franklin Street Mixed Use District",
+  "108-00"
+ ],
+ "FM": [
+  "Fulton Mall District",
+  "115-00"
+ ],
+ "GC": [
+  "Garment Center District",
+  "121-00"
+ ],
+ "CC": [
+  "New York City Convention and Exhibition Center Development District",
+  "93-00"
+ ],
+ "LMM": [
+  "Lower Manhattan Mixed Use District",
+  "111-00"
+ ],
+ "MB": [
+  "Manhattan Bridge District",
+  "116-00"
+ ],
+ "MLD": [
+  "Manhattan Landing District",
+  "98-00"
+ ],
+ "MX-3": [
+  "Mixed Use District - 3",
+  "123-00"
+ ],
+ "MX-9": [
+  "Mixed Use District - 9 Northern Hunters Point Waterfront, Queens",
+  "123-00"
+ ],
+ "MX-20": [
+  "Mixed Use District - 20 Crown Heights West, Brooklyn",
+  "123-00"
+ ],
+ "N": [
+  "Northside Mixed Use District",
+  "97-00"
+ ],
+ "P": [
+  "Park District",
+  "91-00"
+ ],
+ "S": [
+  "South Street Seaport District",
+  "88-00"
+ ],
+ "T": [
+  "Theater District",
+  "81-00"
+ ],
+ "Y": [
+  "Yorkville - East 86th Street District",
+  "101-00"
+ ]
+}

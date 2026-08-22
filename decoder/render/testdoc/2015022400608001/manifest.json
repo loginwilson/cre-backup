@@ -1,0 +1,101 @@
+[
+ {
+  "file": "p001.png",
+  "era": "modern",
+  "doc_type": "MTGE",
+  "doc_id": "2015022400608001",
+  "page": 1,
+  "year": 2015,
+  "tesseract_words": 263,
+  "rapidpool_words": 222,
+  "qwen_words": 287
+ },
+ {
+  "file": "p002.png",
+  "era": "modern",
+  "doc_type": "MTGE",
+  "doc_id": "2015022400608001",
+  "page": 2,
+  "year": 2015,
+  "tesseract_words": 97,
+  "rapidpool_words": 53,
+  "qwen_words": 95
+ },
+ {
+  "file": "p003.png",
+  "era": "modern",
+  "doc_type": "MTGE",
+  "doc_id": "2015022400608001",
+  "page": 3,
+  "year": 2015,
+  "tesseract_words": 452,
+  "rapidpool_words": 324,
+  "qwen_words": 439
+ },
+ {
+  "file": "p004.png",
+  "era": "modern",
+  "doc_type": "MTGE",
+  "doc_id": "2015022400608001",
+  "page": 4,
+  "year": 2015,
+  "tesseract_words": 588,
+  "rapidpool_words": 484,
+  "qwen_words": 588
+ },
+ {
+  "file": "p005.png",
+  "era": "modern",
+  "doc_type": "MTGE",
+  "doc_id": "2015022400608001",
+  "page": 5,
+  "year": 2015,
+  "tesseract_words": 598,
+  "rapidpool_words": 492,
+  "qwen_words": 593
+ },
+ {
+  "file": "p006.png",
+  "era": "modern",
+  "doc_type": "MTGE",
+  "doc_id": "2015022400608001",
+  "page": 6,
+  "year": 2015,
+  "tesseract_words": 139,
+  "rapidpool_words": 110,
+  "qwen_words": 136
+ },
+ {
+  "file": "p007.png",
+  "era": "modern",
+  "doc_type": "MTGE",
+  "doc_id": "2015022400608001",
+  "page": 7,
+  "year": 2015,
+  "tesseract_words": 88,
+  "rapidpool_words": 73,
+  "qwen_words": 74
+ },
+ {
+  "file": "p008.png",
+  "era": "modern",
+  "doc_type": "MTGE",
+  "doc_id": "2015022400608001",
+  "page": 8,
+  "year": 2015,
+  "tesseract_words": 44,
+  "rapidpool_words": 27,
+  "qwen_words": 47
+ },
+ {
+  "file": "p009.png",
+  "era": "modern",
+  "doc_type": "MTGE",
+  "doc_id": "2015022400608001",
+  "page": 9,
+  "year": 2015,
+  "tesseract_words": 292,
+  "rapidpool_words": 248,
+  "qwen_words": 266
+ }
+]

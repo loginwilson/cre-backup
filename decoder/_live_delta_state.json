@@ -1,0 +1,14 @@
+{
+ "checked_at": "2026-08-18T12:27:23",
+ "days": "7",
+ "types": [
+  "DEED"
+ ],
+ "boroughs": [
+  "4"
+ ],
+ "discovered": 496,
+ "known": 490,
+ "new": 6,
+ "incomplete": []
+}

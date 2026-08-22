@@ -1,0 +1,137 @@
+[
+ {
+  "phase": "specification",
+  "source": "acris",
+  "component": "pull_index_fast",
+  "setting": "WORKERS",
+  "value": "5",
+  "measured_how": "A/B with ALTERNATING arm order, median of 3, identical id sets: 4.38x over serial. 8 workers measured ~= serial.",
+  "measured_on": "2026-08-14",
+  "failure_if_wrong": "8 looks like tuning and costs ~4x because the API throttles a burst. \u26a0 The FIRST A/B said parallel was 3.7x SLOWER \u2014 the parallel arm ran first and tripped the throttle. Alternate arm order or the API will lie.",
+  "alternatives": {
+   "serial": "1.0x",
+   "5": "4.38x",
+   "8": "~= serial"
+  },
+  "locked": true
+ },
+ {
+  "phase": "specification",
+  "source": "acris",
+  "component": "pull_index_fast",
+  "setting": "overfull_partition_strategy",
+  "value": "keyset advance",
+  "measured_how": "blind range splitting 8,645 rows/s and NON-TERMINATING; keyset advance 52,559 rows/s and provably progresses (last > first >= lo). references 8,699,896 rows in 2.8m.",
+  "measured_on": "2026-08-14",
+  "failure_if_wrong": "a document cannot be separated from itself: one document_id with >= LIMIT rows makes every child as big as its parent. Parties froze at exactly 31,898,850 for 10 minutes while requests climbed and the queue DRAINED \u2014 every health signal except the row count looked normal.",
+  "alternatives": {
+   "blind subdivide": "8,645 rows/s, hangs",
+   "keyset advance": "52,559 rows/s"
+  },
+  "locked": true
+ },
+ {
+  "phase": "specification",
+  "source": "acris",
+  "component": "pull_index_fast",
+  "setting": "LIMIT",
+  "value": "50000",
+  "measured_how": "honoured by Socrata; partition bounds come from a LOCAL histogram of 9,148 id prefixes (13s, zero planning queries).",
+  "measured_on": "2026-08-14",
+  "failure_if_wrong": "a page returning exactly LIMIT is indistinguishable from a truncated one, so it must never be kept as-is.",
+  "locked": true
+ },
+ {
+  "phase": "specification",
+  "source": "acris",
+  "component": "socrata",
+  "setting": "$order",
+  "value": ":id  (always, on any paged read)",
+  "measured_how": "$offset without $order silently drops AND duplicates rows while the COUNT stays correct.",
+  "measured_on": "2026-08-06",
+  "failure_if_wrong": "silent row loss that no count can detect. Fixed in shared bulk.py, so it affected every decoder.",
+  "locked": true
+ },
+ {
+  "phase": "specification",
+  "source": "acris",
+  "component": "selection_daily",
+  "setting": "watermark_seed",
+  "value": "dataset_stamp from a CLEAN audit only",
+  "measured_how": "the audit wrote _selection_cross_state.json while the daily read _selection_daily_state.json, so the daily refused every night with 'run selection_cross.py first' \u2014 which had already run and passed.",
+  "measured_on": "2026-08-14",
+  "failure_if_wrong": "seeding from wall-clock (checked_at, naive local) instead of the dataset stamp (UTC) silently skips the EDT offset \u2014 four hours of updates, once, invisibly.",
+  "locked": true
+ },
+ {
+  "phase": "specification",
+  "source": "acris",
+  "component": "document_map",
+  "setting": "no_image_gate",
+  "value": "gate on source_document, NOT no_image",
+  "measured_how": "no_image is TRUE for total_pages=0 but FALSE for total_pages=-1, though neither has an image. 8 of 8 sampled -1 documents were sitting in acquisition_pending.",
+  "measured_on": "2026-08-14",
+  "failure_if_wrong": "~174,000 image-less documents get requested; ACRIS serves its placeholder as HTTP 200, so nothing errors and the run records 174,000 successful fetches of a placeholder.",
+  "locked": true
+ },
+ {
+  "phase": "extraction",
+  "source": "acris",
+  "component": "ocr_runtime",
+  "setting": "package",
+  "value": "rapidocr_openvino (PP-OCRv4 models on OpenVINO)",
+  "measured_how": "same 3 DEVR pages, identical preprocessing. paddleocr=HANGS (downloads PP-OCRv6 weights, never completes); rapidocr_onnxruntime CPU=11.41s/pg, +DirectML=6.01s/pg; rapidocr_openvino CPU=2.02s/pg. Baseline as shipped 25.07s/pg.",
+  "measured_on": "2026-08-14",
+  "failure_if_wrong": "\u26a0 ALL THREE RUN THE SAME PADDLE MODELS (ch_PP-OCRv4_det/rec_infer.onnx) \u2014 this is a RUNTIME choice, not a model choice. Reaching for the paddleocr package to 'really use Paddle' gets identical weights via the heaviest possible wrapper.",
+  "alternatives": {
+   "paddleocr": "hangs on weight download",
+   "onnxruntime CPU": "11.41s/pg",
+   "onnxruntime+DML": "6.01s/pg",
+   "openvino CPU": "2.02s/pg"
+  },
+  "locked": true
+ },
+ {
+  "phase": "extraction",
+  "source": "acris",
+  "component": "ocr_runtime",
+  "setting": "openvino_device",
+  "value": "CPU with INFERENCE_NUM_THREADS=os.cpu_count()",
+  "measured_how": "CPU 2.02s/pg 7,438 chars vs Arc 140V GPU 6.65s/pg 3,230 chars, GPU init 14.9s vs 1.0s.",
+  "measured_on": "2026-08-14",
+  "failure_if_wrong": "\u26a0 THE iGPU IS A TRAP: 3x slower AND read HALF the characters. OCR is thousands of small variable-shape inferences, the worst case for an iGPU. Also: the package hardcodes device_name='CPU' and imports openvino.runtime, removed in OpenVINO>=2025 \u2014 shim sys.modules, never downgrade or edit site-packages.",
+  "alternatives": {
+   "CPU": "2.02s/pg 7438 ch",
+   "GPU (Arc 140V)": "6.65s/pg 3230 ch"
+  },
+  "locked": true
+ },
+ {
+  "phase": "extraction",
+  "source": "acris",
+  "component": "ocr_runtime",
+  "setting": "engine_output_differs",
+  "value": "onnxruntime 7,602 ch vs openvino 7,438 ch",
+  "measured_how": "same 3 pages, same preprocessing, same PP-OCRv4 weights.",
+  "measured_on": "2026-08-14",
+  "failure_if_wrong": "~2% text difference means the runtimes are NOT interchangeable for scoring. Never compare a score produced under one runtime against a score from another.",
+  "locked": true
+ },
+ {
+  "phase": "extraction",
+  "source": "acris",
+  "component": "ocr_runtime",
+  "setting": "npu_static_reshape",
+  "value": "OpenVINO NPU with model.reshape() to static shapes \u2014 ~10x, NOT YET WIRED",
+  "measured_how": "PP-OCRv4 reshaped det->[1,3,736,736], rec->[1,3,48,320], then compiled per device. det: CPU 127.8ms vs NPU 12.9ms (9.9x). rec: CPU 48.5ms vs NPU 4.2ms (11.5x). Intel Core Ultra 7 266V, NPU rated 48 TOPS.",
+  "measured_on": "2026-08-14",
+  "failure_if_wrong": "\u26a0 THE NPU CANNOT COMPILE THE MODELS AS SHIPPED \u2014 PP-OCR inputs are fully dynamic [?,3,?,?] and NPUs require static shapes. Without reshape() the 48 TOPS is unreachable and the whole platform runs on CPU alone. \u26a0 Numbers are synthetic single-tensor inference measured WHILE the DEVR sweep held the CPU; the end-to-end page rate is NOT yet measured and padding waste (short crops padded to 320) will eat some of the gain. Accuracy under a fixed 736x736 detector input is UNVALIDATED \u2014 aspect-ratio distortion must be checked on the keyed bench before locking.",
+  "alternatives": {
+   "CPU det": "127.8ms",
+   "NPU det": "12.9ms",
+   "CPU rec": "48.5ms",
+   "NPU rec": "4.2ms"
+  },
+  "locked": false
+ }
+]

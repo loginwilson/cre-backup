@@ -1,0 +1,284 @@
+{
+ "page": "2003010601086002/p036",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "EXHIBIT D",
+   "box": [
+    [
+     1169,
+     404
+    ],
+    [
+     1425,
+     404
+    ],
+    [
+     1425,
+     455
+    ],
+    [
+     1169,
+     455
+    ]
+   ],
+   "angle": 0,
+   "score": 0.982
+  },
+  {
+   "text": "EASEMENTAREA",
+   "box": [
+    [
+     1086,
+     522
+    ],
+    [
+     1505,
+     518
+    ],
+    [
+     1505,
+     568
+    ],
+    [
+     1086,
+     572
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9921
+  },
+  {
+   "text": "ALL that volume of space, situate, lying and being in the Borough of Manhattan, County,",
+   "box": [
+    [
+     467,
+     687
+    ],
+    [
+     2263,
+     694
+    ],
+    [
+     2263,
+     754
+    ],
+    [
+     465,
+     748
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9956
+  },
+  {
+   "text": "City and State of New York,from and above the Upper Horizontal Plane,which is located (i)",
+   "box": [
+    [
+     323,
+     752
+    ],
+    [
+     2188,
+     752
+    ],
+    [
+     2188,
+     807
+    ],
+    [
+     323,
+     807
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9747
+  },
+  {
+   "text": "109.26feet abovetheManhattanDatumLevel,includingallof the54CFPremisesfrom the",
+   "box": [
+    [
+     325,
+     813
+    ],
+    [
+     2165,
+     813
+    ],
+    [
+     2165,
+     861
+    ],
+    [
+     325,
+     861
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9778
+  },
+  {
+   "text": "westem propertyline thereof to aline which is125feet east of,and parallel to,such westerm",
+   "box": [
+    [
+     321,
+     870
+    ],
+    [
+     2167,
+     868
+    ],
+    [
+     2167,
+     922
+    ],
+    [
+     321,
+     924
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9509
+  },
+  {
+   "text": "property line and (i) located 85.06 feet above the Manhattan Datum Level, including all of the",
+   "box": [
+    [
+     316,
+     926
+    ],
+    [
+     2217,
+     920
+    ],
+    [
+     2217,
+     983
+    ],
+    [
+     316,
+     989
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9912
+  },
+  {
+   "text": "ACNY Premises from the western property line thereof to a line which is 75 feet east of, and",
+   "box": [
+    [
+     319,
+     983
+    ],
+    [
+     2179,
+     983
+    ],
+    [
+     2179,
+     1044
+    ],
+    [
+     319,
+     1044
+    ]
+   ],
+   "angle": 0,
+   "score": 0.98
+  },
+  {
+   "text": "parallel to, such westerm property line.",
+   "box": [
+    [
+     319,
+     1044
+    ],
+    [
+     1094,
+     1044
+    ],
+    [
+     1094,
+     1098
+    ],
+    [
+     319,
+     1098
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9882
+  },
+  {
+   "text": "NY55/157057.4",
+   "box": [
+    [
+     310,
+     2905
+    ],
+    [
+     509,
+     2905
+    ],
+    [
+     509,
+     2940
+    ],
+    [
+     310,
+     2940
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9291
+  },
+  {
+   "text": "\u00b7E-2-27",
+   "box": [
+    [
+     1190,
+     2907
+    ],
+    [
+     1364,
+     2907
+    ],
+    [
+     1364,
+     2957
+    ],
+    [
+     1190,
+     2957
+    ]
+   ],
+   "angle": 0,
+   "score": 0.96
+  },
+  {
+   "text": "NY55/214816.1",
+   "box": [
+    [
+     310,
+     2946
+    ],
+    [
+     511,
+     2946
+    ],
+    [
+     511,
+     2988
+    ],
+    [
+     310,
+     2988
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9788
+  }
+ ]
+}

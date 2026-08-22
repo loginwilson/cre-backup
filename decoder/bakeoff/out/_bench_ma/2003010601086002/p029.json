@@ -1,0 +1,790 @@
+{
+ "page": "2003010601086002/p029",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "interest is knowm as Tax Lot 25 (formerly Old Lots 25, 26\uff0c 27\uff0c 28 and",
+   "box": [
+    [
+     323,
+     532
+    ],
+    [
+     2215,
+     530
+    ],
+    [
+     2215,
+     585
+    ],
+    [
+     323,
+     587
+    ]
+   ],
+   "angle": 0,
+   "score": 0.913
+  },
+  {
+   "text": "       ",
+   "box": [
+    [
+     323,
+     589
+    ],
+    [
+     2163,
+     585
+    ],
+    [
+     2163,
+     639
+    ],
+    [
+     323,
+     643
+    ]
+   ],
+   "angle": 0,
+   "score": 0.52
+  },
+  {
+   "text": "York, New York County, and more particularly bounded and described as",
+   "box": [
+    [
+     321,
+     641
+    ],
+    [
+     2215,
+     637
+    ],
+    [
+     2215,
+     700
+    ],
+    [
+     321,
+     704
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9874
+  },
+  {
+   "text": "follows:",
+   "box": [
+    [
+     325,
+     698
+    ],
+    [
+     562,
+     704
+    ],
+    [
+     560,
+     754
+    ],
+    [
+     323,
+     748
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9973
+  },
+  {
+   "text": "TAX LOT 25 (FORMERLY OLD LOTS 25\uff0c26\uff0c27\uff0c28 AND 129)(BLOCK 1064)",
+   "box": [
+    [
+     327,
+     815
+    ],
+    [
+     2125,
+     809
+    ],
+    [
+     2127,
+     857
+    ],
+    [
+     327,
+     863
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9122
+  },
+  {
+   "text": "ALL that certain plot, piece or parcel of land, situate, lying and",
+   "box": [
+    [
+     325,
+     920
+    ],
+    [
+     2138,
+     916
+    ],
+    [
+     2138,
+     972
+    ],
+    [
+     325,
+     977
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9688
+  },
+  {
+   "text": "being in the Borough of Manhattan, County, City and State of New York,",
+   "box": [
+    [
+     325,
+     979
+    ],
+    [
+     2234,
+     972
+    ],
+    [
+     2234,
+     1027
+    ],
+    [
+     325,
+     1033
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9642
+  },
+  {
+   "text": "bounded and described as follows:",
+   "box": [
+    [
+     327,
+     1033
+    ],
+    [
+     1234,
+     1035
+    ],
+    [
+     1234,
+     1083
+    ],
+    [
+     327,
+     1081
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9471
+  },
+  {
+   "text": "PARCEL_A_(OLD.LOT129)",
+   "box": [
+    [
+     333,
+     1148
+    ],
+    [
+     928,
+     1148
+    ],
+    [
+     928,
+     1190
+    ],
+    [
+     333,
+     1190
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9305
+  },
+  {
+   "text": "BEGINNING at a point on the northerly side of West 54th Street,",
+   "box": [
+    [
+     327,
+     1249
+    ],
+    [
+     2050,
+     1245
+    ],
+    [
+     2050,
+     1299
+    ],
+    [
+     327,
+     1303
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9736
+  },
+  {
+   "text": "distant 75 feet westerly from the corner formed by the intersection of",
+   "box": [
+    [
+     327,
+     1303
+    ],
+    [
+     2244,
+     1299
+    ],
+    [
+     2244,
+     1354
+    ],
+    [
+     327,
+     1358
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9706
+  },
+  {
+   "text": "the northerly side of 54th Street and the westerly side of Ninth",
+   "box": [
+    [
+     331,
+     1360
+    ],
+    [
+     2083,
+     1356
+    ],
+    [
+     2083,
+     1406
+    ],
+    [
+     331,
+     1410
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9656
+  },
+  {
+   "text": "Avenue;",
+   "box": [
+    [
+     329,
+     1417
+    ],
+    [
+     522,
+     1423
+    ],
+    [
+     520,
+     1467
+    ],
+    [
+     327,
+     1461
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9918
+  },
+  {
+   "text": "RUNNING THENCE northerly parallel with Ninth Avenue, 75 feet 3%",
+   "box": [
+    [
+     327,
+     1524
+    ],
+    [
+     2060,
+     1517
+    ],
+    [
+     2060,
+     1572
+    ],
+    [
+     327,
+     1578
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9574
+  },
+  {
+   "text": "inches;",
+   "box": [
+    [
+     333,
+     1576
+    ],
+    [
+     526,
+     1580
+    ],
+    [
+     524,
+     1628
+    ],
+    [
+     331,
+     1624
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9834
+  },
+  {
+   "text": "THENCE westerly parallel with 54th Street, 25 feet;",
+   "box": [
+    [
+     333,
+     1687
+    ],
+    [
+     1723,
+     1685
+    ],
+    [
+     1723,
+     1735
+    ],
+    [
+     333,
+     1737
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9575
+  },
+  {
+   "text": " n  d     1d  s ",
+   "box": [
+    [
+     331,
+     1790
+    ],
+    [
+     2223,
+     1790
+    ],
+    [
+     2223,
+     1850
+    ],
+    [
+     331,
+     1850
+    ]
+   ],
+   "angle": 0,
+   "score": 0.6001
+  },
+  {
+   "text": "through the center of a party wall, 75 feet 3% inches to the northerly",
+   "box": [
+    [
+     333,
+     1846
+    ],
+    [
+     2247,
+     1842
+    ],
+    [
+     2247,
+     1903
+    ],
+    [
+     333,
+     1907
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9771
+  },
+  {
+   "text": "sideof54th Street;and",
+   "box": [
+    [
+     333,
+     1903
+    ],
+    [
+     995,
+     1909
+    ],
+    [
+     995,
+     1957
+    ],
+    [
+     333,
+     1951
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9634
+  },
+  {
+   "text": "THENcE easterly along the northerly side of 54th Street, 25 feet to",
+   "box": [
+    [
+     329,
+     2010
+    ],
+    [
+     2167,
+     2006
+    ],
+    [
+     2167,
+     2066
+    ],
+    [
+     329,
+     2070
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9805
+  },
+  {
+   "text": "the point or place of BEGINNING.",
+   "box": [
+    [
+     335,
+     2066
+    ],
+    [
+     1207,
+     2070
+    ],
+    [
+     1205,
+     2121
+    ],
+    [
+     335,
+     2117
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9601
+  },
+  {
+   "text": "PARCELB(OLD LOT 28)",
+   "box": [
+    [
+     335,
+     2175
+    ],
+    [
+     910,
+     2175
+    ],
+    [
+     910,
+     2223
+    ],
+    [
+     335,
+     2223
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9262
+  },
+  {
+   "text": "BEGINNING at a point on the northerly side of 54th Street,\uff0c distant 100",
+   "box": [
+    [
+     333,
+     2280
+    ],
+    [
+     2247,
+     2278
+    ],
+    [
+     2247,
+     2332
+    ],
+    [
+     333,
+     2335
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9589
+  },
+  {
+   "text": "feet westerly from the intersection of the northerly side of 54th",
+   "box": [
+    [
+     335,
+     2335
+    ],
+    [
+     2114,
+     2332
+    ],
+    [
+     2117,
+     2387
+    ],
+    [
+     335,
+     2389
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9692
+  },
+  {
+   "text": "Street and the westerly side of Ninth Avenue;",
+   "box": [
+    [
+     335,
+     2391
+    ],
+    [
+     1565,
+     2395
+    ],
+    [
+     1565,
+     2443
+    ],
+    [
+     335,
+     2439
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9549
+  },
+  {
+   "text": "THENcE northerly parallel with Ninth Avenue and part of the way",
+   "box": [
+    [
+     333,
+     2492
+    ],
+    [
+     2066,
+     2496
+    ],
+    [
+     2066,
+     2559
+    ],
+    [
+     333,
+     2555
+    ]
+   ],
+   "angle": 0,
+   "score": 0.991
+  },
+  {
+   "text": "through a party wall, loo feet 5 inches to the center line of the",
+   "box": [
+    [
+     337,
+     2555
+    ],
+    [
+     2114,
+     2550
+    ],
+    [
+     2117,
+     2605
+    ],
+    [
+     337,
+     2609
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9594
+  },
+  {
+   "text": "block;",
+   "box": [
+    [
+     337,
+     2613
+    ],
+    [
+     497,
+     2613
+    ],
+    [
+     497,
+     2657
+    ],
+    [
+     337,
+     2657
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9895
+  },
+  {
+   "text": "THENcE westerly along said center line of the block, 25 feet;",
+   "box": [
+    [
+     339,
+     2722
+    ],
+    [
+     1999,
+     2722
+    ],
+    [
+     1999,
+     2770
+    ],
+    [
+     339,
+     2770
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9485
+  },
+  {
+   "text": "THENCE southerly parallel with Ninth Avenue and part of the way",
+   "box": [
+    [
+     333,
+     2819
+    ],
+    [
+     2066,
+     2825
+    ],
+    [
+     2064,
+     2888
+    ],
+    [
+     333,
+     2881
+    ]
+   ],
+   "angle": 0,
+   "score": 0.971
+  },
+  {
+   "text": "through a party wall, loo feet 5 inches to the northerly side of 54th",
+   "box": [
+    [
+     339,
+     2881
+    ],
+    [
+     2223,
+     2881
+    ],
+    [
+     2223,
+     2936
+    ],
+    [
+     339,
+     2936
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9581
+  },
+  {
+   "text": "Street; and",
+   "box": [
+    [
+     337,
+     2938
+    ],
+    [
+     645,
+     2938
+    ],
+    [
+     645,
+     2986
+    ],
+    [
+     337,
+     2986
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9507
+  },
+  {
+   "text": "THENCE easterly along said northerly side of 54th Street,25 feet to",
+   "box": [
+    [
+     339,
+     3045
+    ],
+    [
+     2196,
+     3045
+    ],
+    [
+     2196,
+     3093
+    ],
+    [
+     339,
+     3093
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9494
+  },
+  {
+   "text": "the point or place of BEGINNING.",
+   "box": [
+    [
+     339,
+     3099
+    ],
+    [
+     1215,
+     3099
+    ],
+    [
+     1215,
+     3148
+    ],
+    [
+     339,
+     3148
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9666
+  }
+ ]
+}

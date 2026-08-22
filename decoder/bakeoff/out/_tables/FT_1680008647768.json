@@ -1,0 +1,2362 @@
+{
+ "document": "FT_1680008647768",
+ "claims": [
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "block",
+   "kind": "subject",
+   "value": "586",
+   "line": 1,
+   "box": [
+    [
+     1331,
+     160
+    ],
+    [
+     1568,
+     177
+    ],
+    [
+     1563,
+     235
+    ],
+    [
+     1326,
+     218
+    ]
+   ],
+   "ocr_line": "586  761",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 2,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "borough",
+   "kind": "subject",
+   "value": "New York",
+   "line": 6,
+   "box": [
+    [
+     498,
+     369
+    ],
+    [
+     1511,
+     380
+    ],
+    [
+     1511,
+     419
+    ],
+    [
+     498,
+     409
+    ]
+   ],
+   "ocr_line": "387 P.A.S.ENTERPRISES,a New York limited partnership",
+   "region": "parties",
+   "in_region": false,
+   "region_weight": 10,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "cross_collateral",
+   "kind": "term",
+   "value": "Security Agreements",
+   "line": 35,
+   "box": [
+    [
+     342,
+     1565
+    ],
+    [
+     1573,
+     1573
+    ],
+    [
+     1573,
+     1618
+    ],
+    [
+     340,
+     1609
+    ]
+   ],
+   "ocr_line": "deliver.fromtime to time.suchfurtherinstruments\uff08including iurther SecurityAgreements\uff09asmay",
+   "region": "covenants",
+   "in_region": true,
+   "region_weight": 10,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "execution_date",
+   "kind": "event",
+   "value": "day of April, 1981",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": true,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "instrument_type",
+   "kind": "event",
+   "value": "MORTGAGE",
+   "line": 2,
+   "box": [
+    [
+     349,
+     314
+    ],
+    [
+     733,
+     314
+    ],
+    [
+     733,
+     344
+    ],
+    [
+     349,
+     344
+    ]
+   ],
+   "ocr_line": "THIS MORTGAGE,made the",
+   "region": "parties",
+   "in_region": true,
+   "region_weight": 10,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "interest_rate",
+   "kind": "quantity",
+   "value": "6.0%",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": true,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "lot",
+   "kind": "subject",
+   "value": "761",
+   "line": 1,
+   "box": [
+    [
+     1331,
+     160
+    ],
+    [
+     1568,
+     177
+    ],
+    [
+     1563,
+     235
+    ],
+    [
+     1326,
+     218
+    ]
+   ],
+   "ocr_line": "586  761",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 2,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "mortgagee",
+   "kind": "participant",
+   "value": "CITIBANK, N.A., a national banking association",
+   "line": 10,
+   "box": [
+    [
+     366,
+     477
+    ],
+    [
+     1527,
+     486
+    ],
+    [
+     1527,
+     526
+    ],
+    [
+     366,
+     517
+    ]
+   ],
+   "ocr_line": "CITiBANK, N.A.,a national banking association having an office",
+   "region": "parties",
+   "in_region": true,
+   "region_weight": 10,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "mortgagor",
+   "kind": "participant",
+   "value": "387 P.A.S. ENTERPRISES",
+   "line": 6,
+   "box": [
+    [
+     498,
+     369
+    ],
+    [
+     1511,
+     380
+    ],
+    [
+     1511,
+     419
+    ],
+    [
+     498,
+     409
+    ]
+   ],
+   "ocr_line": "387 P.A.S.ENTERPRISES,a New York limited partnership",
+   "region": "parties",
+   "in_region": true,
+   "region_weight": 10,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "mortgagor_form",
+   "kind": "participant",
+   "value": "a New York limited partnership",
+   "line": 6,
+   "box": [
+    [
+     498,
+     369
+    ],
+    [
+     1511,
+     380
+    ],
+    [
+     1511,
+     419
+    ],
+    [
+     498,
+     409
+    ]
+   ],
+   "ocr_line": "387 P.A.S.ENTERPRISES,a New York limited partnership",
+   "region": "parties",
+   "in_region": true,
+   "region_weight": 10,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "principal_amount",
+   "kind": "quantity",
+   "value": "4000000",
+   "line": 14,
+   "box": [
+    [
+     371,
+     751
+    ],
+    [
+     601,
+     751
+    ],
+    [
+     601,
+     785
+    ],
+    [
+     371,
+     785
+    ]
+   ],
+   "ocr_line": "\uff08$4,000,000\uff09-",
+   "region": "granting_clause",
+   "in_region": true,
+   "region_weight": 6,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "principal_words",
+   "kind": "quantity",
+   "value": "Four Million Dollars",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": false,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "reel",
+   "kind": "event",
+   "value": "586",
+   "line": 1,
+   "box": [
+    [
+     1331,
+     160
+    ],
+    [
+     1568,
+     177
+    ],
+    [
+     1563,
+     235
+    ],
+    [
+     1326,
+     218
+    ]
+   ],
+   "ocr_line": "586  761",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 2,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "reel_page",
+   "kind": "event",
+   "value": "761",
+   "line": 1,
+   "box": [
+    [
+     1331,
+     160
+    ],
+    [
+     1568,
+     177
+    ],
+    [
+     1563,
+     235
+    ],
+    [
+     1326,
+     218
+    ]
+   ],
+   "ocr_line": "586  761",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 2,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "street_address",
+   "kind": "subject",
+   "value": "127c Avenue of the Americas, New York, N. Y. 10021",
+   "line": 8,
+   "box": [
+    [
+     368,
+     429
+    ],
+    [
+     1316,
+     438
+    ],
+    [
+     1316,
+     479
+    ],
+    [
+     366,
+     471
+    ]
+   ],
+   "ocr_line": "127c Avenue of the Americas, New York, N. Y. 1002l,",
+   "region": "parties",
+   "in_region": false,
+   "region_weight": 10,
+   "anchor_state": "corrected"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p001",
+   "field": "tax_paid",
+   "kind": "quantity",
+   "value": "60,000",
+   "line": 14,
+   "box": [
+    [
+     371,
+     751
+    ],
+    [
+     601,
+     751
+    ],
+    [
+     601,
+     785
+    ],
+    [
+     371,
+     785
+    ]
+   ],
+   "ocr_line": "\uff08$4,000,000\uff09-",
+   "region": "granting_clause",
+   "in_region": true,
+   "region_weight": 6,
+   "anchor_state": "corrected"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p002",
+   "field": "block",
+   "kind": "subject",
+   "value": "586",
+   "line": 0,
+   "box": [
+    [
+     1075,
+     237
+    ],
+    [
+     1403,
+     242
+    ],
+    [
+     1401,
+     311
+    ],
+    [
+     1073,
+     306
+    ]
+   ],
+   "ocr_line": "REE586:A762",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p002",
+   "field": "borough",
+   "kind": "subject",
+   "value": "Manhattan",
+   "line": 3,
+   "box": [
+    [
+     151,
+     670
+    ],
+    [
+     1379,
+     718
+    ],
+    [
+     1377,
+     763
+    ],
+    [
+     149,
+     714
+    ]
+   ],
+   "ocr_line": "lying and being in the Borough of Manhattan,City.County and State of",
+   "region": "legal_description",
+   "in_region": true,
+   "region_weight": 13,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p002",
+   "field": "lot",
+   "kind": "subject",
+   "value": "762",
+   "line": 0,
+   "box": [
+    [
+     1075,
+     237
+    ],
+    [
+     1403,
+     242
+    ],
+    [
+     1401,
+     311
+    ],
+    [
+     1073,
+     306
+    ]
+   ],
+   "ocr_line": "REE586:A762",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p002",
+   "field": "reel",
+   "kind": "event",
+   "value": "586",
+   "line": 0,
+   "box": [
+    [
+     1075,
+     237
+    ],
+    [
+     1403,
+     242
+    ],
+    [
+     1401,
+     311
+    ],
+    [
+     1073,
+     306
+    ]
+   ],
+   "ocr_line": "REE586:A762",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p002",
+   "field": "reel_page",
+   "kind": "event",
+   "value": "762",
+   "line": 0,
+   "box": [
+    [
+     1075,
+     237
+    ],
+    [
+     1403,
+     242
+    ],
+    [
+     1401,
+     311
+    ],
+    [
+     1073,
+     306
+    ]
+   ],
+   "ocr_line": "REE586:A762",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p002",
+   "field": "section",
+   "kind": "subject",
+   "value": "0",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": false,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p002",
+   "field": "street_address",
+   "kind": "subject",
+   "value": "4th Avenue",
+   "line": 11,
+   "box": [
+    [
+     294,
+     1238
+    ],
+    [
+     1338,
+     1280
+    ],
+    [
+     1336,
+     1324
+    ],
+    [
+     292,
+     1283
+    ]
+   ],
+   "ocr_line": "THENcE Southerly parallel with Fourth Avenue,98 feet 9",
+   "region": "legal_description",
+   "in_region": true,
+   "region_weight": 13,
+   "anchor_state": "corrected"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p002",
+   "field": "tax_paid",
+   "kind": "quantity",
+   "value": "0",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": false,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p003",
+   "field": "borough",
+   "kind": "subject",
+   "value": "New York",
+   "line": 4,
+   "box": [
+    [
+     340,
+     362
+    ],
+    [
+     1527,
+     373
+    ],
+    [
+     1527,
+     417
+    ],
+    [
+     338,
+     407
+    ]
+   ],
+   "ocr_line": "BETWEEN 387 P.A.S.ENTERPRISES,a New York limited partnership",
+   "region": "parties",
+   "in_region": false,
+   "region_weight": 9,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p003",
+   "field": "cross_collateral",
+   "kind": "term",
+   "value": "no",
+   "line": 44,
+   "box": [
+    [
+     347,
+     1967
+    ],
+    [
+     1597,
+     1967
+    ],
+    [
+     1597,
+     2006
+    ],
+    [
+     347,
+     2006
+    ]
+   ],
+   "ocr_line": "secured hereby that,as of the date hereof.there are_no.encumbrances to secure debt junior to this",
+   "region": "covenants",
+   "in_region": true,
+   "region_weight": 22,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p003",
+   "field": "execution_date",
+   "kind": "event",
+   "value": "day of 1981",
+   "line": 2,
+   "box": [
+    [
+     847,
+     313
+    ],
+    [
+     929,
+     313
+    ],
+    [
+     929,
+     344
+    ],
+    [
+     847,
+     344
+    ]
+   ],
+   "ocr_line": "dayof",
+   "region": "parties",
+   "in_region": true,
+   "region_weight": 9,
+   "anchor_state": "corrected"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p003",
+   "field": "instrument_type",
+   "kind": "event",
+   "value": "MORTGAGE",
+   "line": 1,
+   "box": [
+    [
+     344,
+     313
+    ],
+    [
+     721,
+     309
+    ],
+    [
+     721,
+     338
+    ],
+    [
+     345,
+     342
+    ]
+   ],
+   "ocr_line": "THISMORTGAGE,madethe",
+   "region": "parties",
+   "in_region": true,
+   "region_weight": 9,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p003",
+   "field": "mortgagee",
+   "kind": "participant",
+   "value": "CITIBANK, N.A., a national banking association",
+   "line": 8,
+   "box": [
+    [
+     362,
+     477
+    ],
+    [
+     1542,
+     479
+    ],
+    [
+     1542,
+     520
+    ],
+    [
+     362,
+     519
+    ]
+   ],
+   "ocr_line": "CITIBANK, N.A., a national banking association having an office",
+   "region": "parties",
+   "in_region": true,
+   "region_weight": 9,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p003",
+   "field": "mortgagor",
+   "kind": "participant",
+   "value": "387 P.A.S.ENTERPRISES",
+   "line": 4,
+   "box": [
+    [
+     340,
+     362
+    ],
+    [
+     1527,
+     373
+    ],
+    [
+     1527,
+     417
+    ],
+    [
+     338,
+     407
+    ]
+   ],
+   "ocr_line": "BETWEEN 387 P.A.S.ENTERPRISES,a New York limited partnership",
+   "region": "parties",
+   "in_region": true,
+   "region_weight": 9,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p003",
+   "field": "mortgagor_form",
+   "kind": "participant",
+   "value": "a New York limited partnership",
+   "line": 4,
+   "box": [
+    [
+     340,
+     362
+    ],
+    [
+     1527,
+     373
+    ],
+    [
+     1527,
+     417
+    ],
+    [
+     338,
+     407
+    ]
+   ],
+   "ocr_line": "BETWEEN 387 P.A.S.ENTERPRISES,a New York limited partnership",
+   "region": "parties",
+   "in_region": true,
+   "region_weight": 9,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p003",
+   "field": "principal_amount",
+   "kind": "quantity",
+   "value": "4000000",
+   "line": 13,
+   "box": [
+    [
+     373,
+     751
+    ],
+    [
+     608,
+     751
+    ],
+    [
+     608,
+     785
+    ],
+    [
+     373,
+     785
+    ]
+   ],
+   "ocr_line": "\uff08$4,000,000)-",
+   "region": "amount",
+   "in_region": true,
+   "region_weight": 4,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p003",
+   "field": "principal_words",
+   "kind": "quantity",
+   "value": "Four Million Dollars",
+   "line": 12,
+   "box": [
+    [
+     1298,
+     718
+    ],
+    [
+     1558,
+     718
+    ],
+    [
+     1558,
+     752
+    ],
+    [
+     1298,
+     752
+    ]
+   ],
+   "ocr_line": "Four Million",
+   "region": "amount",
+   "in_region": true,
+   "region_weight": 4,
+   "anchor_state": "corrected"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p003",
+   "field": "reel",
+   "kind": "event",
+   "value": "586",
+   "line": 0,
+   "box": [
+    [
+     1269,
+     175
+    ],
+    [
+     1596,
+     189
+    ],
+    [
+     1594,
+     254
+    ],
+    [
+     1268,
+     240
+    ]
+   ],
+   "ocr_line": "REEL 586c: 763",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p003",
+   "field": "reel_page",
+   "kind": "event",
+   "value": "763",
+   "line": 0,
+   "box": [
+    [
+     1269,
+     175
+    ],
+    [
+     1596,
+     189
+    ],
+    [
+     1594,
+     254
+    ],
+    [
+     1268,
+     240
+    ]
+   ],
+   "ocr_line": "REEL 586c: 763",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p003",
+   "field": "street_address",
+   "kind": "subject",
+   "value": "1270 Avenue of the Americas, New York, N.Y. 10021",
+   "line": 6,
+   "box": [
+    [
+     362,
+     428
+    ],
+    [
+     1328,
+     431
+    ],
+    [
+     1328,
+     476
+    ],
+    [
+     362,
+     472
+    ]
+   ],
+   "ocr_line": "1270 Avenue of the Americas, New York, N.Y. 10021,",
+   "region": "parties",
+   "in_region": false,
+   "region_weight": 9,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p004",
+   "field": "block",
+   "kind": "subject",
+   "value": "586",
+   "line": 0,
+   "box": [
+    [
+     1216,
+     249
+    ],
+    [
+     1534,
+     263
+    ],
+    [
+     1530,
+     328
+    ],
+    [
+     1213,
+     314
+    ]
+   ],
+   "ocr_line": "RiEt  586:Aa  764",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p004",
+   "field": "borough",
+   "kind": "subject",
+   "value": "New York",
+   "line": 39,
+   "box": [
+    [
+     340,
+     2552
+    ],
+    [
+     845,
+     2554
+    ],
+    [
+     845,
+     2588
+    ],
+    [
+     338,
+     2587
+    ]
+   ],
+   "ocr_line": "*exceptfortenantworkand",
+   "region": "covenants",
+   "in_region": false,
+   "region_weight": 40,
+   "anchor_state": "corrected"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p004",
+   "field": "instrument_type",
+   "kind": "event",
+   "value": "MORTGAGE",
+   "line": 2,
+   "box": [
+    [
+     335,
+     1012
+    ],
+    [
+     1108,
+     1010
+    ],
+    [
+     1108,
+     1051
+    ],
+    [
+     337,
+     1053
+    ]
+   ],
+   "ocr_line": "AND the Mortgagor covenants with the Mortgagee as follows:",
+   "region": "granting_clause",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p004",
+   "field": "interest_rate",
+   "kind": "quantity",
+   "value": "2%",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": true,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p004",
+   "field": "lot",
+   "kind": "subject",
+   "value": "764",
+   "line": 0,
+   "box": [
+    [
+     1216,
+     249
+    ],
+    [
+     1534,
+     263
+    ],
+    [
+     1530,
+     328
+    ],
+    [
+     1213,
+     314
+    ]
+   ],
+   "ocr_line": "RiEt  586:Aa  764",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p004",
+   "field": "mortgagor_form",
+   "kind": "participant",
+   "value": "New York limited partnership",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": true,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p004",
+   "field": "principal_amount",
+   "kind": "quantity",
+   "value": "230",
+   "line": 42,
+   "box": [
+    [
+     1185,
+     2647
+    ],
+    [
+     1269,
+     2647
+    ],
+    [
+     1269,
+     2671
+    ],
+    [
+     1185,
+     2671
+    ]
+   ],
+   "ocr_line": "230",
+   "region": "covenants",
+   "in_region": false,
+   "region_weight": 40,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p004",
+   "field": "principal_words",
+   "kind": "quantity",
+   "value": "Two Hundred Thirty Dollars",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": false,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p004",
+   "field": "reel",
+   "kind": "event",
+   "value": "586",
+   "line": 0,
+   "box": [
+    [
+     1216,
+     249
+    ],
+    [
+     1534,
+     263
+    ],
+    [
+     1530,
+     328
+    ],
+    [
+     1213,
+     314
+    ]
+   ],
+   "ocr_line": "RiEt  586:Aa  764",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p004",
+   "field": "reel_page",
+   "kind": "event",
+   "value": "764",
+   "line": 0,
+   "box": [
+    [
+     1216,
+     249
+    ],
+    [
+     1534,
+     263
+    ],
+    [
+     1530,
+     328
+    ],
+    [
+     1213,
+     314
+    ]
+   ],
+   "ocr_line": "RiEt  586:Aa  764",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p004",
+   "field": "section",
+   "kind": "subject",
+   "value": "0",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": false,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p004",
+   "field": "tax_paid",
+   "kind": "quantity",
+   "value": "0",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": false,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p005",
+   "field": "reel",
+   "kind": "event",
+   "value": "586",
+   "line": 0,
+   "box": [
+    [
+     1310,
+     119
+    ],
+    [
+     1554,
+     127
+    ],
+    [
+     1551,
+     187
+    ],
+    [
+     1309,
+     179
+    ]
+   ],
+   "ocr_line": "586M 765",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 2,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p005",
+   "field": "reel_page",
+   "kind": "event",
+   "value": "765",
+   "line": 0,
+   "box": [
+    [
+     1310,
+     119
+    ],
+    [
+     1554,
+     127
+    ],
+    [
+     1551,
+     187
+    ],
+    [
+     1309,
+     179
+    ]
+   ],
+   "ocr_line": "586M 765",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 2,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p007",
+   "field": "interest_rate",
+   "kind": "quantity",
+   "value": "5",
+   "line": 16,
+   "box": [
+    [
+     331,
+     876
+    ],
+    [
+     1573,
+     879
+    ],
+    [
+     1573,
+     917
+    ],
+    [
+     331,
+     914
+    ]
+   ],
+   "ocr_line": "gage or,if no such period is so provided,bynot later than five\uff085\uff09 days after written notice;or \uff08k\uff09if",
+   "region": "granting_clause",
+   "in_region": true,
+   "region_weight": 50,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p007",
+   "field": "maturity_date",
+   "kind": "term",
+   "value": "5 days",
+   "line": 16,
+   "box": [
+    [
+     331,
+     876
+    ],
+    [
+     1573,
+     879
+    ],
+    [
+     1573,
+     917
+    ],
+    [
+     331,
+     914
+    ]
+   ],
+   "ocr_line": "gage or,if no such period is so provided,bynot later than five\uff085\uff09 days after written notice;or \uff08k\uff09if",
+   "region": "granting_clause",
+   "in_region": true,
+   "region_weight": 50,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p007",
+   "field": "mortgagee",
+   "kind": "participant",
+   "value": "Sisson Realty, N.Y., Inc.",
+   "line": 40,
+   "box": [
+    [
+     335,
+     1764
+    ],
+    [
+     1266,
+     1778
+    ],
+    [
+     1266,
+     1815
+    ],
+    [
+     333,
+     1802
+    ]
+   ],
+   "ocr_line": "where Sisson Realty,.V.\uff0cInc.renains the generalpartner.",
+   "region": "granting_clause",
+   "in_region": true,
+   "region_weight": 50,
+   "anchor_state": "corrected"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p007",
+   "field": "principal_words",
+   "kind": "quantity",
+   "value": "Fifty Thousand Dollars",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": false,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p008",
+   "field": "block",
+   "kind": "subject",
+   "value": "586",
+   "line": 0,
+   "box": [
+    [
+     1252,
+     148
+    ],
+    [
+     1498,
+     151
+    ],
+    [
+     1496,
+     216
+    ],
+    [
+     1250,
+     213
+    ]
+   ],
+   "ocr_line": "586\u00b1 768",
+   "region": "legal_description",
+   "in_region": true,
+   "region_weight": 2,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p008",
+   "field": "lot",
+   "kind": "subject",
+   "value": "768",
+   "line": 0,
+   "box": [
+    [
+     1252,
+     148
+    ],
+    [
+     1498,
+     151
+    ],
+    [
+     1496,
+     216
+    ],
+    [
+     1250,
+     213
+    ]
+   ],
+   "ocr_line": "586\u00b1 768",
+   "region": "legal_description",
+   "in_region": true,
+   "region_weight": 2,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p009",
+   "field": "block",
+   "kind": "subject",
+   "value": "769",
+   "line": 0,
+   "box": [
+    [
+     1099,
+     168
+    ],
+    [
+     1338,
+     168
+    ],
+    [
+     1338,
+     227
+    ],
+    [
+     1099,
+     227
+    ]
+   ],
+   "ocr_line": "586:A 769",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p009",
+   "field": "instrument_type",
+   "kind": "event",
+   "value": "MORTGAGE",
+   "line": 2,
+   "box": [
+    [
+     163,
+     225
+    ],
+    [
+     1400,
+     225
+    ],
+    [
+     1400,
+     264
+    ],
+    [
+     163,
+     264
+    ]
+   ],
+   "ocr_line": "28.That wherever used in this Mortgage,unless the context clearly indicates a contrary intent or",
+   "region": "other",
+   "in_region": true,
+   "region_weight": 38,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p009",
+   "field": "lot",
+   "kind": "subject",
+   "value": "586",
+   "line": 0,
+   "box": [
+    [
+     1099,
+     168
+    ],
+    [
+     1338,
+     168
+    ],
+    [
+     1338,
+     227
+    ],
+    [
+     1099,
+     227
+    ]
+   ],
+   "ocr_line": "586:A 769",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p009",
+   "field": "mortgagor",
+   "kind": "participant",
+   "value": "387 P.A.S. ENTERPRISES",
+   "line": 41,
+   "box": [
+    [
+     792,
+     1570
+    ],
+    [
+     1214,
+     1570
+    ],
+    [
+     1214,
+     1604
+    ],
+    [
+     792,
+     1604
+    ]
+   ],
+   "ocr_line": "387 P.A.S.ENTERPRISES",
+   "region": "signature",
+   "in_region": true,
+   "region_weight": 10,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p009",
+   "field": "notary_name",
+   "kind": "participant",
+   "value": "Katbhals",
+   "line": 40,
+   "box": [
+    [
+     155,
+     1539
+    ],
+    [
+     586,
+     1518
+    ],
+    [
+     594,
+     1681
+    ],
+    [
+     161,
+     1702
+    ]
+   ],
+   "ocr_line": "Katbhals",
+   "region": "signature",
+   "in_region": false,
+   "region_weight": 10,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p009",
+   "field": "notary_no",
+   "kind": "participant",
+   "value": "387",
+   "line": 41,
+   "box": [
+    [
+     792,
+     1570
+    ],
+    [
+     1214,
+     1570
+    ],
+    [
+     1214,
+     1604
+    ],
+    [
+     792,
+     1604
+    ]
+   ],
+   "ocr_line": "387 P.A.S.ENTERPRISES",
+   "region": "signature",
+   "in_region": false,
+   "region_weight": 10,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p009",
+   "field": "reel",
+   "kind": "event",
+   "value": "586",
+   "line": 0,
+   "box": [
+    [
+     1099,
+     168
+    ],
+    [
+     1338,
+     168
+    ],
+    [
+     1338,
+     227
+    ],
+    [
+     1099,
+     227
+    ]
+   ],
+   "ocr_line": "586:A 769",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p009",
+   "field": "reel_page",
+   "kind": "event",
+   "value": "769",
+   "line": 0,
+   "box": [
+    [
+     1099,
+     168
+    ],
+    [
+     1338,
+     168
+    ],
+    [
+     1338,
+     227
+    ],
+    [
+     1099,
+     227
+    ]
+   ],
+   "ocr_line": "586:A 769",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 1,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p009",
+   "field": "section",
+   "kind": "subject",
+   "value": "0",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": false,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p009",
+   "field": "signer_for",
+   "kind": "participant",
+   "value": "Sisson Realty, N.V., Inc.",
+   "line": 43,
+   "box": [
+    [
+     879,
+     1633
+    ],
+    [
+     1347,
+     1633
+    ],
+    [
+     1347,
+     1668
+    ],
+    [
+     879,
+     1668
+    ]
+   ],
+   "ocr_line": "Sisson Realty,N.V.,nc.",
+   "region": "signature",
+   "in_region": true,
+   "region_weight": 10,
+   "anchor_state": "corrected"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p009",
+   "field": "signer_title",
+   "kind": "participant",
+   "value": "General Partner",
+   "line": 44,
+   "box": [
+    [
+     879,
+     1663
+    ],
+    [
+     1166,
+     1666
+    ],
+    [
+     1166,
+     1700
+    ],
+    [
+     879,
+     1697
+    ]
+   ],
+   "ocr_line": "GeneralPartner",
+   "region": "signature",
+   "in_region": true,
+   "region_weight": 10,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p009",
+   "field": "tax_paid",
+   "kind": "quantity",
+   "value": "0",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": false,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p010",
+   "field": "block",
+   "kind": "subject",
+   "value": "883",
+   "line": 64,
+   "box": [
+    [
+     1140,
+     1510
+    ],
+    [
+     1206,
+     1510
+    ],
+    [
+     1206,
+     1542
+    ],
+    [
+     1140,
+     1542
+    ]
+   ],
+   "ocr_line": "883",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 54,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p010",
+   "field": "borough",
+   "kind": "subject",
+   "value": "NEW YORK",
+   "line": 2,
+   "box": [
+    [
+     172,
+     210
+    ],
+    [
+     768,
+     211
+    ],
+    [
+     768,
+     246
+    ],
+    [
+     172,
+     244
+    ]
+   ],
+   "ocr_line": "STATE OF NEW YORK,COUNTY OF NEW YORK",
+   "region": "notary",
+   "in_region": false,
+   "region_weight": 59,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p010",
+   "field": "lot",
+   "kind": "subject",
+   "value": "1",
+   "line": 68,
+   "box": [
+    [
+     1175,
+     1547
+    ],
+    [
+     1204,
+     1547
+    ],
+    [
+     1204,
+     1580
+    ],
+    [
+     1175,
+     1580
+    ]
+   ],
+   "ocr_line": "1",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 54,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p010",
+   "field": "notary_name",
+   "kind": "participant",
+   "value": "ELLIOTT BAKST",
+   "line": 42,
+   "box": [
+    [
+     577,
+     690
+    ],
+    [
+     733,
+     690
+    ],
+    [
+     733,
+     720
+    ],
+    [
+     577,
+     720
+    ]
+   ],
+   "ocr_line": "ELLIOTT BAKST",
+   "region": "notary",
+   "in_region": true,
+   "region_weight": 59,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p010",
+   "field": "notary_no",
+   "kind": "participant",
+   "value": "24-0141715",
+   "line": 44,
+   "box": [
+    [
+     479,
+     737
+    ],
+    [
+     835,
+     737
+    ],
+    [
+     835,
+     764
+    ],
+    [
+     479,
+     764
+    ]
+   ],
+   "ocr_line": "No24-0141715,Qual.inKings County",
+   "region": "notary",
+   "in_region": true,
+   "region_weight": 59,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p010",
+   "field": "parcel_key",
+   "kind": "subject",
+   "value": "883 1",
+   "line": 64,
+   "box": [
+    [
+     1140,
+     1510
+    ],
+    [
+     1206,
+     1510
+    ],
+    [
+     1206,
+     1542
+    ],
+    [
+     1140,
+     1542
+    ]
+   ],
+   "ocr_line": "883",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 54,
+   "anchor_state": "corrected"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p010",
+   "field": "recording_date",
+   "kind": "event",
+   "value": "1981",
+   "line": 7,
+   "box": [
+    [
+     606,
+     270
+    ],
+    [
+     720,
+     259
+    ],
+    [
+     721,
+     294
+    ],
+    [
+     610,
+     306
+    ]
+   ],
+   "ocr_line": "1981",
+   "region": "notary",
+   "in_region": true,
+   "region_weight": 59,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p010",
+   "field": "reel",
+   "kind": "event",
+   "value": "586",
+   "line": 0,
+   "box": [
+    [
+     850,
+     158
+    ],
+    [
+     1094,
+     163
+    ],
+    [
+     1094,
+     222
+    ],
+    [
+     848,
+     216
+    ]
+   ],
+   "ocr_line": "586AE 770",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 54,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p010",
+   "field": "reel_page",
+   "kind": "event",
+   "value": "770",
+   "line": 0,
+   "box": [
+    [
+     850,
+     158
+    ],
+    [
+     1094,
+     163
+    ],
+    [
+     1094,
+     222
+    ],
+    [
+     848,
+     216
+    ]
+   ],
+   "ocr_line": "586AE 770",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 54,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p010",
+   "field": "section",
+   "kind": "subject",
+   "value": "3",
+   "line": 62,
+   "box": [
+    [
+     1176,
+     1479
+    ],
+    [
+     1206,
+     1479
+    ],
+    [
+     1206,
+     1511
+    ],
+    [
+     1176,
+     1511
+    ]
+   ],
+   "ocr_line": "3",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 54,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p010",
+   "field": "signer_for",
+   "kind": "participant",
+   "value": "387 P.A.S. ENTERPRISES",
+   "line": 72,
+   "box": [
+    [
+     309,
+     1678
+    ],
+    [
+     725,
+     1680
+    ],
+    [
+     725,
+     1714
+    ],
+    [
+     309,
+     1712
+    ]
+   ],
+   "ocr_line": "387 P.A.S.ENTERPRISES",
+   "region": "recording_stamp",
+   "in_region": true,
+   "region_weight": 54,
+   "anchor_state": "verbatim"
+  },
+  {
+   "document": "FT_1680008647768",
+   "page": "p010",
+   "field": "tax_paid",
+   "kind": "quantity",
+   "value": "$0",
+   "line": null,
+   "box": null,
+   "ocr_line": null,
+   "region": null,
+   "in_region": false,
+   "region_weight": 0,
+   "anchor_state": "unanchored"
+  }
+ ],
+ "event": {
+  "subject": {
+   "type": "parcel",
+   "bbl": "1008830001",
+   "resolved": true,
+   "missing": null,
+   "borough": "Manhattan",
+   "block": "883",
+   "lot": "1",
+   "section": "3",
+   "address": "4th Avenue"
+  },
+  "function": "CAPITAL",
+  "function_prior": "MORTGAGE",
+  "mode": null,
+  "date": "day of 1981",
+  "recorded": "1981",
+  "participants": [
+   {
+    "role": "signatory",
+    "name": null,
+    "type": "person",
+    "state": "unread_handwritten",
+    "title": "General Partner",
+    "acts_for": "387 P.A.S. ENTERPRISES"
+   },
+   {
+    "role": "borrower",
+    "name": "387 P.A.S. ENTERPRISES",
+    "type": "entity",
+    "form": "a New York limited partnership"
+   },
+   {
+    "role": "lender",
+    "name": "CITIBANK, N.A., a national banking association",
+    "type": "entity"
+   },
+   {
+    "role": "notary",
+    "name": "ELLIOTT BAKST",
+    "type": "entity"
+   }
+  ],
+  "quantities": [
+   {
+    "dim": "money",
+    "kind": "principal_amount",
+    "unit": "USD",
+    "value": "4000000",
+    "bound": "exact"
+   },
+   {
+    "dim": "money",
+    "kind": "tax_paid",
+    "unit": "USD",
+    "value": "60,000",
+    "bound": "exact"
+   },
+   {
+    "dim": "rate",
+    "kind": "interest_rate",
+    "unit": "% p.a.",
+    "value": "5",
+    "bound": "exact"
+   }
+  ],
+  "terms": [
+   {
+    "term": "maturity_date",
+    "value": "5 days",
+    "attaches_to": "event"
+   },
+   {
+    "term": "cross_collateral",
+    "value": "no",
+    "attaches_to": "event"
+   }
+  ],
+  "mode_rejected_unread": {},
+  "function_evidence": {
+   "capital": 11,
+   "identity": 8,
+   "occupancy": 7,
+   "encumbrance": 3
+  },
+  "mode_evidence": {}
+ },
+ "account_posting": {
+  "function": "CAPITAL",
+  "subject": "1008830001",
+  "posts": [
+   {
+    "dim": "money",
+    "kind": "principal_amount",
+    "unit": "USD",
+    "value": "4000000",
+    "bound": "exact"
+   }
+  ]
+ },
+ "stats": {
+  "verbatim": 57,
+  "off_region_kept": 19,
+  "unanchored": 14,
+  "echoed_prompt_hint": 9,
+  "sentinel": 20,
+  "parcel_key_no_label": 5,
+  "corrected": 9,
+  "invented": 8,
+  "stamp_year_uncorroborated": 3,
+  "not_a_parcel_key": 2,
+  "empty": 6,
+  "echoed_field_name": 2,
+  "handwritten_unread": 2
+ }
+}

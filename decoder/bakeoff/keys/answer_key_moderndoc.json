@@ -1,0 +1,659 @@
+{
+ "_doc": "2015022400608001",
+ "_note": "PARTIAL KEY - 4 of 9 pages hand-read. p4-p8 not keyed, excluded from scoring.",
+ "_summary": "MTGE recorded 2015-03-06, CRFN 2015000076576. $50,000 HRA public-assistance lien: DARLENE EPPS to NYC COMMISSIONER OF SOCIAL SERVICES. Queens BLOCK 10140 LOT 1112 UNIT 17C, 107-28 Guy R Brewer Blvd, single residential condo unit. Exempt from mortgage recording tax under 20 NYCRR 644.1(a).",
+ "p001.png": {
+  "kind": "ACRIS cover page - fully typed, the redundant witness",
+  "artifacts": [
+   {
+    "id": "agency",
+    "tier": "ROUTINE",
+    "value": "DEPARTMENT OF FINANCE",
+    "alts": []
+   },
+   {
+    "id": "office",
+    "tier": "ROUTINE",
+    "value": "OFFICE OF THE CITY REGISTER",
+    "alts": []
+   },
+   {
+    "id": "cover",
+    "tier": "CRITICAL",
+    "value": "RECORDING AND ENDORSEMENT COVER PAGE",
+    "alts": []
+   },
+   {
+    "id": "doc_id",
+    "tier": "CRITICAL",
+    "value": "2015022400608001",
+    "alts": []
+   },
+   {
+    "id": "doc_date",
+    "tier": "CRITICAL",
+    "value": "11-18-2014",
+    "alts": []
+   },
+   {
+    "id": "prep_date",
+    "tier": "ROUTINE",
+    "value": "02-24-2015",
+    "alts": []
+   },
+   {
+    "id": "doc_type",
+    "tier": "CRITICAL",
+    "value": "MORTGAGE",
+    "alts": []
+   },
+   {
+    "id": "page_count",
+    "tier": "MATERIAL",
+    "value": "Document Page Count",
+    "alts": []
+   },
+   {
+    "id": "presenter",
+    "tier": "CRITICAL",
+    "value": "COMMISSIONER OF SOCIAL SERVICES",
+    "alts": []
+   },
+   {
+    "id": "presenter_addr",
+    "tier": "CRITICAL",
+    "value": "250 CHURCH STREET",
+    "alts": []
+   },
+   {
+    "id": "presenter_zip",
+    "tier": "MATERIAL",
+    "value": "10013",
+    "alts": []
+   },
+   {
+    "id": "phone",
+    "tier": "MATERIAL",
+    "value": "929-252-2481",
+    "alts": []
+   },
+   {
+    "id": "email",
+    "tier": "MATERIAL",
+    "value": "HRA.NYC.GOV",
+    "alts": []
+   },
+   {
+    "id": "borough",
+    "tier": "CRITICAL",
+    "value": "QUEENS",
+    "alts": []
+   },
+   {
+    "id": "block",
+    "tier": "CRITICAL",
+    "value": "10140",
+    "alts": []
+   },
+   {
+    "id": "lot",
+    "tier": "CRITICAL",
+    "value": "1112",
+    "alts": []
+   },
+   {
+    "id": "unit",
+    "tier": "CRITICAL",
+    "value": "17C",
+    "alts": []
+   },
+   {
+    "id": "entire_lot",
+    "tier": "MATERIAL",
+    "value": "Entire Lot",
+    "alts": []
+   },
+   {
+    "id": "address",
+    "tier": "CRITICAL",
+    "value": "GUY R BREWER",
+    "alts": []
+   },
+   {
+    "id": "prop_type",
+    "tier": "CRITICAL",
+    "value": "RESIDENTIAL CONDO UNIT",
+    "alts": []
+   },
+   {
+    "id": "mortgagor_label",
+    "tier": "MATERIAL",
+    "value": "MORTGAGOR",
+    "alts": []
+   },
+   {
+    "id": "mortgagor",
+    "tier": "CRITICAL",
+    "value": "DARLENE EPPS",
+    "alts": []
+   },
+   {
+    "id": "mortgagor_city",
+    "tier": "MATERIAL",
+    "value": "JAMAICA",
+    "alts": []
+   },
+   {
+    "id": "mortgagee_label",
+    "tier": "MATERIAL",
+    "value": "MORTGAGEE",
+    "alts": []
+   },
+   {
+    "id": "mtg_amount",
+    "tier": "CRITICAL",
+    "value": "50,000.00",
+    "alts": []
+   },
+   {
+    "id": "exemption",
+    "tier": "CRITICAL",
+    "value": "255",
+    "alts": []
+   },
+   {
+    "id": "rec_fee",
+    "tier": "CRITICAL",
+    "value": "EXEMPT",
+    "alts": []
+   },
+   {
+    "id": "recorded",
+    "tier": "CRITICAL",
+    "value": "03-06-2015",
+    "alts": []
+   },
+   {
+    "id": "crfn",
+    "tier": "CRITICAL",
+    "value": "2015000076576",
+    "alts": []
+   },
+   {
+    "id": "xref",
+    "tier": "ROUTINE",
+    "value": "CROSS REFERENCE DATA",
+    "alts": []
+   },
+   {
+    "id": "fees",
+    "tier": "ROUTINE",
+    "value": "FEES AND TAXES",
+    "alts": []
+   },
+   {
+    "id": "prop_data",
+    "tier": "ROUTINE",
+    "value": "PROPERTY DATA",
+    "alts": []
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "barcode",
+    "note": "barcode glyph strip above the printed string"
+   },
+   {
+    "id": "reg_sig",
+    "note": "City Register signature, cursive"
+   }
+  ]
+ },
+ "p002.png": {
+  "kind": "HRA cover sheet - printed header, handwritten fills",
+  "artifacts": [
+   {
+    "id": "form_no",
+    "tier": "MATERIAL",
+    "value": "LR-205k",
+    "alts": []
+   },
+   {
+    "id": "agency",
+    "tier": "CRITICAL",
+    "value": "Human Resources Administration",
+    "alts": [
+     "HUMAN RESOURCES"
+    ]
+   },
+   {
+    "id": "bureau",
+    "tier": "MATERIAL",
+    "value": "BUREAU OF ELIGIBILITY VERIFICATION",
+    "alts": []
+   },
+   {
+    "id": "admin",
+    "tier": "MATERIAL",
+    "value": "ENFORCEMENT ADMINISTRATION",
+    "alts": []
+   },
+   {
+    "id": "unit",
+    "tier": "MATERIAL",
+    "value": "REAL PROPERTY UNIT",
+    "alts": []
+   },
+   {
+    "id": "addr",
+    "tier": "CRITICAL",
+    "value": "SCHERMERHORN",
+    "alts": []
+   },
+   {
+    "id": "city",
+    "tier": "MATERIAL",
+    "value": "BROOKLYN",
+    "alts": []
+   },
+   {
+    "id": "zip",
+    "tier": "MATERIAL",
+    "value": "11201",
+    "alts": []
+   },
+   {
+    "id": "title",
+    "tier": "CRITICAL",
+    "value": "BOND AND MORTGAGE",
+    "alts": []
+   },
+   {
+    "id": "mortgagee",
+    "tier": "CRITICAL",
+    "value": "Commissioner of Social Services",
+    "alts": []
+   },
+   {
+    "id": "district",
+    "tier": "MATERIAL",
+    "value": "New York Social District",
+    "alts": []
+   },
+   {
+    "id": "return",
+    "tier": "CRITICAL",
+    "value": "KINDLY RECORD AND RETURN TO",
+    "alts": []
+   },
+   {
+    "id": "return_unit",
+    "tier": "MATERIAL",
+    "value": "Liens And Recovery",
+    "alts": []
+   },
+   {
+    "id": "return_addr",
+    "tier": "MATERIAL",
+    "value": "250 Church St",
+    "alts": []
+   },
+   {
+    "id": "tax_map",
+    "tier": "MATERIAL",
+    "value": "Tax Map of the County",
+    "alts": []
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "hw_name",
+    "note": "Darlene Epps handwritten across the top"
+   },
+   {
+    "id": "hw_block",
+    "note": "Block 10140 handwritten"
+   },
+   {
+    "id": "hw_lot",
+    "note": "Lot 1112 handwritten"
+   },
+   {
+    "id": "hw_county",
+    "note": "Queens handwritten"
+   }
+  ]
+ },
+ "p003.png": {
+  "kind": "instrument - printed boilerplate + metes, handwritten operative fields",
+  "artifacts": [
+   {
+    "id": "title",
+    "tier": "CRITICAL",
+    "value": "BOND AND MORTGAGE",
+    "alts": []
+   },
+   {
+    "id": "form_no",
+    "tier": "MATERIAL",
+    "value": "LR-205k",
+    "alts": []
+   },
+   {
+    "id": "mortgagee",
+    "tier": "CRITICAL",
+    "value": "Commissioner of Social Services",
+    "alts": []
+   },
+   {
+    "id": "mortgagee_addr",
+    "tier": "CRITICAL",
+    "value": "180 Water Street",
+    "alts": []
+   },
+   {
+    "id": "ss_law",
+    "tier": "CRITICAL",
+    "value": "Social Services Law",
+    "alts": []
+   },
+   {
+    "id": "witnesseth",
+    "tier": "ROUTINE",
+    "value": "Witnesseth",
+    "alts": []
+   },
+   {
+    "id": "redeem",
+    "tier": "MATERIAL",
+    "value": "expiration of one year",
+    "alts": []
+   },
+   {
+    "id": "begin",
+    "tier": "CRITICAL",
+    "value": "BEGINNING at a point",
+    "alts": []
+   },
+   {
+    "id": "street",
+    "tier": "CRITICAL",
+    "value": "Guy Brewer Boulevard",
+    "alts": []
+   },
+   {
+    "id": "avenue",
+    "tier": "CRITICAL",
+    "value": "107th Avenue",
+    "alts": []
+   },
+   {
+    "id": "width70",
+    "tier": "MATERIAL",
+    "value": "70 feet wide",
+    "alts": []
+   },
+   {
+    "id": "width60",
+    "tier": "MATERIAL",
+    "value": "60 feet wide",
+    "alts": []
+   },
+   {
+    "id": "dist",
+    "tier": "CRITICAL",
+    "value": "193.60",
+    "alts": []
+   },
+   {
+    "id": "dim1",
+    "tier": "CRITICAL",
+    "value": "115.00",
+    "alts": []
+   },
+   {
+    "id": "dim2",
+    "tier": "CRITICAL",
+    "value": "145.58",
+    "alts": []
+   },
+   {
+    "id": "note_block",
+    "tier": "CRITICAL",
+    "value": "10140",
+    "alts": []
+   },
+   {
+    "id": "note_lot",
+    "tier": "CRITICAL",
+    "value": "1112",
+    "alts": []
+   },
+   {
+    "id": "tax_map",
+    "tier": "MATERIAL",
+    "value": "Borough of Queens",
+    "alts": []
+   },
+   {
+    "id": "page_of",
+    "tier": "ROUTINE",
+    "value": "Page 2 of 5",
+    "alts": []
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "hw_date",
+    "note": "11-18 and 14 handwritten"
+   },
+   {
+    "id": "hw_borrower",
+    "note": "Darlene Epps handwritten"
+   },
+   {
+    "id": "hw_addr",
+    "note": "address handwritten across three lines"
+   },
+   {
+    "id": "hw_amt_words",
+    "note": "Fifty Thousand Dollars and 00/100 HANDWRITTEN"
+   },
+   {
+    "id": "hw_amt_figs",
+    "note": "50,000.00 HANDWRITTEN"
+   },
+   {
+    "id": "hw_county",
+    "note": "Queens / NY / NY handwritten"
+   },
+   {
+    "id": "hw_desc",
+    "note": "Single Residential Condo Unit handwritten"
+   }
+  ]
+ },
+ "p009.png": {
+  "kind": "tax exemption affidavit - printed form, handwritten fills",
+  "artifacts": [
+   {
+    "id": "form_no",
+    "tier": "MATERIAL",
+    "value": "W-2-548",
+    "alts": []
+   },
+   {
+    "id": "agency",
+    "tier": "CRITICAL",
+    "value": "Human Resources Administration",
+    "alts": [
+     "HUMAN RESOURCES"
+    ]
+   },
+   {
+    "id": "title",
+    "tier": "CRITICAL",
+    "value": "Tax Exemption Affidavit",
+    "alts": []
+   },
+   {
+    "id": "state",
+    "tier": "ROUTINE",
+    "value": "STATE OF NEW YORK",
+    "alts": []
+   },
+   {
+    "id": "county",
+    "tier": "MATERIAL",
+    "value": "COUNTY OF NEW YORK",
+    "alts": []
+   },
+   {
+    "id": "commissioner",
+    "tier": "MATERIAL",
+    "value": "Steven Banks",
+    "alts": []
+   },
+   {
+    "id": "officer2",
+    "tier": "MATERIAL",
+    "value": "Ghartey",
+    "alts": []
+   },
+   {
+    "id": "officer3",
+    "tier": "MATERIAL",
+    "value": "Boodanian",
+    "alts": []
+   },
+   {
+    "id": "addr",
+    "tier": "CRITICAL",
+    "value": "250 Church Street",
+    "alts": []
+   },
+   {
+    "id": "zip",
+    "tier": "MATERIAL",
+    "value": "10013",
+    "alts": []
+   },
+   {
+    "id": "phone",
+    "tier": "MATERIAL",
+    "value": "929 252 3020",
+    "alts": []
+   },
+   {
+    "id": "municipal",
+    "tier": "MATERIAL",
+    "value": "Municipal Corporation",
+    "alts": []
+   },
+   {
+    "id": "oblige",
+    "tier": "CRITICAL",
+    "value": "Department of Social Services",
+    "alts": []
+   },
+   {
+    "id": "reg_cite",
+    "tier": "CRITICAL",
+    "value": "644.1",
+    "alts": [
+     "20 NYCRR SECTION 644.1"
+    ]
+   },
+   {
+    "id": "exempt",
+    "tier": "CRITICAL",
+    "value": "Exempt from Paying",
+    "alts": []
+   },
+   {
+    "id": "wherefore",
+    "tier": "ROUTINE",
+    "value": "WHEREFORE",
+    "alts": []
+   },
+   {
+    "id": "declared",
+    "tier": "MATERIAL",
+    "value": "exempt from taxation",
+    "alts": []
+   },
+   {
+    "id": "notary",
+    "tier": "CRITICAL",
+    "value": "DONNA A. HESS",
+    "alts": [
+     "DONNA A HESS"
+    ]
+   },
+   {
+    "id": "notary_no",
+    "tier": "CRITICAL",
+    "value": "01HE6221160",
+    "alts": []
+   },
+   {
+    "id": "notary_county",
+    "tier": "MATERIAL",
+    "value": "Qualified in New York County",
+    "alts": []
+   },
+   {
+    "id": "notary_exp",
+    "tier": "MATERIAL",
+    "value": "April 26",
+    "alts": []
+   },
+   {
+    "id": "signature_lbl",
+    "tier": "ROUTINE",
+    "value": "SIGNATURE",
+    "alts": []
+   },
+   {
+    "id": "affirmed",
+    "tier": "ROUTINE",
+    "value": "Affirmed before me",
+    "alts": []
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "hw_deponent",
+    "note": "Aaron Stewart handwritten"
+   },
+   {
+    "id": "hw_date_instr",
+    "note": "11-18-14 handwritten"
+   },
+   {
+    "id": "hw_obligor",
+    "note": "Darlene Epps handwritten"
+   },
+   {
+    "id": "hw_principal",
+    "note": "50,000.00 handwritten"
+   },
+   {
+    "id": "hw_premises",
+    "note": "107-28 Guy R Brewer handwritten"
+   },
+   {
+    "id": "hw_block_lot",
+    "note": "Block 10140 Lot 1112 handwritten"
+   },
+   {
+    "id": "hw_affirm_date",
+    "note": "24th Day of February 2015 handwritten"
+   },
+   {
+    "id": "sig",
+    "note": "deponent and notary signatures cursive"
+   }
+  ]
+ }
+}

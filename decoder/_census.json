@@ -1,0 +1,589 @@
+{
+ "DEVR": {
+  "n": 1181,
+  "cover_pages_median": 2.0,
+  "total_pages_median": 32.0,
+  "pct_with_exhibits": 0,
+  "pct_misfiled": 16,
+  "n_titled": 1049,
+  "direction": "UNDEFINED",
+  "functions": {
+   "encumbrance": 536,
+   "envelope": 1171,
+   "identity": 93,
+   "debt": 5,
+   "title": 24
+  },
+  "titles": [
+   [
+    "ZONINGLOTDEVELOPMENTAGREEMENT",
+    197
+   ],
+   [
+    "ZONINGLOTDEVELOPMENTANDEASEMENT",
+    185
+   ],
+   [
+    "ZONINGLOTANDDEVELOPMENTAGREEMENT",
+    62
+   ],
+   [
+    "ZONINGLOTDEVELOPMENT ANDEASEMENT",
+    42
+   ]
+  ]
+ },
+ "EASE": {
+  "n": 50,
+  "cover_pages_median": 1.0,
+  "total_pages_median": 8.5,
+  "pct_with_exhibits": 2,
+  "pct_misfiled": 22,
+  "n_titled": 40,
+  "direction": "published",
+  "functions": {
+   "encumbrance": 43,
+   "envelope": 2,
+   "title": 2,
+   "identity": 6,
+   "debt": 1
+  },
+  "titles": [
+   [
+    "EASEMENTAGREEMENT",
+    2
+   ],
+   [
+    "GRANTOFEASEMENT",
+    2
+   ],
+   [
+    "COMMONEASEMENT",
+    1
+   ],
+   [
+    "RELEASEAND",
+    1
+   ]
+  ]
+ },
+ "DEED": {
+  "n": 50,
+  "cover_pages_median": 2,
+  "total_pages_median": 5,
+  "pct_with_exhibits": 2,
+  "pct_misfiled": 50,
+  "n_titled": 36,
+  "direction": "published",
+  "functions": {
+   "encumbrance": 9,
+   "title": 23,
+   "identity": 4
+  },
+  "titles": [
+   [
+    "DOES HEREBY GRANT AND RELEASE",
+    7
+   ],
+   [
+    "BARGAIN AND SALE DEED",
+    6
+   ],
+   [
+    "BARGAINANDSALEDEED",
+    3
+   ],
+   [
+    "DOESHEREBYGRANTANDRELEASE",
+    2
+   ]
+  ]
+ },
+ "PAT": {
+  "n": 50,
+  "cover_pages_median": 1,
+  "total_pages_median": 5,
+  "pct_with_exhibits": 0,
+  "pct_misfiled": 60,
+  "n_titled": 43,
+  "direction": "UNDEFINED",
+  "functions": {
+   "encumbrance": 8,
+   "identity": 9
+  },
+  "titles": [
+   [
+    "IN THE DECLARATION",
+    5
+   ],
+   [
+    "IS THE GRANTEE TO THAT CERTAIN DEED",
+    3
+   ],
+   [
+    "WHICH MAY INCLUDE POWERS TO MORTGAGE",
+    2
+   ],
+   [
+    "S POWER OF ATTORNEY",
+    2
+   ]
+  ]
+ },
+ "SAGE": {
+  "n": 50,
+  "cover_pages_median": 1.0,
+  "total_pages_median": 6.0,
+  "pct_with_exhibits": 2,
+  "pct_misfiled": 97,
+  "n_titled": 45,
+  "direction": "UNDEFINED",
+  "functions": {
+   "debt": 9,
+   "encumbrance": 2,
+   "envelope": 4,
+   "identity": 9,
+   "title": 1
+  },
+  "titles": [
+   [
+    "RELEASE",
+    3
+   ],
+   [
+    "RELEASEOF",
+    2
+   ],
+   [
+    "RDS DISTRICT IMPROVEMENT FUND ANDBONUSRESTRICTIVEDECLARATION",
+    1
+   ],
+   [
+    "CITYFUNDSSUBSIDYAGREEMENT",
+    1
+   ]
+  ]
+ },
+ "ASST": {
+  "n": 49,
+  "cover_pages_median": 2,
+  "total_pages_median": 4,
+  "pct_with_exhibits": 0,
+  "pct_misfiled": 38,
+  "n_titled": 47,
+  "direction": "published",
+  "functions": {
+   "debt": 32,
+   "encumbrance": 1,
+   "identity": 2,
+   "title": 1
+  },
+  "titles": [
+   [
+    "ASSIGNMENTOFMORTGAGE",
+    13
+   ],
+   [
+    "THIS ASSIGNMENT",
+    3
+   ],
+   [
+    "ASSIGNMENTOFMORTGAGE FOR",
+    2
+   ],
+   [
+    "OPTION ONE MORTGAGE",
+    1
+   ]
+  ]
+ },
+ "CERT": {
+  "n": 49,
+  "cover_pages_median": 1,
+  "total_pages_median": 5,
+  "pct_with_exhibits": 12,
+  "pct_misfiled": 60,
+  "n_titled": 28,
+  "direction": "UNDEFINED",
+  "functions": {
+   "envelope": 17,
+   "identity": 22,
+   "debt": 13,
+   "encumbrance": 1,
+   "title": 4
+  },
+  "titles": [
+   [
+    "FINAL CERTIFICATE OF",
+    4
+   ],
+   [
+    "OF SECTION OF MORTGAGE",
+    2
+   ],
+   [
+    "OR ON ANY RECORDED SUBDIVISIONPLOT OR DEED",
+    1
+   ],
+   [
+    "IN THEDECLARATION",
+    1
+   ]
+  ]
+ },
+ "MTGE": {
+  "n": 49,
+  "cover_pages_median": 1.5,
+  "total_pages_median": 20.0,
+  "pct_with_exhibits": 0,
+  "pct_misfiled": 18,
+  "n_titled": 44,
+  "direction": "published",
+  "functions": {
+   "debt": 28,
+   "encumbrance": 14,
+   "identity": 2
+  },
+  "titles": [
+   [
+    "THIS MORTGAGE",
+    7
+   ],
+   [
+    "IS MORTGAGE",
+    2
+   ],
+   [
+    "EXHIBIT C TO THE AGREEMENT",
+    2
+   ],
+   [
+    "ADJUSTABLERATE HOMEEQUITYCONVERSIONMORTGAGE",
+    1
+   ]
+  ]
+ },
+ "AGMT": {
+  "n": 48,
+  "cover_pages_median": 2,
+  "total_pages_median": 29,
+  "pct_with_exhibits": 0,
+  "pct_misfiled": 76,
+  "n_titled": 46,
+  "direction": "UNDEFINED",
+  "functions": {
+   "debt": 41,
+   "encumbrance": 4,
+   "envelope": 1,
+   "identity": 1
+  },
+  "titles": [
+   [
+    "EXTENSION AND MODIFICATION",
+    5
+   ],
+   [
+    "ANDMODIFICATION",
+    3
+   ],
+   [
+    "EXTENSIONANDMODIFICATION",
+    3
+   ],
+   [
+    "RIDGEWOODSAVINGSBANK CONSOLIDATIONANDMODIFICATION",
+    2
+   ]
+  ]
+ },
+ "LEAS": {
+  "n": 48,
+  "cover_pages_median": 1.0,
+  "total_pages_median": 13.5,
+  "pct_with_exhibits": 10,
+  "pct_misfiled": 30,
+  "n_titled": 46,
+  "direction": "published",
+  "functions": {
+   "debt": 9,
+   "encumbrance": 9,
+   "identity": 8
+  },
+  "titles": [
+   [
+    "MEMORANDUMOFLEASE",
+    3
+   ],
+   [
+    "LEASEAGREEMENT",
+    2
+   ],
+   [
+    "SUBLEASE",
+    2
+   ],
+   [
+    "KINCS AGENCYLEASE",
+    1
+   ]
+  ]
+ },
+ "SAT": {
+  "n": 42,
+  "cover_pages_median": 2.0,
+  "total_pages_median": 3.0,
+  "pct_with_exhibits": 0,
+  "pct_misfiled": 36,
+  "n_titled": 41,
+  "direction": "published",
+  "functions": {
+   "debt": 26,
+   "encumbrance": 1,
+   "identity": 3
+  },
+  "titles": [
+   [
+    "SATISFACTIONOFMORTGAGE",
+    15
+   ],
+   [
+    "SATISFACTION OF MORTGAGE",
+    6
+   ],
+   [
+    "SATISFACTIONQFMORTGAGE",
+    1
+   ],
+   [
+    "FIRSTAMERICAN MORTGAGE",
+    1
+   ]
+  ]
+ },
+ "SUBL": {
+  "n": 40,
+  "cover_pages_median": 2.0,
+  "total_pages_median": 14.5,
+  "pct_with_exhibits": 7,
+  "pct_misfiled": 63,
+  "n_titled": 38,
+  "direction": "UNDEFINED",
+  "functions": {
+   "debt": 16,
+   "envelope": 1,
+   "encumbrance": 4,
+   "title": 1,
+   "identity": 1
+  },
+  "titles": [
+   [
+    "EXECUTION SUBORDINATION",
+    3
+   ],
+   [
+    "SUBORDINATIONAGREEMENT",
+    3
+   ],
+   [
+    "NY SUBORDINATION",
+    2
+   ],
+   [
+    "K AGENCYLEASE",
+    2
+   ]
+  ]
+ },
+ "MLEA": {
+  "n": 20,
+  "cover_pages_median": 1.0,
+  "total_pages_median": 7.0,
+  "pct_with_exhibits": 45,
+  "pct_misfiled": 10,
+  "n_titled": 20,
+  "direction": "published",
+  "functions": {
+   "encumbrance": 2,
+   "envelope": 1
+  },
+  "titles": [
+   [
+    "MEMORANDUMOFLEASE",
+    7
+   ],
+   [
+    "MEMORANDUM OF LEASE",
+    2
+   ],
+   [
+    "MEMORANDUMOF SUBLEASE",
+    1
+   ],
+   [
+    "MORANDUMOFLEASE",
+    1
+   ]
+  ]
+ },
+ "TL&R": {
+  "n": 20,
+  "cover_pages_median": 1.0,
+  "total_pages_median": 3.5,
+  "pct_with_exhibits": 0,
+  "pct_misfiled": 20,
+  "n_titled": 20,
+  "direction": "UNDEFINED",
+  "functions": {},
+  "titles": [
+   [
+    "TERMINATIONOFASSIGNMENTOF",
+    4
+   ],
+   [
+    "TERMINATION OF ASSIGNMENT OF",
+    2
+   ],
+   [
+    "CANCELLATION OFASSIGNMENT OF",
+    1
+   ],
+   [
+    "DISCHARGE OF ASSIGNMENT OF",
+    1
+   ]
+  ]
+ },
+ "ASSTO": {
+  "n": 20,
+  "cover_pages_median": 1.0,
+  "total_pages_median": 7.0,
+  "pct_with_exhibits": 50,
+  "pct_misfiled": 10,
+  "n_titled": 19,
+  "direction": "UNDEFINED",
+  "functions": {
+   "debt": 8,
+   "encumbrance": 5
+  },
+  "titles": [
+   [
+    "ASSIGNMENTANDASSUMPTIONOFLEASE",
+    6
+   ],
+   [
+    "C ASSIGNMENTAND",
+    3
+   ],
+   [
+    "SINTERESTUNDERLEASE",
+    1
+   ],
+   [
+    "BTY ASSIGNMENTAND",
+    1
+   ]
+  ]
+ },
+ "TERL": {
+  "n": 20,
+  "cover_pages_median": 2.0,
+  "total_pages_median": 7.0,
+  "pct_with_exhibits": 25,
+  "pct_misfiled": 25,
+  "n_titled": 20,
+  "direction": "published",
+  "functions": {
+   "debt": 1
+  },
+  "titles": [
+   [
+    "TERMINATIONOFLEASE",
+    3
+   ],
+   [
+    "BARGZIN AND SALE DEED",
+    1
+   ],
+   [
+    "PARTIALSURRENDEROFLEASE",
+    1
+   ],
+   [
+    "TERMINATIONOF MEMORANDUMOF",
+    1
+   ]
+  ]
+ },
+ "AL&R": {
+  "n": 20,
+  "cover_pages_median": 1.0,
+  "total_pages_median": 11.5,
+  "pct_with_exhibits": 0,
+  "pct_misfiled": 10,
+  "n_titled": 20,
+  "direction": "published",
+  "functions": {
+   "debt": 11
+  },
+  "titles": [
+   [
+    "ASSIGNMENTOFLEASE",
+    5
+   ],
+   [
+    "COLLATERALASSIGNMENTOF",
+    4
+   ],
+   [
+    "ASSIGNMENTOFRENTSANDLEASE",
+    2
+   ],
+   [
+    "LLC IN FAVOR OF NORTH FORK BANK ASSIGNMENTOF",
+    1
+   ]
+  ]
+ },
+ "RPTT&RET": {
+  "n": 20,
+  "cover_pages_median": null,
+  "total_pages_median": 2.0,
+  "pct_with_exhibits": 0,
+  "pct_misfiled": null,
+  "n_titled": 0,
+  "direction": "published",
+  "functions": {},
+  "titles": []
+ },
+ "ZONE": {
+  "n": 20,
+  "cover_pages_median": 1.0,
+  "total_pages_median": 4.0,
+  "pct_with_exhibits": 30,
+  "pct_misfiled": 50,
+  "n_titled": 6,
+  "direction": "UNDEFINED",
+  "functions": {
+   "envelope": 20,
+   "identity": 1
+  },
+  "titles": [
+   [
+    "DECLARATIONOFZONINGLOTRESTRICTIONS",
+    1
+   ],
+   [
+    "I CERTIFICATE",
+    1
+   ],
+   [
+    "ZONING LOT EXHIBIT ILL EXHIBITIII ZONINGLOTCERTIFICATEAND",
+    1
+   ],
+   [
+    "FAILURE TO COMPLY WITH THE TERMS OF THIS DECLARATION",
+    1
+   ]
+  ]
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "keep": [
+  "seeks",
+  "proposes",
+  "would_will",
+  "submitted"
+ ],
+ "drop": [
+  "intends",
+  "to_permit",
+  "application",
+  "if_granted",
+  "upon_future",
+  "estimated",
+  "resolved",
+  "board_finds"
+ ],
+ "truth": {
+  "board": 3903,
+  "applicant": 3335
+ },
+ "control_clauses": 23282,
+ "measured_against": "BSA 300 cached decisions, applicant/board agent labels; control = 666 ACRIS census documents"
+}

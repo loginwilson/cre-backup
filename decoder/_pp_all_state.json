@@ -1,0 +1,47 @@
+{
+ "personal_master": {
+  "rows": 4547264,
+  "live": 4547264,
+  "requests": 143,
+  "splits": 22,
+  "failed": 0,
+  "seconds": 353,
+  "complete": true
+ },
+ "personal_legals": {
+  "rows": 3981194,
+  "live": 3981194,
+  "requests": 140,
+  "splits": 35,
+  "failed": 0,
+  "seconds": 262,
+  "complete": true
+ },
+ "personal_parties": {
+  "rows": 11035386,
+  "live": 11035386,
+  "requests": 353,
+  "splits": 47,
+  "failed": 0,
+  "seconds": 699,
+  "complete": true
+ },
+ "personal_references": {
+  "rows": 7724967,
+  "live": 7724967,
+  "requests": 291,
+  "splits": 76,
+  "failed": 0,
+  "seconds": 511,
+  "complete": true
+ },
+ "personal_remarks": {
+  "rows": 493910,
+  "live": 493910,
+  "requests": 27,
+  "splits": 4,
+  "failed": 0,
+  "seconds": 37,
+  "complete": true
+ }
+}

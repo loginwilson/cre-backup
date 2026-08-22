@@ -1,0 +1,1310 @@
+{
+ "2003010601086002": [
+  {
+   "borough": "1",
+   "block": "1064",
+   "lot": "22",
+   "address": "417 WEST 54 STREET",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "AUTOMOBILE CLUB NY"
+   ]
+  }
+ ],
+ "2003013001838001": [
+  {
+   "borough": "1",
+   "block": "1034",
+   "lot": "33",
+   "address": "691 8 AVENUE",
+   "role": "sender",
+   "sign": -1,
+   "status": "resolved",
+   "established_by": "address",
+   "witnesses": {
+    "address": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "691 EIGHTH AVE. CORP."
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1034",
+   "lot": "37",
+   "address": "306 WEST 44 STREET",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "address",
+   "witnesses": {
+    "address": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "FORTY FOURTH STREET DEVELOPMENT LLC"
+   ]
+  }
+ ],
+ "2003021302514009": [
+  {
+   "borough": "1",
+   "block": "461",
+   "lot": "3",
+   "address": "29 COOPER SQUARE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "address",
+   "witnesses": {
+    "address": "receiver"
+   },
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "31 COOPER, INC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "461",
+   "lot": "4",
+   "address": "31 COOPER SQUARE",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "address"
+   ],
+   "air_rights": false,
+   "owner_at_date": []
+  },
+  {
+   "borough": "1",
+   "block": "461",
+   "lot": "2",
+   "address": "27 COOPER SQUARE",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "31 COOPER INC"
+   ]
+  }
+ ],
+ "2003021400219004": [
+  {
+   "borough": "1",
+   "block": "1277",
+   "lot": "4",
+   "address": "507 5 AVENUE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "FIFTH AT 42ND LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1277",
+   "lot": "2",
+   "address": "505 5 AVENUE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "FIFTH AT 42ND LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1277",
+   "lot": "72",
+   "address": "509 5 AVENUE",
+   "role": "sender",
+   "sign": -1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "WESTHILL REO HOLDINGII LLC",
+    "509 OWNERS LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1277",
+   "lot": "1",
+   "address": "503 5 AVENUE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "FIFTH AT 42ND LLC"
+   ]
+  }
+ ],
+ "2003022602133001": [
+  {
+   "borough": "1",
+   "block": "1033",
+   "lot": "101",
+   "address": "361 WEST 42 STREET",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "42/9 RESIDENTIAL, LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1033",
+   "lot": "1",
+   "address": "360 WEST 43 STREET",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "42/9 RESIDENTIAL LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1033",
+   "lot": "109",
+   "address": "350 WEST 43 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": []
+  },
+  {
+   "borough": "1",
+   "block": "1033",
+   "lot": "161",
+   "address": "598 9 AVENUE",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "42/9 RESIDENTIAL, LLC",
+    "CLINTON 42ND STREET,LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1033",
+   "lot": "63",
+   "address": "594 9 AVENUE",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "42/9 RESIDENTIAL, LLC",
+    "CLINTON 42ND STREET,LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1033",
+   "lot": "64",
+   "address": "592 9 AVENUE",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "42/9 RESIDENTIAL, LLC",
+    "CLINTON 42ND STREET,LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1033",
+   "lot": "61",
+   "address": "600 9 AVENUE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "42/9 RESIDENTIAL, LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1033",
+   "lot": "162",
+   "address": "596 9 AVENUE",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "42/9 RESIDENTIAL, LLC",
+    "CLINTON 42ND STREET,LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1033",
+   "lot": "2",
+   "address": "584 9 AVENUE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "42/9 RESIDENTIAL, LLC"
+   ]
+  }
+ ],
+ "2003030700273001": [
+  {
+   "borough": "1",
+   "block": "1345",
+   "lot": "48",
+   "address": "308 EAST 53 STREET",
+   "role": "sender",
+   "sign": -1,
+   "status": "resolved",
+   "established_by": "address+ownership",
+   "witnesses": {
+    "ownership": "sender",
+    "address": "sender",
+    "air_rights": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": true,
+   "owner_at_date": [
+    "308 EAST 53 LLC"
+   ]
+  }
+ ],
+ "2003041400735009": [
+  {
+   "borough": "3",
+   "block": "939",
+   "lot": "39",
+   "address": "300 FLATBUSH AVENUE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver",
+    "air_rights": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": true,
+   "owner_at_date": [
+    "PARK PLACE PARTNERS LLC,"
+   ]
+  },
+  {
+   "borough": "3",
+   "block": "939",
+   "lot": "42",
+   "address": "302 FLATBUSH AVENUE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver",
+    "air_rights": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": true,
+   "owner_at_date": [
+    "PARK PLACE PARTNERS LLC,"
+   ]
+  },
+  {
+   "borough": "3",
+   "block": "939",
+   "lot": "35",
+   "address": "288 FLATBUSH AVENUE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "PARK PLACE PARTNERS LLC,"
+   ]
+  },
+  {
+   "borough": "3",
+   "block": "939",
+   "lot": "40",
+   "address": "300B FLATBUSH AVENUE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver",
+    "air_rights": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": true,
+   "owner_at_date": [
+    "PARK PLACE PARTNERS LLC,"
+   ]
+  },
+  {
+   "borough": "3",
+   "block": "939",
+   "lot": "41",
+   "address": "300C FLATBUSH AVENUE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver",
+    "air_rights": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": true,
+   "owner_at_date": [
+    "PARK PLACE PARTNERS LLC,"
+   ]
+  }
+ ],
+ "2003052001090003": [
+  {
+   "borough": "1",
+   "block": "695",
+   "lot": "37",
+   "address": "229 10 AVENUE",
+   "role": "sender",
+   "sign": -1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "DARLING, JANE C.",
+    "DARLING, GARY L."
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "695",
+   "lot": "39",
+   "address": "231 10 AVENUE",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "231-233 10TH AVENUELLC"
+   ]
+  }
+ ],
+ "2003052701726001": [
+  {
+   "borough": "1",
+   "block": "1278",
+   "lot": "14",
+   "address": "334 MADISON AVENUE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "340 MADISON OWNER LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1278",
+   "lot": "15",
+   "address": "336 MADISON AVENUE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "340 MADISON OWNER LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1278",
+   "lot": "17",
+   "address": "340 MADISON AVENUE",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "address+ownership",
+   "witnesses": {
+    "ownership": "receiver",
+    "address": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "340 MADISON OWNER LLC"
+   ]
+  }
+ ],
+ "2003060400703001": [
+  {
+   "borough": "1",
+   "block": "1278",
+   "lot": "14",
+   "address": "334 MADISON AVENUE",
+   "role": "sender",
+   "sign": -1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "340 MADISON OWNER LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1278",
+   "lot": "8",
+   "address": "3 EAST 43 STREET",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver",
+    "air_rights": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": true,
+   "owner_at_date": [
+    "BERKELEY REALTY OF NEW YORK",
+    "BERKELEY REALTY CO.,L.L.C."
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1278",
+   "lot": "15",
+   "address": "336 MADISON AVENUE",
+   "role": "sender",
+   "sign": -1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "340 MADISON OWNER LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1278",
+   "lot": "17",
+   "address": "340 MADISON AVENUE",
+   "role": "sender",
+   "sign": -1,
+   "status": "resolved",
+   "established_by": "address+ownership",
+   "witnesses": {
+    "ownership": "sender",
+    "address": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "340 MADISON OWNER LLC"
+   ]
+  }
+ ],
+ "2003061201945006": [
+  {
+   "borough": "1",
+   "block": "1875",
+   "lot": "41",
+   "address": "218 WEST 104TH ST.",
+   "role": "sender",
+   "sign": -1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "BML REALTY CORP."
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1875",
+   "lot": "40",
+   "address": "216 WEST 104TH ST.",
+   "role": "sender",
+   "sign": -1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "BML REALTY CORP."
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1875",
+   "lot": "18",
+   "address": "213-223 WEST 103RD ST.",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "THE TRUSTEES OF COLUMBIA UNIVERSITY"
+   ]
+  }
+ ],
+ "2003061800429003": [
+  {
+   "borough": "1",
+   "block": "1875",
+   "lot": "42",
+   "address": "220-222 WEST 104TH STREET",
+   "role": "sender",
+   "sign": -1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "sender"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "KIWI REALTY LLC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1875",
+   "lot": "18",
+   "address": "213-223 WEST 103RD STREET",
+   "role": "receiver",
+   "sign": 1,
+   "status": "resolved",
+   "established_by": "ownership",
+   "witnesses": {
+    "ownership": "receiver"
+   },
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "THE TRUSTEES OF COLUMBIA UNIVERSITY"
+   ]
+  }
+ ],
+ "2003062701790001": [
+  {
+   "borough": "1",
+   "block": "427",
+   "lot": "14",
+   "address": "271 BOWERY",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": []
+  },
+  {
+   "borough": "1",
+   "block": "427",
+   "lot": "30",
+   "address": "N/A EAST HOUSTON STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "NEW YORK STATE URBAN DEVELOPMENT CORPORATION",
+    "CVP I, LLC"
+   ]
+  }
+ ],
+ "2003070100714001": [
+  {
+   "borough": "1",
+   "block": "1927",
+   "lot": "8",
+   "address": "263 WEST 121 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND CO INC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1927",
+   "lot": "7",
+   "address": "265 WEST 121 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND CO INC"
+   ]
+  }
+ ],
+ "2003070100714002": [
+  {
+   "borough": "1",
+   "block": "1928",
+   "lot": "7",
+   "address": "269 WEST 122 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND CO INC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1928",
+   "lot": "107",
+   "address": "267 WEST 122 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND CO INC"
+   ]
+  }
+ ],
+ "2003070100714003": [
+  {
+   "borough": "1",
+   "block": "1928",
+   "lot": "21",
+   "address": "227 WEST 122 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND CO INC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1928",
+   "lot": "120",
+   "address": "N/A WEST 122 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND CO INC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1928",
+   "lot": "20",
+   "address": "231 WEST 122 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND CO INC"
+   ]
+  }
+ ],
+ "2003070100714004": [
+  {
+   "borough": "1",
+   "block": "1928",
+   "lot": "45",
+   "address": "226 WEST 123 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND CO INC"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1928",
+   "lot": "46",
+   "address": "228 WEST 123 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND CO INC"
+   ]
+  }
+ ],
+ "2003070100714005": [
+  {
+   "borough": "1",
+   "block": "1928",
+   "lot": "18",
+   "address": "237 WEST 122 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "SMITH, TEDDY R.",
+    "SMITH, SARAH"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1911",
+   "lot": "19",
+   "address": "129 WEST 126TH ST",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "CLERVOIX, GEORGE R."
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1911",
+   "lot": "18",
+   "address": "133 WEST 126 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "SCHMIDT, AARON A"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1911",
+   "lot": "118",
+   "address": "131 WEST 126 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "SCHMIDT, AARON A"
+   ]
+  }
+ ],
+ "2003070100714006": [
+  {
+   "borough": "1",
+   "block": "1911",
+   "lot": "23",
+   "address": "117 WEST 126 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "LU, DAVID"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1911",
+   "lot": "122",
+   "address": "119 WEST 126 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "REAVES, EVORA"
+   ]
+  }
+ ],
+ "2003070100714007": [
+  {
+   "borough": "1",
+   "block": "1911",
+   "lot": "52",
+   "address": "142 WEST 127 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "THOMSON, AL"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1911",
+   "lot": "151",
+   "address": "140 WEST 127 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "WEIR, GENEVA",
+    "STANLEY, MARVENA"
+   ]
+  }
+ ],
+ "2003070100714008": [
+  {
+   "borough": "1",
+   "block": "1912",
+   "lot": "139",
+   "address": "112 WEST 128TH STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "FLORES, ESTHER"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1912",
+   "lot": "39",
+   "address": "108 WEST 128 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "FLORES, ESTHER"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1912",
+   "lot": "138",
+   "address": "108 WEST 128TH STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "GAUVIN, NORMAN"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1912",
+   "lot": "39",
+   "address": "112 WEST 128TH STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "FLORES, ESTHER"
+   ]
+  }
+ ],
+ "2003070100714009": [
+  {
+   "borough": "1",
+   "block": "1913",
+   "lot": "6",
+   "address": "149 WEST 128 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "ROBINSON, TINA R"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1913",
+   "lot": "7",
+   "address": "145 WEST 128 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "LANDMARK PROJECTS IV, INC."
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1913",
+   "lot": "106",
+   "address": "147 WEST 128 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "LANDMARK PROJECTS IV, INC."
+   ]
+  }
+ ],
+ "2003070100714010": [
+  {
+   "borough": "1",
+   "block": "1913",
+   "lot": "19",
+   "address": "123 WEST 128 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "ELLIS, TIFFANY",
+    "ELLIS, MONICA"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1913",
+   "lot": "18",
+   "address": "125 WEST 128 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "SUDLOW, EMILE A"
+   ]
+  }
+ ],
+ "2003070100714011": [
+  {
+   "borough": "1",
+   "block": "1913",
+   "lot": "44",
+   "address": "128 WEST 129TH STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "CHAN, HENRY",
+    "DELALEX, ISABELLE"
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1913",
+   "lot": "44",
+   "address": "126 WEST 129 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "unresolved",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [],
+   "air_rights": false,
+   "owner_at_date": [
+    "CHAN, HENRY",
+    "DELALEX, ISABELLE"
+   ]
+  }
+ ],
+ "2003070100714012": [
+  {
+   "borough": "1",
+   "block": "1725",
+   "lot": "17",
+   "address": "47 WEST 127TH STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "GRANT, CHERYL M",
+    "LANDMARK PROJECTS IV,INC."
+   ]
+  },
+  {
+   "borough": "1",
+   "block": "1725",
+   "lot": "17",
+   "address": "45 WEST 127 STREET",
+   "role": null,
+   "sign": 0,
+   "status": "ambiguous",
+   "established_by": null,
+   "witnesses": {},
+   "ambiguous_witnesses": [
+    "ownership"
+   ],
+   "air_rights": false,
+   "owner_at_date": [
+    "GRANT, CHERYL M",
+    "LANDMARK PROJECTS IV,INC."
+   ]
+  }
+ ]
+}

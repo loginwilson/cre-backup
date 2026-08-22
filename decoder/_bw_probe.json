@@ -1,0 +1,42 @@
+[
+ {
+  "total_conn": 48,
+  "sessions": 2,
+  "req_per_s": 81.7,
+  "mb_per_s": 3.78,
+  "lat": 0.559,
+  "windows": 7
+ },
+ {
+  "total_conn": 64,
+  "sessions": 2,
+  "req_per_s": 84.2,
+  "mb_per_s": 3.78,
+  "lat": 0.655,
+  "windows": 5
+ },
+ {
+  "total_conn": 96,
+  "sessions": 2,
+  "req_per_s": 83.0,
+  "mb_per_s": 3.72,
+  "lat": 1.036,
+  "windows": 4
+ },
+ {
+  "total_conn": 128,
+  "sessions": 2,
+  "req_per_s": 101.1,
+  "mb_per_s": 4.68,
+  "lat": 1.077,
+  "windows": 3
+ },
+ {
+  "total_conn": 192,
+  "sessions": 2,
+  "req_per_s": 88.0,
+  "mb_per_s": 4.49,
+  "lat": 2.044,
+  "windows": 2
+ }
+]

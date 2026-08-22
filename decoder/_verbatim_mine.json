@@ -1,0 +1,136 @@
+{
+ "rows": 18249,
+ "documents": 3615,
+ "chars": 5882467,
+ "claimed": 3520,
+ "unclaimed": 14729,
+ "fired": {
+  "mode/signals": 9851,
+  "mode/observes": 85,
+  "function/occupancy": 166,
+  "reference/parcel_id": 145,
+  "function/capital": 4,
+  "function/encumbrance": 22,
+  "function/envelope": 39,
+  "function/identity": 51,
+  "region/exhibit": 9,
+  "region/execution": 22,
+  "region/cover_page": 16,
+  "reference/prior_doc": 15
+ },
+ "top_unclaimed": [
+  [
+   "significant architectural features",
+   1204
+  ],
+  [
+   "digital presentation titled",
+   1200
+  ],
+  [
+   "shown digital presentation",
+   1175
+  ],
+  [
+   "action board application",
+   1159
+  ],
+  [
+   "public hearing public",
+   1120
+  ],
+  [
+   "hearing public meeting",
+   1094
+  ],
+  [
+   "feet lot area",
+   967
+  ],
+  [
+   "square feet lot",
+   967
+  ],
+  [
+   "presented components application",
+   934
+  ],
+  [
+   "board application granted",
+   934
+  ],
+  [
+   "slides consisting photographs",
+   803
+  ],
+  [
+   "components application public",
+   757
+  ],
+  [
+   "based findings commission",
+   757
+  ],
+  [
+   "laws under jurisdiction",
+   740
+  ],
+  [
+   "relevant laws under",
+   737
+  ],
+  [
+   "zoning resolution administrative",
+   733
+  ],
+  [
+   "resolution administrative code",
+   733
+  ],
+  [
+   "administrative code relevant",
+   733
+  ],
+  [
+   "code relevant laws",
+   732
+  ],
+  [
+   "ensure compliance applicable",
+   729
+  ],
+  [
+   "application public hearing",
+   729
+  ],
+  [
+   "provisions zoning resolution",
+   728
+  ],
+  [
+   "findings commission determined",
+   728
+  ],
+  [
+   "under jurisdiction irrespective",
+   727
+  ],
+  [
+   "compliance applicable provisions",
+   724
+  ],
+  [
+   "applicable provisions zoning",
+   723
+  ],
+  [
+   "related specific relief",
+   723
+  ],
+  [
+   "portions related specific",
+   723
+  ]
+ ],
+ "corpus": "decoder_facts.verbatim \u2014 BSA condition_imposed only; rates belong to this corpus and must not travel"
+}

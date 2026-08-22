@@ -1,0 +1,131 @@
+{
+ "engine": "q35-rot",
+ "model": "35-2B-Q4_K_M.gguf",
+ "ctx": 16384,
+ "max_tokens": 4096,
+ "width": 1400,
+ "restart_every": 1,
+ "thinking": false,
+ "prompt_variant": "strict",
+ "prompt": "Transcribe every word of text visible in this scanned document page, exactly as printed. Include reel, record and page stamps, document numbers, names, dollar amounts and dates. Output only characters that are physically printed, typed, stamped or handwritten on the page. Do not add section headings, labels, titles or any description of the layout. Do not mark up or format the output. If part of the page is illegible, write [ILLEGIBLE] rather than describing it. Do not summarize.",
+ "imgtok": 2560,
+ "angles": [
+  0,
+  90,
+  270
+ ],
+ "pages": [
+  {
+   "doc": "FT_1680008647768",
+   "page": "p001.png",
+   "sec": 308.2,
+   "boot": 5.6,
+   "ttft": 19.3,
+   "finish_reason": "stop",
+   "truncated": false,
+   "status": "partial-2/3",
+   "words": 725
+  },
+  {
+   "doc": "FT_1680008647768",
+   "page": "p002.png",
+   "sec": 600.8,
+   "boot": 4.6,
+   "ttft": 19.3,
+   "finish_reason": "stop",
+   "truncated": false,
+   "status": "ok",
+   "words": 148
+  },
+  {
+   "doc": "FT_1680008647768",
+   "page": "p003.png",
+   "sec": 678.8,
+   "boot": 5.5,
+   "ttft": 29.0,
+   "finish_reason": "stop",
+   "truncated": false,
+   "status": "partial-2/3",
+   "words": 727
+  },
+  {
+   "doc": "FT_1680008647768",
+   "page": "p004.png",
+   "sec": 1416.8,
+   "boot": 5.1,
+   "ttft": 0.0,
+   "finish_reason": null,
+   "truncated": false,
+   "status": "FAILED:all-angles",
+   "words": 0
+  },
+  {
+   "doc": "FT_1680008647768",
+   "page": "p005.png",
+   "sec": 777.4,
+   "boot": 4.6,
+   "ttft": 0.0,
+   "finish_reason": null,
+   "truncated": false,
+   "status": "FAILED:all-angles",
+   "words": 0
+  },
+  {
+   "doc": "FT_1680008647768",
+   "page": "p006.png",
+   "sec": 958.7,
+   "boot": 4.6,
+   "ttft": 0.0,
+   "finish_reason": null,
+   "truncated": false,
+   "status": "FAILED:all-angles",
+   "words": 0
+  },
+  {
+   "doc": "FT_1680008647768",
+   "page": "p007.png",
+   "sec": 959.9,
+   "boot": 4.5,
+   "ttft": 0.0,
+   "finish_reason": null,
+   "truncated": false,
+   "status": "FAILED:all-angles",
+   "words": 0
+  },
+  {
+   "doc": "FT_1680008647768",
+   "page": "p008.png",
+   "sec": 629.3,
+   "boot": 3.6,
+   "ttft": 18.9,
+   "finish_reason": "stop",
+   "truncated": false,
+   "status": "partial-1/3",
+   "words": 1091
+  },
+  {
+   "doc": "FT_1680008647768",
+   "page": "p009.png",
+   "sec": 443.8,
+   "boot": 3.5,
+   "ttft": 26.3,
+   "finish_reason": "stop",
+   "truncated": false,
+   "status": "partial-1/3",
+   "words": 550
+  },
+  {
+   "doc": "FT_1680008647768",
+   "page": "p010.png",
+   "sec": 769.9,
+   "boot": 3.5,
+   "ttft": 0.0,
+   "finish_reason": null,
+   "truncated": false,
+   "status": "FAILED:all-angles",
+   "words": 0
+  }
+ ],
+ "sec": 7614.8,
+ "note": "server restarted under the run; wall time includes model loading and is NOT a throughput measurement"
+}

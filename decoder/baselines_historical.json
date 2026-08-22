@@ -1,0 +1,1041 @@
+{
+ "1014290025@2005-10-12": {
+  "vintage": "p04c",
+  "as_of": "2005-10-12",
+  "lot_area": 2550.0,
+  "zonedist": "C1-9",
+  "far": {},
+  "bldg_area": 6770.0,
+  "built_far": 2.65,
+  "owner": "GMD REALTY LLC",
+  "source": "pluto_archive p04c (map as of the filing date)"
+ },
+ "1014290027@2005-10-12": {
+  "vintage": "p04c",
+  "as_of": "2005-10-12",
+  "lot_area": 1362.0,
+  "zonedist": "C1-9",
+  "far": {},
+  "bldg_area": 4196.0,
+  "built_far": 3.08,
+  "owner": "GMD REALTY LLC",
+  "source": "pluto_archive p04c (map as of the filing date)"
+ },
+ "1014290028@2005-10-12": {
+  "vintage": "p04c",
+  "as_of": "2005-10-12",
+  "lot_area": 1434.0,
+  "zonedist": "C1-9",
+  "far": {},
+  "bldg_area": 4407.0,
+  "built_far": 3.07,
+  "owner": "LMSS REALTY LLC",
+  "source": "pluto_archive p04c (map as of the filing date)"
+ },
+ "1014290128@2005-10-12": {
+  "vintage": "p04c",
+  "as_of": "2005-10-12",
+  "lot_area": 2147.0,
+  "zonedist": "C1-9",
+  "far": {},
+  "bldg_area": 12882.0,
+  "built_far": 6.0,
+  "owner": "244 E 75 LLCC/O BETTI",
+  "source": "pluto_archive p04c (map as of the filing date)"
+ },
+ "3027220008@2004-10-29": {
+  "vintage": "p04c",
+  "as_of": "2004-10-29",
+  "lot_area": 5000.0,
+  "zonedist": "R6(M1-2)",
+  "far": {},
+  "bldg_area": 15000.0,
+  "built_far": 3.0,
+  "owner": "SABIN ENTERPRISES INC",
+  "source": "pluto_archive p04c (map as of the filing date)"
+ },
+ "3027220010@2004-10-29": {
+  "vintage": "p04c",
+  "as_of": "2004-10-29",
+  "lot_area": 7500.0,
+  "zonedist": "R6(M1-2)",
+  "far": {},
+  "bldg_area": 360.0,
+  "built_far": 0.05,
+  "owner": "BAYARO HOUSE LLC",
+  "source": "pluto_archive p04c (map as of the filing date)"
+ },
+ "3027220033@2004-10-29": {
+  "vintage": "p04c",
+  "as_of": "2004-10-29",
+  "lot_area": 2500.0,
+  "zonedist": "R6(M1-2)",
+  "far": {},
+  "bldg_area": 4125.0,
+  "built_far": 1.65,
+  "owner": "BAYARD HOUSE,LLC",
+  "source": "pluto_archive p04c (map as of the filing date)"
+ },
+ "3027220034@2004-10-29": {
+  "vintage": "p04c",
+  "as_of": "2004-10-29",
+  "lot_area": 5000.0,
+  "zonedist": "R6(M1-2)",
+  "far": {},
+  "bldg_area": 5000.0,
+  "built_far": 1.0,
+  "owner": "BARARD HOUSE LLC",
+  "source": "pluto_archive p04c (map as of the filing date)"
+ },
+ "3027220036@2004-10-29": {
+  "vintage": "p04c",
+  "as_of": "2004-10-29",
+  "lot_area": 2500.0,
+  "zonedist": "R6(M1-2)",
+  "far": {},
+  "bldg_area": 2850.0,
+  "built_far": 1.14,
+  "owner": "VITTIBURGA, MARIE",
+  "source": "pluto_archive p04c (map as of the filing date)"
+ },
+ "1008000049@2010-10-14": {
+  "vintage": "p10v2",
+  "as_of": "2010-10-14",
+  "lot_area": 16745.0,
+  "zonedist": "M1-6",
+  "far": {},
+  "bldg_area": 46857.0,
+  "built_far": 2.8,
+  "owner": "112-118 WEST 25TH LLC",
+  "source": "pluto_archive p10v2 (map as of the filing date)"
+ },
+ "1008000053@2010-10-14": {
+  "vintage": "p10v2",
+  "as_of": "2010-10-14",
+  "lot_area": 4100.0,
+  "zonedist": "M1-6",
+  "far": {},
+  "bldg_area": 16920.0,
+  "built_far": 4.13,
+  "owner": "120-22 W 25 STREET LL",
+  "source": "pluto_archive p10v2 (map as of the filing date)"
+ },
+ "1008000055@2010-10-14": {
+  "vintage": "p10v2",
+  "as_of": "2010-10-14",
+  "lot_area": 2469.0,
+  "zonedist": "M1-6",
+  "far": {},
+  "bldg_area": 10160.0,
+  "built_far": 4.12,
+  "owner": "124-26 W 25 STREET LL",
+  "source": "pluto_archive p10v2 (map as of the filing date)"
+ },
+ "1008000056@2010-10-14": {
+  "vintage": "p10v2",
+  "as_of": "2010-10-14",
+  "lot_area": 2469.0,
+  "zonedist": "M1-6",
+  "far": {},
+  "bldg_area": 10470.0,
+  "built_far": 4.24,
+  "owner": "124-26 W 25 STREET LL",
+  "source": "pluto_archive p10v2 (map as of the filing date)"
+ },
+ "1015400003@2012-12-05": {
+  "vintage": "p12v2",
+  "as_of": "2012-12-05",
+  "lot_area": 2516.0,
+  "zonedist": "C2-8",
+  "far": {},
+  "bldg_area": 6648.0,
+  "built_far": 2.64,
+  "owner": "1683 THIRD AVENUE ASS",
+  "source": "pluto_archive p12v2 (map as of the filing date)"
+ },
+ "3027650014@2014-09-09": {
+  "vintage": "p14v2",
+  "as_of": "2014-09-09",
+  "lot_area": 2500.0,
+  "zonedist": "R7A",
+  "far": {
+   "residfar": 4.0,
+   "commfar": 0.0,
+   "facilfar": 4.0
+  },
+  "bldg_area": 2280.0,
+  "built_far": 0.91,
+  "owner": "764 METROPOLITAN LLC",
+  "source": "pluto_archive p14v2 (map as of the filing date)"
+ },
+ "3027650035@2014-09-09": {
+  "vintage": "p14v2",
+  "as_of": "2014-09-09",
+  "lot_area": 2200.0,
+  "zonedist": "R6B",
+  "far": {
+   "residfar": 2.0,
+   "commfar": 0.0,
+   "facilfar": 2.0
+  },
+  "bldg_area": 1592.0,
+  "built_far": 0.72,
+  "owner": "SPERBER, HEATHER",
+  "source": "pluto_archive p14v2 (map as of the filing date)"
+ },
+ "1000370008@2014-07-02": {
+  "vintage": "p14v2",
+  "as_of": "2014-07-02",
+  "lot_area": 17017.0,
+  "zonedist": "C6-9",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 15.0,
+   "facilfar": 15.0
+  },
+  "bldg_area": 295376.0,
+  "built_far": 17.36,
+  "owner": "110 WALL STREET L.P.",
+  "source": "pluto_archive p14v2 (map as of the filing date)"
+ },
+ "1000370013@2014-07-02": {
+  "vintage": "p14v2",
+  "as_of": "2014-07-02",
+  "lot_area": 4685.0,
+  "zonedist": "C6-9",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 15.0,
+   "facilfar": 15.0
+  },
+  "bldg_area": 34613.0,
+  "built_far": 7.39,
+  "owner": "129 FRONT HOTEL LLC",
+  "source": "pluto_archive p14v2 (map as of the filing date)"
+ },
+ "4097930078@2017-05-25": {
+  "vintage": "p17v1",
+  "as_of": "2017-05-25",
+  "lot_area": 29568.0,
+  "zonedist": "C4-5X",
+  "far": {
+   "residfar": 5.0,
+   "commfar": 4.0,
+   "facilfar": 5.0
+  },
+  "bldg_area": 13712.0,
+  "built_far": 0.46,
+  "owner": "FIRST JAMAICA COMMUNI",
+  "source": "pluto_archive p17v1 (map as of the filing date)"
+ },
+ "4097930079@2017-05-25": {
+  "vintage": "p17v1",
+  "as_of": "2017-05-25",
+  "lot_area": 0.0,
+  "zonedist": null,
+  "far": {
+   "residfar": 0.0,
+   "commfar": 0.0,
+   "facilfar": 0.0
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": null,
+  "source": "pluto_archive p17v1 (map as of the filing date)"
+ },
+ "4097930086@2017-05-25": {
+  "vintage": "p17v1",
+  "as_of": "2017-05-25",
+  "lot_area": 14400.0,
+  "zonedist": "C4-5X",
+  "far": {
+   "residfar": 5.0,
+   "commfar": 4.0,
+   "facilfar": 5.0
+  },
+  "bldg_area": 21450.0,
+  "built_far": 1.49,
+  "owner": "FIRST PRESBY CHRCH",
+  "source": "pluto_archive p17v1 (map as of the filing date)"
+ },
+ "1019080060@2021-02-03": {
+  "vintage": "p20v8",
+  "as_of": "2021-02-03",
+  "lot_area": 10092.0,
+  "zonedist": "C4-4",
+  "far": {
+   "residfar": 3.44,
+   "commfar": 3.4,
+   "facilfar": 6.5
+  },
+  "bldg_area": 37600.0,
+  "built_far": 3.73,
+  "owner": "HARLEM PARK ASSOC. LLC",
+  "source": "pluto_archive p20v8 (map as of the filing date)"
+ },
+ "1019080004@2021-02-03": {
+  "vintage": "p20v8",
+  "as_of": "2021-02-03",
+  "lot_area": 4297.0,
+  "zonedist": "R7-2",
+  "far": {
+   "residfar": 3.44,
+   "commfar": 0.0,
+   "facilfar": 6.5
+  },
+  "bldg_area": 17243.0,
+  "built_far": 4.01,
+  "owner": "HPH 2067, LLC",
+  "source": "pluto_archive p20v8 (map as of the filing date)"
+ },
+ "3024720080@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 14284.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "NYC DEPARTMENT OF PARKS AND RECREATION",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024940010@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 11890.0,
+  "zonedist": "R8",
+  "far": {
+   "residfar": 6.02,
+   "commfar": 0.0,
+   "facilfar": 6.5
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "UNAVAILABLE OWNER",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720021@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 225115.0,
+  "zonedist": "R8",
+  "far": {
+   "residfar": 6.02,
+   "commfar": 0.0,
+   "facilfar": 6.5
+  },
+  "bldg_area": 259341.0,
+  "built_far": 1.15,
+  "owner": "BOP GREENPOINT D LLC",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720100@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 42958.0,
+  "zonedist": "R8",
+  "far": {
+   "residfar": 6.02,
+   "commfar": 0.0,
+   "facilfar": 6.5
+  },
+  "bldg_area": 369482.0,
+  "built_far": 8.6,
+  "owner": "BOP GREENPOINT G LLC",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720025@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 2879.0,
+  "zonedist": "R8",
+  "far": {
+   "residfar": 6.02,
+   "commfar": 0.0,
+   "facilfar": 6.5
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "NYC DEPARTMENT OF SMALL BUSINESS SERVICES",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024940005@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 3304.0,
+  "zonedist": "R8",
+  "far": {
+   "residfar": 6.02,
+   "commfar": 0.0,
+   "facilfar": 6.5
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "BOP GREENPOINT D LLC",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720475@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 9810.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "BOP GREENPOINT H-3 LLC",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3025100001@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 317688.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 250.0,
+  "built_far": 0.0,
+  "owner": "GREENPOINT RIVERVIEW ASSOCIATES, L.L.C.",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3025020002@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 1253.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "BOP GREENPOINT D LLC",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720003@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 7308.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "BOP GREENPOINT D LLC",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720010@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 3153.0,
+  "zonedist": "R8",
+  "far": {
+   "residfar": 6.02,
+   "commfar": 0.0,
+   "facilfar": 6.5
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "BOP GREENPOINT D LLC",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024940006@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 12194.0,
+  "zonedist": "R8",
+  "far": {
+   "residfar": 6.02,
+   "commfar": 0.0,
+   "facilfar": 6.5
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "NYC DEPARTMENT OF ENVIRONMENTAL PROTECTION",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720075@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 278872.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "NYC DEPARTMENT OF PARKS AND RECREATION",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024940020@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 20025.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 1250.0,
+  "built_far": 0.06,
+  "owner": "UNAVAILABLE OWNER",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720030@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 58974.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "UNAVAILABLE OWNER",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720055@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 72032.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "UNAVAILABLE OWNER",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720050@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 48560.0,
+  "zonedist": "R8",
+  "far": {
+   "residfar": 6.02,
+   "commfar": 0.0,
+   "facilfar": 6.5
+  },
+  "bldg_area": 448412.0,
+  "built_far": 9.23,
+  "owner": "BOP GREENPOINT F LLC",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3025200057@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 150780.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 24934.0,
+  "built_far": 0.17,
+  "owner": "GREENPOINT RIVERVIEW ASSOCIATES, L.L.C.",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720020@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 2853.0,
+  "zonedist": "R8",
+  "far": {
+   "residfar": 6.02,
+   "commfar": 0.0,
+   "facilfar": 6.5
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "NYC DEPARTMENT OF SMALL BUSINESS SERVICES",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720070@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 44599.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "H OWNER LLC",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720200@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 50281.0,
+  "zonedist": "R8",
+  "far": {
+   "residfar": 6.02,
+   "commfar": 0.0,
+   "facilfar": 6.5
+  },
+  "bldg_area": 326250.0,
+  "built_far": 6.49,
+  "owner": "BOP GREENPOINT H-3 LLC",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720045@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 5293.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "CITY OF NEW YORK",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3025020001@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 262808.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "GREENPOINT RIVERVIEW ASSOCIATES, L.L.C.",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720002@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 9565.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "BOP GREENPOINT D LLC",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720035@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 63405.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "NYC DEPARTMENT OF SMALL BUSINESS SERVICES",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "3024720090@2021-06-24": {
+  "vintage": "p21v2",
+  "as_of": "2021-06-24",
+  "lot_area": 8541.0,
+  "zonedist": "R6",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 0.0,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "NYC DEPARTMENT OF PARKS AND RECREATION",
+  "source": "pluto_archive p21v2 (map as of the filing date)"
+ },
+ "4120990015@2025-10-14": {
+  "vintage": "p25v3",
+  "as_of": "2025-10-14",
+  "lot_area": 29732.0,
+  "zonedist": "C4-2",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 3.4,
+   "facilfar": 4.8
+  },
+  "bldg_area": 160551.0,
+  "built_far": 5.4,
+  "owner": "135TH AVENUE JFK PROPERTY III LLC",
+  "source": "pluto_archive p25v3 (map as of the filing date)"
+ },
+ "4120990001@2025-10-14": {
+  "vintage": "p25v3",
+  "as_of": "2025-10-14",
+  "lot_area": 29732.0,
+  "zonedist": "C4-2",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 3.4,
+   "facilfar": 4.8
+  },
+  "bldg_area": 92325.0,
+  "built_far": 3.11,
+  "owner": "135TH AVENUE JFK PROPERTY II LLC",
+  "source": "pluto_archive p25v3 (map as of the filing date)"
+ },
+ "4120990030@2025-10-14": {
+  "vintage": "p25v3",
+  "as_of": "2025-10-14",
+  "lot_area": 61615.0,
+  "zonedist": "C4-2",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 3.4,
+   "facilfar": 4.8
+  },
+  "bldg_area": 197532.0,
+  "built_far": 3.21,
+  "owner": "RB 135TH AVENUE HOUSING DEVELOPMENT FUND  CORP",
+  "source": "pluto_archive p25v3 (map as of the filing date)"
+ },
+ "4120990036@2025-10-14": {
+  "vintage": "p25v3",
+  "as_of": "2025-10-14",
+  "lot_area": 11967.0,
+  "zonedist": "C4-2",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 3.4,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "JFK FIONA 36 LLC",
+  "source": "pluto_archive p25v3 (map as of the filing date)"
+ },
+ "4120990032@2025-10-14": {
+  "vintage": "p25v3",
+  "as_of": "2025-10-14",
+  "lot_area": 17530.0,
+  "zonedist": "C4-2",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 3.4,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "JFK HOTEL PARTNERS LLC",
+  "source": "pluto_archive p25v3 (map as of the filing date)"
+ },
+ "4120990050@2025-10-14": {
+  "vintage": "p25v3",
+  "as_of": "2025-10-14",
+  "lot_area": 49603.0,
+  "zonedist": "C4-2",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 3.4,
+   "facilfar": 4.8
+  },
+  "bldg_area": 114800.0,
+  "built_far": 2.31,
+  "owner": "ASAP 135TH AVE JAMAICA, LLC",
+  "source": "pluto_archive p25v3 (map as of the filing date)"
+ },
+ "4120990038@2025-10-14": {
+  "vintage": "p25v3",
+  "as_of": "2025-10-14",
+  "lot_area": 21564.0,
+  "zonedist": "C4-2",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 3.4,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "JFK HOTEL PARTNERS LLC",
+  "source": "pluto_archive p25v3 (map as of the filing date)"
+ },
+ "4120990034@2025-10-14": {
+  "vintage": "p25v3",
+  "as_of": "2025-10-14",
+  "lot_area": 16553.0,
+  "zonedist": "C4-2",
+  "far": {
+   "residfar": 2.43,
+   "commfar": 3.4,
+   "facilfar": 4.8
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "JFK FIONA 34 LLC",
+  "source": "pluto_archive p25v3 (map as of the filing date)"
+ },
+ "1014460052@2025-12-18": {
+  "vintage": "p25v4",
+  "as_of": "2025-12-18",
+  "lot_area": 3200.0,
+  "zonedist": "R10A",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 0.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 11910.0,
+  "built_far": 3.72,
+  "owner": "1390 SECOND AVENUE REALTY,",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "1014460052@2026-01-09": {
+  "vintage": "p25v4",
+  "as_of": "2026-01-09",
+  "lot_area": 3200.0,
+  "zonedist": "R10A",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 0.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 11910.0,
+  "built_far": 3.72,
+  "owner": "1390 SECOND AVENUE REALTY,",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "1014460051@2026-01-09": {
+  "vintage": "p25v4",
+  "as_of": "2026-01-09",
+  "lot_area": 1088.0,
+  "zonedist": "R10A",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 0.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "NYC TRANSIT AUTHORITY",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "1014460051@2025-12-18": {
+  "vintage": "p25v4",
+  "as_of": "2025-12-18",
+  "lot_area": 1088.0,
+  "zonedist": "R10A",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 0.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "NYC TRANSIT AUTHORITY",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "1014460004@2026-01-09": {
+  "vintage": "p25v4",
+  "as_of": "2026-01-09",
+  "lot_area": 1875.0,
+  "zonedist": "C1-9",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 2.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 6000.0,
+  "built_far": 3.2,
+  "owner": "RSL 1388 SECOND LLC",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "1014460004@2025-12-18": {
+  "vintage": "p25v4",
+  "as_of": "2025-12-18",
+  "lot_area": 1875.0,
+  "zonedist": "C1-9",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 2.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 6000.0,
+  "built_far": 3.2,
+  "owner": "RSL 1388 SECOND LLC",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "1014460151@2026-01-09": {
+  "vintage": "p25v4",
+  "as_of": "2026-01-09",
+  "lot_area": 1040.0,
+  "zonedist": "R10A",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 0.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 3755.0,
+  "built_far": 3.61,
+  "owner": "DBMJ 1390.5 SECOND AVE LLC",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "1014460151@2025-12-18": {
+  "vintage": "p25v4",
+  "as_of": "2025-12-18",
+  "lot_area": 1040.0,
+  "zonedist": "R10A",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 0.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 3755.0,
+  "built_far": 3.61,
+  "owner": "DBMJ 1390.5 SECOND AVE LLC",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "1014460001@2025-12-18": {
+  "vintage": "p25v4",
+  "as_of": "2025-12-18",
+  "lot_area": 2038.0,
+  "zonedist": "C1-9",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 2.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "301 EAST 71 INVESTORS LLC",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "1014460001@2026-01-09": {
+  "vintage": "p25v4",
+  "as_of": "2026-01-09",
+  "lot_area": 2038.0,
+  "zonedist": "C1-9",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 2.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "301 EAST 71 INVESTORS LLC",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "1014460002@2026-01-09": {
+  "vintage": "p25v4",
+  "as_of": "2026-01-09",
+  "lot_area": 1875.0,
+  "zonedist": "C1-9",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 2.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "301 EAST 71 INVESTORS LLC",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "1014460002@2025-12-18": {
+  "vintage": "p25v4",
+  "as_of": "2025-12-18",
+  "lot_area": 1875.0,
+  "zonedist": "C1-9",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 2.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "301 EAST 71 INVESTORS LLC",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "1014460003@2026-01-09": {
+  "vintage": "p25v4",
+  "as_of": "2026-01-09",
+  "lot_area": 1875.0,
+  "zonedist": "C1-9",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 2.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "301 EAST 71 INVESTORS LLC",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "1014460003@2025-12-18": {
+  "vintage": "p25v4",
+  "as_of": "2025-12-18",
+  "lot_area": 1875.0,
+  "zonedist": "C1-9",
+  "far": {
+   "residfar": 10.0,
+   "commfar": 2.0,
+   "facilfar": 10.0
+  },
+  "bldg_area": 0.0,
+  "built_far": 0.0,
+  "owner": "301 EAST 71 INVESTORS LLC",
+  "source": "pluto_archive p25v4 (map as of the filing date)"
+ },
+ "3030230020@2026-06-08": {
+  "vintage": "p26v1",
+  "as_of": "2026-06-08",
+  "lot_area": 2500.0,
+  "zonedist": "R6B",
+  "far": {
+   "residfar": 2.0,
+   "commfar": 0.0,
+   "facilfar": 2.0
+  },
+  "bldg_area": 2450.0,
+  "built_far": 0.98,
+  "owner": "74 TEN EYCK NY LLC",
+  "source": "pluto_archive p26v1 (map as of the filing date)"
+ },
+ "3030230019@2026-06-08": {
+  "vintage": "p26v1",
+  "as_of": "2026-06-08",
+  "lot_area": 2500.0,
+  "zonedist": "R6B",
+  "far": {
+   "residfar": 2.0,
+   "commfar": 0.0,
+   "facilfar": 2.0
+  },
+  "bldg_area": 3900.0,
+  "built_far": 1.56,
+  "owner": "GEOMAR RLTY INC",
+  "source": "pluto_archive p26v1 (map as of the filing date)"
+ }
+}

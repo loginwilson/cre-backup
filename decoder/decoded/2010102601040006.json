@@ -1,0 +1,292 @@
+{
+ "chart": {
+  "page": 38,
+  "rows": {
+   "pro_rata": {
+    "49": "85.17%",
+    "53": "6.86%",
+    "55": "3.90%",
+    "56": "4.07%"
+   },
+   "retained": {
+    "53": 16906,
+    "55": 9620,
+    "56": 10046,
+    "total": 36572
+   },
+   "lot_areas": {
+    "49": 15639,
+    "53": 4077,
+    "55": 2469,
+    "56": 2469,
+    "total": 24654
+   },
+   "after_transfer": {
+    "49": 209968,
+    "53": 16906,
+    "55": 9620,
+    "56": 10046,
+    "total": 246540
+   },
+   "generated_far10": {
+    "49": 156390,
+    "53": 40770,
+    "55": 24690,
+    "56": 24690,
+    "total": 246540
+   },
+   "excess_transferred": {
+    "53": 23864,
+    "55": 15070,
+    "56": 14644,
+    "total": 53578
+   }
+  },
+  "present": true
+ },
+ "doc_id": "2010102601040006",
+ "decoder": "agent-vision-pass-1, 2026-08-05",
+ "parties": [
+  {
+   "name": "120-22 W 25 Street LLC (Sabet Group)",
+   "tax_lot": "1/800/53",
+   "normalized_role": "grantor_of_rights"
+  },
+  {
+   "name": "124-26 W 25 Street LLC (Sabet Group)",
+   "tax_lot": "1/800/55+56",
+   "normalized_role": "grantor_of_rights"
+  },
+  {
+   "name": "112-118 West 25th LLC (Extell)",
+   "tax_lot": "1/800/49",
+   "normalized_role": "recipient_of_rights"
+  },
+  {
+   "name": "New York Community Bank",
+   "note": "'Waiver of Declaration' noted in certification; instrument not attached",
+   "tax_lot": "1/800/53+55+56",
+   "normalized_role": "consenting_mortgagee"
+  },
+  {
+   "name": "Anglo Irish Bank Corporation PLC, as Agent",
+   "note": "lot 49 mortgagee; waiver column BLANK in certification — conspicuously absent",
+   "tax_lot": "1/800/49",
+   "normalized_role": "other"
+  }
+ ],
+ "anomalies": [
+  "cover says PAGE 1 OF 116 / page count 114, but only 111 images exist (110 readable + placeholder) — 3-5 pages MISSING FROM ACRIS'S OWN IMAGE SET (blocked, not empty)",
+  "~two-thirds of recorded pages (43-110) are the appended UNEXECUTED exhibit-set of the unrecorded 2009 contract, including a full duplicate form of the ZLDA — decoder must not double-count form copies",
+  "index document_amt $0 despite a $5M transaction — price recovered only via prepaid tax-return references on cover",
+  "acknowledgments predate as-of date by 10 months; cover typo '124-25' for 124-26; signatory 'Alfred' vs 'Albert' Sabetfard between executed and form pages; lot 49 depth courses differ between exhibits (82'8¾\"/114'10\" vs 82'10\"/114'6\") and neither closes exactly (0.75\" over / 2\" short)",
+  "contract's List of Exhibits promises a Waiver & Subordination form that appears nowhere in the recorded set",
+  "Legal descriptions transcribed 2026-08-13 from images already on disk (pages_out/), no new ACRIS request. The 110-page recording is a bundle of three instruments and the SAME four descriptions are reproduced three times: PSA Exhibit A/B pp.29-31, title-company Schedule A pp.33-34 and pp.86-87, and further copies at pp.44-46 and pp.80-83. Transcribed from the pp.29-31 set; the duplicates were compared and read the same.",
+  "Ex.B (Lot 49) final course: the leading 'T' of 'THENCE' is dropped/faint in the recorded image (reads as ‘HENCE easterly along the southerly side of 25th Street 85 feet’). Transcribed as THENCE; a scanning/typing artifact, not a substantive defect.",
+  "Ex.A Parcel 3 prints 'Country, City and State of New York' where Parcels 1 and 2 print 'County' — transcribed as printed.",
+  "Ex.A Parcel 1 is NOT a rectangle: the boundary line runs at 89 degrees 31 minutes 20 seconds to the first course, which is why the two north-south courses differ (81'9\" vs 81'4\")."
+ ],
+ "consideration": {
+  "per_sf": 93.32,
+  "index_amt": 0,
+  "recovered": 5000000,
+  "in_document": "$10 nominal",
+  "recovery_method": "cover prepaid RPTT $131,250/2.625%=5,000,000 AND RETT $20,000/0.4%=5,000,000 — two independent back-solves converge; price paid under unrecorded Dec-2009 purchase contract"
+ },
+ "decode_status": "validated_with_findings",
+ "effective_dates": {
+  "crfn": "2010000384312",
+  "recorded": "2010-11-16",
+  "document_date": "2010-10-14",
+  "signed_acknowledged": "2009-12-11 (10 months before as-of date — signatures held in escrow from contract signing to closing)"
+ },
+ "instrument_kind": "zlda_with_easements",
+ "validation_tier": "arithmetic",
+ "consents_waivers": [
+  {
+   "note": "noted in certification table only",
+   "page": 32,
+   "party": "New York Community Bank (lots 53/55/56)",
+   "instrument": "waiver",
+   "present_in_doc": false
+  },
+  {
+   "note": "certification waiver column BLANK — conspicuously absent",
+   "page": 32,
+   "party": "Anglo Irish Bank (lot 49)",
+   "instrument": "waiver",
+   "present_in_doc": false
+  }
+ ],
+ "instrument_title": {
+  "page": 3,
+  "value": "Zoning Lot Development and Easement Agreement"
+ },
+ "lot_areas_by_bbl": {
+  "values": {
+   "1008000049": 15639,
+   "1008000053": 4077,
+   "1008000055": 2469,
+   "1008000056": 2469
+  },
+  "provenance": "Exhibit D chart p38"
+ },
+ "quantities_other": [
+  {
+   "name": "bonus rights split",
+   "page": 6,
+   "value": "Developer 59.4% / Owner 40.6% of any future Owner Parcel Bonus Development Rights"
+  },
+  {
+   "name": "light/air easement strip lot 53",
+   "page": 40,
+   "value": "20-ft strip starting 61.75 ft south of north line; above 118 ft Manhattan Datum pre-demolition, above 23 ft curb level post-demolition"
+  }
+ ],
+ "cross_instruments": [
+  {
+   "page": 1,
+   "what": "batch siblings",
+   "how_cited": "doc_id",
+   "identifier": "2010102601040002/003/004/005"
+  },
+  {
+   "page": 5,
+   "what": "Declaration of Zoning Lot Restrictions",
+   "how_cited": "date_parties",
+   "identifier": "even date; unexecuted form also appended pp.48-55"
+  },
+  {
+   "page": 98,
+   "what": "Development Rights Purchase and Sale Agreement (UNRECORDED)",
+   "how_cited": "date_parties",
+   "identifier": "Dec 2009, Sabet LLCs -> 112-118 West 25th LLC; exhibit set appended pp.43-110"
+  },
+  {
+   "page": 40,
+   "what": "Light and Air Easement Agreement over lot 53",
+   "how_cited": "date_parties",
+   "identifier": "recited as conveyed; form annexed Exhibit F"
+  },
+  {
+   "page": 11,
+   "what": "DOB new-building application",
+   "how_cited": "doc_id",
+   "identifier": "DOB filing 120066150 'Hotel 112 W 25th St', plans 2009-06-15"
+  },
+  {
+   "page": 1,
+   "what": "RPTT return",
+   "how_cited": "doc_id",
+   "identifier": "Ref 2010000376481 ($131,250 prepaid)"
+  },
+  {
+   "page": 1,
+   "what": "RETT return",
+   "how_cited": "doc_id",
+   "identifier": "Ref 3801156 ($20,000 prepaid)"
+  }
+ ],
+ "zoning_lot_roster": [
+  {
+   "bbl": "1008000049"
+  },
+  {
+   "bbl": "1008000053"
+  },
+  {
+   "bbl": "1008000055"
+  },
+  {
+   "bbl": "1008000056"
+  }
+ ],
+ "self_checks_summary": {
+  "fails": 1,
+  "passes": 10,
+  "highlights": [
+   "full conservation at FAR 10: per-lot and total, retained+excess=generated, after-transfer sums, pro-rata exact",
+   "two independent tax back-solves converge on $5,000,000",
+   "FAIL: lot 49 metes-and-bounds closure (two variant course sets in same document, neither closes)"
+  ]
+ },
+ "summary_what_it_does": "Chelsea assemblage for Extell's hotel at 112-118 W 25th St (B800 L49): Sabet Group's three lots (53, 55, 56) each sell ALL their excess rights — 23,864 + 15,070 + 14,644 = 53,578 SF — to the developer lot, which goes from 156,390 to 209,968 SF (85.17%) of the 246,540 SF FAR-10 zoning lot. Index says $0, but prepaid transfer-tax returns on the cover (RPTT $131,250 @2.625%; RETT $20,000 @0.4%) BOTH back-solve to exactly $5,000,000 (~$93.32/SF). Includes light/air easement strip on lot 53 and 59.4/40.6 bonus-rights split.",
+ "legal_descriptions": [
+  {
+   "exhibit": "A — Parcel 1 (Lot #53)",
+   "bbl": "1008000053",
+   "shape": "per_lot",
+   "courses_verbatim": "ALL that certain plot, piece or parcel of land, situate, lying and being in the Borough of Manhattan, County, City and State of New York, being part of certain premises, which on a partition between Jacob Horn and others, as heirs or devisees of John Horn, deceased, were allotted to the said Jacob Horn, as his part, and distinguished on a map filed in December 1816, by the Commissioners, of Partition, in the Office of the Register of the City and County of New York, by the No. 1, said premises being distinguished on a map made by J.F. Bridges, City Surveyor and filed in the Office of the Register aforesaid (marked 121) in February 1829 by the No. 10 and 11, bounded and described as follows, to wit:\n\nBEGINNING at a point on the southerly side of West 25th Street, at the distance of 225 feet westerly from the westerly side of Sixth Avenue, (now known as Avenue of the Americas);\n\nRUNNING THENCE southerly at right angles to said West 25th Street, 81 feet 9 inches more or less to the boundary line which on said partition map separates said Jacob Horn's portion from Matthew Dikeman's portion;\n\nTHENCE westerly along said boundary line on said map, and on a line which forms on its northerly side of an angle of 89 degrees 31 minutes 20 seconds with the last course 50 feet;\n\nTHENCE northerly on a line parallel with the first course and along the dividing line between Lot 11 and Lot 12 on said Map and part of the distance through a party wall to the southerly side of West 25th Street, 81 feet 4 inches more or less to the southerly side of West 25th Street;\n\nTHENCE easterly along said southerly side of 25th Street, 50 feet to the point or place of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 29,
+   "traverse": {
+    "walked_area_sf": 4066.7,
+    "closure_error_ft": 0.417,
+    "n_courses": 4,
+    "verdict": "closes",
+    "parser": "metes.py 2026-08-13 (DMS guard, bug #10)"
+   }
+  },
+  {
+   "exhibit": "A — Parcel 2 (Lot #55)",
+   "bbl": "1008000055",
+   "shape": "per_lot",
+   "courses_verbatim": "ALL that certain plot, piece or parcel of land, situate, lying and being in the Borough of Manhattan, County, City and State of New York, bounded and described as follows:\n\nBEGINNING at a point on the southerly side of West 25th Street, distant 275 feet westerly from the corner formed by the intersection of the southerly side of West 25th Street and the westerly side of Sixth Avenue (now known as Avenue of the Americas);\n\nRUNNING THENCE southerly parallel with Sixth Avenue, 98 feet 9 inches to the center line of the block;\n\nTHENCE westerly along said center line of the block, 25 feet;\n\nTHENCE northerly parallel with Sixth Avenue, 98 feet 9 inches to the southerly side of 25th Street;\n\nTHENCE easterly along the southerly side of 25th Street, 25 feet to the point or place of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 29,
+   "traverse": {
+    "walked_area_sf": 2468.8,
+    "closure_error_ft": 0.0,
+    "n_courses": 4,
+    "verdict": "closes",
+    "parser": "metes.py 2026-08-13 (DMS guard, bug #10)"
+   }
+  },
+  {
+   "exhibit": "A — Parcel 3 (Lot #56)",
+   "bbl": "1008000056",
+   "shape": "per_lot",
+   "courses_verbatim": "ALL that certain plot, piece or parcel of land, situate, lying and being in the Borough of Manhattan, Country, City and State of New York, bounded and described as follows:\n\nBEGINNING at a point on the southerly side of West 25th Street, distant 300 feet westerly from the corner formed by the intersection of the southerly side of 25th Street and the westerly side of Sixth Avenue (now known as Avenue of the Americas);\n\nRUNNING THENCE southerly parallel with Sixth Avenue, and part of the distance through a party wall, 98 feet 9 inches to the center line of the block;\n\nTHENCE westerly along the center line of the block, 25 feet;\n\nTHENCE northerly parallel with Sixth Avenue, 98 feet 9 inches to the southerly side of West 25th Street;\n\nTHENCE easterly along the southerly side of West 25th Street, 25 feet to the point or place of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 30,
+   "traverse": {
+    "walked_area_sf": 2468.8,
+    "closure_error_ft": 0.0,
+    "n_courses": 4,
+    "verdict": "closes",
+    "parser": "metes.py 2026-08-13 (DMS guard, bug #10)"
+   }
+  },
+  {
+   "exhibit": "B — Developer's Land (Lot #49)",
+   "bbl": "1008000049",
+   "shape": "per_lot",
+   "courses_verbatim": "ALL that certain plot, piece or parcel of land, situate, lying and being in the Borough of Manhattan of the City of New York, known as and by the street numbers 112-118 West 25th Street and 113-117 West 24th Street, and more particularly bounded and described as follows:\n\nBEGINNING at a point on the southerly side of 25th Street distant 140 feet westerly from the corner formed by the intersection of the westerly side of 6th Avenue with the southerly side of 25th Street;\n\nTHENCE southerly parallel with the westerly side of 6th Avenue and through a party wall  about 82 feet 8 3/4 inches to the boundary line which on the partition map filed December, 1816 in New York County Register's Office by Commissioners of Partition Separates Jacob Horn's portion from Matthew Dikeman's portion;\n\nTHENCE westerly along the said boundary line 10 feet;\n\nTHENCE southerly parallel with the westerly side of 6th Avenue 114 feet 10 inches more or less to the northerly side of 24th Street;\n\nTHENCE westerly along the northerly side of 24th street 75 feet;\n\nTHENCE northerly parallel with the westerly side of 6th Avenue 197 feet 6 inches to the southerly side of 25th Street; and\n\nTHENCE easterly along the southerly side of 25th Street 85 feet to the point or place of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 31,
+   "traverse": {
+    "walked_area_sf": 15639.2,
+    "closure_error_ft": 0.062,
+    "n_courses": 6,
+    "verdict": "closes",
+    "parser": "metes.py 2026-08-13 (DMS guard, bug #10)"
+   }
+  }
+ ]
+}

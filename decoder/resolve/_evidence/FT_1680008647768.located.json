@@ -1,0 +1,1698 @@
+[
+ {
+  "page": "p001",
+  "run_index": 0,
+  "status": "single_channel",
+  "n_tokens": 4,
+  "box": [
+   227,
+   151,
+   1572,
+   287
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "REEL 586 761 60,000,00",
+  "crop": "p001_r000_single_channel.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 2,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   1092,
+   314,
+   1178,
+   346
+  ],
+  "how": "ok",
+  "vlm": ",",
+  "ocr": ",19",
+  "crop": "p001_r002_disputed.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 5,
+  "status": "single_channel",
+  "n_tokens": 1,
+  "box": [
+   214,
+   403,
+   322,
+   490
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "883",
+  "crop": "p001_r005_single_channel.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 13,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   345,
+   964,
+   1566,
+   1021
+  ],
+  "how": "ok",
+  "vlm": "Schedule",
+  "ocr": "Sched- ule",
+  "crop": "p001_r013_disputed.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 17,
+  "status": "disputed",
+  "n_tokens": 4,
+  "box": [
+   246,
+   1258,
+   1569,
+   1551
+  ],
+  "how": "ok",
+  "vlm": "sprinkler",
+  "ocr": "sprinkier O N RNA",
+  "crop": "p001_r017_disputed.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 19,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   345,
+   1311,
+   1567,
+   1344
+  ],
+  "how": "ok",
+  "vlm": "all",
+  "ocr": "a!i",
+  "crop": "p001_r019_disputed.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 21,
+  "status": "single_channel",
+  "n_tokens": 1,
+  "box": [
+   345,
+   1336,
+   1568,
+   1372
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "furniture,",
+  "crop": "p001_r021_single_channel.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 33,
+  "status": "disputed",
+  "n_tokens": 3,
+  "box": [
+   341,
+   1915,
+   1566,
+   1953
+  ],
+  "how": "ok",
+  "vlm": "to-encumber-the",
+  "ocr": "to encumber the",
+  "crop": "p001_r033_disputed.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 35,
+  "status": "single_channel",
+  "n_tokens": 4,
+  "box": [
+   214,
+   1915,
+   1567,
+   2349
+  ],
+  "how": "anchored",
+  "vlm": "REEL 586 AU 761",
+  "ocr": null,
+  "crop": "p001_r035_single_channel.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 37,
+  "status": "disputed",
+  "n_tokens": 3,
+  "box": [
+   218,
+   2348,
+   454,
+   2572
+  ],
+  "how": "ok",
+  "vlm": "10,000- 10,000- 60,000-",
+  "ocr": "10,110 60,011",
+  "crop": "p001_r037_disputed.png"
+ },
+ {
+  "page": "p003",
+  "run_index": 11,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   347,
+   965,
+   1587,
+   1019
+  ],
+  "how": "ok",
+  "vlm": "Schedule",
+  "ocr": "Sched- ule",
+  "crop": "p003_r011_disputed.png"
+ },
+ {
+  "page": "p003",
+  "run_index": 13,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   350,
+   1439,
+   1592,
+   1471
+  ],
+  "how": "ok",
+  "vlm": "(1)(1)",
+  "ocr": "(1) (1)",
+  "crop": "p003_r013_disputed.png"
+ },
+ {
+  "page": "p003",
+  "run_index": 17,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   349,
+   1680,
+   1591,
+   1708
+  ],
+  "how": "ok",
+  "vlm": "the",
+  "ocr": "tiie",
+  "crop": "p003_r017_disputed.png"
+ },
+ {
+  "page": "p003",
+  "run_index": 23,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   347,
+   1915,
+   1592,
+   1947
+  ],
+  "how": "ok",
+  "vlm": "TOGETHER, ALSO,",
+  "ocr": "TOGETHER;\"ALSO,",
+  "crop": "p003_r023_disputed.png"
+ },
+ {
+  "page": "p003",
+  "run_index": 27,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   348,
+   1996,
+   1592,
+   2027
+  ],
+  "how": "ok",
+  "vlm": "there are",
+  "ocr": "there-are",
+  "crop": "p003_r027_disputed.png"
+ },
+ {
+  "page": "p003",
+  "run_index": 29,
+  "status": "disputed",
+  "n_tokens": 4,
+  "box": [
+   348,
+   2049,
+   669,
+   2078
+  ],
+  "how": "ok",
+  "vlm": "consent of the Mortgagee.",
+  "ocr": "consent-of-the-Mortgagee.",
+  "crop": "p003_r029_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 5,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   335,
+   1176,
+   1567,
+   1234
+  ],
+  "how": "ok",
+  "vlm": "insurance",
+  "ocr": "insur- ance",
+  "crop": "p004_r005_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 11,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   336,
+   1384,
+   1568,
+   1440
+  ],
+  "how": "ok",
+  "vlm": "insurance",
+  "ocr": "insur- ance",
+  "crop": "p004_r011_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 13,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   337,
+   1462,
+   1567,
+   1494
+  ],
+  "how": "ok",
+  "vlm": "such insurance",
+  "ocr": "suchainsurance",
+  "crop": "p004_r013_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 15,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   337,
+   1488,
+   1568,
+   1520
+  ],
+  "how": "ok",
+  "vlm": "companies, satisfactory",
+  "ocr": "companies./safisfactory",
+  "crop": "p004_r015_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 19,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   340,
+   1726,
+   1568,
+   1779
+  ],
+  "how": "ok",
+  "vlm": "pursuant",
+  "ocr": "pur- suant",
+  "crop": "p004_r019_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 21,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   342,
+   1830,
+   1569,
+   1884
+  ],
+  "how": "ok",
+  "vlm": "premiums,",
+  "ocr": "pre- miums,",
+  "crop": "p004_r021_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 23,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   340,
+   1949,
+   1569,
+   1977
+  ],
+  "how": "ok",
+  "vlm": "altered without",
+  "ocr": "altered*without",
+  "crop": "p004_r023_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 31,
+  "status": "single_channel",
+  "n_tokens": 1,
+  "box": [
+   341,
+   2083,
+   1568,
+   2110
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "be",
+  "crop": "p004_r031_single_channel.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 33,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   340,
+   2199,
+   1569,
+   2258
+  ],
+  "how": "ok",
+  "vlm": "agreements",
+  "ocr": "agree- ments",
+  "crop": "p004_r033_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 35,
+  "status": "single_channel",
+  "n_tokens": 5,
+  "box": [
+   342,
+   2333,
+   1570,
+   2362
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "and secured by this Mortgage.",
+  "crop": "p004_r035_single_channel.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 1,
+  "status": "disputed",
+  "n_tokens": 4,
+  "box": [
+   1230,
+   114,
+   1554,
+   185
+  ],
+  "how": "ok",
+  "vlm": "586: A G E",
+  "ocr": "586:ALE",
+  "crop": "p005_r001_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 5,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   333,
+   234,
+   1558,
+   265
+  ],
+  "how": "ok",
+  "vlm": "4",
+  "ocr": "+",
+  "crop": "p005_r005_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 7,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   331,
+   260,
+   1558,
+   320
+  ],
+  "how": "ok",
+  "vlm": "Mortgagee,",
+  "ocr": "Mort- gagee,",
+  "crop": "p005_r007_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 9,
+  "status": "disputed",
+  "n_tokens": 4,
+  "box": [
+   395,
+   342,
+   1559,
+   374
+  ],
+  "how": "ok",
+  "vlm": "option to be exercised",
+  "ocr": "option-to-be exereised",
+  "crop": "p005_r009_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 13,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   332,
+   631,
+   1560,
+   688
+  ],
+  "how": "ok",
+  "vlm": "satisfaction",
+  "ocr": "satis- faction",
+  "crop": "p005_r013_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 17,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   334,
+   710,
+   1560,
+   740
+  ],
+  "how": "ok",
+  "vlm": "Mortgagee. The",
+  "ocr": "Mortgagee.The",
+  "crop": "p005_r017_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 19,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   336,
+   789,
+   1560,
+   817
+  ],
+  "how": "ok",
+  "vlm": "shall be",
+  "ocr": "shallbe",
+  "crop": "p005_r019_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 23,
+  "status": "disputed",
+  "n_tokens": 4,
+  "box": [
+   348,
+   1182,
+   1560,
+   1214
+  ],
+  "how": "ok",
+  "vlm": "five",
+  "ocr": "e-aus upon-reuostin-porson-or within ten",
+  "crop": "p005_r023_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 27,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   1106,
+   1264,
+   1639,
+   1314
+  ],
+  "how": "ok",
+  "vlm": "person or",
+  "ocr": "pereon-er",
+  "crop": "p005_r027_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 29,
+  "status": "single_channel",
+  "n_tokens": 8,
+  "box": [
+   335,
+   1264,
+   1639,
+   1504
+  ],
+  "how": "anchored",
+  "vlm": "may be served in person or by mail,",
+  "ocr": null,
+  "crop": "p005_r029_single_channel.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 31,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   336,
+   1477,
+   1562,
+   1531
+  ],
+  "how": "ok",
+  "vlm": "Mortgagee",
+  "ocr": "Mort- gagee",
+  "crop": "p005_r031_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 37,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   338,
+   1633,
+   1562,
+   1689
+  ],
+  "how": "ok",
+  "vlm": "respecting",
+  "ocr": "respect- ing",
+  "crop": "p005_r037_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 45,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   338,
+   2079,
+   1566,
+   2137
+  ],
+  "how": "ok",
+  "vlm": "Mortgagee",
+  "ocr": "Mort- gagee",
+  "crop": "p005_r045_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 47,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   339,
+   2132,
+   1566,
+   2191
+  ],
+  "how": "ok",
+  "vlm": "discretion,",
+  "ocr": "dis- cretion,",
+  "crop": "p005_r047_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 49,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   342,
+   2237,
+   1572,
+   2295
+  ],
+  "how": "ok",
+  "vlm": "Mortgagee",
+  "ocr": "Mort-. gagee",
+  "crop": "p005_r049_disputed.png"
+ },
+ {
+  "page": "p005",
+  "run_index": 51,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   342,
+   2265,
+   1567,
+   2321
+  ],
+  "how": "ok",
+  "vlm": "Mortgage,",
+  "ocr": "Mort- gage.",
+  "crop": "p005_r051_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 1,
+  "status": "disputed",
+  "n_tokens": 4,
+  "box": [
+   1254,
+   189,
+   1586,
+   269
+  ],
+  "how": "ok",
+  "vlm": "586. A. L. 766",
+  "ocr": "586.766",
+  "crop": "p006_r001_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 9,
+  "status": "disputed",
+  "n_tokens": 6,
+  "box": [
+   1276,
+   301,
+   1593,
+   336
+  ],
+  "how": "ok",
+  "vlm": "it, at any time after default",
+  "ocr": "Bedft",
+  "crop": "p006_r009_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 11,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   355,
+   355,
+   1592,
+   412
+  ],
+  "how": "ok",
+  "vlm": "unsatisfactory,",
+  "ocr": "unsatisfac- tory,",
+  "crop": "p006_r011_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 13,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   355,
+   476,
+   1593,
+   512
+  ],
+  "how": "ok",
+  "vlm": "Mortgagor, a",
+  "ocr": "Mortgagaara",
+  "crop": "p006_r013_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 15,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   356,
+   504,
+   1593,
+   539
+  ],
+  "how": "ok",
+  "vlm": "on",
+  "ocr": "ag",
+  "crop": "p006_r015_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 16,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   356,
+   504,
+   1593,
+   539
+  ],
+  "how": "ok",
+  "vlm": "a",
+  "ocr": "rar",
+  "crop": "p006_r016_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 17,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   356,
+   504,
+   1593,
+   539
+  ],
+  "how": "ok",
+  "vlm": "form",
+  "ocr": "hays",
+  "crop": "p006_r017_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 19,
+  "status": "single_channel",
+  "n_tokens": 20,
+  "box": [
+   355,
+   504,
+   1594,
+   587
+  ],
+  "how": "anchored",
+  "vlm": "and certified by an officer of the Mortgagee, within ninety (90) days of the close of its fiscal year, such",
+  "ocr": null,
+  "crop": "p006_r019_single_channel.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 21,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   355,
+   556,
+   1594,
+   587
+  ],
+  "how": "ok",
+  "vlm": "year, audited",
+  "ocr": "year/audited",
+  "crop": "p006_r021_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 34,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   354,
+   659,
+   1593,
+   694
+  ],
+  "how": "ok",
+  "vlm": "paid",
+  "ocr": "pat",
+  "crop": "p006_r034_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 36,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   352,
+   788,
+   1594,
+   849
+  ],
+  "how": "ok",
+  "vlm": "Mortgagee",
+  "ocr": "Mort- gagee",
+  "crop": "p006_r036_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 38,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   351,
+   1070,
+   1593,
+   1133
+  ],
+  "how": "ok",
+  "vlm": "sentence",
+  "ocr": "sen- tence",
+  "crop": "p006_r038_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 40,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   351,
+   1359,
+   1591,
+   1395
+  ],
+  "how": "ok",
+  "vlm": "charges",
+  "ocr": "cha ges",
+  "crop": "p006_r040_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 42,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   349,
+   1384,
+   1593,
+   1448
+  ],
+  "how": "ok",
+  "vlm": "indebtedness",
+  "ocr": "indebted- ness",
+  "crop": "p006_r042_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 48,
+  "status": "single_channel",
+  "n_tokens": 36,
+  "box": [
+   348,
+   1697,
+   1592,
+   2147
+  ],
+  "how": "anchored",
+  "vlm": "17. That the Mortgagor has no right or power, as against the Mortgagee without its consent, to cancel, abridge or otherwise modify the leases or subleases of the Premises or any of the terms, provisions or",
+  "ocr": null,
+  "crop": "p006_r048_single_channel.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 50,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   348,
+   2111,
+   1590,
+   2147
+  ],
+  "how": "ok",
+  "vlm": "and",
+  "ocr": "or",
+  "crop": "p006_r050_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 52,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   350,
+   2136,
+   1590,
+   2174
+  ],
+  "how": "ok",
+  "vlm": "form/satisfactory to",
+  "ocr": "form/satisiattoryYto",
+  "crop": "p006_r052_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 58,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   351,
+   2322,
+   1590,
+   2381
+  ],
+  "how": "ok",
+  "vlm": "agreement.",
+  "ocr": "agree- ment.",
+  "crop": "p006_r058_disputed.png"
+ },
+ {
+  "page": "p008",
+  "run_index": 0,
+  "status": "disputed",
+  "n_tokens": 3,
+  "box": [
+   1172,
+   151,
+   1494,
+   213
+  ],
+  "how": "ok",
+  "vlm": "Reel 586, Page",
+  "ocr": "KLEL 586AL",
+  "crop": "p008_r000_disputed.png"
+ },
+ {
+  "page": "p008",
+  "run_index": 4,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   345,
+   564,
+   1564,
+   620
+  ],
+  "how": "ok",
+  "vlm": "subdivision",
+  "ocr": "sub- division",
+  "crop": "p008_r004_disputed.png"
+ },
+ {
+  "page": "p008",
+  "run_index": 6,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   341,
+   741,
+   1562,
+   794
+  ],
+  "how": "ok",
+  "vlm": "Agreement",
+  "ocr": "Agree- ment",
+  "crop": "p008_r006_disputed.png"
+ },
+ {
+  "page": "p008",
+  "run_index": 10,
+  "status": "single_channel",
+  "n_tokens": 2,
+  "box": [
+   338,
+   1079,
+   1561,
+   1107
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "of being",
+  "crop": "p008_r010_single_channel.png"
+ },
+ {
+  "page": "p008",
+  "run_index": 14,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   336,
+   1209,
+   1561,
+   1263
+  ],
+  "how": "ok",
+  "vlm": "occupancy",
+  "ocr": "occu- pancy",
+  "crop": "p008_r014_disputed.png"
+ },
+ {
+  "page": "p008",
+  "run_index": 24,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   334,
+   1702,
+   1558,
+   1731
+  ],
+  "how": "ok",
+  "vlm": "may affect",
+  "ocr": "may/afrect",
+  "crop": "p008_r024_disputed.png"
+ },
+ {
+  "page": "p008",
+  "run_index": 26,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   333,
+   1780,
+   1556,
+   1835
+  ],
+  "how": "ok",
+  "vlm": "competent",
+  "ocr": "com- petent",
+  "crop": "p008_r026_disputed.png"
+ },
+ {
+  "page": "p008",
+  "run_index": 28,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   333,
+   1938,
+   1555,
+   1993
+  ],
+  "how": "ok",
+  "vlm": "lawfully",
+  "ocr": "law- fully",
+  "crop": "p008_r028_disputed.png"
+ },
+ {
+  "page": "p008",
+  "run_index": 32,
+  "status": "single_channel",
+  "n_tokens": 16,
+  "box": [
+   331,
+   2238,
+   1554,
+   2294
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "construed by Section 254: that the rights of the Mortgagee arising under the clauses and covenants",
+  "crop": "p008_r032_single_channel.png"
+ },
+ {
+  "page": "p008",
+  "run_index": 36,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   332,
+   2290,
+   1552,
+   2346
+  ],
+  "how": "ok",
+  "vlm": "Mortgagee",
+  "ocr": "Mort- gagee",
+  "crop": "p008_r036_disputed.png"
+ },
+ {
+  "page": "p009",
+  "run_index": 1,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   1013,
+   160,
+   1340,
+   232
+  ],
+  "how": "ok",
+  "vlm": "586: PAGE",
+  "ocr": "586:AGE",
+  "crop": "p009_r001_disputed.png"
+ },
+ {
+  "page": "p009",
+  "run_index": 3,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   168,
+   517,
+   1396,
+   574
+  ],
+  "how": "ok",
+  "vlm": "collect",
+  "ocr": "col- lect",
+  "crop": "p009_r003_disputed.png"
+ },
+ {
+  "page": "p009",
+  "run_index": 5,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   156,
+   795,
+   1446,
+   860
+  ],
+  "how": "ok",
+  "vlm": "elsewhere",
+  "ocr": "else- where",
+  "crop": "p009_r005_disputed.png"
+ },
+ {
+  "page": "p009",
+  "run_index": 7,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   156,
+   1084,
+   1383,
+   1150
+  ],
+  "how": "ok",
+  "vlm": "30-day",
+  "ocr": "30- day",
+  "crop": "p009_r007_disputed.png"
+ },
+ {
+  "page": "p009",
+  "run_index": 9,
+  "status": "single_channel",
+  "n_tokens": 1,
+  "box": [
+   1441,
+   1087,
+   1574,
+   1211
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "A.6.",
+  "crop": "p009_r009_single_channel.png"
+ },
+ {
+  "page": "p009",
+  "run_index": 11,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   155,
+   1193,
+   1442,
+   1228
+  ],
+  "how": "ok",
+  "vlm": "(l),",
+  "ocr": "(1),",
+  "crop": "p009_r011_disputed.png"
+ },
+ {
+  "page": "p009",
+  "run_index": 15,
+  "status": "single_channel",
+  "n_tokens": 2,
+  "box": [
+   134,
+   1516,
+   603,
+   1704
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "ar t",
+  "crop": "p009_r015_single_channel.png"
+ },
+ {
+  "page": "p009",
+  "run_index": 17,
+  "status": "single_channel",
+  "n_tokens": 1,
+  "box": [
+   896,
+   1708,
+   1254,
+   1827
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": ".rath",
+  "crop": "p009_r017_single_channel.png"
+ },
+ {
+  "page": "p009",
+  "run_index": 19,
+  "status": "disputed",
+  "n_tokens": 7,
+  "box": [
+   173,
+   2568,
+   305,
+   2588
+  ],
+  "how": "ok",
+  "vlm": "without personal REEL 586: PAGE 769 Mig.",
+  "ocr": "Mtg.",
+  "crop": "p009_r019_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 1,
+  "status": "single_channel",
+  "n_tokens": 1,
+  "box": [
+   1567,
+   220,
+   1601,
+   240
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "Ss8",
+  "crop": "p010_r001_single_channel.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 3,
+  "status": "disputed",
+  "n_tokens": 11,
+  "box": [
+   170,
+   259,
+   1602,
+   306
+  ],
+  "how": "ok",
+  "vlm": "September 1981,",
+  "ocr": "Septende v1981 , before me On the day of 19 ,",
+  "crop": "p010_r003_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 5,
+  "status": "single_channel",
+  "n_tokens": 5,
+  "box": [
+   244,
+   295,
+   1102,
+   359
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "Ariel Grateh personally came the",
+  "crop": "p010_r005_single_channel.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 7,
+  "status": "disputed",
+  "n_tokens": 13,
+  "box": [
+   244,
+   323,
+   1600,
+   359
+  ],
+  "how": "ok",
+  "vlm": "Realty,",
+  "ocr": "Pealty, to me known, who, being by me sworn, did depose and say",
+  "crop": "p010_r007_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 9,
+  "status": "disputed",
+  "n_tokens": 10,
+  "box": [
+   174,
+   349,
+   1194,
+   414
+  ],
+  "how": "ok",
+  "vlm": "attorney-in-fact for the general",
+  "ocr": "that he resides at . to me known to begeneral",
+  "crop": "p010_r009_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 11,
+  "status": "single_channel",
+  "n_tokens": 4,
+  "box": [
+   899,
+   402,
+   1100,
+   430
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "that he is the",
+  "crop": "p010_r011_single_channel.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 13,
+  "status": "single_channel",
+  "n_tokens": 2,
+  "box": [
+   686,
+   414,
+   873,
+   442
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "the partnership",
+  "crop": "p010_r013_single_channel.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 17,
+  "status": "disputed",
+  "n_tokens": 15,
+  "box": [
+   897,
+   457,
+   1601,
+   538
+  ],
+  "how": "ok",
+  "vlm": "general partner",
+  "ocr": "the corporation described in and which executed the foregoing instrument; that he knows the seal",
+  "crop": "p010_r017_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 19,
+  "status": "disputed",
+  "n_tokens": 7,
+  "box": [
+   897,
+   505,
+   1601,
+   538
+  ],
+  "how": "ok",
+  "vlm": "387 P.A.S. Enterprises,",
+  "ocr": "said corporation; that the seal affixed to",
+  "crop": "p010_r019_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 21,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   190,
+   539,
+   1601,
+   598
+  ],
+  "how": "ok",
+  "vlm": "14,",
+  "ocr": "41,",
+  "crop": "p010_r021_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 23,
+  "status": "disputed",
+  "n_tokens": 23,
+  "box": [
+   190,
+   530,
+   1601,
+   598
+  ],
+  "how": "ok",
+  "vlm": "simultaneously",
+  "ocr": "simultaneouslyby order of the board of directors of said corporation, and said instrument is such corporate seal ; that it was so affixed",
+  "crop": "p010_r023_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 25,
+  "status": "single_channel",
+  "n_tokens": 11,
+  "box": [
+   502,
+   583,
+   1522,
+   649
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "Ellitt Bulht that he signed h name thereto by like order.",
+  "crop": "p010_r025_single_channel.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 27,
+  "status": "disputed",
+  "n_tokens": 4,
+  "box": [
+   147,
+   603,
+   721,
+   678
+  ],
+  "how": "ok",
+  "vlm": "10-2-81 Elliott Bakst",
+  "ocr": "10-2 81 Nctary Public",
+  "crop": "p010_r027_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 35,
+  "status": "disputed",
+  "n_tokens": 5,
+  "box": [
+   142,
+   1479,
+   1200,
+   1588
+  ],
+  "how": "ok",
+  "vlm": "TITLE",
+  "ocr": "SECTION 3 BLOCK 883 TitLz",
+  "crop": "p010_r035_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 37,
+  "status": "disputed",
+  "n_tokens": 3,
+  "box": [
+   976,
+   1551,
+   1200,
+   1581
+  ],
+  "how": "ok",
+  "vlm": "7,32491 (USE 118261)",
+  "ocr": "LOT 1",
+  "crop": "p010_r037_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 39,
+  "status": "single_channel",
+  "n_tokens": 4,
+  "box": [
+   975,
+   1586,
+   1422,
+   1619
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "COUNTY CKXOKX NEW YORK",
+  "crop": "p010_r039_single_channel.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 41,
+  "status": "disputed",
+  "n_tokens": 4,
+  "box": [
+   827,
+   1680,
+   1530,
+   1856
+  ],
+  "how": "ok",
+  "vlm": "TO CITIBANK, N.A. RECORD",
+  "ocr": "1294 RECCRD",
+  "crop": "p010_r041_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 43,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   1045,
+   1700,
+   1530,
+   1730
+  ],
+  "how": "ok",
+  "vlm": "BY",
+  "ocr": "SY",
+  "crop": "p010_r043_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 45,
+  "status": "single_channel",
+  "n_tokens": 1,
+  "box": [
+   127,
+   1759,
+   196,
+   1887
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "cS",
+  "crop": "p010_r045_single_channel.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 56,
+  "status": "single_channel",
+  "n_tokens": 2,
+  "box": [
+   757,
+   1862,
+   895,
+   2095
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "ECR TX",
+  "crop": "p010_r056_single_channel.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 58,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   1165,
+   1884,
+   1414,
+   1908
+  ],
+  "how": "ok",
+  "vlm": "N.Y.",
+  "ocr": "N. Y.",
+  "crop": "p010_r058_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 60,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   991,
+   1926,
+   1075,
+   1951
+  ],
+  "how": "ok",
+  "vlm": "No.",
+  "ocr": "Ne.",
+  "crop": "p010_r060_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 62,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   1123,
+   2044,
+   1472,
+   2078
+  ],
+  "how": "ok",
+  "vlm": "TOTAL",
+  "ocr": "JIAL",
+  "crop": "p010_r062_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 64,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   542,
+   2044,
+   1472,
+   2117
+  ],
+  "how": "ok",
+  "vlm": "CORP.",
+  "ocr": "CORI 9358",
+  "crop": "p010_r064_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 66,
+  "status": "disputed",
+  "n_tokens": 9,
+  "box": [
+   308,
+   2139,
+   1343,
+   2535
+  ],
+  "how": "ok",
+  "vlm": "RECEIVED PROMPTING TAX OF",
+  "ocr": "P 0 961 0 21001:25 9550 192-19 (220 107",
+  "crop": "p010_r066_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 68,
+  "status": "disputed",
+  "n_tokens": 44,
+  "box": [
+   146,
+   2160,
+   1579,
+   2640
+  ],
+  "how": "ok",
+  "vlm": "6,470 Includes Special Addtl. Tax of $ 10,070 OCT 9 1981 SIRIAL NO. DI 2355 CITY REGISTER-NEW YORK COUNTY RECORDING TAX $6,470 1981 OCT 2 AM 10:25 OFFICE OF CITY REGISTER New York County RECORDED Witness my hand and official seal CITY REGISTER My",
+  "ocr": "10 \u00d701 1.4PPV smppbroy frnsd TY ETY Nev Cunty ty bn andaof al SK 1861 6 100 EC I EED 1edg s p K Mtg",
+  "crop": "p010_r068_disputed.png"
+ },
+ {
+  "page": "p010",
+  "run_index": 70,
+  "status": "disputed",
+  "n_tokens": 56,
+  "box": [
+   176,
+   2590,
+   287,
+   2650
+  ],
+  "how": "ok",
+  "vlm": "CIT C T SECTION 3 BLOCK 883 LOT 1 COUNTY NEW YORK REEL 586-ACE 770 ss: STATE OF NEW YORK, COUNTY OF NEW YORK On the day of 19, before me personally came to me known to be the individual described in and who executed the foregoing instrument, and acknowledged that executed the same. Notary Public",
+  "ocr": "UT",
+  "crop": "p010_r070_disputed.png"
+ }
+]

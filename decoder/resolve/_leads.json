@@ -1,0 +1,436 @@
+[
+ {
+  "event_id": "FT_1680008647768-fin",
+  "date": "1968",
+  "action": "MORTGAGE",
+  "functions": [
+   "financing"
+  ],
+  "effects": [
+   {
+    "party_or_parcel": "387 P.A.S.ENTERPRISES, a New York limited partnership having an office at c/o O.S.L. Shipping & Development Inc., 883 1270 Avenue of the Americas, New York, N. Y. 10021",
+    "role": "mortgagor",
+    "effect": "encumbered"
+   },
+   {
+    "party_or_parcel": "CITIBANK, N.A., a national banking association having an office at 399 Park Avenue, New York, N. Y. 10043",
+    "role": "mortgagee",
+    "effect": "created"
+   }
+  ],
+  "acts_on": null,
+  "governing": null,
+  "quantity": 4000000,
+  "unit": "USD",
+  "document_id": "FT_1680008647768",
+  "page": "p001",
+  "resolved_from": "unresolved",
+  "confidence": {
+   "established": false,
+   "unsettled_fields": [
+    "mortgagor"
+   ]
+  },
+  "claims": [
+   {
+    "kind": "mortgagor",
+    "value": "387 P.A.S.ENTERPRISES, a New York limited partnership having an office at c/o O.S.L. Shipping & Development Inc., 883 1270 Avenue of the Americas, New York, N. Y. 10021",
+    "page": "p001",
+    "span": [
+     69,
+     237
+    ],
+    "derivation": "recital: 'between X, the MORTGAGOR'",
+    "provenance": {
+     "grade": "single_channel",
+     "order_safe": false,
+     "filled": [
+      "ppbox"
+     ],
+     "runs": 3
+    },
+    "order_risk": true,
+    "established": false,
+    "resolved_from": "unresolved"
+   },
+   {
+    "kind": "mortgagee",
+    "value": "CITIBANK, N.A., a national banking association having an office at 399 Park Avenue, New York, N. Y. 10043",
+    "page": "p001",
+    "span": [
+     258,
+     363
+    ],
+    "derivation": "recital: 'and Y' in the same MORTGAGOR clause",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "amount",
+    "value": 4000000,
+    "page": "p001",
+    "span": [
+     466,
+     476
+    ],
+    "derivation": "figure with $ sign",
+    "provenance": {
+     "grade": "order_artifact",
+     "order_safe": false,
+     "filled": [
+      "ppbox"
+     ],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "amount",
+    "value": 4000000,
+    "page": "p001",
+    "span": [
+     488,
+     498
+    ],
+    "derivation": "figure with $ sign",
+    "provenance": {
+     "grade": "order_artifact",
+     "order_safe": false,
+     "filled": [
+      "q35-fair"
+     ],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "year",
+    "value": "1981",
+    "page": "p001",
+    "span": [
+     56,
+     60
+    ],
+    "derivation": "4-digit year",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "mortgagor",
+    "value": "387 P.A.S.ENTERPRISES, a New York limited partnership having an office at c/o O.S.L. Shipping & Development Inc., 1270 Avenue of the Americas, New York, N. Y. 10021",
+    "page": "p003",
+    "span": [
+     59,
+     223
+    ],
+    "derivation": "recital: 'between X, the MORTGAGOR'",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "mortgagee",
+    "value": "CITIBANK, N.A., a national banking association having an office at 399 Park Avenue, New York, N. Y. 10043",
+    "page": "p003",
+    "span": [
+     244,
+     349
+    ],
+    "derivation": "recital: 'and Y' in the same MORTGAGOR clause",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "amount",
+    "value": 4000000,
+    "page": "p003",
+    "span": [
+     452,
+     462
+    ],
+    "derivation": "figure with $ sign",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "year",
+    "value": "1981",
+    "page": "p003",
+    "span": [
+     46,
+     50
+    ],
+    "derivation": "4-digit year",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "year",
+    "value": "1968",
+    "page": "p004",
+    "span": [
+     954,
+     958
+    ],
+    "derivation": "4-digit year",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "amount",
+    "value": 50000,
+    "page": "p007",
+    "span": [
+     5122,
+     5129
+    ],
+    "derivation": "figure with $ sign",
+    "provenance": {
+     "grade": "single_channel",
+     "order_safe": false,
+     "filled": [
+      "q35-fair"
+     ],
+     "runs": 1
+    },
+    "established": false,
+    "resolved_from": "unresolved"
+   },
+   {
+    "kind": "mortgagor",
+    "value": "any subsequent owner or owners of the Premises and the Mortgagee extending the time of payment or modifying the terms of the Note or this Mortgage without first having obtained the consent of the Mortgagor or such other person, and in the latter event",
+    "page": "p008",
+    "span": [
+     152,
+     403
+    ],
+    "derivation": "recital: 'between X, the MORTGAGOR'",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "mortgagee",
+    "value": "all such other persons shall continue liable to make such payments according to the terms of any such agreement of extension or modification unless expressly released and discharged in writing by",
+    "page": "p008",
+    "span": [
+     423,
+     618
+    ],
+    "derivation": "recital: 'and Y' in the same MORTGAGOR clause",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "amount",
+    "value": 6470,
+    "page": "p010",
+    "span": [
+     1430,
+     1437
+    ],
+    "derivation": "figure with $ sign",
+    "provenance": {
+     "grade": "disputed",
+     "order_safe": false,
+     "filled": [
+      "q35-fair"
+     ],
+     "runs": 2
+    },
+    "established": false,
+    "resolved_from": "unresolved"
+   },
+   {
+    "kind": "amount",
+    "value": 10070,
+    "page": "p010",
+    "span": [
+     1469,
+     1477
+    ],
+    "derivation": "figure with $ sign",
+    "provenance": {
+     "grade": "disputed",
+     "order_safe": false,
+     "filled": [
+      "q35-fair"
+     ],
+     "runs": 1
+    },
+    "established": false,
+    "resolved_from": "unresolved"
+   },
+   {
+    "kind": "amount",
+    "value": 6470,
+    "page": "p010",
+    "span": [
+     1552,
+     1558
+    ],
+    "derivation": "figure with $ sign",
+    "provenance": {
+     "grade": "disputed",
+     "order_safe": false,
+     "filled": [
+      "q35-fair"
+     ],
+     "runs": 1
+    },
+    "established": false,
+    "resolved_from": "unresolved"
+   },
+   {
+    "kind": "year",
+    "value": "1981",
+    "page": "p010",
+    "span": [
+     128,
+     132
+    ],
+    "derivation": "4-digit year",
+    "provenance": {
+     "grade": "disputed",
+     "order_safe": false,
+     "filled": [
+      "q35-fair"
+     ],
+     "runs": 1
+    },
+    "established": false,
+    "resolved_from": "unresolved"
+   },
+   {
+    "kind": "year",
+    "value": "1981",
+    "page": "p010",
+    "span": [
+     548,
+     552
+    ],
+    "derivation": "4-digit year",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "year",
+    "value": "1983",
+    "page": "p010",
+    "span": [
+     820,
+     824
+    ],
+    "derivation": "4-digit year",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "year",
+    "value": "1981",
+    "page": "p010",
+    "span": [
+     1484,
+     1488
+    ],
+    "derivation": "4-digit year",
+    "provenance": {
+     "grade": "disputed",
+     "order_safe": false,
+     "filled": [
+      "q35-fair"
+     ],
+     "runs": 1
+    },
+    "established": false,
+    "resolved_from": "unresolved"
+   },
+   {
+    "kind": "year",
+    "value": "1981",
+    "page": "p010",
+    "span": [
+     1559,
+     1563
+    ],
+    "derivation": "4-digit year",
+    "provenance": {
+     "grade": "disputed",
+     "order_safe": false,
+     "filled": [
+      "q35-fair"
+     ],
+     "runs": 1
+    },
+    "established": false,
+    "resolved_from": "unresolved"
+   }
+  ]
+ }
+]

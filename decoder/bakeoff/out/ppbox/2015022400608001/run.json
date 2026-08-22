@@ -1,0 +1,65 @@
+{
+ "tag": "ppbox/2015022400608001",
+ "src": "C:\\Users\\smile\\Downloads\\Source Folder (Real Estate Data)\\Decoder Prompt\\decoder\\bakeoff\\pages\\2015022400608001",
+ "angles": [
+  0
+ ],
+ "side": 1440,
+ "pages": [
+  {
+   "page": "p001.png",
+   "lines": 117,
+   "sec": 92.3,
+   "status": "ok"
+  },
+  {
+   "page": "p002.png",
+   "lines": 29,
+   "sec": 44.3,
+   "status": "ok"
+  },
+  {
+   "page": "p003.png",
+   "lines": 40,
+   "sec": 73.8,
+   "status": "ok"
+  },
+  {
+   "page": "p004.png",
+   "lines": 54,
+   "sec": 100.2,
+   "status": "ok"
+  },
+  {
+   "page": "p005.png",
+   "lines": 61,
+   "sec": 106.7,
+   "status": "ok"
+  },
+  {
+   "page": "p006.png",
+   "lines": 21,
+   "sec": 49.1,
+   "status": "ok"
+  },
+  {
+   "page": "p007.png",
+   "lines": 15,
+   "sec": 42.1,
+   "status": "ok"
+  },
+  {
+   "page": "p008.png",
+   "lines": 14,
+   "sec": 43.0,
+   "status": "ok"
+  },
+  {
+   "page": "p009.png",
+   "lines": 57,
+   "sec": 66.2,
+   "status": "ok"
+  }
+ ],
+ "sec": 617.7
+}

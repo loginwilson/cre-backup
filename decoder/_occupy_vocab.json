@@ -1,0 +1,37 @@
+{
+ "keep": [
+  "lessor_lessee",
+  "landlord_tenant",
+  "memo_lease",
+  "assign_lease",
+  "terminate",
+  "commence_expire",
+  "subordinate"
+ ],
+ "recall": 0.9459459459459459,
+ "leak": 0.08666666666666667,
+ "measured_against": {
+  "lease": {
+   "SUBL": 40,
+   "MLEA": 20,
+   "SAT": 42,
+   "TL&R": 20,
+   "ASST": 49,
+   "ASSTO": 20,
+   "CERT": 49,
+   "EASE": 50,
+   "AGMT": 48,
+   "TERL": 20,
+   "DEED": 50,
+   "AL&R": 20,
+   "LEAS": 48,
+   "PAT": 50,
+   "RPTT&RET": 20,
+   "MTGE": 49,
+   "SAGE": 50,
+   "ZONE": 20,
+   "DEVR": 1
+  },
+  "n": 666
+ }
+}

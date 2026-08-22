@@ -1,0 +1,1367 @@
+{
+ "2018000077907": {
+  "acris": {
+   "document_id": "2018030101158001",
+   "record_type": "A",
+   "crfn": "2018000077907",
+   "recorded_borough": "1",
+   "doc_type": "CDEC",
+   "document_date": "2017-12-05T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2018-03-06T00:00:00.000",
+   "modified_date": "2018-03-06T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2018-03-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720065",
+    "change_date": "2018-03-07",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2017000104177": {
+  "acris": {
+   "document_id": "2017031600149002",
+   "record_type": "A",
+   "crfn": "2017000104177",
+   "recorded_borough": "1",
+   "doc_type": "MAPS",
+   "document_date": "2017-03-06T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2017-03-16T00:00:00.000",
+   "modified_date": "2017-03-16T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2017-03-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3027650014",
+    "change_date": "2017-03-17",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2017000104176": {
+  "acris": {
+   "document_id": "2017031600149001",
+   "record_type": "A",
+   "crfn": "2017000104176",
+   "recorded_borough": "1",
+   "doc_type": "CDEC",
+   "document_date": "2017-01-24T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2017-03-16T00:00:00.000",
+   "modified_date": "2017-03-16T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2017-03-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3027650014",
+    "change_date": "2017-03-17",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2016000304222": {
+  "acris": {
+   "document_id": "2016082301250002",
+   "record_type": "A",
+   "crfn": "2016000304222",
+   "recorded_borough": "1",
+   "doc_type": "MAPS",
+   "document_date": "2016-08-10T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2016-09-01T00:00:00.000",
+   "modified_date": "2016-09-01T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2016-09-30T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720060",
+    "change_date": "2016-09-02",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2016000304221": {
+  "acris": {
+   "document_id": "2016082301250001",
+   "record_type": "A",
+   "crfn": "2016000304221",
+   "recorded_borough": "1",
+   "doc_type": "CDEC",
+   "document_date": "2015-03-09T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2016-09-01T00:00:00.000",
+   "modified_date": "2016-09-01T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2016-09-30T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720060",
+    "change_date": "2016-09-02",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2015000377043": {
+  "acris": {
+   "document_id": "2015101601017001",
+   "record_type": "A",
+   "crfn": "2015000377043",
+   "recorded_borough": "1",
+   "doc_type": "CORRD",
+   "document_date": "2015-03-27T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2015-10-21T00:00:00.000",
+   "modified_date": "2015-10-21T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2015-10-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "1015400003",
+    "change_date": "2017-10-26",
+    "change_type": "Lot Merger"
+   }
+  ]
+ },
+ "2015000385925": {
+  "acris": {
+   "document_id": "2015102300289002",
+   "record_type": "A",
+   "crfn": "2015000385925",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2015-10-19T00:00:00.000",
+   "document_amt": "46485643.48",
+   "recorded_datetime": "2015-10-28T00:00:00.000",
+   "modified_date": "2015-10-28T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2015-10-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720100",
+    "change_date": "2019-02-21",
+    "change_type": "Digital Alteration Book Wizard"
+   },
+   {
+    "bbl": "3024720200",
+    "change_date": "2019-02-21",
+    "change_type": "Digital Alteration Book Wizard"
+   }
+  ]
+ },
+ "2008000409253": {
+  "acris": {
+   "document_id": "2008101500016001",
+   "record_type": "A",
+   "crfn": "2008000409253",
+   "recorded_borough": "1",
+   "doc_type": "CDEC",
+   "document_date": "2008-09-02T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2008-10-17T00:00:00.000",
+   "modified_date": "2008-10-17T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "1014290025",
+    "change_date": "2008-10-23",
+    "change_type": "Condominium"
+   },
+   {
+    "bbl": "1014290025",
+    "change_date": "2009-02-04",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2008000409254": {
+  "acris": {
+   "document_id": "2008101500016002",
+   "record_type": "A",
+   "crfn": "2008000409254",
+   "recorded_borough": "1",
+   "doc_type": "MAPS",
+   "document_date": "2008-10-06T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2008-10-17T00:00:00.000",
+   "modified_date": "2008-10-17T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "1014290025",
+    "change_date": "2008-10-23",
+    "change_type": "Condominium"
+   },
+   {
+    "bbl": "1014290025",
+    "change_date": "2009-02-04",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2010000056104": {
+  "acris": {
+   "document_id": "2010021600283001",
+   "record_type": "A",
+   "crfn": "2010000056104",
+   "recorded_borough": "3",
+   "doc_type": "ADEC",
+   "document_date": "2010-01-13T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2010-02-18T00:00:00.000",
+   "modified_date": "2010-02-18T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "1014290025",
+    "change_date": "2010-02-19",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2010000056105": {
+  "acris": {
+   "document_id": "2010021600283002",
+   "record_type": "A",
+   "crfn": "2010000056105",
+   "recorded_borough": "3",
+   "doc_type": "MAPS",
+   "document_date": "2010-02-08T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2010-02-18T00:00:00.000",
+   "modified_date": "2010-02-18T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "1014290025",
+    "change_date": "2010-02-19",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2012000483179": {
+  "acris": {
+   "document_id": "2012120600575002",
+   "record_type": "A",
+   "crfn": "2012000483179",
+   "recorded_borough": "1",
+   "doc_type": "DEVR",
+   "document_date": "2012-12-05T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2012-12-10T00:00:00.000",
+   "modified_date": "2012-12-10T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "1015400003",
+    "change_date": "2012-12-21",
+    "change_type": "Air and Subterranean"
+   }
+  ]
+ },
+ "2004000289073": {
+  "acris": {
+   "document_id": "2004040701972001",
+   "record_type": "A",
+   "crfn": "2004000289073",
+   "recorded_borough": "3",
+   "doc_type": "DEED",
+   "document_date": "2004-03-29T00:00:00.000",
+   "document_amt": "1000000",
+   "recorded_datetime": "2004-05-07T00:00:00.000",
+   "modified_date": "2004-05-07T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3027220010",
+    "change_date": "2008-07-15",
+    "change_type": "Lot Merger"
+   },
+   {
+    "bbl": "3027220034",
+    "change_date": "2008-07-15",
+    "change_type": "Lot Merger"
+   }
+  ]
+ },
+ "2013000522477": {
+  "acris": {
+   "document_id": "2013121201564004",
+   "record_type": "A",
+   "crfn": "2013000522477",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2013-11-25T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2013-12-20T00:00:00.000",
+   "modified_date": "2013-12-20T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "4120990001",
+    "change_date": "2020-01-02",
+    "change_type": "Digital Alteration Book Wizard"
+   },
+   {
+    "bbl": "4120990015",
+    "change_date": "2020-01-02",
+    "change_type": "Digital Alteration Book Wizard"
+   }
+  ]
+ },
+ "2014000134511": {
+  "acris": {
+   "document_id": "2014040700888001",
+   "record_type": "A",
+   "crfn": "2014000134511",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2013-11-22T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2014-04-21T00:00:00.000",
+   "modified_date": "2014-04-21T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "4120990030",
+    "change_date": "2023-10-26",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "4120990032",
+    "change_date": "2023-10-26",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "4120990034",
+    "change_date": "2023-10-26",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "4120990036",
+    "change_date": "2023-10-26",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "4120990038",
+    "change_date": "2023-10-26",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2014000411724": {
+  "acris": {
+   "document_id": "2014120100088001",
+   "record_type": "A",
+   "crfn": "2014000411724",
+   "recorded_borough": "1",
+   "doc_type": "LTPA",
+   "document_date": "2014-10-27T00:00:00.000",
+   "document_amt": "1",
+   "recorded_datetime": "2014-12-15T00:00:00.000",
+   "modified_date": "2014-12-15T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720075",
+    "change_date": "2016-06-13",
+    "change_type": "Lot Merger"
+   }
+  ]
+ },
+ "2014000430833": {
+  "acris": {
+   "document_id": "2014122300657001",
+   "record_type": "A",
+   "crfn": "2014000430833",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2014-12-15T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2014-12-31T00:00:00.000",
+   "modified_date": "2014-12-31T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "1015400003",
+    "change_date": "2017-10-26",
+    "change_type": "Lot Merger"
+   }
+  ]
+ },
+ "2015000210422": {
+  "acris": {
+   "document_id": "2015061200471001",
+   "record_type": "A",
+   "crfn": "2015000210422",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2015-05-28T00:00:00.000",
+   "document_amt": "1",
+   "recorded_datetime": "2015-06-19T00:00:00.000",
+   "modified_date": "2015-06-19T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720070",
+    "change_date": "2018-02-14",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024720200",
+    "change_date": "2018-02-14",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2013000343074": {
+  "acris": {
+   "document_id": "2013080901116003",
+   "record_type": "A",
+   "crfn": "2013000343074",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2013-08-07T00:00:00.000",
+   "document_amt": "67500000",
+   "recorded_datetime": "2013-08-27T00:00:00.000",
+   "modified_date": "2013-08-27T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "1008000049",
+    "change_date": "2015-04-29",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2004000289616": {
+  "acris": {
+   "document_id": "2004040701891001",
+   "record_type": "A",
+   "crfn": "2004000289616",
+   "recorded_borough": "3",
+   "doc_type": "DEED",
+   "document_date": "2004-03-29T00:00:00.000",
+   "document_amt": "1750000",
+   "recorded_datetime": "2004-05-10T00:00:00.000",
+   "modified_date": "2004-05-10T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3027220010",
+    "change_date": "2008-07-15",
+    "change_type": "Lot Merger"
+   },
+   {
+    "bbl": "3027220034",
+    "change_date": "2008-07-15",
+    "change_type": "Lot Merger"
+   }
+  ]
+ },
+ "2005000628273": {
+  "acris": {
+   "document_id": "2005110801661003",
+   "record_type": "A",
+   "crfn": "2005000628273",
+   "recorded_borough": "3",
+   "doc_type": "DEED",
+   "document_date": "2005-10-31T00:00:00.000",
+   "document_amt": "44000000",
+   "recorded_datetime": "2005-11-10T00:00:00.000",
+   "modified_date": "2005-11-10T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720002",
+    "change_date": "2018-12-20",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024720003",
+    "change_date": "2018-12-20",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024720021",
+    "change_date": "2018-12-20",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024720045",
+    "change_date": "2014-10-31",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024720050",
+    "change_date": "2014-10-31",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024720060",
+    "change_date": "2014-06-26",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024720065",
+    "change_date": "2014-08-15",
+    "change_type": "Admin"
+   },
+   {
+    "bbl": "3024720065",
+    "change_date": "2014-10-31",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024720070",
+    "change_date": "2014-10-31",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024720080",
+    "change_date": "2014-10-31",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024720090",
+    "change_date": "2014-10-31",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024720100",
+    "change_date": "2014-06-26",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024720100",
+    "change_date": "2014-08-15",
+    "change_type": "Admin"
+   },
+   {
+    "bbl": "3024720100",
+    "change_date": "2014-10-31",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024720475",
+    "change_date": "2014-10-31",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024940005",
+    "change_date": "2014-06-26",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024940010",
+    "change_date": "2014-06-26",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3024940020",
+    "change_date": "2014-06-26",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3025020001",
+    "change_date": "2018-12-20",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3025020002",
+    "change_date": "2018-12-20",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2006000663500": {
+  "acris": {
+   "document_id": "2006112801540010",
+   "record_type": "A",
+   "crfn": "2006000663500",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2006-11-17T00:00:00.000",
+   "document_amt": "17519074",
+   "recorded_datetime": "2006-12-01T00:00:00.000",
+   "modified_date": "2006-12-01T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "1014290025",
+    "change_date": "2008-09-19",
+    "change_type": "Lot Merger"
+   },
+   {
+    "bbl": "1014290025",
+    "change_date": "2008-10-22",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2006000663503": {
+  "acris": {
+   "document_id": "2006112801540013",
+   "record_type": "A",
+   "crfn": "2006000663503",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2006-11-22T00:00:00.000",
+   "document_amt": "65668926",
+   "recorded_datetime": "2006-12-01T00:00:00.000",
+   "modified_date": "2006-12-01T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "1014290025",
+    "change_date": "2008-09-19",
+    "change_type": "Lot Merger"
+   },
+   {
+    "bbl": "1014290025",
+    "change_date": "2008-10-22",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2007000208390": {
+  "acris": {
+   "document_id": "2007041200174002",
+   "record_type": "A",
+   "crfn": "2007000208390",
+   "recorded_borough": "1",
+   "doc_type": "DEEDO",
+   "document_date": "2007-03-27T00:00:00.000",
+   "document_amt": "40296000",
+   "recorded_datetime": "2007-04-23T00:00:00.000",
+   "modified_date": "2007-04-23T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "4120990001",
+    "change_date": "2013-11-21",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "4120990030",
+    "change_date": "2013-11-21",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2008000313687": {
+  "acris": {
+   "document_id": "2008080100393001",
+   "record_type": "A",
+   "crfn": "2008000313687",
+   "recorded_borough": "4",
+   "doc_type": "DEED",
+   "document_date": "2008-07-30T00:00:00.000",
+   "document_amt": "2200000",
+   "recorded_datetime": "2008-08-06T00:00:00.000",
+   "modified_date": "2008-08-06T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2015-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "4097930078",
+    "change_date": "2017-03-23",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "4097930079",
+    "change_date": "2017-03-23",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2025000038393": {
+  "acris": {
+   "document_id": "2025013000956003",
+   "record_type": "A",
+   "crfn": "2025000038393",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2025-01-31T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2025-02-11T00:00:00.000",
+   "modified_date": "2025-02-11T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2025-02-28T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3025020001",
+    "change_date": "2025-04-08",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3025100001",
+    "change_date": "2025-04-08",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2024000254255": {
+  "acris": {
+   "document_id": "2024092000452003",
+   "record_type": "A",
+   "crfn": "2024000254255",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2024-09-10T00:00:00.000",
+   "document_amt": "25000000",
+   "recorded_datetime": "2024-09-30T00:00:00.000",
+   "modified_date": "2024-09-30T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2024-09-30T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "1014460001",
+    "change_date": "2026-05-15",
+    "change_type": "Lot Merger"
+   },
+   {
+    "bbl": "1014460002",
+    "change_date": "2026-05-15",
+    "change_type": "Lot Merger"
+   },
+   {
+    "bbl": "1014460003",
+    "change_date": "2026-05-15",
+    "change_type": "Lot Merger"
+   }
+  ]
+ },
+ "2024000086716": {
+  "acris": {
+   "document_id": "2024040500547001",
+   "record_type": "A",
+   "crfn": "2024000086716",
+   "recorded_borough": "1",
+   "doc_type": "CDEC",
+   "document_date": "2024-03-20T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2024-04-05T00:00:00.000",
+   "modified_date": "2024-04-05T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2024-04-30T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "1019080060",
+    "change_date": "2024-04-08",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2024000086717": {
+  "acris": {
+   "document_id": "2024040500547002",
+   "record_type": "A",
+   "crfn": "2024000086717",
+   "recorded_borough": "1",
+   "doc_type": "MAPS",
+   "document_date": "2024-03-27T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2024-04-05T00:00:00.000",
+   "modified_date": "2024-04-05T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2024-04-30T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "1019080060",
+    "change_date": "2024-04-08",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2022000269442": {
+  "acris": {
+   "document_id": "2022062800110002",
+   "record_type": "A",
+   "crfn": "2022000269442",
+   "recorded_borough": "1",
+   "doc_type": "MAPS",
+   "document_date": "2022-06-27T00:00:00.000",
+   "document_amt": "0.00",
+   "recorded_datetime": "2022-07-07T00:00:00.000",
+   "modified_date": "2022-07-07T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0.000000",
+   "good_through_date": "2022-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720070",
+    "change_date": "2022-07-11",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2022000269441": {
+  "acris": {
+   "document_id": "2022062800110001",
+   "record_type": "A",
+   "crfn": "2022000269441",
+   "recorded_borough": "1",
+   "doc_type": "CDEC",
+   "document_date": "2022-04-26T00:00:00.000",
+   "document_amt": "0.00",
+   "recorded_datetime": "2022-07-07T00:00:00.000",
+   "modified_date": "2022-07-07T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0.000000",
+   "good_through_date": "2022-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720070",
+    "change_date": "2022-07-11",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2022000250764": {
+  "acris": {
+   "document_id": "2022060800129002",
+   "record_type": "A",
+   "crfn": "2022000250764",
+   "recorded_borough": "1",
+   "doc_type": "MAPS",
+   "document_date": "2022-06-07T00:00:00.000",
+   "document_amt": "0.00",
+   "recorded_datetime": "2022-06-24T00:00:00.000",
+   "modified_date": "2022-06-24T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0.000000",
+   "good_through_date": "2022-06-30T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720100",
+    "change_date": "2022-06-27",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2022000250763": {
+  "acris": {
+   "document_id": "2022060800129001",
+   "record_type": "A",
+   "crfn": "2022000250763",
+   "recorded_borough": "1",
+   "doc_type": "CDEC",
+   "document_date": "2022-01-10T00:00:00.000",
+   "document_amt": "0.00",
+   "recorded_datetime": "2022-06-24T00:00:00.000",
+   "modified_date": "2022-06-24T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0.000000",
+   "good_through_date": "2022-06-30T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720100",
+    "change_date": "2022-06-27",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2022000252153": {
+  "acris": {
+   "document_id": "2022061401202001",
+   "record_type": "A",
+   "crfn": "2022000252153",
+   "recorded_borough": "1",
+   "doc_type": "CORRD",
+   "document_date": "2022-06-08T00:00:00.000",
+   "document_amt": "0.00",
+   "recorded_datetime": "2022-06-27T00:00:00.000",
+   "modified_date": "2022-06-27T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100.000000",
+   "good_through_date": "2022-06-30T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3025020001",
+    "change_date": "2023-02-23",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2022000060402": {
+  "acris": {
+   "document_id": "2022012501219001",
+   "record_type": "A",
+   "crfn": "2022000060402",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2022-01-12T00:00:00.000",
+   "document_amt": "0.00",
+   "recorded_datetime": "2022-02-09T00:00:00.000",
+   "modified_date": "2022-02-09T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100.000000",
+   "good_through_date": "2022-02-28T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720021",
+    "change_date": "2022-03-04",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2021000287224": {
+  "acris": {
+   "document_id": "2021072100581002",
+   "record_type": "A",
+   "crfn": "2021000287224",
+   "recorded_borough": "1",
+   "doc_type": "MAPS",
+   "document_date": "2021-06-22T00:00:00.000",
+   "document_amt": "0.00",
+   "recorded_datetime": "2021-07-26T00:00:00.000",
+   "modified_date": "2021-07-26T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0.000000",
+   "good_through_date": "2021-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "4097930079",
+    "change_date": "2021-07-27",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2021000274884": {
+  "acris": {
+   "document_id": "2021070601644004",
+   "record_type": "A",
+   "crfn": "2021000274884",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2021-06-24T00:00:00.000",
+   "document_amt": "22931881.00",
+   "recorded_datetime": "2021-07-19T00:00:00.000",
+   "modified_date": "2021-07-19T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100.000000",
+   "good_through_date": "2021-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024940006",
+    "change_date": "2022-02-14",
+    "change_type": "Lot Merger"
+   },
+   {
+    "bbl": "3024940010",
+    "change_date": "2022-02-14",
+    "change_type": "Lot Merger"
+   }
+  ]
+ },
+ "2021000274895": {
+  "acris": {
+   "document_id": "2021070601644015",
+   "record_type": "A",
+   "crfn": "2021000274895",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2021-06-24T00:00:00.000",
+   "document_amt": "0.00",
+   "recorded_datetime": "2021-07-19T00:00:00.000",
+   "modified_date": "2021-07-19T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100.000000",
+   "good_through_date": "2021-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024940006",
+    "change_date": "2022-02-14",
+    "change_type": "Lot Merger"
+   },
+   {
+    "bbl": "3024940010",
+    "change_date": "2022-02-14",
+    "change_type": "Lot Merger"
+   }
+  ]
+ },
+ "2021000287223": {
+  "acris": {
+   "document_id": "2021072100581001",
+   "record_type": "A",
+   "crfn": "2021000287223",
+   "recorded_borough": "1",
+   "doc_type": "CDEC",
+   "document_date": "2020-12-23T00:00:00.000",
+   "document_amt": "0.00",
+   "recorded_datetime": "2021-07-26T00:00:00.000",
+   "modified_date": "2021-07-26T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0.000000",
+   "good_through_date": "2021-07-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "4097930079",
+    "change_date": "2021-07-27",
+    "change_type": "Condominium"
+   }
+  ]
+ },
+ "2021000212703": {
+  "acris": {
+   "document_id": "2021052801110002",
+   "record_type": "A",
+   "crfn": "2021000212703",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2021-05-26T00:00:00.000",
+   "document_amt": "0.00",
+   "recorded_datetime": "2021-06-08T00:00:00.000",
+   "modified_date": "2021-06-08T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100.000000",
+   "good_through_date": "2021-06-30T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3025020001",
+    "change_date": "2025-04-08",
+    "change_type": "Lot Apportionment"
+   },
+   {
+    "bbl": "3025100001",
+    "change_date": "2025-04-08",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2021000212704": {
+  "acris": {
+   "document_id": "2021052801110003",
+   "record_type": "A",
+   "crfn": "2021000212704",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2021-05-26T00:00:00.000",
+   "document_amt": "0.00",
+   "recorded_datetime": "2021-06-08T00:00:00.000",
+   "modified_date": "2021-06-08T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100.000000",
+   "good_through_date": "2021-06-30T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3025020001",
+    "change_date": "2021-09-13",
+    "change_type": "Digital Alteration Book Wizard"
+   }
+  ]
+ },
+ "2020000081646": {
+  "acris": {
+   "document_id": "2020030300488001",
+   "record_type": "A",
+   "crfn": "2020000081646",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2020-02-24T00:00:00.000",
+   "document_amt": "0.00",
+   "recorded_datetime": "2020-03-03T00:00:00.000",
+   "modified_date": "2020-03-03T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100.000000",
+   "good_through_date": "2020-03-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3025020001",
+    "change_date": "2020-04-06",
+    "change_type": "Digital Alteration Book Wizard"
+   },
+   {
+    "bbl": "3025100001",
+    "change_date": "2020-04-06",
+    "change_type": "Digital Alteration Book Wizard"
+   }
+  ]
+ },
+ "2019000307574": {
+  "acris": {
+   "document_id": "2019091300623010",
+   "record_type": "A",
+   "crfn": "2019000307574",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2019-09-12T00:00:00.000",
+   "document_amt": "0.00",
+   "recorded_datetime": "2019-09-24T00:00:00.000",
+   "modified_date": "2019-09-24T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100.000000",
+   "good_through_date": "2019-09-30T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720200",
+    "change_date": "2022-08-25",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2018000185731": {
+  "acris": {
+   "document_id": "2018053100208009",
+   "record_type": "A",
+   "crfn": "2018000185731",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2018-05-23T00:00:00.000",
+   "document_amt": "106507911.51",
+   "recorded_datetime": "2018-06-05T00:00:00.000",
+   "modified_date": "2018-06-05T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2018-06-30T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720030",
+    "change_date": "2021-09-13",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2018000185724": {
+  "acris": {
+   "document_id": "2018053100208002",
+   "record_type": "A",
+   "crfn": "2018000185724",
+   "recorded_borough": "1",
+   "doc_type": "DEED",
+   "document_date": "2018-05-23T00:00:00.000",
+   "document_amt": "41889165.07",
+   "recorded_datetime": "2018-06-05T00:00:00.000",
+   "modified_date": "2018-06-05T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "100",
+   "good_through_date": "2018-06-30T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720100",
+    "change_date": "2019-02-21",
+    "change_type": "Digital Alteration Book Wizard"
+   },
+   {
+    "bbl": "3024720200",
+    "change_date": "2019-02-21",
+    "change_type": "Digital Alteration Book Wizard"
+   },
+   {
+    "bbl": "3024720200",
+    "change_date": "2022-08-25",
+    "change_type": "Lot Apportionment"
+   }
+  ]
+ },
+ "2018000077908": {
+  "acris": {
+   "document_id": "2018030101158002",
+   "record_type": "A",
+   "crfn": "2018000077908",
+   "recorded_borough": "1",
+   "doc_type": "MAPS",
+   "document_date": "2018-02-09T00:00:00.000",
+   "document_amt": "0",
+   "recorded_datetime": "2018-03-06T00:00:00.000",
+   "modified_date": "2018-03-06T00:00:00.000",
+   "reel_yr": "0",
+   "reel_nbr": "0",
+   "reel_pg": "0",
+   "percent_trans": "0",
+   "good_through_date": "2018-03-31T00:00:00.000"
+  },
+  "map_changes": [
+   {
+    "bbl": "3024720065",
+    "change_date": "2018-03-07",
+    "change_type": "Condominium"
+   }
+  ]
+ }
+}

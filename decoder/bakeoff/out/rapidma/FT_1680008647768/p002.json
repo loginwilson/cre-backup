@@ -1,0 +1,376 @@
+{
+ "page": "FT_1680008647768/p002",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "REE586:A762",
+   "box": [
+    [
+     1075,
+     237
+    ],
+    [
+     1403,
+     242
+    ],
+    [
+     1401,
+     311
+    ],
+    [
+     1073,
+     306
+    ]
+   ],
+   "angle": 0,
+   "score": 0.7138
+  },
+  {
+   "text": "SCH:EDULEA(Deseription)",
+   "box": [
+    [
+     581,
+     531
+    ],
+    [
+     967,
+     551
+    ],
+    [
+     965,
+     596
+    ],
+    [
+     579,
+     575
+    ]
+   ],
+   "angle": 0,
+   "score": 0.8974
+  },
+  {
+   "text": "ALL that certain plot,piece or parcelof land,with the buildings and improvements thereon erected,situate,",
+   "box": [
+    [
+     156,
+     615
+    ],
+    [
+     1362,
+     666
+    ],
+    [
+     1360,
+     706
+    ],
+    [
+     155,
+     654
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9251
+  },
+  {
+   "text": "lying and being in the Borough of Manhattan,City.County and State of",
+   "box": [
+    [
+     151,
+     670
+    ],
+    [
+     1379,
+     718
+    ],
+    [
+     1377,
+     763
+    ],
+    [
+     149,
+     714
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9669
+  },
+  {
+   "text": "New York,bounded and described as follows:-",
+   "box": [
+    [
+     151,
+     742
+    ],
+    [
+     981,
+     775
+    ],
+    [
+     979,
+     814
+    ],
+    [
+     149,
+     781
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9287
+  },
+  {
+   "text": "BEGINNING at the corner formed by the intersection of the",
+   "box": [
+    [
+     316,
+     819
+    ],
+    [
+     1388,
+     864
+    ],
+    [
+     1386,
+     905
+    ],
+    [
+     314,
+     860
+    ]
+   ],
+   "angle": 0,
+   "score": 0.974
+  },
+  {
+   "text": "Northerly side of 27th Street with the Easterly side of Fourth Avenue;",
+   "box": [
+    [
+     148,
+     883
+    ],
+    [
+     1456,
+     936
+    ],
+    [
+     1455,
+     977
+    ],
+    [
+     146,
+     924
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9516
+  },
+  {
+   "text": "RUNNING THENCE Northerly along the Easterly side of Fourth",
+   "box": [
+    [
+     307,
+     960
+    ],
+    [
+     1403,
+     1003
+    ],
+    [
+     1401,
+     1048
+    ],
+    [
+     306,
+     1005
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9576
+  },
+  {
+   "text": "Avenue,98 feet 9inches to the center line of the block between 27th",
+   "box": [
+    [
+     136,
+     1020
+    ],
+    [
+     1439,
+     1072
+    ],
+    [
+     1438,
+     1116
+    ],
+    [
+     134,
+     1065
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9386
+  },
+  {
+   "text": "and28thStreets;",
+   "box": [
+    [
+     137,
+     1091
+    ],
+    [
+     459,
+     1108
+    ],
+    [
+     457,
+     1144
+    ],
+    [
+     136,
+     1127
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9886
+  },
+  {
+   "text": "THENcE Easterly along said center line,166 feet 8 inches;",
+   "box": [
+    [
+     297,
+     1168
+    ],
+    [
+     1391,
+     1211
+    ],
+    [
+     1389,
+     1255
+    ],
+    [
+     295,
+     1213
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9463
+  },
+  {
+   "text": "THENcE Southerly parallel with Fourth Avenue,98 feet 9",
+   "box": [
+    [
+     294,
+     1238
+    ],
+    [
+     1338,
+     1280
+    ],
+    [
+     1336,
+     1324
+    ],
+    [
+     292,
+     1283
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9568
+  },
+  {
+   "text": "inches to the Northerly side of 27th Street;",
+   "box": [
+    [
+     129,
+     1300
+    ],
+    [
+     953,
+     1340
+    ],
+    [
+     951,
+     1381
+    ],
+    [
+     127,
+     1341
+    ]
+   ],
+   "angle": 0,
+   "score": 0.962
+  },
+  {
+   "text": "THENcE Westerly along the Northerly side of 27th Street, 166",
+   "box": [
+    [
+     289,
+     1381
+    ],
+    [
+     1422,
+     1424
+    ],
+    [
+     1420,
+     1468
+    ],
+    [
+     287,
+     1426
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9542
+  },
+  {
+   "text": "feet 8 inches to the point or place of BEGINNING.",
+   "box": [
+    [
+     122,
+     1441
+    ],
+    [
+     1044,
+     1482
+    ],
+    [
+     1043,
+     1523
+    ],
+    [
+     120,
+     1482
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9763
+  },
+  {
+   "text": "FOURTH AVENUE above is now knOwn as PARK AVENUE SOUTH.",
+   "box": [
+    [
+     285,
+     1518
+    ],
+    [
+     1302,
+     1561
+    ],
+    [
+     1300,
+     1599
+    ],
+    [
+     283,
+     1556
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9045
+  }
+ ]
+}

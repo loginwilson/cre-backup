@@ -1,0 +1,1271 @@
+{
+ "documents": 1846,
+ "chars": 9628633,
+ "by_type": {
+  "SUBL": 40,
+  "MLEA": 20,
+  "SAT": 42,
+  "TL&R": 20,
+  "ASST": 49,
+  "ASSTO": 20,
+  "CERT": 49,
+  "EASE": 50,
+  "AGMT": 48,
+  "TERL": 20,
+  "DEED": 50,
+  "AL&R": 20,
+  "LEAS": 48,
+  "PAT": 50,
+  "RPTT&RET": 20,
+  "MTGE": 49,
+  "SAGE": 50,
+  "ZONE": 20,
+  "DEVR": 1181
+ },
+ "fired": {
+  "function/capital": 635,
+  "function/identity": 5239,
+  "function/occupancy": 3297,
+  "mode/transacts": 550,
+  "mode/signals": 954,
+  "region/execution": 7492,
+  "region/exhibit": 1405,
+  "reference/parcel_id": 11205,
+  "reference/prior_doc": 482,
+  "region/cover_page": 5324,
+  "mode/observes": 3048,
+  "reference/metes": 1194,
+  "function/envelope": 7550,
+  "function/encumbrance": 1712,
+  "function/title": 61
+ },
+ "touched": 1844,
+ "pooled": [
+  [
+   "block lot unit",
+   1502
+  ],
+  [
+   "borough block lot",
+   1501
+  ],
+  [
+   "lot unit address",
+   1501
+  ],
+  [
+   "page part instrument",
+   1500
+  ],
+  [
+   "part instrument city",
+   1499
+  ],
+  [
+   "document page count",
+   1496
+  ],
+  [
+   "page count presenter",
+   1491
+  ],
+  [
+   "officeofthecityregister page part",
+   1490
+  ],
+  [
+   "nycdepartmentoffinance officeofthecityregister page",
+   1490
+  ],
+  [
+   "nyc real property",
+   1464
+  ],
+  [
+   "indexing purposes event",
+   1453
+  ],
+  [
+   "you page purposes",
+   1450
+  ],
+  [
+   "page purposes indexing",
+   1450
+  ],
+  [
+   "purposes indexing instrument",
+   1450
+  ],
+  [
+   "property transfer tax",
+   1440
+  ],
+  [
+   "indexing instrument information",
+   1440
+  ],
+  [
+   "real property transfer",
+   1425
+  ],
+  [
+   "control indexing purposes",
+   1422
+  ],
+  [
+   "instrument information page",
+   1422
+  ],
+  [
+   "taxes county basic",
+   1415
+  ],
+  [
+   "nycta recorded filed",
+   1415
+  ],
+  [
+   "tasf ofthecityregisterofthe mta",
+   1415
+  ],
+  [
+   "page control indexing",
+   1401
+  ],
+  [
+   "information page control",
+   1401
+  ],
+  [
+   "additional recordedorfiledintheoffice tasf",
+   1401
+  ],
+  [
+   "recordedorfiledintheoffice tasf ofthecityregisterofthe",
+   1401
+  ],
+  [
+   "spec additional recordedorfiledintheoffice",
+   1401
+  ],
+  [
+   "exemption taxes county",
+   1395
+  ],
+  [
+   "additional spec additional",
+   1378
+  ],
+  [
+   "city additional spec",
+   1378
+  ],
+  [
+   "recorded filed additional",
+   1349
+  ],
+  [
+   "additional mrt city",
+   1349
+  ],
+  [
+   "filed additional mrt",
+   1349
+  ],
+  [
+   "taxablemortgageamount nyc real",
+   1346
+  ],
+  [
+   "year reel page",
+   1280
+  ],
+  [
+   "propertydata borough block",
+   1255
+  ],
+  [
+   "recordingandendorsementcoverpage page document",
+   1234
+  ],
+  [
+   "total recording fee",
+   1229
+  ],
+  [
+   "mortgage filing fee",
+   1229
+  ],
+  [
+   "page file number",
+   1216
+  ],
+  [
+   "file number parties",
+   1216
+  ],
+  [
+   "reel page file",
+   1216
+  ],
+  [
+   "recording fee affidavit",
+   1214
+  ],
+  [
+   "fee affidavit fee",
+   1213
+  ],
+  [
+   "count presenter return",
+   1194
+  ],
+  [
+   "parties party one",
+   1190
+  ],
+  [
+   "date preparation date",
+   1188
+  ],
+  [
+   "document date preparation",
+   1188
+  ],
+  [
+   "transfer tax exemption",
+   1179
+  ],
+  [
+   "tax exemption taxes",
+   1166
+  ],
+  [
+   "feesandtaxes mortgage filing",
+   1093
+  ],
+  [
+   "number parties party",
+   1073
+  ],
+  [
+   "fee mortgage amount",
+   935
+  ],
+  [
+   "city register file",
+   935
+  ],
+  [
+   "register file total",
+   933
+  ],
+  [
+   "provided you page",
+   900
+  ],
+  [
+   "purposes event conflict",
+   888
+  ],
+  [
+   "mrt city register",
+   878
+  ],
+  [
+   "event conflict rest",
+   863
+  ],
+  [
+   "file total recording",
+   862
+  ]
+ ],
+ "per_type": {
+  "SUBL": [
+   [
+    "part instrument city",
+    20
+   ],
+   [
+    "borough block lot",
+    20
+   ],
+   [
+    "officeofthecityregister page part",
+    20
+   ],
+   [
+    "page count presenter",
+    20
+   ],
+   [
+    "nycdepartmentoffinance officeofthecityregister page",
+    20
+   ],
+   [
+    "lot unit address",
+    20
+   ],
+   [
+    "count presenter return",
+    20
+   ],
+   [
+    "block lot unit",
+    20
+   ],
+   [
+    "document page count",
+    20
+   ],
+   [
+    "page part instrument",
+    20
+   ],
+   [
+    "parties party party",
+    19
+   ],
+   [
+    "recordingandendorsementcoverpage page document",
+    18
+   ],
+   [
+    "property transfer tax",
+    18
+   ],
+   [
+    "purposes event conflict",
+    17
+   ],
+   [
+    "real property transfer",
+    17
+   ],
+   [
+    "nyc real property",
+    17
+   ],
+   [
+    "date document page",
+    17
+   ],
+   [
+    "preparation date document",
+    17
+   ],
+   [
+    "york new york",
+    16
+   ],
+   [
+    "page control indexing",
+    16
+   ]
+  ],
+  "SAT": [
+   [
+    "block lot unit",
+    20
+   ],
+   [
+    "borough block lot",
+    20
+   ],
+   [
+    "document page count",
+    20
+   ],
+   [
+    "page count presenter",
+    20
+   ],
+   [
+    "parties mortgager borrower",
+    20
+   ],
+   [
+    "mortgager borrower mortgagee",
+    20
+   ],
+   [
+    "count presenter return",
+    20
+   ],
+   [
+    "lot unit address",
+    20
+   ],
+   [
+    "borrower mortgagee lender",
+    20
+   ],
+   [
+    "property transfer tax",
+    20
+   ],
+   [
+    "part instrument city",
+    19
+   ],
+   [
+    "officeofthecityregister page part",
+    19
+   ],
+   [
+    "indexing instrument information",
+    19
+   ],
+   [
+    "nycdepartmentoffinance officeofthecityregister page",
+    19
+   ],
+   [
+    "page part instrument",
+    19
+   ],
+   [
+    "real property transfer",
+    19
+   ],
+   [
+    "nyc real property",
+    19
+   ],
+   [
+    "event conflict rest",
+    18
+   ],
+   [
+    "additional recordedorfiledintheoffice tasf",
+    18
+   ],
+   [
+    "you page purposes",
+    18
+   ]
+  ],
+  "ASST": [
+   [
+    "property transfer tax",
+    20
+   ],
+   [
+    "real property transfer",
+    19
+   ],
+   [
+    "hold unto assignee",
+    18
+   ],
+   [
+    "unto assignee successors",
+    18
+   ],
+   [
+    "page part instrument",
+    18
+   ],
+   [
+    "block lot unit",
+    17
+   ],
+   [
+    "you page purposes",
+    17
+   ],
+   [
+    "control indexing purposes",
+    17
+   ],
+   [
+    "indexing purposes event",
+    17
+   ],
+   [
+    "part instrument city",
+    17
+   ],
+   [
+    "parties assignor oldlender",
+    17
+   ],
+   [
+    "information page control",
+    17
+   ],
+   [
+    "borough block lot",
+    17
+   ],
+   [
+    "officeofthecityregister page part",
+    17
+   ],
+   [
+    "instrument information page",
+    17
+   ],
+   [
+    "mortgage document page",
+    17
+   ],
+   [
+    "indexing instrument information",
+    17
+   ],
+   [
+    "page purposes indexing",
+    17
+   ],
+   [
+    "page control indexing",
+    17
+   ],
+   [
+    "purposes indexing instrument",
+    17
+   ]
+  ],
+  "CERT": [
+   [
+    "city new york",
+    33
+   ],
+   [
+    "december amended following",
+    21
+   ],
+   [
+    "effective december amended",
+    20
+   ],
+   [
+    "resolution city new",
+    19
+   ],
+   [
+    "zoning resolution city",
+    19
+   ],
+   [
+    "york effective december",
+    18
+   ],
+   [
+    "new york effective",
+    18
+   ],
+   [
+    "amended following name",
+    18
+   ],
+   [
+    "part instrument city",
+    17
+   ],
+   [
+    "officeofthecityregister page part",
+    17
+   ],
+   [
+    "having principal office",
+    17
+   ],
+   [
+    "page count presenter",
+    17
+   ],
+   [
+    "nycdepartmentoffinance officeofthecityregister page",
+    17
+   ],
+   [
+    "following name address",
+    17
+   ],
+   [
+    "count presenter return",
+    17
+   ],
+   [
+    "year reel page",
+    17
+   ],
+   [
+    "certificate document page",
+    17
+   ],
+   [
+    "document page count",
+    17
+   ],
+   [
+    "page part instrument",
+    17
+   ],
+   [
+    "property transfer tax",
+    17
+   ]
+  ],
+  "EASE": [
+   [
+    "property transfer tax",
+    19
+   ],
+   [
+    "city new york",
+    19
+   ],
+   [
+    "block lot unit",
+    18
+   ],
+   [
+    "page file number",
+    18
+   ],
+   [
+    "you page purposes",
+    18
+   ],
+   [
+    "control indexing purposes",
+    18
+   ],
+   [
+    "indexing purposes event",
+    18
+   ],
+   [
+    "part instrument city",
+    18
+   ],
+   [
+    "information page control",
+    18
+   ],
+   [
+    "seller grantee buyer",
+    18
+   ],
+   [
+    "number parties grantor",
+    18
+   ],
+   [
+    "borough block lot",
+    18
+   ],
+   [
+    "officeofthecityregister page part",
+    18
+   ],
+   [
+    "instrument information page",
+    18
+   ],
+   [
+    "reel page file",
+    18
+   ],
+   [
+    "indexing instrument information",
+    18
+   ],
+   [
+    "year reel page",
+    18
+   ],
+   [
+    "grantor seller grantee",
+    18
+   ],
+   [
+    "page purposes indexing",
+    18
+   ],
+   [
+    "page control indexing",
+    18
+   ]
+  ],
+  "AGMT": [
+   [
+    "property transfer tax",
+    18
+   ],
+   [
+    "block lot unit",
+    18
+   ],
+   [
+    "part instrument city",
+    17
+   ],
+   [
+    "real property transfer",
+    17
+   ],
+   [
+    "borough block lot",
+    17
+   ],
+   [
+    "officeofthecityregister page part",
+    17
+   ],
+   [
+    "instrument information page",
+    17
+   ],
+   [
+    "indexing instrument information",
+    17
+   ],
+   [
+    "page count presenter",
+    17
+   ],
+   [
+    "nycdepartmentoffinance officeofthecityregister page",
+    17
+   ],
+   [
+    "lot unit address",
+    17
+   ],
+   [
+    "you page purposes",
+    17
+   ],
+   [
+    "purposes indexing instrument",
+    17
+   ],
+   [
+    "count presenter return",
+    17
+   ],
+   [
+    "preparation date agreement",
+    17
+   ],
+   [
+    "parties party party",
+    17
+   ],
+   [
+    "agreement document page",
+    17
+   ],
+   [
+    "indexing purposes event",
+    17
+   ],
+   [
+    "page purposes indexing",
+    17
+   ],
+   [
+    "nyc real property",
+    17
+   ]
+  ],
+  "DEED": [
+   [
+    "party second part",
+    34
+   ],
+   [
+    "second part forever",
+    32
+   ],
+   [
+    "party first part",
+    29
+   ],
+   [
+    "property transfer tax",
+    20
+   ],
+   [
+    "part instrument city",
+    19
+   ],
+   [
+    "real property transfer",
+    19
+   ],
+   [
+    "borough block lot",
+    19
+   ],
+   [
+    "officeofthecityregister page part",
+    19
+   ],
+   [
+    "page count presenter",
+    19
+   ],
+   [
+    "nycdepartmentoffinance officeofthecityregister page",
+    19
+   ],
+   [
+    "lot unit address",
+    19
+   ],
+   [
+    "date deed document",
+    19
+   ],
+   [
+    "you page purposes",
+    19
+   ],
+   [
+    "purposes indexing instrument",
+    19
+   ],
+   [
+    "block lot unit",
+    19
+   ],
+   [
+    "deed document page",
+    19
+   ],
+   [
+    "number parties grantor",
+    19
+   ],
+   [
+    "preparation date deed",
+    19
+   ],
+   [
+    "year reel page",
+    19
+   ],
+   [
+    "parties grantor seller",
+    19
+   ]
+  ],
+  "LEAS": [
+   [
+    "york new york",
+    19
+   ],
+   [
+    "new york new",
+    19
+   ],
+   [
+    "city new york",
+    16
+   ],
+   [
+    "executed foregoing instrument",
+    15
+   ],
+   [
+    "new york city",
+    13
+   ],
+   [
+    "situate lying borough",
+    13
+   ],
+   [
+    "part instrument city",
+    12
+   ],
+   [
+    "real property transfer",
+    12
+   ],
+   [
+    "borough block lot",
+    12
+   ],
+   [
+    "additional spec additional",
+    12
+   ],
+   [
+    "officeofthecityregister page part",
+    12
+   ],
+   [
+    "instrument information page",
+    12
+   ],
+   [
+    "indexing instrument information",
+    12
+   ],
+   [
+    "property transfer tax",
+    12
+   ],
+   [
+    "page count presenter",
+    12
+   ],
+   [
+    "nycdepartmentoffinance officeofthecityregister page",
+    12
+   ],
+   [
+    "lot unit address",
+    12
+   ],
+   [
+    "additional recordedorfiledintheoffice tasf",
+    12
+   ],
+   [
+    "you page purposes",
+    12
+   ],
+   [
+    "lease document page",
+    12
+   ]
+  ],
+  "PAT": [
+   [
+    "property transfer tax",
+    21
+   ],
+   [
+    "records reports statements",
+    21
+   ],
+   [
+    "power attorney document",
+    20
+   ],
+   [
+    "bond share commodity",
+    20
+   ],
+   [
+    "page file number",
+    19
+   ],
+   [
+    "part instrument city",
+    19
+   ],
+   [
+    "real property transfer",
+    19
+   ],
+   [
+    "borough block lot",
+    19
+   ],
+   [
+    "officeofthecityregister page part",
+    19
+   ],
+   [
+    "page count presenter",
+    19
+   ],
+   [
+    "nycdepartmentoffinance officeofthecityregister page",
+    19
+   ],
+   [
+    "lot unit address",
+    19
+   ],
+   [
+    "you page purposes",
+    19
+   ],
+   [
+    "purposes indexing instrument",
+    19
+   ],
+   [
+    "count presenter return",
+    19
+   ],
+   [
+    "file number parties",
+    19
+   ],
+   [
+    "attorney document page",
+    19
+   ],
+   [
+    "block lot unit",
+    19
+   ],
+   [
+    "parties party one",
+    19
+   ],
+   [
+    "reel page file",
+    19
+   ]
+  ],
+  "MTGE": [
+   [
+    "block lot unit",
+    18
+   ],
+   [
+    "additional recordedorfiledintheoffice tasf",
+    18
+   ],
+   [
+    "recorded filed additional",
+    18
+   ],
+   [
+    "you page purposes",
+    18
+   ],
+   [
+    "control indexing purposes",
+    18
+   ],
+   [
+    "indexing purposes event",
+    18
+   ],
+   [
+    "part instrument city",
+    18
+   ],
+   [
+    "information page control",
+    18
+   ],
+   [
+    "borough block lot",
+    18
+   ],
+   [
+    "additional spec additional",
+    18
+   ],
+   [
+    "officeofthecityregister page part",
+    18
+   ],
+   [
+    "taxes county basic",
+    18
+   ],
+   [
+    "instrument information page",
+    18
+   ],
+   [
+    "mortgage document page",
+    18
+   ],
+   [
+    "tasf ofthecityregisterofthe mta",
+    18
+   ],
+   [
+    "recordedorfiledintheoffice tasf ofthecityregisterofthe",
+    18
+   ],
+   [
+    "indexing instrument information",
+    18
+   ],
+   [
+    "nycta recorded filed",
+    18
+   ],
+   [
+    "page purposes indexing",
+    18
+   ],
+   [
+    "exemption taxes county",
+    18
+   ]
+  ],
+  "SAGE": [
+   [
+    "city new york",
+    21
+   ],
+   [
+    "york new york",
+    17
+   ],
+   [
+    "new york new",
+    16
+   ],
+   [
+    "property transfer tax",
+    14
+   ],
+   [
+    "block lot unit",
+    12
+   ],
+   [
+    "additional recordedorfiledintheoffice tasf",
+    12
+   ],
+   [
+    "recorded filed additional",
+    12
+   ],
+   [
+    "taxablemortgageamount nyc real",
+    12
+   ],
+   [
+    "you page purposes",
+    12
+   ],
+   [
+    "control indexing purposes",
+    12
+   ],
+   [
+    "indexing purposes event",
+    12
+   ],
+   [
+    "part instrument city",
+    12
+   ],
+   [
+    "information page control",
+    12
+   ],
+   [
+    "real property transfer",
+    12
+   ],
+   [
+    "borough block lot",
+    12
+   ],
+   [
+    "additional spec additional",
+    12
+   ],
+   [
+    "officeofthecityregister page part",
+    12
+   ],
+   [
+    "taxes county basic",
+    12
+   ],
+   [
+    "instrument information page",
+    12
+   ],
+   [
+    "tasf ofthecityregisterofthe mta",
+    12
+   ]
+  ],
+  "DEVR": [
+   [
+    "borough block lot",
+    1173
+   ],
+   [
+    "lot unit address",
+    1173
+   ],
+   [
+    "block lot unit",
+    1173
+   ],
+   [
+    "part instrument city",
+    1171
+   ],
+   [
+    "page part instrument",
+    1171
+   ],
+   [
+    "document page count",
+    1167
+   ],
+   [
+    "officeofthecityregister page part",
+    1162
+   ],
+   [
+    "page count presenter",
+    1162
+   ],
+   [
+    "nycdepartmentoffinance officeofthecityregister page",
+    1162
+   ],
+   [
+    "nyc real property",
+    1143
+   ],
+   [
+    "indexing purposes event",
+    1135
+   ],
+   [
+    "you page purposes",
+    1134
+   ],
+   [
+    "purposes indexing instrument",
+    1134
+   ],
+   [
+    "page purposes indexing",
+    1134
+   ],
+   [
+    "parties party one",
+    1131
+   ],
+   [
+    "indexing instrument information",
+    1126
+   ],
+   [
+    "control indexing purposes",
+    1113
+   ],
+   [
+    "instrument information page",
+    1112
+   ],
+   [
+    "taxes county basic",
+    1111
+   ],
+   [
+    "nycta recorded filed",
+    1111
+   ]
+  ]
+ }
+}

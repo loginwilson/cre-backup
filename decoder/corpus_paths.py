@@ -1,0 +1,178 @@
+"""WHERE DOES EVERY FILE LIVE? One answer, imported everywhere.
+
+⚠ WHY THIS EXISTS. Login, 2026-08-18, looking at 19 loose files at the corpus root:
+*"this is how disorganization forms. are they important and if they are, then you should
+probably be put into some kind of folder."* They were all important — a ledger, singleton
+PID files, the refusal flag, run logs, worklists, audit results — and every one of them
+had been dropped at the top level by whichever script happened to need it.
+
+⚠ THE STRUCTURAL FIX IS NOT A TIDY-UP, IT IS A SINGLE SOURCE OF TRUTH. Sweeping the
+files into folders once just delays the mess: the next script still writes
+`ROOT / "whatever.log"`. Paths belong in ONE module that everything imports, so a new
+file cannot land in the wrong place without editing this file first.
+
+    D:/acris/
+      00-run/            operational state — NOT the corpus, safe to delete and rebuild
+        state/           ledger.sqlite · *.pid · _STOP        (the run's memory)
+        logs/            *.log                                (append-only history)
+        worklists/       *.txt                                (job inputs, derived)
+        audits/          *.json                               (verification results)
+      01-specification/  the index: what EXISTS
+      02-acquisition/    documents/ (the one copy) · by-parcel/ (the readable view)
+      backup/            code and irreplaceable non-corpus data
+      _legacy-pages/     pre-PDF loose page corpus, kept until superseded
+
+⚠ 00-run IS DISPOSABLE, 01/02 ARE NOT. Everything under 00-run can be rebuilt by
+re-running; the ledger only records what was fetched and could be re-derived from the
+store itself. Keeping that boundary visible is the point of the numbering.
+"""
+from __future__ import annotations
+
+import os
+import pathlib
+import re as _re
+
+# ⚠ RESTRUCTURED 2026-08-19 (Login's layout): phase -> phase.md + source folder ->
+# source.md + source Outputs. The corpus root is now the Commercial Real Estate
+# Decoding folder; "acris" no longer exists on the drive.
+# ⚠ MOVED AGAIN 2026-08-20 (login): the old tree was RENAMED INTO D:\Ignore
+# — "the old tree is supposed to be ignored", literally. The system tree
+# (D:\CRE Decoding System) is where the mds + the one nav table live; this
+# ROOT covers the LEGACY outputs (sync state, spec db, old acquisition)
+# until each migrates deliberately. Discovered when the spec attach died
+# mid-keying: the path a config asserts is a claim like any other.
+ROOT = pathlib.Path(os.environ.get("ACRIS_CORPUS_ROOT", "D:/Ignore"))
+
+RUN = (ROOT / "00 Live Syncs" / "Legal Instruments Live Sync"
+       / "Legal Instruments Live Sync Outputs")
+STATE = RUN / "state"
+LOGS = RUN / "logs"
+WORKLISTS = RUN / "worklists"
+AUDITS = RUN / "audits"
+ARCHIVE = RUN / "Raw source archive"     # landed raw pulls — rebuild insurance
+
+SPEC = (ROOT / "01 Specifications" / "Legal Instruments Specification"
+        / "Legal Instruments Specification Outputs")
+SPEC_DB = SPEC / "parcel_spec.db"
+INDEX = RUN / "Working state"            # live pull state: rc_detail.jsonl etc.
+NOIMAGE_IDS = INDEX / "noimage_ids.txt"
+NOIMAGE_INDEX = INDEX / "noimage_index"
+
+# ⚠ NAV LIVES IN THE SYSTEM TREE (login, 2026-08-20): "that level 3 of the
+# cre decoding system folder is meant to be legal instruments md and ONE
+# TABLE that constantly updates when sync hands it new doc id." So level 3
+# holds exactly: the md + the table, named as a pair. Everything
+# operational - ledgers, logs, state, superseded builds, sorted views -
+# lives under _working, out of sight. The old Commercial-Real-Estate-
+# Decoding tree is IGNORED for navigation.
+NAV = pathlib.Path(r"D:\CRE Decoding System\01 Navigations"
+                   r"\Legal Instruments Navigation")
+NAV_WORK = NAV / "_working"
+# THE ONE TABLE IS SQLITE (login, 2026-08-20 evening: "yes flip it to
+# sqlite - as long as it is readable"). Landing = in-place upsert, consumers
+# read by index, csv is an EXPORT VIEW (nav_view.py), never the store.
+# RENAMED + MOVED TO TREE ROOT 2026-08-21 (login: "call it legal
+# instruments db since navigations is just the first phase of multiple ways
+# we intend to land into it") - columns reordered to phase accretion:
+# id|rd_url|pdf_url (01 nav) · recorded_details|pdf (02 acq) ·
+# keyed_by|key (03 org). The old file in 01 Navigations is a frozen backup.
+NAV_DB = pathlib.Path(r"D:\CRE Decoding System\Legal Instruments.db")
+# legacy csv machinery (nav_build/verify/sort generation) writes under
+# _working - still useful as a landing source, never the table of record.
+NAV_TABLE = NAV_WORK / "legal_instrument_navigation.csv"
+
+# ⚠ DEPRECATED - points at the OLD tree (zero code references as of
+# 2026-08-21; a probe that trusted it read "file missing" for a file that
+# exists). The store is DOC_STORE + doc_store_dir() below. Kept only so
+# any unimported legacy script fails loudly here, at a named constant.
+ACQ = (ROOT / "02 Acquisitions" / "Legal Instruments Acquisition"
+       / "Legal Instruments Acquisition Outputs")
+STORE = ACQ / "Documents"
+BYPARCEL = ACQ / "Acquisition by parcel"
+
+LEDGER = STATE / "ledger.sqlite"
+STOP = STATE / "_STOP"
+
+# THE ACQUISITION STORE (system tree). Files sleep under By Document; the
+# TABLE is the organizer (login: "the table is how we filter... this table
+# is essentially the guide"). The path is a pure function of the doc id.
+DOC_STORE = pathlib.Path(r"D:\CRE Decoding System\02 Acquisitions"
+                         r"\Legal Instruments Acquisition")
+_MON = ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+
+def doc_store_dir(did, recorded=""):
+    """By Document folder: year -> '04 Apr' -> day, from the RECORDED date
+    (login, 2026-08-20: recorded is the axis that aligns RC and ACRIS - a
+    digital id's embedded date is the SUBMISSION date and can lag recording
+    by days, and RC ids carry no date at all). Callers pass the rd row's
+    recorded string ('1/7/2026 3:49:03 PM'); both pdf lanes run BEHIND the
+    rd pass so it is always available. Months are '04 Apr' so Explorer's
+    alphabetical sort IS calendar order. Fallbacks: the id's own date
+    (digital), else the plain 4+4 id split."""
+    m = _re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", recorded or "")
+    if m:
+        mm, dd, yy = int(m.group(1)), int(m.group(2)), m.group(3)
+        if 1 <= mm <= 12 and 1 <= dd <= 31:
+            return (DOC_STORE / "By Document" / yy
+                    / f"{mm:02d} {_MON[mm-1]}" / f"{dd:02d}")
+    if len(did) >= 8 and did[:8].isdigit():
+        mm, dd = int(did[4:6]), int(did[6:8])
+        if 1 <= mm <= 12 and 1 <= dd <= 31:
+            return (DOC_STORE / "By Document" / did[:4]
+                    / f"{mm:02d} {_MON[mm-1]}" / f"{dd:02d}")
+    return DOC_STORE / "By Document" / did[:4] / did[4:8]
+
+
+def pid_file(tag):
+    return STATE / f"_{tag}.pid"
+
+
+def log(name):
+    return LOGS / f"{name}.log"
+
+
+def ensure():
+    """⚠ Called by every entry point. A path that only exists when some other script
+    happened to run first is a path that fails at 3am."""
+    for d in (RUN, STATE, LOGS, WORKLISTS, AUDITS, SPEC, NAV, ACQ, STORE, BYPARCEL):
+        d.mkdir(parents=True, exist_ok=True)
+    return ROOT
+
+
+def drive_present():
+    """Is the corpus drive actually there? Checked against the SPEC DB itself, not
+    the drive letter — a mounted drive with the corpus missing is just as absent."""
+    return SPEC_DB.exists()
+
+
+def connect_spec(timeout=600, attempts=(2, 10, 30, 60, 120)):
+    """Open the spec DB, surviving the transient open failure the One Touch throws
+    under heavy concurrent I/O.
+
+    ⚠ MEASURED 2026-08-19 04:01: sqlite3.connect raised 'unable to open database
+    file' while rc_detail_pull was writing to the same drive — and the identical
+    call had succeeded at 23:34 under the same pull. That error is the Windows
+    file-OPEN failing (sharing violation / device momentarily busy), which the
+    `timeout` parameter does NOT cover: timeout only paces lock waits AFTER a
+    successful open ('database is locked' is the contention error, a different
+    animal). So the open itself gets the retry, with backoff.
+
+    Raises sqlite3.OperationalError only after every attempt fails — callers that
+    can defer their write should catch it and defer, never die."""
+    import sqlite3
+    import time as _t
+    last = None
+    for i, wait in enumerate((0,) + tuple(attempts)):
+        if wait:
+            _t.sleep(wait)
+        try:
+            con = sqlite3.connect(SPEC_DB, timeout=timeout)
+            con.execute("PRAGMA busy_timeout=%d" % int(timeout * 1000))
+            return con
+        except sqlite3.OperationalError as e:
+            last = e
+            print(f"  ⚠ spec DB open failed (attempt {i+1}): {e} — "
+                  f"{'retrying' if i < len(attempts) else 'giving up'}")
+    raise last

@@ -1,0 +1,907 @@
+{
+ "page": "p001.png",
+ "items": [
+  {
+   "text": "REC. 471 PAGE 23",
+   "box": [
+    [
+     768,
+     371
+    ],
+    [
+     1066,
+     368
+    ],
+    [
+     1067,
+     431
+    ],
+    [
+     769,
+     433
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "BI NO. 2159",
+   "box": [
+    [
+     255,
+     412
+    ],
+    [
+     584,
+     405
+    ],
+    [
+     585,
+     474
+    ],
+    [
+     256,
+     481
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "T7",
+   "box": [
+    [
+     682,
+     431
+    ],
+    [
+     732,
+     431
+    ],
+    [
+     732,
+     463
+    ],
+    [
+     682,
+     463
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "ctobor 1966",
+   "box": [
+    [
+     428,
+     458
+    ],
+    [
+     526,
+     458
+    ],
+    [
+     526,
+     475
+    ],
+    [
+     428,
+     475
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "MORTGAGE",
+   "box": [
+    [
+     786,
+     464
+    ],
+    [
+     1065,
+     464
+    ],
+    [
+     1065,
+     512
+    ],
+    [
+     786,
+     512
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "1OT30",
+   "box": [
+    [
+     250,
+     490
+    ],
+    [
+     455,
+     490
+    ],
+    [
+     455,
+     573
+    ],
+    [
+     250,
+     573
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "10501",
+   "box": [
+    [
+     241,
+     575
+    ],
+    [
+     369,
+     575
+    ],
+    [
+     369,
+     631
+    ],
+    [
+     241,
+     631
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "THIS MORTGAGE, made the",
+   "box": [
+    [
+     413,
+     572
+    ],
+    [
+     716,
+     572
+    ],
+    [
+     716,
+     596
+    ],
+    [
+     413,
+     596
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "6th",
+   "box": [
+    [
+     815,
+     569
+    ],
+    [
+     871,
+     569
+    ],
+    [
+     871,
+     599
+    ],
+    [
+     815,
+     599
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "day ofJuly",
+   "box": [
+    [
+     1036,
+     569
+    ],
+    [
+     1241,
+     569
+    ],
+    [
+     1241,
+     602
+    ],
+    [
+     1036,
+     602
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": ",1967",
+   "box": [
+    [
+     1426,
+     567
+    ],
+    [
+     1526,
+     567
+    ],
+    [
+     1526,
+     599
+    ],
+    [
+     1426,
+     599
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "between MICHAEL WINNICKI and ROMULDA WINNICKI, his wife,",
+   "box": [
+    [
+     362,
+     594
+    ],
+    [
+     1285,
+     597
+    ],
+    [
+     1285,
+     631
+    ],
+    [
+     362,
+     628
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "who reside(s) at 738 Sheffield Avenue, Brooklyn, New York",
+   "box": [
+    [
+     365,
+     628
+    ],
+    [
+     1221,
+     630
+    ],
+    [
+     1221,
+     661
+    ],
+    [
+     365,
+     659
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": ", the MORTGAGOR,",
+   "box": [
+    [
+     1320,
+     631
+    ],
+    [
+     1533,
+     631
+    ],
+    [
+     1533,
+     658
+    ],
+    [
+     1320,
+     658
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "and",
+   "box": [
+    [
+     367,
+     662
+    ],
+    [
+     406,
+     662
+    ],
+    [
+     406,
+     686
+    ],
+    [
+     367,
+     686
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "SPRINGFIELD EQUITIES LTD.",
+   "box": [
+    [
+     447,
+     691
+    ],
+    [
+     866,
+     691
+    ],
+    [
+     866,
+     722
+    ],
+    [
+     447,
+     722
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "a corpotation organized and existing under the laws of the State of New York",
+   "box": [
+    [
+     365,
+     750
+    ],
+    [
+     1306,
+     751
+    ],
+    [
+     1306,
+     781
+    ],
+    [
+     365,
+     780
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "and having its principal place of business at 88-22 16lst Street, Jamaica, New York",
+   "box": [
+    [
+     363,
+     779
+    ],
+    [
+     1473,
+     776
+    ],
+    [
+     1474,
+     808
+    ],
+    [
+     363,
+     811
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "The MORTGAGFE,",
+   "box": [
+    [
+     365,
+     810
+    ],
+    [
+     559,
+     810
+    ],
+    [
+     559,
+     837
+    ],
+    [
+     365,
+     837
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "WITNESSETH, that to secure the payment of an indebtedness in the principal sum of TWENTY ONE",
+   "box": [
+    [
+     411,
+     838
+    ],
+    [
+     1473,
+     837
+    ],
+    [
+     1473,
+     868
+    ],
+    [
+     411,
+     869
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "THOUSAND and 00/100.",
+   "box": [
+    [
+     365,
+     869
+    ],
+    [
+     690,
+     869
+    ],
+    [
+     690,
+     899
+    ],
+    [
+     365,
+     899
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "-Dollars ($ 21,000.00),",
+   "box": [
+    [
+     1164,
+     870
+    ],
+    [
+     1525,
+     870
+    ],
+    [
+     1525,
+     901
+    ],
+    [
+     1164,
+     901
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "which sum is to be paid, with interest thereon, according to.a certain bond or obligation bearing even date here-",
+   "box": [
+    [
+     367,
+     901
+    ],
+    [
+     1531,
+     901
+    ],
+    [
+     1531,
+     928
+    ],
+    [
+     367,
+     928
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "with, the Mortgagor hereby mortgages to the Mortgagee:",
+   "box": [
+    [
+     367,
+     930
+    ],
+    [
+     940,
+     932
+    ],
+    [
+     940,
+     959
+    ],
+    [
+     367,
+     957
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "All that certain lot, piece, or parcel of land with the buildings and improvements thereon erected, situate,",
+   "box": [
+    [
+     414,
+     961
+    ],
+    [
+     1535,
+     961
+    ],
+    [
+     1535,
+     988
+    ],
+    [
+     414,
+     988
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "lying, and being in the",
+   "box": [
+    [
+     367,
+     992
+    ],
+    [
+     609,
+     992
+    ],
+    [
+     609,
+     1019
+    ],
+    [
+     367,
+     1019
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "Borough",
+   "box": [
+    [
+     662,
+     989
+    ],
+    [
+     785,
+     989
+    ],
+    [
+     785,
+     1021
+    ],
+    [
+     662,
+     1021
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "of Brooklyn",
+   "box": [
+    [
+     1088,
+     987
+    ],
+    [
+     1256,
+     989
+    ],
+    [
+     1255,
+     1020
+    ],
+    [
+     1088,
+     1017
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "County of Kings,",
+   "box": [
+    [
+     367,
+     1020
+    ],
+    [
+     583,
+     1020
+    ],
+    [
+     583,
+     1050
+    ],
+    [
+     367,
+     1050
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "City and State of New York, bounded",
+   "box": [
+    [
+     1117,
+     1019
+    ],
+    [
+     1532,
+     1019
+    ],
+    [
+     1532,
+     1048
+    ],
+    [
+     1117,
+     1048
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "and described as follows:",
+   "box": [
+    [
+     366,
+     1050
+    ],
+    [
+     639,
+     1048
+    ],
+    [
+     639,
+     1075
+    ],
+    [
+     366,
+     1077
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "BEGINNING at a point on the easterly side of East 92nd Street, distant",
+   "box": [
+    [
+     361,
+     1107
+    ],
+    [
+     1540,
+     1106
+    ],
+    [
+     1540,
+     1140
+    ],
+    [
+     361,
+     1141
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "l00 feet southerly from the corner formed by the intersection of the east-",
+   "box": [
+    [
+     361,
+     1138
+    ],
+    [
+     1607,
+     1139
+    ],
+    [
+     1607,
+     1173
+    ],
+    [
+     361,
+     1172
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "erly side of East 92nd Street and the southerly side of Avenue B;",
+   "box": [
+    [
+     363,
+     1171
+    ],
+    [
+     1453,
+     1171
+    ],
+    [
+     1453,
+     1204
+    ],
+    [
+     363,
+     1204
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "thence easterly parallel with Avenue B, l00 feet;",
+   "box": [
+    [
+     362,
+     1230
+    ],
+    [
+     1182,
+     1230
+    ],
+    [
+     1182,
+     1263
+    ],
+    [
+     362,
+     1263
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "thence southerly parallel with East 92nd Street, 20 feet;",
+   "box": [
+    [
+     362,
+     1291
+    ],
+    [
+     1318,
+     1291
+    ],
+    [
+     1318,
+     1325
+    ],
+    [
+     362,
+     1325
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "thence westerly parallel with Avenue B and part of the distance through",
+   "box": [
+    [
+     363,
+     1352
+    ],
+    [
+     1554,
+     1352
+    ],
+    [
+     1554,
+     1385
+    ],
+    [
+     363,
+     1385
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "a party wall, l00 feet to the easterly side of East 92nd Street;",
+   "box": [
+    [
+     361,
+     1384
+    ],
+    [
+     1435,
+     1384
+    ],
+    [
+     1435,
+     1417
+    ],
+    [
+     361,
+     1417
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "8",
+   "box": [
+    [
+     262,
+     1448
+    ],
+    [
+     325,
+     1437
+    ],
+    [
+     337,
+     1505
+    ],
+    [
+     275,
+     1516
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "and thence northerly along the easterly side of East 92nd Street,",
+   "box": [
+    [
+     361,
+     1443
+    ],
+    [
+     1503,
+     1443
+    ],
+    [
+     1503,
+     1477
+    ],
+    [
+     361,
+     1477
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "text": "20 feet to the point or place of BEGINNING.",
+   "box": [
+    [
+     363,
+     1475
+    ],
+    [
+     1083,
+     1475
+    ],
+    [
+     1083,
+     1507
+    ],
+    [
+     363,
+     1507
+    ]
+   ],
+   "angle": 0
+  }
+ ]
+}

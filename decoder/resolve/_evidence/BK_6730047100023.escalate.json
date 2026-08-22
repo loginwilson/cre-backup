@@ -1,0 +1,6998 @@
+[
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 0,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 6,
+  "scale": "phrase",
+  "q35-fair": "FORM NO. 2159 m October 1966",
+  "ppv6": null,
+  "span": {
+   "q35-fair": [
+    0,
+    6
+   ],
+   "ppv6": [
+    0,
+    0
+   ]
+  },
+  "offsets": {
+   "q35-fair": 0,
+   "ppv6": null
+  },
+  "elsewhere": {
+   "q35-fair": 3,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "form",
+    "m",
+    "october"
+   ],
+   "ppv6": []
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 2,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 6,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppv6": "BI NO. 2159 T7 ctobor 1966",
+  "span": {
+   "q35-fair": [
+    10,
+    10
+   ],
+   "ppv6": [
+    4,
+    10
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppv6": 17
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 3
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppv6": [
+    "bi",
+    "t7",
+    "ctobor"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 4,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "LOT 30",
+  "ppv6": "1OT30 10501",
+  "span": {
+   "q35-fair": [
+    11,
+    13
+   ],
+   "ppv6": [
+    11,
+    13
+   ]
+  },
+  "offsets": {
+   "q35-fair": 55,
+   "ppv6": 53
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "lot",
+    "30"
+   ],
+   "ppv6": [
+    "1ot30",
+    "10501"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 6,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "of July,",
+  "ppv6": "ofJuly",
+  "span": {
+   "q35-fair": [
+    19,
+    21
+   ],
+   "ppv6": [
+    19,
+    20
+   ]
+  },
+  "offsets": {
+   "q35-fair": 94,
+   "ppv6": 97
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "of",
+    "july"
+   ],
+   "ppv6": [
+    "ofjuly"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 8,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppv6": ", the MORTGAGOR,",
+  "span": {
+   "q35-fair": [
+    39,
+    39
+   ],
+   "ppv6": [
+    38,
+    41
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppv6": 225
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 1
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppv6": [
+    "the",
+    "mortgagor"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 10,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "corporation",
+  "ppv6": "corpotation",
+  "span": {
+   "q35-fair": [
+    44,
+    45
+   ],
+   "ppv6": [
+    46,
+    47
+   ]
+  },
+  "offsets": {
+   "q35-fair": 256,
+   "ppv6": 274
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "corporation"
+   ],
+   "ppv6": [
+    "corpotation"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 12,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "161st",
+  "ppv6": "16lst",
+  "span": {
+   "q35-fair": [
+    66,
+    67
+   ],
+   "ppv6": [
+    68,
+    69
+   ]
+  },
+  "offsets": {
+   "q35-fair": 383,
+   "ppv6": 401
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "161st"
+   ],
+   "ppv6": [
+    "16lst"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 14,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "MORTGAGE,",
+  "ppv6": "MORTGAGFE,",
+  "span": {
+   "q35-fair": [
+    72,
+    73
+   ],
+   "ppv6": [
+    74,
+    75
+   ]
+  },
+  "offsets": {
+   "q35-fair": 419,
+   "ppv6": 437
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgage"
+   ],
+   "ppv6": [
+    "mortgagfe"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 16,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "00/100-----------------------------Dollars",
+  "ppv6": "00/100. -Dollars",
+  "span": {
+   "q35-fair": [
+    91,
+    92
+   ],
+   "ppv6": [
+    93,
+    95
+   ]
+  },
+  "offsets": {
+   "q35-fair": 535,
+   "ppv6": 554
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "00100dollars"
+   ],
+   "ppv6": [
+    "00100",
+    "dollars"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 20,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "to a",
+  "ppv6": "to.a",
+  "span": {
+   "q35-fair": [
+    105,
+    107
+   ],
+   "ppv6": [
+    107,
+    108
+   ]
+  },
+  "offsets": {
+   "q35-fair": 652,
+   "ppv6": 644
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "to",
+    "a"
+   ],
+   "ppv6": [
+    "toa"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 22,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "100",
+  "ppv6": "l00",
+  "span": {
+   "q35-fair": [
+    175,
+    176
+   ],
+   "ppv6": [
+    176,
+    177
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1066,
+   "ppv6": 1058
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "100"
+   ],
+   "ppv6": [
+    "l00"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 24,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "100",
+  "ppv6": "l00",
+  "span": {
+   "q35-fair": [
+    207,
+    208
+   ],
+   "ppv6": [
+    208,
+    209
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1247,
+   "ppv6": 1239
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "100"
+   ],
+   "ppv6": [
+    "l00"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 26,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "100",
+  "ppv6": "l00",
+  "span": {
+   "q35-fair": [
+    233,
+    234
+   ],
+   "ppv6": [
+    234,
+    235
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1401,
+   "ppv6": 1393
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "100"
+   ],
+   "ppv6": [
+    "l00"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p001",
+  "run_index": 28,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppv6": "8",
+  "span": {
+   "q35-fair": [
+    243,
+    243
+   ],
+   "ppv6": [
+    244,
+    245
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppv6": 1444
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppv6": [
+    "8"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 1,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "TOGETHER",
+  "ppv6": "TOOETHER",
+  "span": {
+   "q35-fair": [
+    9,
+    10
+   ],
+   "ppv6": [
+    9,
+    10
+   ]
+  },
+  "offsets": {
+   "q35-fair": 51,
+   "ppv6": 50
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "together"
+   ],
+   "ppv6": [
+    "tooether"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 3,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "heretofore",
+  "ppv6": "heretofere",
+  "span": {
+   "q35-fair": [
+    18,
+    19
+   ],
+   "ppv6": [
+    18,
+    19
+   ]
+  },
+  "offsets": {
+   "q35-fair": 99,
+   "ppv6": 98
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "heretofore"
+   ],
+   "ppv6": [
+    "heretofere"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 5,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppv6": "REC. 471 PAGE",
+  "span": {
+   "q35-fair": [
+    28,
+    28
+   ],
+   "ppv6": [
+    28,
+    31
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppv6": 156
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppv6": [
+    "rec",
+    "471",
+    "page"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 7,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgagor,",
+  "ppv6": "mortgagee,",
+  "span": {
+   "q35-fair": [
+    71,
+    72
+   ],
+   "ppv6": [
+    74,
+    75
+   ]
+  },
+  "offsets": {
+   "q35-fair": 413,
+   "ppv6": 426
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 9,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgagor;",
+  "ppv6": "mortgagee;",
+  "span": {
+   "q35-fair": [
+    81,
+    82
+   ],
+   "ppv6": [
+    84,
+    85
+   ]
+  },
+  "offsets": {
+   "q35-fair": 485,
+   "ppv6": 498
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 11,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgagor,",
+  "ppv6": "mortgagee,",
+  "span": {
+   "q35-fair": [
+    85,
+    86
+   ],
+   "ppv6": [
+    88,
+    89
+   ]
+  },
+  "offsets": {
+   "q35-fair": 509,
+   "ppv6": 522
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 13,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgagor,",
+  "ppv6": "mortgagee,",
+  "span": {
+   "q35-fair": [
+    89,
+    90
+   ],
+   "ppv6": [
+    92,
+    93
+   ]
+  },
+  "offsets": {
+   "q35-fair": 533,
+   "ppv6": 546
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 15,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppv6": "2",
+  "span": {
+   "q35-fair": [
+    100,
+    100
+   ],
+   "ppv6": [
+    103,
+    104
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppv6": 624
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppv6": [
+    "2"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 17,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "hereby",
+  "ppv6": "horeby",
+  "span": {
+   "q35-fair": [
+    107,
+    108
+   ],
+   "ppv6": [
+    111,
+    112
+   ]
+  },
+  "offsets": {
+   "q35-fair": 645,
+   "ppv6": 660
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "hereby"
+   ],
+   "ppv6": [
+    "horeby"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 19,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "empowered",
+  "ppv6": "expowered",
+  "span": {
+   "q35-fair": [
+    111,
+    112
+   ],
+   "ppv6": [
+    115,
+    116
+   ]
+  },
+  "offsets": {
+   "q35-fair": 677,
+   "ppv6": 692
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "empowered"
+   ],
+   "ppv6": [
+    "expowered"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 21,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "payment",
+  "ppv6": "paymant",
+  "span": {
+   "q35-fair": [
+    145,
+    146
+   ],
+   "ppv6": [
+    149,
+    150
+   ]
+  },
+  "offsets": {
+   "q35-fair": 876,
+   "ppv6": 891
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "payment"
+   ],
+   "ppv6": [
+    "paymant"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 23,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "assigns",
+  "ppv6": "assigne",
+  "span": {
+   "q35-fair": [
+    194,
+    195
+   ],
+   "ppv6": [
+    198,
+    199
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1165,
+   "ppv6": 1181
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "assigns"
+   ],
+   "ppv6": [
+    "assigne"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 25,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgagor",
+  "ppv6": "mortgagee",
+  "span": {
+   "q35-fair": [
+    207,
+    208
+   ],
+   "ppv6": [
+    211,
+    212
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1240,
+   "ppv6": 1256
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 27,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgagor,",
+  "ppv6": "mortgagee,",
+  "span": {
+   "q35-fair": [
+    218,
+    219
+   ],
+   "ppv6": [
+    222,
+    223
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1313,
+   "ppv6": 1329
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 29,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "assignments",
+  "ppv6": "assignmonts",
+  "span": {
+   "q35-fair": [
+    235,
+    236
+   ],
+   "ppv6": [
+    239,
+    240
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1409,
+   "ppv6": 1425
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "assignments"
+   ],
+   "ppv6": [
+    "assignmonts"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 31,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "instruments",
+  "ppv6": "inatruments",
+  "span": {
+   "q35-fair": [
+    238,
+    239
+   ],
+   "ppv6": [
+    242,
+    243
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1431,
+   "ppv6": 1447
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "instruments"
+   ],
+   "ppv6": [
+    "inatruments"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 33,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgagor",
+  "ppv6": "mortgagee",
+  "span": {
+   "q35-fair": [
+    276,
+    277
+   ],
+   "ppv6": [
+    280,
+    281
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1655,
+   "ppv6": 1670
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 35,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "them,",
+  "ppv6": "thom,",
+  "span": {
+   "q35-fair": [
+    295,
+    296
+   ],
+   "ppv6": [
+    299,
+    300
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1781,
+   "ppv6": 1796
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "them"
+   ],
+   "ppv6": [
+    "thom"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 37,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "tended",
+  "ppv6": "tanded",
+  "span": {
+   "q35-fair": [
+    333,
+    334
+   ],
+   "ppv6": [
+    337,
+    338
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2000,
+   "ppv6": 2014
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "tended"
+   ],
+   "ppv6": [
+    "tanded"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 39,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "center",
+  "ppv6": "conter",
+  "span": {
+   "q35-fair": [
+    375,
+    376
+   ],
+   "ppv6": [
+    379,
+    380
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2225,
+   "ppv6": 2238
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "center"
+   ],
+   "ppv6": [
+    "conter"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 41,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "c.",
+  "ppv6": "M.W. R",
+  "span": {
+   "q35-fair": [
+    378,
+    379
+   ],
+   "ppv6": [
+    382,
+    384
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2248,
+   "ppv6": 2260
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "c"
+   ],
+   "ppv6": [
+    "mw",
+    "r"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p002",
+  "run_index": 43,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "12 w.",
+  "ppv6": null,
+  "span": {
+   "q35-fair": [
+    380,
+    382
+   ],
+   "ppv6": [
+    385,
+    385
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2254,
+   "ppv6": null
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "12",
+    "w"
+   ],
+   "ppv6": []
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 1,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "heretofore",
+  "ppv6": "heretofere",
+  "span": {
+   "q35-fair": [
+    18,
+    19
+   ],
+   "ppv6": [
+    18,
+    19
+   ]
+  },
+  "offsets": {
+   "q35-fair": 99,
+   "ppv6": 98
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "heretofore"
+   ],
+   "ppv6": [
+    "heretofere"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 3,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppv6": "REC. 471 PAGE",
+  "span": {
+   "q35-fair": [
+    28,
+    28
+   ],
+   "ppv6": [
+    28,
+    31
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppv6": 156
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppv6": [
+    "rec",
+    "471",
+    "page"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 5,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "owners",
+  "ppv6": "owmers",
+  "span": {
+   "q35-fair": [
+    37,
+    38
+   ],
+   "ppv6": [
+    40,
+    41
+   ]
+  },
+  "offsets": {
+   "q35-fair": 212,
+   "ppv6": 225
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "owners"
+   ],
+   "ppv6": [
+    "owmers"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 7,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "affecting",
+  "ppv6": "affeoting",
+  "span": {
+   "q35-fair": [
+    57,
+    58
+   ],
+   "ppv6": [
+    60,
+    61
+   ]
+  },
+  "offsets": {
+   "q35-fair": 329,
+   "ppv6": 342
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "affecting"
+   ],
+   "ppv6": [
+    "affeoting"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 9,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgagor,",
+  "ppv6": "mortgagee,",
+  "span": {
+   "q35-fair": [
+    71,
+    72
+   ],
+   "ppv6": [
+    74,
+    75
+   ]
+  },
+  "offsets": {
+   "q35-fair": 413,
+   "ppv6": 426
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 11,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgagor;",
+  "ppv6": "mortgagee;",
+  "span": {
+   "q35-fair": [
+    81,
+    82
+   ],
+   "ppv6": [
+    84,
+    85
+   ]
+  },
+  "offsets": {
+   "q35-fair": 485,
+   "ppv6": 498
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 13,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgagor,",
+  "ppv6": "mortgagee,",
+  "span": {
+   "q35-fair": [
+    85,
+    86
+   ],
+   "ppv6": [
+    88,
+    89
+   ]
+  },
+  "offsets": {
+   "q35-fair": 509,
+   "ppv6": 522
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 15,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgagor,",
+  "ppv6": "mortgagee,",
+  "span": {
+   "q35-fair": [
+    89,
+    90
+   ],
+   "ppv6": [
+    92,
+    93
+   ]
+  },
+  "offsets": {
+   "q35-fair": 533,
+   "ppv6": 546
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 17,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "gagee",
+  "ppv6": "24 gegee",
+  "span": {
+   "q35-fair": [
+    100,
+    101
+   ],
+   "ppv6": [
+    103,
+    105
+   ]
+  },
+  "offsets": {
+   "q35-fair": 611,
+   "ppv6": 624
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "gagee"
+   ],
+   "ppv6": [
+    "24",
+    "gegee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 19,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "empowered",
+  "ppv6": "expowered",
+  "span": {
+   "q35-fair": [
+    111,
+    112
+   ],
+   "ppv6": [
+    115,
+    116
+   ]
+  },
+  "offsets": {
+   "q35-fair": 677,
+   "ppv6": 693
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "empowered"
+   ],
+   "ppv6": [
+    "expowered"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 21,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "receive",
+  "ppv6": "reoeive",
+  "span": {
+   "q35-fair": [
+    115,
+    116
+   ],
+   "ppv6": [
+    119,
+    120
+   ]
+  },
+  "offsets": {
+   "q35-fair": 702,
+   "ppv6": 718
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "receive"
+   ],
+   "ppv6": [
+    "reoeive"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 23,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "authorities",
+  "ppv6": "authoritles",
+  "span": {
+   "q35-fair": [
+    126,
+    127
+   ],
+   "ppv6": [
+    130,
+    131
+   ]
+  },
+  "offsets": {
+   "q35-fair": 760,
+   "ppv6": 776
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "authorities"
+   ],
+   "ppv6": [
+    "authoritles"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 25,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgagor",
+  "ppv6": "mortgagee",
+  "span": {
+   "q35-fair": [
+    207,
+    208
+   ],
+   "ppv6": [
+    211,
+    212
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1240,
+   "ppv6": 1257
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 27,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgagor,",
+  "ppv6": "mortgagee,",
+  "span": {
+   "q35-fair": [
+    218,
+    219
+   ],
+   "ppv6": [
+    222,
+    223
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1313,
+   "ppv6": 1330
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 29,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "assignments",
+  "ppv6": "assigrments",
+  "span": {
+   "q35-fair": [
+    235,
+    236
+   ],
+   "ppv6": [
+    239,
+    240
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1409,
+   "ppv6": 1426
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "assignments"
+   ],
+   "ppv6": [
+    "assigrments"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 31,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "free,",
+  "ppv6": "fres,",
+  "span": {
+   "q35-fair": [
+    256,
+    257
+   ],
+   "ppv6": [
+    260,
+    261
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1546,
+   "ppv6": 1563
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "free"
+   ],
+   "ppv6": [
+    "fres"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 33,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "encum- brances",
+  "ppv6": "en- oumbrances",
+  "span": {
+   "q35-fair": [
+    264,
+    266
+   ],
+   "ppv6": [
+    268,
+    270
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1588,
+   "ppv6": 1605
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "encum",
+    "brances"
+   ],
+   "ppv6": [
+    "en",
+    "oumbrances"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 35,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "mortgages",
+  "ppv6": "mortgagee",
+  "span": {
+   "q35-fair": [
+    276,
+    277
+   ],
+   "ppv6": [
+    280,
+    281
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1655,
+   "ppv6": 1671
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgages"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 37,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "collect",
+  "ppv6": "colloct",
+  "span": {
+   "q35-fair": [
+    278,
+    279
+   ],
+   "ppv6": [
+    282,
+    283
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1668,
+   "ppv6": 1684
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "collect"
+   ],
+   "ppv6": [
+    "colloct"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 39,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "them,",
+  "ppv6": "thom,",
+  "span": {
+   "q35-fair": [
+    295,
+    296
+   ],
+   "ppv6": [
+    299,
+    300
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1781,
+   "ppv6": 1797
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "them"
+   ],
+   "ppv6": [
+    "thom"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 41,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "include",
+  "ppv6": "inolude",
+  "span": {
+   "q35-fair": [
+    297,
+    298
+   ],
+   "ppv6": [
+    301,
+    302
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1790,
+   "ppv6": 1806
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "include"
+   ],
+   "ppv6": [
+    "inolude"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 43,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "tended",
+  "ppv6": "tanded",
+  "span": {
+   "q35-fair": [
+    333,
+    334
+   ],
+   "ppv6": [
+    337,
+    338
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2000,
+   "ppv6": 2015
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "tended"
+   ],
+   "ppv6": [
+    "tanded"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 45,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "recorded simultaneously",
+  "ppv6": "recordad simultanaously",
+  "span": {
+   "q35-fair": [
+    336,
+    338
+   ],
+   "ppv6": [
+    340,
+    342
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2013,
+   "ppv6": 2028
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "recorded",
+    "simultaneously"
+   ],
+   "ppv6": [
+    "recordad",
+    "simultanaously"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 47,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "center",
+  "ppv6": "conter",
+  "span": {
+   "q35-fair": [
+    375,
+    376
+   ],
+   "ppv6": [
+    379,
+    380
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2225,
+   "ppv6": 2239
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "center"
+   ],
+   "ppv6": [
+    "conter"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p003",
+  "run_index": 49,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "M. W.",
+  "ppv6": "M.W.",
+  "span": {
+   "q35-fair": [
+    378,
+    380
+   ],
+   "ppv6": [
+    382,
+    383
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2248,
+   "ppv6": 2261
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "m",
+    "w"
+   ],
+   "ppv6": [
+    "mw"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 1,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "indebtedness",
+  "ppv6": "indebiedness",
+  "span": {
+   "q35-fair": [
+    61,
+    62
+   ],
+   "ppv6": [
+    61,
+    62
+   ]
+  },
+  "offsets": {
+   "q35-fair": 363,
+   "ppv6": 360
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "indebtedness"
+   ],
+   "ppv6": [
+    "indebiedness"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 3,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "payments",
+  "ppv6": "pay- ments",
+  "span": {
+   "q35-fair": [
+    86,
+    87
+   ],
+   "ppv6": [
+    86,
+    88
+   ]
+  },
+  "offsets": {
+   "q35-fair": 520,
+   "ppv6": 516
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "payments"
+   ],
+   "ppv6": [
+    "pay",
+    "ments"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 5,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "paid,",
+  "ppv6": "pald,",
+  "span": {
+   "q35-fair": [
+    120,
+    121
+   ],
+   "ppv6": [
+    121,
+    122
+   ]
+  },
+  "offsets": {
+   "q35-fair": 707,
+   "ppv6": 705
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "paid"
+   ],
+   "ppv6": [
+    "pald"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 7,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "instrument",
+  "ppv6": "in- strument",
+  "span": {
+   "q35-fair": [
+    144,
+    145
+   ],
+   "ppv6": [
+    145,
+    147
+   ]
+  },
+  "offsets": {
+   "q35-fair": 850,
+   "ppv6": 847
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "instrument"
+   ],
+   "ppv6": [
+    "in",
+    "strument"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 9,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "(I)",
+  "ppv6": "(1)",
+  "span": {
+   "q35-fair": [
+    177,
+    178
+   ],
+   "ppv6": [
+    179,
+    180
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1045,
+   "ppv6": 1043
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "i"
+   ],
+   "ppv6": [
+    "1"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 11,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "sufficient",
+  "ppv6": "sufficlent",
+  "span": {
+   "q35-fair": [
+    206,
+    207
+   ],
+   "ppv6": [
+    208,
+    209
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1199,
+   "ppv6": 1197
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "sufficient"
+   ],
+   "ppv6": [
+    "sufficlent"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 13,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "as",
+  "ppv6": "a\u00df",
+  "span": {
+   "q35-fair": [
+    254,
+    255
+   ],
+   "ppv6": [
+    256,
+    257
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1477,
+   "ppv6": 1475
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 1
+  },
+  "unmatched": {
+   "q35-fair": [
+    "as"
+   ],
+   "ppv6": []
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 15,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "instrument",
+  "ppv6": "inotrument",
+  "span": {
+   "q35-fair": [
+    274,
+    275
+   ],
+   "ppv6": [
+    276,
+    277
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1587,
+   "ppv6": 1584
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "instrument"
+   ],
+   "ppv6": [
+    "inotrument"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 17,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "lieu",
+  "ppv6": "lleu",
+  "span": {
+   "q35-fair": [
+    289,
+    290
+   ],
+   "ppv6": [
+    291,
+    292
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1679,
+   "ppv6": 1676
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "lieu"
+   ],
+   "ppv6": [
+    "lleu"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 19,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "one-half",
+  "ppv6": "one-haif",
+  "span": {
+   "q35-fair": [
+    306,
+    307
+   ],
+   "ppv6": [
+    308,
+    309
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1776,
+   "ppv6": 1773
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "onehalf"
+   ],
+   "ppv6": [
+    "onehaif"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 21,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "computed",
+  "ppv6": "com- puted",
+  "span": {
+   "q35-fair": [
+    319,
+    320
+   ],
+   "ppv6": [
+    321,
+    323
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1853,
+   "ppv6": 1850
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "computed"
+   ],
+   "ppv6": [
+    "com",
+    "puted"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 23,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "assessments",
+  "ppv6": "assesaments",
+  "span": {
+   "q35-fair": [
+    342,
+    343
+   ],
+   "ppv6": [
+    345,
+    346
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1992,
+   "ppv6": 1990
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "assessments"
+   ],
+   "ppv6": [
+    "assesaments"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 25,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "on",
+  "ppv6": "cn",
+  "span": {
+   "q35-fair": [
+    362,
+    363
+   ],
+   "ppv6": [
+    365,
+    366
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2111,
+   "ppv6": 2109
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "on"
+   ],
+   "ppv6": [
+    "cn"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 27,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "estimated by",
+  "ppv6": "estimated-by",
+  "span": {
+   "q35-fair": [
+    377,
+    379
+   ],
+   "ppv6": [
+    380,
+    381
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2197,
+   "ppv6": 2195
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "estimated",
+    "by"
+   ],
+   "ppv6": [
+    "estimatedby"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 29,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "premiums,",
+  "ppv6": "premlums,",
+  "span": {
+   "q35-fair": [
+    407,
+    408
+   ],
+   "ppv6": [
+    409,
+    410
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2366,
+   "ppv6": 2364
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "premiums"
+   ],
+   "ppv6": [
+    "premlums"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 31,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "special",
+  "ppv6": "speciel",
+  "span": {
+   "q35-fair": [
+    431,
+    432
+   ],
+   "ppv6": [
+    433,
+    434
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2512,
+   "ppv6": 2510
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "special"
+   ],
+   "ppv6": [
+    "speciel"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 33,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "(IV)",
+  "ppv6": "(1V)",
+  "span": {
+   "q35-fair": [
+    549,
+    550
+   ],
+   "ppv6": [
+    551,
+    552
+   ]
+  },
+  "offsets": {
+   "q35-fair": 3235,
+   "ppv6": 3228
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "iv"
+   ],
+   "ppv6": [
+    "1v"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 37,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "paragraph",
+  "ppv6": "paragiaph",
+  "span": {
+   "q35-fair": [
+    656,
+    657
+   ],
+   "ppv6": [
+    657,
+    658
+   ]
+  },
+  "offsets": {
+   "q35-fair": 3836,
+   "ppv6": 3825
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "paragraph"
+   ],
+   "ppv6": [
+    "paragiaph"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 39,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "payments",
+  "ppv6": "pay- ments",
+  "span": {
+   "q35-fair": [
+    664,
+    665
+   ],
+   "ppv6": [
+    665,
+    667
+   ]
+  },
+  "offsets": {
+   "q35-fair": 3885,
+   "ppv6": 3874
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "payments"
+   ],
+   "ppv6": [
+    "pay",
+    "ments"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 41,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "taxes,",
+  "ppv6": "tuxes,",
+  "span": {
+   "q35-fair": [
+    725,
+    726
+   ],
+   "ppv6": [
+    727,
+    728
+   ]
+  },
+  "offsets": {
+   "q35-fair": 4254,
+   "ppv6": 4245
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "taxes"
+   ],
+   "ppv6": [
+    "tuxes"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 43,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "deficiency,",
+  "ppv6": "deficlency,",
+  "span": {
+   "q35-fair": [
+    755,
+    756
+   ],
+   "ppv6": [
+    757,
+    758
+   ]
+  },
+  "offsets": {
+   "q35-fair": 4437,
+   "ppv6": 4428
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "deficiency"
+   ],
+   "ppv6": [
+    "deficlency"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 45,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "assessments,",
+  "ppv6": "aasessments,",
+  "span": {
+   "q35-fair": [
+    768,
+    769
+   ],
+   "ppv6": [
+    770,
+    771
+   ]
+  },
+  "offsets": {
+   "q35-fair": 4513,
+   "ppv6": 4504
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "assessments"
+   ],
+   "ppv6": [
+    "aasessments"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 47,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "represented",
+  "ppv6": "re- presented",
+  "span": {
+   "q35-fair": [
+    804,
+    805
+   ],
+   "ppv6": [
+    806,
+    808
+   ]
+  },
+  "offsets": {
+   "q35-fair": 4736,
+   "ppv6": 4727
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "represented"
+   ],
+   "ppv6": [
+    "re",
+    "presented"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 49,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "such",
+  "ppv6": "auch",
+  "span": {
+   "q35-fair": [
+    814,
+    815
+   ],
+   "ppv6": [
+    817,
+    818
+   ]
+  },
+  "offsets": {
+   "q35-fair": 4805,
+   "ppv6": 4798
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "such"
+   ],
+   "ppv6": [
+    "auch"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 51,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "provisions",
+  "ppv6": "provislons",
+  "span": {
+   "q35-fair": [
+    879,
+    880
+   ],
+   "ppv6": [
+    882,
+    883
+   ]
+  },
+  "offsets": {
+   "q35-fair": 5181,
+   "ppv6": 5174
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "provisions"
+   ],
+   "ppv6": [
+    "provislons"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 53,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "otherwise",
+  "ppv6": "otherwime",
+  "span": {
+   "q35-fair": [
+    923,
+    924
+   ],
+   "ppv6": [
+    926,
+    927
+   ]
+  },
+  "offsets": {
+   "q35-fair": 5446,
+   "ppv6": 5439
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "otherwise"
+   ],
+   "ppv6": [
+    "otherwime"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 55,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "remaining",
+  "ppv6": "re- maining",
+  "span": {
+   "q35-fair": [
+    928,
+    929
+   ],
+   "ppv6": [
+    931,
+    933
+   ]
+  },
+  "offsets": {
+   "q35-fair": 5483,
+   "ppv6": 5476
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "remaining"
+   ],
+   "ppv6": [
+    "re",
+    "maining"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 57,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "accumulated",
+  "ppv6": "accuinulated",
+  "span": {
+   "q35-fair": [
+    932,
+    933
+   ],
+   "ppv6": [
+    936,
+    937
+   ]
+  },
+  "offsets": {
+   "q35-fair": 5506,
+   "ppv6": 5501
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "accumulated"
+   ],
+   "ppv6": [
+    "accuinulated"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 59,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "against",
+  "ppv6": "agminst",
+  "span": {
+   "q35-fair": [
+    942,
+    943
+   ],
+   "ppv6": [
+    946,
+    947
+   ]
+  },
+  "offsets": {
+   "q35-fair": 5565,
+   "ppv6": 5561
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "against"
+   ],
+   "ppv6": [
+    "agminst"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 61,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": "remaining unpaid",
+  "ppv6": "remain- ing unpald",
+  "span": {
+   "q35-fair": [
+    948,
+    950
+   ],
+   "ppv6": [
+    952,
+    955
+   ]
+  },
+  "offsets": {
+   "q35-fair": 5602,
+   "ppv6": 5598
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "remaining",
+    "unpaid"
+   ],
+   "ppv6": [
+    "remain",
+    "ing",
+    "unpald"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 63,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "said",
+  "ppv6": "maid",
+  "span": {
+   "q35-fair": [
+    951,
+    952
+   ],
+   "ppv6": [
+    956,
+    957
+   ]
+  },
+  "offsets": {
+   "q35-fair": 5625,
+   "ppv6": 5623
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "said"
+   ],
+   "ppv6": [
+    "maid"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 65,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "assessments,",
+  "ppv6": "mssessments,",
+  "span": {
+   "q35-fair": [
+    979,
+    980
+   ],
+   "ppv6": [
+    984,
+    985
+   ]
+  },
+  "offsets": {
+   "q35-fair": 5788,
+   "ppv6": 5785
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "assessments"
+   ],
+   "ppv6": [
+    "mssessments"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 67,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "receipts",
+  "ppv6": "recelpte",
+  "span": {
+   "q35-fair": [
+    1018,
+    1019
+   ],
+   "ppv6": [
+    1023,
+    1024
+   ]
+  },
+  "offsets": {
+   "q35-fair": 6047,
+   "ppv6": 6044
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "receipts"
+   ],
+   "ppv6": [
+    "recelpte"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 69,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "Mortgagor.",
+  "ppv6": "Mortgagee.",
+  "span": {
+   "q35-fair": [
+    1046,
+    1047
+   ],
+   "ppv6": [
+    1051,
+    1052
+   ]
+  },
+  "offsets": {
+   "q35-fair": 6227,
+   "ppv6": 6223
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgagor"
+   ],
+   "ppv6": [
+    "mortgagee"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 71,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "tenable",
+  "ppv6": "tenantable",
+  "span": {
+   "q35-fair": [
+    1058,
+    1059
+   ],
+   "ppv6": [
+    1063,
+    1064
+   ]
+  },
+  "offsets": {
+   "q35-fair": 6302,
+   "ppv6": 6298
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "tenable"
+   ],
+   "ppv6": [
+    "tenantable"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 73,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "repair,",
+  "ppv6": "repeir,",
+  "span": {
+   "q35-fair": [
+    1063,
+    1064
+   ],
+   "ppv6": [
+    1068,
+    1069
+   ]
+  },
+  "offsets": {
+   "q35-fair": 6333,
+   "ppv6": 6332
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "repair"
+   ],
+   "ppv6": [
+    "repeir"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 75,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "days",
+  "ppv6": "day",
+  "span": {
+   "q35-fair": [
+    1111,
+    1112
+   ],
+   "ppv6": [
+    1116,
+    1117
+   ]
+  },
+  "offsets": {
+   "q35-fair": 6632,
+   "ppv6": 6630
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "days"
+   ],
+   "ppv6": [
+    "day"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 77,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "will",
+  "ppv6": "wlll",
+  "span": {
+   "q35-fair": [
+    1116,
+    1117
+   ],
+   "ppv6": [
+    1121,
+    1122
+   ]
+  },
+  "offsets": {
+   "q35-fair": 6659,
+   "ppv6": 6656
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "will"
+   ],
+   "ppv6": [
+    "wlll"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 79,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "offsets",
+  "ppv6": "offaets",
+  "span": {
+   "q35-fair": [
+    1133,
+    1134
+   ],
+   "ppv6": [
+    1138,
+    1139
+   ]
+  },
+  "offsets": {
+   "q35-fair": 6762,
+   "ppv6": 6759
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "offsets"
+   ],
+   "ppv6": [
+    "offaets"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 81,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "against",
+  "ppv6": "agalnst",
+  "span": {
+   "q35-fair": [
+    1137,
+    1138
+   ],
+   "ppv6": [
+    1142,
+    1143
+   ]
+  },
+  "offsets": {
+   "q35-fair": 6788,
+   "ppv6": 6785
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "against"
+   ],
+   "ppv6": [
+    "agalnst"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 83,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "notice",
+  "ppv6": "notlce",
+  "span": {
+   "q35-fair": [
+    1143,
+    1144
+   ],
+   "ppv6": [
+    1148,
+    1149
+   ]
+  },
+  "offsets": {
+   "q35-fair": 6824,
+   "ppv6": 6820
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "notice"
+   ],
+   "ppv6": [
+    "notlce"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 85,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "person",
+  "ppv6": "peraon",
+  "span": {
+   "q35-fair": [
+    1158,
+    1159
+   ],
+   "ppv6": [
+    1163,
+    1164
+   ]
+  },
+  "offsets": {
+   "q35-fair": 6897,
+   "ppv6": 6893
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "person"
+   ],
+   "ppv6": [
+    "peraon"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 87,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "title",
+  "ppv6": "tille",
+  "span": {
+   "q35-fair": [
+    1168,
+    1169
+   ],
+   "ppv6": [
+    1173,
+    1174
+   ]
+  },
+  "offsets": {
+   "q35-fair": 6952,
+   "ppv6": 6947
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "title"
+   ],
+   "ppv6": [
+    "tille"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 89,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "premises",
+  "ppv6": "premiaes",
+  "span": {
+   "q35-fair": [
+    1223,
+    1224
+   ],
+   "ppv6": [
+    1228,
+    1229
+   ]
+  },
+  "offsets": {
+   "q35-fair": 7241,
+   "ppv6": 7233
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "premises"
+   ],
+   "ppv6": [
+    "premiaes"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 91,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "obtaining",
+  "ppv6": "obtain- ing",
+  "span": {
+   "q35-fair": [
+    1226,
+    1227
+   ],
+   "ppv6": [
+    1231,
+    1233
+   ]
+  },
+  "offsets": {
+   "q35-fair": 7264,
+   "ppv6": 7256
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "obtaining"
+   ],
+   "ppv6": [
+    "obtain",
+    "ing"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 93,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "receive",
+  "ppv6": "recelve",
+  "span": {
+   "q35-fair": [
+    1253,
+    1254
+   ],
+   "ppv6": [
+    1259,
+    1260
+   ]
+  },
+  "offsets": {
+   "q35-fair": 7417,
+   "ppv6": 7410
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "receive"
+   ],
+   "ppv6": [
+    "recelve"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 95,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "this",
+  "ppv6": "thia",
+  "span": {
+   "q35-fair": [
+    1258,
+    1259
+   ],
+   "ppv6": [
+    1264,
+    1265
+   ]
+  },
+  "offsets": {
+   "q35-fair": 7449,
+   "ppv6": 7442
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "this"
+   ],
+   "ppv6": [
+    "thia"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 97,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "receive",
+  "ppv6": "recelve",
+  "span": {
+   "q35-fair": [
+    1266,
+    1267
+   ],
+   "ppv6": [
+    1272,
+    1273
+   ]
+  },
+  "offsets": {
+   "q35-fair": 7490,
+   "ppv6": 7483
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "receive"
+   ],
+   "ppv6": [
+    "recelve"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p004",
+  "run_index": 99,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "purpose",
+  "ppv6": "purpone",
+  "span": {
+   "q35-fair": [
+    1279,
+    1280
+   ],
+   "ppv6": [
+    1285,
+    1286
+   ]
+  },
+  "offsets": {
+   "q35-fair": 7556,
+   "ppv6": 7549
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "purpose"
+   ],
+   "ppv6": [
+    "purpone"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p005",
+  "run_index": 0,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1399,
+  "scale": "block",
+  "ppv6": "REC. 471PAGE 26 the cost of any improvements heretofore made or now being mado in and under the premisea hereby mortgaged and will apply the same firat to the payment of the cost of the improvement before using any part of the total of the same for any other purpose. 13. Thet ihe Mortgagor will keep the improvements now existing or hereafter erected on the mortgaged premises, in- sured as may be required from time to time by the Mortgagee against loss by fire and other hazards, casualties, and con- tingencies in such amounts and for such periods as it may require and will pay promptly, when due, any premiums on such insurance provision for payment of which has not been made hereinbefore; that he will assign and deliver alf insurance policles to the Mortgagee; and that he will reimburse the Mortgagee for any and sll insurance premiums paid by the Mort- zagee upon the Mortgagor's default in so insuring the buildings, paying the premiums or in so assigning and delivering the policies. All insurance shall be carried in companies approved by the Mortgagee and the policies and renewals thereof shali be held by it and have attached thereto loss payable clouses in favor of and in form acceptable to the Mortgagee. In event of toss he will give immediate notice by mall to the Mortgagee who may make proof of loss if not made promptly by the Mortgagor, and each insurance company concerned is hereby muthorized and directed to make payment for such loss directly to the Mortgageo instead of to the Mortgagor and the Mortgagee jointly, and the inmurance proceeds, or ony part thereof, may be applied by the Mortgagee at its option, either to the reduction of the indebtednens hereby secured or to the restoration or repair of the property damage. In event of foreclosure of this mortgage or other transfer of title to the mortgaged property An extinguishment of the debt secured hereby, allright, title, and interest of the Mortgagor in and to any insurance policies then in force shall pass to the purchaser or grantee. 14. The Mortgagor further agrees that should this mortgage and the bond secured hereby not be eligible for insurance under the National Housing Act within ninety days from the date hereof (written statement of any officer of the Department of Housing and Urban Development or authorized agent of the Secretary of Housing and Urban Development dated subsequent to the aforesaid time from the date of this mortgage, declining to insure said bond and this mortgage, being deemed conclusive proof of such ineligibility), the Mortgagee or the holder of the bond may, at its option, declare all sums secured hereby immediately due and payable. 15. The Mortgagor covenants and ugrees that so long as this mortguge and the said bond secured hereby are insured under the provisions of the National Housing Act, he will not execute or file for record any instrument which imposes a restriction upon the sale or occupancy of the mortgaged property on the basis of race, color, or creed. Upon mny violation of this undertaking, the Mortgagee may, at its option, declare the unpaid balance of the debt secured hereby immediately due and payable. 16. That upon any default by the Mortgagor in the compliance with, or performance of, mny of the terms, covenants, or conditions of this mortgage or of the bond secured hereby, the Mortgagee may at its option remedy such default; and that all payments made by the Mortgagee to remedy a default by the Mortgagor as afuresaid (including reasonable attomeys' fees) and the total of any payment or payments due from the Mortgagor to the Mortgagee and in default, together with in- terest thereon at the rate set forth in the bond secured hereby shall be added to the debt secured by this mortgage and shall be repaid to the Mortgagee upon demand. Any such sum and the interest thereon shall be a lien on the premises, prior to eny other lien attaching or accruing aubsequent to the lien of this mortgage. 17. That the whole of the said principal sum and of any other sums of money secured by this mortgage shall, forth- with or thereafter, at the option of the Mortgagee, become due and payable upon the happening of elther ofthe following events, irrespective of whether or not the same be remedied by the Mortgagee: (a) Fallure to pay in full any aggregate monthly payment provided for in paragraph 2 hereof prior to the due date of the next such monthly payment. (b) Fallure of the Mortgagor to perform or comply with any other covenant, agreement, term, or condition of this mort- gage or of the bond secured hereby in accordance with the terms hereof and thereof. 18. In the event of the passage after the date of this mortgage of any law of the State of New York, deducting from the value of land for the purpose of taxation any lien thereon, or changing in any way the laws for the taxation of mortgages or debts secured by mortgage for State or local purposes, or the manner of the collection of any such taxes, so as to affect this mortgage, the holder of this mortgage and of the debt which it secures, shall have the right to give thirty (30) days' written notice to the owner of the mortgaged premises requiring the payment of the mortgage debt If such notice be given the said debt shall become due, payable, and collectible at the expiration of said thirty (30) days. 19. That after any default hereunder, the Mortgagor or any subsequent owner shall, upon demand, surrender possesslon of the premises to the holder of this mortgage, and the holder of this mortgage may enter upon the premises and let the seme and collect all the rents therefrom, which are due, or to become due, and apply the same, after payment of all charges and expenses on account of the indebtedness hereby secured; and the said rents and all the leases existing at the time of such default, in the event of any such default, are hereby essigned to the holder of this mortgage as further security for the pay- ment of said indebtedness. The holder of this mortgage may also disposvess, by the usual summary proceedings, any tenant defmulting in the payment to the holder of this mortgage of any rent. In the event that the Mortgagor or any subsequentowner of said premises occuples the same, the Mortgagor agrees for himself and for such owner to surtender possession of the premises to the holder of this mortgage inmedlately upon any default hereunder and if such Mortgagor or subaequent owner remains in poasesslon after any defauit the possession shall be as tenant of the holder of this mortgage and the Mortgagor or such subsequent owner agrees to pay in advance upon demand to the holder of this mortgage as a roasonable monthly rent- al for the premises an amount at least equivalent to one-twelfth (1/12) of the aggregate of the twelve monthly instaflments payable In the then current year, plus the aotual amount of the annual ground rent, taxes, assessments, water rates, and in- surance premlums for such year not covered by the aforesaid monthly paymente, and in default of so doing such Mortgagor or subsequent owner may also be dispossessed by the usual summary proceedings. This covenant shallbecome effective immediately after the happening of any such default, solely on the determination of the then holder of this mortgage, who ahall give notice of such determination to the Mortgagor or aubsequent owner of the mortgaged premises, In case of fore- closure and the appointment of a receiver of the rents, this covenant shall inure to the benefit of such receiver. 20. That the hoider of this mortgage in any action to foreclose it, shall be entitled to the appointment of a recelver without notice, as a matter of right and wlthout regard to the value of the mortgaged premises, or the solvency or insolvency of any person or persone liable for the payment of the mortgage indebtedness. If more than one person joins in the execution of this mortgage, and if any be of the female sex, the relative words here- In shell be read as if written in the plural, or in the feminine gender, as the case may be.",
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppv6": [
+    "rec",
+    "471page",
+    "26",
+    "the",
+    "cost",
+    "of",
+    "any",
+    "improvements",
+    "heretofore",
+    "made",
+    "or",
+    "now",
+    "being",
+    "mado",
+    "in",
+    "and",
+    "under",
+    "the",
+    "premisea",
+    "hereby",
+    "mortgaged",
+    "and",
+    "will",
+    "apply",
+    "the",
+    "same",
+    "firat",
+    "to",
+    "the",
+    "payment",
+    "of",
+    "the",
+    "cost",
+    "of",
+    "the",
+    "improvement",
+    "before",
+    "using",
+    "any",
+    "part",
+    "of",
+    "the",
+    "total",
+    "of",
+    "the",
+    "same",
+    "for",
+    "any",
+    "other",
+    "purpose",
+    "13",
+    "thet",
+    "ihe",
+    "mortgagor",
+    "will",
+    "keep",
+    "the",
+    "improvements",
+    "now",
+    "existing",
+    "or",
+    "hereafter",
+    "erected",
+    "on",
+    "the",
+    "mortgaged",
+    "premises",
+    "in",
+    "sured",
+    "as",
+    "may",
+    "be",
+    "required",
+    "from",
+    "time",
+    "to",
+    "time",
+    "by",
+    "the",
+    "mortgagee",
+    "against",
+    "loss",
+    "by",
+    "fire",
+    "and",
+    "other",
+    "hazards",
+    "casualties",
+    "and",
+    "con",
+    "tingencies",
+    "in",
+    "such",
+    "amounts",
+    "and",
+    "for",
+    "such",
+    "periods",
+    "as",
+    "it",
+    "may",
+    "require",
+    "and",
+    "will",
+    "pay",
+    "promptly",
+    "when",
+    "due",
+    "any",
+    "premiums",
+    "on",
+    "such",
+    "insurance",
+    "provision",
+    "for",
+    "payment",
+    "of",
+    "which",
+    "has",
+    "not",
+    "been",
+    "made",
+    "hereinbefore",
+    "that",
+    "he",
+    "will",
+    "assign",
+    "and",
+    "deliver",
+    "alf",
+    "insurance",
+    "policles",
+    "to",
+    "the",
+    "mortgagee",
+    "and",
+    "that",
+    "he",
+    "will",
+    "reimburse",
+    "the",
+    "mortgagee",
+    "for",
+    "any",
+    "and",
+    "sll",
+    "insurance",
+    "premiums",
+    "paid",
+    "by",
+    "the",
+    "mort",
+    "zagee",
+    "upon",
+    "the",
+    "mortgagors",
+    "default",
+    "in",
+    "so",
+    "insuring",
+    "the",
+    "buildings",
+    "paying",
+    "the",
+    "premiums",
+    "or",
+    "in",
+    "so",
+    "assigning",
+    "and",
+    "delivering",
+    "the",
+    "policies",
+    "all",
+    "insurance",
+    "shall",
+    "be",
+    "carried",
+    "in",
+    "companies",
+    "approved",
+    "by",
+    "the",
+    "mortgagee",
+    "and",
+    "the",
+    "policies",
+    "and",
+    "renewals",
+    "thereof",
+    "shali",
+    "be",
+    "held",
+    "by",
+    "it",
+    "and",
+    "have",
+    "attached",
+    "thereto",
+    "loss",
+    "payable",
+    "clouses",
+    "in",
+    "favor",
+    "of",
+    "and",
+    "in",
+    "form",
+    "acceptable",
+    "to",
+    "the",
+    "mortgagee",
+    "in",
+    "event",
+    "of",
+    "toss",
+    "he",
+    "will",
+    "give",
+    "immediate",
+    "notice",
+    "by",
+    "mall",
+    "to",
+    "the",
+    "mortgagee",
+    "who",
+    "may",
+    "make",
+    "proof",
+    "of",
+    "loss",
+    "if",
+    "not",
+    "made",
+    "promptly",
+    "by",
+    "the",
+    "mortgagor",
+    "and",
+    "each",
+    "insurance",
+    "company",
+    "concerned",
+    "is",
+    "hereby",
+    "muthorized",
+    "and",
+    "directed",
+    "to",
+    "make",
+    "payment",
+    "for",
+    "such",
+    "loss",
+    "directly",
+    "to",
+    "the",
+    "mortgageo",
+    "instead",
+    "of",
+    "to",
+    "the",
+    "mortgagor",
+    "and",
+    "the",
+    "mortgagee",
+    "jointly",
+    "and",
+    "the",
+    "inmurance",
+    "proceeds",
+    "or",
+    "ony",
+    "part",
+    "thereof",
+    "may",
+    "be",
+    "applied",
+    "by",
+    "the",
+    "mortgagee",
+    "at",
+    "its",
+    "option",
+    "either",
+    "to",
+    "the",
+    "reduction",
+    "of",
+    "the",
+    "indebtednens",
+    "hereby",
+    "secured",
+    "or",
+    "to",
+    "the",
+    "restoration",
+    "or",
+    "repair",
+    "of",
+    "the",
+    "property",
+    "damage",
+    "in",
+    "event",
+    "of",
+    "foreclosure",
+    "of",
+    "this",
+    "mortgage",
+    "or",
+    "other",
+    "transfer",
+    "of",
+    "title",
+    "to",
+    "the",
+    "mortgaged",
+    "property",
+    "an",
+    "extinguishment",
+    "of",
+    "the",
+    "debt",
+    "secured",
+    "hereby",
+    "allright",
+    "title",
+    "and",
+    "interest",
+    "of",
+    "the",
+    "mortgagor",
+    "in",
+    "and",
+    "to",
+    "any",
+    "insurance",
+    "policies",
+    "then",
+    "in",
+    "force",
+    "shall",
+    "pass",
+    "to",
+    "the",
+    "purchaser",
+    "or",
+    "grantee",
+    "14",
+    "the",
+    "mortgagor",
+    "further",
+    "agrees",
+    "that",
+    "should",
+    "this",
+    "mortgage",
+    "and",
+    "the",
+    "bond",
+    "secured",
+    "hereby",
+    "not",
+    "be",
+    "eligible",
+    "for",
+    "insurance",
+    "under",
+    "the",
+    "national",
+    "housing",
+    "act",
+    "within",
+    "ninety",
+    "days",
+    "from",
+    "the",
+    "date",
+    "hereof",
+    "written",
+    "statement",
+    "of",
+    "any",
+    "officer",
+    "of",
+    "the",
+    "department",
+    "of",
+    "housing",
+    "and",
+    "urban",
+    "development",
+    "or",
+    "authorized",
+    "agent",
+    "of",
+    "the",
+    "secretary",
+    "of",
+    "housing",
+    "and",
+    "urban",
+    "development",
+    "dated",
+    "subsequent",
+    "to",
+    "the",
+    "aforesaid",
+    "time",
+    "from",
+    "the",
+    "date",
+    "of",
+    "this",
+    "mortgage",
+    "declining",
+    "to",
+    "insure",
+    "said",
+    "bond",
+    "and",
+    "this",
+    "mortgage",
+    "being",
+    "deemed",
+    "conclusive",
+    "proof",
+    "of",
+    "such",
+    "ineligibility",
+    "the",
+    "mortgagee",
+    "or",
+    "the",
+    "holder",
+    "of",
+    "the",
+    "bond",
+    "may",
+    "at",
+    "its",
+    "option",
+    "declare",
+    "all",
+    "sums",
+    "secured",
+    "hereby",
+    "immediately",
+    "due",
+    "and",
+    "payable",
+    "15",
+    "the",
+    "mortgagor",
+    "covenants",
+    "and",
+    "ugrees",
+    "that",
+    "so",
+    "long",
+    "as",
+    "this",
+    "mortguge",
+    "and",
+    "the",
+    "said",
+    "bond",
+    "secured",
+    "hereby",
+    "are",
+    "insured",
+    "under",
+    "the",
+    "provisions",
+    "of",
+    "the",
+    "national",
+    "housing",
+    "act",
+    "he",
+    "will",
+    "not",
+    "execute",
+    "or",
+    "file",
+    "for",
+    "record",
+    "any",
+    "instrument",
+    "which",
+    "imposes",
+    "a",
+    "restriction",
+    "upon",
+    "the",
+    "sale",
+    "or",
+    "occupancy",
+    "of",
+    "the",
+    "mortgaged",
+    "property",
+    "on",
+    "the",
+    "basis",
+    "of",
+    "race",
+    "color",
+    "or",
+    "creed",
+    "upon",
+    "mny",
+    "violation",
+    "of",
+    "this",
+    "undertaking",
+    "the",
+    "mortgagee",
+    "may",
+    "at",
+    "its",
+    "option",
+    "declare",
+    "the",
+    "unpaid",
+    "balance",
+    "of",
+    "the",
+    "debt",
+    "secured",
+    "hereby",
+    "immediately",
+    "due",
+    "and",
+    "payable",
+    "16",
+    "that",
+    "upon",
+    "any",
+    "default",
+    "by",
+    "the",
+    "mortgagor",
+    "in",
+    "the",
+    "compliance",
+    "with",
+    "or",
+    "performance",
+    "of",
+    "mny",
+    "of",
+    "the",
+    "terms",
+    "covenants",
+    "or",
+    "conditions",
+    "of",
+    "this",
+    "mortgage",
+    "or",
+    "of",
+    "the",
+    "bond",
+    "secured",
+    "hereby",
+    "the",
+    "mortgagee",
+    "may",
+    "at",
+    "its",
+    "option",
+    "remedy",
+    "such",
+    "default",
+    "and",
+    "that",
+    "all",
+    "payments",
+    "made",
+    "by",
+    "the",
+    "mortgagee",
+    "to",
+    "remedy",
+    "a",
+    "default",
+    "by",
+    "the",
+    "mortgagor",
+    "as",
+    "afuresaid",
+    "including",
+    "reasonable",
+    "attomeys",
+    "fees",
+    "and",
+    "the",
+    "total",
+    "of",
+    "any",
+    "payment",
+    "or",
+    "payments",
+    "due",
+    "from",
+    "the",
+    "mortgagor",
+    "to",
+    "the",
+    "mortgagee",
+    "and",
+    "in",
+    "default",
+    "together",
+    "with",
+    "in",
+    "terest",
+    "thereon",
+    "at",
+    "the",
+    "rate",
+    "set",
+    "forth",
+    "in",
+    "the",
+    "bond",
+    "secured",
+    "hereby",
+    "shall",
+    "be",
+    "added",
+    "to",
+    "the",
+    "debt",
+    "secured",
+    "by",
+    "this",
+    "mortgage",
+    "and",
+    "shall",
+    "be",
+    "repaid",
+    "to",
+    "the",
+    "mortgagee",
+    "upon",
+    "demand",
+    "any",
+    "such",
+    "sum",
+    "and",
+    "the",
+    "interest",
+    "thereon",
+    "shall",
+    "be",
+    "a",
+    "lien",
+    "on",
+    "the",
+    "premises",
+    "prior",
+    "to",
+    "eny",
+    "other",
+    "lien",
+    "attaching",
+    "or",
+    "accruing",
+    "aubsequent",
+    "to",
+    "the",
+    "lien",
+    "of",
+    "this",
+    "mortgage",
+    "17",
+    "that",
+    "the",
+    "whole",
+    "of",
+    "the",
+    "said",
+    "principal",
+    "sum",
+    "and",
+    "of",
+    "any",
+    "other",
+    "sums",
+    "of",
+    "money",
+    "secured",
+    "by",
+    "this",
+    "mortgage",
+    "shall",
+    "forth",
+    "with",
+    "or",
+    "thereafter",
+    "at",
+    "the",
+    "option",
+    "of",
+    "the",
+    "mortgagee",
+    "become",
+    "due",
+    "and",
+    "payable",
+    "upon",
+    "the",
+    "happening",
+    "of",
+    "elther",
+    "ofthe",
+    "following",
+    "events",
+    "irrespective",
+    "of",
+    "whether",
+    "or",
+    "not",
+    "the",
+    "same",
+    "be",
+    "remedied",
+    "by",
+    "the",
+    "mortgagee",
+    "a",
+    "fallure",
+    "to",
+    "pay",
+    "in",
+    "full",
+    "any",
+    "aggregate",
+    "monthly",
+    "payment",
+    "provided",
+    "for",
+    "in",
+    "paragraph",
+    "2",
+    "hereof",
+    "prior",
+    "to",
+    "the",
+    "due",
+    "date",
+    "of",
+    "the",
+    "next",
+    "such",
+    "monthly",
+    "payment",
+    "b",
+    "fallure",
+    "of",
+    "the",
+    "mortgagor",
+    "to",
+    "perform",
+    "or",
+    "comply",
+    "with",
+    "any",
+    "other",
+    "covenant",
+    "agreement",
+    "term",
+    "or",
+    "condition",
+    "of",
+    "this",
+    "mort",
+    "gage",
+    "or",
+    "of",
+    "the",
+    "bond",
+    "secured",
+    "hereby",
+    "in",
+    "accordance",
+    "with",
+    "the",
+    "terms",
+    "hereof",
+    "and",
+    "thereof",
+    "18",
+    "in",
+    "the",
+    "event",
+    "of",
+    "the",
+    "passage",
+    "after",
+    "the",
+    "date",
+    "of",
+    "this",
+    "mortgage",
+    "of",
+    "any",
+    "law",
+    "of",
+    "the",
+    "state",
+    "of",
+    "new",
+    "york",
+    "deducting",
+    "from",
+    "the",
+    "value",
+    "of",
+    "land",
+    "for",
+    "the",
+    "purpose",
+    "of",
+    "taxation",
+    "any",
+    "lien",
+    "thereon",
+    "or",
+    "changing",
+    "in",
+    "any",
+    "way",
+    "the",
+    "laws",
+    "for",
+    "the",
+    "taxation",
+    "of",
+    "mortgages",
+    "or",
+    "debts",
+    "secured",
+    "by",
+    "mortgage",
+    "for",
+    "state",
+    "or",
+    "local",
+    "purposes",
+    "or",
+    "the",
+    "manner",
+    "of",
+    "the",
+    "collection",
+    "of",
+    "any",
+    "such",
+    "taxes",
+    "so",
+    "as",
+    "to",
+    "affect",
+    "this",
+    "mortgage",
+    "the",
+    "holder",
+    "of",
+    "this",
+    "mortgage",
+    "and",
+    "of",
+    "the",
+    "debt",
+    "which",
+    "it",
+    "secures",
+    "shall",
+    "have",
+    "the",
+    "right",
+    "to",
+    "give",
+    "thirty",
+    "30",
+    "days",
+    "written",
+    "notice",
+    "to",
+    "the",
+    "owner",
+    "of",
+    "the",
+    "mortgaged",
+    "premises",
+    "requiring",
+    "the",
+    "payment",
+    "of",
+    "the",
+    "mortgage",
+    "debt",
+    "if",
+    "such",
+    "notice",
+    "be",
+    "given",
+    "the",
+    "said",
+    "debt",
+    "shall",
+    "become",
+    "due",
+    "payable",
+    "and",
+    "collectible",
+    "at",
+    "the",
+    "expiration",
+    "of",
+    "said",
+    "thirty",
+    "30",
+    "days",
+    "19",
+    "that",
+    "after",
+    "any",
+    "default",
+    "hereunder",
+    "the",
+    "mortgagor",
+    "or",
+    "any",
+    "subsequent",
+    "owner",
+    "shall",
+    "upon",
+    "demand",
+    "surrender",
+    "possesslon",
+    "of",
+    "the",
+    "premises",
+    "to",
+    "the",
+    "holder",
+    "of",
+    "this",
+    "mortgage",
+    "and",
+    "the",
+    "holder",
+    "of",
+    "this",
+    "mortgage",
+    "may",
+    "enter",
+    "upon",
+    "the",
+    "premises",
+    "and",
+    "let",
+    "the",
+    "seme",
+    "and",
+    "collect",
+    "all",
+    "the",
+    "rents",
+    "therefrom",
+    "which",
+    "are",
+    "due",
+    "or",
+    "to",
+    "become",
+    "due",
+    "and",
+    "apply",
+    "the",
+    "same",
+    "after",
+    "payment",
+    "of",
+    "all",
+    "charges",
+    "and",
+    "expenses",
+    "on",
+    "account",
+    "of",
+    "the",
+    "indebtedness",
+    "hereby",
+    "secured",
+    "and",
+    "the",
+    "said",
+    "rents",
+    "and",
+    "all",
+    "the",
+    "leases",
+    "existing",
+    "at",
+    "the",
+    "time",
+    "of",
+    "such",
+    "default",
+    "in",
+    "the",
+    "event",
+    "of",
+    "any",
+    "such",
+    "default",
+    "are",
+    "hereby",
+    "essigned",
+    "to",
+    "the",
+    "holder",
+    "of",
+    "this",
+    "mortgage",
+    "as",
+    "further",
+    "security",
+    "for",
+    "the",
+    "pay",
+    "ment",
+    "of",
+    "said",
+    "indebtedness",
+    "the",
+    "holder",
+    "of",
+    "this",
+    "mortgage",
+    "may",
+    "also",
+    "disposvess",
+    "by",
+    "the",
+    "usual",
+    "summary",
+    "proceedings",
+    "any",
+    "tenant",
+    "defmulting",
+    "in",
+    "the",
+    "payment",
+    "to",
+    "the",
+    "holder",
+    "of",
+    "this",
+    "mortgage",
+    "of",
+    "any",
+    "rent",
+    "in",
+    "the",
+    "event",
+    "that",
+    "the",
+    "mortgagor",
+    "or",
+    "any",
+    "subsequentowner",
+    "of",
+    "said",
+    "premises",
+    "occuples",
+    "the",
+    "same",
+    "the",
+    "mortgagor",
+    "agrees",
+    "for",
+    "himself",
+    "and",
+    "for",
+    "such",
+    "owner",
+    "to",
+    "surtender",
+    "possession",
+    "of",
+    "the",
+    "premises",
+    "to",
+    "the",
+    "holder",
+    "of",
+    "this",
+    "mortgage",
+    "inmedlately",
+    "upon",
+    "any",
+    "default",
+    "hereunder",
+    "and",
+    "if",
+    "such",
+    "mortgagor",
+    "or",
+    "subaequent",
+    "owner",
+    "remains",
+    "in",
+    "poasesslon",
+    "after",
+    "any",
+    "defauit",
+    "the",
+    "possession",
+    "shall",
+    "be",
+    "as",
+    "tenant",
+    "of",
+    "the",
+    "holder",
+    "of",
+    "this",
+    "mortgage",
+    "and",
+    "the",
+    "mortgagor",
+    "or",
+    "such",
+    "subsequent",
+    "owner",
+    "agrees",
+    "to",
+    "pay",
+    "in",
+    "advance",
+    "upon",
+    "demand",
+    "to",
+    "the",
+    "holder",
+    "of",
+    "this",
+    "mortgage",
+    "as",
+    "a",
+    "roasonable",
+    "monthly",
+    "rent",
+    "al",
+    "for",
+    "the",
+    "premises",
+    "an",
+    "amount",
+    "at",
+    "least",
+    "equivalent",
+    "to",
+    "onetwelfth",
+    "112",
+    "of",
+    "the",
+    "aggregate",
+    "of",
+    "the",
+    "twelve",
+    "monthly",
+    "instaflments",
+    "payable",
+    "in",
+    "the",
+    "then",
+    "current",
+    "year",
+    "plus",
+    "the",
+    "aotual",
+    "amount",
+    "of",
+    "the",
+    "annual",
+    "ground",
+    "rent",
+    "taxes",
+    "assessments",
+    "water",
+    "rates",
+    "and",
+    "in",
+    "surance",
+    "premlums",
+    "for",
+    "such",
+    "year",
+    "not",
+    "covered",
+    "by",
+    "the",
+    "aforesaid",
+    "monthly",
+    "paymente",
+    "and",
+    "in",
+    "default",
+    "of",
+    "so",
+    "doing",
+    "such",
+    "mortgagor",
+    "or",
+    "subsequent",
+    "owner",
+    "may",
+    "also",
+    "be",
+    "dispossessed",
+    "by",
+    "the",
+    "usual",
+    "summary",
+    "proceedings",
+    "this",
+    "covenant",
+    "shallbecome",
+    "effective",
+    "immediately",
+    "after",
+    "the",
+    "happening",
+    "of",
+    "any",
+    "such",
+    "default",
+    "solely",
+    "on",
+    "the",
+    "determination",
+    "of",
+    "the",
+    "then",
+    "holder",
+    "of",
+    "this",
+    "mortgage",
+    "who",
+    "ahall",
+    "give",
+    "notice",
+    "of",
+    "such",
+    "determination",
+    "to",
+    "the",
+    "mortgagor",
+    "or",
+    "aubsequent",
+    "owner",
+    "of",
+    "the",
+    "mortgaged",
+    "premises",
+    "in",
+    "case",
+    "of",
+    "fore",
+    "closure",
+    "and",
+    "the",
+    "appointment",
+    "of",
+    "a",
+    "receiver",
+    "of",
+    "the",
+    "rents",
+    "this",
+    "covenant",
+    "shall",
+    "inure",
+    "to",
+    "the",
+    "benefit",
+    "of",
+    "such",
+    "receiver",
+    "20",
+    "that",
+    "the",
+    "hoider",
+    "of",
+    "this",
+    "mortgage",
+    "in",
+    "any",
+    "action",
+    "to",
+    "foreclose",
+    "it",
+    "shall",
+    "be",
+    "entitled",
+    "to",
+    "the",
+    "appointment",
+    "of",
+    "a",
+    "recelver",
+    "without",
+    "notice",
+    "as",
+    "a",
+    "matter",
+    "of",
+    "right",
+    "and",
+    "wlthout",
+    "regard",
+    "to",
+    "the",
+    "value",
+    "of",
+    "the",
+    "mortgaged",
+    "premises",
+    "or",
+    "the",
+    "solvency",
+    "or",
+    "insolvency",
+    "of",
+    "any",
+    "person",
+    "or",
+    "persone",
+    "liable",
+    "for",
+    "the",
+    "payment",
+    "of",
+    "the",
+    "mortgage",
+    "indebtedness",
+    "if",
+    "more",
+    "than",
+    "one",
+    "person",
+    "joins",
+    "in",
+    "the",
+    "execution",
+    "of",
+    "this",
+    "mortgage",
+    "and",
+    "if",
+    "any",
+    "be",
+    "of",
+    "the",
+    "female",
+    "sex",
+    "the",
+    "relative",
+    "words",
+    "here",
+    "in",
+    "shell",
+    "be",
+    "read",
+    "as",
+    "if",
+    "written",
+    "in",
+    "the",
+    "plural",
+    "or",
+    "in",
+    "the",
+    "feminine",
+    "gender",
+    "as",
+    "the",
+    "case",
+    "may",
+    "be"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 1,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "mortgage has",
+  "ppv6": "mortgege hos",
+  "span": {
+   "q35-fair": [
+    8,
+    10
+   ],
+   "ppv6": [
+    8,
+    10
+   ]
+  },
+  "offsets": {
+   "q35-fair": 43,
+   "ppv6": 42
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "mortgage",
+    "has"
+   ],
+   "ppv6": [
+    "mortgege",
+    "hos"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 3,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": "MICHAEL WINNICKI (L.S.)",
+  "ppv6": "Rommualde Wimmedee.s.)",
+  "span": {
+   "q35-fair": [
+    19,
+    22
+   ],
+   "ppv6": [
+    19,
+    21
+   ]
+  },
+  "offsets": {
+   "q35-fair": 119,
+   "ppv6": 116
+  },
+  "elsewhere": {
+   "q35-fair": 2,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "michael"
+   ],
+   "ppv6": [
+    "rommualde",
+    "wimmedees"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 5,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 5,
+  "scale": "phrase",
+  "q35-fair": "AQUINA HURING",
+  "ppv6": "ROMULDA WINNICKI Amm hnecon (L.S.)",
+  "span": {
+   "q35-fair": [
+    25,
+    27
+   ],
+   "ppv6": [
+    24,
+    29
+   ]
+  },
+  "offsets": {
+   "q35-fair": 160,
+   "ppv6": 154
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 3
+  },
+  "unmatched": {
+   "q35-fair": [
+    "aquina",
+    "huring"
+   ],
+   "ppv6": [
+    "amm",
+    "hnecon"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 7,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "OF NEW",
+  "ppv6": "ONEW",
+  "span": {
+   "q35-fair": [
+    28,
+    30
+   ],
+   "ppv6": [
+    30,
+    31
+   ]
+  },
+  "offsets": {
+   "q35-fair": 181,
+   "ppv6": 195
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "of",
+    "new"
+   ],
+   "ppv6": [
+    "onew"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 9,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppv6": "SS:",
+  "span": {
+   "q35-fair": [
+    31,
+    31
+   ],
+   "ppv6": [
+    32,
+    33
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppv6": 206
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppv6": [
+    "ss"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 19,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "individuals",
+  "ppv6": "individual",
+  "span": {
+   "q35-fair": [
+    68,
+    69
+   ],
+   "ppv6": [
+    71,
+    72
+   ]
+  },
+  "offsets": {
+   "q35-fair": 403,
+   "ppv6": 411
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "individuals"
+   ],
+   "ppv6": [
+    "individual"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 21,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppv6": "Danids. sdihma",
+  "span": {
+   "q35-fair": [
+    85,
+    85
+   ],
+   "ppv6": [
+    88,
+    90
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppv6": 528
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppv6": [
+    "danids",
+    "sdihma"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 23,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 4,
+  "scale": "phrase",
+  "q35-fair": "SIDHINA DAVID S. SIDHINA",
+  "ppv6": "SIDEAN",
+  "span": {
+   "q35-fair": [
+    87,
+    91
+   ],
+   "ppv6": [
+    92,
+    93
+   ]
+  },
+  "offsets": {
+   "q35-fair": 531,
+   "ppv6": 552
+  },
+  "elsewhere": {
+   "q35-fair": 1,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "sidhina",
+    "david",
+    "sidhina"
+   ],
+   "ppv6": [
+    "sidean"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 25,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": "Public, State",
+  "ppv6": "Pet F e",
+  "span": {
+   "q35-fair": [
+    92,
+    94
+   ],
+   "ppv6": [
+    94,
+    97
+   ]
+  },
+  "offsets": {
+   "q35-fair": 565,
+   "ppv6": 566
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "public",
+    "state"
+   ],
+   "ppv6": [
+    "pet",
+    "f",
+    "e"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 27,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "New",
+  "ppv6": "Now",
+  "span": {
+   "q35-fair": [
+    95,
+    96
+   ],
+   "ppv6": [
+    98,
+    99
+   ]
+  },
+  "offsets": {
+   "q35-fair": 582,
+   "ppv6": 577
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "new"
+   ],
+   "ppv6": [
+    "now"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 29,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "000-00 to",
+  "ppv6": null,
+  "span": {
+   "q35-fair": [
+    98,
+    100
+   ],
+   "ppv6": [
+    101,
+    101
+   ]
+  },
+  "offsets": {
+   "q35-fair": 596,
+   "ppv6": null
+  },
+  "elsewhere": {
+   "q35-fair": 1,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "00000"
+   ],
+   "ppv6": []
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 31,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "Nassau",
+  "ppv6": "a au",
+  "span": {
+   "q35-fair": [
+    103,
+    104
+   ],
+   "ppv6": [
+    104,
+    106
+   ]
+  },
+  "offsets": {
+   "q35-fair": 624,
+   "ppv6": 607
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "nassau"
+   ],
+   "ppv6": [
+    "a",
+    "au"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 33,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "Expires",
+  "ppv6": "Expizes",
+  "span": {
+   "q35-fair": [
+    106,
+    107
+   ],
+   "ppv6": [
+    108,
+    109
+   ]
+  },
+  "offsets": {
+   "q35-fair": 644,
+   "ppv6": 624
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "expires"
+   ],
+   "ppv6": [
+    "expizes"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 35,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppv6": "L0aAN0",
+  "span": {
+   "q35-fair": [
+    110,
+    110
+   ],
+   "ppv6": [
+    112,
+    113
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppv6": 647
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppv6": [
+    "l0aan0"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 37,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 18,
+  "scale": "block",
+  "q35-fair": null,
+  "ppv6": "1N 50 9 t Ro TR SPRT ANMMANY en 05 6rd 17 Morgage II LOC VER. NOTSAO 3",
+  "span": {
+   "q35-fair": [
+    111,
+    111
+   ],
+   "ppv6": [
+    114,
+    132
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppv6": 657
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppv6": [
+    "1n",
+    "50",
+    "9",
+    "t",
+    "ro",
+    "tr",
+    "sprt",
+    "anmmany",
+    "en",
+    "05",
+    "6rd",
+    "17",
+    "morgage",
+    "ii",
+    "loc",
+    "ver",
+    "notsao",
+    "3"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p006",
+  "run_index": 39,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 547,
+  "scale": "block",
+  "q35-fair": "STATE OF NEW YORK Mortgage LOAN No. 4-19230 MICHAEL WINNICKI and ROMULDA WINNICKI, his wife, SPRINGFIELD EQUITIES LTD. REC. TAX $109 R & R PENINSULA NATIONAL BANK 165 Sheridan Boulevard Inwood, New York AMERICAN TITLE INSURANCE COMPANY GUARANTEED TITLE DIVISION REC. TAX OF $105 JUL-10-67 92394 JUL-10-67 92395 JUL-10-67 92396 JUL-10-67 92397 JUL-10-67 92398 JUL-10-67 92399 JUL-10-67 92400 JUL-10-67 92401 JUL-10-67 92402 JUL-10-67 92403 JUL-10-67 92404 JUL-10-67 92405 JUL-10-67 92406 JUL-10-67 92407 JUL-10-67 92408 JUL-10-67 92409 JUL-10-67 92410 JUL-10-67 92411 JUL-10-67 92412 JUL-10-67 92413 JUL-10-67 92414 JUL-10-67 92415 JUL-10-67 92416 JUL-10-67 92417 JUL-10-67 92418 JUL-10-67 92419 JUL-10-67 92420 JUL-10-67 92421 JUL-10-67 92422 JUL-10-67 92423 JUL-10-67 92424 JUL-10-67 92425 JUL-10-67 92426 JUL-10-67 92427 JUL-10-67 92428 JUL-10-67 92429 JUL-10-67 92430 JUL-10-67 92431 JUL-10-67 92432 JUL-10-67 92433 JUL-10-67 92434 JUL-10-67 92435 JUL-10-67 92436 JUL-10-67 92437 JUL-10-67 92438 JUL-10-67 92439 JUL-10-67 92440 JUL-10-67 92441 JUL-10-67 92442 JUL-10-67 92443 JUL-10-67 92444 JUL-10-67 92445 JUL-10-67 92446 JUL-10-67 92447 JUL-10-67 92448 JUL-10-67 92449 JUL-10-67 92450 JUL-10-67 92451 JUL-10-67 92452 JUL-10-67 92453 JUL-10-67 92454 JUL-10-67 92455 JUL-10-67 92456 JUL-10-67 92457 JUL-10-67 92458 JUL-10-67 92459 JUL-10-67 92460 JUL-10-67 92461 JUL-10-67 92462 JUL-10-67 92463 JUL-10-67 92464 JUL-10-67 92465 JUL-10-67 92466 JUL-10-67 92467 JUL-10-67 92468 JUL-10-67 92469 JUL-10-67 92470 JUL-10-67 92471 JUL-10-67 92472 JUL-10-67 92473 JUL-10-67 92474 JUL-10-67 92475 JUL-10-67 92476 JUL-10-67 92477 JUL-10-67 92478 JUL-10-67 92479 JUL-10-67 92480 JUL-10-67 92481 JUL-10-67 92482 JUL-10-67 92483 JUL-10-67 92484 JUL-10-67 92485 JUL-10-67 92486 JUL-10-67 92487 JUL-10-67 92488 JUL-10-67 92489 JUL-10-67 92490 JUL-10-67 92491 JUL-10-67 92492 JUL-10-67 92493 JUL-10-67 92494 JUL-10-67 92495 JUL-10-67 92496 JUL-10-67 92497 JUL-10-67 92498 JUL-10-67 92499 JUL-10-67 92500 JUL-10-67 92501 JUL-10-67 92502 JUL-10-67 92503 JUL-10-67 92504 JUL-10-67 92505 JUL-10-67 92506 JUL-10-67 92507 JUL-10-67 92508 JUL-10-67 92509 JUL-10-67 92510 JUL-10-67 92511 JUL-10-67 92512 JUL-10-67 92513 JUL-10-67 92514 JUL-10-67 92515 JUL-10-67 92516 JUL-10-67 92517 JUL-10-67 92518 JUL-10-67 92519 JUL-10-67 92520 JUL-10-67 92521 JUL-10-67 92522 JUL-10-67 92523 JUL-10-67 92524 JUL-10-67 92525 JUL-10-67 92526 JUL-10-67 92527 JUL-10-67 92528 JUL-10-67 92529 JUL-10-67 92530 JUL-10-67 92531 JUL-10-67 92532 JUL-10-67 92533 JUL-10-67 92534 JUL-10-67 92535 JUL-10-67 92536 JUL-10-67 92537 JUL-10-67 92538 JUL-10-67 92539 JUL-10-67 92540 JUL-10-67 92541 JUL-10-67 92542 JUL-10-67 92543 JUL-10-67 92544 JUL-10-67 92545 JUL-10-67 92546 JUL-10-67 92547 JUL-10-67 92548 JUL-10-67 92549 JUL-10-67 92550 JUL-10-67 92551 JUL-10-67 92552 JUL-10-67 92553 JUL-10-67 92554 JUL-10-67 92555 JUL-10-67 92556 JUL-10-67 92557 JUL-10-67 92558 JUL-10-67 92559 JUL-10-67 92560 JUL-10-67 92561 JUL-10-67 92562 JUL-10-67 92563 JUL-10-67 92564 JUL-10-67 92565 JUL-10-67 92566 JUL-10-67 92567 JUL-10-67 92568 JUL-10-67 92569 JUL-10-67 92570 JUL-10-67 92571 JUL-10-67 92572 JUL-10-67 92573 JUL-10-67 92574 JUL-10-67 92575 JUL-10-67 92576 JUL-10-67 92577 JUL-10-67 92578 JUL-10-67 92579 JUL-10-67 92580 JUL-10-67 92581 JUL-10-67 92582 JUL-10-67 92583 JUL-10-67 92584 JUL-10-67 92585 JUL-10-67 92586 JUL-10-67 92587 JUL-10-67 92588 JUL-10-67 92589 JUL-10-67 92590 JUL-10-67 92591 JUL-10-67 92592 JUL-10-67 92593 JUL-10-67 92594 JUL-10-67 92595 JUL-10-67 92596 JUL-10-67 92597 JUL-10-67 92598 JUL-10-67 92599 JUL-10-67 92600 JUL-10-67 92601 JUL-10-67 92602 JUL-10-67 92603 JUL-10-67 92604 JUL-10-67 92605 JUL-10-67 92606 JUL-10-67 92607 JUL-10-67 92608 JUL-10-67 92609 JUL-10-67 92610 JUL-10-67 92611 JUL-10-67 92612 JUL-10-67 92613 JUL-10-67 92614 JUL-10-67 92615 JUL-10-67 92616 JUL-10-67 92617 JUL-10-67 92618 JUL-10-67 92619 JUL-10-67 92620 JUL-10-67 92621 JUL-10-67 92622 JUL-10-67 92623 JUL-10-67 92624 JUL-10-67 92625 JUL-10-67 92626 JUL-10-67 92627 JUL-10-67 92628 JUL-10-67 92629 JUL-10-67 92630 JUL-10-67 92631 JUL-10-67 92632 JUL-10-67 92633 JUL-10-67 92634 JUL-10-67 92635 JUL-10-67 92636 JUL-10-67 92637 JUL-10-67 92638 JUL-10-67 92639 JUL-10-67 92640 JUL-10-67 92641 JUL-10-67 92642 JUL-10-67 92643 JUL-10-67 92644 JUL-10-67",
+  "ppv6": "Inrk TO S\u3064 RECOMEING TIA 101 2m 67 O Thisi bbb ty \u00e9nsssnaa s to e d 23c. d tor d oa tnand t beebbbbenrurrr. 2e Caucnty \u00e9igsonty ZCDD J10 1692301 106 TLID J0-1079285 2 \u3044a",
+  "span": {
+   "q35-fair": [
+    112,
+    659
+   ],
+   "ppv6": [
+    133,
+    169
+   ]
+  },
+  "offsets": {
+   "q35-fair": 680,
+   "ppv6": 735
+  },
+  "elsewhere": {
+   "q35-fair": 6,
+   "ppv6": 4
+  },
+  "unmatched": {
+   "q35-fair": [
+    "state",
+    "of",
+    "new",
+    "york",
+    "mortgage",
+    "loan",
+    "no",
+    "419230",
+    "michael",
+    "and",
+    "springfield",
+    "equities",
+    "ltd",
+    "rec",
+    "tax",
+    "109",
+    "r",
+    "r",
+    "peninsula",
+    "national",
+    "bank",
+    "165",
+    "sheridan",
+    "boulevard",
+    "inwood",
+    "new",
+    "york",
+    "american",
+    "title",
+    "insurance",
+    "company",
+    "guaranteed",
+    "title",
+    "division",
+    "rec",
+    "tax",
+    "of",
+    "105",
+    "jul1067",
+    "92394",
+    "jul1067",
+    "92395",
+    "jul1067",
+    "92396",
+    "jul1067",
+    "92397",
+    "jul1067",
+    "92398",
+    "jul1067",
+    "92399",
+    "jul1067",
+    "92400",
+    "jul1067",
+    "92401",
+    "jul1067",
+    "92402",
+    "jul1067",
+    "92403",
+    "jul1067",
+    "92404",
+    "jul1067",
+    "92405",
+    "jul1067",
+    "92406",
+    "jul1067",
+    "92407",
+    "jul1067",
+    "92408",
+    "jul1067",
+    "92409",
+    "jul1067",
+    "92410",
+    "jul1067",
+    "92411",
+    "jul1067",
+    "92412",
+    "jul1067",
+    "92413",
+    "jul1067",
+    "92414",
+    "jul1067",
+    "92415",
+    "jul1067",
+    "92416",
+    "jul1067",
+    "92417",
+    "jul1067",
+    "92418",
+    "jul1067",
+    "92419",
+    "jul1067",
+    "92420",
+    "jul1067",
+    "92421",
+    "jul1067",
+    "92422",
+    "jul1067",
+    "92423",
+    "jul1067",
+    "92424",
+    "jul1067",
+    "92425",
+    "jul1067",
+    "92426",
+    "jul1067",
+    "92427",
+    "jul1067",
+    "92428",
+    "jul1067",
+    "92429",
+    "jul1067",
+    "92430",
+    "jul1067",
+    "92431",
+    "jul1067",
+    "92432",
+    "jul1067",
+    "92433",
+    "jul1067",
+    "92434",
+    "jul1067",
+    "92435",
+    "jul1067",
+    "92436",
+    "jul1067",
+    "92437",
+    "jul1067",
+    "92438",
+    "jul1067",
+    "92439",
+    "jul1067",
+    "92440",
+    "jul1067",
+    "92441",
+    "jul1067",
+    "92442",
+    "jul1067",
+    "92443",
+    "jul1067",
+    "92444",
+    "jul1067",
+    "92445",
+    "jul1067",
+    "92446",
+    "jul1067",
+    "92447",
+    "jul1067",
+    "92448",
+    "jul1067",
+    "92449",
+    "jul1067",
+    "92450",
+    "jul1067",
+    "92451",
+    "jul1067",
+    "92452",
+    "jul1067",
+    "92453",
+    "jul1067",
+    "92454",
+    "jul1067",
+    "92455",
+    "jul1067",
+    "92456",
+    "jul1067",
+    "92457",
+    "jul1067",
+    "92458",
+    "jul1067",
+    "92459",
+    "jul1067",
+    "92460",
+    "jul1067",
+    "92461",
+    "jul1067",
+    "92462",
+    "jul1067",
+    "92463",
+    "jul1067",
+    "92464",
+    "jul1067",
+    "92465",
+    "jul1067",
+    "92466",
+    "jul1067",
+    "92467",
+    "jul1067",
+    "92468",
+    "jul1067",
+    "92469",
+    "jul1067",
+    "92470",
+    "jul1067",
+    "92471",
+    "jul1067",
+    "92472",
+    "jul1067",
+    "92473",
+    "jul1067",
+    "92474",
+    "jul1067",
+    "92475",
+    "jul1067",
+    "92476",
+    "jul1067",
+    "92477",
+    "jul1067",
+    "92478",
+    "jul1067",
+    "92479",
+    "jul1067",
+    "92480",
+    "jul1067",
+    "92481",
+    "jul1067",
+    "92482",
+    "jul1067",
+    "92483",
+    "jul1067",
+    "92484",
+    "jul1067",
+    "92485",
+    "jul1067",
+    "92486",
+    "jul1067",
+    "92487",
+    "jul1067",
+    "92488",
+    "jul1067",
+    "92489",
+    "jul1067",
+    "92490",
+    "jul1067",
+    "92491",
+    "jul1067",
+    "92492",
+    "jul1067",
+    "92493",
+    "jul1067",
+    "92494",
+    "jul1067",
+    "92495",
+    "jul1067",
+    "92496",
+    "jul1067",
+    "92497",
+    "jul1067",
+    "92498",
+    "jul1067",
+    "92499",
+    "jul1067",
+    "92500",
+    "jul1067",
+    "92501",
+    "jul1067",
+    "92502",
+    "jul1067",
+    "92503",
+    "jul1067",
+    "92504",
+    "jul1067",
+    "92505",
+    "jul1067",
+    "92506",
+    "jul1067",
+    "92507",
+    "jul1067",
+    "92508",
+    "jul1067",
+    "92509",
+    "jul1067",
+    "92510",
+    "jul1067",
+    "92511",
+    "jul1067",
+    "92512",
+    "jul1067",
+    "92513",
+    "jul1067",
+    "92514",
+    "jul1067",
+    "92515",
+    "jul1067",
+    "92516",
+    "jul1067",
+    "92517",
+    "jul1067",
+    "92518",
+    "jul1067",
+    "92519",
+    "jul1067",
+    "92520",
+    "jul1067",
+    "92521",
+    "jul1067",
+    "92522",
+    "jul1067",
+    "92523",
+    "jul1067",
+    "92524",
+    "jul1067",
+    "92525",
+    "jul1067",
+    "92526",
+    "jul1067",
+    "92527",
+    "jul1067",
+    "92528",
+    "jul1067",
+    "92529",
+    "jul1067",
+    "92530",
+    "jul1067",
+    "92531",
+    "jul1067",
+    "92532",
+    "jul1067",
+    "92533",
+    "jul1067",
+    "92534",
+    "jul1067",
+    "92535",
+    "jul1067",
+    "92536",
+    "jul1067",
+    "92537",
+    "jul1067",
+    "92538",
+    "jul1067",
+    "92539",
+    "jul1067",
+    "92540",
+    "jul1067",
+    "92541",
+    "jul1067",
+    "92542",
+    "jul1067",
+    "92543",
+    "jul1067",
+    "92544",
+    "jul1067",
+    "92545",
+    "jul1067",
+    "92546",
+    "jul1067",
+    "92547",
+    "jul1067",
+    "92548",
+    "jul1067",
+    "92549",
+    "jul1067",
+    "92550",
+    "jul1067",
+    "92551",
+    "jul1067",
+    "92552",
+    "jul1067",
+    "92553",
+    "jul1067",
+    "92554",
+    "jul1067",
+    "92555",
+    "jul1067",
+    "92556",
+    "jul1067",
+    "92557",
+    "jul1067",
+    "92558",
+    "jul1067",
+    "92559",
+    "jul1067",
+    "92560",
+    "jul1067",
+    "92561",
+    "jul1067",
+    "92562",
+    "jul1067",
+    "92563",
+    "jul1067",
+    "92564",
+    "jul1067",
+    "92565",
+    "jul1067",
+    "92566",
+    "jul1067",
+    "92567",
+    "jul1067",
+    "92568",
+    "jul1067",
+    "92569",
+    "jul1067",
+    "92570",
+    "jul1067",
+    "92571",
+    "jul1067",
+    "92572",
+    "jul1067",
+    "92573",
+    "jul1067",
+    "92574",
+    "jul1067",
+    "92575",
+    "jul1067",
+    "92576",
+    "jul1067",
+    "92577",
+    "jul1067",
+    "92578",
+    "jul1067",
+    "92579",
+    "jul1067",
+    "92580",
+    "jul1067",
+    "92581",
+    "jul1067",
+    "92582",
+    "jul1067",
+    "92583",
+    "jul1067",
+    "92584",
+    "jul1067",
+    "92585",
+    "jul1067",
+    "92586",
+    "jul1067",
+    "92587",
+    "jul1067",
+    "92588",
+    "jul1067",
+    "92589",
+    "jul1067",
+    "92590",
+    "jul1067",
+    "92591",
+    "jul1067",
+    "92592",
+    "jul1067",
+    "92593",
+    "jul1067",
+    "92594",
+    "jul1067",
+    "92595",
+    "jul1067",
+    "92596",
+    "jul1067",
+    "92597",
+    "jul1067",
+    "92598",
+    "jul1067",
+    "92599",
+    "jul1067",
+    "92600",
+    "jul1067",
+    "92601",
+    "jul1067",
+    "92602",
+    "jul1067",
+    "92603",
+    "jul1067",
+    "92604",
+    "jul1067",
+    "92605",
+    "jul1067",
+    "92606",
+    "jul1067",
+    "92607",
+    "jul1067",
+    "92608",
+    "jul1067",
+    "92609",
+    "jul1067",
+    "92610",
+    "jul1067",
+    "92611",
+    "jul1067",
+    "92612",
+    "jul1067",
+    "92613",
+    "jul1067",
+    "92614",
+    "jul1067",
+    "92615",
+    "jul1067",
+    "92616",
+    "jul1067",
+    "92617",
+    "jul1067",
+    "92618",
+    "jul1067",
+    "92619",
+    "jul1067",
+    "92620",
+    "jul1067",
+    "92621",
+    "jul1067",
+    "92622",
+    "jul1067",
+    "92623",
+    "jul1067",
+    "92624",
+    "jul1067",
+    "92625",
+    "jul1067",
+    "92626",
+    "jul1067",
+    "92627",
+    "jul1067",
+    "92628",
+    "jul1067",
+    "92629",
+    "jul1067",
+    "92630",
+    "jul1067",
+    "92631",
+    "jul1067",
+    "92632",
+    "jul1067",
+    "92633",
+    "jul1067",
+    "92634",
+    "jul1067",
+    "92635",
+    "jul1067",
+    "92636",
+    "jul1067",
+    "92637",
+    "jul1067",
+    "92638",
+    "jul1067",
+    "92639",
+    "jul1067",
+    "92640",
+    "jul1067",
+    "92641",
+    "jul1067",
+    "92642",
+    "jul1067",
+    "92643",
+    "jul1067",
+    "92644",
+    "jul1067"
+   ],
+   "ppv6": [
+    "inrk",
+    "recomeing",
+    "tia",
+    "101",
+    "2m",
+    "67",
+    "o",
+    "thisi",
+    "bbb",
+    "ty",
+    "nsssnaa",
+    "e",
+    "d",
+    "23c",
+    "d",
+    "tor",
+    "d",
+    "oa",
+    "tnand",
+    "t",
+    "beebbbbenrurrr",
+    "2e",
+    "caucnty",
+    "igsonty",
+    "zcdd",
+    "j10",
+    "1692301",
+    "106",
+    "tlid",
+    "j01079285",
+    "2",
+    "a"
+   ]
+  }
+ },
+ {
+  "doc_id": "BK_6730047100023",
+  "page": "p007",
+  "run_index": 0,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 163,
+  "scale": "block",
+  "q35-fair": "REC. 471 PAGE 27 IN WITNESS WHEREOF, this mortgage has been duly executed by the Mortgagor. MICHAEL WINNICKI (L.S.) MICHAEL WINNICKI (L.S.) In presence of AQUINA HURTING STATE OF NEW YORK, COUNTY OF NASSAU On the 6th day of July, nineteen hundred and sixty seven, WINNICKI, his wife, to be the individuals described in and who executed the foregoing instrument, and they executed the same DAVID S. SIDHUJA DAVID S. SIDHUJA Ratary Clerk, State of New York No. 4050-150 Qualified in Nassau County Term Expiring March 30, 1969 24495 STATE OF NEW YORK Mortgage LOAN NO. 4-19230 MICHAEL WINNICKI and ROMULDA WINNICKI, his wife, SPRINGFIELD EQUITIES LTD. RECORDING TAX $109 R E R Peninsula National Bank 165 Sheridan Boulevard Inwood, New York AMERICAN TITLE INSURANCE COMPANY - GUARANTEED TITLE DIVISION - 17 105 JUL-10-67 92334 JUL-10-67 92335 RECORDING TAX OF $ 105 JUL-10-67 92334 JUL-10-67 92335 OFFICE OF CITY REGISTER KINGS COUNTY RECORD Witness by hand and official seal S. DICK CITY. 3",
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppv6": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "rec",
+    "471",
+    "page",
+    "27",
+    "in",
+    "witness",
+    "whereof",
+    "this",
+    "mortgage",
+    "has",
+    "been",
+    "duly",
+    "executed",
+    "by",
+    "the",
+    "mortgagor",
+    "michael",
+    "winnicki",
+    "ls",
+    "michael",
+    "winnicki",
+    "ls",
+    "in",
+    "presence",
+    "of",
+    "aquina",
+    "hurting",
+    "state",
+    "of",
+    "new",
+    "york",
+    "county",
+    "of",
+    "nassau",
+    "on",
+    "the",
+    "6th",
+    "day",
+    "of",
+    "july",
+    "nineteen",
+    "hundred",
+    "and",
+    "sixty",
+    "seven",
+    "winnicki",
+    "his",
+    "wife",
+    "to",
+    "be",
+    "the",
+    "individuals",
+    "described",
+    "in",
+    "and",
+    "who",
+    "executed",
+    "the",
+    "foregoing",
+    "instrument",
+    "and",
+    "they",
+    "executed",
+    "the",
+    "same",
+    "david",
+    "s",
+    "sidhuja",
+    "david",
+    "s",
+    "sidhuja",
+    "ratary",
+    "clerk",
+    "state",
+    "of",
+    "new",
+    "york",
+    "no",
+    "4050150",
+    "qualified",
+    "in",
+    "nassau",
+    "county",
+    "term",
+    "expiring",
+    "march",
+    "30",
+    "1969",
+    "24495",
+    "state",
+    "of",
+    "new",
+    "york",
+    "mortgage",
+    "loan",
+    "no",
+    "419230",
+    "michael",
+    "winnicki",
+    "and",
+    "romulda",
+    "winnicki",
+    "his",
+    "wife",
+    "springfield",
+    "equities",
+    "ltd",
+    "recording",
+    "tax",
+    "109",
+    "r",
+    "e",
+    "r",
+    "peninsula",
+    "national",
+    "bank",
+    "165",
+    "sheridan",
+    "boulevard",
+    "inwood",
+    "new",
+    "york",
+    "american",
+    "title",
+    "insurance",
+    "company",
+    "",
+    "guaranteed",
+    "title",
+    "division",
+    "",
+    "17",
+    "105",
+    "jul1067",
+    "92334",
+    "jul1067",
+    "92335",
+    "recording",
+    "tax",
+    "of",
+    "",
+    "105",
+    "jul1067",
+    "92334",
+    "jul1067",
+    "92335",
+    "office",
+    "of",
+    "city",
+    "register",
+    "kings",
+    "county",
+    "record",
+    "witness",
+    "by",
+    "hand",
+    "and",
+    "official",
+    "seal",
+    "s",
+    "dick",
+    "city",
+    "3"
+   ],
+   "ppv6": []
+  }
+ }
+]

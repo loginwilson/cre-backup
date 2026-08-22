@@ -1,0 +1,12 @@
+{
+  "_comment": "cadence seconds per phase, adjustable at request; 'show' is the whitelist of phases reported right now - empty list = all phases",
+  "show": ["synchronization", "navigation", "acquisition rd", "acquisition pdf", "organization"],
+  "cadence": {
+    "synchronization": 300,
+    "navigation": 300,
+    "acquisition rd": 300,
+    "acquisition pdf": 300,
+    "organization": 600
+  },
+  "parked": ["organization"]
+}

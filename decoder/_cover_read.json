@@ -1,0 +1,2178 @@
+[
+ {
+  "doc": "2003010601086002",
+  "_span": {
+   "doc_type": [
+    483,
+    508
+   ],
+   "page_count": [
+    529,
+    531
+   ],
+   "document_date": [
+    431,
+    441
+   ],
+   "preparation_date": [
+    458,
+    468
+   ],
+   "recorded_date": [
+    1456,
+    1466
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1064",
+    "lot": "22",
+    "lot_missing": false,
+    "span": [
+     731,
+     748
+    ],
+    "quote": "MANHATTAN 1064 22"
+   }
+  ],
+  "lot_count": 1,
+  "lots_continue": false,
+  "property_types": [
+   "OFFICE BUILDING"
+  ],
+  "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+  "page_count": "36",
+  "read_id": "2003010601086002",
+  "document_date": "12-18-2002",
+  "preparation_date": "05-15-2003",
+  "recorded_date": "05-16-2003",
+  "crfn": "2003000132479",
+  "page_of": [
+   1,
+   37
+  ],
+  "rptt": null,
+  "rett": 6262.0,
+  "money_repaired": true,
+  "established_by": "paddle_flat",
+  "presenter": "0 \u2018RETURN TO: TITLEASSOCIATES PAUL, HASTINGS, JANOFSKY 825 THIRD AVE '75 EAST 55TH STREET iNY, 10022 02(01)1145 | NY NEW YORK, NY_ 10022 212-758-0050",
+  "return_to": "& WALKER LLP",
+  "party_one": "54 C.F. OPERATING CORPORATION (\"54 CF\") 114-04 ATLANTIC AVENUE JAMAICA, NY 11419",
+  "party_two": "| AUTOMOBILE CLUB OF NEW YORK, INC. (\"ACNY\") | 1415 KELLUM PLACE \u2018GARDEN CITY, NY 11530",
+  "spatial": true,
+  "crfn_box": [
+   2025,
+   2831,
+   273,
+   30
+  ],
+  "consideration_from": "rett",
+  "consideration": 1565500.0
+ },
+ {
+  "doc": "2003013001838001",
+  "_span": {
+   "doc_type": [
+    476,
+    499
+   ],
+   "page_count": [
+    520,
+    522
+   ],
+   "read_id": [
+    393,
+    409
+   ],
+   "document_date": [
+    424,
+    434
+   ],
+   "preparation_date": [
+    451,
+    461
+   ],
+   "recorded_date": [
+    1617,
+    1627
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1034",
+    "lot": "33",
+    "lot_missing": false,
+    "span": [
+     767,
+     784
+    ],
+    "quote": "MANHATTAN 1034 33"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1034",
+    "lot": "37",
+    "lot_missing": false,
+    "span": [
+     872,
+     889
+    ],
+    "quote": "MANHATTAN 1034 37"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "INDUSTRIALBUILDING",
+   "OTHER"
+  ],
+  "doc_type": "DEC OFDEVELOPMENTRIGHTS",
+  "page_count": "15",
+  "read_id": "2003013001838001",
+  "document_date": "12-12-2002",
+  "preparation_date": "04-18-2003",
+  "recorded_date": "06-11-2003",
+  "crfn": "2003000164836",
+  "page_of": [
+   1,
+   16
+  ],
+  "rptt": null,
+  "rett": 3266.0,
+  "money_repaired": false,
+  "established_by": "tesseract_spatial",
+  "presenter": "se FIRST AMERICAN NEW YORK OFFICE 633 THIRD AVENUE NEW YORK, NY 10017 212-850-0694 NY-00029426-NYNY (CC)",
+  "return_to": "\u2018DAVID HANDSMAN, ESQ. & KAMINSKY i 101 EAST 52ND STREET, 10TH FLOOR NEW YORK, NY 10022",
+  "party_one": "691 EIGHTH AVENUE CORPORATION C/O MARK FRIEDLNDER, ESQ., 15 MAIDEN SUITE 2000 NEW YORK, NY 10038",
+  "party_two": "WEST 44 LLC rr LANE LOWELL HARWOOD, 26 JOURNAL SQUARE, | SUITE 804 JERSEY CITY, NJ 07306 FEES",
+  "spatial": true,
+  "crfn_box": [
+   2065,
+   2865,
+   275,
+   29
+  ],
+  "rett_conf": 52.115864,
+  "rett_box": [
+   2070,
+   2561,
+   290,
+   42
+  ],
+  "rett_quote": "3,266.00",
+  "consideration_from": "rett",
+  "consideration": 816500.0
+ },
+ {
+  "doc": "2003021302514009",
+  "_span": {
+   "doc_type": [
+    476,
+    501
+   ],
+   "page_count": [
+    523,
+    525
+   ],
+   "read_id": [
+    394,
+    410
+   ],
+   "document_date": [
+    424,
+    434
+   ],
+   "preparation_date": [
+    451,
+    461
+   ],
+   "recorded_date": [
+    1560,
+    1570
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "461",
+    "lot": "2",
+    "lot_missing": false,
+    "span": [
+     741,
+     756
+    ],
+    "quote": "MANHATTAN 461 2"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "461",
+    "lot": "3",
+    "lot_missing": false,
+    "span": [
+     858,
+     873
+    ],
+    "quote": "MANHATTAN 461 3"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "OTHER"
+  ],
+  "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+  "page_count": "61",
+  "read_id": "2003021302514009",
+  "document_date": "02-13-2003",
+  "preparation_date": "02-22-2003",
+  "recorded_date": "04-04-2003",
+  "crfn": null,
+  "page_of": [
+   1,
+   63
+  ],
+  "rptt": null,
+  "rett": 0.0,
+  "money_repaired": false,
+  "established_by": "tesseract_spatial",
+  "presenter": "COMMONWEALTH/LAWYERS. TITLE 655 THIRD AVENUE NEW YORK, NY 10017 212-949-0100 NY021244 M",
+  "return_to": "a DAHAN & NOWICK ATTN: NEIL NOWICK, ESQ. 689 FIFTH AVENUE NEW YORK, NY 10022",
+  "party_one": "31 COOPER INC. 147 FAWN HILL ROAD UPPER SADDLE RIVER, NJ 07458",
+  "party_two": "29-31 COOPER SQUARE ASSOCIATES LLC C/O ARYEH, 770 BROADWAY, 2D FL NEW YORK, NY_ 10003",
+  "spatial": true,
+  "rett_conf": 96.955803,
+  "rett_box": [
+   2231,
+   2537,
+   70,
+   30
+  ],
+  "rett_quote": "0.00",
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003021400219004",
+  "_span": {
+   "doc_type": [
+    476,
+    501
+   ],
+   "page_count": [
+    522,
+    524
+   ],
+   "read_id": [
+    392,
+    408
+   ],
+   "document_date": [
+    422,
+    432
+   ],
+   "preparation_date": [
+    451,
+    461
+   ],
+   "recorded_date": [
+    1608,
+    1618
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1277",
+    "lot": "1",
+    "lot_missing": false,
+    "span": [
+     744,
+     760
+    ],
+    "quote": "MANHATTAN 1277 1"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1277",
+    "lot": null,
+    "lot_missing": true,
+    "span": [
+     855,
+     869
+    ],
+    "quote": "MANHATTAN 1277"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": true,
+  "property_types": [
+   "1-3FAMILYWITHSTORE/OFFICE",
+   "1-3FAMILYWITH STORE/OFFICE"
+  ],
+  "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+  "page_count": "38",
+  "read_id": "2003021400219004",
+  "document_date": "12-18-2002",
+  "preparation_date": "05-21-2003",
+  "recorded_date": "06-02-2003",
+  "crfn": "2003000150279",
+  "page_of": [
+   1,
+   40
+  ],
+  "rptt": null,
+  "rett": 10620.0,
+  "money_repaired": false,
+  "established_by": "tesseract_spatial",
+  "presenter": "COMMONWEALTH/ LAWYERS TITLE 655 THIRD AVENUE NEW YORK, NY 10017 212-949-0100 LT 020216M",
+  "return_to": "\u2018STEVEN SHAPIRO, ESQ | GREENBERG TRAURIG \u2018200 PARK AVENUE NEW YORK, NY 10166 |",
+  "party_one": "509 OWNERS LLC 420 LEXINGTON AVENUE, SUITE 900 NEW YORK, NY_ 10170",
+  "party_two": "\u2018FIFTH AT 42ND LLC 565 FIFTH AVENUE, 14TH FLOOR \"NEW YORK, NY 10017 FEES",
+  "spatial": true,
+  "crfn_box": [
+   2028,
+   2853,
+   274,
+   30
+  ],
+  "rett_conf": 95.022789,
+  "rett_box": [
+   2128,
+   2549,
+   158,
+   33
+  ],
+  "rett_quote": "10,620.00",
+  "consideration_from": "rett",
+  "consideration": 2655000.0
+ },
+ {
+  "doc": "2003022602133001",
+  "_span": {
+   "doc_type": [
+    481,
+    503
+   ],
+   "page_count": [
+    525,
+    527
+   ],
+   "read_id": [
+    398,
+    414
+   ],
+   "document_date": [
+    429,
+    439
+   ],
+   "preparation_date": [
+    457,
+    467
+   ],
+   "recorded_date": [
+    1603,
+    1613
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1033",
+    "lot": "1",
+    "lot_missing": false,
+    "span": [
+     755,
+     771
+    ],
+    "quote": "MANHATTAN 1033 1"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1033",
+    "lot": "2",
+    "lot_missing": false,
+    "span": [
+     865,
+     881
+    ],
+    "quote": "MANHATTAN 1033 2"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": true,
+  "property_types": [
+   "APARTMENT BUILDING",
+   "OTHER"
+  ],
+  "doc_type": "DECOFDEVELOPMENTRIGHTS",
+  "page_count": "51",
+  "read_id": "2003022602133001",
+  "document_date": "12-23-2002",
+  "preparation_date": "04-10-2003",
+  "recorded_date": "09-30-2003",
+  "crfn": "2003000401747",
+  "page_of": [
+   1,
+   53
+  ],
+  "rptt": null,
+  "rett": 444.0,
+  "money_repaired": false,
+  "established_by": "tesseract_spatial",
+  "presenter": "COMMONWEALTH/LAWYERS TITLE 655 THIRD AVENUE NEW YORK, NY 100!7 212-949-0100",
+  "return_to": "G. CAMPBELL PAUL HASTINGS JANOFSKY & WALKER 75 EAST 55TH STREET NEW YORK, NY _ 10022",
+  "party_one": "CLINTON 42ND STREET LLC 42/9 RESIDENTIAL LLC C/O THE BRODSKY ORGANIZATION, 400 WEST 59TH C/O THE BRODSKY ORGANIZATION, STREET NY, NY 10019 NY 10019 | Additional Parties Listed on Continuation Page",
+  "party_two": "400 WEST 59TH",
+  "spatial": true,
+  "crfn_box": [
+   2030,
+   2861,
+   275,
+   30
+  ],
+  "rett_conf": 28.037827,
+  "rett_box": [
+   1989,
+   2556,
+   301,
+   42
+  ],
+  "rett_quote": "444.00",
+  "consideration_from": "rett",
+  "consideration": 111000.0
+ },
+ {
+  "doc": "2003030700273001",
+  "_span": {
+   "doc_type": [
+    480,
+    504
+   ],
+   "page_count": [
+    524,
+    526
+   ],
+   "document_date": [
+    427,
+    437
+   ],
+   "preparation_date": [
+    455,
+    465
+   ],
+   "recorded_date": [
+    1486,
+    1496
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1345",
+    "lot": "48",
+    "lot_missing": false,
+    "span": [
+     749,
+     766
+    ],
+    "quote": "MANHATTAN 1345 48"
+   }
+  ],
+  "lot_count": 1,
+  "lots_continue": false,
+  "property_types": [],
+  "doc_type": "DEC OFDEVELOPMENT RIGHTS",
+  "page_count": "14",
+  "read_id": "2003030700273001",
+  "document_date": "02-20-2002",
+  "preparation_date": "03-07-2003",
+  "recorded_date": "04-10-2003",
+  "crfn": null,
+  "page_of": [
+   1,
+   15
+  ],
+  "rptt": null,
+  "rett": null,
+  "money_repaired": false,
+  "established_by": null,
+  "presenter": "YORK ROYAL ABSTRACT OF NEW LLC 500 STH AVENUE SUITE 1940 NEW YORK, NY 10110 212-376-0900 817416",
+  "return_to": "ERIC FEUERSTEIN, ESQ. FRIED FRANK HARRIS I NEW YORK PLAZA NEW YORK, NY 10004",
+  "party_one": "308 EAST 53 LLC C/O MACKLOWE PROPERTIES, 142 WEST STREET NEW YORK, NY 10019",
+  "party_two": "1000 SECOND AVENUE LLC 57TH C/O MACKLOWE PROPERTIES, 142 WEST 57TH STREET NEW YORK, NY _ 10019 FEES AND",
+  "spatial": true,
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003041400735009",
+  "_span": {
+   "doc_type": [
+    477,
+    499
+   ],
+   "page_count": [
+    521,
+    523
+   ],
+   "document_date": [
+    425,
+    435
+   ],
+   "preparation_date": [
+    453,
+    463
+   ],
+   "recorded_date": [
+    1604,
+    1614
+   ]
+  },
+  "lots": [
+   {
+    "borough": "BROOKLYN",
+    "block": "939",
+    "lot": "35",
+    "lot_missing": false,
+    "span": [
+     732,
+     747
+    ],
+    "quote": "BROOKLYN 939 35"
+   },
+   {
+    "borough": "BROOKLYN",
+    "block": "939",
+    "lot": "39",
+    "lot_missing": false,
+    "span": [
+     842,
+     857
+    ],
+    "quote": "BROOKLYN 939 39"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": true,
+  "property_types": [
+   "RELIGIOUSSTRUCTURE"
+  ],
+  "doc_type": "DECOFDEVELOPMENTRIGHTS",
+  "page_count": "26",
+  "read_id": "2003041400735009",
+  "document_date": "04-09-2003",
+  "preparation_date": "05-13-2003",
+  "recorded_date": "06-11-2003",
+  "crfn": "2003000164365",
+  "page_of": [
+   1,
+   28
+  ],
+  "rptt": null,
+  "rett": 3000.0,
+  "money_repaired": false,
+  "established_by": "tesseract_spatial",
+  "presenter": "0 COMMONWEALTH/LAWYERS TITLE 655 THIRD AVENUE NEW YORK, NY 10017 212-949-0100 NY030646 K",
+  "return_to": "\u2018MANATT PHELPS PHILLLIPS 1675 BROADWAY 27TH FLR |INEW | YORK, NY 10019 |",
+  "party_one": "TWIN TOWER EQUITIES, LLC. C/O BLDG MANAGEMENT, 52 VANDERBILT NEW YORK, NY 10017",
+  "party_two": "PARK | PLACE PARTNERS, LLC. AVE NORTH ST #500 NEW YORK, NY 10013 | I",
+  "spatial": true,
+  "crfn_box": [
+   2031,
+   2896,
+   275,
+   30
+  ],
+  "rett_conf": 52.32618,
+  "rett_box": [
+   2148,
+   2590,
+   151,
+   43
+  ],
+  "rett_quote": "3,000.00",
+  "consideration_from": "rett",
+  "consideration": 750000.0
+ },
+ {
+  "doc": "2003052001090003",
+  "_span": {
+   "doc_type": [
+    486,
+    511
+   ],
+   "page_count": [
+    533,
+    535
+   ],
+   "read_id": [
+    402,
+    418
+   ],
+   "document_date": [
+    433,
+    443
+   ],
+   "preparation_date": [
+    461,
+    471
+   ],
+   "recorded_date": [
+    1621,
+    1631
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "695",
+    "lot": "37",
+    "lot_missing": false,
+    "span": [
+     785,
+     801
+    ],
+    "quote": "MANHATTAN 695 37"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "695",
+    "lot": "39",
+    "lot_missing": false,
+    "span": [
+     890,
+     906
+    ],
+    "quote": "MANHATTAN 695 39"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "INDUSTRIALBUILDING",
+   "RETAILBUILDING"
+  ],
+  "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+  "page_count": "22",
+  "read_id": "2003052001090003",
+  "document_date": "05-15-2003",
+  "preparation_date": "05-20-2003",
+  "recorded_date": "06-18-2003",
+  "crfn": "2003000176443",
+  "page_of": [
+   1,
+   24
+  ],
+  "rptt": null,
+  "rett": 2016.0,
+  "money_repaired": false,
+  "established_by": "tesseract_spatial",
+  "presenter": "NATIONAL LAND TENURE 900 MERCHANTS CONCOURSE WESTBURY, NY 11590 516-227-0800 kathleengaffney@nationallandtenure",
+  "return_to": "\u2018MARIO SUAREZ, ESQ, MORGAN, LEWIS & BOCKIUS, LLP 1101 PARK AVENUE NEW YORK, NY_ 10178",
+  "party_one": "GARY DARLING C/O RENOTEX CORP, 229 10TH AVENUE NEW YORK, NY 10011 Additional Parties Listed on Continuation",
+  "party_two": "| VESTA 24 LLC 430 WEST 14TH STREET, 5TH FLOOR NEWY YORK, NY 10014 Page",
+  "spatial": true,
+  "crfn_box": [
+   2031,
+   2910,
+   275,
+   31
+  ],
+  "rett_conf": 58.230522,
+  "rett_box": [
+   2150,
+   2603,
+   142,
+   35
+  ],
+  "rett_quote": "2,016.00",
+  "consideration_from": "rett",
+  "consideration": 504000.0
+ },
+ {
+  "doc": "2003052701726001",
+  "_span": {
+   "doc_type": [
+    486,
+    511
+   ],
+   "page_count": [
+    532,
+    534
+   ],
+   "read_id": [
+    401,
+    417
+   ],
+   "document_date": [
+    432,
+    442
+   ],
+   "preparation_date": [
+    461,
+    471
+   ],
+   "recorded_date": [
+    1615,
+    1625
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1278",
+    "lot": "14",
+    "lot_missing": false,
+    "span": [
+     795,
+     812
+    ],
+    "quote": "MANHATTAN 1278 14"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1278",
+    "lot": "15",
+    "lot_missing": false,
+    "span": [
+     893,
+     910
+    ],
+    "quote": "MANHATTAN 1278 15"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "OTHER",
+   "OTHER"
+  ],
+  "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+  "page_count": "33",
+  "read_id": "2003052701726001",
+  "document_date": "05-09-2003",
+  "preparation_date": "06-03-2003",
+  "recorded_date": "06-23-2003",
+  "crfn": null,
+  "page_of": [
+   1,
+   35
+  ],
+  "rptt": null,
+  "rett": null,
+  "money_repaired": false,
+  "established_by": null,
+  "presenter": "ROYAL ABSTRACT OF NEW YORK LLC LEVIN NAFTALIS AS AGENT FOR CHICAGO TITLE INSURANCE 919 THIRD AVENUE 500 5TH AVENUE- SUITE 1940 | NEW YORK, NY 10022-3852 NEW YORK, NY 10110 2{2-376-0900 |",
+  "return_to": "& FRANKEL LLP",
+  "party_one": "FIFTH CHURCH OF CHRIST, SCIENTIST 9 EAST 43RD STREET NEW YORK, NY 10019",
+  "party_two": "|340 MADISON OWNER LLC \u2018C/O MACKLOWE PROPERTIES, 142 WEST 57TH STREET | NEW YORK, NY 10019",
+  "spatial": true,
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003060400703001",
+  "_span": {
+   "doc_type": [
+    475,
+    497
+   ],
+   "page_count": [
+    518,
+    520
+   ],
+   "read_id": [
+    393,
+    409
+   ],
+   "document_date": [
+    423,
+    433
+   ],
+   "preparation_date": [
+    451,
+    461
+   ],
+   "recorded_date": [
+    1638,
+    1648
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1278",
+    "lot": "14",
+    "lot_missing": false,
+    "span": [
+     774,
+     791
+    ],
+    "quote": "MANHATTAN 1278 14"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1278",
+    "lot": "15",
+    "lot_missing": false,
+    "span": [
+     872,
+     889
+    ],
+    "quote": "MANHATTAN 1278 15"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": true,
+  "property_types": [
+   "OTHER",
+   "OTHER"
+  ],
+  "doc_type": "DECOFDEVELOPMENTRIGHTS",
+  "page_count": "19",
+  "read_id": "2003060400703001",
+  "document_date": "05-09-2003",
+  "preparation_date": "06-04-2003",
+  "recorded_date": "06-30-2003",
+  "crfn": "2003000202399",
+  "page_of": [
+   1,
+   21
+  ],
+  "rptt": null,
+  "rett": 7342.0,
+  "money_repaired": false,
+  "established_by": "tesseract_spatial",
+  "presenter": "ROYAL ABSTRACT OF NEW YORK LLC KRAMER LEVIN NAFTALIS AS AGENT FOR CHICAGO TITLE INSURANCE 919 THIRD AVENUE 500 5TH AVENUE- SUITE 1940 NEW YORK, NY _ 10022-3852 NEW YORK, NY 10110 212-376-0900 819322 :",
+  "return_to": "& FRANKEL LLP",
+  "party_one": "340 MADISON OWNER LLC C/O MAKLOWE PROPERTIES, 142 WEST STREET NEW YORK, 10019 NY",
+  "party_two": "BERKELEY REALTY COMPANY, L.L.C. 57TH C/O BERKELEY COLLEGE, E 81,ROUTE 4 WEST PARAMUS, NJ 07652",
+  "spatial": true,
+  "crfn_box": [
+   2027,
+   2838,
+   275,
+   29
+  ],
+  "rett_conf": 77.675133,
+  "rett_box": [
+   2146,
+   2534,
+   141,
+   33
+  ],
+  "rett_quote": "7,342.00",
+  "consideration_from": "rett",
+  "consideration": 1835500.0
+ },
+ {
+  "doc": "2003061201945006",
+  "_span": {
+   "doc_type": [
+    471,
+    494
+   ],
+   "page_count": [
+    514,
+    516
+   ],
+   "document_date": [
+    418,
+    428
+   ],
+   "preparation_date": [
+    446,
+    456
+   ],
+   "recorded_date": [
+    1543,
+    1553
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1875",
+    "lot": "18",
+    "lot_missing": false,
+    "span": [
+     721,
+     738
+    ],
+    "quote": "MANHATTAN 1875 18"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1875",
+    "lot": "41",
+    "lot_missing": false,
+    "span": [
+     824,
+     841
+    ],
+    "quote": "MANHATTAN 1875 41"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "OTHER",
+   "APARTMENT BUILDING"
+  ],
+  "doc_type": "DEC OFDEVELOPMENTRIGHTS",
+  "page_count": "21",
+  "read_id": "2003061201945006",
+  "document_date": "06-04-2003",
+  "preparation_date": "06-18-2003",
+  "recorded_date": "07-02-2003",
+  "crfn": null,
+  "page_of": [
+   1,
+   23
+  ],
+  "rptt": null,
+  "rett": 1910.0,
+  "money_repaired": false,
+  "established_by": "paddle_flat",
+  "presenter": "CHICAGO TITLE INSURANCE CO. 711 THIRD AVE, 5TH FLOOR NEW YORK, NY 10017 212-880-1200",
+  "return_to": "7 LEVIN NAFTALIS & FRANKEL LLP 919 THIRD AVENUE \u2018NEW YORK, NY 10022 |",
+  "party_one": "BML REALTY CORP. 2 SAWBUCK ROAD FREEHOLD, NJ 07728",
+  "party_two": "THE TRUSTEES OF COLUMBIA UNIVERSITY -IN THE CITY OF NEW YORK, 412 LOW MEMORIAL \u2018LIBRARY \u201cNEW YORK, NY 10027",
+  "spatial": true,
+  "consideration_from": "rett",
+  "consideration": 477500.0
+ },
+ {
+  "doc": "2003061800429003",
+  "_span": {
+   "doc_type": [
+    476,
+    498
+   ],
+   "page_count": [
+    519,
+    521
+   ],
+   "read_id": [
+    394,
+    410
+   ],
+   "document_date": [
+    424,
+    434
+   ],
+   "preparation_date": [
+    452,
+    462
+   ],
+   "recorded_date": [
+    1577,
+    1587
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1875",
+    "lot": "42",
+    "lot_missing": false,
+    "span": [
+     740,
+     757
+    ],
+    "quote": "MANHATTAN 1875 42"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1875",
+    "lot": "18",
+    "lot_missing": false,
+    "span": [
+     857,
+     874
+    ],
+    "quote": "MANHATTAN 1875 18"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "OTHER"
+  ],
+  "doc_type": "DECOFDEVELOPMENTRIGHTS",
+  "page_count": "22",
+  "read_id": "2003061800429003",
+  "document_date": "06-05-2003",
+  "preparation_date": "06-18-2003",
+  "recorded_date": "07-02-2003",
+  "crfn": "2003000207759",
+  "page_of": [
+   1,
+   23
+  ],
+  "rptt": null,
+  "rett": 2140.0,
+  "money_repaired": false,
+  "established_by": "paddle_flat",
+  "presenter": "CHICAGO TITLE INSURANCE CO. 711 THIRD AVE, 5TH FLOOR NEW YORK, NY_ 10017 212-880-1200 3103-00343 ch",
+  "return_to": "LEVIN NAFTALIS & FRANKEL LLP THIRD AVENUE \u2018NEW YORK, NY_ 10022 |",
+  "party_one": "KIWI REALTY LLC C/O 165 WEST 73RD STREET NEW YORK, NY_ 10023",
+  "party_two": "| THE TRUSTEES OF COLUMBIA UNIVERSITY \u2018IN THE CITY OF NEW YORK, 412 LOW MEMORIAL New LIBRARY YORK, NY 10027 AND",
+  "spatial": true,
+  "crfn_box": [
+   2030,
+   2837,
+   275,
+   30
+  ],
+  "consideration_from": "rett",
+  "consideration": 535000.0
+ },
+ {
+  "doc": "2003062701790001",
+  "_span": {
+   "doc_type": [
+    475,
+    500
+   ],
+   "page_count": [
+    521,
+    523
+   ],
+   "read_id": [
+    393,
+    409
+   ],
+   "document_date": [
+    423,
+    433
+   ],
+   "preparation_date": [
+    450,
+    460
+   ],
+   "recorded_date": [
+    1603,
+    1613
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "427",
+    "lot": "30",
+    "lot_missing": false,
+    "span": [
+     786,
+     802
+    ],
+    "quote": "MANHATTAN 427 30"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "427",
+    "lot": "14",
+    "lot_missing": false,
+    "span": [
+     892,
+     908
+    ],
+    "quote": "MANHATTAN 427 14"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "VACANTLAND",
+   "OTHER"
+  ],
+  "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+  "page_count": "23",
+  "read_id": "2003062701790001",
+  "document_date": "06-27-2003",
+  "preparation_date": "06-27-2003",
+  "recorded_date": "08-01-2003",
+  "crfn": "2003000273949",
+  "page_of": [
+   1,
+   24
+  ],
+  "rptt": null,
+  "rett": null,
+  "money_repaired": false,
+  "established_by": null,
+  "presenter": "COMMONWEALTH/LAWYERS 655 THIRD AVENUE TITLE NEW YORK, NY_ 10017 212-949-0100 NY2K1158 M",
+  "return_to": "ee FIGMAN, ESQ. _DEPT.OF HOUSING PRESERVATION AND | DEVELOPMENT \u2018100 GOLD ST., OFFICE OF LEGAL AFFAIRS, RM \u2018NEW YORK, NY 10038 PROPERTY",
+  "party_one": "THECITY OF NEW YORK, ACTING BY AND THROUGH ITS DEPARTMENT OF HOUSING PRESERVATION AND DEVELOPMENT, 100GOLD ST.",
+  "party_two": "-CVP E,LLC 535 FIFTH AVENUE :NEW YORK, NY 10017",
+  "spatial": true,
+  "crfn_box": [
+   2031,
+   2820,
+   274,
+   30
+  ],
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003070100714001",
+  "_span": {
+   "doc_type": [
+    480,
+    503
+   ],
+   "page_count": [
+    525,
+    526
+   ],
+   "read_id": [
+    396,
+    412
+   ],
+   "document_date": [
+    427,
+    437
+   ],
+   "preparation_date": [
+    455,
+    465
+   ],
+   "recorded_date": [
+    1708,
+    1718
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1927",
+    "lot": "7",
+    "lot_missing": false,
+    "span": [
+     847,
+     863
+    ],
+    "quote": "MANHATTAN 1927 7"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1927",
+    "lot": "8",
+    "lot_missing": false,
+    "span": [
+     959,
+     975
+    ],
+    "quote": "MANHATTAN 1927 8"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "DWELLING ONLY-2FAMILY",
+   "DWELLING ONLY-2FAMILY"
+  ],
+  "doc_type": "DEC OFDEVELOPMENTRIGHTS",
+  "page_count": "6",
+  "read_id": "2003070100714001",
+  "document_date": "07-15-2002",
+  "preparation_date": "07-01-2003",
+  "recorded_date": "07-14-2003",
+  "crfn": "2003000228301",
+  "page_of": [
+   1,
+   8
+  ],
+  "rptt": null,
+  "rett": null,
+  "money_repaired": false,
+  "established_by": null,
+  "presenter": "_ BRIDGE SERVICE CORP. AS AGENT FOR FIDELITY NATIONAL 277 BROADWAY, STE. 510 NEW 212-267-8600 YORK, NY_ 10007 angelaf@bridgeservice.com",
+  "return_to": "SERVICE CORP. TITLE AS AGENT FOR FIDELITY NATIONAL TITLE 277 BROADWAY, STE. 510 YORK, NY_ 10007 212-267-8600",
+  "party_one": "LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY _ 10003 {x} Additional Parties Listed on Continuation",
+  "party_two": "| LANDMARK PROJECTS IV, INC. NEW 250 PARK AVENUE SOUTH YORK, NY 10003 Page |",
+  "spatial": true,
+  "crfn_box": [
+   2032,
+   2897,
+   269,
+   31
+  ],
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003070100714002",
+  "_span": {
+   "doc_type": [
+    473,
+    495
+   ],
+   "page_count": [
+    516,
+    517
+   ],
+   "document_date": [
+    422,
+    432
+   ],
+   "preparation_date": [
+    449,
+    459
+   ],
+   "recorded_date": [
+    1711,
+    1721
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1928",
+    "lot": "7",
+    "lot_missing": false,
+    "span": [
+     841,
+     857
+    ],
+    "quote": "MANHATTAN 1928 7"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1928",
+    "lot": "107",
+    "lot_missing": false,
+    "span": [
+     955,
+     973
+    ],
+    "quote": "MANHATTAN 1928 107"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "DWELLING ONLY-3FAMILY",
+   "DWELLING ONLY -2FAMILY"
+  ],
+  "doc_type": "DECOFDEVELOPMENTRIGHTS",
+  "page_count": "6",
+  "read_id": "2003070100714002",
+  "document_date": "07-15-2002",
+  "preparation_date": "07-01-2003",
+  "recorded_date": "07-14-2003",
+  "crfn": null,
+  "page_of": [
+   1,
+   8
+  ],
+  "rptt": null,
+  "rett": null,
+  "money_repaired": false,
+  "established_by": null,
+  "presenter": "BRIDGE SERVICE CORP. AS AGENT FOR FIDELITY NATIONAL 277 BROADWAY, STE. 510 NEW YORK, NY 10007 212-267-8600 angelaf@bridgeservice.com",
+  "return_to": "\u2018BRIDGE SERVICE CORP. TITLE AGENT FOR FIDELITY NATIONAL TITLE NEW 277 BROADWAY, STE. 510 YORK, NY 10007 \u2018212-267-8600",
+  "party_one": "LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY_ 10003 &X] Additional Parties Listed on Continuation Page",
+  "party_two": "| LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH \u201cNEW YORK, NY 10003",
+  "spatial": true,
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003070100714003",
+  "_span": {
+   "doc_type": [
+    472,
+    496
+   ],
+   "page_count": [
+    517,
+    518
+   ],
+   "read_id": [
+    389,
+    405
+   ],
+   "document_date": [
+    419,
+    429
+   ],
+   "preparation_date": [
+    447,
+    457
+   ],
+   "recorded_date": [
+    1705,
+    1715
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1928",
+    "lot": "20",
+    "lot_missing": false,
+    "span": [
+     838,
+     855
+    ],
+    "quote": "MANHATTAN 1928 20"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1928",
+    "lot": "120",
+    "lot_missing": false,
+    "span": [
+     956,
+     974
+    ],
+    "quote": "MANHATTAN 1928 120"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "DWELLING ONLY -3 FAMILY",
+   "DWELLING ONLY-3FAMILY"
+  ],
+  "doc_type": "DEC OFDEVELOPMENT RIGHTS",
+  "page_count": "6",
+  "read_id": "2003070100714003",
+  "document_date": "07-15-2002",
+  "preparation_date": "07-01-2003",
+  "recorded_date": "07-14-2003",
+  "crfn": "2003000228303",
+  "page_of": [
+   1,
+   8
+  ],
+  "rptt": null,
+  "rett": null,
+  "money_repaired": false,
+  "established_by": null,
+  "presenter": "0 BRIDGE SERVICE CORP. AS AGENT FOR FIDELITY NATIONAL 277 BROADWAY, STE. 510 NEW YORK, NY _ 10007 212-267-8600 angelaf@bridgeservice.com",
+  "return_to": "\u2018BRIDGE SERVICE CORP. TITLE ; AS AGENT FOR FIDELITY NATIONAL TITLE 277 BROADWAY, STE. 510 NEW YORK, NY 10007 212-267-8600",
+  "party_one": "LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY_ 10003 Additional Parties Listed Continuation on",
+  "party_two": "\u2018LANDMARK PROJECTS IV, INC. PARK AVENUE SOUTH YORK, NY 10003 | Page",
+  "spatial": true,
+  "crfn_box": [
+   2024,
+   2888,
+   274,
+   31
+  ],
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003070100714004",
+  "_span": {
+   "doc_type": [
+    471,
+    493
+   ],
+   "page_count": [
+    514,
+    515
+   ],
+   "read_id": [
+    387,
+    403
+   ],
+   "document_date": [
+    418,
+    428
+   ],
+   "preparation_date": [
+    447,
+    457
+   ],
+   "recorded_date": [
+    1702,
+    1712
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1928",
+    "lot": "46",
+    "lot_missing": false,
+    "span": [
+     837,
+     854
+    ],
+    "quote": "MANHATTAN 1928 46"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1928",
+    "lot": "45",
+    "lot_missing": false,
+    "span": [
+     951,
+     968
+    ],
+    "quote": "MANHATTAN 1928 45"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "DWELLING ONLY-3 FAMILY",
+   "DWELLING ONLY-3FAMILY"
+  ],
+  "doc_type": "DECOFDEVELOPMENTRIGHTS",
+  "page_count": "6",
+  "read_id": "2003070100714004",
+  "document_date": "07-15-2002",
+  "preparation_date": "07-01-2003",
+  "recorded_date": "07-14-2003",
+  "crfn": "2003000228304",
+  "page_of": [
+   1,
+   8
+  ],
+  "rptt": null,
+  "rett": 0.0,
+  "money_repaired": false,
+  "established_by": "tesseract_spatial",
+  "presenter": "__ BRIDGE SERVICE CORP. AS AGENT FOR FIDELITY NATIONAL 277 BROADWAY, STE. 510 NEW YORK, NY_ 10007 212-267-8600 angelaf@bridgeservice.com",
+  "return_to": "BRIDGE SERVICE CORP. TITLE AS AGENT FOR FIDELITY NATIONAL TITLE \u2018277 BROADWAY, STE. 510 NEW YORK, NY_ 10007 | 212-267-8600 | angelaf@bridgeservice.com",
+  "party_one": "LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY_ 10003 Additional Parties Listed on Continuation",
+  "party_two": "|LANDMARK PROJECTS IV, INC. j250 PARK AVENUE SOUTH 'NEW YORK, NY 10003 Page",
+  "spatial": true,
+  "crfn_box": [
+   2023,
+   2880,
+   275,
+   30
+  ],
+  "rett_conf": 96.74733,
+  "rett_box": [
+   2213,
+   2573,
+   70,
+   30
+  ],
+  "rett_quote": "0.00",
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003070100714005",
+  "_span": {
+   "doc_type": [
+    477,
+    502
+   ],
+   "page_count": [
+    523,
+    524
+   ],
+   "read_id": [
+    394,
+    410
+   ],
+   "document_date": [
+    425,
+    435
+   ],
+   "preparation_date": [
+    452,
+    462
+   ],
+   "recorded_date": [
+    1710,
+    1720
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1911",
+    "lot": "18",
+    "lot_missing": false,
+    "span": [
+     849,
+     866
+    ],
+    "quote": "MANHATTAN 1911 18"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1911",
+    "lot": "118",
+    "lot_missing": false,
+    "span": [
+     964,
+     982
+    ],
+    "quote": "MANHATTAN 1911 118"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "DWELLINGONLY-3FAMILY"
+  ],
+  "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+  "page_count": "6",
+  "read_id": "2003070100714005",
+  "document_date": "07-15-2002",
+  "preparation_date": "07-01-2003",
+  "recorded_date": "07-14-2003",
+  "crfn": "2003000228305",
+  "page_of": [
+   1,
+   8
+  ],
+  "rptt": null,
+  "rett": null,
+  "money_repaired": false,
+  "established_by": null,
+  "presenter": "BRIDGE SERVICE CORP. AS AGENT FOR FIDELITY NATIONAL 277 BROADWAY, STE. 510 NEW YORK, NY_ 10007 212-267-8600 angelaf@bridgeservice.com",
+  "return_to": "BRIDGE SERVICE CORP. TITLE AS AGENT FOR FIDELITY NATIONAL TITLE 277 BROADWAY, STE. 510 NEW YORK, 10007 | 212-267-8600 angelaf@bridgeservice.com | 1",
+  "party_one": "LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY_ 10003 ] Additional Parties Listed on Continuation",
+  "party_two": "LANDMARK PROJECTS IV, INC. 1250 PARK AVENUE SOUTH NEW YORK, NY 10003 Page",
+  "spatial": true,
+  "crfn_box": [
+   2031,
+   2899,
+   274,
+   30
+  ],
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003070100714006",
+  "_span": {
+   "doc_type": [
+    479,
+    504
+   ],
+   "page_count": [
+    525,
+    526
+   ],
+   "read_id": [
+    395,
+    411
+   ],
+   "document_date": [
+    426,
+    436
+   ],
+   "preparation_date": [
+    454,
+    464
+   ],
+   "recorded_date": [
+    1710,
+    1720
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1161",
+    "lot": "122",
+    "lot_missing": false,
+    "span": [
+     847,
+     865
+    ],
+    "quote": "MANHATTAN 1161 122"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1911",
+    "lot": "23",
+    "lot_missing": false,
+    "span": [
+     962,
+     979
+    ],
+    "quote": "MANHATTAN 1911 23"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "DWELLINGONLY-2FAMILY",
+   "DWELLINGONLY-2FAMILY"
+  ],
+  "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+  "page_count": "6",
+  "read_id": "2003070100714006",
+  "document_date": "07-15-2002",
+  "preparation_date": "07-01-2003",
+  "recorded_date": "07-14-2003",
+  "crfn": "2003000228306",
+  "page_of": [
+   1,
+   8
+  ],
+  "rptt": null,
+  "rett": 0.0,
+  "money_repaired": false,
+  "established_by": "tesseract_spatial",
+  "presenter": "BRIDGE SERVICE CORP. AS AGENT FOR FIDELITY NATIONAL 277 BROADWAY, STE. 510 NEW YORK, NY_ 10007 212-267-8600 angelaf@bridgeservice.com",
+  "return_to": "BRIDGE SERVICE CORP. TITLE AS AGENT FOR FIDELITY NATIONAL TITLE 277 BROADWAY, STE. 510 _ NEW YORK, NY 10007 212-267-8600 angelaf@bridgeservice.com",
+  "party_one": "LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY_ 10003 Additional Parties Listed on Continuation",
+  "party_two": "LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY_ 10003 Page",
+  "spatial": true,
+  "crfn_box": [
+   2037,
+   2896,
+   274,
+   31
+  ],
+  "rett_conf": 96.918068,
+  "rett_box": [
+   2225,
+   2589,
+   70,
+   30
+  ],
+  "rett_quote": "0.00",
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003070100714007",
+  "_span": {
+   "doc_type": [
+    475,
+    500
+   ],
+   "page_count": [
+    521,
+    522
+   ],
+   "read_id": [
+    391,
+    407
+   ],
+   "document_date": [
+    422,
+    432
+   ],
+   "preparation_date": [
+    450,
+    460
+   ],
+   "recorded_date": [
+    1708,
+    1718
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1911",
+    "lot": "52",
+    "lot_missing": false,
+    "span": [
+     847,
+     864
+    ],
+    "quote": "MANHATTAN 1911 52"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1911",
+    "lot": "151",
+    "lot_missing": false,
+    "span": [
+     961,
+     979
+    ],
+    "quote": "MANHATTAN 1911 151"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "DWELLING ONLY-3FAMILY",
+   "DWELLINGONLY-3FAMILY"
+  ],
+  "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+  "page_count": "6",
+  "read_id": "2003070100714007",
+  "document_date": "07-15-2002",
+  "preparation_date": "07-01-2003",
+  "recorded_date": "07-14-2003",
+  "crfn": "2003000228307",
+  "page_of": [
+   1,
+   8
+  ],
+  "rptt": null,
+  "rett": 0.0,
+  "money_repaired": false,
+  "established_by": "tesseract_spatial",
+  "presenter": "BRIDGE SERVICE CORP. BRIDGE SERVICE CORP. AS AGENT FOR FIDELITY NATIONAL TITLE AS AGENT FOR FIDELITY NATIONAL 277 BROADWAY, STE. 510 |277 BROADWAY, STE. 510 NEW 212-267-8600 YORK, NY _ 10007 |NEW 212-",
+  "return_to": "TITLE",
+  "party_one": "LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY 10003 Additional Parties Listed on Continuation",
+  "party_two": "LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY_ 10003 Page",
+  "spatial": true,
+  "crfn_box": [
+   2034,
+   2893,
+   274,
+   29
+  ],
+  "rett_conf": 96.92485,
+  "rett_box": [
+   2224,
+   2585,
+   70,
+   29
+  ],
+  "rett_quote": "0.00",
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003070100714008",
+  "_span": {
+   "doc_type": [
+    480,
+    504
+   ],
+   "page_count": [
+    525,
+    526
+   ],
+   "document_date": [
+    428,
+    438
+   ],
+   "preparation_date": [
+    455,
+    465
+   ],
+   "recorded_date": [
+    1760,
+    1770
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1912",
+    "lot": "139",
+    "lot_missing": false,
+    "span": [
+     850,
+     868
+    ],
+    "quote": "MANHATTAN 1912 139"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1912",
+    "lot": "39",
+    "lot_missing": false,
+    "span": [
+     966,
+     983
+    ],
+    "quote": "MANHATTAN 1912 39"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": true,
+  "property_types": [
+   "DWELLING ONLY-3FAMILY",
+   "DWELLING ONLY-3 FAMILY"
+  ],
+  "doc_type": "DEC OF DEVELOPMENTRIGHTS",
+  "page_count": "6",
+  "read_id": "2003070100714008",
+  "document_date": "07-15-2002",
+  "preparation_date": "07-01-2003",
+  "recorded_date": "07-14-2003",
+  "crfn": null,
+  "page_of": [
+   1,
+   8
+  ],
+  "rptt": null,
+  "rett": 0.0,
+  "money_repaired": false,
+  "established_by": "tesseract_spatial",
+  "presenter": "BRIDGE SERVICE CORP. AS AGENT FOR FIDELITY NATIONAL 277 BROADWAY, STE. 510 NEW YORK, NY 10007 212-267-8600 angelaf@bridgeservice.com",
+  "return_to": "BRIDGE SERVICE CORP. TITLE AGENT FOR FIDELITY NATIONAL TITLE 1277 BROADWAY, STE. 510 NEW YORK, NY 10007 | 212-267-8600 angelaf@bridgeservice.com |",
+  "party_one": "LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY 10003 Additional Parties Listed on Continuation",
+  "party_two": "| LANDMARK PROJECTS IV, INC. 1250 PARK AVENUE SOUTH \u2018NEW YORK, NY _ 10003 Page | FEES",
+  "spatial": true,
+  "rett_conf": 96.792809,
+  "rett_box": [
+   2215,
+   2587,
+   70,
+   30
+  ],
+  "rett_quote": "0.00",
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003070100714009",
+  "_span": {
+   "doc_type": [
+    476,
+    501
+   ],
+   "page_count": [
+    523,
+    524
+   ],
+   "read_id": [
+    393,
+    409
+   ],
+   "document_date": [
+    423,
+    433
+   ],
+   "preparation_date": [
+    451,
+    461
+   ],
+   "recorded_date": [
+    1709,
+    1719
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1913",
+    "lot": "6",
+    "lot_missing": false,
+    "span": [
+     846,
+     862
+    ],
+    "quote": "MANHATTAN 1913 6"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1913",
+    "lot": "7",
+    "lot_missing": false,
+    "span": [
+     958,
+     974
+    ],
+    "quote": "MANHATTAN 1913 7"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [
+   "DWELLING ONLY-3FAMILY",
+   "DWELLING ONLY-3 FAMILY"
+  ],
+  "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+  "page_count": "6",
+  "read_id": "2003070100714009",
+  "document_date": "07-15-2002",
+  "preparation_date": "07-01-2003",
+  "recorded_date": "07-14-2003",
+  "crfn": "2003000228309",
+  "page_of": [
+   1,
+   8
+  ],
+  "rptt": null,
+  "rett": null,
+  "money_repaired": false,
+  "established_by": null,
+  "presenter": "BRIDGE SERVICE CORP. 277 AS AGENT BROADWAY, FOR FIDELITY STE. 510 NATIONAL TITLE NEW YORK, NY_ 10007 212-267-8600 angelaf@bridgeservice.com",
+  "return_to": "BRIDGE SERVICE CORP. AS AGENT FOR FIDELITY NATIONAL TITLE 277 BROADWAY, STE. 510 YORK, NY 10007",
+  "party_one": "LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY _ 10003 [I Additional Parties Listed Continuation on",
+  "party_two": "LANDMARK PROJECTS IV, INC. 1250 PARK AVENUE SOUTH | NEW YORK, NY 10003 | Page",
+  "spatial": true,
+  "crfn_box": [
+   2028,
+   2890,
+   275,
+   30
+  ],
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003070100714010",
+  "_span": {
+   "doc_type": [
+    473,
+    498
+   ],
+   "page_count": [
+    519,
+    520
+   ],
+   "read_id": [
+    391,
+    407
+   ],
+   "document_date": [
+    421,
+    431
+   ],
+   "preparation_date": [
+    448,
+    458
+   ],
+   "recorded_date": [
+    1713,
+    1723
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1913",
+    "lot": "18",
+    "lot_missing": false,
+    "span": [
+     845,
+     862
+    ],
+    "quote": "MANHATTAN 1913 18"
+   },
+   {
+    "borough": "MANHATTAN",
+    "block": "1913",
+    "lot": "19",
+    "lot_missing": false,
+    "span": [
+     960,
+     977
+    ],
+    "quote": "MANHATTAN 1913 19"
+   }
+  ],
+  "lot_count": 2,
+  "lots_continue": false,
+  "property_types": [],
+  "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+  "page_count": "6",
+  "read_id": "2003070100714010",
+  "document_date": "07-15-2002",
+  "preparation_date": "07-01-2003",
+  "recorded_date": "07-14-2003",
+  "crfn": "2003000228310",
+  "page_of": [
+   1,
+   8
+  ],
+  "rptt": null,
+  "rett": null,
+  "money_repaired": false,
+  "established_by": null,
+  "presenter": "BRIDGE SERVICE CORP. AS AGENT FOR FIDELITY NATIONAL 277 BROADWAY, STE. 510 NEW YORK, 10007 212-267-8600 angelaf@bridgeservice.com",
+  "return_to": "BRIDGE SERVICE CORP. TITLE AS AGENT FOR FIDELITY NATIONAL TITLE 277 BROADWAY, STE. 510 NEW YORK, 10007",
+  "party_one": "PROJECTS LANDMARK IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY_ 10003 Additional Parties Listed on Continuation",
+  "party_two": "PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY 10003 Page",
+  "spatial": true,
+  "crfn_box": [
+   2032,
+   2895,
+   274,
+   30
+  ],
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003070100714011",
+  "_span": {
+   "doc_type": [
+    478,
+    503
+   ],
+   "page_count": [
+    524,
+    525
+   ],
+   "read_id": [
+    396,
+    412
+   ],
+   "document_date": [
+    426,
+    436
+   ],
+   "preparation_date": [
+    453,
+    463
+   ],
+   "recorded_date": [
+    1716,
+    1726
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1913",
+    "lot": "44",
+    "lot_missing": false,
+    "span": [
+     849,
+     866
+    ],
+    "quote": "MANHATTAN 1913 44"
+   }
+  ],
+  "lot_count": 1,
+  "lots_continue": false,
+  "property_types": [
+   "DWELLING ONLY-3FAMILY",
+   "DWELLING ONLY-3FAMILY"
+  ],
+  "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+  "page_count": "6",
+  "read_id": "2003070100714011",
+  "document_date": "07-15-2002",
+  "preparation_date": "07-01-2003",
+  "recorded_date": "07-14-2003",
+  "crfn": "2003000228311",
+  "page_of": [
+   1,
+   8
+  ],
+  "rptt": null,
+  "rett": 0.0,
+  "money_repaired": false,
+  "established_by": "tesseract_spatial",
+  "presenter": null,
+  "return_to": null,
+  "party_one": "LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY_ 10003 [x} Additional Parties Listed on Continuation",
+  "party_two": "'LANDMARK PROJECTS IV, INC. -250 PARK AVENUE SOUTH YORK, NY 10003 Page",
+  "spatial": true,
+  "crfn_box": [
+   2032,
+   2887,
+   268,
+   31
+  ],
+  "rett_conf": 33.935944,
+  "rett_box": [
+   2221,
+   2581,
+   69,
+   30
+  ],
+  "rett_quote": "0.00",
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ },
+ {
+  "doc": "2003070100714012",
+  "_span": {
+   "doc_type": [
+    474,
+    496
+   ],
+   "page_count": [
+    517,
+    518
+   ],
+   "document_date": [
+    422,
+    432
+   ],
+   "preparation_date": [
+    449,
+    459
+   ],
+   "recorded_date": [
+    1724,
+    1734
+   ]
+  },
+  "lots": [
+   {
+    "borough": "MANHATTAN",
+    "block": "1725",
+    "lot": "17",
+    "lot_missing": false,
+    "span": [
+     842,
+     859
+    ],
+    "quote": "MANHATTAN 1725 17"
+   }
+  ],
+  "lot_count": 1,
+  "lots_continue": false,
+  "property_types": [
+   "DWELLING ONLY-3FAMILY",
+   "DWELLING ONLY-3FAMILY"
+  ],
+  "doc_type": "DECOFDEVELOPMENTRIGHTS",
+  "page_count": "6",
+  "read_id": "2003070100714012",
+  "document_date": "07-15-2002",
+  "preparation_date": "07-01-2003",
+  "recorded_date": "07-14-2003",
+  "crfn": "2003000228312",
+  "page_of": [
+   1,
+   8
+  ],
+  "rptt": null,
+  "rett": 0.0,
+  "money_repaired": false,
+  "established_by": "tesseract_spatial",
+  "presenter": "BRIDGE SERVICE CORP. AS AGENT FOR FIDELITY NATIONAL TITLE 277 BROADWAY, STE. 510 NEW 212-267-8600 YORK, NY_ 10007 angelaf@bridgeservice.com",
+  "return_to": "| BRIDGE SERVICE CORP. \u2018AS AGENT FOR FIDELITY NATIONAL TITLE NeW BROADWAY, STE. 510 YORK, NY 10007 212-267-8600 | _angelaf@bridgeservice.com",
+  "party_one": "LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY_ 10003 Additional Parties Listed on Continuation",
+  "party_two": "|LANDMARK PROJECTS IV, INC. 250 PARK AVENUE SOUTH NEW YORK, NY 10003 Page",
+  "spatial": true,
+  "crfn_box": [
+   2026,
+   2895,
+   274,
+   31
+  ],
+  "rett_conf": 57.22364,
+  "rett_box": [
+   2205,
+   2588,
+   146,
+   42
+  ],
+  "rett_quote": "0.00",
+  "consideration_from": null,
+  "consideration": null,
+  "presence": "absent_by_nature"
+ }
+]

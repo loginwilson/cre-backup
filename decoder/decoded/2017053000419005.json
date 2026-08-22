@@ -1,0 +1,299 @@
+{
+ "chart": {
+  "page": 46,
+  "rows": {
+   "lot_area": [
+    5271,
+    24397,
+    14332,
+    44000
+   ],
+   "pro_rata": [
+    "5.49%",
+    "76.48%",
+    "18.03%",
+    "100.00%"
+   ],
+   "after_transfer": [
+    12080,
+    168260,
+    39660,
+    220000
+   ],
+   "church_subject": 32000,
+   "fjcudc_subject": 14275,
+   "church_retained": 39660,
+   "fjcudc_retained": 12080,
+   "generated_at_far5": [
+    26355,
+    121985,
+    71660,
+    220000
+   ],
+   "max_dwelling_units": [
+    18,
+    247,
+    58,
+    323
+   ],
+   "max_lot_coverage_70pct": [
+    3689.7,
+    17077.9,
+    10032.4,
+    30800.0
+   ]
+  },
+  "columns": [
+   "78 FJCUDC",
+   "79 Developer",
+   "86 Church",
+   "TOTAL"
+  ],
+  "present": true
+ },
+ "doc_id": "2017053000419005",
+ "decoder": "agent-vision-pass-1, 2026-08-05",
+ "parties": [
+  {
+   "name": "First Jamaica Community and Urban Development Corporation (FJCUDC)",
+   "tax_lot": "4/9793/78",
+   "normalized_role": "grantor_of_rights"
+  },
+  {
+   "name": "First Jamaica 164 Street HDFC",
+   "note": "record owner (nominee)",
+   "tax_lot": "4/9793/79",
+   "normalized_role": "recipient_of_rights"
+  },
+  {
+   "name": "TOL Workforce, LLC",
+   "note": "beneficial owner via Declaration of Interest and Nominee Agreement (unrecorded, cited)",
+   "tax_lot": "4/9793/79",
+   "normalized_role": "recipient_of_rights"
+  },
+  {
+   "name": "First Presbyterian Church in Jamaica",
+   "note": "CORRECTED 2026-08-05: the earlier decode recorded this party as 'NOT a signatory'. Page 42 shows otherwise — 'Trustees of the First Presbyterian Church in Jamaica' executed this instrument, signed by the Clerk of Session. The Church IS a signatory. Its separate Lot 86 ZLDA may still exist, but it is not the only instrument the Church executed here.",
+   "tax_lot": "4/9793/86",
+   "is_signatory": true,
+   "signature_page": 42,
+   "normalized_role": "other_zoning_lot_member",
+   "role_needs_review": "recorded as other_zoning_lot_member on the assumption it did not sign; a signatory to a rights transfer may be a grantor. Re-read the operative clauses before the envelope posting for lot 4/9793/86 is trusted."
+  }
+ ],
+ "anomalies": [
+  "index/cover list 2 lots; operative Combined Zoning Lot spans 3 (lot 86 bound via earlier Declaration)",
+  "lot 78 address stated 3 ways (89-48 / 89-50 / 89-40 164th St)",
+  "embedded Declaration Schedule B (lot 86 legal) truncated mid-course INSIDE the recorded original",
+  "acknowledgments (5/24) predate as-of date (5/25); 14,275 vs 14,275.43 SF internal inconsistency; Exhibit F row numbering disordered",
+  "interior angle differs 89°40'14\" vs 89°40'40\" between Exhibit B and Declaration Schedule A",
+  "p42 signature page: both signatories are handwritten and only partly legible. Titles are clear (Vice-Chairman; Clerk of Session) and are recorded with confidence; the NAMES are recorded with an explicit legibility caveat rather than a confident transcription.",
+  "CORRECTION: the First Presbyterian Church in Jamaica WAS a signatory (p42, by its Trustees, signed by the Clerk of Session). The earlier decode asserted it was not. Found only by reading the signature page — which the first pass skipped.",
+  "⚠ RECORDED DEFECT — Schedule B (Lot 86, p45) is TRUNCATED as recorded: it prints three courses and stops at '69 feet to a point;' with no closing course back to the point of beginning. The rest of p45 is blank and p46 is Exhibit F. Transcribed exactly as printed and NOT reconstructed; its traverse will not close, and that is the record, not the decode.",
+  "⚠ TWO DESCRIPTIONS IN ONE DOCUMENT ARE BOTH HEADED 'LOT 78' AND THEY ARE DIFFERENT LAND. Exhibit A (p29) = 104.96 x 50.22 = the post-subdivision Lot 78 (Exhibit F chart: 5,271 sf). Schedule A (p44) = 192.65 x 154.36 = the PRE-subdivision parent, whose area equals lot 78 + lot 79 (5,271 + 24,397 = 29,668). The title-report schedule was not updated after the January 2017 subdivision. Keying on the heading alone would post the parent's geometry to the child lot.",
+  "Exhibit F (p46) states the lot areas: Lot 78 = 5,271 · Lot 79 = 24,397 · Lot 86 = 14,332 · TOTAL 44,000, at 5 FAR generating 220,000 sf of development rights.",
+  "Legal descriptions transcribed 2026-08-13 from images already on disk (devr_pages/), no new ACRIS request.",
+  "Traverse vs the document's own Exhibit F chart: Lot 78 walks to 5,271.1 against a stated 5,271 (0.002%); Lot 79 walks to 24,373.7 against a stated 24,397 (-23.3 sf, 0.10%). The Lot 79 gap is the one course that runs 89 degrees 40' 14\" off square, which the traverse engine takes as due north — reported, not repaired.",
+  "Schedule A (p44) walks to 29,600.1 sf. Lot 78 + Lot 79 from the chart = 5,271 + 24,397 = 29,668 (0.23%). That is the arithmetic proof that Schedule A is the parent parcel and not Lot 78.",
+  "Schedule B as printed walks to 13,870.8 sf with a closure error of 192.74 ft — i.e. the whole missing return course. The chart states Lot 86 = 14,332 sf. Nothing reconstructed.",
+  "⚠ PARSER BUG #10 FOUND BY THIS DOCUMENT: metes.parse_distance read the minutes/seconds marks of an angle (\"89 degrees 40' 40\\\"\") as feet and inches (43.333 ft) and never reached the real 154.36 feet. Fixed 2026-08-13 by stripping the DMS group before any distance is read; 5 new selftest assertions (56/56); backfill over the 20 stored descriptions changed 0 of them."
+ ],
+ "consideration": {
+  "per_sf": null,
+  "index_amt": 0,
+  "in_document": "$0 — related-party allocation; economics in the separate Church ZLDA",
+  "zero_verified": "cover p1 re-read 2026-08-05: RPTT $0.00, RETT $0.00, no prepaid reference"
+ },
+ "decode_status": "validated_with_findings",
+ "effective_dates": {
+  "crfn": "2017000207565",
+  "recorded": "2017-06-05",
+  "document_date": "2017-05-25"
+ },
+ "instrument_kind": "zlda_with_easements",
+ "validation_tier": "arithmetic",
+ "consents_waivers": [
+  {
+   "page": 5,
+   "party": "parties in interest per All New York Title Agency certification",
+   "instrument": "waiver",
+   "present_in_doc": false
+  },
+  {
+   "page": 16,
+   "party": "self-executing waiver/subordination for future mergers/subdivisions",
+   "instrument": "waiver",
+   "present_in_doc": true
+  }
+ ],
+ "instrument_title": {
+  "page": 3,
+  "value": "ZONING LOT DEVELOPMENT AND EASEMENT AGREEMENT"
+ },
+ "lot_areas_by_bbl": {
+  "values": {
+   "4097930078": 5271,
+   "4097930079": 24397,
+   "4097930086": 14332
+  },
+  "provenance": "Exhibit F chart p46"
+ },
+ "signature_blocks": [
+  {
+   "page": 42,
+   "title": "Vice-Chairman",
+   "entity": "First Jamaica Community and Urban Development Corporation",
+   "legibility": "handwritten, uncertain — surname read as THARWATTER but the hand is unclear; do NOT treat the spelling as verified",
+   "signatory_as_written": "NORMAN THARWATTER"
+  },
+  {
+   "page": 42,
+   "title": "Clerk of Session",
+   "entity": "Trustees of the First Presbyterian Church in Jamaica",
+   "legibility": "handwritten, uncertain — surname read as GRISZELL; do NOT treat the spelling as verified",
+   "title_note": "'Clerk of Session' is a Presbyterian congregational office — the correct officer to execute for a Presbyterian board of trustees, which corroborates that the signature is regular even where the name is not legible",
+   "signatory_as_written": "DORA GRISZELL"
+  }
+ ],
+ "cross_instruments": [
+  {
+   "page": 5,
+   "what": "Zoning Lot Ownership Statement (subdivision of original lot 78 into 78+79)",
+   "how_cited": "crfn",
+   "identifier": "2017000021137"
+  },
+  {
+   "page": 5,
+   "what": "Declaration of Zoning Lot Restrictions (lots 78+86) — recorded as SUNDRY AGREEMENT doc 2016111700405002",
+   "how_cited": "crfn",
+   "identifier": "2016000410688"
+  },
+  {
+   "page": 5,
+   "what": "Lot 86 ZLDA (Church -> Developer, up to 32,000 SF)",
+   "how_cited": "date_parties",
+   "identifier": "even date, Church/FJCUDC"
+  },
+  {
+   "page": 4,
+   "what": "Declaration of Interest and Nominee Agreement (HDFC nominee for TOL)",
+   "how_cited": "date_parties",
+   "identifier": "even date"
+  },
+  {
+   "page": 5,
+   "what": "easements of even date (roof access, egress, chimney, water retention, lot line window)",
+   "how_cited": "date_parties",
+   "identifier": "even date"
+  },
+  {
+   "page": 33,
+   "what": "DOB Light and Air Easement Agreement",
+   "how_cited": "unresolved",
+   "identifier": "blank form annexed Exhibit D, unexecuted"
+  }
+ ],
+ "zoning_lot_roster": [
+  {
+   "bbl": "4097930078"
+  },
+  {
+   "bbl": "4097930079"
+  },
+  {
+   "bbl": "4097930086"
+  }
+ ],
+ "self_checks_summary": {
+  "fails": 1,
+  "passes": 14,
+  "highlights": [
+   "3-column conservation: 5271+24397+14332=44000; ×5 FAR = 220000; 26355-14275=12080; 71660-32000=39660; 121985+32000+14275=168260; sums & pro-rata exact",
+   "subdivision geometry: original lot 78 (29,669 SF) - new 78 (5,271) = 79 (24,398≈24,397); adjacency offsets exact",
+   "FAIL: definition M 14,275 vs Floor Area Notice 14,275.43"
+  ]
+ },
+ "summary_what_it_does": "Queens B9793 church assemblage: FJCUDC (lot 78) transfers 14,275 SF to affiliated Developer (HDFC/TOL, lot 79) for $0 (related-party allocation within sponsorship structure); Combined Zoning Lot spans lots 78+79+86 (First Presbyterian Church in Jamaica), with the Church transferring up to 32,000 SF under a SEPARATE Lot 86 ZLDA of even date; light/air easement above Lower Limiting Plane 90.65 ft NAVD88 on lot 78; FAR floor 5.0 covenant.",
+ "legal_descriptions": [
+  {
+   "exhibit": "A — FJCUDC Land (Block 9793, Lot 78)",
+   "bbl": "4097930078",
+   "shape": "per_lot",
+   "courses_verbatim": "ALL that certain plot, piece or parcel of land situate, lying and being in the Borough and County of Queens and State of New York, bounded and described as follows:\n\nBEGINNING at a point in the westerly side of 164th Street distant 324.95 feet northerly from the corner formed by the intersection of the westerly side of 164th Street with the northerly side of Jamaica Avenue;\n\nRUNNING thence westerly at right angles to the westerly side of 164th Street, 104.96 feet;\n\nTHENCE northerly parallel with said westerly side of 164th Street, 50.22 feet;\n\nTHENCE easterly again at right angles to the westerly side of 164th Street, a distance of 104.96 feet to the westerly side of 164th Street;\n\nTHENCE southerly along the westerly side of 164th Street, 50.22 feet to the point or place of BEGINNING.",
+   "stated_area_sf": 5271,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 29,
+   "traverse": {
+    "walked_area_sf": 5271.1,
+    "closure_error_ft": 0.0,
+    "n_courses": 4,
+    "verdict": "closes",
+    "parser": "metes.py 2026-08-13 (DMS guard, bug #10)"
+   }
+  },
+  {
+   "exhibit": "B — Developer Land (Block 9793, Lot 79)",
+   "bbl": "4097930079",
+   "shape": "per_lot",
+   "courses_verbatim": "ALL that certain plot, piece or parcel of land situate, lying and being in the Borough and County of Queens and State of New York, bounded and described as follows:\n\nBEGINNING at a point in the westerly side of 164th Street distant 375.17 feet northerly from the corner formed by the intersection of the westerly side of 164th Street with the northerly side of Jamaica Avenue;\n\nRUNNING thence westerly at right angles to the westerly side of 164th Street, 104.96 feet;\n\nTHENCE southerly parallel with said westerly side of 164th Street, 50.22 feet;\n\nTHENCE westerly on a course which forms a right angle with the last mentioned course, 87.69 feet,\n\nTHENCE northerly on a course which forms an interior angle of 89 degrees 40' 14\" with the last mentioned course 154.36 feet;\n\nTHENCE easterly again at right angles to the westerly side of 164th Street, a distance of 191.76 feet to the westerly side of 164th Street;\n\nTHENCE southerly along the westerly side of 164th Street, 104.14 feet to the point or place of BEGINNING.",
+   "stated_area_sf": 24397,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 30,
+   "traverse": {
+    "walked_area_sf": 24373.7,
+    "closure_error_ft": 0.89,
+    "n_courses": 6,
+    "verdict": "closes",
+    "parser": "metes.py 2026-08-13 (DMS guard, bug #10)"
+   }
+  },
+  {
+   "exhibit": "Schedule A — headed 'BLOCK 9793, LOT 78' (title-report legal; describes the PRE-SUBDIVISION parent parcel, i.e. lots 78 + 79 together)",
+   "bbl": null,
+   "shape": "perimeter",
+   "covers_bbls": [
+    "4097930078",
+    "4097930079"
+   ],
+   "courses_verbatim": "ALL that certain plot, piece or parcel of land situate, lying and being in the Borough and County of Queens and State of New York, bounded and described as follows:\n\nBEGINNING at a point in the westerly side of 164th Street distant 324.95 feet northerly from the corner formed by the intersection of the westerly side of 164th Street with the northerly side of Jamaica Avenue;\n\nRUNNING thence westerly at right angles to the westerly side of 164th Street, 192.65 feet;\n\nTHENCE northerly on a course which forms an interior angle of 89 degrees 40' 40\" with the last mentioned courses 154.36 feet;\n\nTHENCE easterly again at right angles to the westerly side of 164th Street, a distance of 191.76 feet to the westerly side of 164th Street;\n\nTHENCE southerly along the westerly side of 164th Street, 154.36 feet to the point or place of BEGINNING.",
+   "stated_area_sf": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 44,
+   "traverse": {
+    "walked_area_sf": 29600.1,
+    "closure_error_ft": 0.89,
+    "n_courses": 4,
+    "verdict": "closes",
+    "parser": "metes.py 2026-08-13 (DMS guard, bug #10)"
+   }
+  },
+  {
+   "exhibit": "Schedule B — BLOCK 9793, LOT 86 (Church Land) — TRUNCATED AS RECORDED",
+   "bbl": "4097930086",
+   "shape": "per_lot",
+   "truncated_as_recorded": true,
+   "courses_verbatim": "ALL that certain piece or parcel of land situate, lying and being in the Borough and County of Queens, City and State of New York, designated on the Tax Map of the City of New York for said Borough as Lot 86 in Block 9793, said parcel being more particularly bounded and described as follows:\n\nBEGINNING at a point on the westerly side of 164th Street distant 249.95 feet northerly from the corner formed by the intersection of the westerly side of 164th Street with the northerly side of Jamaica Avenue;\n\nRUNNING thence northerly along said westerly side of 164th Street, 75 feet to a point;\n\nTHENCE westerly at right angles to said westerly side of 164th Street, 192.65 feet to a point;\n\nTHENCE southerly on a line forming an interior angle of 90 degrees 7 minutes 45 seconds with the last mentioned course, 69 feet to a point;",
+   "stated_area_sf": 14332,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 45,
+   "traverse": {
+    "walked_area_sf": 13870.8,
+    "closure_error_ft": 192.743,
+    "n_courses": 3,
+    "verdict": "does_not_close",
+    "parser": "metes.py 2026-08-13 (DMS guard, bug #10)"
+   }
+  }
+ ]
+}

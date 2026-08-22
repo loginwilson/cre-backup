@@ -1,0 +1,38 @@
+[
+ {
+  "sessions": 1,
+  "each": 32,
+  "ok": 768,
+  "req_per_s": 22.0,
+  "mb_per_s": 1.37,
+  "lat": 0.486,
+  "p95": 1.355
+ },
+ {
+  "sessions": 4,
+  "each": 8,
+  "ok": 768,
+  "req_per_s": 24.2,
+  "mb_per_s": 1.25,
+  "lat": 0.36,
+  "p95": 0.729
+ },
+ {
+  "sessions": 1,
+  "each": 32,
+  "ok": 768,
+  "req_per_s": 25.1,
+  "mb_per_s": 1.22,
+  "lat": 0.323,
+  "p95": 0.587
+ },
+ {
+  "sessions": 4,
+  "each": 8,
+  "ok": 766,
+  "req_per_s": 20.7,
+  "mb_per_s": 1.11,
+  "lat": 0.445,
+  "p95": 1.21
+ }
+]

@@ -1,0 +1,71 @@
+{
+ "tag": "ftorient/FT_1680008647768",
+ "src": "C:\\Users\\smile\\Downloads\\Source Folder (Real Estate Data)\\Decoder Prompt\\decoder\\bakeoff\\pages\\FT_1680008647768",
+ "angles": [
+  0
+ ],
+ "side": 1440,
+ "pages": [
+  {
+   "page": "p001.png",
+   "lines": 63,
+   "sec": 91.4,
+   "status": "ok"
+  },
+  {
+   "page": "p002.png",
+   "lines": 16,
+   "sec": 46.2,
+   "status": "ok"
+  },
+  {
+   "page": "p003.png",
+   "lines": 58,
+   "sec": 90.5,
+   "status": "ok"
+  },
+  {
+   "page": "p004.png",
+   "lines": 58,
+   "sec": 111.2,
+   "status": "ok"
+  },
+  {
+   "page": "p005.png",
+   "lines": 85,
+   "sec": 156.2,
+   "status": "ok"
+  },
+  {
+   "page": "p006.png",
+   "lines": 83,
+   "sec": 136.6,
+   "status": "ok"
+  },
+  {
+   "page": "p007.png",
+   "lines": 85,
+   "sec": 148.1,
+   "status": "ok"
+  },
+  {
+   "page": "p008.png",
+   "lines": 85,
+   "sec": 161.3,
+   "status": "ok"
+  },
+  {
+   "page": "p009.png",
+   "lines": 52,
+   "sec": 96.1,
+   "status": "ok"
+  },
+  {
+   "page": "p010.png",
+   "lines": 101,
+   "sec": 87.0,
+   "status": "ok"
+  }
+ ],
+ "sec": 1124.6
+}

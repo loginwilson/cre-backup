@@ -1,0 +1,18 @@
+{
+ "doc_id": "2022021600224002",
+ "engine": "PP-OCRv4/openvino",
+ "pages": [
+  {
+   "page": "p001",
+   "accepted_text": ""
+  },
+  {
+   "page": "p002",
+   "accepted_text": "FN-43470:NY AMENDEDANDRESTATED ZONINGLOTDEVELOPMENTANDEASEMENTAGREEMENT QUEENSCOUNTY BLOCK 814 LOTS1 AND 10 RECORDANDRETURNTO: GREENBERGTRAURIG,LLP ONEVANDERBILTAVENUE NEWYORK,NEWYORK10017 ATTENTION:S.NICHOLASHOCKENS,ESQ. ACTIVE57571897V7"
+  },
+  {
+   "page": "p003",
+   "accepted_text": ""
+  }
+ ]
+}

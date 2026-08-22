@@ -1,0 +1,136 @@
+{
+ "configs": [
+  {
+   "config": "v4-mobile  (today)",
+   "hit": 69,
+   "of": 73,
+   "recall": 0.9452054794520548,
+   "sec_per_page": 3.453944504261017,
+   "pages": [
+    {
+     "page": "sideways backer",
+     "hit": 17,
+     "of": 18,
+     "sec": 2.668734073638916
+    },
+    {
+     "page": "film money page",
+     "hit": 11,
+     "of": 12,
+     "sec": 4.134869337081909
+    },
+    {
+     "page": "film backer",
+     "hit": 23,
+     "of": 25,
+     "sec": 3.2618017196655273
+    },
+    {
+     "page": "digital",
+     "hit": 18,
+     "of": 18,
+     "sec": 3.750372886657715
+    }
+   ]
+  },
+  {
+   "config": "v6-tiny",
+   "hit": 70,
+   "of": 73,
+   "recall": 0.958904109589041,
+   "sec_per_page": 1.8749735951423645,
+   "pages": [
+    {
+     "page": "sideways backer",
+     "hit": 16,
+     "of": 18,
+     "sec": 1.2539479732513428
+    },
+    {
+     "page": "film money page",
+     "hit": 12,
+     "of": 12,
+     "sec": 2.2625863552093506
+    },
+    {
+     "page": "film backer",
+     "hit": 24,
+     "of": 25,
+     "sec": 1.9372446537017822
+    },
+    {
+     "page": "digital",
+     "hit": 18,
+     "of": 18,
+     "sec": 2.0461153984069824
+    }
+   ]
+  },
+  {
+   "config": "v6-small",
+   "hit": 67,
+   "of": 73,
+   "recall": 0.9178082191780822,
+   "sec_per_page": 4.816230356693268,
+   "pages": [
+    {
+     "page": "sideways backer",
+     "hit": 16,
+     "of": 18,
+     "sec": 2.6601626873016357
+    },
+    {
+     "page": "film money page",
+     "hit": 11,
+     "of": 12,
+     "sec": 7.136806011199951
+    },
+    {
+     "page": "film backer",
+     "hit": 22,
+     "of": 25,
+     "sec": 4.170768737792969
+    },
+    {
+     "page": "digital",
+     "hit": 18,
+     "of": 18,
+     "sec": 5.297183990478516
+    }
+   ]
+  },
+  {
+   "config": "v6-medium",
+   "hit": 70,
+   "of": 73,
+   "recall": 0.958904109589041,
+   "sec_per_page": 16.269372165203094,
+   "pages": [
+    {
+     "page": "sideways backer",
+     "hit": 15,
+     "of": 18,
+     "sec": 9.627725839614868
+    },
+    {
+     "page": "film money page",
+     "hit": 12,
+     "of": 12,
+     "sec": 22.669842958450317
+    },
+    {
+     "page": "film backer",
+     "hit": 25,
+     "of": 25,
+     "sec": 15.654661417007446
+    },
+    {
+     "page": "digital",
+     "hit": 18,
+     "of": 18,
+     "sec": 17.125258445739746
+    }
+   ]
+  }
+ ]
+}

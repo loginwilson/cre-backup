@@ -1,0 +1,3099 @@
+{
+ "2003010601086002": {
+  "doc_id": "2003010601086002",
+  "n_pages": 37,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p009",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p010",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p011",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p012",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p013",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p014",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p015",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p016",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p017",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p018",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p019",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p020",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p021",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p022",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p023",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p024",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p025",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p026",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p027",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p028",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p029",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p030",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p031",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p032",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p033",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p034",
+    "kind": "exhibit",
+    "label": "EXHIBIT C"
+   },
+   {
+    "page": "p035",
+    "kind": "exhibit",
+    "label": "EXHIBIT C"
+   },
+   {
+    "page": "p036",
+    "kind": "exhibit",
+    "label": "EXHIBIT D"
+   },
+   {
+    "page": "p037",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   }
+  ],
+  "exhibits": [
+   "EXHIBIT A",
+   "EXHIBIT B",
+   "EXHIBIT C",
+   "EXHIBIT D",
+   "EXHIBIT E"
+  ],
+  "instrument_title": "ZONING LOTANDDEVELOPMENTAGREEMENT",
+  "quantities": [
+   {
+    "kind": "area",
+    "value_num": 30244.0,
+    "unit": "SF",
+    "page": "p013",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     1560,
+     1578
+    ],
+    "quote": "30,244 square feet",
+    "established_by": "text_body"
+   },
+   {
+    "kind": "area",
+    "value_num": 18032.0,
+    "unit": "SF",
+    "page": "p013",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     1758,
+     1776
+    ],
+    "quote": "18,032 square feet",
+    "established_by": "text_body"
+   },
+   {
+    "kind": "area",
+    "value_num": 9016.0,
+    "unit": "SF",
+    "page": "p013",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     1875,
+     1892
+    ],
+    "quote": "9,016 square feet",
+    "established_by": "text_body"
+   },
+   {
+    "kind": "area",
+    "value_num": 7561.0,
+    "unit": "SF",
+    "page": "p037",
+    "region": "exhibit",
+    "exhibit": "EXHIBIT E",
+    "how": "unit_after",
+    "span": [
+     664,
+     673
+    ],
+    "quote": "7,561 s.f",
+    "established_by": "text_exhibit"
+   },
+   {
+    "kind": "area",
+    "value_num": 143080.0,
+    "unit": "SF",
+    "page": "p037",
+    "region": "exhibit",
+    "exhibit": "EXHIBIT E",
+    "how": "label_before",
+    "span": [
+     389,
+     407
+    ],
+    "quote": "Floor Area 143,080",
+    "established_by": "text_exhibit"
+   }
+  ]
+ },
+ "2003013001838001": {
+  "doc_id": "2003013001838001",
+  "n_pages": 16,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p009",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p010",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p011",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p012",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p013",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p014",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p015",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p016",
+    "kind": "body",
+    "label": null
+   }
+  ],
+  "exhibits": [],
+  "instrument_title": "ZONINGLOTANDDEVELOPMENTAGREEMENT ANDDECLARATIONOFRESTRICTIONS AGREEMENT",
+  "quantities": []
+ },
+ "2003021302514009": {
+  "doc_id": "2003021302514009",
+  "n_pages": 63,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p009",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p010",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p011",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p012",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p013",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p014",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p015",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p016",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p017",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p018",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p019",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p020",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p021",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p022",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p023",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p024",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p025",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p026",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p027",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p028",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p029",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p030",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p031",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p032",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p033",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p034",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p035",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p036",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p037",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p038",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p039",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p040",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p041",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p042",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p043",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p044",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p045",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p046",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p047",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p048",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p049",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p050",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p051",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p052",
+    "kind": "exhibit",
+    "label": "EXHIBIT C"
+   },
+   {
+    "page": "p053",
+    "kind": "exhibit",
+    "label": "EXHIBIT C"
+   },
+   {
+    "page": "p054",
+    "kind": "exhibit",
+    "label": "EXHIBIT C"
+   },
+   {
+    "page": "p055",
+    "kind": "exhibit",
+    "label": "EXHIBIT C"
+   },
+   {
+    "page": "p056",
+    "kind": "exhibit",
+    "label": "EXHIBIT D"
+   },
+   {
+    "page": "p057",
+    "kind": "exhibit",
+    "label": "EXHIBIT D"
+   },
+   {
+    "page": "p058",
+    "kind": "exhibit",
+    "label": "EXHIBIT D"
+   },
+   {
+    "page": "p059",
+    "kind": "exhibit",
+    "label": "EXHIBIT D"
+   },
+   {
+    "page": "p060",
+    "kind": "exhibit",
+    "label": "EXHIBIT D"
+   },
+   {
+    "page": "p061",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p062",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   },
+   {
+    "page": "p063",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   }
+  ],
+  "exhibits": [
+   "EXHIBIT A",
+   "EXHIBIT B",
+   "EXHIBIT C",
+   "EXHIBIT D",
+   "EXHIBIT E"
+  ],
+  "instrument_title": "ZONINGLOTDEVELOPMENTANDEASEMENTAGREEMENT AGREEMENT",
+  "quantities": [
+   {
+    "kind": "area",
+    "value_num": 8248.0,
+    "unit": "SF",
+    "page": "p009",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     26,
+     40
+    ],
+    "quote": "8248squarefeet",
+    "established_by": "text_body"
+   },
+   {
+    "kind": "area",
+    "value_num": 6152.0,
+    "unit": "SF",
+    "page": "p009",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     1062,
+     1078
+    ],
+    "quote": "6152 square feet",
+    "established_by": "text_body"
+   },
+   {
+    "kind": "area",
+    "value_num": 30000.0,
+    "unit": "SF",
+    "page": "p038",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     363,
+     381
+    ],
+    "quote": "30,000 square feet",
+    "established_by": "text_body"
+   }
+  ]
+ },
+ "2003021400219004": {
+  "doc_id": "2003021400219004",
+  "n_pages": 40,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p009",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p010",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p011",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p012",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p013",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p014",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p015",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p016",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p017",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p018",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   },
+   {
+    "page": "p019",
+    "kind": "exhibit",
+    "label": "SCHEDULE B"
+   },
+   {
+    "page": "p020",
+    "kind": "exhibit",
+    "label": "SCHEDULE B"
+   },
+   {
+    "page": "p021",
+    "kind": "exhibit",
+    "label": "SCHEDULE B"
+   },
+   {
+    "page": "p022",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p023",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p024",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p025",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p026",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p027",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p028",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p029",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p030",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p031",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p032",
+    "kind": "exhibit",
+    "label": "EXHIBIT C"
+   },
+   {
+    "page": "p033",
+    "kind": "exhibit",
+    "label": "EXHIBIT D"
+   },
+   {
+    "page": "p034",
+    "kind": "exhibit",
+    "label": "EXHIBIT D"
+   },
+   {
+    "page": "p035",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   },
+   {
+    "page": "p036",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   },
+   {
+    "page": "p037",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   },
+   {
+    "page": "p038",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   },
+   {
+    "page": "p039",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   },
+   {
+    "page": "p040",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   }
+  ],
+  "exhibits": [
+   "EXHIBIT A",
+   "EXHIBIT B",
+   "EXHIBIT C",
+   "EXHIBIT D",
+   "EXHIBIT E",
+   "SCHEDULE A",
+   "SCHEDULE B"
+  ],
+  "instrument_title": "ZONINGLOTANDDEVELOPMENTAGREEMENT AGREEMENT",
+  "quantities": [
+   {
+    "kind": "area",
+    "value_num": 21240.0,
+    "unit": "SF",
+    "page": "p004",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     455,
+     473
+    ],
+    "quote": "21,240 square feet",
+    "established_by": "text_body"
+   }
+  ]
+ },
+ "2003022602133001": {
+  "doc_id": "2003022602133001",
+  "n_pages": 49,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p009",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p010",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p011",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p012",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p013",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p014",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p015",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p016",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p017",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p018",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p019",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p020",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p021",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p022",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p023",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p024",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p025",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p026",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p027",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p028",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p029",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p030",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p031",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p032",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p033",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p034",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p035",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p036",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p037",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p038",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p039",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p040",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p041",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p042",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p043",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p044",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   },
+   {
+    "page": "p045",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   },
+   {
+    "page": "p046",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   },
+   {
+    "page": "p047",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   },
+   {
+    "page": "p048",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   },
+   {
+    "page": "p049",
+    "kind": "exhibit",
+    "label": "EXHIBIT E"
+   }
+  ],
+  "exhibits": [
+   "EXHIBIT B",
+   "EXHIBIT E"
+  ],
+  "instrument_title": "ZONINGLOTDEVELOPMENTAGREEMENT THIS ZONING LOT DEVELOPMENT AGREEMENT",
+  "quantities": [
+   {
+    "kind": "area",
+    "value_num": 1090.0,
+    "unit": "SF",
+    "page": "p006",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     1674,
+     1690
+    ],
+    "quote": "1090 square feet",
+    "established_by": "text_body"
+   }
+  ]
+ },
+ "2003030700273001": {
+  "doc_id": "2003030700273001",
+  "n_pages": 15,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p009",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p010",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p011",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p012",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p013",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   },
+   {
+    "page": "p014",
+    "kind": "exhibit",
+    "label": "SCHEDULE B"
+   },
+   {
+    "page": "p015",
+    "kind": "exhibit",
+    "label": "SCHEDULE C"
+   }
+  ],
+  "exhibits": [
+   "SCHEDULE A",
+   "SCHEDULE B",
+   "SCHEDULE C"
+  ],
+  "instrument_title": null,
+  "quantities": []
+ },
+ "2003041400735009": {
+  "doc_id": "2003041400735009",
+  "n_pages": 28,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p009",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p010",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p011",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p012",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p013",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p014",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p015",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p016",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p017",
+    "kind": "exhibit",
+    "label": "EXHIBIT S"
+   },
+   {
+    "page": "p018",
+    "kind": "exhibit",
+    "label": "EXHIBIT S"
+   },
+   {
+    "page": "p019",
+    "kind": "exhibit",
+    "label": "EXHIBIT S"
+   },
+   {
+    "page": "p020",
+    "kind": "exhibit",
+    "label": "EXHIBIT S"
+   },
+   {
+    "page": "p021",
+    "kind": "exhibit",
+    "label": "EXHIBIT S"
+   },
+   {
+    "page": "p022",
+    "kind": "exhibit",
+    "label": "EXHIBIT S"
+   },
+   {
+    "page": "p023",
+    "kind": "exhibit",
+    "label": "EXHIBIT S"
+   },
+   {
+    "page": "p024",
+    "kind": "exhibit",
+    "label": "EXHIBIT S"
+   },
+   {
+    "page": "p025",
+    "kind": "exhibit",
+    "label": "EXHIBIT S"
+   },
+   {
+    "page": "p026",
+    "kind": "exhibit",
+    "label": "EXHIBIT S"
+   },
+   {
+    "page": "p027",
+    "kind": "exhibit",
+    "label": "EXHIBIT D"
+   },
+   {
+    "page": "p028",
+    "kind": "exhibit",
+    "label": "EXHIBIT D"
+   }
+  ],
+  "exhibits": [
+   "EXHIBIT D",
+   "EXHIBIT S"
+  ],
+  "instrument_title": "ZONINGLOTDEVELOPMENTAGREEMENT THIS ZONING LOT DEVELOPMENT AGREEMENT",
+  "quantities": [
+   {
+    "kind": "area",
+    "value_num": 20600.0,
+    "unit": "SF",
+    "page": "p004",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     1103,
+     1121
+    ],
+    "quote": "20,600 square feet",
+    "established_by": "text_body"
+   }
+  ]
+ },
+ "2003052001090003": {
+  "doc_id": "2003052001090003",
+  "n_pages": 24,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p009",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p010",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p011",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p012",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p013",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p014",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p015",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p016",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p017",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p018",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p019",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p020",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p021",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p022",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p023",
+    "kind": "exhibit",
+    "label": "SCHEDULE BTO"
+   },
+   {
+    "page": "p024",
+    "kind": "exhibit",
+    "label": "SCHEDULE BTO"
+   }
+  ],
+  "exhibits": [
+   "SCHEDULE BTO"
+  ],
+  "instrument_title": "ZONINGLOT DEVELOPMENTAGREEMENT",
+  "quantities": [
+   {
+    "kind": "area",
+    "value_num": 8400.0,
+    "unit": "SF",
+    "page": "p004",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     785,
+     802
+    ],
+    "quote": "8,400 square feet",
+    "established_by": "text_body"
+   },
+   {
+    "kind": "area",
+    "value_num": 10167.0,
+    "unit": "SF",
+    "page": "p004",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     1807,
+     1825
+    ],
+    "quote": "10,167 square feet",
+    "established_by": "text_body"
+   }
+  ]
+ },
+ "2003052701726001": {
+  "doc_id": "2003052701726001",
+  "n_pages": 35,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p009",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p010",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p011",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p012",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p013",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p014",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p015",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p016",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p017",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p018",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p019",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p020",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p021",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p022",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p023",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p024",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p025",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p026",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p027",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p028",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p029",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p030",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p031",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p032",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p033",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p034",
+    "kind": "exhibit",
+    "label": "EXHIBIT C"
+   },
+   {
+    "page": "p035",
+    "kind": "exhibit",
+    "label": "EXHIBIT C"
+   }
+  ],
+  "exhibits": [
+   "EXHIBIT A",
+   "EXHIBIT B",
+   "EXHIBIT C"
+  ],
+  "instrument_title": "ZONINGLOTDEVELOPMENTAGREEMENT",
+  "quantities": [
+   {
+    "kind": "area",
+    "value_num": 516.0,
+    "unit": "SF",
+    "page": "p014",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     658,
+     673
+    ],
+    "quote": "516 square feet",
+    "established_by": "text_body"
+   }
+  ]
+ },
+ "2003060400703001": {
+  "doc_id": "2003060400703001",
+  "n_pages": 21,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p009",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p010",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p011",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p012",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p013",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p014",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p015",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p016",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p017",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p018",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p019",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p020",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p021",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   }
+  ],
+  "exhibits": [
+   "EXHIBIT A",
+   "EXHIBIT B"
+  ],
+  "instrument_title": "ZONINGLOTANDDEVELOPMENTAGREEMENT AGREEMENT",
+  "quantities": [
+   {
+    "kind": "area",
+    "value_num": 29128.0,
+    "unit": "SF",
+    "page": "p004",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     80,
+     98
+    ],
+    "quote": "29,128 square feet",
+    "established_by": "text_body"
+   }
+  ]
+ },
+ "2003061201945006": {
+  "doc_id": "2003061201945006",
+  "n_pages": 24,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p009",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p010",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p011",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p012",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p013",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p014",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p015",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p016",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p017",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p018",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p019",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p020",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p021",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p022",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p023",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p024",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   }
+  ],
+  "exhibits": [
+   "EXHIBIT A",
+   "EXHIBIT B"
+  ],
+  "instrument_title": "ZONINGLOTDEVELOPMENTANDEASEMENTAGREEMENT THISZONINGLOTDEVELOPMENTANDEASEMENTAGREEMENT",
+  "quantities": [
+   {
+    "kind": "area",
+    "value_num": 9937.0,
+    "unit": "SF",
+    "page": "p004",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     2594,
+     2611
+    ],
+    "quote": "9,937 square feet",
+    "established_by": "text_body"
+   },
+   {
+    "kind": "area",
+    "value_num": 15095.0,
+    "unit": "SF",
+    "page": "p004",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     2779,
+     2797
+    ],
+    "quote": "15,095 square feet",
+    "established_by": "text_body"
+   }
+  ]
+ },
+ "2003061800429003": {
+  "doc_id": "2003061800429003",
+  "n_pages": 23,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p009",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p010",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p011",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p012",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p013",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p014",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p015",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p016",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p017",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p018",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p019",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p020",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p021",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p022",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p023",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   }
+  ],
+  "exhibits": [
+   "EXHIBIT A",
+   "EXHIBIT B"
+  ],
+  "instrument_title": "ZONINGLOTDEVELOPMENTANDEASEMENTAGREEMENT",
+  "quantities": [
+   {
+    "kind": "area",
+    "value_num": 5810.0,
+    "unit": "SF",
+    "page": "p004",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     1332,
+     1349
+    ],
+    "quote": "5,810 square feet",
+    "established_by": "text_body"
+   },
+   {
+    "kind": "area",
+    "value_num": 2348.0,
+    "unit": "SF",
+    "page": "p004",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     1410,
+     1427
+    ],
+    "quote": "2,348 square feet",
+    "established_by": "text_body"
+   },
+   {
+    "kind": "area",
+    "value_num": 6688.0,
+    "unit": "SF",
+    "page": "p004",
+    "region": "body",
+    "exhibit": null,
+    "how": "unit_after",
+    "span": [
+     1734,
+     1751
+    ],
+    "quote": "6,688 square feet",
+    "established_by": "text_body"
+   }
+  ]
+ },
+ "2003062701790001": {
+  "doc_id": "2003062701790001",
+  "n_pages": 24,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p009",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p010",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p011",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p012",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p013",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p014",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p015",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p016",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p017",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p018",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p019",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p020",
+    "kind": "exhibit",
+    "label": "EXHIBIT C"
+   },
+   {
+    "page": "p021",
+    "kind": "exhibit",
+    "label": "EXHIBIT C"
+   },
+   {
+    "page": "p022",
+    "kind": "exhibit",
+    "label": "EXHIBIT A"
+   },
+   {
+    "page": "p023",
+    "kind": "exhibit",
+    "label": "EXHIBIT B"
+   },
+   {
+    "page": "p024",
+    "kind": "exhibit",
+    "label": "EXHIBIT C"
+   }
+  ],
+  "exhibits": [
+   "EXHIBIT A",
+   "EXHIBIT B",
+   "EXHIBIT C"
+  ],
+  "instrument_title": "ZONING LOT AND DEVELOPMENT AGREEMENT",
+  "quantities": [
+   {
+    "kind": "area",
+    "value_num": 6282.0,
+    "unit": "SF",
+    "page": "p004",
+    "region": "body",
+    "exhibit": null,
+    "how": "label_before",
+    "span": [
+     1645,
+     1684
+    ],
+    "quote": "Development Rights of approximately6282",
+    "established_by": "text_body"
+   }
+  ]
+ },
+ "2003070100714001": {
+  "doc_id": "2003070100714001",
+  "n_pages": 8,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   },
+   {
+    "page": "p008",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   }
+  ],
+  "exhibits": [
+   "SCHEDULE A"
+  ],
+  "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+  "quantities": []
+ },
+ "2003070100714002": {
+  "doc_id": "2003070100714002",
+  "n_pages": 8,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   },
+   {
+    "page": "p008",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   }
+  ],
+  "exhibits": [
+   "SCHEDULE A"
+  ],
+  "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+  "quantities": []
+ },
+ "2003070100714003": {
+  "doc_id": "2003070100714003",
+  "n_pages": 8,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   },
+   {
+    "page": "p008",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   }
+  ],
+  "exhibits": [
+   "SCHEDULE A"
+  ],
+  "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+  "quantities": []
+ },
+ "2003070100714004": {
+  "doc_id": "2003070100714004",
+  "n_pages": 8,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   },
+   {
+    "page": "p008",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   }
+  ],
+  "exhibits": [
+   "SCHEDULE A"
+  ],
+  "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+  "quantities": []
+ },
+ "2003070100714005": {
+  "doc_id": "2003070100714005",
+  "n_pages": 8,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   },
+   {
+    "page": "p008",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   }
+  ],
+  "exhibits": [
+   "SCHEDULE A"
+  ],
+  "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+  "quantities": []
+ },
+ "2003070100714006": {
+  "doc_id": "2003070100714006",
+  "n_pages": 8,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   },
+   {
+    "page": "p008",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   }
+  ],
+  "exhibits": [
+   "SCHEDULE A"
+  ],
+  "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+  "quantities": []
+ },
+ "2003070100714007": {
+  "doc_id": "2003070100714007",
+  "n_pages": 8,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   },
+   {
+    "page": "p008",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   }
+  ],
+  "exhibits": [
+   "SCHEDULE A"
+  ],
+  "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+  "quantities": []
+ },
+ "2003070100714008": {
+  "doc_id": "2003070100714008",
+  "n_pages": 8,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   },
+   {
+    "page": "p008",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   }
+  ],
+  "exhibits": [
+   "SCHEDULE A"
+  ],
+  "instrument_title": "PARTYWALL DECLARATION OF RESTRICTIONS",
+  "quantities": []
+ },
+ "2003070100714009": {
+  "doc_id": "2003070100714009",
+  "n_pages": 8,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   },
+   {
+    "page": "p008",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   }
+  ],
+  "exhibits": [
+   "SCHEDULE A"
+  ],
+  "instrument_title": "PARTYWALL DECLARATION OF RESTRICTIONS",
+  "quantities": []
+ },
+ "2003070100714010": {
+  "doc_id": "2003070100714010",
+  "n_pages": 8,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   },
+   {
+    "page": "p008",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   }
+  ],
+  "exhibits": [
+   "SCHEDULE A"
+  ],
+  "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+  "quantities": []
+ },
+ "2003070100714011": {
+  "doc_id": "2003070100714011",
+  "n_pages": 8,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   },
+   {
+    "page": "p008",
+    "kind": "exhibit",
+    "label": "SCHEDULE A"
+   }
+  ],
+  "exhibits": [
+   "SCHEDULE A"
+  ],
+  "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+  "quantities": []
+ },
+ "2003070100714012": {
+  "doc_id": "2003070100714012",
+  "n_pages": 8,
+  "segments": [
+   {
+    "page": "p001",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p002",
+    "kind": "cover",
+    "label": null
+   },
+   {
+    "page": "p003",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p004",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p005",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p006",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p007",
+    "kind": "body",
+    "label": null
+   },
+   {
+    "page": "p008",
+    "kind": "body",
+    "label": null
+   }
+  ],
+  "exhibits": [],
+  "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+  "quantities": []
+ }
+}

@@ -1,0 +1,905 @@
+{
+ "page": "2003010601086002/p004",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "WHEREAS, pursuant to the procedure set forth in Section 12-10 of the Zoning",
+   "box": [
+    [
+     599,
+     371
+    ],
+    [
+     2188,
+     369
+    ],
+    [
+     2188,
+     432
+    ],
+    [
+     599,
+     434
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9988
+  },
+  {
+   "text": "Resolution,the parties hereto are simultaneously herewith executing a Declaration of Zoning Lot",
+   "box": [
+    [
+     298,
+     432
+    ],
+    [
+     2249,
+     430
+    ],
+    [
+     2249,
+     486
+    ],
+    [
+     298,
+     488
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9822
+  },
+  {
+   "text": "Restrictions (the \u201cDeclaration\") in order to create a single zoning lot consisting of the 54 CF",
+   "box": [
+    [
+     300,
+     490
+    ],
+    [
+     2152,
+     488
+    ],
+    [
+     2152,
+     545
+    ],
+    [
+     300,
+     547
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9759
+  },
+  {
+   "text": "Land, the ACNY Land and the Developer Land (the \u201cCombined Zoning Lot\"); and",
+   "box": [
+    [
+     300,
+     549
+    ],
+    [
+     1970,
+     549
+    ],
+    [
+     1970,
+     604
+    ],
+    [
+     300,
+     604
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9688
+  },
+  {
+   "text": "WHEREAS, the parties hereto wish to set forth certain agreements with respect to",
+   "box": [
+    [
+     599,
+     702
+    ],
+    [
+     2244,
+     700
+    ],
+    [
+     2244,
+     763
+    ],
+    [
+     599,
+     765
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9878
+  },
+  {
+   "text": "their rights and obligations in and to the Combined Zoning Lot and other matters, and wish to",
+   "box": [
+    [
+     302,
+     761
+    ],
+    [
+     2179,
+     759
+    ],
+    [
+     2179,
+     821
+    ],
+    [
+     302,
+     824
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9936
+  },
+  {
+   "text": "provide to the maximum extent possiblefor each to exercise its rights in thefuture without",
+   "box": [
+    [
+     304,
+     821
+    ],
+    [
+     2121,
+     819
+    ],
+    [
+     2123,
+     876
+    ],
+    [
+     304,
+     878
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9675
+  },
+  {
+   "text": "NOW THEREFORE, in consideration of Ten Dollars (S10.00) and other good",
+   "box": [
+    [
+     597,
+     1037
+    ],
+    [
+     2167,
+     1037
+    ],
+    [
+     2167,
+     1092
+    ],
+    [
+     597,
+     1092
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9913
+  },
+  {
+   "text": "and valuable consideration, the receipt and sufficiency of which is hereby acknowledged, the",
+   "box": [
+    [
+     302,
+     1090
+    ],
+    [
+     2163,
+     1092
+    ],
+    [
+     2163,
+     1155
+    ],
+    [
+     302,
+     1153
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9813
+  },
+  {
+   "text": "parties hereto agree as follows:",
+   "box": [
+    [
+     300,
+     1150
+    ],
+    [
+     928,
+     1150
+    ],
+    [
+     928,
+     1207
+    ],
+    [
+     300,
+     1207
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9924
+  },
+  {
+   "text": "1.",
+   "box": [
+    [
+     298,
+     1312
+    ],
+    [
+     375,
+     1312
+    ],
+    [
+     375,
+     1360
+    ],
+    [
+     298,
+     1360
+    ]
+   ],
+   "angle": 0,
+   "score": 0.95
+  },
+  {
+   "text": "Certain Definitions. As used herein:",
+   "box": [
+    [
+     451,
+     1310
+    ],
+    [
+     1188,
+     1312
+    ],
+    [
+     1188,
+     1366
+    ],
+    [
+     448,
+     1364
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9762
+  },
+  {
+   "text": "a",
+   "box": [
+    [
+     442,
+     1423
+    ],
+    [
+     604,
+     1423
+    ],
+    [
+     604,
+     1473
+    ],
+    [
+     442,
+     1473
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9852
+  },
+  {
+   "text": "\u201cBonus Floor Area Development Rights\u201dshall mean any bonus floor area and",
+   "box": [
+    [
+     585,
+     1419
+    ],
+    [
+     2169,
+     1417
+    ],
+    [
+     2169,
+     1471
+    ],
+    [
+     585,
+     1473
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9524
+  },
+  {
+   "text": "associated bulk and density rights attributable to the zoning lot consisting of Developer Premises,",
+   "box": [
+    [
+     302,
+     1475
+    ],
+    [
+     2249,
+     1475
+    ],
+    [
+     2249,
+     1530
+    ],
+    [
+     302,
+     1530
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9669
+  },
+  {
+   "text": "the54CFPremisesandtheACNYPremiseswhichmaybeavailableforinclusionintheNew",
+   "box": [
+    [
+     304,
+     1536
+    ],
+    [
+     2182,
+     1536
+    ],
+    [
+     2182,
+     1584
+    ],
+    [
+     304,
+     1584
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9926
+  },
+  {
+   "text": "Developer Building through the provision of an amenity or public benefit, either on the",
+   "box": [
+    [
+     306,
+     1593
+    ],
+    [
+     2054,
+     1593
+    ],
+    [
+     2054,
+     1647
+    ],
+    [
+     306,
+     1647
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9784
+  },
+  {
+   "text": "Developer Premises or off the Combined Zoning Lot (as defined herein) in accordance with the",
+   "box": [
+    [
+     304,
+     1647
+    ],
+    [
+     2217,
+     1647
+    ],
+    [
+     2217,
+     1708
+    ],
+    [
+     304,
+     1708
+    ]
+   ],
+   "angle": 0,
+   "score": 0.989
+  },
+  {
+   "text": "applicable provisions of the Zoning Resolution.",
+   "box": [
+    [
+     304,
+     1706
+    ],
+    [
+     1257,
+     1708
+    ],
+    [
+     1255,
+     1765
+    ],
+    [
+     304,
+     1762
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9875
+  },
+  {
+   "text": "b",
+   "box": [
+    [
+     444,
+     1815
+    ],
+    [
+     488,
+     1815
+    ],
+    [
+     488,
+     1861
+    ],
+    [
+     444,
+     1861
+    ]
+   ],
+   "angle": 0,
+   "score": 0.999
+  },
+  {
+   "text": "\"Datum Level' shall mean the Datum level used by the Topographical Bureau,",
+   "box": [
+    [
+     601,
+     1813
+    ],
+    [
+     2182,
+     1815
+    ],
+    [
+     2182,
+     1871
+    ],
+    [
+     601,
+     1869
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9673
+  },
+  {
+   "text": "Borough of Manhattan,which is 2.75 feet above the United States Coast and Geodetic Survey",
+   "box": [
+    [
+     302,
+     1869
+    ],
+    [
+     2182,
+     1871
+    ],
+    [
+     2182,
+     1928
+    ],
+    [
+     302,
+     1926
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9782
+  },
+  {
+   "text": "Datum, mean sea level, Sandy Hook, New Jersey.",
+   "box": [
+    [
+     300,
+     1928
+    ],
+    [
+     1308,
+     1934
+    ],
+    [
+     1306,
+     1989
+    ],
+    [
+     300,
+     1982
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9615
+  },
+  {
+   "text": " tii    s sh sn sa rs , pe ,  n s,",
+   "box": [
+    [
+     304,
+     2089
+    ],
+    [
+     2203,
+     2091
+    ],
+    [
+     2203,
+     2152
+    ],
+    [
+     304,
+     2150
+    ]
+   ],
+   "angle": 0,
+   "score": 0.5286
+  },
+  {
+   "text": "Zoning Resolution as of the date hereof.",
+   "box": [
+    [
+     302,
+     2148
+    ],
+    [
+     1115,
+     2150
+    ],
+    [
+     1115,
+     2205
+    ],
+    [
+     302,
+     2203
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9697
+  },
+  {
+   "text": " d \u201c\"Floor Area Development Rights\" shall mean the rights, as determined in",
+   "box": [
+    [
+     438,
+     2247
+    ],
+    [
+     2083,
+     2253
+    ],
+    [
+     2081,
+     2322
+    ],
+    [
+     436,
+     2316
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9598
+  },
+  {
+   "text": "accordance with the Zoning Resolution, which are appurtenant to a zoning lot, to be developed",
+   "box": [
+    [
+     300,
+     2311
+    ],
+    [
+     2203,
+     2314
+    ],
+    [
+     2203,
+     2374
+    ],
+    [
+     300,
+     2372
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9935
+  },
+  {
+   "text": "by erecting thereon a structure or structures with a total floor area determined (i) by multiplying",
+   "box": [
+    [
+     298,
+     2366
+    ],
+    [
+     2221,
+     2372
+    ],
+    [
+     2221,
+     2435
+    ],
+    [
+     298,
+     2429
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9898
+  },
+  {
+   "text": "the area of the zoning lot by the maximum allowable floor area ratio for structures in the zoning",
+   "box": [
+    [
+     300,
+     2425
+    ],
+    [
+     2223,
+     2431
+    ],
+    [
+     2223,
+     2492
+    ],
+    [
+     300,
+     2485
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9922
+  },
+  {
+   "text": "district or districts in which such zoning lot is located, and (i) any bulk and density rights",
+   "box": [
+    [
+     302,
+     2485
+    ],
+    [
+     2104,
+     2490
+    ],
+    [
+     2102,
+     2546
+    ],
+    [
+     302,
+     2542
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9736
+  },
+  {
+   "text": "permitted under the ZoningResolution andwhichmaybe authorized tobe developed by the",
+   "box": [
+    [
+     300,
+     2546
+    ],
+    [
+     2148,
+     2546
+    ],
+    [
+     2148,
+     2601
+    ],
+    [
+     300,
+     2601
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9688
+  },
+  {
+   "text": "appropriate agency of the City of New York from time to time.",
+   "box": [
+    [
+     302,
+     2605
+    ],
+    [
+     1565,
+     2603
+    ],
+    [
+     1565,
+     2659
+    ],
+    [
+     302,
+     2661
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9864
+  },
+  {
+   "text": "e",
+   "box": [
+    [
+     448,
+     2718
+    ],
+    [
+     495,
+     2718
+    ],
+    [
+     495,
+     2754
+    ],
+    [
+     448,
+     2754
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9905
+  },
+  {
+   "text": "\u201c\"54 CF Excess Floor Area Development Rights\u201dshall mean all Floor Area",
+   "box": [
+    [
+     597,
+     2705
+    ],
+    [
+     2104,
+     2710
+    ],
+    [
+     2102,
+     2766
+    ],
+    [
+     597,
+     2762
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9345
+  },
+  {
+   "text": "DevelopmentRights which are in excess of thoseFloor Area Development Rightsutilized by the",
+   "box": [
+    [
+     302,
+     2764
+    ],
+    [
+     2242,
+     2766
+    ],
+    [
+     2242,
+     2821
+    ],
+    [
+     302,
+     2819
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9528
+  },
+  {
+   "text": "54 CF Building as of the date hereof, and accordingly, are available for transfer pursuant to the",
+   "box": [
+    [
+     298,
+     2817
+    ],
+    [
+     2217,
+     2823
+    ],
+    [
+     2217,
+     2884
+    ],
+    [
+     298,
+     2877
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9953
+  },
+  {
+   "text": "Zoning Resolution.",
+   "box": [
+    [
+     302,
+     2877
+    ],
+    [
+     692,
+     2877
+    ],
+    [
+     692,
+     2934
+    ],
+    [
+     302,
+     2934
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9781
+  },
+  {
+   "text": "NYS5/214816.1",
+   "box": [
+    [
+     298,
+     2963
+    ],
+    [
+     499,
+     2967
+    ],
+    [
+     497,
+     3018
+    ],
+    [
+     295,
+     3014
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9595
+  },
+  {
+   "text": "E-2-3",
+   "box": [
+    [
+     1218,
+     2963
+    ],
+    [
+     1339,
+     2963
+    ],
+    [
+     1339,
+     3016
+    ],
+    [
+     1218,
+     3016
+    ]
+   ],
+   "angle": 0,
+   "score": 0.998
+  }
+ ]
+}

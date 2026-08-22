@@ -1,0 +1,233 @@
+[
+ {
+  "file": "1960s_MTGE_BK_6630001800232_p002.png",
+  "doc": "BK_6630001800232",
+  "page": 2,
+  "doc_type": "MTGE",
+  "decade": "1960s",
+  "era": "modern",
+  "tess_cache_conf": 86.3,
+  "tess_cache_words": 1532,
+  "tesseract_words": 1399
+ },
+ {
+  "file": "1960s_DEED_BK_6730047900233_p002.png",
+  "doc": "BK_6730047900233",
+  "page": 2,
+  "doc_type": "DEED",
+  "decade": "1960s",
+  "era": "modern",
+  "tess_cache_conf": 67.6,
+  "tess_cache_words": 518,
+  "tesseract_words": 391
+ },
+ {
+  "file": "1960s_EASE_BK_6640012400303_p002.png",
+  "doc": "BK_6640012400303",
+  "page": 2,
+  "doc_type": "EASE",
+  "decade": "1960s",
+  "era": "modern",
+  "tess_cache_conf": 34.6,
+  "tess_cache_words": 176,
+  "tesseract_words": 2
+ },
+ {
+  "file": "1970s_SAT_BK_7140047501973_p002.png",
+  "doc": "BK_7140047501973",
+  "page": 2,
+  "doc_type": "SAT",
+  "decade": "1970s",
+  "era": "modern",
+  "tess_cache_conf": 76.1,
+  "tess_cache_words": 333,
+  "tesseract_words": 251
+ },
+ {
+  "file": "1970s_DEED_BK_7420024500645_p002.png",
+  "doc": "BK_7420024500645",
+  "page": 2,
+  "doc_type": "DEED",
+  "decade": "1970s",
+  "era": "modern",
+  "tess_cache_conf": 63.6,
+  "tess_cache_words": 469,
+  "tesseract_words": 317
+ },
+ {
+  "file": "1970s_AGMT_BK_7620031401541_p004.png",
+  "doc": "BK_7620031401541",
+  "page": 4,
+  "doc_type": "AGMT",
+  "decade": "1970s",
+  "era": "modern",
+  "tess_cache_conf": 74.7,
+  "tess_cache_words": 1827,
+  "tesseract_words": 1536
+ },
+ {
+  "file": "1980s_DEED_FT_4660002023066_p003.png",
+  "doc": "FT_4660002023066",
+  "page": 3,
+  "doc_type": "DEED",
+  "decade": "1980s",
+  "era": "film",
+  "tess_cache_conf": 89.6,
+  "tess_cache_words": 649,
+  "tesseract_words": 642
+ },
+ {
+  "file": "1980s_MTGE_FT_3500001338850_p001.png",
+  "doc": "FT_3500001338850",
+  "page": 1,
+  "doc_type": "MTGE",
+  "decade": "1980s",
+  "era": "film",
+  "tess_cache_conf": 88.8,
+  "tess_cache_words": 190,
+  "tesseract_words": 281
+ },
+ {
+  "file": "1980s_SAT_FT_3990001464799_p001.png",
+  "doc": "FT_3990001464799",
+  "page": 1,
+  "doc_type": "SAT",
+  "decade": "1980s",
+  "era": "film",
+  "tess_cache_conf": 69.0,
+  "tess_cache_words": 267,
+  "tesseract_words": 314
+ },
+ {
+  "file": "1990s_SAGE_FT_3100006441510_p007.png",
+  "doc": "FT_3100006441510",
+  "page": 7,
+  "doc_type": "SAGE",
+  "decade": "1990s",
+  "era": "film",
+  "tess_cache_conf": 92.9,
+  "tess_cache_words": 162,
+  "tesseract_words": 363
+ },
+ {
+  "file": "1990s_ASST_FT_1580004452058_p002.png",
+  "doc": "FT_1580004452058",
+  "page": 2,
+  "doc_type": "ASST",
+  "decade": "1990s",
+  "era": "film",
+  "tess_cache_conf": 93.4,
+  "tess_cache_words": 480,
+  "tesseract_words": 454
+ },
+ {
+  "file": "1990s_EASE_FT_4110006125611_p001.png",
+  "doc": "FT_4110006125611",
+  "page": 1,
+  "doc_type": "EASE",
+  "decade": "1990s",
+  "era": "film",
+  "tess_cache_conf": 91.8,
+  "tess_cache_words": 428,
+  "tesseract_words": 427
+ },
+ {
+  "file": "2000s_ASST_2005011302068001_p002.png",
+  "doc": "2005011302068001",
+  "page": 2,
+  "doc_type": "ASST",
+  "decade": "2000s",
+  "era": "modern",
+  "tess_cache_conf": 93.7,
+  "tess_cache_words": 295,
+  "tesseract_words": 296
+ },
+ {
+  "file": "2000s_CERT_2005030100564001_p005.png",
+  "doc": "2005030100564001",
+  "page": 5,
+  "doc_type": "CERT",
+  "decade": "2000s",
+  "era": "modern",
+  "tess_cache_conf": 82.0,
+  "tess_cache_words": 173,
+  "tesseract_words": 144
+ },
+ {
+  "file": "2000s_EASE_2003100901080001_p006.png",
+  "doc": "2003100901080001",
+  "page": 6,
+  "doc_type": "EASE",
+  "decade": "2000s",
+  "era": "modern",
+  "tess_cache_conf": 94.4,
+  "tess_cache_words": 147,
+  "tesseract_words": 147
+ },
+ {
+  "file": "2010s_EASE_2010042801205001_p003.png",
+  "doc": "2010042801205001",
+  "page": 3,
+  "doc_type": "EASE",
+  "decade": "2010s",
+  "era": "modern",
+  "tess_cache_conf": 68.7,
+  "tess_cache_words": 184,
+  "tesseract_words": 148
+ },
+ {
+  "file": "2010s_DEVR_2019112700640004_p037.png",
+  "doc": "2019112700640004",
+  "page": 37,
+  "doc_type": "DEVR",
+  "decade": "2010s",
+  "era": "modern",
+  "tess_cache_conf": 96.0,
+  "tess_cache_words": 156,
+  "tesseract_words": 156
+ },
+ {
+  "file": "2010s_DEVR_2018101100374023_p033.png",
+  "doc": "2018101100374023",
+  "page": 33,
+  "doc_type": "DEVR",
+  "decade": "2010s",
+  "era": "modern",
+  "tess_cache_conf": 94.8,
+  "tess_cache_words": 348,
+  "tesseract_words": 348
+ },
+ {
+  "file": "2020s_ZONE_2026050400552002_p002.png",
+  "doc": "2026050400552002",
+  "page": 2,
+  "doc_type": "ZONE",
+  "decade": "2020s",
+  "era": "modern",
+  "tess_cache_conf": 86.5,
+  "tess_cache_words": 259,
+  "tesseract_words": 252
+ },
+ {
+  "file": "2020s_EASE_2026033100765007_p005.png",
+  "doc": "2026033100765007",
+  "page": 5,
+  "doc_type": "EASE",
+  "decade": "2020s",
+  "era": "modern",
+  "tess_cache_conf": 84.0,
+  "tess_cache_words": 151,
+  "tesseract_words": 142
+ },
+ {
+  "file": "2020s_CERT_2026060200874001_p003.png",
+  "doc": "2026060200874001",
+  "page": 3,
+  "doc_type": "CERT",
+  "decade": "2020s",
+  "era": "modern",
+  "tess_cache_conf": 91.7,
+  "tess_cache_words": 376,
+  "tesseract_words": 373
+ }
+]

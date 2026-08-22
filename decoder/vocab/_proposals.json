@@ -1,0 +1,64 @@
+{
+ "action": {
+  "MORTGAGE": {
+   "count": 1,
+   "evidence": [
+    {
+     "event_id": "BK_6730047100023-fin",
+     "passage": "MORTGAGE"
+    }
+   ]
+  }
+ },
+ "function": {
+  "financing": {
+   "count": 1,
+   "evidence": [
+    {
+     "event_id": "BK_6730047100023-fin",
+     "passage": "financing"
+    }
+   ]
+  }
+ },
+ "role": {
+  "mortgagee": {
+   "count": 1,
+   "evidence": [
+    {
+     "event_id": "BK_6730047100023-fin",
+     "passage": "SPRINGFIELD EQUITIES LTD. a corporation organized and existing under t"
+    }
+   ]
+  },
+  "mortgagor": {
+   "count": 1,
+   "evidence": [
+    {
+     "event_id": "BK_6730047100023-fin",
+     "passage": "MICHAEL WINNICKI and ROMULDA WINNICKI, his wife, who reside(s) at 738 "
+    }
+   ]
+  }
+ },
+ "effect": {
+  "created": {
+   "count": 1,
+   "evidence": [
+    {
+     "event_id": "BK_6730047100023-fin",
+     "passage": "SPRINGFIELD EQUITIES LTD. a corporation organized and existing under t"
+    }
+   ]
+  },
+  "encumbered": {
+   "count": 1,
+   "evidence": [
+    {
+     "event_id": "BK_6730047100023-fin",
+     "passage": "MICHAEL WINNICKI and ROMULDA WINNICKI, his wife, who reside(s) at 738 "
+    }
+   ]
+  }
+ }
+}

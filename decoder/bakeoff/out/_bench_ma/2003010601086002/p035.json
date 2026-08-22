@@ -1,0 +1,606 @@
+{
+ "page": "2003010601086002/p035",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "The tract of land as to which the aforesaid parties are parties in",
+   "box": [
+    [
+     335,
+     499
+    ],
+    [
+     2152,
+     494
+    ],
+    [
+     2152,
+     545
+    ],
+    [
+     335,
+     549
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9713
+  },
+  {
+   "text": "            ",
+   "box": [
+    [
+     335,
+     549
+    ],
+    [
+     2181,
+     547
+    ],
+    [
+     2181,
+     603
+    ],
+    [
+     335,
+     605
+    ]
+   ],
+   "angle": 0,
+   "score": 0.6627
+  },
+  {
+   "text": "Tax Map of the City of New York, New York County\uff0c and more",
+   "box": [
+    [
+     335,
+     608
+    ],
+    [
+     1934,
+     605
+    ],
+    [
+     1934,
+     660
+    ],
+    [
+     335,
+     662
+    ]
+   ],
+   "angle": 0,
+   "score": 0.963
+  },
+  {
+   "text": "particularly bounded and described as follows:",
+   "box": [
+    [
+     331,
+     666
+    ],
+    [
+     1603,
+     660
+    ],
+    [
+     1603,
+     714
+    ],
+    [
+     331,
+     721
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9918
+  },
+  {
+   "text": "TAX LOT36(BLOCK1064)",
+   "box": [
+    [
+     341,
+     781
+    ],
+    [
+     962,
+     781
+    ],
+    [
+     962,
+     823
+    ],
+    [
+     341,
+     823
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9556
+  },
+  {
+   "text": "ALL that certain plot, piece or parcel of land, situate, lying and",
+   "box": [
+    [
+     335,
+     882
+    ],
+    [
+     2156,
+     880
+    ],
+    [
+     2156,
+     936
+    ],
+    [
+     335,
+     939
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9773
+  },
+  {
+   "text": "being in the Borough of Manhattan, County, City and State of New York,",
+   "box": [
+    [
+     333,
+     939
+    ],
+    [
+     2254,
+     932
+    ],
+    [
+     2254,
+     993
+    ],
+    [
+     333,
+     999
+    ]
+   ],
+   "angle": 0,
+   "score": 0.98
+  },
+  {
+   "text": "boundedand described as follows:",
+   "box": [
+    [
+     335,
+     995
+    ],
+    [
+     1247,
+     997
+    ],
+    [
+     1247,
+     1045
+    ],
+    [
+     335,
+     1043
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9501
+  },
+  {
+   "text": "BEGINNING at a corner formed by the intersection of the southerly side",
+   "box": [
+    [
+     335,
+     1106
+    ],
+    [
+     2263,
+     1100
+    ],
+    [
+     2263,
+     1152
+    ],
+    [
+     335,
+     1159
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9666
+  },
+  {
+   "text": "of West 55th Street with the westerly side of Ninth Avenue;",
+   "box": [
+    [
+     337,
+     1156
+    ],
+    [
+     1961,
+     1156
+    ],
+    [
+     1961,
+     1211
+    ],
+    [
+     337,
+     1211
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9824
+  },
+  {
+   "text": "RUNNING THENCE southerly along the westerly side of Ninth Avenue, 101",
+   "box": [
+    [
+     335,
+     1265
+    ],
+    [
+     2235,
+     1263
+    ],
+    [
+     2235,
+     1320
+    ],
+    [
+     335,
+     1322
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9745
+  },
+  {
+   "text": "feet5inches;",
+   "box": [
+    [
+     339,
+     1316
+    ],
+    [
+     725,
+     1324
+    ],
+    [
+     723,
+     1379
+    ],
+    [
+     339,
+     1370
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9904
+  },
+  {
+   "text": "THENCE westerly parallel with West 55th Street, loo feet;",
+   "box": [
+    [
+     339,
+     1431
+    ],
+    [
+     1906,
+     1431
+    ],
+    [
+     1906,
+     1485
+    ],
+    [
+     339,
+     1485
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9582
+  },
+  {
+   "text": "THENCE northerly parallel with the said westerly side of Ninth Avenue,",
+   "box": [
+    [
+     337,
+     1540
+    ],
+    [
+     2254,
+     1536
+    ],
+    [
+     2254,
+     1590
+    ],
+    [
+     337,
+     1594
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9632
+  },
+  {
+   "text": "1foot tothe center line of the block;",
+   "box": [
+    [
+     337,
+     1596
+    ],
+    [
+     1406,
+     1596
+    ],
+    [
+     1406,
+     1645
+    ],
+    [
+     337,
+     1645
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9381
+  },
+  {
+   "text": "THENCE westerly parallel with West 55th Street and along the center",
+   "box": [
+    [
+     337,
+     1699
+    ],
+    [
+     2185,
+     1701
+    ],
+    [
+     2185,
+     1756
+    ],
+    [
+     337,
+     1754
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9648
+  },
+  {
+   "text": "line of the block\uff0c 10o feet;",
+   "box": [
+    [
+     335,
+     1749
+    ],
+    [
+     1108,
+     1758
+    ],
+    [
+     1108,
+     1814
+    ],
+    [
+     335,
+     1806
+    ]
+   ],
+   "angle": 0,
+   "score": 0.913
+  },
+  {
+   "text": "THENCE northerly parallel with Ninth Avenue, 15 feet 1% inches to the",
+   "box": [
+    [
+     337,
+     1867
+    ],
+    [
+     2237,
+     1862
+    ],
+    [
+     2237,
+     1917
+    ],
+    [
+     337,
+     1921
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9513
+  },
+  {
+   "text": "division line between land formerly of Jacob Harson and lands formerly",
+   "box": [
+    [
+     339,
+     1919
+    ],
+    [
+     2265,
+     1919
+    ],
+    [
+     2265,
+     1973
+    ],
+    [
+     339,
+     1973
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9737
+  },
+  {
+   "text": "of John Cosine;",
+   "box": [
+    [
+     339,
+     1969
+    ],
+    [
+     750,
+     1978
+    ],
+    [
+     748,
+     2028
+    ],
+    [
+     339,
+     2020
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9545
+  },
+  {
+   "text": "THENCE northwestwardly along said division line, 54 feet 7% inches;",
+   "box": [
+    [
+     337,
+     2080
+    ],
+    [
+     2191,
+     2078
+    ],
+    [
+     2191,
+     2135
+    ],
+    [
+     337,
+     2137
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9754
+  },
+  {
+   "text": "THENCE northerly and parallel with Ninth Avenue and part of the way",
+   "box": [
+    [
+     337,
+     2187
+    ],
+    [
+     2187,
+     2191
+    ],
+    [
+     2187,
+     2246
+    ],
+    [
+     337,
+     2242
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9763
+  },
+  {
+   "text": "through a party wall, 78 feet 6%s inches to the southerly side of West",
+   "box": [
+    [
+     339,
+     2246
+    ],
+    [
+     2250,
+     2242
+    ],
+    [
+     2250,
+     2296
+    ],
+    [
+     339,
+     2300
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9645
+  },
+  {
+   "text": "55th Street;and",
+   "box": [
+    [
+     339,
+     2300
+    ],
+    [
+     784,
+     2302
+    ],
+    [
+     784,
+     2351
+    ],
+    [
+     339,
+     2348
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9457
+  },
+  {
+   "text": "THENcE easterly along the southerly side of West 5sth Street, 254 feet",
+   "box": [
+    [
+     337,
+     2407
+    ],
+    [
+     2265,
+     2405
+    ],
+    [
+     2265,
+     2460
+    ],
+    [
+     337,
+     2462
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9594
+  },
+  {
+   "text": "2 inches to the point or place of BEGINNING.",
+   "box": [
+    [
+     335,
+     2460
+    ],
+    [
+     1554,
+     2462
+    ],
+    [
+     1554,
+     2516
+    ],
+    [
+     335,
+     2514
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9732
+  }
+ ]
+}

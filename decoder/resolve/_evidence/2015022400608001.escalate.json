@@ -1,0 +1,2604 @@
+[
+ {
+  "doc_id": "2015022400608001",
+  "page": "p001",
+  "run_index": 1,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "instrument. The",
+  "ppbox": "instrument.The",
+  "span": {
+   "q35-fair": [
+    35,
+    37
+   ],
+   "ppbox": [
+    35,
+    36
+   ]
+  },
+  "offsets": {
+   "q35-fair": 197,
+   "ppbox": 197
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "instrument",
+    "the"
+   ],
+   "ppbox": [
+    "instrumentthe"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p001",
+  "run_index": 3,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "2015022400608001001E706A",
+  "span": {
+   "q35-fair": [
+    58,
+    58
+   ],
+   "ppbox": [
+    57,
+    58
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 332
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "2015022400608001001e706a"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p001",
+  "run_index": 25,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 5,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "107-28 GUY R BREWER BLVD",
+  "span": {
+   "q35-fair": [
+    135,
+    135
+   ],
+   "ppbox": [
+    135,
+    140
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 898
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "10728",
+    "guy",
+    "r",
+    "brewer",
+    "blvd"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p001",
+  "run_index": 55,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 9,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "Recording Fee: $ EXEMPT AnnettaMHill Affidavit Fee: $ 0.00",
+  "span": {
+   "q35-fair": [
+    276,
+    276
+   ],
+   "ppbox": [
+    274,
+    283
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 1746
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 8
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "annettamhill"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p001",
+  "run_index": 57,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "2015022400608001",
+  "ppbox": null,
+  "span": {
+   "q35-fair": [
+    280,
+    281
+   ],
+   "ppbox": [
+    287,
+    287
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1793,
+   "ppbox": null
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "2015022400608001"
+   ],
+   "ppbox": []
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p002",
+  "run_index": 0,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 8,
+  "scale": "phrase",
+  "q35-fair": "NYC Human Resources Administration Department of Social Services",
+  "ppbox": null,
+  "span": {
+   "q35-fair": [
+    0,
+    8
+   ],
+   "ppbox": [
+    0,
+    0
+   ]
+  },
+  "offsets": {
+   "q35-fair": 0,
+   "ppbox": null
+  },
+  "elsewhere": {
+   "q35-fair": 6,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "department",
+    "social"
+   ],
+   "ppbox": []
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p002",
+  "run_index": 8,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "Departmont of",
+  "span": {
+   "q35-fair": [
+    28,
+    28
+   ],
+   "ppbox": [
+    24,
+    26
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 201
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 1
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "departmont"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p002",
+  "run_index": 10,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "Sociel Services",
+  "span": {
+   "q35-fair": [
+    31,
+    31
+   ],
+   "ppbox": [
+    29,
+    31
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 234
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 1
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "sociel"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 0,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 6,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "LR-205k (E) 10-21-2011 BOND AND MORTGAGE",
+  "span": {
+   "q35-fair": [
+    0,
+    0
+   ],
+   "ppbox": [
+    0,
+    6
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 0
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 1
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "lr205k",
+    "e",
+    "10212011",
+    "bond",
+    "mortgage"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 2,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": "11-18,",
+  "ppbox": null,
+  "span": {
+   "q35-fair": [
+    8,
+    9
+   ],
+   "ppbox": [
+    14,
+    14
+   ]
+  },
+  "offsets": {
+   "q35-fair": 41,
+   "ppbox": null
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "1118"
+   ],
+   "ppbox": []
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 4,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "14",
+  "span": {
+   "q35-fair": [
+    12,
+    12
+   ],
+   "ppbox": [
+    17,
+    18
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 102
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "14"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 8,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 6,
+  "scale": "phrase",
+  "q35-fair": "R. Brewer Boulevard, Queens, NY, between",
+  "ppbox": "h. BreweRbetween",
+  "span": {
+   "q35-fair": [
+    16,
+    22
+   ],
+   "ppbox": [
+    22,
+    24
+   ]
+  },
+  "offsets": {
+   "q35-fair": 88,
+   "ppbox": 128
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "r",
+    "brewer",
+    "boulevard",
+    "queens",
+    "ny",
+    "between"
+   ],
+   "ppbox": [
+    "h",
+    "brewerbetween"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 10,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "KoulovnRDl 1MC",
+  "span": {
+   "q35-fair": [
+    24,
+    24
+   ],
+   "ppbox": [
+    26,
+    28
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 158
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "koulovnrdl",
+    "1mc"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 12,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": "Thousand Dollars",
+  "ppbox": "Thou Sand NollaRs",
+  "span": {
+   "q35-fair": [
+    79,
+    81
+   ],
+   "ppbox": [
+    83,
+    86
+   ]
+  },
+  "offsets": {
+   "q35-fair": 475,
+   "ppbox": 506
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "thousand",
+    "dollars"
+   ],
+   "ppbox": [
+    "thou",
+    "sand",
+    "nollars"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 14,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "similarity": 0.444,
+  "q35-fair": "00/100.",
+  "ppbox": "0o//0o.",
+  "span": {
+   "q35-fair": [
+    82,
+    83
+   ],
+   "ppbox": [
+    87,
+    88
+   ]
+  },
+  "offsets": {
+   "q35-fair": 496,
+   "ppbox": 528
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "00100"
+   ],
+   "ppbox": [
+    "0o0o"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 16,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "of land",
+  "ppbox": "ofland",
+  "span": {
+   "q35-fair": [
+    264,
+    266
+   ],
+   "ppbox": [
+    269,
+    270
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1522,
+   "ppbox": 1556
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "of",
+    "land"
+   ],
+   "ppbox": [
+    "ofland"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 20,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "of Queens",
+  "ppbox": "ofQUenS",
+  "span": {
+   "q35-fair": [
+    279,
+    281
+   ],
+   "ppbox": [
+    283,
+    284
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1613,
+   "ppbox": 1645
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "of",
+    "queens"
+   ],
+   "ppbox": [
+    "ofquens"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 22,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "of NY",
+  "ppbox": "ofY",
+  "span": {
+   "q35-fair": [
+    282,
+    284
+   ],
+   "ppbox": [
+    285,
+    286
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1628,
+   "ppbox": 1658
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "of",
+    "ny"
+   ],
+   "ppbox": [
+    "ofy"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 26,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 7,
+  "scale": "phrase",
+  "q35-fair": "more particularly bounded and described as follows:",
+  "ppbox": "TO",
+  "span": {
+   "q35-fair": [
+    290,
+    297
+   ],
+   "ppbox": [
+    292,
+    293
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1659,
+   "ppbox": 1686
+  },
+  "elsewhere": {
+   "q35-fair": 1,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "more",
+    "particularly",
+    "bounded",
+    "described",
+    "as",
+    "follows"
+   ],
+   "ppbox": [
+    "to"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 28,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "parallel",
+  "ppbox": "para llel",
+  "span": {
+   "q35-fair": [
+    358,
+    359
+   ],
+   "ppbox": [
+    354,
+    356
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2073,
+   "ppbox": 2051
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "parallel"
+   ],
+   "ppbox": [
+    "para",
+    "llel"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 30,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": "and",
+  "ppbox": "an d 2",
+  "span": {
+   "q35-fair": [
+    388,
+    389
+   ],
+   "ppbox": [
+    385,
+    388
+   ]
+  },
+  "offsets": {
+   "q35-fair": 2251,
+   "ppbox": 2230
+  },
+  "elsewhere": {
+   "q35-fair": 1,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "an",
+    "d",
+    "2"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 32,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": ",",
+  "span": {
+   "q35-fair": [
+    411,
+    411
+   ],
+   "ppbox": [
+    410,
+    411
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 2373
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    ""
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p003",
+  "run_index": 34,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": ",",
+  "span": {
+   "q35-fair": [
+    412,
+    412
+   ],
+   "ppbox": [
+    412,
+    413
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 2383
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    ""
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p004",
+  "run_index": 0,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "LR-205k (E) 10-21-2011",
+  "span": {
+   "q35-fair": [
+    0,
+    0
+   ],
+   "ppbox": [
+    0,
+    3
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 0
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "lr205k",
+    "e",
+    "10212011"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p004",
+  "run_index": 2,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "and adjoining",
+  "ppbox": "and-adjoining",
+  "span": {
+   "q35-fair": [
+    24,
+    26
+   ],
+   "ppbox": [
+    27,
+    28
+   ]
+  },
+  "offsets": {
+   "q35-fair": 122,
+   "ppbox": 145
+  },
+  "elsewhere": {
+   "q35-fair": 1,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "adjoining"
+   ],
+   "ppbox": [
+    "andadjoining"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p004",
+  "run_index": 4,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 14,
+  "scale": "block",
+  "q35-fair": null,
+  "ppbox": "the amount owing on account of this bond and mortgage, notwithstanding the fact that",
+  "span": {
+   "q35-fair": [
+    208,
+    208
+   ],
+   "ppbox": [
+    210,
+    224
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 1371
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 1
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "the",
+    "amount",
+    "owing",
+    "on",
+    "account",
+    "of",
+    "this",
+    "bond",
+    "mortgage",
+    "notwithstanding",
+    "the",
+    "fact",
+    "that"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p004",
+  "run_index": 6,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "1",
+  "span": {
+   "q35-fair": [
+    443,
+    443
+   ],
+   "ppbox": [
+    459,
+    460
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 2854
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "1"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p005",
+  "run_index": 0,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "LR-205k (E) 10-21-2011",
+  "span": {
+   "q35-fair": [
+    0,
+    0
+   ],
+   "ppbox": [
+    0,
+    3
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 0
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "lr205k",
+    "e",
+    "10212011"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p005",
+  "run_index": 4,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "11. H.",
+  "ppbox": "11.H.",
+  "span": {
+   "q35-fair": [
+    122,
+    124
+   ],
+   "ppbox": [
+    125,
+    126
+   ]
+  },
+  "offsets": {
+   "q35-fair": 717,
+   "ppbox": 739
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "11",
+    "h"
+   ],
+   "ppbox": [
+    "11h"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p005",
+  "run_index": 12,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "been duly",
+  "ppbox": "beenduly",
+  "span": {
+   "q35-fair": [
+    558,
+    560
+   ],
+   "ppbox": [
+    560,
+    561
+   ]
+  },
+  "offsets": {
+   "q35-fair": 3375,
+   "ppbox": 3389
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "been",
+    "duly"
+   ],
+   "ppbox": [
+    "beenduly"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p005",
+  "run_index": 14,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "Narlene epps",
+  "span": {
+   "q35-fair": [
+    564,
+    564
+   ],
+   "ppbox": [
+    565,
+    567
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 3425
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "narlene",
+    "epps"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p005",
+  "run_index": 16,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 7,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "L.S. Polt a. Mona Dallene Epps L.S.",
+  "span": {
+   "q35-fair": [
+    567,
+    567
+   ],
+   "ppbox": [
+    570,
+    577
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 3454
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "ls",
+    "polt",
+    "a",
+    "mona",
+    "dallene",
+    "epps",
+    "ls"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p005",
+  "run_index": 18,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": "No. 01MO6213232",
+  "ppbox": "L.S. No.01MO6213232 17",
+  "span": {
+   "q35-fair": [
+    577,
+    579
+   ],
+   "ppbox": [
+    587,
+    590
+   ]
+  },
+  "offsets": {
+   "q35-fair": 3480,
+   "ppbox": 3540
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "no",
+    "01mo6213232"
+   ],
+   "ppbox": [
+    "ls",
+    "no01mo6213232",
+    "17"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p006",
+  "run_index": 0,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 19,
+  "scale": "block",
+  "q35-fair": "Here is the transcription of every word of text visible in the scanned document page, exactly as printed: **Header**",
+  "ppbox": null,
+  "span": {
+   "q35-fair": [
+    0,
+    19
+   ],
+   "ppbox": [
+    0,
+    0
+   ]
+  },
+  "offsets": {
+   "q35-fair": 0,
+   "ppbox": null
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "here",
+    "is",
+    "the",
+    "transcription",
+    "of",
+    "every",
+    "word",
+    "of",
+    "text",
+    "visible",
+    "in",
+    "the",
+    "scanned",
+    "document",
+    "page",
+    "exactly",
+    "as",
+    "printed",
+    "header"
+   ],
+   "ppbox": []
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p006",
+  "run_index": 2,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "**Document Title**",
+  "ppbox": null,
+  "span": {
+   "q35-fair": [
+    22,
+    24
+   ],
+   "ppbox": [
+    3,
+    3
+   ]
+  },
+  "offsets": {
+   "q35-fair": 142,
+   "ppbox": null
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "document",
+    "title"
+   ],
+   "ppbox": []
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p006",
+  "run_index": 4,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "**Body Text**",
+  "ppbox": null,
+  "span": {
+   "q35-fair": [
+    25,
+    27
+   ],
+   "ppbox": [
+    4,
+    4
+   ]
+  },
+  "offsets": {
+   "q35-fair": 179,
+   "ppbox": null
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "body",
+    "text"
+   ],
+   "ppbox": []
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p006",
+  "run_index": 6,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "**Formalities**",
+  "ppbox": "Kings :ss:",
+  "span": {
+   "q35-fair": [
+    33,
+    34
+   ],
+   "ppbox": [
+    10,
+    12
+   ]
+  },
+  "offsets": {
+   "q35-fair": 235,
+   "ppbox": 81
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 2
+  },
+  "unmatched": {
+   "q35-fair": [
+    "formalities"
+   ],
+   "ppbox": []
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p006",
+  "run_index": 8,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": "Kings : SS:",
+  "ppbox": null,
+  "span": {
+   "q35-fair": [
+    40,
+    43
+   ],
+   "ppbox": [
+    18,
+    18
+   ]
+  },
+  "offsets": {
+   "q35-fair": 280,
+   "ppbox": null
+  },
+  "elsewhere": {
+   "q35-fair": 2,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    ""
+   ],
+   "ppbox": []
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p006",
+  "run_index": 10,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "18 day",
+  "ppbox": "18day",
+  "span": {
+   "q35-fair": [
+    45,
+    47
+   ],
+   "ppbox": [
+    20,
+    21
+   ]
+  },
+  "offsets": {
+   "q35-fair": 299,
+   "ppbox": 128
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "18",
+    "day"
+   ],
+   "ppbox": [
+    "18day"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p006",
+  "run_index": 12,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": "November ,",
+  "ppbox": "Nov em beR,",
+  "span": {
+   "q35-fair": [
+    48,
+    50
+   ],
+   "ppbox": [
+    22,
+    25
+   ]
+  },
+  "offsets": {
+   "q35-fair": 309,
+   "ppbox": 137
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "november",
+    ""
+   ],
+   "ppbox": [
+    "nov",
+    "em",
+    "ber"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p006",
+  "run_index": 14,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "2014",
+  "ppbox": "20 /4",
+  "span": {
+   "q35-fair": [
+    53,
+    54
+   ],
+   "ppbox": [
+    28,
+    30
+   ]
+  },
+  "offsets": {
+   "q35-fair": 332,
+   "ppbox": 161
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "2014"
+   ],
+   "ppbox": [
+    "20",
+    "4"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p006",
+  "run_index": 16,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 8,
+  "scale": "phrase",
+  "q35-fair": "**Signature Block** The undersigned, personally appeared Darlene Egas",
+  "ppbox": null,
+  "span": {
+   "q35-fair": [
+    56,
+    64
+   ],
+   "ppbox": [
+    32,
+    32
+   ]
+  },
+  "offsets": {
+   "q35-fair": 348,
+   "ppbox": null
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "signature",
+    "block",
+    "the",
+    "undersigned",
+    "personally",
+    "appeared",
+    "darlene",
+    "egas"
+   ],
+   "ppbox": []
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p006",
+  "run_index": 20,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "**Signature** Robert",
+  "ppbox": "Robut",
+  "span": {
+   "q35-fair": [
+    136,
+    138
+   ],
+   "ppbox": [
+    104,
+    105
+   ]
+  },
+  "offsets": {
+   "q35-fair": 853,
+   "ppbox": 610
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "signature",
+    "robert"
+   ],
+   "ppbox": [
+    "robut"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p006",
+  "run_index": 24,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 5,
+  "scale": "phrase",
+  "q35-fair": "**Stamp** SEAL **Signature Block (Bottom)**",
+  "ppbox": "MC HikA te",
+  "span": {
+   "q35-fair": [
+    142,
+    147
+   ],
+   "ppbox": [
+    109,
+    112
+   ]
+  },
+  "offsets": {
+   "q35-fair": 898,
+   "ppbox": 639
+  },
+  "elsewhere": {
+   "q35-fair": 1,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "stamp",
+    "signature",
+    "block",
+    "bottom"
+   ],
+   "ppbox": [
+    "mc",
+    "hika",
+    "te"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p006",
+  "run_index": 26,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "similarity": 0.0,
+  "q35-fair": "No.",
+  "ppbox": "SEAL",
+  "span": {
+   "q35-fair": [
+    157,
+    158
+   ],
+   "ppbox": [
+    122,
+    123
+   ]
+  },
+  "offsets": {
+   "q35-fair": 993,
+   "ppbox": 700
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 1
+  },
+  "unmatched": {
+   "q35-fair": [
+    "no"
+   ],
+   "ppbox": []
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p006",
+  "run_index": 29,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 6,
+  "scale": "phrase",
+  "q35-fair": "Commission Expires November 2, 2011 **Footer**",
+  "ppbox": null,
+  "span": {
+   "q35-fair": [
+    163,
+    169
+   ],
+   "ppbox": [
+    128,
+    128
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1036,
+   "ppbox": null
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "commission",
+    "expires",
+    "november",
+    "2",
+    "2011",
+    "footer"
+   ],
+   "ppbox": []
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p007",
+  "run_index": 1,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "\u53e3",
+  "span": {
+   "q35-fair": [
+    2,
+    2
+   ],
+   "ppbox": [
+    2,
+    3
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 16
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    ""
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p007",
+  "run_index": 3,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "0",
+  "span": {
+   "q35-fair": [
+    22,
+    22
+   ],
+   "ppbox": [
+    23,
+    24
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 134
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "0"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p008",
+  "run_index": 1,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "2015022400608001001SBEEB",
+  "span": {
+   "q35-fair": [
+    9,
+    9
+   ],
+   "ppbox": [
+    9,
+    10
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 54
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "2015022400608001001sbeeb"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p008",
+  "run_index": 3,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 4,
+  "scale": "phrase",
+  "q35-fair": "PAGE 1 OF 1",
+  "ppbox": "PAGE1 OF1",
+  "span": {
+   "q35-fair": [
+    13,
+    17
+   ],
+   "ppbox": [
+    14,
+    16
+   ]
+  },
+  "offsets": {
+   "q35-fair": 85,
+   "ppbox": 110
+  },
+  "elsewhere": {
+   "q35-fair": 1,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "1",
+    "of",
+    "1"
+   ],
+   "ppbox": [
+    "page1",
+    "of1"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p008",
+  "run_index": 7,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": "Page Count 1",
+  "ppbox": null,
+  "span": {
+   "q35-fair": [
+    37,
+    40
+   ],
+   "ppbox": [
+    38,
+    38
+   ]
+  },
+  "offsets": {
+   "q35-fair": 272,
+   "ppbox": null
+  },
+  "elsewhere": {
+   "q35-fair": 2,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "1"
+   ],
+   "ppbox": []
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 4,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": "W-2-548 08/14 STATE",
+  "ppbox": "STAT\u00c9",
+  "span": {
+   "q35-fair": [
+    13,
+    16
+   ],
+   "ppbox": [
+    15,
+    16
+   ]
+  },
+  "offsets": {
+   "q35-fair": 120,
+   "ppbox": 134
+  },
+  "elsewhere": {
+   "q35-fair": 2,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "state"
+   ],
+   "ppbox": [
+    "stat"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 6,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "Steven Banks Commissioner",
+  "span": {
+   "q35-fair": [
+    19,
+    19
+   ],
+   "ppbox": [
+    19,
+    22
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 153
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "steven",
+    "banks",
+    "commissioner"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 8,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "Saratu Grace Ghartey",
+  "span": {
+   "q35-fair": [
+    25,
+    25
+   ],
+   "ppbox": [
+    28,
+    31
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 226
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "saratu",
+    "grace",
+    "ghartey"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 10,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 4,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "Chief Program Accountability Officer",
+  "span": {
+   "q35-fair": [
+    29,
+    29
+   ],
+   "ppbox": [
+    35,
+    39
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 267
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "chief",
+    "program",
+    "accountability",
+    "officer"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 12,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "Stewart,",
+  "ppbox": "STEwnut ,",
+  "span": {
+   "q35-fair": [
+    30,
+    31
+   ],
+   "ppbox": [
+    40,
+    42
+   ]
+  },
+  "offsets": {
+   "q35-fair": 226,
+   "ppbox": 310
+  },
+  "elsewhere": {
+   "q35-fair": 1,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "stewnut",
+    ""
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 14,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 5,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "Bedros L. Boodanian Deputy Commissioner",
+  "span": {
+   "q35-fair": [
+    37,
+    37
+   ],
+   "ppbox": [
+    48,
+    53
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 361
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "bedros",
+    "l",
+    "boodanian",
+    "deputy",
+    "commissioner"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 16,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "250 Church Street",
+  "span": {
+   "q35-fair": [
+    66,
+    66
+   ],
+   "ppbox": [
+    82,
+    85
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 569
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "250",
+    "church",
+    "street"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 18,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 4,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "New York, NY 10013",
+  "span": {
+   "q35-fair": [
+    84,
+    84
+   ],
+   "ppbox": [
+    103,
+    107
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 675
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "new",
+    "york",
+    "ny",
+    "10013"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 20,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "929 252 3020",
+  "span": {
+   "q35-fair": [
+    96,
+    96
+   ],
+   "ppbox": [
+    119,
+    122
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 772
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "929",
+    "252",
+    "3020"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 22,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": "50,000.00",
+  "ppbox": "50 000. 0.0",
+  "span": {
+   "q35-fair": [
+    124,
+    125
+   ],
+   "ppbox": [
+    150,
+    153
+   ]
+  },
+  "offsets": {
+   "q35-fair": 780,
+   "ppbox": 955
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "5000000"
+   ],
+   "ppbox": [
+    "50",
+    "000",
+    "00"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 24,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": "107-28",
+  "ppbox": "107- 28",
+  "span": {
+   "q35-fair": [
+    128,
+    129
+   ],
+   "ppbox": [
+    156,
+    158
+   ]
+  },
+  "offsets": {
+   "q35-fair": 812,
+   "ppbox": 989
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "10728"
+   ],
+   "ppbox": [
+    "107",
+    "28"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 26,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": "R. BREWER",
+  "ppbox": "F. BRE WER",
+  "span": {
+   "q35-fair": [
+    130,
+    132
+   ],
+   "ppbox": [
+    159,
+    162
+   ]
+  },
+  "offsets": {
+   "q35-fair": 823,
+   "ppbox": 1001
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "r",
+    "brewer"
+   ],
+   "ppbox": [
+    "f",
+    "bre",
+    "wer"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 32,
+  "status": "single_channel",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 2,
+  "scale": "phrase",
+  "q35-fair": null,
+  "ppbox": "9. Stewart",
+  "span": {
+   "q35-fair": [
+    199,
+    199
+   ],
+   "ppbox": [
+    229,
+    231
+   ]
+  },
+  "offsets": {
+   "q35-fair": null,
+   "ppbox": 1410
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 1
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "9"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 34,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 1,
+  "scale": "phrase",
+  "similarity": 0.571,
+  "q35-fair": "February",
+  "ppbox": "Fefway",
+  "span": {
+   "q35-fair": [
+    210,
+    211
+   ],
+   "ppbox": [
+    242,
+    243
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1299,
+   "ppbox": 1489
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [
+    "february"
+   ],
+   "ppbox": [
+    "fefway"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 36,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 3,
+  "scale": "phrase",
+  "q35-fair": "Notary Public",
+  "ppbox": "Ponan Q. He",
+  "span": {
+   "q35-fair": [
+    212,
+    214
+   ],
+   "ppbox": [
+    244,
+    247
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1313,
+   "ppbox": 1501
+  },
+  "elsewhere": {
+   "q35-fair": 2,
+   "ppbox": 0
+  },
+  "unmatched": {
+   "q35-fair": [],
+   "ppbox": [
+    "ponan",
+    "q",
+    "he"
+   ]
+  }
+ },
+ {
+  "doc_id": "2015022400608001",
+  "page": "p009",
+  "run_index": 38,
+  "status": "disputed",
+  "established_by": "unresolved",
+  "accepted": null,
+  "n_tokens": 5,
+  "scale": "phrase",
+  "q35-fair": "No. 01 HE6221160 Qualified in",
+  "ppbox": "No.01HE6221160 Notary Public Qualifiedin",
+  "span": {
+   "q35-fair": [
+    223,
+    228
+   ],
+   "ppbox": [
+    256,
+    260
+   ]
+  },
+  "offsets": {
+   "q35-fair": 1374,
+   "ppbox": 1560
+  },
+  "elsewhere": {
+   "q35-fair": 0,
+   "ppbox": 2
+  },
+  "unmatched": {
+   "q35-fair": [
+    "no",
+    "01",
+    "he6221160",
+    "qualified",
+    "in"
+   ],
+   "ppbox": [
+    "no01he6221160",
+    "qualifiedin"
+   ]
+  }
+ }
+]

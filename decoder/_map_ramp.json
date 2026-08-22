@@ -1,0 +1,46 @@
+[
+ {
+  "conc": 8,
+  "n": 200,
+  "ok": 200,
+  "err": 0,
+  "wall_s": 1.71,
+  "req_per_s": 117.1,
+  "mean_lat": 0.066,
+  "p95": 0.081,
+  "refused": false
+ },
+ {
+  "conc": 12,
+  "n": 200,
+  "ok": 200,
+  "err": 0,
+  "wall_s": 1.18,
+  "req_per_s": 169.8,
+  "mean_lat": 0.067,
+  "p95": 0.15,
+  "refused": false
+ },
+ {
+  "conc": 16,
+  "n": 200,
+  "ok": 200,
+  "err": 0,
+  "wall_s": 1.01,
+  "req_per_s": 198.3,
+  "mean_lat": 0.078,
+  "p95": 0.233,
+  "refused": false
+ },
+ {
+  "conc": 20,
+  "n": 200,
+  "ok": 200,
+  "err": 0,
+  "wall_s": 1.29,
+  "req_per_s": 155.3,
+  "mean_lat": 0.124,
+  "p95": 0.511,
+  "refused": false
+ }
+]

@@ -1,0 +1,36 @@
+[
+ {
+  "backend": "CPU",
+  "model_load_s": 1.0,
+  "pages": 12,
+  "ok": 12,
+  "failed": 0,
+  "wall_s": 170.1,
+  "pages_per_hour": 254,
+  "sec_per_page": 14.18,
+  "median_s": 15.46,
+  "total_boxes": 693,
+  "sample_text": "19,204 KNOw THAT APPLE BANK FOR SAVINGs, having an office at 277 Park Avenue, New York, New York 10i78, Dors HeREBy cANc",
+  "providers": [
+   "DmlExecutionProvider",
+   "CPUExecutionProvider"
+  ]
+ },
+ {
+  "backend": "DirectML / Arc 140V",
+  "model_load_s": 0.9,
+  "pages": 12,
+  "ok": 12,
+  "failed": 0,
+  "wall_s": 147.1,
+  "pages_per_hour": 294,
+  "sec_per_page": 12.26,
+  "median_s": 12.82,
+  "total_boxes": 693,
+  "sample_text": "19,204 KNOw THAT APPLE BANK FOR SAVINGs, having an office at 277 Park Avenue, New York, New York 10i78, Dors HeREBy cANc",
+  "providers": [
+   "DmlExecutionProvider",
+   "CPUExecutionProvider"
+  ]
+ }
+]

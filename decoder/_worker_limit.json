@@ -1,0 +1,51 @@
+[
+ {
+  "workers": 8,
+  "ok": 510,
+  "req_per_s": 22.1,
+  "mb_per_s": 1.19,
+  "lat": 0.181
+ },
+ {
+  "workers": 12,
+  "ok": 480,
+  "req_per_s": 21.6,
+  "mb_per_s": 1.09,
+  "lat": 0.236
+ },
+ {
+  "workers": 16,
+  "ok": 448,
+  "req_per_s": 18.7,
+  "mb_per_s": 0.92,
+  "lat": 0.287
+ },
+ {
+  "workers": 20,
+  "ok": 560,
+  "req_per_s": 22.7,
+  "mb_per_s": 1.18,
+  "lat": 0.343
+ },
+ {
+  "workers": 24,
+  "ok": 576,
+  "req_per_s": 24.8,
+  "mb_per_s": 1.06,
+  "lat": 0.335
+ },
+ {
+  "workers": 28,
+  "ok": 559,
+  "req_per_s": 21.4,
+  "mb_per_s": 1.08,
+  "lat": 0.348
+ },
+ {
+  "workers": 32,
+  "ok": 640,
+  "req_per_s": 25.1,
+  "mb_per_s": 1.49,
+  "lat": 0.381
+ }
+]

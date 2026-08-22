@@ -1,0 +1,30 @@
+{
+ "A_alone": {
+  "ok": 200,
+  "err": 0,
+  "wall": 1.22,
+  "req_per_s": 163.7,
+  "mean_lat": 0.093
+ },
+ "B_alone": {
+  "ok": 200,
+  "err": 0,
+  "wall": 1.12,
+  "req_per_s": 177.8,
+  "mean_lat": 0.086
+ },
+ "A_both": {
+  "ok": 200,
+  "err": 0,
+  "wall": 2.79,
+  "req_per_s": 71.7,
+  "mean_lat": 0.218
+ },
+ "B_both": {
+  "ok": 200,
+  "err": 0,
+  "wall": 2.8,
+  "req_per_s": 71.4,
+  "mean_lat": 0.218
+ }
+}

@@ -1,0 +1,1460 @@
+{
+ "page": "FT_1680008647768/p002",
+ "angles": [
+  0,
+  90,
+  180,
+  270
+ ],
+ "items": [
+  {
+   "text": "REE586:A762",
+   "box": [
+    [
+     1075,
+     237
+    ],
+    [
+     1403,
+     242
+    ],
+    [
+     1401,
+     311
+    ],
+    [
+     1073,
+     306
+    ]
+   ],
+   "angle": 0,
+   "score": 0.7138
+  },
+  {
+   "text": "SCH:EDULEA(Deseription)",
+   "box": [
+    [
+     581,
+     531
+    ],
+    [
+     967,
+     551
+    ],
+    [
+     965,
+     596
+    ],
+    [
+     579,
+     575
+    ]
+   ],
+   "angle": 0,
+   "score": 0.8974
+  },
+  {
+   "text": "ALL that certain plot,piece or parcelof land,with the buildings and improvements thereon erected,situate,",
+   "box": [
+    [
+     156,
+     615
+    ],
+    [
+     1362,
+     666
+    ],
+    [
+     1360,
+     706
+    ],
+    [
+     155,
+     654
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9251
+  },
+  {
+   "text": "lying and being in the Borough of Manhattan,City.County and State of",
+   "box": [
+    [
+     151,
+     670
+    ],
+    [
+     1379,
+     718
+    ],
+    [
+     1377,
+     763
+    ],
+    [
+     149,
+     714
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9669
+  },
+  {
+   "text": "New York,bounded and described as follows:-",
+   "box": [
+    [
+     151,
+     742
+    ],
+    [
+     981,
+     775
+    ],
+    [
+     979,
+     814
+    ],
+    [
+     149,
+     781
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9287
+  },
+  {
+   "text": "BEGINNING at the corner formed by the intersection of the",
+   "box": [
+    [
+     316,
+     819
+    ],
+    [
+     1388,
+     864
+    ],
+    [
+     1386,
+     905
+    ],
+    [
+     314,
+     860
+    ]
+   ],
+   "angle": 0,
+   "score": 0.974
+  },
+  {
+   "text": "Northerly side of 27th Street with the Easterly side of Fourth Avenue;",
+   "box": [
+    [
+     148,
+     883
+    ],
+    [
+     1456,
+     936
+    ],
+    [
+     1455,
+     977
+    ],
+    [
+     146,
+     924
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9516
+  },
+  {
+   "text": "RUNNING THENCE Northerly along the Easterly side of Fourth",
+   "box": [
+    [
+     307,
+     960
+    ],
+    [
+     1403,
+     1003
+    ],
+    [
+     1401,
+     1048
+    ],
+    [
+     306,
+     1005
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9576
+  },
+  {
+   "text": "Avenue,98 feet 9inches to the center line of the block between 27th",
+   "box": [
+    [
+     136,
+     1020
+    ],
+    [
+     1439,
+     1072
+    ],
+    [
+     1438,
+     1116
+    ],
+    [
+     134,
+     1065
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9386
+  },
+  {
+   "text": "and28thStreets;",
+   "box": [
+    [
+     137,
+     1091
+    ],
+    [
+     459,
+     1108
+    ],
+    [
+     457,
+     1144
+    ],
+    [
+     136,
+     1127
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9886
+  },
+  {
+   "text": "THENcE Easterly along said center line,166 feet 8 inches;",
+   "box": [
+    [
+     297,
+     1168
+    ],
+    [
+     1391,
+     1211
+    ],
+    [
+     1389,
+     1255
+    ],
+    [
+     295,
+     1213
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9463
+  },
+  {
+   "text": "THENcE Southerly parallel with Fourth Avenue,98 feet 9",
+   "box": [
+    [
+     294,
+     1238
+    ],
+    [
+     1338,
+     1280
+    ],
+    [
+     1336,
+     1324
+    ],
+    [
+     292,
+     1283
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9568
+  },
+  {
+   "text": "inches to the Northerly side of 27th Street;",
+   "box": [
+    [
+     129,
+     1300
+    ],
+    [
+     953,
+     1340
+    ],
+    [
+     951,
+     1381
+    ],
+    [
+     127,
+     1341
+    ]
+   ],
+   "angle": 0,
+   "score": 0.962
+  },
+  {
+   "text": "THENcE Westerly along the Northerly side of 27th Street, 166",
+   "box": [
+    [
+     289,
+     1381
+    ],
+    [
+     1422,
+     1424
+    ],
+    [
+     1420,
+     1468
+    ],
+    [
+     287,
+     1426
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9542
+  },
+  {
+   "text": "feet 8 inches to the point or place of BEGINNING.",
+   "box": [
+    [
+     122,
+     1441
+    ],
+    [
+     1044,
+     1482
+    ],
+    [
+     1043,
+     1523
+    ],
+    [
+     120,
+     1482
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9763
+  },
+  {
+   "text": "FOURTH AVENUE above is now knOwn as PARK AVENUE SOUTH.",
+   "box": [
+    [
+     285,
+     1518
+    ],
+    [
+     1302,
+     1561
+    ],
+    [
+     1300,
+     1599
+    ],
+    [
+     283,
+     1556
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9045
+  },
+  {
+   "text": "Avenue, 98 feet 9 inches to the center line of the block between 27th",
+   "box": [
+    [
+     1442,
+     1068
+    ],
+    [
+     1440,
+     1118
+    ],
+    [
+     131,
+     1068
+    ],
+    [
+     133,
+     1018
+    ]
+   ],
+   "angle": 90,
+   "score": 0.9726
+  },
+  {
+   "text": " RUNNING THENCE Northerly along the Easterly side of Fourth",
+   "box": [
+    [
+     1416,
+     1000
+    ],
+    [
+     1414,
+     1056
+    ],
+    [
+     298,
+     1012
+    ],
+    [
+     301,
+     955
+    ]
+   ],
+   "angle": 90,
+   "score": 0.9911
+  },
+  {
+   "text": "THENCE Westerly along the Northerly side of 27th Street, 166",
+   "box": [
+    [
+     1425,
+     1422
+    ],
+    [
+     1423,
+     1472
+    ],
+    [
+     282,
+     1429
+    ],
+    [
+     284,
+     1379
+    ]
+   ],
+   "angle": 90,
+   "score": 0.971
+  },
+  {
+   "text": "RE 586:A: 762",
+   "box": [
+    [
+     1401,
+     239
+    ],
+    [
+     1401,
+     314
+    ],
+    [
+     1067,
+     314
+    ],
+    [
+     1067,
+     239
+    ]
+   ],
+   "angle": 90,
+   "score": 0.7149
+  },
+  {
+   "text": "lying and boing in the Borough of Manhattan, City. County and State of",
+   "box": [
+    [
+     1382,
+     716
+    ],
+    [
+     1380,
+     768
+    ],
+    [
+     148,
+     720
+    ],
+    [
+     150,
+     668
+    ]
+   ],
+   "angle": 90,
+   "score": 0.9746
+  },
+  {
+   "text": "the",
+   "box": [
+    [
+     1387,
+     866
+    ],
+    [
+     1387,
+     898
+    ],
+    [
+     1322,
+     898
+    ],
+    [
+     1322,
+     866
+    ]
+   ],
+   "angle": 90,
+   "score": 0.9981
+  },
+  {
+   "text": "THENcE Easterly along said center line, 166 feet 8 inches;",
+   "box": [
+    [
+     1394,
+     1211
+    ],
+    [
+     1392,
+     1261
+    ],
+    [
+     289,
+     1216
+    ],
+    [
+     291,
+     1166
+    ]
+   ],
+   "angle": 90,
+   "score": 0.9709
+  },
+  {
+   "text": "THENCE Southerly parallel with Fourth Avenue, 98 feet 9",
+   "box": [
+    [
+     1346,
+     1278
+    ],
+    [
+     1344,
+     1329
+    ],
+    [
+     288,
+     1286
+    ],
+    [
+     291,
+     1235
+    ]
+   ],
+   "angle": 90,
+   "score": 0.9843
+  },
+  {
+   "text": "BEGINNING at the corner formed by the intersection of",
+   "box": [
+    [
+     1325,
+     859
+    ],
+    [
+     1323,
+     905
+    ],
+    [
+     306,
+     864
+    ],
+    [
+     308,
+     818
+    ]
+   ],
+   "angle": 90,
+   "score": 0.9829
+  },
+  {
+   "text": "        ",
+   "box": [
+    [
+     1052,
+     1477
+    ],
+    [
+     1050,
+     1527
+    ],
+    [
+     112,
+     1489
+    ],
+    [
+     114,
+     1439
+    ]
+   ],
+   "angle": 90,
+   "score": 0.5648
+  },
+  {
+   "text": "New York,bounded and described as follows:-",
+   "box": [
+    [
+     990,
+     773
+    ],
+    [
+     988,
+     818
+    ],
+    [
+     143,
+     785
+    ],
+    [
+     145,
+     740
+    ]
+   ],
+   "angle": 90,
+   "score": 0.9615
+  },
+  {
+   "text": "SCHEDULE A (Desaription)",
+   "box": [
+    [
+     968,
+     548
+    ],
+    [
+     966,
+     599
+    ],
+    [
+     571,
+     582
+    ],
+    [
+     573,
+     531
+    ]
+   ],
+   "angle": 90,
+   "score": 0.9019
+  },
+  {
+   "text": "       ",
+   "box": [
+    [
+     959,
+     1333
+    ],
+    [
+     957,
+     1383
+    ],
+    [
+     119,
+     1348
+    ],
+    [
+     121,
+     1298
+    ]
+   ],
+   "angle": 90,
+   "score": 0.5628
+  },
+  {
+   "text": "and 28th Streets;",
+   "box": [
+    [
+     461,
+     1104
+    ],
+    [
+     459,
+     1149
+    ],
+    [
+     130,
+     1132
+    ],
+    [
+     131,
+     1087
+    ]
+   ],
+   "angle": 90,
+   "score": 0.9678
+  },
+  {
+   "text": "> .....",
+   "box": [
+    [
+     363,
+     457
+    ],
+    [
+     360,
+     491
+    ],
+    [
+     253,
+     481
+    ],
+    [
+     257,
+     447
+    ]
+   ],
+   "angle": 90,
+   "score": 0.5416
+  },
+  {
+   "text": "Northerly side of 27th Street with the Easterly side of Fourth Avenue;",
+   "box": [
+    [
+     136,
+     878
+    ],
+    [
+     1461,
+     933
+    ],
+    [
+     1459,
+     982
+    ],
+    [
+     135,
+     927
+    ]
+   ],
+   "angle": 90,
+   "score": 0.9843
+  },
+  {
+   "text": "FOURTHAVENUEaboveiSnow knOwnas PARK AVENUE SOUTH.",
+   "box": [
+    [
+     1297,
+     1601
+    ],
+    [
+     282,
+     1558
+    ],
+    [
+     284,
+     1519
+    ],
+    [
+     1299,
+     1562
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9182
+  },
+  {
+   "text": "THENCE Westerly along the Northerly side of 27th Street,166",
+   "box": [
+    [
+     1419,
+     1471
+    ],
+    [
+     288,
+     1426
+    ],
+    [
+     289,
+     1382
+    ],
+    [
+     1421,
+     1426
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9472
+  },
+  {
+   "text": "THENcE Southerly parallel with Fourth Avenue,98 feet 9",
+   "box": [
+    [
+     1337,
+     1327
+    ],
+    [
+     291,
+     1285
+    ],
+    [
+     293,
+     1241
+    ],
+    [
+     1339,
+     1282
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9539
+  },
+  {
+   "text": "THENcE Easterly aiong said center line,166 feet 8 inches;",
+   "box": [
+    [
+     1390,
+     1258
+    ],
+    [
+     293,
+     1215
+    ],
+    [
+     294,
+     1170
+    ],
+    [
+     1392,
+     1213
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9452
+  },
+  {
+   "text": "and 28th Streets;",
+   "box": [
+    [
+     456,
+     1148
+    ],
+    [
+     131,
+     1131
+    ],
+    [
+     133,
+     1091
+    ],
+    [
+     458,
+     1109
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9479
+  },
+  {
+   "text": "Avenue,98 feet 9 inches tothe center 1ine of the block between 27th",
+   "box": [
+    [
+     1435,
+     1114
+    ],
+    [
+     135,
+     1064
+    ],
+    [
+     136,
+     1024
+    ],
+    [
+     1437,
+     1074
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9105
+  },
+  {
+   "text": "RUNNING THENCE Northerly along the Easterly side of Fourth",
+   "box": [
+    [
+     1401,
+     1050
+    ],
+    [
+     303,
+     1005
+    ],
+    [
+     305,
+     961
+    ],
+    [
+     1402,
+     1005
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9563
+  },
+  {
+   "text": "BEGINNING at the corner formed by the intersection of the",
+   "box": [
+    [
+     1387,
+     908
+    ],
+    [
+     313,
+     865
+    ],
+    [
+     315,
+     820
+    ],
+    [
+     1389,
+     863
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9751
+  },
+  {
+   "text": "New York,boundedand describedasfollows:=",
+   "box": [
+    [
+     980,
+     817
+    ],
+    [
+     147,
+     780
+    ],
+    [
+     148,
+     741
+    ],
+    [
+     981,
+     777
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9496
+  },
+  {
+   "text": "in the Borough of Manhattan,City. County and State of",
+   "box": [
+    [
+     1378,
+     767
+    ],
+    [
+     349,
+     726
+    ],
+    [
+     351,
+     679
+    ],
+    [
+     1380,
+     720
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9759
+  },
+  {
+   "text": "ALLthat certain plot,piece or parcelofland,with the buildings andimprovements thereon erected,situate,",
+   "box": [
+    [
+     1359,
+     708
+    ],
+    [
+     154,
+     657
+    ],
+    [
+     155,
+     617
+    ],
+    [
+     1361,
+     669
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9198
+  },
+  {
+   "text": "lying andbeing",
+   "box": [
+    [
+     351,
+     720
+    ],
+    [
+     152,
+     712
+    ],
+    [
+     154,
+     679
+    ],
+    [
+     353,
+     686
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9371
+  },
+  {
+   "text": "SCHEDULE A(Deseription)",
+   "box": [
+    [
+     964,
+     600
+    ],
+    [
+     576,
+     578
+    ],
+    [
+     578,
+     531
+    ],
+    [
+     966,
+     554
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9284
+  },
+  {
+   "text": "i>: ...",
+   "box": [
+    [
+     358,
+     487
+    ],
+    [
+     284,
+     487
+    ],
+    [
+     284,
+     458
+    ],
+    [
+     358,
+     458
+    ]
+   ],
+   "angle": 180,
+   "score": 0.6495
+  },
+  {
+   "text": "586 A 762",
+   "box": [
+    [
+     1395,
+     310
+    ],
+    [
+     1153,
+     303
+    ],
+    [
+     1155,
+     243
+    ],
+    [
+     1397,
+     250
+    ]
+   ],
+   "angle": 180,
+   "score": 0.7777
+  },
+  {
+   "text": "REEL",
+   "box": [
+    [
+     1169,
+     298
+    ],
+    [
+     1079,
+     298
+    ],
+    [
+     1079,
+     260
+    ],
+    [
+     1169,
+     260
+    ]
+   ],
+   "angle": 180,
+   "score": 0.9689
+  },
+  {
+   "text": "feet 8 inches to the point or place of BEGINNING.",
+   "box": [
+    [
+     112,
+     1486
+    ],
+    [
+     113,
+     1435
+    ],
+    [
+     1049,
+     1478
+    ],
+    [
+     1046,
+     1529
+    ]
+   ],
+   "angle": 270,
+   "score": 0.9926
+  },
+  {
+   "text": "inches to the Northerly side of 27th Street;",
+   "box": [
+    [
+     120,
+     1349
+    ],
+    [
+     122,
+     1297
+    ],
+    [
+     960,
+     1332
+    ],
+    [
+     958,
+     1383
+    ]
+   ],
+   "angle": 270,
+   "score": 0.9882
+  },
+  {
+   "text": "and28thStreets;",
+   "box": [
+    [
+     134,
+     1133
+    ],
+    [
+     136,
+     1088
+    ],
+    [
+     462,
+     1103
+    ],
+    [
+     460,
+     1148
+    ]
+   ],
+   "angle": 270,
+   "score": 0.9934
+  },
+  {
+   "text": "New York, bounded and described as follows:-",
+   "box": [
+    [
+     144,
+     787
+    ],
+    [
+     146,
+     738
+    ],
+    [
+     989,
+     772
+    ],
+    [
+     988,
+     822
+    ]
+   ],
+   "angle": 270,
+   "score": 0.9822
+  },
+  {
+   "text": "lying and being in the Borough of Manhattan, City. County and State of",
+   "box": [
+    [
+     151,
+     719
+    ],
+    [
+     153,
+     667
+    ],
+    [
+     1384,
+     717
+    ],
+    [
+     1383,
+     768
+    ]
+   ],
+   "angle": 270,
+   "score": 0.9832
+  },
+  {
+   "text": "FOURTH AVENUE above is now knOwn as PARK AVENUE SOUTH.",
+   "box": [
+    [
+     280,
+     1560
+    ],
+    [
+     282,
+     1516
+    ],
+    [
+     1302,
+     1558
+    ],
+    [
+     1300,
+     1603
+    ]
+   ],
+   "angle": 270,
+   "score": 0.9662
+  },
+  {
+   "text": "THENCE Westerly along the Northerly side of 27th Street, 166",
+   "box": [
+    [
+     282,
+     1428
+    ],
+    [
+     283,
+     1378
+    ],
+    [
+     1427,
+     1421
+    ],
+    [
+     1426,
+     1471
+    ]
+   ],
+   "angle": 270,
+   "score": 0.9826
+  },
+  {
+   "text": "THENCE Southerly parallel with Fourth Avenue, 98 feet 9",
+   "box": [
+    [
+     292,
+     1287
+    ],
+    [
+     295,
+     1236
+    ],
+    [
+     1345,
+     1279
+    ],
+    [
+     1343,
+     1330
+    ]
+   ],
+   "angle": 270,
+   "score": 0.9876
+  },
+  {
+   "text": "THENCE Easterly along said center line, 166 feet 8 inches;",
+   "box": [
+    [
+     292,
+     1217
+    ],
+    [
+     294,
+     1165
+    ],
+    [
+     1400,
+     1210
+    ],
+    [
+     1398,
+     1261
+    ]
+   ],
+   "angle": 270,
+   "score": 0.9805
+  },
+  {
+   "text": " RUNNING THENCE Northerly along the Easterly side of Fourth",
+   "box": [
+    [
+     299,
+     1007
+    ],
+    [
+     301,
+     956
+    ],
+    [
+     1408,
+     1000
+    ],
+    [
+     1407,
+     1052
+    ]
+   ],
+   "angle": 270,
+   "score": 0.988
+  },
+  {
+   "text": "BEGINNING at the corner formed by the intersection of the",
+   "box": [
+    [
+     306,
+     866
+    ],
+    [
+     307,
+     817
+    ],
+    [
+     1398,
+     858
+    ],
+    [
+     1396,
+     908
+    ]
+   ],
+   "angle": 270,
+   "score": 0.9868
+  },
+  {
+   "text": "SCHEDULEA(Desrption)",
+   "box": [
+    [
+     570,
+     583
+    ],
+    [
+     574,
+     526
+    ],
+    [
+     972,
+     547
+    ],
+    [
+     970,
+     604
+    ]
+   ],
+   "angle": 270,
+   "score": 0.8787
+  },
+  {
+   "text": "RE586.A: 762",
+   "box": [
+    [
+     1070,
+     312
+    ],
+    [
+     1072,
+     238
+    ],
+    [
+     1405,
+     241
+    ],
+    [
+     1403,
+     315
+    ]
+   ],
+   "angle": 270,
+   "score": 0.7898
+  },
+  {
+   "text": "Avenue, 98 feet 9 inches to the center line of the block between 27th",
+   "box": [
+    [
+     1441,
+     1119
+    ],
+    [
+     132,
+     1067
+    ],
+    [
+     134,
+     1017
+    ],
+    [
+     1443,
+     1069
+    ]
+   ],
+   "angle": 270,
+   "score": 0.9727
+  },
+  {
+   "text": "Northerly side of 27th Street with the Easterly side of Fourth Avenue;",
+   "box": [
+    [
+     1462,
+     983
+    ],
+    [
+     137,
+     928
+    ],
+    [
+     139,
+     877
+    ],
+    [
+     1463,
+     932
+    ]
+   ],
+   "angle": 270,
+   "score": 0.9864
+  }
+ ]
+}

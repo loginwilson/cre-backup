@@ -1,0 +1,7 @@
+{
+ "engine": "qwen",
+ "model": "incumbent (2025 gen, local)",
+ "rot": false,
+ "sec_per_page": 61.0,
+ "note": "wall time from earlier local runs, NOT comparable to GPU box"
+}

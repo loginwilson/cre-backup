@@ -1,0 +1,767 @@
+{
+ "page": "2003010601086002/p024",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "STATEOFNEWYORK",
+   "box": [
+    [
+     304,
+     382
+    ],
+    [
+     822,
+     382
+    ],
+    [
+     822,
+     430
+    ],
+    [
+     304,
+     430
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9975
+  },
+  {
+   "text": "COUNTY OF",
+   "box": [
+    [
+     302,
+     497
+    ],
+    [
+     593,
+     497
+    ],
+    [
+     593,
+     547
+    ],
+    [
+     302,
+     547
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9634
+  },
+  {
+   "text": "SS:",
+   "box": [
+    [
+     899,
+     493
+    ],
+    [
+     985,
+     493
+    ],
+    [
+     985,
+     549
+    ],
+    [
+     899,
+     549
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9872
+  },
+  {
+   "text": "On the",
+   "box": [
+    [
+     604,
+     667
+    ],
+    [
+     750,
+     667
+    ],
+    [
+     750,
+     725
+    ],
+    [
+     604,
+     725
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9995
+  },
+  {
+   "text": "day of",
+   "box": [
+    [
+     885,
+     667
+    ],
+    [
+     1036,
+     667
+    ],
+    [
+     1036,
+     725
+    ],
+    [
+     885,
+     725
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9742
+  },
+  {
+   "text": "before me, the undersigned, a notary public",
+   "box": [
+    [
+     1375,
+     669
+    ],
+    [
+     2251,
+     673
+    ],
+    [
+     2251,
+     727
+    ],
+    [
+     1375,
+     723
+    ]
+   ],
+   "angle": 0,
+   "score": 0.984
+  },
+  {
+   "text": "in and from said State, personally appeared",
+   "box": [
+    [
+     300,
+     727
+    ],
+    [
+     1197,
+     732
+    ],
+    [
+     1197,
+     786
+    ],
+    [
+     300,
+     782
+    ]
+   ],
+   "angle": 0,
+   "score": 0.977
+  },
+  {
+   "text": ",personally",
+   "box": [
+    [
+     2004,
+     736
+    ],
+    [
+     2251,
+     732
+    ],
+    [
+     2251,
+     782
+    ],
+    [
+     2006,
+     786
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9732
+  },
+  {
+   "text": "known to me or proved to me on the basis of satisfactory evidence to be the individual(s) whose",
+   "box": [
+    [
+     300,
+     786
+    ],
+    [
+     2256,
+     784
+    ],
+    [
+     2256,
+     841
+    ],
+    [
+     300,
+     843
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9762
+  },
+  {
+   "text": "name(s) is (are) subscribed to the within instrument and acknowledged to me that he/she/they",
+   "box": [
+    [
+     300,
+     845
+    ],
+    [
+     2256,
+     843
+    ],
+    [
+     2256,
+     899
+    ],
+    [
+     300,
+     901
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9893
+  },
+  {
+   "text": "executed the same in his/her/their capacity(ies) and that by his/her/ their signature(s) on the",
+   "box": [
+    [
+     304,
+     903
+    ],
+    [
+     2256,
+     903
+    ],
+    [
+     2256,
+     958
+    ],
+    [
+     304,
+     958
+    ]
+   ],
+   "angle": 0,
+   "score": 0.982
+  },
+  {
+   "text": "instrument,the individual(s) or the person upon behalf of which the individual(s) acted, executed",
+   "box": [
+    [
+     300,
+     960
+    ],
+    [
+     2256,
+     958
+    ],
+    [
+     2256,
+     1015
+    ],
+    [
+     300,
+     1017
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9722
+  },
+  {
+   "text": "the instrument.",
+   "box": [
+    [
+     302,
+     1019
+    ],
+    [
+     610,
+     1023
+    ],
+    [
+     610,
+     1073
+    ],
+    [
+     302,
+     1069
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9723
+  },
+  {
+   "text": "Notary Public",
+   "box": [
+    [
+     1354,
+     1247
+    ],
+    [
+     1641,
+     1247
+    ],
+    [
+     1641,
+     1304
+    ],
+    [
+     1354,
+     1304
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9812
+  },
+  {
+   "text": "STATEOFNEWYORK",
+   "box": [
+    [
+     306,
+     1595
+    ],
+    [
+     824,
+     1595
+    ],
+    [
+     824,
+     1643
+    ],
+    [
+     306,
+     1643
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9964
+  },
+  {
+   "text": "COUNTYOFA'ASSA",
+   "box": [
+    [
+     308,
+     1708
+    ],
+    [
+     801,
+     1708
+    ],
+    [
+     801,
+     1765
+    ],
+    [
+     308,
+     1765
+    ]
+   ],
+   "angle": 0,
+   "score": 0.85
+  },
+  {
+   "text": "SS:",
+   "box": [
+    [
+     901,
+     1706
+    ],
+    [
+     985,
+     1706
+    ],
+    [
+     985,
+     1763
+    ],
+    [
+     901,
+     1763
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9922
+  },
+  {
+   "text": "On the 2 / _ day of N'ov7M Labefore me, the undersigned, a notary public.",
+   "box": [
+    [
+     600,
+     1864
+    ],
+    [
+     2264,
+     1870
+    ],
+    [
+     2264,
+     1945
+    ],
+    [
+     600,
+     1939
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9199
+  },
+  {
+   "text": "in and from said State, personally appeared",
+   "box": [
+    [
+     302,
+     1937
+    ],
+    [
+     1210,
+     1939
+    ],
+    [
+     1210,
+     1996
+    ],
+    [
+     302,
+     1994
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9949
+  },
+  {
+   "text": "DennisT.CuessLey",
+   "box": [
+    [
+     1262,
+     1929
+    ],
+    [
+     1870,
+     1929
+    ],
+    [
+     1870,
+     1998
+    ],
+    [
+     1262,
+     1998
+    ]
+   ],
+   "angle": 0,
+   "score": 0.7018
+  },
+  {
+   "text": ", personally",
+   "box": [
+    [
+     2004,
+     1943
+    ],
+    [
+     2258,
+     1939
+    ],
+    [
+     2260,
+     1996
+    ],
+    [
+     2006,
+     2000
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9427
+  },
+  {
+   "text": "known to me or proved to me on the basis of satisfactory evidence to be the individual(s) whose",
+   "box": [
+    [
+     302,
+     1994
+    ],
+    [
+     2262,
+     1994
+    ],
+    [
+     2262,
+     2054
+    ],
+    [
+     302,
+     2054
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9894
+  },
+  {
+   "text": "name(s) is (are) subscribed to the within instrument and acknowledged to me that he/she/they",
+   "box": [
+    [
+     300,
+     2050
+    ],
+    [
+     2262,
+     2052
+    ],
+    [
+     2262,
+     2113
+    ],
+    [
+     300,
+     2111
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9873
+  },
+  {
+   "text": "executed the same in his/her/their capacity(ies) and that by his/her/ their signature(s) on the",
+   "box": [
+    [
+     304,
+     2109
+    ],
+    [
+     2258,
+     2111
+    ],
+    [
+     2258,
+     2168
+    ],
+    [
+     304,
+     2165
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9879
+  },
+  {
+   "text": "instrument, the individual(s) or the person upon behalf of which the individual(s) acted, executed",
+   "box": [
+    [
+     304,
+     2168
+    ],
+    [
+     2256,
+     2168
+    ],
+    [
+     2256,
+     2222
+    ],
+    [
+     304,
+     2222
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9742
+  },
+  {
+   "text": "the instrument.",
+   "box": [
+    [
+     304,
+     2224
+    ],
+    [
+     614,
+     2233
+    ],
+    [
+     612,
+     2283
+    ],
+    [
+     302,
+     2274
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9962
+  },
+  {
+   "text": "Notary Public",
+   "box": [
+    [
+     1356,
+     2457
+    ],
+    [
+     1639,
+     2457
+    ],
+    [
+     1639,
+     2507
+    ],
+    [
+     1356,
+     2507
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9963
+  },
+  {
+   "text": "RICHARDD.SIRAGUSA",
+   "box": [
+    [
+     1404,
+     2520
+    ],
+    [
+     1803,
+     2513
+    ],
+    [
+     1803,
+     2568
+    ],
+    [
+     1407,
+     2574
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9817
+  },
+  {
+   "text": "Notary Public,Stateof NewYork",
+   "box": [
+    [
+     1340,
+     2562
+    ],
+    [
+     1868,
+     2549
+    ],
+    [
+     1870,
+     2606
+    ],
+    [
+     1342,
+     2618
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9427
+  },
+  {
+   "text": "No.4755694,Qual.inRocklandCa",
+   "box": [
+    [
+     1319,
+     2604
+    ],
+    [
+     1885,
+     2593
+    ],
+    [
+     1887,
+     2641
+    ],
+    [
+     1321,
+     2652
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9815
+  },
+  {
+   "text": "Commission Expires Dec. 31, 20_2",
+   "box": [
+    [
+     1314,
+     2641
+    ],
+    [
+     1910,
+     2631
+    ],
+    [
+     1912,
+     2681
+    ],
+    [
+     1316,
+     2692
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9436
+  },
+  {
+   "text": "NY 55/214816.1",
+   "box": [
+    [
+     304,
+     2983
+    ],
+    [
+     503,
+     2983
+    ],
+    [
+     503,
+     3019
+    ],
+    [
+     304,
+     3019
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9638
+  },
+  {
+   "text": "E-2-21",
+   "box": [
+    [
+     1210,
+     2970
+    ],
+    [
+     1356,
+     2970
+    ],
+    [
+     1356,
+     3023
+    ],
+    [
+     1210,
+     3023
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9968
+  }
+ ]
+}

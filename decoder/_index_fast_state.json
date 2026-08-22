@@ -1,0 +1,47 @@
+{
+ "master": {
+  "rows": 17065090,
+  "live": 17065090,
+  "requests": 501,
+  "splits": 6,
+  "failed": 0,
+  "seconds": 1059,
+  "complete": true
+ },
+ "legals": {
+  "rows": 22727180,
+  "live": 22727180,
+  "requests": 686,
+  "splits": 32,
+  "failed": 0,
+  "seconds": 1446,
+  "complete": true
+ },
+ "parties": {
+  "rows": 46540137,
+  "live": 46540137,
+  "requests": 3383,
+  "splits": 270,
+  "failed": 0,
+  "seconds": 2218,
+  "complete": true
+ },
+ "references": {
+  "rows": 8699896,
+  "live": 8699896,
+  "requests": 329,
+  "splits": 94,
+  "failed": 0,
+  "seconds": 430,
+  "complete": true
+ },
+ "remarks": {
+  "rows": 5732540,
+  "live": 5732540,
+  "requests": 230,
+  "splits": 82,
+  "failed": 0,
+  "seconds": 252,
+  "complete": true
+ }
+}

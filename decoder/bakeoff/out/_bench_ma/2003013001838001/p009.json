@@ -1,0 +1,721 @@
+{
+ "page": "2003013001838001/p009",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "STATEOFNEWYORK",
+   "box": [
+    [
+     325,
+     548
+    ],
+    [
+     867,
+     548
+    ],
+    [
+     867,
+     602
+    ],
+    [
+     325,
+     602
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9972
+  },
+  {
+   "text": "COUNTY OFNEWYORK)",
+   "box": [
+    [
+     321,
+     604
+    ],
+    [
+     962,
+     608
+    ],
+    [
+     962,
+     665
+    ],
+    [
+     321,
+     660
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9668
+  },
+  {
+   "text": "SS.:",
+   "box": [
+    [
+     1075,
+     617
+    ],
+    [
+     1158,
+     617
+    ],
+    [
+     1158,
+     665
+    ],
+    [
+     1075,
+     665
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9349
+  },
+  {
+   "text": "On the 12th day of December in the year 2002 before me, the undersigned, personally",
+   "box": [
+    [
+     473,
+     731
+    ],
+    [
+     2244,
+     731
+    ],
+    [
+     2244,
+     785
+    ],
+    [
+     473,
+     785
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9835
+  },
+  {
+   "text": "appeared CiadreyYrits",
+   "box": [
+    [
+     312,
+     785
+    ],
+    [
+     983,
+     777
+    ],
+    [
+     983,
+     854
+    ],
+    [
+     315,
+     862
+    ]
+   ],
+   "angle": 0,
+   "score": 0.7133
+  },
+  {
+   "text": ", personally known to me or proved to me on the basis",
+   "box": [
+    [
+     1127,
+     792
+    ],
+    [
+     2275,
+     781
+    ],
+    [
+     2277,
+     844
+    ],
+    [
+     1127,
+     854
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9885
+  },
+  {
+   "text": "of satisfactory evidence to be the individual(s) whose name(s) is (are) subscribed to the within",
+   "box": [
+    [
+     323,
+     852
+    ],
+    [
+     2252,
+     852
+    ],
+    [
+     2252,
+     906
+    ],
+    [
+     323,
+     906
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9614
+  },
+  {
+   "text": "instrument and acknowledged to me that he/she/they executed the same in his/her/their",
+   "box": [
+    [
+     321,
+     910
+    ],
+    [
+     2106,
+     908
+    ],
+    [
+     2106,
+     964
+    ],
+    [
+     321,
+     967
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9726
+  },
+  {
+   "text": "capacity(ies), and that by his/her their signature(s) on the instrument, the individual(s), or the",
+   "box": [
+    [
+     323,
+     971
+    ],
+    [
+     2246,
+     967
+    ],
+    [
+     2246,
+     1027
+    ],
+    [
+     323,
+     1031
+    ]
+   ],
+   "angle": 0,
+   "score": 0.997
+  },
+  {
+   "text": "person uponbehalf ofwhich theindividual(s) acted,executed theinstrument.",
+   "box": [
+    [
+     321,
+     1033
+    ],
+    [
+     1902,
+     1027
+    ],
+    [
+     1902,
+     1081
+    ],
+    [
+     321,
+     1087
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9714
+  },
+  {
+   "text": "Notary Public",
+   "box": [
+    [
+     1375,
+     1267
+    ],
+    [
+     1666,
+     1267
+    ],
+    [
+     1666,
+     1323
+    ],
+    [
+     1375,
+     1323
+    ]
+   ],
+   "angle": 0,
+   "score": 0.982
+  },
+  {
+   "text": "VICTORIA P.APOSTLE",
+   "box": [
+    [
+     1577,
+     1360
+    ],
+    [
+     1983,
+     1367
+    ],
+    [
+     1983,
+     1417
+    ],
+    [
+     1577,
+     1410
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9579
+  },
+  {
+   "text": "NotaryPublic,State of NewYork",
+   "box": [
+    [
+     1485,
+     1398
+    ],
+    [
+     2071,
+     1402
+    ],
+    [
+     2071,
+     1456
+    ],
+    [
+     1485,
+     1452
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9491
+  },
+  {
+   "text": "No.01AP4614741",
+   "box": [
+    [
+     1617,
+     1442
+    ],
+    [
+     1937,
+     1446
+    ],
+    [
+     1937,
+     1489
+    ],
+    [
+     1617,
+     1485
+    ]
+   ],
+   "angle": 0,
+   "score": 0.993
+  },
+  {
+   "text": "QualifiedinNewYorkCounty",
+   "box": [
+    [
+     1514,
+     1473
+    ],
+    [
+     2041,
+     1483
+    ],
+    [
+     2041,
+     1531
+    ],
+    [
+     1514,
+     1521
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9808
+  },
+  {
+   "text": "Commission Expires May 31,2003",
+   "box": [
+    [
+     1469,
+     1512
+    ],
+    [
+     2085,
+     1517
+    ],
+    [
+     2085,
+     1571
+    ],
+    [
+     1469,
+     1567
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9475
+  },
+  {
+   "text": "STATEOFNEWYORK)",
+   "box": [
+    [
+     319,
+     1562
+    ],
+    [
+     958,
+     1564
+    ],
+    [
+     958,
+     1619
+    ],
+    [
+     319,
+     1617
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9876
+  },
+  {
+   "text": "COUNTYOFNEWYORK)",
+   "box": [
+    [
+     323,
+     1625
+    ],
+    [
+     958,
+     1625
+    ],
+    [
+     958,
+     1679
+    ],
+    [
+     323,
+     1679
+    ]
+   ],
+   "angle": 0,
+   "score": 0.99
+  },
+  {
+   "text": "SS.:",
+   "box": [
+    [
+     1075,
+     1631
+    ],
+    [
+     1158,
+     1631
+    ],
+    [
+     1158,
+     1679
+    ],
+    [
+     1075,
+     1679
+    ]
+   ],
+   "angle": 0,
+   "score": 0.8933
+  },
+  {
+   "text": "On the 12th day of December in the year 2002 before me,the undersigned,personally",
+   "box": [
+    [
+     471,
+     1741
+    ],
+    [
+     2239,
+     1744
+    ],
+    [
+     2239,
+     1800
+    ],
+    [
+     471,
+     1798
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9578
+  },
+  {
+   "text": "satisfactory evidence to be the individual whose name is subscribed to the within instrument",
+   "box": [
+    [
+     323,
+     1862
+    ],
+    [
+     2210,
+     1862
+    ],
+    [
+     2210,
+     1916
+    ],
+    [
+     323,
+     1916
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9593
+  },
+  {
+   "text": "and acknowledged to me that he/she/they executed the same in his capacity,and that by his",
+   "box": [
+    [
+     319,
+     1921
+    ],
+    [
+     2191,
+     1923
+    ],
+    [
+     2191,
+     1979
+    ],
+    [
+     319,
+     1977
+    ]
+   ],
+   "angle": 0,
+   "score": 0.964
+  },
+  {
+   "text": "signature on the instrument, the individual, or the person upon behalf of which the individual",
+   "box": [
+    [
+     319,
+     1983
+    ],
+    [
+     2235,
+     1981
+    ],
+    [
+     2235,
+     2035
+    ],
+    [
+     319,
+     2037
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9588
+  },
+  {
+   "text": "acted, executed the instrument.",
+   "box": [
+    [
+     319,
+     2041
+    ],
+    [
+     964,
+     2046
+    ],
+    [
+     964,
+     2096
+    ],
+    [
+     319,
+     2091
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9719
+  },
+  {
+   "text": "Notary Public",
+   "box": [
+    [
+     1373,
+     2277
+    ],
+    [
+     1662,
+     2277
+    ],
+    [
+     1662,
+     2333
+    ],
+    [
+     1373,
+     2333
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9663
+  },
+  {
+   "text": "VICTORIAP.APOSTLE",
+   "box": [
+    [
+     1687,
+     2412
+    ],
+    [
+     2087,
+     2412
+    ],
+    [
+     2087,
+     2460
+    ],
+    [
+     1687,
+     2460
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9756
+  },
+  {
+   "text": "Notary Public,State of NewYork",
+   "box": [
+    [
+     1594,
+     2448
+    ],
+    [
+     2177,
+     2450
+    ],
+    [
+     2177,
+     2504
+    ],
+    [
+     1594,
+     2502
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9364
+  },
+  {
+   "text": "No.01AP4614741",
+   "box": [
+    [
+     1729,
+     2491
+    ],
+    [
+     2046,
+     2496
+    ],
+    [
+     2046,
+     2539
+    ],
+    [
+     1727,
+     2535
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9901
+  },
+  {
+   "text": "alifiedinNewYorkCounty",
+   "box": [
+    [
+     1627,
+     2525
+    ],
+    [
+     2148,
+     2529
+    ],
+    [
+     2148,
+     2577
+    ],
+    [
+     1627,
+     2573
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9828
+  },
+  {
+   "text": "\uff08.:missionExpires May31,2003",
+   "box": [
+    [
+     1579,
+     2564
+    ],
+    [
+     2189,
+     2566
+    ],
+    [
+     2189,
+     2614
+    ],
+    [
+     1579,
+     2612
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9286
+  },
+  {
+   "text": "8",
+   "box": [
+    [
+     1289,
+     2948
+    ],
+    [
+     1317,
+     2948
+    ],
+    [
+     1317,
+     2981
+    ],
+    [
+     1289,
+     2981
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9986
+  }
+ ]
+}

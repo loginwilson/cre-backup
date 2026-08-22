@@ -1,0 +1,29 @@
+{
+ "tag": "ppbox/BK_6730047100023",
+ "src": "C:\\Users\\smile\\Downloads\\Source Folder (Real Estate Data)\\Decoder Prompt\\decoder\\bakeoff\\pages\\BK_6730047100023",
+ "angles": [
+  0
+ ],
+ "side": 1440,
+ "pages": [
+  {
+   "page": "p005.png",
+   "lines": 76,
+   "sec": 246.8,
+   "status": "ok"
+  },
+  {
+   "page": "p006.png",
+   "lines": 74,
+   "sec": 96.3,
+   "status": "ok"
+  },
+  {
+   "page": "p007.png",
+   "lines": 70,
+   "sec": 80.2,
+   "status": "ok"
+  }
+ ],
+ "sec": 423.5
+}

@@ -1,0 +1,348 @@
+{
+  "_note": "THE PIPELINE'S MEMORY. Local source of truth; push_workflow.py mirrors it into Supabase (decoder_stage + decoder_workflow). Every entry here was paid for with a measurement - do not add anything that was only reasoned about.",
+  "stages": [
+    {
+      "stage": "selection",
+      "seq": 1,
+      "purpose": "Establish which documents exist and how many pages each has, before anything is fetched.",
+      "input": "ACRIS document map endpoint, one call per document_id",
+      "output": "document_id, doc_type, recorded_date, total_pages, and the instrument / supporting / tax-return page ranges",
+      "state": "done",
+      "store": "acris_maps.jsonl (3.85 GB, local) -> Supabase document_map"
+    },
+    {
+      "stage": "acquisition",
+      "seq": 2,
+      "purpose": "Fetch every page image of every selected document onto durable storage.",
+      "input": "document_map rows",
+      "output": "one multipage Group-4 TIFF per document_id + SQLite ledger row",
+      "state": "measured, not started at scale (awaiting hard drive)",
+      "store": "external drive + acquisition ledger"
+    },
+    {
+      "stage": "extraction",
+      "seq": 3,
+      "purpose": "Turn page pixels into canonical text plus located facts, with unreadable spans marked rather than guessed.",
+      "input": "acquired TIFF pages",
+      "output": "document_id, page_number, canonical_text, unresolved_spans, resolution_status, source_url, source_hash",
+      "state": "engine bake-off measured; structured-field extraction never run",
+      "store": "decoder-sink JSONL -> Supabase decoder_facts"
+    },
+    {
+      "stage": "resolution",
+      "seq": 4,
+      "purpose": "Make sense of extracted data as parcel lineage - chronological and functional movement of each lot.",
+      "input": "extracted facts + ACRIS index + parcel spine",
+      "output": "resolved lineage per BBL across merges, subdivisions, condo conversions",
+      "state": "not started",
+      "store": "Supabase decoder_lifecycle_link / decoder_parcels"
+    },
+    {
+      "stage": "derivation",
+      "seq": 5,
+      "purpose": "Turn resolved lineages into clear outputs - comparables, debt throughlines, development stages.",
+      "input": "resolved lineage",
+      "output": "derived products keyed to BBL",
+      "state": "not started",
+      "store": "Supabase views"
+    },
+    {
+      "stage": "application",
+      "seq": 6,
+      "purpose": "Product surfaces that read the database - the territory app cards and overlays.",
+      "input": "derived outputs",
+      "output": "cards, overlays, monitoring",
+      "state": "partially live (BKREA territory app)",
+      "store": "Next.js app on Vercel"
+    }
+  ],
+  "entries": [
+    {
+      "stage": "global", "kind": "decision", "seq": 1,
+      "title": "Six-stage pipeline, each stage persisted",
+      "body": "selection -> acquisition -> extraction -> resolution -> derivation -> application. Each stage writes its output to a named store and is re-runnable from the stage before it. A stage whose output lives only in a script's memory cannot be resumed or audited.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "global", "kind": "trap", "seq": 2,
+      "title": "Large N hides bugs",
+      "body": "One lot is verified by looking; a population is verified by a summary line written by the same code that has the bug. A duplicate-BBL defect was invisible at 98k rows and only surfaced at 364. Always print denominators, end chains with live-vs-disk reconciliation, and enforce scope rather than remembering it.",
+      "measured_on": "2026-07-28"
+    },
+    {
+      "stage": "global", "kind": "rule", "seq": 3,
+      "title": "Never repair a number to make a check pass",
+      "body": "Report the failure. A corrected number that makes a validator green destroys the only signal that something is wrong.",
+      "measured_on": "2026-08-01"
+    },
+    {
+      "stage": "global", "kind": "rule", "seq": 4,
+      "title": "Refusal ends the run",
+      "body": "If a source refuses, stop. Do not retry, do not rotate anything, do not work around it. No bulk image scraper, no bot-detection workarounds.",
+      "measured_on": "2026-08-10"
+    },
+    {
+      "stage": "selection", "kind": "measurement", "seq": 1,
+      "title": "17,049,740 documents mapped",
+      "body": "The full ACRIS document universe has been mapped with page counts and page ranges. This is the work-list every later stage is keyed on.",
+      "numbers": {"documents": 17049740, "file_gb": 3.85, "bytes_per_line": 226},
+      "measured_on": "2026-08-11"
+    },
+    {
+      "stage": "selection", "kind": "trap", "seq": 2,
+      "title": "Selection existed in exactly one place",
+      "body": "acris_maps.jsonl sat on one laptop disk while the Supabase table built for it (document_map) held zero rows. The mapping run took hours against ACRIS at concurrency 128; losing the file means asking ACRIS for all of it again. Fixed by push_selection.py.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "selection", "kind": "rule", "seq": 3,
+      "title": "Page count comes from the document, not the spine",
+      "body": "The parcel spine missed title pages, so page counts must come from hid_TotalPages on the document map. It is ~99.5% reliable - one over-count observed in 208 documents.",
+      "numbers": {"reliability": 0.995, "sample": 208},
+      "measured_on": "2026-08-11"
+    },
+    {
+      "stage": "selection", "kind": "rule", "seq": 4,
+      "title": "A missing page range is null, never 0",
+      "body": "supporting: null means the document has no supporting pages. Writing 0 would read as 'starts at page 0' and acquisition would fetch a page that does not exist. Page numbers are 1-based.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "selection", "kind": "trap", "seq": 6,
+      "title": "An upsert cannot touch the same row twice in one command",
+      "body": "Pushing selection died with HTTP 500, Postgres code 21000, 'ON CONFLICT DO UPDATE command cannot affect row a second time'. The mapper appends, so a 1000-line window can hold the same doc_id twice. Upsert handles duplicates ACROSS commands but not INSIDE one - the batch must be de-duplicated by key first, last occurrence winning. Measured on 20,000 lines: 1,971 duplicates inside batches and 6,629 more colliding with rows already stored.",
+      "numbers": {"lines": 20000, "dup_in_batch": 1971, "dup_across": 6629, "new_rows": 11400},
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "selection", "kind": "measurement", "seq": 7,
+      "title": "The map file has ~17.1M lines but fewer unique documents",
+      "body": "225 bytes/line over 3.85 GB gives ~17,125,366 lines. Roughly a third of a sampled window merged onto document_ids already stored, because delta runs and re-runs append. The unique-document count is what document_map holds after the push - do not quote the line count as the document count.",
+      "numbers": {"bytes_per_line": 225, "lines": 17125366, "push_rate_rows_s": 3783, "hours": 1.3},
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "selection", "kind": "open", "seq": 5,
+      "title": "Deterministic work-list partition not built",
+      "body": "Acquisition currently partitions with 'stride', a test hack. A real run needs a deterministic partition so N workers cover the universe exactly once with no overlap and no gap.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "acquisition", "kind": "measurement", "seq": 1,
+      "title": "4 processes x concurrency 8 = 49-58 pages/s",
+      "body": "Measured over ~8,000 pages with zero refusals. Projects to roughly 30-35 days and 9.3 TB for the full corpus.",
+      "numbers": {"pages_per_sec": 49, "days": 32, "tb": 9.3, "pages_total": 148200000},
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "acquisition", "kind": "measurement", "seq": 2,
+      "title": "The ceiling is ACRIS's image service, not the link",
+      "body": "20 ms connect time, 33 Mbps of a 574 Mbps link. Faster internet buys nothing. Ethernet would not help.",
+      "numbers": {"connect_ms": 20, "used_mbps": 33, "link_mbps": 574},
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "acquisition", "kind": "trap", "seq": 3,
+      "title": "End-of-document is a PLACEHOLDER served as HTTP 200",
+      "body": "Past the last page ACRIS returns a valid 13,684-byte TIFF, not a 404. 'Fetch until it fails' never fails - it writes placeholder pages into documents forever and they look like content. Test md5 == 4081a3f2004d7244a966995c02c730d0.",
+      "numbers": {"placeholder_md5": "4081a3f2004d7244a966995c02c730d0", "bytes": 13684},
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "acquisition", "kind": "rule", "seq": 4,
+      "title": "One multipage TIFF per document, not one file per page",
+      "body": "Identical bytes (0.99x), Group-4 preserved, 3 ms random page access. The reason is file COUNT: 148M loose pages costs ~148 GB of NTFS metadata and 17M files instead of 148M.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "acquisition", "kind": "trap", "seq": 5,
+      "title": "Never convert('L') a bitonal scan into a PDF",
+      "body": "Cost 15.2x on disk - 131 KB of TIFF became 1,998 KB of PDF. Left in, the 9.3 TB corpus would have been 141 TB. Keep mode '1' and Group-4.",
+      "numbers": {"inflation": 15.2, "tb_if_unfixed": 141},
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "acquisition", "kind": "trap", "seq": 6,
+      "title": "return_exceptions hid 150 dead document tasks",
+      "body": "The run reported a clean summary while 150 documents had died (cause: full disk). Any gather that swallows exceptions must count and report them.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "acquisition", "kind": "trap", "seq": 7,
+      "title": "A page cap inside the page loop truncates documents",
+      "body": "An 84-page document was cut at 28 and labelled 'short'. The cap must apply BETWEEN documents, never inside one.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "acquisition", "kind": "open", "seq": 8,
+      "title": "Nothing survives the machine powering off",
+      "body": "A 30-day acquisition cannot run on a laptop that sleeps. Sleep must be disabled (powercfg standby-timeout-ac 0) and the job must be resumable from its ledger. Truly unattended running needs a remote host.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "decision", "seq": 1,
+      "title": "Design B - one VLM reads every film and book page",
+      "body": "No OCR proposers, no union, no reconciliation, no trust gate on the historical classes. Cheap OCR keeps only the born-digital class (70.5% of pages, already 100%). Chosen because free Torch compute turns the 4x compute premium into wall-clock rather than money.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "measurement", "seq": 2,
+      "title": "Engine scores on 20 pages every engine produced",
+      "body": "CRITICAL artifacts, transcribed, blended by corpus page share (film 25.5 / book 4.0 / digital 70.5). PP-OCRv6 is the best classical OCR and beats the 4B VLM on microfilm; its only weakness is bound book.",
+      "numbers": {
+        "pages": 26, "critical_artifacts_book": 83, "critical_artifacts_film": 101,
+        "tesseract": {"film": 0.70, "book": 0.61, "digital": 0.93, "blended": 0.860},
+        "rapidocr":  {"film": 0.77, "book": 0.73, "digital": 0.98, "blended": 0.915},
+        "qwen3vl4b": {"film": 0.87, "book": 0.92, "digital": 1.00, "blended": 0.964},
+        "ppocrv6_rot_on_book": {"film": 0.89, "book": 0.83, "digital": 1.00, "blended": 0.965}
+      },
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "measurement", "seq": 21,
+      "title": "PP-OCRv6 with rotation ties the 4B VLM on blended score",
+      "body": "Full 26-page bake-off, rotation applied to bound book only (the settled historical-class rule): PP-OCRv6 blends to 96.5% against Qwen3-VL-4B's 96.4% - a tie. PP wins film 89 vs 87, loses book 83 vs 92. Rotation lifted book from 77% to 82% on the identical six pages, so the earlier book number was partly a config artifact. FILM WAS NEVER RUN WITH ROTATION, and the rule applies rotation to FT_ as well, so PP's film 89% is a FLOOR not a ceiling.",
+      "numbers": {"ppocrv6_blended": 0.965, "qwen3vl4b_blended": 0.964, "book_upright": 0.77, "book_rotated": 0.82, "delta_points": 5},
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "trap", "seq": 22,
+      "title": "A page with no per-page timeout reads as an engine limitation",
+      "body": "The sideways backer BK p007 ran over 10 minutes inside pool.map with no per-page limit, blocked the whole worker pool, was killed, and produced no file and no error - so it vanished silently from the scored set and PP's book score was computed WITHOUT the hardest page in the class. Given a 300s-per-angle timeout and rotation it reads in 229s and returns 637 words including REC. 471 PAGE 27, the full notary acknowledgment and both signatures. The engine was never the problem.",
+      "numbers": {"seconds": 229, "words": 637, "angles": 3},
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "trap", "seq": 3,
+      "title": "The trust gate does not work as a trust boundary",
+      "body": "Real confusion matrix over 21 pages: 10 had a wrong CRITICAL fact, the gate caught 4 (40% recall) and missed 6 silently. It can ask 'is the stamp there'; it cannot ask 'is this name right'. Keep validators as a 1% audit sample, never as the thing that decides a page is correct.",
+      "numbers": {"recall": 0.40, "silent_misses": 6, "escalation_rate": 0.43},
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "rule", "seq": 4,
+      "title": "Never ask a model to reconcile or rewrite a page",
+      "body": "Given two OCR readings plus the image and told to produce one corrected transcription: +0 gained / -12 lost (text-only -22). It deleted 'REC. 471' and its page numbers as noise. Additive union+verifier mode is +0/-0 - harmless and useless.",
+      "numbers": {"gained": 0, "lost": 12},
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "rule", "seq": 5,
+      "title": "The generic one-sentence prompt beats every richer variant",
+      "body": "A domain-calibrated prompt scored 86% against the generic prompt's 92%, emitting 830 more words to hit 5 fewer facts. Naming the fields turns the model from a transcriber into a form-filler. A prompt tuned on 7 pages of one 1967 mortgage also says nothing about 17M documents.",
+      "numbers": {"calibrated": 0.86, "generic": 0.92},
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "rule", "seq": 6,
+      "title": "Rotation is the only thing that reads a sideways backer",
+      "body": "The backer block - recording tax, City Register stamp, county - is recovered by rotating the page and by nothing else. Not a longer prompt, not a stamp-only second pass. Applies to OCR engines too, where an orientation classifier is another model that can be silently wrong.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "rule", "seq": 7,
+      "title": "1400px, measured - native resolution scores worst",
+      "body": "A render-width sweep put 1400 ahead of 1800, ahead of native 2536, ahead of 3200. More pixels per page cost more and read less.",
+      "measured_on": "2026-08-11"
+    },
+    {
+      "stage": "extraction", "kind": "rule", "seq": 8,
+      "title": "Transcribed is not pointed",
+      "body": "Transcribed = characters correct. Pointed = right box, wrong characters, recoverable by a model that looks again. Blended 98.5 transcribed vs 99.7 pointed. Of 9 artifacts nothing transcribes, 8 are POINTED. Scoring the two as one number hides what is recoverable.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "rule", "seq": 9,
+      "title": "The escalation bill is per PAGE, not per artifact",
+      "body": "The verifier is handed a page and loads the image; it cannot re-read one artifact in isolation. Quoting the artifact rate (19.4%) understates the bill badly. Page-level: 71% raw, 39% corpus-weighted.",
+      "numbers": {"artifact_rate": 0.194, "page_raw": 0.71, "page_weighted": 0.39},
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "decision", "seq": 10,
+      "title": "Resolver verdicts and the escalation contract",
+      "body": "Two legs (PP-OCR on CPU, VLM on GPU) produce AGREEMENT / DISAGREEMENT / VLM-UNCERTAIN. Agreement accepts. Disagreement goes to a cheap resolution pass, then to the strongest model. That model may use superior visual reasoning to distinguish difficult characters, layout, degradation, overlapping stamps and faint printing. It may NOT reason that 'this probably says X because X makes sense legally'. If the pixels do not establish X it returns [UNCLEAR] and the span is marked UNRESOLVED / SOURCE ILLEGIBLE.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "rule", "seq": 11,
+      "title": "Two engines that fail on different pages are worth more than one better engine",
+      "body": "PP-OCRv6 and the 4B VLM blend to within 0.2 points of each other but their errors sit in different classes - PP fails on book, the VLM on film. That disagreement is what makes the resolver informative. A CPU leg that is just a worse copy of the GPU leg adds nothing.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "trap", "seq": 12,
+      "title": "HTTP 200 with empty content is a failure, not a transcription",
+      "body": "5 of 8 pages wrote a zero-byte file in ~85s each because Qwen3.x ships thinking ON and it ate the whole token budget. The harness only refused to write on an exception, so nothing fired. Disable thinking (chat_template_kwargs enable_thinking false), raise on an empty reply, and sweep zero-byte files at startup.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "trap", "seq": 13,
+      "title": "A zero-byte output file is a resume trap",
+      "body": "Resume skips any page whose .txt exists, so an empty file is permanently 'done' and never retried. The test is exists() AND size > 0.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "trap", "seq": 14,
+      "title": "A wedged single slot poisons every test after it",
+      "body": "llama-server with -np 1: when a page hangs it, the request holds the slot forever and /health stops answering. Every later request queues behind it and times out, so each new test reports failure regardless of what it changed. Two hypotheses were falsely disconfirmed this way. Restart the server before every diagnostic.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "trap", "seq": 15,
+      "title": "A page an engine never produced is not a page it scored zero on",
+      "body": "Made three times: Paddle crashing to an empty directory and landing in the table as a confident 0%, four vision calls dying into 'the pixels are worth -3.3 points', and an in-progress run collapsing a 21-page intersection to 1. Score the intersection of pages every engine actually wrote, and print what was dropped.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "rule", "seq": 16,
+      "title": "Score per class, never averaged",
+      "body": "79% overall was 96% on modern laser print and 69% on microfilm. Blend by corpus page share (film 25.5 / book 4.0 / digital 70.5), not by the sample's own mix, which is 81% historical and triples the apparent difficulty.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "open", "seq": 17,
+      "title": "27B is unmeasured - the assumption Design B rests on",
+      "body": "Needs Torch or an API key; neither present locally. Run the 26-page keyed test first.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "open", "seq": 18,
+      "title": "Structured-field extraction never tested",
+      "body": "bakeoff/extract.py is built and never run. Right characters in the wrong field scores 100% on every metric used so far and inverts a lineage.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "open", "seq": 19,
+      "title": "Whether rotation is needed at 27B",
+      "body": "If every historical page must be run at three angles the corpus inflates 1.6x, from 148.2M to 236M page-equivalents. Untested.",
+      "numbers": {"pages": 148200000, "if_rotated": 236000000},
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "extraction", "kind": "rule", "seq": 20,
+      "title": "This laptop measures accuracy, never speed",
+      "body": "PaddlePaddle here is the CPU-only wheel and oneDNN throws ConvertPirAttribute2RuntimeAttribute on this Intel box, which killed five attempts. PP-OCRv6's published 0.13 s/page is an A100 figure. Thermal throttling under load invalidates any pages/second taken here.",
+      "measured_on": "2026-08-12"
+    },
+    {
+      "stage": "resolution", "kind": "rule", "seq": 1,
+      "title": "The lineage skeleton comes from the ACRIS index, not from OCR",
+      "body": "The index carries doc_type, recorded_datetime, reel/page, parties and borough/block/lot for all 17M documents. It is SILENT on amounts - document_amt is 0 on 100% of microfilm deeds. Use the index for structure and OCR for the numbers it cannot supply.",
+      "measured_on": "2026-08-11"
+    },
+    {
+      "stage": "resolution", "kind": "trap", "seq": 2,
+      "title": "Retired BBLs drop out of any gate-keyed pull",
+      "body": "The loss is invisible because audits read the filter's own output. Lot lineage is a prerequisite for scaling, not a refinement: 12 resolved vs 201 declined on one assemblage.",
+      "measured_on": "2026-07-20"
+    },
+    {
+      "stage": "resolution", "kind": "open", "seq": 3,
+      "title": "Merger and subdivision lineage still missing",
+      "body": "The spine holds 1,164,820 parcels and 306,443 condo lineage edges, but merger/subdivision edges are not built.",
+      "numbers": {"parcels": 1164820, "condo_edges": 306443},
+      "measured_on": "2026-08-01"
+    }
+  ]
+}

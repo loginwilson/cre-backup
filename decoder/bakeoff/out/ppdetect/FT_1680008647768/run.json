@@ -1,0 +1,23 @@
+{
+ "tag": "ppdetect/FT_1680008647768",
+ "src": "C:\\Users\\smile\\Downloads\\Source Folder (Real Estate Data)\\Decoder Prompt\\decoder\\bakeoff\\pages_pk\\FT_1680008647768",
+ "angles": [
+  0
+ ],
+ "side": 1440,
+ "pages": [
+  {
+   "page": "p009.png",
+   "lines": 52,
+   "sec": 82.1,
+   "status": "ok"
+  },
+  {
+   "page": "p010.png",
+   "lines": 101,
+   "sec": 62.4,
+   "status": "ok"
+  }
+ ],
+ "sec": 144.6
+}

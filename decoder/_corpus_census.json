@@ -1,0 +1,82 @@
+[
+ {
+  "type": "DEED",
+  "docs": 3640429,
+  "sampled": 450,
+  "mean": 4.8,
+  "median": 4.0,
+  "p90": 8,
+  "est_pages": 17376981,
+  "secs": 2.7
+ },
+ {
+  "type": "MTGE",
+  "docs": 4216266,
+  "sampled": 450,
+  "mean": 17.7,
+  "median": 18.0,
+  "p90": 27,
+  "est_pages": 74552952,
+  "secs": 2.4
+ },
+ {
+  "type": "SAT",
+  "docs": 2626714,
+  "sampled": 450,
+  "mean": 2.9,
+  "median": 3.0,
+  "p90": 4,
+  "est_pages": 7518239,
+  "secs": 2.4
+ },
+ {
+  "type": "ASST",
+  "docs": 2207817,
+  "sampled": 450,
+  "mean": 3.9,
+  "median": 3.0,
+  "p90": 7,
+  "est_pages": 8581048,
+  "secs": 2.0
+ },
+ {
+  "type": "PAT",
+  "docs": 1067600,
+  "sampled": 450,
+  "mean": 5.0,
+  "median": 5.0,
+  "p90": 7,
+  "est_pages": 5333255,
+  "secs": 2.0
+ },
+ {
+  "type": "AGMT",
+  "docs": 920875,
+  "sampled": 450,
+  "mean": 27.1,
+  "median": 29.0,
+  "p90": 43,
+  "est_pages": 24970037,
+  "secs": 2.1
+ },
+ {
+  "type": "RPTT&RET",
+  "docs": 396981,
+  "sampled": 450,
+  "mean": 2.7,
+  "median": 3.0,
+  "p90": 4,
+  "est_pages": 1059498,
+  "secs": 2.0
+ },
+ {
+  "type": "RPTT",
+  "docs": 216330,
+  "sampled": 450,
+  "mean": 3.7,
+  "median": 4.0,
+  "p90": 7,
+  "est_pages": 801382,
+  "secs": 2.1
+ }
+]

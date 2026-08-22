@@ -1,0 +1,35 @@
+{
+ "tag": "ppbox/FT_1680008647768",
+ "src": "C:\\Users\\smile\\Downloads\\Source Folder (Real Estate Data)\\Decoder Prompt\\decoder\\bakeoff\\pages\\FT_1680008647768",
+ "angles": [
+  0
+ ],
+ "side": 1440,
+ "pages": [
+  {
+   "page": "p007.png",
+   "lines": 0,
+   "sec": 1200.1,
+   "status": "TimeoutError@0"
+  },
+  {
+   "page": "p008.png",
+   "lines": 85,
+   "sec": 195.7,
+   "status": "ok"
+  },
+  {
+   "page": "p009.png",
+   "lines": 52,
+   "sec": 112.1,
+   "status": "ok"
+  },
+  {
+   "page": "p010.png",
+   "lines": 101,
+   "sec": 91.7,
+   "status": "ok"
+  }
+ ],
+ "sec": 1599.8
+}

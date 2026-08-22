@@ -1,0 +1,1131 @@
+{
+ "doc": "FT_1680008647768",
+ "page": "p003",
+ "ocr": "rapidma",
+ "vlm": "4B-Qwen3-VL-4B-Instruct-Q4_K_M.gguf",
+ "n_lines": 46,
+ "seconds": 65.4,
+ "placed": {
+  "recording_stamp": [
+   0
+  ],
+  "parties": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "granting_clause": [
+   10,
+   15,
+   16
+  ],
+  "amount": [
+   11,
+   12,
+   13,
+   14
+  ],
+  "legal_description": [
+   17,
+   18,
+   19,
+   20,
+   21,
+   22
+  ],
+  "covenants": [
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44
+  ]
+ },
+ "integrity": {
+  "unplaced": 1,
+  "prose_words_outside_json": 0
+ },
+ "lines": [
+  {
+   "i": 0,
+   "text": "REEL 586c: 763",
+   "box": [
+    [
+     1269,
+     175
+    ],
+    [
+     1596,
+     189
+    ],
+    [
+     1594,
+     254
+    ],
+    [
+     1268,
+     240
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 1,
+   "text": "THISMORTGAGE,madethe",
+   "box": [
+    [
+     344,
+     313
+    ],
+    [
+     721,
+     309
+    ],
+    [
+     721,
+     338
+    ],
+    [
+     345,
+     342
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 2,
+   "text": "dayof",
+   "box": [
+    [
+     847,
+     313
+    ],
+    [
+     929,
+     313
+    ],
+    [
+     929,
+     344
+    ],
+    [
+     847,
+     344
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 3,
+   "text": ",1981",
+   "box": [
+    [
+     1103,
+     313
+    ],
+    [
+     1189,
+     313
+    ],
+    [
+     1189,
+     342
+    ],
+    [
+     1103,
+     342
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 4,
+   "text": "BETWEEN 387 P.A.S.ENTERPRISES,a New York limited partnership",
+   "box": [
+    [
+     340,
+     362
+    ],
+    [
+     1527,
+     373
+    ],
+    [
+     1527,
+     417
+    ],
+    [
+     338,
+     407
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 5,
+   "text": "having an office at c/o O.S.L.Shipping & Development Inc.,",
+   "box": [
+    [
+     364,
+     400
+    ],
+    [
+     1465,
+     402
+    ],
+    [
+     1465,
+     443
+    ],
+    [
+     364,
+     441
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 6,
+   "text": "1270 Avenue of the Americas, New York, N.Y. 10021,",
+   "box": [
+    [
+     362,
+     428
+    ],
+    [
+     1328,
+     431
+    ],
+    [
+     1328,
+     476
+    ],
+    [
+     362,
+     472
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 7,
+   "text": "the Mortgagor,and",
+   "box": [
+    [
+     1322,
+     447
+    ],
+    [
+     1592,
+     450
+    ],
+    [
+     1592,
+     489
+    ],
+    [
+     1322,
+     486
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 8,
+   "text": "CITIBANK, N.A., a national banking association having an office",
+   "box": [
+    [
+     362,
+     477
+    ],
+    [
+     1542,
+     479
+    ],
+    [
+     1542,
+     520
+    ],
+    [
+     362,
+     519
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 9,
+   "text": "at 399 Park Avenue, New York,N.Y.10043,",
+   "box": [
+    [
+     364,
+     507
+    ],
+    [
+     1170,
+     510
+    ],
+    [
+     1170,
+     550
+    ],
+    [
+     364,
+     546
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 10,
+   "text": "he Mortgagee,",
+   "box": [
+    [
+     1400,
+     591
+    ],
+    [
+     1585,
+     596
+    ],
+    [
+     1585,
+     632
+    ],
+    [
+     1400,
+     627
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 11,
+   "text": "WITNESSETH,that to secure the paymentof an indebtedness in the sum of",
+   "box": [
+    [
+     349,
+     721
+    ],
+    [
+     1316,
+     721
+    ],
+    [
+     1316,
+     756
+    ],
+    [
+     349,
+     756
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 12,
+   "text": "Four Million",
+   "box": [
+    [
+     1298,
+     718
+    ],
+    [
+     1558,
+     718
+    ],
+    [
+     1558,
+     752
+    ],
+    [
+     1298,
+     752
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 13,
+   "text": "\uff08$4,000,000)-",
+   "box": [
+    [
+     373,
+     751
+    ],
+    [
+     608,
+     751
+    ],
+    [
+     608,
+     785
+    ],
+    [
+     373,
+     785
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 14,
+   "text": "Dollars.",
+   "box": [
+    [
+     1489,
+     773
+    ],
+    [
+     1590,
+     780
+    ],
+    [
+     1589,
+     811
+    ],
+    [
+     1487,
+     804
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 15,
+   "text": "lawful money of the United States,or so much thereof as may be advanced,to be paid according to",
+   "box": [
+    [
+     344,
+     799
+    ],
+    [
+     1596,
+     800
+    ],
+    [
+     1596,
+     842
+    ],
+    [
+     344,
+     840
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 16,
+   "text": "hereafter arnended,modifed or extended\uff0cbeing hereinafter called\u201cthe Note')\uff0cthe Mortgagor hereby",
+   "box": [
+    [
+     344,
+     852
+    ],
+    [
+     1592,
+     854
+    ],
+    [
+     1592,
+     893
+    ],
+    [
+     344,
+     891
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 17,
+   "text": "mortgages to the Mortgagee:",
+   "box": [
+    [
+     347,
+     883
+    ],
+    [
+     706,
+     883
+    ],
+    [
+     706,
+     917
+    ],
+    [
+     347,
+     917
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 18,
+   "text": "f",
+   "box": [
+    [
+     1778,
+     869
+    ],
+    [
+     1795,
+     869
+    ],
+    [
+     1795,
+     886
+    ],
+    [
+     1778,
+     886
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 19,
+   "text": "ALL that certain plot,piece or parcel of land\uff0cwith the buildings and improvements thereon erected",
+   "box": [
+    [
+     347,
+     934
+    ],
+    [
+     1594,
+     934
+    ],
+    [
+     1594,
+     974
+    ],
+    [
+     347,
+     974
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 20,
+   "text": "uleA annexed hereto andmadeaparthereof;",
+   "box": [
+    [
+     345,
+     991
+    ],
+    [
+     917,
+     991
+    ],
+    [
+     917,
+     1025
+    ],
+    [
+     345,
+     1025
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 21,
+   "text": "TOGETHERwith all right,title andinterest,if any,of theMortgagor of,in and to theland lyingin",
+   "box": [
+    [
+     347,
+     1041
+    ],
+    [
+     1594,
+     1044
+    ],
+    [
+     1594,
+     1084
+    ],
+    [
+     345,
+     1080
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 22,
+   "text": "the streets,roads or avenues,open or proposed,in iront of and adjoining the Premises and of,in and",
+   "box": [
+    [
+     349,
+     1073
+    ],
+    [
+     1592,
+     1073
+    ],
+    [
+     1592,
+     1108
+    ],
+    [
+     349,
+     1108
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 23,
+   "text": "toany strips orgores of landadjoining thePremises;",
+   "box": [
+    [
+     344,
+     1097
+    ],
+    [
+     1013,
+     1094
+    ],
+    [
+     1015,
+     1134
+    ],
+    [
+     345,
+     1137
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 24,
+   "text": "TOGETHER,ALSO,with all fixtures,chattels and articles of personal property now or hereafter",
+   "box": [
+    [
+     347,
+     1147
+    ],
+    [
+     1594,
+     1151
+    ],
+    [
+     1594,
+     1190
+    ],
+    [
+     347,
+     1187
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 25,
+   "text": "attached to or located in or upon the Premises,andused or usable in connection with any present or",
+   "box": [
+    [
+     345,
+     1176
+    ],
+    [
+     1594,
+     1178
+    ],
+    [
+     1594,
+     1218
+    ],
+    [
+     345,
+     1216
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 26,
+   "text": "called \u201cBuilding Equipment\u201d),including but not limited to furnaces,boilers,oil burners,radiators",
+   "box": [
+    [
+     349,
+     1231
+    ],
+    [
+     1594,
+     1231
+    ],
+    [
+     1594,
+     1266
+    ],
+    [
+     349,
+     1266
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 27,
+   "text": "and piping,coal stokers,plumbing and bathroom fixtures,refrigeration,air conditioning and sprinkler",
+   "box": [
+    [
+     349,
+     1259
+    ],
+    [
+     1594,
+     1259
+    ],
+    [
+     1594,
+     1293
+    ],
+    [
+     349,
+     1293
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 28,
+   "text": "systems,wash-tubs,sinks,gas and lectric fxtures,stoves,ranges,awnings,screens,window shads,",
+   "box": [
+    [
+     347,
+     1281
+    ],
+    [
+     1594,
+     1281
+    ],
+    [
+     1594,
+     1321
+    ],
+    [
+     347,
+     1321
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 29,
+   "text": "elevators,motors,dynamos,refrigerators,kitchen cabinets,incinerators,piants and shrubbery and all",
+   "box": [
+    [
+     349,
+     1310
+    ],
+    [
+     1594,
+     1310
+    ],
+    [
+     1594,
+     1345
+    ],
+    [
+     349,
+     1345
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 30,
+   "text": "other machinery\uff0cappliances,fttings,furniture,furnishings and fxtures of every kind used in the",
+   "box": [
+    [
+     347,
+     1334
+    ],
+    [
+     1594,
+     1334
+    ],
+    [
+     1594,
+     1374
+    ],
+    [
+     347,
+     1374
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 31,
+   "text": "replacements thereof andadditions thereto,and all right,title and interest of theMortgagor in and to",
+   "box": [
+    [
+     347,
+     1384
+    ],
+    [
+     1597,
+     1384
+    ],
+    [
+     1597,
+     1424
+    ],
+    [
+     347,
+     1424
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 32,
+   "text": "any BuildingEquipment which may be subject to any security agreements,as defined in subdivision",
+   "box": [
+    [
+     345,
+     1410
+    ],
+    [
+     1596,
+     1408
+    ],
+    [
+     1596,
+     1448
+    ],
+    [
+     345,
+     1450
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 33,
+   "text": "\u201cSecurityAgreements\uff0csuperiorinliento thelienof thisMortgage;itbeingunderstood and agreed",
+   "box": [
+    [
+     347,
+     1458
+    ],
+    [
+     1597,
+     1462
+    ],
+    [
+     1597,
+     1506
+    ],
+    [
+     345,
+     1503
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 34,
+   "text": "and,whether axed orannexed to the Premises ornotshall.for the purpose of this Mortgagee",
+   "box": [
+    [
+     344,
+     1511
+    ],
+    [
+     1599,
+     1513
+    ],
+    [
+     1599,
+     1558
+    ],
+    [
+     344,
+     1556
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 35,
+   "text": "deemed conclusively to be real estate and mortgaged hereby:and theMortgagor agrees to execute and",
+   "box": [
+    [
+     345,
+     1539
+    ],
+    [
+     1597,
+     1539
+    ],
+    [
+     1597,
+     1584
+    ],
+    [
+     345,
+     1584
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 36,
+   "text": "berequestedby theMortgagee to confirm thelicn of thisMortgageon anyBuildingEquipment;",
+   "box": [
+    [
+     350,
+     1597
+    ],
+    [
+     1518,
+     1597
+    ],
+    [
+     1518,
+     1632
+    ],
+    [
+     350,
+     1632
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 37,
+   "text": "TOGETHER,ALSO,with any and all awards,including interest thereon,heretofore and hereafter",
+   "box": [
+    [
+     350,
+     1651
+    ],
+    [
+     1594,
+     1651
+    ],
+    [
+     1594,
+     1685
+    ],
+    [
+     350,
+     1685
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 38,
+   "text": "any easement therein,including any awards for changes of grade of streets\uff0cwhich said awards are",
+   "box": [
+    [
+     344,
+     1702
+    ],
+    [
+     1597,
+     1700
+    ],
+    [
+     1597,
+     1740
+    ],
+    [
+     344,
+     1742
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 39,
+   "text": "hereby assigned to the Mortgagee\uff0cwho is hereby authorized to collect and receive the proceeds oi",
+   "box": [
+    [
+     344,
+     1728
+    ],
+    [
+     1597,
+     1726
+    ],
+    [
+     1597,
+     1766
+    ],
+    [
+     344,
+     1767
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 40,
+   "text": "be due and payable\uff1band theMortgagor hereby agrees.upon request,to make,execute and deliver any",
+   "box": [
+    [
+     347,
+     1807
+    ],
+    [
+     1596,
+     1807
+    ],
+    [
+     1596,
+     1846
+    ],
+    [
+     347,
+     1846
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 41,
+   "text": "and all instruments sufficientfor the purpose of confrming such assignmentof saidawards to the",
+   "box": [
+    [
+     350,
+     1834
+    ],
+    [
+     1596,
+     1834
+    ],
+    [
+     1596,
+     1869
+    ],
+    [
+     350,
+     1869
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 42,
+   "text": "Mortgagee,free,clear and discharged of any encumbrances of any kind or nature whatsoever;",
+   "box": [
+    [
+     349,
+     1858
+    ],
+    [
+     1506,
+     1858
+    ],
+    [
+     1506,
+     1898
+    ],
+    [
+     349,
+     1898
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 43,
+   "text": "Mortgagor hereby (1)representing as a special inducement to the Mortgagee-to make the loan",
+   "box": [
+    [
+     347,
+     1941
+    ],
+    [
+     1597,
+     1941
+    ],
+    [
+     1597,
+     1980
+    ],
+    [
+     347,
+     1980
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 44,
+   "text": "secured hereby that,as of the date hereof.there are_no.encumbrances to secure debt junior to this",
+   "box": [
+    [
+     347,
+     1967
+    ],
+    [
+     1597,
+     1967
+    ],
+    [
+     1597,
+     2006
+    ],
+    [
+     347,
+     2006
+    ]
+   ],
+   "angle": 0
+  },
+  {
+   "i": 45,
+   "text": "consent-of-the-Mortgagee.",
+   "box": [
+    [
+     347,
+     2046
+    ],
+    [
+     673,
+     2047
+    ],
+    [
+     673,
+     2082
+    ],
+    [
+     345,
+     2080
+    ]
+   ],
+   "angle": 0
+  }
+ ]
+}

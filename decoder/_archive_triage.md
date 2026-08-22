@@ -1,0 +1,258 @@
+# ARCHIVE TRIAGE — 253 files nothing reaches
+
+One line each, from the file's own docstring. Decide: PROMOTE (wire it up),
+SCRATCH (one-off, keep for the trap in its docstring), or leave.
+
+- **claims.py** (3738 lines) — CLAIMS — the atomic decode. One row per thing a document says.
+- **bsa.py** (1444 lines) — BSA — the only agency that moves the envelope by writing a sentence.
+- **doctype_terms.py** (943 lines) — DOCTYPE TERM TEMPLATES — codify the type, then read instances against it.
+- **lpc_cofa.py** (838 lines) — LPC Certificate of Appropriateness — the permit that states no number.
+- **acris_table.py** (810 lines) — The ACRIS decode, as a table a broker can read.
+- **entitlements.py** (643 lines) — One row per parcel per entitlement. What happened, on which lot, when.
+- **to_supabase.py** (636 lines) — LOAD THE SPINE, THE LEDGER AND THE GEOMETRY INTO SUPABASE.
+- **condo_sales.py** (632 lines) — CONDO SALES — the public twin of the StreetEasy rental decoder.
+- **audit.py** (527 lines) — Self-audit — every trap we have ever learned, re-run against the whole store.
+- **dcp.py** (527 lines) — DCP / ZAP — where the parcel key went, and how to get it back.
+- **close_split_far.py** (481 lines) — Close the split-district FAR gap: measure the shares, apply ZR 77-22, write
+- **devbatch.py** (468 lines) — BATCH THE FOUR TYPES, THEN ASSIGN TO THE SPINE.
+- **constraints_signals.py** (458 lines) — CONSTRAINTS and SIGNALS — the two layers above the claim.
+- **spine.py** (430 lines) — The parcel spine — every parcel in NYC, organised by LINEAGE.
+- **key_buildings.py** (424 lines) — BULK KEYER — 41,816 StreetEasy buildings to the parcel spine, in one pass.
+- **development.py** (370 lines) — DEVELOPMENTS — what has physically happened on this ground, 1914 -> today.
+- **zr_feed.py** (370 lines) — Live feed from the Zoning Resolution itself — zr.planning.nyc.gov.
+- **dob.py** (363 lines) — DOB — job filings, permits and certificates of occupancy, per parcel.
+- **dos.py** (356 lines) — NY Department of State — turning an SPE name into a real party.
+- **envelope_ledger.py** (353 lines) — The ENVELOPE ledger — every square foot in or out, cited to document and page.
+- **split_zones.py** (344 lines) — Split-district lots: measure the per-district share of a tax lot, then apply
+- **timeline.py** (336 lines) — A parcel's timeline — the product this project exists to make.
+- **spine_sf_ledger.py** (334 lines) — THE SPINE SF LEDGER — every transfer written to BOTH lots, with what remains.
+- **rights_allocation.py** (331 lines) — THE ALLOCATION CHART, transcribed as our own table — one row per LOT per CHART.
+- **specialists_2.py** (330 lines) — THE REMAINING NINE SPECIALISTS — every ACRIS type now has a reader.
+- **site_history.py** (315 lines) — SITE HISTORY — one parcel in, its development history out.
+- **bench_all.py** (310 lines) — EVERY ENGINE AT ITS OWN MAXIMUM. Anything less is not a comparison.
+- **scanner_cost.py** (308 lines) — IS TESSERACT THE RIGHT SCANNER? Measure the two things that decide it.
+- **build_testkey.py** (300 lines) — THE HAND-READ ANSWER KEY for FT_1680008647768. The slow answer.
+- **entities.py** (300 lines) — Entities and their ROLE OVER TIME — the layer beneath contacts.
+- **specialists.py** (299 lines) — DOC-TYPE SPECIALISTS — one agent per instrument type, getting better each run.
+- **dos_run.py** (294 lines) — The DOS run — party names in, a DOCUMENT LEDGER out.
+- **baseline.py** (293 lines) — The as-of-right envelope — computed, so that RELIEF becomes a number.
+- **terms.py** (293 lines) — TERMS — restrictions whose substance is not a number.
+- **project_contacts.py** (290 lines) — FULL CONTACTS PER PROJECT — name · company · phone · email · mailing.
+- **streeteasy.py** (290 lines) — STREETEASY — the comparables decoder. Rent ledgers reconciled against the spine.
+- **acquire_async.py** (286 lines) — PARALLEL ACQUISITION. aiohttp, bounded pool, ledger-resumable.
+- **bakeoff/extract.py** (282 lines) — IMAGE -> STRUCTURED FIELDS. The task the pipeline actually has to perform.
+- **closure.py** (280 lines) — CLOSURE — decode completeness measured in FACTS, not in documents read.
+- **key_stream.py** (278 lines) — KEY BY STREAMING — 41,765 pins against 1.7M polygons, in bounded memory.
+- **spine_archive.py** (272 lines) — Parcel lineage and baselines AS OF AN ACRIS FILING DATE.
+- **agents.py** (270 lines) — THE AGENT REGISTRY — one agent per document type, across every source.
+- **_patch_brickfarms.py** (268 lines) — Record the 2013 Brick Farms ZLDA body (2013052101674004 pp004-023).
+- **_patch_microfilm.py** (267 lines) — THE MICROFILM ERA 1971-2003. 100 of 100 pages read.
+- **_patch_horne.py** (266 lines) — Record the 2012 Horne ZLDA body (2012122701550003 pp004-029).
+- **functions.py** (264 lines) — THE FUNCTIONS ACRIS ACTUALLY PERFORMS — derived from the document types present.
+- **condo_lineage.py** (261 lines) — CONDO LINEAGE — base lot <-> billing lot <-> unit lots, from DOF's own key.
+- **spine_geometry.py** (259 lines) — SPINE GEOMETRY — give every parcel its polygon, so keying never needs a server.
+- **bakeoff/verify.py** (257 lines) — THE VERIFIER TEST. Does a reasoning pass over two OCR readings actually beat
+- **function_view.py** (254 lines) — FUNCTION VIEW — group the decoded atoms by function, chronologically, cited.
+- **harvest.py** (254 lines) — HARVEST — crop, verify, then delete the pages. Storage is the constraint.
+- **reduce.py** (253 lines) — Reducer — turns validated facts into ledger postings. Deterministic, no hand-typing.
+- **stratified_sample.py** (253 lines) — THE STRATIFIED SAMPLE — the run that decides whether to rent the cores.
+- **proof.py** (247 lines) — PROOF CROPS — the pixels a claim was read from, attached to the claim.
+- **census.py** (246 lines) — Every document that EXISTS gets a row, whether or not anyone has read it.
+- **fetch_document.py** (244 lines) — Fetch a WHOLE document in one request instead of one request per page.
+- **bakeoff/report.py** (243 lines) — THE MATRIX, plus the number that decides the architecture.
+- **claim_card.py** (243 lines) — THE CLAIM, rendered — value + terms + proof + citation, with components.
+- **pull_index_full.py** (239 lines) — THE ENTIRE ACRIS SUPPORT INDEX — streamed to disk, resumable, in spine order.
+- **narrow_proofs.py** (238 lines) — Narrow PAGE proofs — mechanically by ink, semantically by reading.
+- **consideration.py** (236 lines) — Recovering the PRICE of a transfer that the index records as zero.
+- **push.py** (235 lines) — PUSH — the decoded parcel into Supabase, along the parcel spine.
+- **doctype_rules.py** (234 lines) — Per-document-type decode rules — WHERE each key fact lives, and its traps.
+- **acquire_run.py** (233 lines) — ACQUIRE WHOLE DOCUMENTS, ALL PAGES, AND MEASURE THE SUSTAINABLE RATE.
+- **qwen_prompt.py** (230 lines) — CALIBRATED PROMPT vs GENERIC PROMPT. Is Qwen limited by capability or by
+- **parcel_dossier.py** (229 lines) — Parcel dossier — every decoded fact bound to one parcel, in time order.
+- **pipeline.py** (228 lines) — THE WORKFLOW, END TO END, ON ONE DOCUMENT. No drive.
+- **parcel_parties.py** (227 lines) — PARTY x PARCEL x ROLE x TIME — involvements, not ownership.
+- **_patch_final.py** (225 lines) — THE AIR-RIGHTS PRICES, PER LOT — and the 130-foot plane fully resolved.
+- **_patch_lenders.py** (219 lines) — ⚠ THE LENDER TIMELINE WAS WRONG, AND A DISTRESSED-DEBT CHAIN WAS INVISIBLE.
+- **key_recover.py** (217 lines) — RECOVER THE UNPLACED — new towers must not be lost to stale reference data.
+- **preprocess.py** (217 lines) — ALTER THE VIEW FOR READING. Deskew, unframe, despeckle — and TIME IT.
+- **dof_lineage.py** (215 lines) — DOF lot lineage — published, not inferred.
+- **build_bookkey.py** (212 lines) — HAND-READ ANSWER KEY for BK_6730047100023 - a 1967 BOOK-era FHA mortgage.
+- **resolve_citations.py** (211 lines) — Citation resolver — turns every reference a decoded document makes into a
+- **extract.py** (210 lines) — EXTRACT — the complete ACRIS index for a parcel, done properly.
+- **learn_fieldmap.py** (210 lines) — LEARN THE COVER-PAGE FIELD MAP PER LAYOUT — supervised, free, no model.
+- **push_ceiling.py** (210 lines) — IS ~30 Mbps ACRIS'S LIMIT, OR OURS? The one untested lever, tested carefully.
+- **retired_lots.py** (208 lines) — RETIRED LOTS — recovered from the sales record, which proves they existed.
+- **selftest.py** (207 lines) — Regression battery — run it, fix what falls, run it again.
+- **_patch_declarations.py** (206 lines) — Record the four SMIS instruments, and correct two things I got wrong.
+- **ledger.py** (204 lines) — THE CHRONOLOGICAL ACRIS LEDGER — every document on disk, in date order,
+- **reconcile_rate.py** (203 lines) — THE RATE: how much of the sample resolves WITHOUT a model.
+- **monitor_leases.py** (202 lines) — DAILY DIFF — what changed in every building since the last pull.
+- **decode_one.py** (201 lines) — THE UNIT OF WORK — one document, decoded end to end, then deleted.
+- **acris_scope.py** (196 lines) — WHAT ACRIS IS THE AUTHORITY FOR — and what it hands off.
+- **migrate_to_supabase.py** (196 lines) — Migrate decoded documents + reduced postings to Supabase.
+- **qwen_doc.py** (196 lines) — ONE DOCUMENT, END TO END, OPTIMISED FOR SPEED. doc_id -> endpoint -> Qwen.
+- **deed_agent.py** (195 lines) — THE DEED AGENT — the first real extractor, and the one that can be checked.
+- **_patch_2010.py** (193 lines) — THE 2010 AIR-RIGHTS BATCH + THE MARRIOTT ROFR. 44 pages read.
+- **doctype_registry.py** (193 lines) — THE FULL ACRIS DOC-TYPE REGISTRY — one specialist per type, every type routed.
+- **cover_fields.py** (192 lines) — SPATIAL FIELD EXTRACTION FROM THE COVER PAGE — no language model.
+- **_patch_2013.py** (191 lines) — THE 2013 GOLDMAN BATCH + THE 2014 SUPPORTING DOCUMENTS.
+- **dos_portal.py** (191 lines) — The DOS public-inquiry portal — the reach layer the Socrata register cannot give.
+- **key_geocode.py** (191 lines) — GEOCODE — the address as a third, independent witness.
+- **decode_run.py** (189 lines) — COLD RUN — decode a parcel from step 1, index first, as if for the first time.
+- **bsa_run.py** (188 lines) — Run the BSA decoder over a queue, and leave behind proof of what it touched.
+- **roles.py** (188 lines) — The ROLE registry — a controlled vocabulary for who did what.
+- **_patch_2012.py** (181 lines) — THE 2012 UBS BATCH. 110 of 110 pages read.
+- **reads.py** (181 lines) — THE READ LOG — which pages were OPENED, independent of what they yielded.
+- **sustain.py** (181 lines) — TWO TESTS THE EARLIER ONES GOT WRONG.
+- **_patch_2019.py** (180 lines) — THE 2019 SUBDIVISION AND THE 2020 DOCUMENTS. 65 of 65 pages read.
+- **chain.py** (179 lines) — The financing chain — resolving SAT and ASST back to the mortgage they act on.
+- **envelope_story.py** (179 lines) — How a parcel's ENVELOPE changed over time — in plain language.
+- **dist_128.py** (178 lines) — SESSION DISTRIBUTION AT 128 TOTAL CONNECTIONS — 1x128 vs 2x64 vs 4x32.
+- **integrity.py** (178 lines) — THE CHECKS THAT SHOULD HAVE RUN AT FETCH TIME.
+- **_patch_current.py** (177 lines) — THE CURRENT LIEN, 2023 AND 2025. 53 of 53 pages read across six documents.
+- **_patch_2013merge.py** (176 lines) — THE 2011-2013 MERGER DOCUMENTS. 122 of 122 pages read.
+- **bakeoff/route.py** (176 lines) — OCR+TEXT-REASONER vs VLM. Settles it with the keys instead of arguing it.
+- **extraction_coverage.py** (176 lines) — VALUES and TERMS, per document — the coverage that decides when a lot is done.
+- **fingerprint.py** (176 lines) — LAYOUT FINGERPRINT — decide, for free, whether a page has been seen before.
+- **build_modernkey.py** (172 lines) — HAND-READ ANSWER KEY for 2015022400608001 - a 2015 DIGITAL-era HRA mortgage.
+- **docmap.py** (172 lines) — THE DOCUMENT MAP — how many pages, and which ones are the instrument.
+- **_patch_2014.py** (171 lines) — THE 2014 SHANGHAI COMMERCIAL BATCH. 62 of 62 pages read.
+- **microfilm_probe.py** (170 lines) — CAN MICROFILM BE MADE READABLE? 35.8% of ACRIS depends on the answer.
+- **_patch_2015body.py** (168 lines) — ⚠ RECORDING THE 2015 CONSTRUCTION-LOAN TERMS I REPORTED BUT NEVER STORED.
+- **manifest.py** (168 lines) — THE MANIFEST — the ACRIS index IS the work list. Everything else is downstream.
+- **watch_parcels.py** (168 lines) — Parcel recording watch — flag NEW ACRIS activity on parcels we have decoded.
+- **_patch_spreader.py** (167 lines) — THE 2013 SPREADER, ALL 61 PAGES.
+- **ingest.py** (167 lines) — Drop-folder ingest — documents Login saves, decoded automatically.
+- **resolve_parties.py** (166 lines) — CROSS-ERA PARTY RESOLUTION — give the modern era its missing reach.
+- **test_4x8.py** (166 lines) — 4 SESSIONS x 8 WORKERS vs 1 SESSION x 32 — same 32 total connections.
+- **build_bench_live.py** (165 lines) — BENCH FROM DOCUMENTS WE HAVE NEVER TOUCHED. Fetched live, not from the sample.
+- **bakeoff/pp_book.py** (164 lines) — PP-OCRv6 OVER THE BOUND-BOOK DOCUMENT, WITH ROTATION. Book is PP's only gap.
+- **ramp.py** (164 lines) — FIND THE CONCURRENCY CEILING BY MEASURING IT, NOT BY PICKING A NUMBER.
+- **build_spine.py** (163 lines) — BBL spine + parcel baselines.
+- **dist_clean.py** (161 lines) — DOES SESSION DISTRIBUTION MATTER? Third attempt, this time controlled.
+- **acquire.py** (160 lines) — BULK ACQUISITION — cooperate with the limiter instead of guessing around it.
+- **bakeoff/backer_res.py** (160 lines) — DOES THE BACKER BLOCK NEED MORE PIXELS? Three pages hold all 7 universal misses.
+- **funnel_envelope.py** (160 lines) — THE ENVELOPE FUNNEL. word -> phrase -> claim, and the reasoner sees ONLY crops.
+- **triangulate.py** (160 lines) — TRIANGULATE — settle a contested fact by laying its proofs out in time order.
+- **_ocr_era.py** (159 lines) — DOES OCR SURVIVE THE OLD SCANS? Stratified by era, on pages already held.
+- **fetcher.py** (159 lines) — A fetch pool that lets the HOST set the rate, instead of a constant guessed
+- **microfilm_crop.py** (159 lines) — MICROFILM: FIND THE PAGE INSIDE THE FRAME, THEN OCR ONLY THAT.
+- **ramp2.py** (159 lines) — PUSH FOR 100% — by fixing OUR client first, then ramping until THEY object.
+- **bakeoff/run_ppocr.py** (158 lines) — PP-OCRv6 OVER THE THREE KEYED DOCUMENTS. Non-generative, for the verifier slot.
+- **permit_phase.py** (158 lines) — FIRST PERMIT, AND FIRST PERMIT FOR THE SCOPE WORK ITSELF, per job.
+- **bakeoff/pp_sweep.py** (156 lines) — OCR CONFIG SWEEP. Same pages, same machine, one variable at a time.
+- **ocr_sample.py** (156 lines) — OCR THE STRATIFIED SAMPLE — text plus coordinates, at the measured optimum.
+- **_fp_across.py** (155 lines) — ACROSS PARCELS — from HELD BYTES, no fetching.
+- **bw_probe.py** (155 lines) — IS 2.9 MB/s THE SERVER, THE PIPE, OR US? And does the 16-connection ceiling
+- **bw_probe2.py** (155 lines) — IS 2.9 MB/s THE SERVER, THE PIPE, OR US? And does the 16-connection ceiling
+- **receiver.py** (155 lines) — LOCAL RECEIVER — the browser pulls, this writes.
+- **trigger_probe.py** (153 lines) — CAN OCR FIND A PHRASE IT CANNOT TRANSCRIBE?
+- **zr_index.py** (153 lines) — A full index of the Zoning Resolution — every section, so nothing modifies an
+- **bakeoff/gate.py** (152 lines) — DOES THE GATE ACTUALLY CATCH TIER-1 FAILURES? The confusion matrix.
+- **events.py** (152 lines) — EVERY DOCUMENT DID SOMETHING — one plain-language event per instrument.
+- **fetch_vs_ocr.py** (151 lines) — IF FETCHING IS FASTER THAN READING, THE 7 TB DRIVE IS POINTLESS.
+- **hpd.py** (151 lines) — HPD — registrations, contacts, distress, and the co-op blind spot.
+- **worker_limit.py** (151 lines) — FIND THE PER-SESSION WORKER LIMIT — 8, 12, 16, 20, 24, 28, 32.
+- **cover_ocr_test.py** (150 lines) — CAN OCR READ THE COVER PAGE EXACTLY? Measured against free ground truth.
+- **tess_bench2.py** (150 lines) — RAISING THE 18,000 — without adding a second pass.
+- **bakeoff/run_cli.py** (149 lines) — ONE PAGE PER PROCESS, VIA llama-mtmd-cli. The path that does not wedge.
+- **session_scale.py** (149 lines) — IS THE CEILING PER-SESSION OR PER-CLIENT? A diagnostic, run on the cheap
+- **deborder.py** (148 lines) — FIND THE PAGE INSIDE THE FILM FRAME, then OCR that. Preprocessing for FT_.
+- **monitor.py** (148 lines) — Change detection — the half of the job that is not population.
+- **validator.py** (148 lines) — THE MATCH LAYER, run against RAW OCR - no answer key anywhere.
+- **_patch_position.py** (147 lines) — ⚠ FOUR CORRECTIONS TO THE DEBT POSITION AND THE LENDER LIST.
+- **calibrate.py** (147 lines) — FIND THE RIGHT (processes x concurrency) FOR THIS MACHINE AND NETWORK.
+- **contribution.py** (147 lines) — CONTRIBUTION — which documents actually feed which function.
+- **corpus_census.py** (147 lines) — HOW BIG IS ACRIS, ACTUALLY? Sample-map the big types and stop guessing.
+- **harvest_owners.py** (147 lines) — Harvest owner contacts from bty7-2jhb — the largest free contact acquisition
+- **inherit.py** (147 lines) — What a parcel ALREADY KNOWS before anyone opens a document for it.
+- **special_districts.py** (147 lines) — Special purpose districts — the layer that SUPERSEDES the citywide FAR tables.
+- **_fp_sample.py** (146 lines) — Pick the ACROSS-PARCEL sample. Index only — no images, no budget spent.
+- **trigger_unseen.py** (146 lines) — THE HONEST TEST: the DEVR lexicon against six documents nobody has read.
+- **_patch_deontic.py** (142 lines) — (no docstring)
+- **extract_size.py** (142 lines) — STORE THE IMAGES, OR STORE THE COORDINATES? Size both, then the answer is arithmetic.
+- **page_policy.py** (142 lines) — WHICH PAGES DO WE ACTUALLY HAVE TO TOGGLE TO? Measured, not assumed.
+- **_patch_2007.py** (140 lines) — THE $2,300,000 IS ANSWERED. And $28.0M of the 2007 borrowing is invisible.
+- **build_bench.py** (140 lines) — THE BENCH SET: stratified random across DECADE and DOCUMENT TYPE.
+- **acquire_noimage.py** (139 lines) — INDEX ACQUISITION FOR THE EVENTS THAT HAVE NO DOCUMENT.
+- **resume_map.py** (139 lines) — RESUME THE MAP AFTER A SUSPEND. One command, safe to run twice.
+- **conc_retest.py** (138 lines) — RE-TEST CONCURRENCY ON A FAST LINK — every prior ceiling was measured saturated.
+- **ocr_throughput.py** (138 lines) — SUB-30 DAYS ON 148.6M PAGES. That is 5.7x faster than today. Where does it come from?
+- **supervise_map.py** (138 lines) — Keep the ACRIS map running overnight through outages, sleep and restarts.
+- **devr_acquire.py** (135 lines) — ACQUIRE THE DEVELOPMENT RIGHTS CORPUS — all 1,201, paced, resumable.
+- **lpc.py** (134 lines) — LPC — the envelope constraint zoning cannot see, and a second owner source.
+- **cover_truth.py** (133 lines) — THE COVER PAGE STATES ITS OWN PAGE COUNT. Recover it, and fix the map.
+- **what_is_a_coordinate.py** (133 lines) — WHAT A COORDINATE ACTUALLY IS, AND WHAT IT COSTS TO TURN ONE BACK INTO A PICTURE.
+- **fetch_sample.py** (132 lines) — A SAMPLE BROAD ENOUGH TO MEASURE THE ESCALATION RATE, which is the number
+- **build_bench_bal.py** (130 lines) — BALANCED BENCH: N film + N modern, spread across decade and document type.
+- **qwen_rot.py** (130 lines) — QWEN ON THE ROTATED PAGE TOO. Testing whether Qwen's book misses are
+- **verify_complete.py** (130 lines) — IS THE MAP COMPLETE — AS OF TODAY, NOT AS OF WHEN THE MAP STARTED.
+- **bakeoff/misses.py** (128 lines) — WHAT EACH ENGINE ACTUALLY MISSED. Not how many - which ones, and whether fixable.
+- **verify.py** (128 lines) — Prove a decode rule at scale before trusting it — the crawl→walk gate.
+- **scan_speed.py** (127 lines) — TESSERACT'S ACCURACY IS NOT THE PROBLEM. ITS THROUGHPUT IS. Can it be tuned?
+- **ocr_scale.py** (126 lines) — DOES OCR NEED FULL RESOLUTION? Speed AND recall, measured together.
+- **finish_devr.py** (125 lines) — FINISH THE DEVR TYPE — the remaining ~7,400 instrument pages.
+- **ocr_input_format.py** (125 lines) — AM I PAYING FOR MY OWN FILE FORMAT? The cheapest 2x, if it is real.
+- **bakeoff/index_rescue.py** (124 lines) — HOW MUCH OF WHAT THE ENGINES MISS DOES THE ACRIS INDEX ALREADY KNOW?
+- **fetch_footprint.py** (124 lines) — HOW FEW PAGES CAN WE FETCH? The number that decides whether streaming works.
+- **_patch_deontic2.py** (123 lines) — Write the remaining 25 slot sentences.
+- **_patch_retract.py** (123 lines) — ⚠ RETRACTING THE "MISSING INSTRUMENT" CLAIMS. ALL OF THEM WERE FALSE.
+- **preconfig.py** (123 lines) — PRE-CONFIGURATION SWEEP: what should a page look like BEFORE OCR sees it.
+- **acris_lot_census.py** (119 lines) — ACRIS as a parcel census — lot existence back to the 1960s.
+- **functions_vocab.py** (119 lines) — ONE CONTROLLED VOCABULARY FOR FUNCTIONS, AND THE ALIASES THAT DRIFTED.
+- **gpu_bench.py** (119 lines) — CPU vs DirectML on the Intel Arc 140V — measured, not assumed.
+- **tess_bench.py** (119 lines) — HOW FAST CAN THE SEARCHLIGHT GO — measured, with recall reported beside it.
+- **session_fetch.py** (118 lines) — A fetcher that keeps a SESSION, because the old one didn't — and that may
+- **bakeoff/confidence.py** (117 lines) — PER-TOKEN CONFIDENCE AS THE ESCALATION TRIGGER. Measure the rate before designing on it.
+- **bakeoff/score_common.py** (116 lines) — SCORE EVERY ENGINE ON THE PAGES THEY ALL HAVE. Nothing else is a comparison.
+- **bakeoff/pp_par.py** (115 lines) — PP-OCRv6 across processes. Same 26 keyed pages, just not one at a time.
+- **loss_that_matters.py** (115 lines) — 1.3% OF PHRASES IS THE WRONG NUMBER. What matters is 1.3% of WHAT?
+- **patchlib.py** (115 lines) — PATCH GUARD — a patch that silently fails is worse than one that crashes.
+- **_patch_supersede.py** (113 lines) — ⚠ WIRING SUPERSESSION. The last structural flaw in the ledger.
+- **map_ramp.py** (112 lines) — HOW FAST CAN MAPPING GO? The cheap endpoint deserves its own ceiling test.
+- **build_historical_baselines.py** (111 lines) — Historical baselines: every posted parcel as the tax map showed it ON THE
+- **_ocr_score.py** (110 lines) — Score OCR against the REPAIRED labelled set, and cache every OCR text.
+- **gap.py** (109 lines) — TRANSCRIBED vs POINTED - the gap that decides whether coordinates are optional.
+- **push_workflow.py** (109 lines) — WORKFLOW -> SUPABASE. The pipeline's own memory, made queryable.
+- **_fine_ramp.py** (108 lines) — FINE SWEEP AROUND THE IMAGE PEAK — 8, 10, 12, 14, 16.
+- **corpus_shape.py** (108 lines) — WHERE THE PAGES ACTUALLY ARE — the number that decides what is extractable.
+- **pdf_vs_tiff.py** (108 lines) — DOES THE BUNDLED PDF CARRY THE SAME PIXELS AS THE TIFFS? The whole question.
+- **worklist.py** (108 lines) — NAVIGATE BY DOCUMENT TYPE — and never touch the ACRIS site to do it.
+- **coverpage.py** (107 lines) — Find the ACRIS cover pages, so a layout test never scores them as content.
+- **id_strength.py** (107 lines) — Identification strength by DOCUMENT TYPE — which document to pull for a person.
+- **spine_check.py** (106 lines) — SPINE CHECK — is this document even this parcel's?
+- **groundtruth.py** (105 lines) — The labelled set: document text a human actually read off a numbered page.
+- **bench_qwen.py** (104 lines) — Qwen3-VL over the 12-page stratified bench. Same pages Tesseract just ran.
+- **np_probe.py** (103 lines) — TWO PAGES — ONE FILM, ONE MODERN — against a live llama-server.
+- **ocr_bench2.py** (103 lines) — OCR parallelism, FIXED — one thread per worker instead of eight fighting.
+- **dof_value.py** (102 lines) — DOF — the VALUE axis: assessment, exemptions, abatements, sales, distress.
+- **map_types.py** (101 lines) — MAP EVERY DOCUMENT OF A TYPE — exact page counts, not extrapolations.
+- **bakeoff/watch.py** (100 lines) — WATCHDOG FOR A LONG VLM RUN. Detects a stall; does not merely report progress.
+- **ocr_bench.py** (98 lines) — HOW FAST DOES EXTRACTION ACTUALLY GO? Measured, on this machine, on real pages.
+- **_patch_zlda.py** (97 lines) — (no docstring)
+- **acris_report.py** (97 lines) — THE ACRIS DECODE, SCORED ONLY ON WHAT ACRIS IS THE AUTHORITY FOR.
+- **devr_validate.py** (94 lines) — DEVR validator — runs BEFORE any parse is accepted (validator-first principle).
+- **_patch_2010zlda.py** (91 lines) — ⚠ THE 2010 ZLDA CLAIMS THAT WERE REPORTED BUT NEVER RECORDED.
+- **section_crop.py** (90 lines) — OCR POINTS AT SECTIONS · CROP THE SECTION · MODEL READS PIXELS · CLAIM.
+- **doclevel.py** (89 lines) — PER-PAGE vs PER-DOCUMENT transcription. The metric has been understating it.
+- **load_facts.py** (89 lines) — Load decoded document JSONs into the fact store (schema.sql).
+- **recheck_traverses.py** (89 lines) — Re-walk EVERY stored description through the CURRENT metes engine.
+- **sources.py** (88 lines) — Every built source, checked on every audit run — not merely available.
+- **render_pages.py** (87 lines) — RENDER WHAT IS ALREADY ON DISK, THE WAY A MODEL WANTS TO SEE IT.
+- **matrix.py** (85 lines) — THE MATRIX: accuracy x time x scaling, per scan class, measured.
+- **gen_manifest.py** (83 lines) — Regenerate the FULL DOCUMENT MANIFEST section of a parcel writeup.
+- **resolve/sweep_fuzzy.py** (82 lines) — CALIBRATE THE SUB-BLOCK ACCEPTANCE GATE AGAINST THE ANSWER KEYS.
+- **_patch_deedL2.py** (81 lines) — FULL L2 EXTRACTION — 2013080901116003, every slot, with clause proofs.
+- **ocr_probe.py** (78 lines) — CAN OCR CARRY THE FILTER? Measured against claims whose text was read by eye.
+- **bakeoff/pp_simple.py** (74 lines) — PP-OCRv6 on the 26 keyed pages. Simplest possible config.
+- **_fp_fetch50.py** (70 lines) — THE 50-DEED PULL. Run at Login's direction after they confirmed in their own
+- **_patch_deedtest.py** (64 lines) — THE DEED AGENT'S FIRST RUN — two documents, one new fact, one retraction.
+- **resolve/_escalation_export/read_crops.py** (64 lines) — Read every crop with a vision model. Run this, send back answers.jsonl.
+- **_fix_routes.py** (59 lines) — ⚠ THE ROUTE IS NOW DECLARED, NOT GUESSED FROM MY OWN PROSE.
+- **bakeoff/pp3.py** (54 lines) — PP-OCRv6 on ONE page from each era. Smoke test, not a score.
+- **spawn_push.py** (53 lines) — Launch the selection push with NO CONSOLE, so nothing can Ctrl+C it.
+- **_fp_within.py** (52 lines) — BASELINE: the within-parcel run, re-measured under fingerprint.py.
+- **_patch_2019chart.py** (50 lines) — ⚠ THE LAST THREE CLAIMS FROM THE FAILED PATCH — found by the new guard.
+- **_fp_fetch.py** (46 lines) — Fetch the across-parcel sample. p002 + p003 per deed, budgeted and paced.
+- **diag_master.py** (45 lines) — Which master rows did the partitioned pull miss, and do they share a shape?
+- **_patch_plane.py** (35 lines) — (no docstring)

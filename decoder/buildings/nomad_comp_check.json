@@ -1,0 +1,82 @@
+[
+ {
+  "name": "The Dian",
+  "bbl": "1008910044",
+  "sheet_psf": 132.4,
+  "our_psf": 53,
+  "our_rent": 3918,
+  "our_sf": 862,
+  "n_with_sf": 2,
+  "n_total": 63
+ },
+ {
+  "name": "Quincy",
+  "bbl": "1008380001",
+  "sheet_psf": 107.4,
+  "our_psf": 75,
+  "our_rent": 4262,
+  "our_sf": 698,
+  "n_with_sf": 208,
+  "n_total": 1168
+ },
+ {
+  "name": "EOS",
+  "bbl": "1008067502",
+  "sheet_psf": 107.7,
+  "our_psf": 107,
+  "our_rent": 6474,
+  "our_sf": 734,
+  "n_with_sf": 28,
+  "n_total": 1095
+ },
+ {
+  "name": "Maverick Chelsea",
+  "bbl": "1007780025",
+  "sheet_psf": 117.8,
+  "our_psf": 112,
+  "our_rent": 7250,
+  "our_sf": 780,
+  "n_with_sf": 2,
+  "n_total": 143
+ },
+ {
+  "name": "Mabel",
+  "bbl": "1007510020",
+  "sheet_psf": 119.1,
+  "our_psf": 120,
+  "our_rent": 6932,
+  "our_sf": 688,
+  "n_with_sf": 7,
+  "n_total": 88
+ },
+ {
+  "name": "Chelsea Park",
+  "bbl": "1007757502",
+  "sheet_psf": 92.8,
+  "our_psf": 87,
+  "our_rent": 7350,
+  "our_sf": 1113,
+  "n_with_sf": 7,
+  "n_total": 692
+ },
+ {
+  "name": "Chelsea29",
+  "bbl": "1007790027",
+  "sheet_psf": 91.1,
+  "our_psf": 91,
+  "our_rent": 5250,
+  "our_sf": 687,
+  "n_with_sf": 41,
+  "n_total": 230
+ },
+ {
+  "name": "Solari",
+  "bbl": "1008340069",
+  "sheet_psf": 98.3,
+  "our_psf": 96,
+  "our_rent": 6196,
+  "our_sf": 830,
+  "n_with_sf": 19,
+  "n_total": 490
+ }
+]

@@ -1,0 +1,859 @@
+{
+ "page": "2003010601086002/p019",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "If to ACNY:",
+   "box": [
+    [
+     602,
+     421
+    ],
+    [
+     864,
+     426
+    ],
+    [
+     864,
+     482
+    ],
+    [
+     600,
+     478
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9642
+  },
+  {
+   "text": "AutomobileClubofNewYork,Inc.",
+   "box": [
+    [
+     608,
+     543
+    ],
+    [
+     1329,
+     543
+    ],
+    [
+     1329,
+     591
+    ],
+    [
+     608,
+     591
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9901
+  },
+  {
+   "text": "1415 Kellum Place",
+   "box": [
+    [
+     604,
+     600
+    ],
+    [
+     1000,
+     600
+    ],
+    [
+     1000,
+     654
+    ],
+    [
+     604,
+     654
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9627
+  },
+  {
+   "text": "Garden City, New York 11530",
+   "box": [
+    [
+     606,
+     656
+    ],
+    [
+     1233,
+     656
+    ],
+    [
+     1233,
+     711
+    ],
+    [
+     606,
+     711
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9547
+  },
+  {
+   "text": "Attention:Dennis J.Crossley,ExecutiveVicePresident",
+   "box": [
+    [
+     606,
+     715
+    ],
+    [
+     1734,
+     715
+    ],
+    [
+     1734,
+     770
+    ],
+    [
+     606,
+     770
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9803
+  },
+  {
+   "text": "Facsimile:(516)873-2375",
+   "box": [
+    [
+     604,
+     776
+    ],
+    [
+     1147,
+     776
+    ],
+    [
+     1147,
+     824
+    ],
+    [
+     604,
+     824
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9947
+  },
+  {
+   "text": "with a copy to:",
+   "box": [
+    [
+     608,
+     879
+    ],
+    [
+     912,
+     883
+    ],
+    [
+     912,
+     941
+    ],
+    [
+     606,
+     937
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9928
+  },
+  {
+   "text": "Robinson, Borg, Leinwand, Greene & Genovese",
+   "box": [
+    [
+     604,
+     994
+    ],
+    [
+     1585,
+     994
+    ],
+    [
+     1585,
+     1055
+    ],
+    [
+     604,
+     1055
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9822
+  },
+  {
+   "text": "1345Avenue of the Americas",
+   "box": [
+    [
+     606,
+     1053
+    ],
+    [
+     1214,
+     1055
+    ],
+    [
+     1214,
+     1105
+    ],
+    [
+     606,
+     1103
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9474
+  },
+  {
+   "text": "New York,New York 10105-0143",
+   "box": [
+    [
+     604,
+     1109
+    ],
+    [
+     1311,
+     1109
+    ],
+    [
+     1311,
+     1164
+    ],
+    [
+     604,
+     1164
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9598
+  },
+  {
+   "text": "Attention: Anthony Genovese, Esq.",
+   "box": [
+    [
+     606,
+     1170
+    ],
+    [
+     1321,
+     1170
+    ],
+    [
+     1321,
+     1225
+    ],
+    [
+     606,
+     1225
+    ]
+   ],
+   "angle": 0,
+   "score": 0.981
+  },
+  {
+   "text": "Facsimile: (212) 956-2164",
+   "box": [
+    [
+     604,
+     1227
+    ],
+    [
+     1149,
+     1227
+    ],
+    [
+     1149,
+     1281
+    ],
+    [
+     604,
+     1281
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9859
+  },
+  {
+   "text": "If to Developer:",
+   "box": [
+    [
+     606,
+     1394
+    ],
+    [
+     931,
+     1399
+    ],
+    [
+     931,
+     1462
+    ],
+    [
+     604,
+     1457
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9991
+  },
+  {
+   "text": "55th &9th LLC",
+   "box": [
+    [
+     759,
+     1516
+    ],
+    [
+     1088,
+     1516
+    ],
+    [
+     1088,
+     1566
+    ],
+    [
+     759,
+     1566
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9179
+  },
+  {
+   "text": "c/o Gotham Organization",
+   "box": [
+    [
+     757,
+     1573
+    ],
+    [
+     1273,
+     1573
+    ],
+    [
+     1273,
+     1627
+    ],
+    [
+     757,
+     1627
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9757
+  },
+  {
+   "text": "201East 42ndStreet",
+   "box": [
+    [
+     755,
+     1629
+    ],
+    [
+     1183,
+     1629
+    ],
+    [
+     1183,
+     1684
+    ],
+    [
+     755,
+     1684
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9822
+  },
+  {
+   "text": "New York, New York 10017",
+   "box": [
+    [
+     753,
+     1688
+    ],
+    [
+     1344,
+     1686
+    ],
+    [
+     1344,
+     1736
+    ],
+    [
+     753,
+     1738
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9867
+  },
+  {
+   "text": "Attention:David Picket",
+   "box": [
+    [
+     757,
+     1745
+    ],
+    [
+     1254,
+     1740
+    ],
+    [
+     1256,
+     1795
+    ],
+    [
+     757,
+     1799
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9805
+  },
+  {
+   "text": "Facsimile: 212-692-0396",
+   "box": [
+    [
+     757,
+     1803
+    ],
+    [
+     1279,
+     1801
+    ],
+    [
+     1281,
+     1852
+    ],
+    [
+     757,
+     1854
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9823
+  },
+  {
+   "text": "With a copy to:",
+   "box": [
+    [
+     606,
+     1912
+    ],
+    [
+     927,
+     1917
+    ],
+    [
+     927,
+     1982
+    ],
+    [
+     604,
+     1977
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9982
+  },
+  {
+   "text": "Paul,Hastings,Janofsky&Walker LLP",
+   "box": [
+    [
+     757,
+     2032
+    ],
+    [
+     1564,
+     2030
+    ],
+    [
+     1564,
+     2086
+    ],
+    [
+     757,
+     2088
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9757
+  },
+  {
+   "text": "75East55thStreet",
+   "box": [
+    [
+     757,
+     2080
+    ],
+    [
+     1137,
+     2086
+    ],
+    [
+     1134,
+     2145
+    ],
+    [
+     757,
+     2139
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9862
+  },
+  {
+   "text": "New York, New York 10022",
+   "box": [
+    [
+     755,
+     2147
+    ],
+    [
+     1346,
+     2147
+    ],
+    [
+     1346,
+     2202
+    ],
+    [
+     755,
+     2202
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9803
+  },
+  {
+   "text": "Attention: Eric R.Landau, Esq.",
+   "box": [
+    [
+     757,
+     2204
+    ],
+    [
+     1403,
+     2208
+    ],
+    [
+     1403,
+     2263
+    ],
+    [
+     757,
+     2258
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9638
+  },
+  {
+   "text": "Telephone: (212) 318-6843",
+   "box": [
+    [
+     759,
+     2265
+    ],
+    [
+     1313,
+     2265
+    ],
+    [
+     1313,
+     2319
+    ],
+    [
+     759,
+     2319
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9851
+  },
+  {
+   "text": "Facsimile: (212) 339-9150",
+   "box": [
+    [
+     755,
+     2321
+    ],
+    [
+     1311,
+     2321
+    ],
+    [
+     1311,
+     2376
+    ],
+    [
+     755,
+     2376
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9757
+  },
+  {
+   "text": "16. Any Notice may be given by Seller's or Purchaser's counsel and sent by certified or",
+   "box": [
+    [
+     298,
+     2426
+    ],
+    [
+     2147,
+     2428
+    ],
+    [
+     2147,
+     2497
+    ],
+    [
+     298,
+     2495
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9726
+  },
+  {
+   "text": "registered mail, national overnight courier service, personal delivery or facsimile, and shall be",
+   "box": [
+    [
+     304,
+     2491
+    ],
+    [
+     2195,
+     2489
+    ],
+    [
+     2195,
+     2552
+    ],
+    [
+     304,
+     2554
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9917
+  },
+  {
+   "text": "deemed given at the following times: (i) upon delivery if personally delivered, (ii) on the first",
+   "box": [
+    [
+     302,
+     2546
+    ],
+    [
+     2198,
+     2548
+    ],
+    [
+     2198,
+     2611
+    ],
+    [
+     302,
+     2609
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9702
+  },
+  {
+   "text": "business day after delivery to the overmight courier, and (i) on the date of transmission if sent",
+   "box": [
+    [
+     298,
+     2598
+    ],
+    [
+     2206,
+     2602
+    ],
+    [
+     2206,
+     2671
+    ],
+    [
+     298,
+     2667
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9899
+  },
+  {
+   "text": "by facsimile, provided such transmission was received during business hours on a Business Day,",
+   "box": [
+    [
+     300,
+     2661
+    ],
+    [
+     2246,
+     2663
+    ],
+    [
+     2246,
+     2724
+    ],
+    [
+     300,
+     2722
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9915
+  },
+  {
+   "text": "and otherwise on the next occurring Business Day. Notwithstanding the foregoing, whenever",
+   "box": [
+    [
+     302,
+     2720
+    ],
+    [
+     2187,
+     2724
+    ],
+    [
+     2187,
+     2780
+    ],
+    [
+     302,
+     2776
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9905
+  },
+  {
+   "text": "under this Agreement a notice is (a) received on a day which is not a Business Day or is required",
+   "box": [
+    [
+     302,
+     2772
+    ],
+    [
+     2246,
+     2774
+    ],
+    [
+     2246,
+     2837
+    ],
+    [
+     302,
+     2835
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9889
+  },
+  {
+   "text": "to be delivered on or before a specific day which is not a Business Day, the day of receipt or",
+   "box": [
+    [
+     300,
+     2831
+    ],
+    [
+     2164,
+     2833
+    ],
+    [
+     2164,
+     2894
+    ],
+    [
+     300,
+     2892
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9858
+  },
+  {
+   "text": "required delivery shall automatically be extended to the next Business Day and (b) delivered by",
+   "box": [
+    [
+     306,
+     2894
+    ],
+    [
+     2221,
+     2894
+    ],
+    [
+     2221,
+     2948
+    ],
+    [
+     306,
+     2948
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9846
+  },
+  {
+   "text": "NY55/214816.1",
+   "box": [
+    [
+     302,
+     2967
+    ],
+    [
+     499,
+     2967
+    ],
+    [
+     499,
+     3009
+    ],
+    [
+     302,
+     3009
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9985
+  },
+  {
+   "text": "E-2-18",
+   "box": [
+    [
+     1210,
+     2959
+    ],
+    [
+     1359,
+     2959
+    ],
+    [
+     1359,
+     3011
+    ],
+    [
+     1210,
+     3011
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9989
+  }
+ ]
+}

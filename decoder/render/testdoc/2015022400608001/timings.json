@@ -1,0 +1,23 @@
+{
+ "tesseract": {
+  "sec": 1.9,
+  "pages": 9,
+  "pages_per_sec": 4.8523,
+  "workers": 8,
+  "mode": "thread"
+ },
+ "rapidpool": {
+  "sec": 35.5,
+  "pages": 9,
+  "pages_per_sec": 0.2538,
+  "workers": 8,
+  "mode": "process"
+ },
+ "qwen": {
+  "sec": 280.9,
+  "pages": 9,
+  "pages_per_sec": 0.032,
+  "workers": 2,
+  "mode": "thread"
+ }
+}

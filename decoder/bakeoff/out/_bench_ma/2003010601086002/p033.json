@@ -1,0 +1,606 @@
+{
+ "page": "2003010601086002/p033",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "The tract of land as to which the aforesaid parties are parties in",
+   "box": [
+    [
+     304,
+     453
+    ],
+    [
+     2126,
+     447
+    ],
+    [
+     2128,
+     501
+    ],
+    [
+     304,
+     507
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9644
+  },
+  {
+   "text": "interest is known as Tax Lot 22 Block 1064 as shown on the Official",
+   "box": [
+    [
+     304,
+     505
+    ],
+    [
+     2153,
+     501
+    ],
+    [
+     2153,
+     558
+    ],
+    [
+     304,
+     562
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9544
+  },
+  {
+   "text": "Tax Map of the City of New York\uff0c New York County, and more",
+   "box": [
+    [
+     302,
+     564
+    ],
+    [
+     1914,
+     560
+    ],
+    [
+     1914,
+     614
+    ],
+    [
+     302,
+     618
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9371
+  },
+  {
+   "text": "particularly bounded and described as follows:",
+   "box": [
+    [
+     300,
+     620
+    ],
+    [
+     1576,
+     612
+    ],
+    [
+     1576,
+     669
+    ],
+    [
+     300,
+     677
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9892
+  },
+  {
+   "text": "TAX LOT 22(BLOCK 1064)",
+   "box": [
+    [
+     304,
+     727
+    ],
+    [
+     935,
+     727
+    ],
+    [
+     935,
+     776
+    ],
+    [
+     304,
+     776
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9382
+  },
+  {
+   "text": "ALL that certain plot, piece or parcel of land, situate, lying and",
+   "box": [
+    [
+     304,
+     836
+    ],
+    [
+     2132,
+     830
+    ],
+    [
+     2134,
+     887
+    ],
+    [
+     304,
+     893
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9542
+  },
+  {
+   "text": "being in the Borough of Manhattan, County, City and State of New York,",
+   "box": [
+    [
+     302,
+     893
+    ],
+    [
+     2230,
+     887
+    ],
+    [
+     2230,
+     941
+    ],
+    [
+     302,
+     948
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9657
+  },
+  {
+   "text": "boundedanddescribedasfollows:",
+   "box": [
+    [
+     308,
+     952
+    ],
+    [
+     1220,
+     952
+    ],
+    [
+     1220,
+     994
+    ],
+    [
+     308,
+     994
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9947
+  },
+  {
+   "text": "BEGINNING at a point on the northerly side of West 54th Street,",
+   "box": [
+    [
+     304,
+     1054
+    ],
+    [
+     2044,
+     1050
+    ],
+    [
+     2044,
+     1105
+    ],
+    [
+     304,
+     1109
+    ]
+   ],
+   "angle": 0,
+   "score": 0.979
+  },
+  {
+   "text": "distant 2oo feet westerly from the northwesterly corner of Ninth",
+   "box": [
+    [
+     304,
+     1109
+    ],
+    [
+     2075,
+     1107
+    ],
+    [
+     2075,
+     1161
+    ],
+    [
+     304,
+     1163
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9827
+  },
+  {
+   "text": "Avenue and 54th Street;",
+   "box": [
+    [
+     304,
+     1163
+    ],
+    [
+     943,
+     1168
+    ],
+    [
+     943,
+     1218
+    ],
+    [
+     304,
+     1214
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9608
+  },
+  {
+   "text": "RUNNING THENCE westerly along the northerly line of 54th Street, 75",
+   "box": [
+    [
+     302,
+     1272
+    ],
+    [
+     2153,
+     1268
+    ],
+    [
+     2153,
+     1325
+    ],
+    [
+     302,
+     1329
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9865
+  },
+  {
+   "text": "feet;",
+   "box": [
+    [
+     308,
+     1329
+    ],
+    [
+     449,
+     1335
+    ],
+    [
+     447,
+     1381
+    ],
+    [
+     306,
+     1375
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9759
+  },
+  {
+   "text": "THENCE northerly at right angles tothe northerly side of West 54th",
+   "box": [
+    [
+     308,
+     1440
+    ],
+    [
+     2155,
+     1434
+    ],
+    [
+     2155,
+     1482
+    ],
+    [
+     308,
+     1488
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9342
+  },
+  {
+   "text": "Street and parallel with Ninth Avenue, 124 feet 3 inches;",
+   "box": [
+    [
+     308,
+     1488
+    ],
+    [
+     1880,
+     1488
+    ],
+    [
+     1880,
+     1543
+    ],
+    [
+     308,
+     1543
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9687
+  },
+  {
+   "text": "THENcE in a southeasterly direction a distance of 75 feet 7 inches to",
+   "box": [
+    [
+     304,
+     1597
+    ],
+    [
+     2209,
+     1595
+    ],
+    [
+     2209,
+     1650
+    ],
+    [
+     304,
+     1652
+    ]
+   ],
+   "angle": 0,
+   "score": 0.951
+  },
+  {
+   "text": "a line distant 2oo feet westerly from and parallel with the westerly",
+   "box": [
+    [
+     302,
+     1652
+    ],
+    [
+     2182,
+     1650
+    ],
+    [
+     2182,
+     1704
+    ],
+    [
+     302,
+     1706
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9791
+  },
+  {
+   "text": "side of Ninth Avenue at a point thereon distant 1l4 feet ll inches",
+   "box": [
+    [
+     306,
+     1704
+    ],
+    [
+     2132,
+     1704
+    ],
+    [
+     2132,
+     1765
+    ],
+    [
+     306,
+     1765
+    ]
+   ],
+   "angle": 0,
+   "score": 0.971
+  },
+  {
+   "text": "northerly from the northerly side of 54th Street;and",
+   "box": [
+    [
+     306,
+     1767
+    ],
+    [
+     1771,
+     1761
+    ],
+    [
+     1771,
+     1809
+    ],
+    [
+     306,
+     1815
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9501
+  },
+  {
+   "text": "RUNNING THENCE southerly along the said last mentioned line, 1i4 feet",
+   "box": [
+    [
+     304,
+     1872
+    ],
+    [
+     2205,
+     1866
+    ],
+    [
+     2205,
+     1920
+    ],
+    [
+     304,
+     1926
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9594
+  },
+  {
+   "text": "11 inches to the northerly side of 54th Street, at the point or place",
+   "box": [
+    [
+     306,
+     1924
+    ],
+    [
+     2205,
+     1924
+    ],
+    [
+     2205,
+     1979
+    ],
+    [
+     306,
+     1979
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9659
+  },
+  {
+   "text": "Of BEGINNING.",
+   "box": [
+    [
+     306,
+     1981
+    ],
+    [
+     669,
+     1981
+    ],
+    [
+     669,
+     2029
+    ],
+    [
+     306,
+     2029
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9465
+  },
+  {
+   "text": "            ",
+   "box": [
+    [
+     308,
+     2090
+    ],
+    [
+     2178,
+     2088
+    ],
+    [
+     2178,
+     2138
+    ],
+    [
+     308,
+     2140
+    ]
+   ],
+   "angle": 0,
+   "score": 0.6513
+  },
+  {
+   "text": "north line of the above described premises and the southerly line of",
+   "box": [
+    [
+     306,
+     2140
+    ],
+    [
+     2182,
+     2140
+    ],
+    [
+     2182,
+     2195
+    ],
+    [
+     306,
+     2195
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9798
+  },
+  {
+   "text": "the Cosine farm as show on Map thereof by George W.Smith on June 20,",
+   "box": [
+    [
+     310,
+     2197
+    ],
+    [
+     2226,
+     2197
+    ],
+    [
+     2226,
+     2245
+    ],
+    [
+     310,
+     2245
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9493
+  },
+  {
+   "text": "1845.",
+   "box": [
+    [
+     308,
+     2256
+    ],
+    [
+     449,
+     2256
+    ],
+    [
+     449,
+     2297
+    ],
+    [
+     308,
+     2297
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9967
+  }
+ ]
+}

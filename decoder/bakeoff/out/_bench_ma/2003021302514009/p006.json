@@ -1,0 +1,422 @@
+{
+ "page": "2003021302514009/p006",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "residential or mixed use residential/commercial and/or retail building containing at least",
+   "box": [
+    [
+     325,
+     344
+    ],
+    [
+     2276,
+     344
+    ],
+    [
+     2276,
+     405
+    ],
+    [
+     325,
+     405
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9819
+  },
+  {
+   "text": "overOwner's27Building(\"25/27Building\");",
+   "box": [
+    [
+     328,
+     565
+    ],
+    [
+     1300,
+     571
+    ],
+    [
+     1297,
+     634
+    ],
+    [
+     328,
+     628
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9493
+  },
+  {
+   "text": "WHEREAS it isplanned that theNewBuildingwill contain morefloor area",
+   "box": [
+    [
+     632,
+     682
+    ],
+    [
+     2276,
+     684
+    ],
+    [
+     2276,
+     745
+    ],
+    [
+     632,
+     743
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9658
+  },
+  {
+   "text": "(hereinafter referred to as \"Floor Area\"), as that term is defined in Section 12-10 of the",
+   "box": [
+    [
+     328,
+     798
+    ],
+    [
+     2274,
+     794
+    ],
+    [
+     2276,
+     854
+    ],
+    [
+     328,
+     859
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9727
+  },
+  {
+   "text": "Zoning Resolution of The City of New York effective December 15, 1961 as the same",
+   "box": [
+    [
+     328,
+     911
+    ],
+    [
+     2274,
+     911
+    ],
+    [
+     2274,
+     974
+    ],
+    [
+     328,
+     974
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9812
+  },
+  {
+   "text": "    o   n     au e  s",
+   "box": [
+    [
+     328,
+     1029
+    ],
+    [
+     2276,
+     1029
+    ],
+    [
+     2276,
+     1090
+    ],
+    [
+     328,
+     1090
+    ]
+   ],
+   "angle": 0,
+   "score": 0.6539
+  },
+  {
+   "text": "Developer's Land as an independent \"zoning lot\", with the result that Developer desires",
+   "box": [
+    [
+     330,
+     1371
+    ],
+    [
+     2276,
+     1373
+    ],
+    [
+     2276,
+     1436
+    ],
+    [
+     330,
+     1434
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9936
+  },
+  {
+   "text": "          n ",
+   "box": [
+    [
+     328,
+     1491
+    ],
+    [
+     2278,
+     1491
+    ],
+    [
+     2278,
+     1551
+    ],
+    [
+     328,
+     1551
+    ]
+   ],
+   "angle": 0,
+   "score": 0.5104
+  },
+  {
+   "text": " n     o sn   (  ",
+   "box": [
+    [
+     340,
+     1719
+    ],
+    [
+     2276,
+     1721
+    ],
+    [
+     2276,
+     1784
+    ],
+    [
+     340,
+     1782
+    ]
+   ],
+   "angle": 0,
+   "score": 0.5593
+  },
+  {
+   "text": "withsuch limitation;",
+   "box": [
+    [
+     330,
+     1835
+    ],
+    [
+     770,
+     1839
+    ],
+    [
+     768,
+     1902
+    ],
+    [
+     328,
+     1898
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9584
+  },
+  {
+   "text": "WHEREAS the parties hereto desire to utilize the procedure available",
+   "box": [
+    [
+     636,
+     1952
+    ],
+    [
+     2280,
+     1952
+    ],
+    [
+     2280,
+     2013
+    ],
+    [
+     636,
+     2013
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9619
+  },
+  {
+   "text": "pursuant to the Zoning Resolution for the Single Zoning Lot so as to make available the",
+   "box": [
+    [
+     330,
+     2070
+    ],
+    [
+     2280,
+     2066
+    ],
+    [
+     2282,
+     2129
+    ],
+    [
+     330,
+     2133
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9803
+  },
+  {
+   "text": "Excess Development Rights for utilization in construction and maintenance of the New",
+   "box": [
+    [
+     334,
+     2185
+    ],
+    [
+     2280,
+     2181
+    ],
+    [
+     2282,
+     2242
+    ],
+    [
+     334,
+     2246
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9693
+  },
+  {
+   "text": "Building, and Owner is willing to make such Excess Development Rights available to",
+   "box": [
+    [
+     336,
+     2297
+    ],
+    [
+     2282,
+     2297
+    ],
+    [
+     2282,
+     2360
+    ],
+    [
+     336,
+     2360
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9839
+  },
+  {
+   "text": "Deveioper in perpetuity, subject to the terms of this Agreement;",
+   "box": [
+    [
+     336,
+     2414
+    ],
+    [
+     1736,
+     2414
+    ],
+    [
+     1736,
+     2477
+    ],
+    [
+     336,
+     2477
+    ]
+   ],
+   "angle": 0,
+   "score": 0.975
+  },
+  {
+   "text": "Rights, Additional Development Rights (as hereinafter defined) and 33 Development",
+   "box": [
+    [
+     336,
+     2870
+    ],
+    [
+     2288,
+     2866
+    ],
+    [
+     2290,
+     2929
+    ],
+    [
+     336,
+     2933
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9891
+  },
+  {
+   "text": "G:INANAryehVAirRights\\ZLDA25-27version.doc",
+   "box": [
+    [
+     334,
+     3136
+    ],
+    [
+     1081,
+     3139
+    ],
+    [
+     1081,
+     3193
+    ],
+    [
+     334,
+     3191
+    ]
+   ],
+   "angle": 0,
+   "score": 0.968
+  },
+  {
+   "text": "4",
+   "box": [
+    [
+     1293,
+     3145
+    ],
+    [
+     1331,
+     3145
+    ],
+    [
+     1331,
+     3195
+    ],
+    [
+     1293,
+     3195
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9957
+  }
+ ]
+}

@@ -1,0 +1,1116 @@
+{
+ "chart": {
+  "note": "parcel labels are project names not tax lots; no key in document except H1/H2=Lot 70",
+  "page": 51,
+  "rows": {
+   "D": 723000,
+   "E3": 88254,
+   "F1": 371134,
+   "F2": 98506,
+   "G1": 292408,
+   "G2": 82476,
+   "H3": 299487,
+   "City": 0,
+   "H1H2": 289329,
+   "total": 4509870,
+   "GLA_total": 2265276
+  },
+  "present": true
+ },
+ "doc_id": "2021070601644010",
+ "decoder": "agent-vision-pass-1, 2026-08-05",
+ "parties": [
+  {
+   "name": "The City of New York (HPD)",
+   "tax_lot": "City Land: 2472/20,25,35,p.o.75; 2494/3",
+   "normalized_role": "grantor_of_rights"
+  },
+  {
+   "sf": 211898,
+   "name": "Greenpoint Landing Associates, L.L.C.",
+   "normalized_role": "recipient_of_rights"
+  },
+  {
+   "sf": 289329,
+   "name": "H1H2 Owner LLC",
+   "tax_lot": "3/2472/70",
+   "normalized_role": "recipient_of_rights"
+  },
+  {
+   "name": "Greenpoint Landing Lot 6 LLC",
+   "tax_lot": "3/2494/6",
+   "normalized_role": "other_zoning_lot_member"
+  },
+  {
+   "name": "Greenpoint Riverview Associates, L.L.C.",
+   "tax_lot": "2502/1; 2510/1; 2520/57",
+   "normalized_role": "other_zoning_lot_member"
+  }
+ ],
+ "anomalies": [
+  "Exhibit G shows City at 0 SF post-amendment; only Recital L reveals the City held 501,227 SF until this instrument — chart alone would mislead",
+  "CRFN misprinted 'CFRN'; City acknowledgment captioned New York County, hand-annotated 'Notarized in Queens County' by Kings-qualified notary; developer acknowledgments predate as-of date by 6 days",
+  "Exhibit A gives areas for only 3 of 16 lots; Exhibit G parcel labels lack a tax-lot key",
+  "index retired-lot handling inconsistent (keeps 2472/60,65; drops 2494/1)",
+  "⚠ Exhibit A contains CURVES ('Northeasterly, on a curve deflecting to the right, with a radius of 5.00 feet, a chord length of ...'). Per the extraction contract these transcribe in full and the traverse engine reports them as has_curve_unhandled rather than approximating a chord — so this document will not produce a closing area until curve handling exists. That is a known, stated limit.",
+  "Exhibit G (p51) states the development-rights allocation: D Parcel 723,000 SF · G2 82,476 · F2 98,506 · H3 299,487 · E3 88,254 · G1 292,408 · F1 371,134 · H1/H2 289,329 · GLA total 2,265,276 SF. (The 289,329 for H1/H2 is one of the two figures whose sum 211,898 + 289,329 = 501,227 the Greenpoint reducer already balances.)",
+  "2026-08-14 TRANSCRIBED: 31 verbatim descriptions across exhibits A/C/D/E/F/H. Exhibit A carries 16 parcels and states an area for only 3 of them (lots 65, 100, 200); exhibits C/D/E/F/H state an area for every parcel.",
+  "⚠ THE SAME LAND IS DESCRIBED TWICE IN THIS INSTRUMENT: Block 2494 Lot 3 appears word-for-word in Exhibit D (p43, City Land) and Exhibit H (p52). Both walk to 2,702.9 sf at 0.00 ft closure against the stated 2,703 — an internal cross-check that agrees.",
+  "⚠ SEVERAL PARCELS RUN TO THE MAPPED CENTERLINE OF WEST STREET (D lot 20, D/H 2494 lot 3, E lot 1 of block 2502 along Freeman Street), i.e. the description includes half the mapped street bed. That is a structural reason a document area can differ from the tax-map area and it is stated by the courses, not inferred.",
+  "⭐ E lot 1 of block 2510 states its own survey-vs-tax-map divergence in the tie line: 'distant 230.28 feet (230 feet Tax Map)'.",
+  "⚠ DEFECTS AS RECORDED, transcribed as printed, none repaired: D lot 25's closing course reads 'an exterior angle of 241° 33' 26\" feet' (the word 'feet' after an ANGLE); A lot 45's third course omits 'a distance of' before '69.78 feet'; A block 2494 lot 1's fourth course reads '4.91 to a point' with no unit; E block 2494 lot 10 reads '80.67 to a point' with no unit; E block 2520 lot 57 ends 'or 3.466 ACRES acres'; D lot 20 reads 'forming and interior angle'; D lot 35's tie course reads 'a distant 1529.18 feet'.",
+  "⚠ E block 2494 lot 20: the CLOSING course is printed 'Thence westerly ... along said southerly side of Dupont Street' but must run EASTERLY to return to the point of beginning. The walked area still equals the stated 20,025 sf, but the traverse does not close (400.4 ft) — the direction word is wrong in the recorded original.",
+  "⚠ E block 2510 lot 1's third course ends 'to a point on the United States Pierhead Line' while the very next course travels 'along said United States Bulkhead Line'. The two lines are distinct; the instrument names them inconsistently at that vertex.",
+  "⚠ E block 2510 lot 1 walks to 318,342.6 sf against the stated 317,688 (+0.21%, closure 2.62 ft). Reported, not repaired."
+ ],
+ "consideration": {
+  "per_sf": null,
+  "index_amt": 0,
+  "in_document": "none; economics in Lot 6 LDA + affordable housing disposition",
+  "zero_verified": "cover p1 re-read 2026-08-05: RPTT $0.00, RETT $0.00, no prepaid reference"
+ },
+ "decode_status": "validated_with_findings",
+ "quantities_sf": [
+  {
+   "name": "Original DRA conveyance to GLA (2014)",
+   "page": 7,
+   "value": 88254,
+   "how_stated": "recital"
+  },
+  {
+   "name": "City Total Development Rights retained under Original DRA",
+   "page": 7,
+   "value": 501227
+  },
+  {
+   "name": "GLA Development Rights (this amendment)",
+   "page": 8,
+   "value": 211898
+  },
+  {
+   "name": "H1H2 Development Rights (this amendment)",
+   "page": 8,
+   "value": 289329
+  },
+  {
+   "name": "H1H2 portion attributable to B2494 L3",
+   "page": 8,
+   "value": 17569.5
+  },
+  {
+   "name": "GLA Total Development Rights (Exhibit G)",
+   "page": 51,
+   "value": 2265276
+  },
+  {
+   "name": "Total Development Rights, Single Development Parcel",
+   "page": 51,
+   "value": 4509870
+  }
+ ],
+ "effective_dates": {
+  "crfn": "2021000274890",
+  "recorded": "2021-07-19",
+  "document_date": "2021-06-24"
+ },
+ "instrument_kind": "amendment_to_development_rights_agreement",
+ "validation_tier": "arithmetic",
+ "consents_waivers": [
+  {
+   "note": "waived via prior Subparcel Agreements (Exhibit B)",
+   "page": 8,
+   "party": "Conveyed Property Owners",
+   "instrument": "waiver",
+   "present_in_doc": false
+  },
+  {
+   "page": 9,
+   "party": "parties-in-interest per Chicago Title certification",
+   "instrument": "joinder",
+   "present_in_doc": false
+  },
+  {
+   "note": "none appear in 52 pages",
+   "party": "mortgagees",
+   "instrument": "subordination",
+   "present_in_doc": false
+  }
+ ],
+ "instrument_title": {
+  "page": 5,
+  "value": "FIRST AMENDMENT TO DEVELOPMENT RIGHTS AGREEMENT"
+ },
+ "lot_areas_by_bbl": {
+  "extent": {
+   "3024720075": "partial"
+  },
+  "values": {
+   "3024720020": 2853,
+   "3024720025": 2879,
+   "3024720030": 58974,
+   "3024720035": 63405,
+   "3024720055": 72032,
+   "3024720070": 44599,
+   "3024720075": 226481,
+   "3024940003": 2703,
+   "3024940006": 9011,
+   "3024940010": 11890,
+   "3024940020": 20025,
+   "3025020001": 262808,
+   "3025100001": 317688,
+   "3025200057": 150980
+  },
+  "provenance": "Exhibits C/D/E/F p39-50 (Exhibit D describes p/o Lot 75 — a portion)"
+ },
+ "cross_instruments": [
+  {
+   "page": 6,
+   "what": "Original Declaration of Single Development Parcel (2005-05-27)",
+   "how_cited": "crfn",
+   "identifier": "200500528002"
+  },
+  {
+   "page": 7,
+   "what": "Amended and Restated Declaration (2014-06-26)",
+   "how_cited": "crfn",
+   "identifier": "2014000240891 (misprinted 'CFRN')"
+  },
+  {
+   "page": 7,
+   "what": "Original Development Rights Agreement (recorded 2015-02-02) — the instrument AMENDED",
+   "relation": "amends",
+   "how_cited": "crfn",
+   "identifier": "2015000036170"
+  },
+  {
+   "page": 8,
+   "what": "Second Amended and Restated Declaration",
+   "how_cited": "date_parties",
+   "identifier": "even date 2021-06-24"
+  },
+  {
+   "page": 8,
+   "what": "Lot 6 Land Disposition Agreement",
+   "how_cited": "date_parties",
+   "identifier": "even date, City + Lot 6 Owner"
+  },
+  {
+   "page": 7,
+   "what": "CPC application / Council Resolution",
+   "how_cited": "date_parties",
+   "identifier": "C140019HAK / Reso 2068 (2013-12-10)"
+  },
+  {
+   "page": 38,
+   "what": "7 Subparcel Development and Easement Agreements (Exhibit B)",
+   "how_cited": "doc_id",
+   "identifier": "2014000261897, 2015000036181, 2015000181452, 2015000181454, 2015000181459, 2018000185729, 2018000185733"
+  }
+ ],
+ "zoning_lot_roster": [
+  {
+   "bbl": "3024720002"
+  },
+  {
+   "bbl": "3024720003"
+  },
+  {
+   "bbl": "3024720010"
+  },
+  {
+   "bbl": "3024720020"
+  },
+  {
+   "bbl": "3024720021"
+  },
+  {
+   "bbl": "3024720025"
+  },
+  {
+   "bbl": "3024720030"
+  },
+  {
+   "bbl": "3024720035"
+  },
+  {
+   "bbl": "3024720045"
+  },
+  {
+   "bbl": "3024720050"
+  },
+  {
+   "bbl": "3024720055"
+  },
+  {
+   "bbl": "3024720060"
+  },
+  {
+   "bbl": "3024720065"
+  },
+  {
+   "bbl": "3024720070"
+  },
+  {
+   "bbl": "3024720075"
+  },
+  {
+   "bbl": "3024720080"
+  },
+  {
+   "bbl": "3024720090"
+  },
+  {
+   "bbl": "3024720100"
+  },
+  {
+   "bbl": "3024720200"
+  },
+  {
+   "bbl": "3024720475"
+  },
+  {
+   "bbl": "3024941001"
+  },
+  {
+   "bbl": "3024940003"
+  },
+  {
+   "bbl": "3024940005"
+  },
+  {
+   "bbl": "3024940006"
+  },
+  {
+   "bbl": "3024940010"
+  },
+  {
+   "bbl": "3024940020"
+  },
+  {
+   "bbl": "3025020001"
+  },
+  {
+   "bbl": "3025020002"
+  },
+  {
+   "bbl": "3025100001"
+  },
+  {
+   "bbl": "3025200057"
+  }
+ ],
+ "self_checks_summary": {
+  "fails": 0,
+  "passes": 6,
+  "highlights": [
+   "211898+289329=501227 exact (conveyed = previously retained)",
+   "Exhibit G sums: parcels 2,244,594 + GLA 2,265,276 = 4,509,870 exact",
+   "38 index lots = 30 document identifiers after n/k/a expansion; B2494 L3 area 2,703 SF consistent across exhibits D and H",
+   "traverse over all 31 transcribed descriptions: 8 close (closure 0.00-2.62 ft); 6 of those reproduce the area the instrument itself states within 0.5% - 9,011 / 2,853 / 2,703 (twice, from two different exhibits) / 20,829 exact to <=0.5 sf, and 317,688 vs a walked 318,342.6 (+0.21%). The other 2 that close state no area.",
+   "⚠ THE OTHER 24 DO NOT YIELD AN AREA, AND THE CAUSE IS THE PARSER, NOT THE SURVEY: this instrument's surveyor writes direction as an INTERCARDINAL adverb ('northwesterly', 'southeasterly') plus a stated INTERIOR ANGLE with the previous course. metes.py resolves only the four cardinal -ly adverbs and reads no relative angle, so those courses are dropped or given a 45°-grid azimuth the description never intended. Refusing is correct under the standing rule (an unparseable course beats a silently wrong one) but it is a capability gap, not a defect in the document."
+  ]
+ },
+ "summary_what_it_does": "Greenpoint Landing (30 tax-lot identifiers across Brooklyn blocks 2472/2494/2502/2510/2520; 38 index lots after condo n/k/a expansion): City of New York conveys its entire remaining 501,227 SF — 211,898 SF to Greenpoint Landing Associates (incl. Building E3 inclusionary floor area) + 289,329 SF to H1H2 Owner LLC (Block 2472 Lot 70; 17,569.5 SF attributable to new Block 2494 Lot 3) — for $0 stated consideration; economics sit in the simultaneous Lot 6 Land Disposition Agreement and HPD affordable-housing disposition (431 units, CPC C140019HAK / Reso 2068). Exhibit G re-allocates the full 4,509,870 SF single-development-parcel budget with the City at 0 SF.",
+ "zoning_lot_roster_note": "30 identifiers in document (blocks 2472, 2494, 2502, 2510, 2520) reconcile exactly to 38 index lots via condo n/k/a expansion (2472/60->1201-03, 2472/65->1301-03, 2494/1->1001-03); index keeps retired 60/65 but drops retired 2494/1 — inconsistent retired-lot treatment in index",
+ "pending_descriptions": [],
+ "legal_descriptions": [
+  {
+   "exhibit": "A",
+   "bbl": "3024720002",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2472 Lot 2\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nCOMMENCING at the intersection of the westerly side of West Street (mapped 60 feet wide) with the westerly prolongation of the northerly side of Eagle Street (mapped 60 feet wide), thence running the following two courses to the POINT or PLACE of BEGINNING;\na. Southerly, along said westerly side of West Street, a distance of 30.035 feet; thence\nb. Westerly, forming an angle of 90° with the previous course, along the prolongation of the centerline of Eagle Street and along the line dividing Block 2502 and Block 2472, a distance of 426.74 feet to the POINT or PLACE of BEGINNING; and running thence\nWesterly, continuing along the prolongation of the centerline of Eagle Street and along the line dividing Block 2502 and Block 2472, a distance of 90.98 feet to a point, said point being on the United States Bulkhead Line; thence\nNortheasterly, forming an interior angle of 57°17’57” with the previous course, along said United States Bulkhead Line, a distance of 160.50 feet to a point; thence\nEasterly, forming an interior angle of 122°42’03” with the previous course, a distance of 52.07 feet to a point; thence\nSouthwesterly, forming an interior angle of 57°17’16” with the previous course, a distance of 39.98 feet to a point; thence\nSoutheasterly, forming an interior angle of 270°00’00” with the previous course, a distance of 1.38 feet to a point; thence\nSouthwesterly, forming an interior angle of 90°00’00” with the previous course, a distance of 10.27 feet to a point; thence\nSoutherly, forming an interior angle of 212°42’48” with the previous course, a distance of 58.81 feet to a point; thence;\nSouthwesterly, forming an interior angle of 149°55’27” with the previous course, a distance of 23.93 feet to a point; thence\nWesterly, forming an interior angle of 120°04’33” with the previous course, a distance of 2.56 feet to a point; thence\nSouthwesterly, forming an interior angle of 239°55’27” with the previous course, a distance of 14.48 feet to the POINT or PLACE of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 23,
+   "pages": [
+    23,
+    24
+   ],
+   "note": "no area stated for this parcel",
+   "traverse": {
+    "verdict": "does_not_close",
+    "walked_area_sf": 13617.2,
+    "closure_error_ft": 471.889,
+    "n_parseable_courses": 5,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024720003",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2472 Lot 3\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nCOMMENCING at the intersection of the westerly side of West Street (mapped 60 feet wide) with the westerly prolongation of the northerly side of Eagle Street (mapped 60 feet wide), thence running the following three courses to the POINT or PLACE of BEGINNING;\na. Southerly, along said westerly side of West Street, a distance of 30.035 feet; thence\nb. Westerly, forming an angle of 90°00’00” with the previous course, along the prolongation of the centerline of Eagle Street and along the line dividing Block 2502 and Block 2472, a distance of 517.72 feet to a point, said point being on the United States Bulkhead Line; thence\nc. Northeasterly, forming an interior angle of 57°17’57” on its northeasterly side with the previous course, along said United States Bulkhead Line, a distance of 160.50 feet to a point, said point being the POINT or PLACE of BEGINNING; and running thence\nNortheasterly, continuing along said United States Bulkhead Line, a distance of 112.92 feet to a point; thence\nNortheasterly, forming an interior angle of 170°52’45” with the previous course, continuing along said United States Bulkhead Line, a distance of 80.61 feet to a point; thence\nEasterly, forming an interior angle of 131°49’18” with the previous course, a distance of 32.53 feet to a point; thence\nSouthwesterly, forming an interior angle of 48°16’18” with the previous course, a distance of 36.65 feet to a point of curvature; thence\nSouthwesterly, on a curve deflecting to the left, with a radius of 10.00 feet, a chord length of 1.08 feet, and a chord that forms an exterior angle of 204°25’23” with the previous course, a distance of 1.09 feet to a point; thence\nSouthwesterly, forming an exterior angle of 176°53’25” with the chord for the previous course, a distance of 9.29 feet to a point; thence\nSoutheasterly, forming an interior angle of 270°00’00” with the previous course, a distance of 23.58 feet to a point; thence\nSouthwesterly, on a curve deflecting to the left, with a radius of 33.25 feet, a chord length of 21.24 feet, and a chord that forms an exterior angle of 258°17’46” with the previous course, a distance of 21.62 feet to a point; thence\nSouthwesterly, forming an exterior angle of 161°22’29” with the chord for the previous course, a distance of 22.48 feet to a point; thence\nSoutheasterly, forming an interior angle of 270°00’00” with the previous course, a distance of 5.17 feet to a point; thence\nSouthwesterly, forming an interior angle of 90°00’00” with the previous course, a distance of 23.83 feet to a point; thence\nNorthwesterly, forming an interior angle of 90°00’00” with the previous course, a distance of 4.00 feet to a point; thence\nSouthwesterly, forming an interior angle of 270°00’00” with the previous course, a distance of 58.49 feet to a point; thence\nWesterly, forming an interior angle of 122°42’44” with the previous course, a distance of 52.07 feet to the POINT or PLACE of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 24,
+   "pages": [
+    24,
+    25
+   ],
+   "note": "contains curves; no area stated",
+   "traverse": {
+    "verdict": "has_curve_unhandled",
+    "walked_area_sf": 0.0,
+    "closure_error_ft": 537.26,
+    "n_parseable_courses": 3,
+    "has_curve": true,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024720010",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2472 Lot 10\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point at the intersection of the westerly prolongation of the northerly side of Eagle Street (mapped 60 feet wide) with the westerly side of West Street (mapped 60 feet wide), said point being the POINT or PLACE of BEGINNING; thence\nNortherly, along the northerly prolongation of said westerly side of West Street, a distance of 105.03 feet (computed) to a point; thence\nEasterly, forming an interior angle of 90° with the previous course, a distance of 30.025 feet (computed) to a point; thence\nSoutherly, forming an interior angle of 90° with the previous course, a distance of 105.03 feet (computed) to a point, said point being on the westerly prolongation of said northerly side of Eagle Street; thence\nWesterly, along said westerly prolongation of the northerly side of Eagle Street, forming an interior angle of 90° with the previous course, a distance of 30.025 feet (computed) to a point, said point being the POINT or PLACE of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 25,
+   "pages": [
+    25
+   ],
+   "note": "no area stated; 105.03 x 30.025 = 3,153.5 sf by arithmetic, not stated in the instrument",
+   "traverse": {
+    "verdict": "closes",
+    "walked_area_sf": 3153.5,
+    "closure_error_ft": 0.0,
+    "n_parseable_courses": 4,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024720021",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2472 Lot 21\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the westerly side of West Street (mapped 60 feet wide), distant 30.035 feet southerly from the intersection of said westerly side of West Street with the westerly prolongation of the northerly side of Eagle Street (mapped 60’ wide), said point being the POINT or PLACE of BEGINNING; and running thence\nWesterly, forming an interior angle of 90°00’00” with the previous course, along the prolongation of the centerline of Eagle Street and along the line dividing Block 2502 and Block 2472, a distance of 426.74 feet to a point; thence\nNortheasterly, forming an interior angle of 59°55’31” with the previous course, a distance of 14.48 feet to a point; thence\nEasterly, forming an interior angle of 120°04’33” with the previous course, a distance of 2.56 feet to a point; thence\nNortheasterly, forming an interior angle of 239°55’27” with the previous course, a distance of 23.93 feet to a point; thence\nNortherly, forming an interior angle of 210°04’33” with the previous course, a distance of 58.81 feet to a point; thence\nNortheasterly, forming an interior angle of 147°17’12” with the previous course, a distance of 10.27 feet to a point; thence\nNorthwesterly, forming an interior angle of 270°00’00” with the previous course, a distance of 1.38 feet to a point; thence\nNortheasterly, forming an interior angle of 90°00’00” with the previous course, a distance of 98.47 feet to a point; thence\nSoutheasterly, forming an interior angle of 90°00’00” with the previous course, a distance of 4.00 feet to a point; thence\nNortheasterly, forming an interior angle of 270°00’00” with the previous course, a distance of 23.83 feet to a point; thence\nNorthwesterly, forming an interior angle of 270°00’00” with the previous course, a distance of 5.17 feet to a point; thence\nNortheasterly, forming an interior angle of 90°00’00” with the previous course, a distance of 22.48 feet to a point of curvature; thence\nNortheasterly, on a curve deflecting to the right, with a radius of 33.25 feet, a chord length of 21.24 feet, and a chord that forms an interior angle of 161°22’29” with the previous course, a distance of 21.62 feet to a point; thence\nNorthwesterly, forming an interior angle of 258°17’46” with the chord for the previous course, a distance of 23.58 feet to a point; thence\nNortheasterly, forming an interior angle of 90°00’00” with the previous course, a distance of 9.29 feet to a point of curvature; thence\nNortheasterly, on a curve deflecting to the right, with a radius of 10.00 feet, a chord length of 1.08 feet, and a chord that forms an interior angle of 176°53’25” with the previous course, a distance of 1.09 feet to a point; thence\nNortheasterly, forming an interior angle of 204°25’23” with the chord for the previous course, a distance of 36.65 feet to a point; thence\nEasterly, forming an interior angle of 131°43’42” with the previous course, a distance of 307.56 feet to a point, said point being on the northerly side of Commercial Street (mapped 70’ wide); thence\nSouthwesterly, forming an interior angle of 28°26’34” with the previous course, along said northerly side of Commercial Street a distance of 27.11 feet to a point, said point being the intersection of said northerly side of Commercial Street with said westerly side of West Street; thence\nSoutherly, forming an interior angle of 241°33’26” with the previous course, along said westerly side of West Street, a distance of 277.245 feet to the POINT or PLACE of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 25,
+   "pages": [
+    25,
+    26,
+    27
+   ],
+   "note": "contains curves; no area stated",
+   "traverse": {
+    "verdict": "has_curve_unhandled",
+    "walked_area_sf": 6931.4,
+    "closure_error_ft": 224.066,
+    "n_parseable_courses": 6,
+    "has_curve": true,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024720045",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2472 Lot 45\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at the intersection of the northerly side of Commercial Street (mapped 70 feet wide) with the westerly side of Manhattan Avenue, thence running the following two courses to the POINT or PLACE of BEGINNING;\na. Westerly, along said northerly side of Commercial Street, a distance of 1316.51 feet (computed);\nb. Thence northwesterly, forming an angle of 90° on its northeasterly side with said northerly side of Commercial Street, a distance of 281.65 feet to a point, said point being the POINT or PLACE of BEGINNING;\nTHENCE northwesterly, continuing along the previous course, a distance of 56.54 feet to a point, said point being on the United States Bulkhead Line;\nTHENCE northeasterly, along said United States Bulkhead Line, forming an interior angle of 103°52'37\" 69.78 feet to a point;\nTHENCE southeasterly, forming an interior angle of 90° with the previous course, a distance of 15.72 feet to a point;\nTHENCE southeasterly, forming an interior angle of 217°23'47\" with the previous course, a distance of 81.60 feet to a point;\nTHENCE southeasterly, forming an interior angle of 128°43'47\" with the previous course, a distance of 15.39 feet to a point;\nTHENCE northwesterly, forming an interior angle of 51°13'03\" with the previous course, a distance of 46.11 feet to a point;\nTHENCE northwesterly and southwesterly, on a curve deflecting to the left, with a radius of 10.00 feet, a distance of 9.19 feet to a point of tangency;\nTHENCE southwesterly, a distance of 93.29 feet to a point, said point being the POINT or PLACE of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 27,
+   "pages": [
+    27,
+    28
+   ],
+   "note": "contains a curve; no area stated. ⚠ the third course omits the words 'a distance of' before 69.78 feet — transcribed as printed",
+   "traverse": {
+    "verdict": "unparseable",
+    "walked_area_sf": null,
+    "closure_error_ft": null,
+    "n_parseable_courses": null,
+    "has_curve": null,
+    "reason": "only 2 parseable courses"
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024720050",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2472 Lot 50\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the northerly side of Commercial Street (mapped 70 feet wide), distant 1085.78 feet (computed) westerly from the intersection of said northerly side of Commercial Street with the westerly side of Manhattan Avenue, said point being the point or place of beginning;\nTHENCE westerly, along said northerly side of Commercial Street, a distance of 60.00 feet to a point;\nTHENCE northwesterly, forming an interior angle of 90° with the previous course, a distance of 122.00 feet to a point;\nTHENCE southwesterly, forming an interior angle of 270° with the previous course, a distance of 170.73 feet to a point;\nTHENCE northwesterly, forming an interior angle of 90° with the previous course, a distance of 159.65 feet to a point;\nTHENCE northeasterly, forming an interior angle of 103°52'41\" with the previous course, a distance of 93.29 feet to a point of curvature;\nTHENCE northeasterly and southeasterly, on a curve deflecting to the right, having an interior angle of 52°39'27\" and a radius of 10.00 feet, a distance of 9.19 feet to a point of tangency;\nTHENCE southwesterly, a distance of 46.11 feet to a point;\nTHENCE northwesterly, forming an interior angle of 308°46'57\" with the previous course, a distance 15.39 feet to a point;\nTHENCE northeasterly, forming an interior angle of 136°21 '54\" with the previous course, a distance 39.00 feet to a point;\nTHENCE northeasterly, forming an interior angle of 133°37'55\" with the previous course, a distance 68.65 feet to a point;\nThence southeasterly, forming an interior angle of 90° with the previous course, a distance of 316.85 feet to a point, said point being the point or place of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 28,
+   "pages": [
+    28,
+    29
+   ],
+   "note": "contains a curve; no area stated",
+   "traverse": {
+    "verdict": "unparseable",
+    "walked_area_sf": null,
+    "closure_error_ft": null,
+    "n_parseable_courses": null,
+    "has_curve": null,
+    "reason": "only 1 parseable courses"
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024720060",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2472, Lot 60\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, County of Kings, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the northerly side of Commercial Street (mapped 70 feet wide), distant 934.03 feet (computed) westerly from the intersection of said northerly side of Commercial Street with the westerly side of Manhattan Avenue, said point being the POINT or PLACE of BEGINNING;\nTHENCE westerly, along said northerly side of Commercial Street, a distance of 151.75 feet to a point;\nTHENCE northerly, forming an interior angle of 90° with the previous course, a distance of 137.69 feet to a point;\nTHENCE easterly, forming an interior angle of 90° with the previous course, and parallel with Commercial Street, a distance of 151.75 feet to a point;\nTHENCE southerly, forming an interior angle of 90° with the previous course, a distance of 137.69 feet to a point, said point being the POINT or PLACE of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 29,
+   "pages": [
+    29
+   ],
+   "note": "no area stated; 151.75 x 137.69 = 20,894.5 sf by arithmetic, not stated in the instrument",
+   "traverse": {
+    "verdict": "closes",
+    "walked_area_sf": 20894.5,
+    "closure_error_ft": 0.0,
+    "n_parseable_courses": 4,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024720065",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2472, Lot 65\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the northerly side of Commercial Street (mapped 70 feet wide), distant 1145.78 feet (computed) westerly from the intersection of said northerly side of Commercial Street with the westerly side of Manhattan Avenue, said point being the POINT or PLACE of BEGINNING;\nThence westerly, along said northerly side of Commercial Street, a distance of 170.73 feet to a point;\nThence northerly, forming an interior angle of 90° with the previous course, a distance of 122.00 feet to a point;\nThence easterly, forming an interior angle of 90° with the previous course, and parallel with Commercial Street, a distance of 170.73 feet to a point;\nThence southerly, forming an interior angle of 90° with the previous course, a distance of 122.00 feet to a point, said point being the POINT or PLACE of BEGINNING.\nEncompassing an area of 20,829 square feet or 0.478 acres.",
+   "stated_area_sf": 20829,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 29,
+   "pages": [
+    29,
+    30
+   ],
+   "note": null,
+   "traverse": {
+    "verdict": "closes",
+    "walked_area_sf": 20829.1,
+    "closure_error_ft": 0.0,
+    "n_parseable_courses": 4,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024720080",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2472, Lot 80\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at the intersection of the northerly side of Commercial Street (mapped 70 feet wide) with the westerly side of Manhattan Avenue, thence running the following three courses to the POINT or PLACE of BEGINNING;\na. Westerly, along said northerly side of Commercial Street, a distance of 1085.78 feet (computed);\nb. Thence northwesterly, forming an angle of 90° on its northeasterly side with said northerly side of Commercial Street, a distance of 316.85 feet;\nc. Thence southwesterly, forming an angle of 90° on its southwesterly side with the previous course, a distance of 8.00 feet to a point, said point being the POINT or PLACE of BEGINNING;\nThence southwesterly, continuing along the previous course, a distance of 60.65 feet to a point;\nThence southwesterly, forming an interior angle of 226°22’05” with the previous course, a distance of 39.00 feet to a point;\nThence northwesterly, forming an interior angle of 94°54’19” with the previous course, a distance of 81.60 feet to a point;\nThence northwesterly, forming an interior angle of 142°36’13” with the previous course, a distance of 15.72 feet to a point, said point being on the United States Bulkhead Line;\nThence northeasterly, along said United States Bulkhead Line, forming an interior angle of 90° with the previous course, a distance of 229.29 feet to a point;\nThence northeasterly, along said United States Bulkhead Line, forming an interior angle of 173°37’45” with the previous course, a distance of 11.51 feet to a point;\nThence southeasterly, forming an interior angle of 90° with the previous course, a distance of 14.73 feet to a point;\nThence southeasterly, forming an interior angle of 202°15’34” with the previous course, a distance of 71.33 feet to a point;\nThence southwesterly, forming an interior angle of 67°42’16” with the previous course, a distance of 23.78 feet to a point;\nThence northwesterly, forming an interior angle of 112°18’03” with the previous course, a distance of 26.66 feet to a point of curvature;\nThence northwesterly and southwesterly, on a curve deflecting to the left, with a radius of 12.00 feet, a chord length of 13.93 feet, and a chord that forms an exterior angle of 143°20’51” with the previous course, a distance of 14.87 feet to a point;\nThence southwesterly, forming an exterior angle of 144°25’18” with the chord for the previous course, a distance of 64.21 feet to a point of curvature;\nThence southwesterly and southeasterly, on a curve deflecting to the left, with a radius of 5.00 feet, a chord length of 6.30 feet, and a chord that forms an exterior angle of 141°02’37” with the previous course a distance of 6.81 feet to a point;\nThence southeasterly, forming an exterior angle of 140°57’29” with the chord for the previous course, a distance of 25.44 feet to a point, said point being the POINT or PLACE of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 30,
+   "pages": [
+    30,
+    31
+   ],
+   "note": "contains curves; no area stated",
+   "traverse": {
+    "verdict": "unparseable",
+    "walked_area_sf": null,
+    "closure_error_ft": null,
+    "n_parseable_courses": null,
+    "has_curve": null,
+    "reason": "only 2 parseable courses"
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024720090",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2472 Lot 90\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at the intersection of the northerly side of Commercial Street (mapped 70 feet wide) with the westerly side of Manhattan Avenue, thence running the following two courses to the POINT or PLACE of BEGINNING;\na. Westerly, along said northerly side of Commercial Street, a distance of 874.03 feet (computed);\nb. Thence northwesterly, forming an angle of 90° on its northeasterly side with said northerly side of Commercial Street, a distance of 389.49 feet to a point, said point being the POINT or PLACE of BEGINNING;\nTHENCE southwesterly, forming an exterior angle of 81°23'30\" with the previous course, a distance of 60.65 feet to a point;\nTHENCE southeasterly, forming an interior angle of 261°23'11\" with the previous course, a distance of 37.38 feet to a point;\nTHENCE southwesterly, forming an interior angle of 136°22'56\" with the previous course, a distance of 3.48 feet to a point;\nTHENCE southwesterly, forming an interior angle of 141°24'48\" with the previous course, a distance of 41.40 feet to a point;\nTHENCE northwesterly, forming an interior angle of 111°58'31\" with the previous course, a distance of 71.33 feet to a point;\nTHENCE northwesterly, forming an interior angle of 157°44'26\" with the previous course, a distance of 14.73 feet to a point, said point being on the United States Bulkhead Line;\nTHENCE northeasterly, along said United States Bulkhead Line, forming an interior angle of 90° with the previous course, a distance of 172.60 feet to a point;\nTHENCE southeasterly, forming an interior angle of 90° with the previous course, a distance of 11.98 feet to a point;\nTHENCE southwesterly, forming an interior angle of 128°04'11\" with the previous course, a distance of 45.66 feet to a point, said point being the POINT or PLACE of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 31,
+   "pages": [
+    31,
+    32
+   ],
+   "note": "no area stated",
+   "traverse": {
+    "verdict": "unparseable",
+    "walked_area_sf": null,
+    "closure_error_ft": null,
+    "n_parseable_courses": null,
+    "has_curve": null,
+    "reason": "only 2 parseable courses"
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024720100",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2472 Lot 100\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the northerly side of Commercial Street (mapped 70 feet wide), distant 904.03 feet (computed) westerly from the intersection of said northerly side of Commercial Street with the westerly side of Manhattan Avenue; and running thence\nSouthwesterly, along said northerly side of Commercial Street, a distance of 30.00 feet to a point; thence\nNorthwesterly, forming an interior angle of 90°00'00\" with the previous course, a distance of 137.69 feet to a point; thence\nSouthwesterly, forming an interior angle of 270°00'00\" with the previous course, a distance of 151.75 feet to a point; thence\nNorthwesterly, forming an interior angle of 90°00'00\" with the previous course, a distance of 179.16 feet to a point; thence\nSouthwesterly, forming an interior angle of 270°00'00\" with the previous course, a distance of 8.00 feet to a point; thence\nNorthwesterly, forming an interior angle of 90°00'00\" with the previous course, a distance of 25.44 feet to a non-tangent point of curvature; thence\nNortheasterly, on a curve deflecting to the right, with a radius of 5.00 feet, a chord length of 6.30 feet, and a chord that forms an interior angle of 140°57'29\" with the previous course, a distance of 6.81 feet to a point (non-tangent); thence\nNortheasterly, forming an interior angle of 141°02'37\" with the chord for the previous course, a distance of 64.21 feet to a non-tangent point of curvature; thence\nSoutheasterly, on a curve deflecting to the right, with a radius of 12.00 feet, a chord length of 13.93 feet, and a chord that forms an interior angle of 144°25'18\" with the previous course, a distance of 14.87 feet to a point (non-tangent); thence\nSoutheasterly, forming an interior angle of 143°20'51\" with the chord for the previous course, a distance of 26.66 feet to a point; thence\nNortheasterly, forming an interior angle of 247°41'57\" with the previous course, a distance of 23.78 feet to a point; thence\nNortheasterly, forming an interior angle of 180°19'13\" with the previous course, a distance of 41.40 feet to a point; thence\nNortherly, forming an interior angle of 218°35'12\" with the previous course, a distance of 3.48 feet to a point; thence\nNorthwesterly, forming an interior angle of 223°37'04\" with the previous course, a distance of 37.38 feet to a point; thence\nNortheasterly, forming an interior angle of 98°36'49\" with the previous course, a distance of 60.65 feet to a point; thence\nSoutherly, forming an interior angle of 38°11'41\" with the previous course, a distance of 98.92 feet to a point; thence\nNortheasterly, forming an interior angle of 313°06'48\" with the previous course, a distance of 37.71 feet to a point; thence\nSoutheasterly, forming an interior angle of 90°05'01\" with the previous course, a distance of 317.32 feet to the POINT or PLACE of BEGINNING.\nEncompassing an area of 42,958 square feet or 0.987 acres, more or less.",
+   "stated_area_sf": 42958,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 32,
+   "pages": [
+    32,
+    33
+   ],
+   "note": "contains curves",
+   "traverse": {
+    "verdict": "has_curve_unhandled",
+    "walked_area_sf": 0.0,
+    "closure_error_ft": 65.44,
+    "n_parseable_courses": 3,
+    "has_curve": true,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024720200",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2472 Lot 200\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the northerly side of Commercial Street (mapped 70 feet wide), distant 874.03 feet (computed) westerly from the intersection of said northerly side of Commercial Street with the westerly side of Manhattan Avenue; and running thence\nSouthwesterly, along said northerly side of Commercial Street, a distance of 30.00 feet to a point; thence\nNorthwesterly, forming an interior angle of 90°00'00\" with the previous course, a distance of 317.32 feet to a point; thence\nSouthwesterly, forming an interior angle of 269°54'59\" with the previous course, a distance of 37.71 feet to a point; thence\nNortherly, forming an interior angle of 46°53'12\" with the previous course, a distance of 98.92 feet to a point; thence\nSoutheasterly, forming an interior angle of 43°11'49\" with the previous course, a distance of 19.19 feet to a point of cusp; thence\nNortheasterly, on a curve deflecting to the right, with a radius of 12.12 feet, a chord length of 15.00 feet, and a chord that forms an interior angle of 315°42’05” with the previous course, a distance of 16.17 feet to a point (non-tangent); thence\nNortheasterly, forming an interior angle of 141°46'00\" with the chord for the previous course, a distance of 202.02 feet to a point; thence\nSoutheasterly, forming an interior angle of 82°31'54\" with the previous course, a distance of 195.71 feet to a point; thence\nSouthwesterly, forming an interior angle of 90°00'00\" with the previous course, a distance of 210.78 feet to a point; thence\nSoutheasterly, forming an interior angle of 270°00'00\" with the previous course, a distance of 211.59 feet to the POINT or PLACE of BEGINNING.\nEncompassing an area of 50,281 square feet or 1.154 acres, more or less.",
+   "stated_area_sf": 50281,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 33,
+   "pages": [
+    33,
+    34
+   ],
+   "note": "contains a curve",
+   "traverse": {
+    "verdict": "unparseable",
+    "walked_area_sf": null,
+    "closure_error_ft": null,
+    "n_parseable_courses": null,
+    "has_curve": null,
+    "reason": "only 2 parseable courses"
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024720475",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2472 Lot 475\nALL that certain plot, piece, or parcel of land, situate, lying and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at the intersection of the northwesterly side of Commercial Street (mapped 70 feet wide) with the westerly side of Manhattan Avenue, thence running the following two courses to the POINT or PLACE OF BEGINNING;\na. Westerly, along said northerly side of Commercial Street, a distance of 874.03 feet (computed)\nb. THENCE northwesterly, forming an angle of 90 degrees on its northeasterly side with said northerly side of Commercial Street, a distance of 370.30 feet to a point, said point being the POINT or PLACE of BEGINNING;\nTHENCE northwesterly, continuing along the previous course, a distance of 19.19 feet to a point;\nTHENCE northeasterly, forming an interior angle of 135 degrees 34 minutes 33 seconds with the previous course, a distance of 45.66 feet to a point;\nTHENCE northwesterly, forming an interior angle of 231 degrees 55 minutes 49 seconds with the previous course, a distance of 11.98 feet to a point, said point being on the United States Bulkhead Line;\nTHENCE northeasterly, along said United States Bulkhead Line, forming an interior angle of 90 degrees with the previous course, a distance of 181.95 feet to a point;\nTHENCE southeasterly, forming an interior angle of 82 degrees 29 minutes 38 seconds with the previous course, a distance of 50.44 feet to a point;\nTHENCE southwesterly, forming an interior angle of 97 degrees 28 minutes 06 seconds with the previous course, a distance of 202.02 feet to a point of curvature;\nTHENCE southwesterly and southeasterly, on a curve deflecting to the left, with a radius of 12.12 feet, a chord length of 15.00 feet, and a chord that forms an exterior angle of 141 degrees 46 minutes 00 seconds with the previous course and an exterior angle of 135 degrees 42 minutes 05 seconds with the second course leading to the point of beginning, a distance of 16.17 feet to a point, said point being the POINT or PLACE of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 34,
+   "pages": [
+    34,
+    35
+   ],
+   "note": "contains a curve; no area stated; angles spelled out in words in this parcel",
+   "traverse": {
+    "verdict": "unparseable",
+    "walked_area_sf": null,
+    "closure_error_ft": null,
+    "n_parseable_courses": null,
+    "has_curve": null,
+    "reason": "only 2 parseable courses"
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024940001",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2494, Lot 1\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, County of Kings, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the northerly side of Eagle Street (mapped 60 feet wide), distant 200.20 feet (computed) westerly from the intersection of said northerly side of Eagle Street with the westerly side of Franklin Street (mapped 70 feet wide), said point being the POINT or PLACE of BEGINNING;\nTHENCE westerly, along said northerly side of Eagle Street, a distance of 195.195 feet to a point;\nTHENCE northerly, forming an interior angle of 90° with the previous course, a distance of 90.09 feet to a point;\nTHENCE easterly, forming an interior angle of 90° with the previous course, and parallel with Dupont Street and Eagle Street, a distance of 80.67 feet to a point;\nTHENCE northerly, forming an interior angle of 270° with the previous course, a distance of 4.91 to a point;\nTHENCE easterly, forming an interior angle of 90° with the previous course, and parallel with Dupont Street and Eagle Street, a distance of 114.525 feet to a point;\nTHENCE southerly, forming an interior angle of 90° with the previous course, a distance of 95.00 feet to a point, said point being the POINT or PLACE of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 35,
+   "pages": [
+    35,
+    36
+   ],
+   "note": "no area stated. ⚠ the fourth course reads '4.91 to a point' with no unit — transcribed as printed",
+   "traverse": {
+    "verdict": "does_not_close",
+    "walked_area_sf": 17585.1,
+    "closure_error_ft": 4.91,
+    "n_parseable_courses": 5,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3024940005",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2494, Lot 5\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the northerly side of Eagle Street (mapped 60 feet wide), distant 395.395 feet (computed) westerly from the intersection of said northerly side of Eagle Street with the westerly side of Franklin Street (mapped 70 feet wide), said point being the POINT or PLACE of BEGINNING;\nThence westerly, along the westerly prolongation of said northerly side of Eagle Street, a distance of 30.025 feet (computed) to a point;\nThence northerly, forming an interior angle of 90° with the previous course, a distance of 110.03 (computed) feet to a point;\nThence easterly, forming an interior angle of 90° with the previous course, a distance of 30.025 feet (computed) to a point;\nThence southerly, forming an interior angle of 90° with the previous course, a distance of 110.03 feet (computed) to a point, said point being the POINT or PLACE of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 36,
+   "pages": [
+    36
+   ],
+   "note": "no area stated; 30.025 x 110.03 = 3,303.7 sf by arithmetic, not stated in the instrument",
+   "traverse": {
+    "verdict": "does_not_close",
+    "walked_area_sf": 0.0,
+    "closure_error_ft": 110.03,
+    "n_parseable_courses": 3,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "A",
+   "bbl": "3025020002",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Block 2502, Lot 2\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nCOMMENCING at the intersection of the westerly side of West Street (mapped 60 feet wide) with the westerly prolongation of the northerly side of Eagle Street (mapped 60 feet wide), thence running the following two courses to the POINT or PLACE of BEGINNING;\na. Southerly, along said westerly side of West Street, a distance of 30.035 feet; thence\nb. Westerly, forming an angle of 90° with the previous course, along the prolongation of the centerline of Eagle Street and along the line dividing Block 2502 and Block 2472, a distance of 434.54 feet to the POINT or PLACE of BEGINNING; and running thence\nSouthwesterly, forming an exterior angle of 122°42’03” on its southeasterly side with the previous course, a distance of 17.90 feet to a point; thence\nWesterly, forming an interior angle of 122°42’03” with the previous course, a distance of 83.18 feet to a point, said point being on the United States Bulkhead Line; thence\nNortheasterly, forming an interior angle of 57°17’57” with the previous course, along said United States Bulkhead Line, a distance of 17.90 feet to a point, said point being the intersection of said United States Bulkhead Line with said prolongation of the centerline of Eagle Street and the line dividing Block 2502 and Block 2472; thence\nEasterly, forming an interior angle of 122°42’03” with the previous course, along the prolongation of the centerline of Eagle Street and along the line dividing Block 2502 and Block 2472, a distance of 83.18 feet to the POINT or PLACE of BEGINNING.",
+   "stated_area_sf": null,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 36,
+   "pages": [
+    36,
+    37
+   ],
+   "note": "no area stated",
+   "traverse": {
+    "verdict": "does_not_close",
+    "walked_area_sf": 0.0,
+    "closure_error_ft": 434.54,
+    "n_parseable_courses": 3,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "C",
+   "bbl": "3024720006",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit C — Lot 6 Land\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the southerly side of Dupont Street (mapped 60 feet wide), distant 295.29 feet (computed) westerly from the intersection of said southerly side of Dupont Street with the westerly side of Franklin Street (mapped 70 feet wide), said point being the POINT or PLACE of BEGINNING;\nThence southerly, forming an interior angle of 90° with said southerly side of Dupont Street, a distance of 90.020 feet (computed) to a point;\nThence westerly, forming an interior angle of 90° with the previous course, a distance of 100.105 feet (computed) to a point, said point being on the mapped easterly side of West Street (mapped 60 feet wide);\nThence northerly, along said mapped easterly side of West Street, forming an interior angle of 90° with the previous course, a distance of 90.020 feet (computed) to a point; said point being the intersection of said mapped easterly side of West Street with said southerly side of Dupont Street;\nThence easterly, along said southerly side of Dupont Street, forming an interior angle of 90° with the previous course, a distance of 100.105 feet (computed) to a point, said point being the POINT or PLACE of BEGINNING.\nEncompassing an area of 9,011 square feet or 0.207 acres, more or less.",
+   "stated_area_sf": 9011,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 39,
+   "pages": [
+    39
+   ],
+   "note": null,
+   "traverse": {
+    "verdict": "closes",
+    "walked_area_sf": 9011.5,
+    "closure_error_ft": 0.0,
+    "n_parseable_courses": 4,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "D",
+   "bbl": "3024720020",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit D — City Land — Block 2472, Lot 20\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point at the intersection of the prolongation of the southerly side of Dupont Street (mapped 60 feet wide) with the westerly side of West Street (mapped 60 feet wide), said point being the POINT or PLACE of BEGINNING;\nThence easterly, along said prolongation of the southerly side of Dupont Street, a distance of 30.025 feet (computed) to a point, said point being on the centerline of West Street;\nThence southerly, along said centerline of West Street, forming and interior angle of 90° with the previous course, a distance of 95.02 feet (computed) to a point;\nThence westerly, forming an interior angle of 90° with the previous course, a distance of 30.025 feet (computed) to a point, said point being said westerly side of West Street;\nThence northerly, along said westerly side of West Street, forming an interior angle of 90° with the previous course, a distance of 95.02 feet (computed) to a point, said point being the POINT or PLACE of BEGINNING.\nEncompassing an area of 2,853 square feet or 0.065 acres.",
+   "stated_area_sf": 2853,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 40,
+   "pages": [
+    40
+   ],
+   "note": "⚠ 'forming and interior angle' typo as printed. Parcel runs from the westerly side of West Street to its CENTERLINE — i.e. it includes half the mapped street bed.",
+   "traverse": {
+    "verdict": "closes",
+    "walked_area_sf": 2853.0,
+    "closure_error_ft": 0.0,
+    "n_parseable_courses": 4,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "D",
+   "bbl": "3024720025",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit D — City Land — Block 2472, Lot 25\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the northerly side of Commercial Street (mapped 70 feet wide), distant 1529.18 feet (computed) westerly from the intersection of said northerly side of Commercial Street with the westerly side of Manhattan Avenue, said point being the POINT or PLACE of BEGINNING;\nThence westerly, forming an interior angle of 151° 33' 26\" with said northerly side of Commercial Street, a distance of 73.57 feet (computed) to a point, said point being in the centerline of Commercial Street;\nThence southerly, forming an interior angle of 28° 26' 34\" with the previous course, and along said centerline of Commercial Street, a distance of 76.63 feet (computed) to a point, said point being the intersection of said centerline of Commercial Street with the centerline of West Street (mapped 60 feet wide);\nThence southerly, forming an interior angle of 241° 33' 26\" with the previous course, and along said centerline of West Street, a distance of 23.57 feet (computed) to a point, said point being the intersection of said centerline of West Street with the prolongation of the southerly side of Dupont Street (mapped 60 feet wide);\nThence westerly, forming an interior angle of 90° with the previous course, and along said prolongation of the southerly side of Dupont Street, a distance of 30.025 feet (computed) to a point, said point being the intersection of said prolongation of the southerly side of Dupont Street with said westerly side of West Street;\nThence northerly, forming an interior angle of 90° with the previous course and along said westerly side of West Street, a distance of 47.16 feet (computed) to a point, said point being the intersection of said westerly side of West Street with said northerly side of Commercial Street;\nThence northerly, forming an exterior angle of 241° 33' 26\" feet with the previous course and along said northerly side of Commercial Street, a distance of 27.11 feet to a point, said point being the POINT or PLACE of BEGINNING.\nEncompassing an area of 2,879 square feet or 0.066 acres.",
+   "stated_area_sf": 2879,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 40,
+   "pages": [
+    40,
+    41
+   ],
+   "note": "⚠ the last course reads 'an exterior angle of 241° 33' 26\" feet' — the word 'feet' follows an ANGLE, as printed",
+   "traverse": {
+    "verdict": "does_not_close",
+    "walked_area_sf": 1665.4,
+    "closure_error_ft": 106.791,
+    "n_parseable_courses": 6,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "D",
+   "bbl": "3024720035",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit D — City Land — Block 2472, Lot 35\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at the intersection of the northerly side of Commercial Street (mapped 70 feet wide) with the westerly side of Manhattan Avenue, thence running the following two courses to the POINT or PLACE of BEGINNING;\na. Westerly, along said northerly side of Commercial Street, a distant 1529.18 feet (computed)\nb. Thence westerly, forming an angle of 28° 26’ 34” on its southwesterly side with said northerly side of Commercial Street, a distance of 340.09 feet (computed) to a point on the United States Bulkhead Line, said point being the POINT or PLACE of BEGINNING;\nThence southwesterly, along said United States Bulkhead Line, forming an angle of 131° 49' 18\" on its southeasterly side with the previous course, a distance of 80.61 feet (computed) to a point;\nThence continuing southwesterly, along said United States Bulkhead Line, forming an interior angle of 189° 07' 15\" with the previous course, a distance of 112.92 feet (computed) to a point;\nThence westerly, forming an interior angle of 122° 42' 03” with the previous course, a distance of 423.50 feet (computed) to a point, said point being on the United States Pierhead Line;\nThence northeasterly, along said United States Pierhead Line, forming an interior angle of 50° 04' 46\" with the previous course, a distance of 123.90 feet (computed) to a point;\nThence northeasterly, along said United States Pierhead Line, forming an interior angle of 173° 24' 32\" with the previous course, a distance of 87.29 feet (computed) to a point;\nThence westerly, forming an interior angle of 136° 30' 42\" with the previous course, a distance of 395.42 feet (computed) to a point, said point being the POINT or PLACE of BEGINNING.\nEncompassing an area of 63,405 square feet or 1.456 acres.",
+   "stated_area_sf": 63405,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 41,
+   "pages": [
+    41,
+    42
+   ],
+   "note": "⚠ tie course (a) reads 'a distant 1529.18 feet' as printed",
+   "traverse": {
+    "verdict": "does_not_close",
+    "walked_area_sf": 0.0,
+    "closure_error_ft": 2688.19,
+    "n_parseable_courses": 4,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "D",
+   "bbl": "3024720075",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit D — City Land — Block 2472, p/o Lot 75\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the northerly side of Commercial Street (mapped 70 feet wide), distant 1529.18 feet (computed) westerly from the intersection of said northerly side of Commercial Street with the westerly side of Manhattan Avenue, said point being the POINT or PLACE of BEGINNING;\nThence westerly, forming an exterior angle of 28° 26’ 34” on its southwesterly side with said northerly side of Commercial Street, a distance of 735.51 feet to a point, said point being on the United States Pierhead Line;\nThence northeasterly, along said United States Pierhead Line, forming an interior angle of 43° 29' 18\" with the previous course, a distance of 291.28 feet to a point;\nThence continuing northeasterly, along said United States Pierhead Line, forming an interior angle of 175° 55' 52\" with the previous course, a distance of 409.64 feet to a point;\nThence continuing northeasterly, along said United States Pierhead Line, forming an interior angle of 171° 29' 13\" with the previous course, a distance of 176.11 feet to a point;\nThence southerly, forming an interior angle of 87° 32' 11\" with the previous course, a distance of 237.44 feet to a point;\nThence westerly, forming an interior angle of 107° 24’ 04” with the previous course, a distance of 152.68 feet (computed) to a point;\nThence southerly, forming an interior angle of 224° 09’ 22” with the previous course, a distance of 32.37 feet to a point;\nThence easterly, forming an interior angle of 270° with the previous course, a distance of 43.00 feet to a point;\nThence southerly, forming an interior angle of 90° with the previous course, a distance of 70.00 feet to a point;\nThence westerly, forming an interior angle of 90° with the previous course, a distance of 43.00 feet to a point;\nThence southerly, forming an interior angle of 270° with the previous course, a distance of 77.00 feet to a point;\nThence southerly, forming an interior angle of 223° 05’ 05” with the previous course, a distance of 73.04 feet to a point, said point being the POINT or PLACE of BEGINNING.\nEncompassing an area of 226,481 square feet or 5.199 acres.",
+   "stated_area_sf": 226481,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 42,
+   "pages": [
+    42,
+    43
+   ],
+   "note": "describes PART of lot 75 ('p/o Lot 75') — the document figure must test <= the map figure, never equality",
+   "traverse": {
+    "verdict": "does_not_close",
+    "walked_area_sf": 178277.6,
+    "closure_error_ft": 1014.315,
+    "n_parseable_courses": 9,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "D",
+   "bbl": "3024940003",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit D — City Land — Block 2494 Lot 3\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the southerly side of Dupont Street (mapped 60 feet wide), distant 395.395 feet (computed) westerly from the intersection of said southerly side of Dupont Street with the westerly side of Franklin Street (mapped 70 feet wide), said point being the mapped easterly side of West Street (mapped 60 feet wide) and the POINT or PLACE of BEGINNING;\nThence southerly, along said mapped easterly side of West Street, forming an interior angle of 90° with said southerly side of Dupont Street, a distance of 90.020 feet (computed) to a point;\nThence westerly, forming an interior angle of 90° with the previous course, a distance of 30.025 feet (computed) to a point, said point being on the mapped centerline of West Street;\nThence northerly, along said mapped centerline of West Street, forming an interior angle of 90° with the previous course, a distance of 90.020 feet (computed) to a point; said point being the intersection of said mapped centerline of West Street with the prolongation of said southerly side of Dupont Street;\nThence easterly, along said prolongation of the southerly side of Dupont Street, forming an interior angle of 90° with the previous course, a distance of 30.025 feet (computed) to a point, said point being the POINT or PLACE of BEGINNING.\nEncompassing an area of 2,703 square feet or 0.062 acres, more or less.",
+   "stated_area_sf": 2703,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 43,
+   "pages": [
+    43
+   ],
+   "note": "⭐ WORD-FOR-WORD the same land as Exhibit H (p52) — one instrument describing the same parcel twice, an internal cross-check that agrees at 2,703 sf",
+   "traverse": {
+    "verdict": "closes",
+    "walked_area_sf": 2702.9,
+    "closure_error_ft": 0.0,
+    "n_parseable_courses": 4,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "E",
+   "bbl": "3024720030",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit E — GLA Land — Block 2472, Lot 30\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at the intersection of the westerly side of West Street (mapped 60 feet wide) with the westerly prolongation of the northerly side of Eagle Street (mapped 60’ wide), thence running the following two courses to the POINT or PLACE of BEGINNING:\na. Southerly, along said westerly side of West Street, distant 30.035 feet (computed); thence\nb. Westerly, forming an interior angle of 90° with the previous course and along the line dividing Block 2472 and Block 2502, a distance of 517.72 feet (computed) to a point, said point being on the United States Bulkhead Line and being the POINT or PLACE of BEGINNING; thence\nWesterly, continuing along the line dividing Block 2472 and Block 2502, a distance of 449.73 feet (computed) to a point, said point being on the United States Pierhead Line; thence\nNortheasterly, along said United States Pierhead Line, forming an interior angle of 50°09’45” with the previous course, a distance of 39.11 feet (computed) to a point; thence\nNortheasterly, along said United States Pierhead Line, forming an interior angle of 179°55’01” with the previous course, a distance of 136.94 feet (computed) to a point; thence\nEasterly, forming an interior angle of 129°55’14” with the previous course, a distance of 423.50 feet (computed) to a point on said United States Bulkhead Line; thence\nSouthwesterly, along said United States Bulkhead Line, forming an interior angle of 57°17’57” with the previous course, a distance of 160.50 feet (computed) to a point, said point being the POINT or PLACE of BEGINNING.\nEncompassing an area of 58,974 square feet or 1.354 acres, more or less.",
+   "stated_area_sf": 58974,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 44,
+   "pages": [
+    44
+   ],
+   "note": null,
+   "traverse": {
+    "verdict": "does_not_close",
+    "walked_area_sf": 8168.8,
+    "closure_error_ft": 544.779,
+    "n_parseable_courses": 4,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "E",
+   "bbl": "3024720055",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit E — GLA Land — Block 2472, Lot 55\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at the intersection of the northerly side of Commercial Street (mapped 70 feet wide) with the westerly side of Manhattan Avenue, thence running the following two courses to the POINT or PLACE of BEGINNING;\na. Westerly, along said northerly side of Commercial Street, a distance of 663.25 feet (computed); thence\nb. Northwesterly, forming an angle of 90° on its northeasterly side with said northerly side of Commercial Street, a distance of 457.74 feet (computed) to a point, said point being on the United States Bulkhead Line and being the POINT or PLACE of BEGINNING;\nSouthwesterly, along said United States Bulkhead Line, forming an exterior angle of 82°29’38” with the previous course, a distance of 366.06 feet (computed) to a point; thence\nSouthwesterly, along said United States Bulkhead Line, forming an interior angle of 186°22’15” with the previous course, a distance of 299.07 feet (computed) to a point; thence\nNorthwesterly, forming an interior angle of 76°07'23\" with the previous course, a distance of 173.30 feet (computed) to a point, said point being on the United States Pierhead Line; thence\nNortheasterly, along said United States Pierhead Line, forming an interior angle of 92°27’55” with the previous course, a distance of 290.61 feet (computed) to a point; thence\nNortheasterly, along said United States Pierhead Line, forming an interior angle of 175°26’32” with the previous course, a distance of 363.17 feet (computed) to a point; thence\nSoutheasterly, forming an interior angle of 92°05’33” with the previous course, a distance of 52.99 feet (computed) to a point, said point being the POINT or PLACE of BEGINNING.\nEncompassing an area of 72,032 square feet or 1.654 acres, more or less.",
+   "stated_area_sf": 72032,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 44,
+   "pages": [
+    44,
+    45
+   ],
+   "note": null,
+   "traverse": {
+    "verdict": "unparseable",
+    "walked_area_sf": null,
+    "closure_error_ft": null,
+    "n_parseable_courses": null,
+    "has_curve": null,
+    "reason": "only 2 parseable courses"
+   }
+  },
+  {
+   "exhibit": "E",
+   "bbl": "3024940010",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit E — GLA Land — Block 2494, Lot 10\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the southerly side of Dupont Street (mapped 60 feet wide), distant 200.20 feet westerly from the intersection of said southerly side of Dupont Street with the westerly side of Franklin Street (mapped 70 feet wide), said point being the POINT or PLACE of BEGINNING;\nThence southerly, forming an interior angle of 90° with the previous course, a distance of 105.05 feet to a point;\nThence westerly, forming an interior angle of 90° with the previous course, and parallel with Dupont Street and Eagle Street, a distance of 114.525 feet to a point;\nThence southerly, forming an interior angle of 270° with the previous course, a distance of 4.91 feet to a point;\nThence westerly, forming an interior angle of 90° with the previous course, and parallel with Dupont Street and Eagle Street, a distance of 80.67 to a point;\nThence northerly, forming an interior angle of 90° with the previous course, a distance of 19.94 feet to a point;\nThence easterly, forming an interior angle of 90° with the previous course, and parallel with Dupont Street and Eagle Street, a distance of 100.105 feet to a point;\nThence northerly, forming an interior angle of 270° with the previous course, a distance of 90.02 feet (computed) to a point on said southerly side of Dupont Street;\nThence easterly, along said southerly side of Dupont Street a distance of 95.09 feet to a point, said point being the POINT or PLACE of BEGINNING.\nEncompassing an area of 11,890 square feet or 0.273 acres.",
+   "stated_area_sf": 11890,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 45,
+   "pages": [
+    45,
+    46
+   ],
+   "note": "⚠ 'a distance of 80.67 to a point' — unit omitted, as printed",
+   "traverse": {
+    "verdict": "does_not_close",
+    "walked_area_sf": 3019.4,
+    "closure_error_ft": 80.67,
+    "n_parseable_courses": 7,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "E",
+   "bbl": "3024940020",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit E — GLA Land — Block 2494, Lot 20\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at the intersection of the southerly side of Dupont Street (mapped 60 feet wide) with the westerly side of Franklin Street (mapped 70 feet wide), said point being the POINT or PLACE of BEGINNING;\nThence southerly, along said westerly side of Franklin Street, a distance of 100.025 feet (computed) to a point;\nThence westerly, forming an interior angle of 90° with the previous course, along the centerline of the block and parallel with Dupont Street and Eagle Street, a distance of 200.20 feet (computed) to a point;\nThence northerly, forming an interior angle of 90° with the previous course, a distance of 100.025 feet (computed) to a point, said point being on said southerly side of Dupont Street;\nThence westerly, along said southerly side of Dupont Street, forming an interior angle of 90° with the previous course, a distance of 200.20 feet (computed) to a point, said point being the POINT or PLACE of BEGINNING.\nEncompassing an area of 20,025 square feet or 0.460 acres.",
+   "stated_area_sf": 20025,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 46,
+   "pages": [
+    46
+   ],
+   "note": "⚠ the closing course is printed 'Thence westerly ... along said southerly side of Dupont Street' but must run EASTERLY to return to the point of beginning — a contradiction in the recorded original, not repaired",
+   "traverse": {
+    "verdict": "does_not_close",
+    "walked_area_sf": 20025.0,
+    "closure_error_ft": 400.4,
+    "n_parseable_courses": 4,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "E",
+   "bbl": "3025020001",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit E — GLA Land — Block 2502, Lot 1\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the westerly side of West Street (mapped 60 feet wide), distant 30.035 feet southerly from the intersection of said westerly side of West Street with the westerly prolongation of the northerly side of Eagle Street (mapped 60 feet wide), said point being the POINT or PLACE of BEGINNING; and running thence\nSoutherly, along said westerly side of West Street, a distance of 260.31 feet to a point, said point being the intersection of said westerly side of West Street with the centerline of Freeman Street (as mapped); thence\nWesterly, forming an interior angle of 90° with the previous course, and along said centerline of Freeman Street, a distance of 637.62 feet to a point, said point being the intersection of said centerline of Freeman Street with the United States Bulkhead Line; thence\nNortherly, along said United States Bulkhead Line, forming an interior angle of 85°00’19” with the previous course, a distance of 30.15 feet to a point, said point being the intersection of the northerly side of Freeman Street (as mapped) with said United States Bulkhead Line; thence\nWesterly, forming an interior angle of 274°59’41” with the previous course, and part of the distance along said northerly side of Freeman Street and its westerly prolongation, a distance of 525.00 feet to a point on the United States Pierhead Line; thence\nNortheasterly, along said United States Pierhead Line, forming an interior angle of 50°05’53” with the previous course, a distance of 300.17 feet to a point; thence\nEasterly, forming an interior angle of 129°54’07” with the previous course, and part of the distance along the westerly prolongation of the centerline of Eagle Street and the centerline of Eagle Street (as mapped), a distance of 449.73 feet to a point, said point being the intersection of said centerline of Eagle Street with said United States Bulkhead Line; thence\nSouthwesterly, forming an interior angle of 57°17’57” with the previous course, and along said United States Bulkhead Line, a distance of 17.90 feet to a point; thence\nEasterly, forming an interior angle of 302°42’03” with the previous course, a distance of 83.18 feet to a point; thence\nNortheasterly, forming an interior angle of 237°17’57” with the previous course, a distance of 17.90 feet to a point on said centerline of Eagle Street; thence\nEasterly, forming an interior angle of 122°42’03” with the previous course, along said centerline of Eagle Street a distance of 434.54 feet to the POINT or PLACE of BEGINNING.\nEncompassing an area of 262,808 square feet or 6.033 acres, more or less.",
+   "stated_area_sf": 262808,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 46,
+   "pages": [
+    46,
+    47
+   ],
+   "note": null,
+   "traverse": {
+    "verdict": "does_not_close",
+    "walked_area_sf": 41684.4,
+    "closure_error_ft": 301.77,
+    "n_parseable_courses": 7,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "E",
+   "bbl": "3025100001",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit E — GLA Land — Block 2510, Lot 1\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the westerly side of West Street (mapped 60 feet wide), distant 230.28 feet (230 feet Tax Map) northerly from the intersection of said westerly side of West Street with the northerly side of Huron Street, said point being the POINT or PLACE of BEGINNING; and running thence\nWesterly, forming an interior angle of 90° with the aforementioned westerly side of West Street, a distance of 1,160.00 feet to a point on the United States Pierhead Line; thence\nNortherly, along said United States Pierhead Line, forming an interior angle of 90° with the previous course, a distance of 290.35 feet to a point; thence\nEasterly, forming an interior angle of 90° with the previous course, and part of the distance along the westerly prolongation of the northerly side of Freeman Street and the northerly side of Freeman Street (as mapped), 525.00 feet to a point on the United States Pierhead Line; thence\nSoutherly, along said United States Bulkhead Line, forming an interior angle of 85°00’19” with the previous course, a distance of 30.15 feet to a point, said point being the intersection of the centerline of Freeman street (as mapped) with said United States Bulkhead Line; thence\nEasterly, forming an interior angle of 274°59’41” with the previous course, along said centerline of Freeman Street (as mapped), a distance of 637.62 feet to a point on said westerly side of West Street; thence\nSoutherly, along said westerly side of West Street, forming an interior angle of 90° with the previous course, a distance of 260.31 feet to the POINT or PLACE of BEGINNING.\nEncompassing an area of 317,688 square feet or 7.293 acres, more or less.",
+   "stated_area_sf": 317688,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 47,
+   "pages": [
+    47,
+    48
+   ],
+   "note": "⭐ the tie line states BOTH figures: 'distant 230.28 feet (230 feet Tax Map)' — the instrument records its own survey-vs-tax-map divergence. ⚠ the third course reads 'to a point on the United States Pierhead Line' where the following course calls the same line the BULKHEAD line.",
+   "traverse": {
+    "verdict": "closes",
+    "walked_area_sf": 318342.6,
+    "closure_error_ft": 2.622,
+    "n_parseable_courses": 6,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "E",
+   "bbl": "3025200057",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit E — GLA Land — Block 2520, Lot 57\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the westerly side of West Street (mapped 60 feet wide), distant 100.12 feet (computed) northerly from the intersection of said westerly side of West Street with the northerly side of Huron Street (mapped 60’ wide), said point being the POINT or PLACE of BEGINNING; thence\nWesterly, forming an interior angle of 90° with the previous, a distance of 1160.00 feet (computed) to a point, said point being on the United States Pierhead Line; thence\nNortheasterly, along said United States Pierhead Line, forming an interior angle of 90° with the previous course, a distance of 130.16 feet (computed) to a point; thence\nEasterly, forming an interior angle of 90° with the previous course and along the line dividing Block 2520 and Block 2510, a distance of 1160.00 feet (computed) to a point, said point being on said westerly side of West Street; thence\nSoutherly, along said westerly side of West Street forming an interior angle of 90° with the previous course, a distance of 130.16 feet (computed) to a point, said point being the POINT or PLACE of BEGINNING.\nEncompassing an area of 150,980 square feet or 3.466 ACRES acres, more or less.",
+   "stated_area_sf": 150980,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 48,
+   "pages": [
+    48,
+    49
+   ],
+   "note": "⚠ 'or 3.466 ACRES acres' as printed. 1160.00 x 130.16 = 150,985.6 sf, 5.6 sf above the stated 150,980 — reported, not repaired.",
+   "traverse": {
+    "verdict": "does_not_close",
+    "walked_area_sf": 0.0,
+    "closure_error_ft": 130.16,
+    "n_parseable_courses": 3,
+    "has_curve": false,
+    "reason": null
+   }
+  },
+  {
+   "exhibit": "F",
+   "bbl": null,
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit F — Parcel H1H2 Land\nALL THAT CERTAIN PLOT, PIECE, OR PARCEL OF LAND, SITUATE, LYING, AND BEING IN THE BOROUGH OF BROOKLYN, KINGS COUNTY, CITY AND STATE OF NEW YORK, BOUNDED AND DESCRIBED AS FOLLOWS:\nBEGINNING AT A POINT ON THE NORTHERLY SIDE OF COMMERCIAL STREET (MAPPED 70 FEET WIDE), DISTANT 663.25 FEET (COMPUTED) WESTERLY FROM THE INTERSECTION OF SAID NORTHERLY SIDE OF COMMERCIAL STREET WITH THE WESTERLY SIDE OF MANHATTAN AVENUE, SAID POINT BEING THE POINT OR PLACE OF BEGINNING;\nTHENCE WESTERLY, ALONG SAID NORTHERLY SIDE OF COMMERCIAL STREET, A DISTANCE OF 210.78 FEET TO A POINT;\nTHENCE NORTHWESTERLY, FORMING AN INTERIOR ANGLE OF 90° WITH THE PREVIOUS COURSE, A DISTANCE OF 211.59 FEET TO A POINT;\nTHENCE NORTHEASTERLY, FORMING AN INTERIOR ANGLE OF 90° WITH THE PREVIOUS COURSE, A DISTANCE OF 210.78 FEET TO A POINT;\nTHENCE SOUTHEASTERLY, FORMING AN INTERIOR ANGLE OF 90° WITH THE PREVIOUS COURSE, A DISTANCE OF 211.59 FEET TO A POINT, SAID POINT BEING THE POINT OR PLACE OF BEGINNING.\nENCOMPASSING AN AREA OF 44,599 SQUARE FEET OR 1.023 ACRES, MORE OR LESS.",
+   "stated_area_sf": 44599,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 50,
+   "pages": [
+    50
+   ],
+   "note": "named by PARCEL (H1/H2), not by tax lot — no BBL stated in the exhibit. 210.78 x 211.59 = 44,599.9 sf against the stated 44,599.",
+   "traverse": {
+    "verdict": "unparseable",
+    "walked_area_sf": null,
+    "closure_error_ft": null,
+    "n_parseable_courses": null,
+    "has_curve": null,
+    "reason": "only 1 parseable courses"
+   }
+  },
+  {
+   "exhibit": "H",
+   "bbl": "3024940003",
+   "heading_in_doc": null,
+   "shape": "per_lot",
+   "courses_verbatim": "Exhibit H — Block 2494 Lot 3\nALL that certain plot, piece, or parcel of land, situate, lying, and being in the Borough of Brooklyn, Kings County, City and State of New York, bounded and described as follows:\nBEGINNING at a point on the southerly side of Dupont Street (mapped 60 feet wide), distant 395.395 feet (computed) westerly from the intersection of said southerly side of Dupont Street with the westerly side of Franklin Street (mapped 70 feet wide), said point being the mapped easterly side of West Street (mapped 60 feet wide) and the POINT or PLACE of BEGINNING;\nThence southerly, along said mapped easterly side of West Street, forming an interior angle of 90° with said southerly side of Dupont Street, a distance of 90.020 feet (computed) to a point;\nThence westerly, forming an interior angle of 90° with the previous course, a distance of 30.025 feet (computed) to a point, said point being on the mapped centerline of West Street;\nThence northerly, along said mapped centerline of West Street, forming an interior angle of 90° with the previous course, a distance of 90.020 feet (computed) to a point; said point being the intersection of said mapped centerline of West Street with the prolongation of said southerly side of Dupont Street;\nThence easterly, along said prolongation of the southerly side of Dupont Street, forming an interior angle of 90° with the previous course, a distance of 30.025 feet (computed) to a point, said point being the POINT or PLACE of BEGINNING.\nEncompassing an area of 2,703 square feet or 0.062 acres, more or less.",
+   "stated_area_sf": 2703,
+   "covers_bbls": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 52,
+   "pages": [
+    52
+   ],
+   "note": "⭐ identical text to Exhibit D's Block 2494 Lot 3 (p43). Runs to the mapped CENTERLINE of West Street, i.e. it includes half the street bed — which is why the document's 2,703 sf sits ~4% under PLUTO's 2,814 across p21v3/v4/p22v1 (the recorded survey-vs-taxmap divergence already on file).",
+   "traverse": {
+    "verdict": "closes",
+    "walked_area_sf": 2702.9,
+    "closure_error_ft": 0.0,
+    "n_parseable_courses": 4,
+    "has_curve": false,
+    "reason": null
+   }
+  }
+ ],
+ "pending_descriptions_note": "CLEARED 2026-08-14: all six exhibits carrying legal descriptions (A p23-37, C p39, D p40-43, E p44-49, F p50, H p52) transcribed verbatim from the images already on disk. 31 descriptions. Pages 1-22 and 51 were also reviewed for descriptions: p38 is Exhibit B (a LIST of seven Subparcel Development and Easement Agreements, already captured in cross_instruments) and p51 is Exhibit G (the development-rights allocation chart) — neither carries metes and bounds."
+}

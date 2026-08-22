@@ -1,0 +1,42 @@
+{
+ "clauses": 23282,
+ "fired": 1056,
+ "collide": 57,
+ "quoted_performative": 83,
+ "truth": {
+  "recital": 473,
+  "operative": 191
+ },
+ "agree": {
+  "recital": {
+   "transacts": 68,
+   "observes": 93,
+   "signals": 16
+  },
+  "operative": {
+   "transacts": 77,
+   "signals": 2,
+   "observes": 3
+  }
+ },
+ "keep": [
+  "perform_grant",
+  "hereby_verb",
+  "consideration",
+  "is_owner",
+  "known_as",
+  "as_of_state",
+  "balance_is",
+  "was_recorded",
+  "estimated"
+ ],
+ "drop": [
+  "witnesseth",
+  "executed",
+  "intends",
+  "will_apply",
+  "conditional",
+  "upon_future"
+ ],
+ "measured_against": "census_head, 666 docs, clause-level, WHEREAS/NOW-THEREFORE structural labels"
+}

@@ -1,0 +1,3301 @@
+{
+ "1000370008": [
+  {
+   "bbl": "1000370008",
+   "trans_num": 82068,
+   "change_date": "2018-09-18",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "37",
+   "new_lot": 8,
+   "authority": "REUC ident No W3089 ( WEWORK-WW110 WALL LLC) was added on lot 8 as requested by the REUC unit on 9/17/2018.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "1000370008",
+   "trans_num": 82185,
+   "change_date": "2018-09-28",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "37",
+   "new_lot": 8,
+   "authority": "Correction on ident number W3089 WEWORK-WW110 WALL LLC",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "1000370008",
+   "trans_num": 91686,
+   "change_date": "2021-02-01",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "37",
+   "new_lot": 8,
+   "authority": "REUC ident ??W3089 (WEWORK) deleted from lot 8 as requested by the REUC Unit, 1/26/2021",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "1000370013": [],
+ "1008000049": [
+  {
+   "bbl": "1008000049",
+   "trans_num": 69276,
+   "change_date": "2015-04-29",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "800",
+   "new_lot": 49,
+   "authority": "Deed recorded CRFN# 2013000343074 , 8-27-2013 Survey by James Weed , 4 -16-2015",
+   "cites": {
+    "crfns": [
+     "2013000343074"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "1008000053": [],
+ "1008000055": [],
+ "1008000056": [],
+ "1014290025": [
+  {
+   "bbl": "1014290025",
+   "trans_num": 6991,
+   "change_date": "2008-09-19",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "1429",
+   "new_lot": 25,
+   "authority": "Deed  For Lot 25 Recorded 12/1/2006 Deed CRFN # 2006000663503. Deed  For Lot 121 Recorded 12/1/2006 Deed CRFN # 2006000663500. Air Volume of lot 121 is merged into lot 25.  Survey By::Fehringer Surveing, P.C  Survey date: 11/5/2005 Pw 1 #104911062",
+   "cites": {
+    "crfns": [
+     "2006000663500",
+     "2006000663503"
+    ],
+    "doc_ids": [],
+    "survey_dates": [
+     "11/5/2005"
+    ],
+    "surveyors": [],
+    "dob_jobs": [
+     "104911062"
+    ],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "1014290025",
+   "trans_num": 8342,
+   "change_date": "2008-10-22",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "1429",
+   "new_lot": 25,
+   "authority": "Reconfiguration of lot 25 and 121 as of correction of deed",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "1014290025",
+   "trans_num": 8345,
+   "change_date": "2008-10-22",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "1429",
+   "new_lot": 25,
+   "authority": "Deed lot 25  Recorded 12/01/2006 Deed CRFN # 2006000663503  Deed lot 121  Recorded 12/01/2006 Deed CRFN # 2006000663500  Survey By: Fehringer Surveying P.C  Survey date: 11/5/2005 Pw 1 #104233517",
+   "cites": {
+    "crfns": [
+     "2006000663500",
+     "2006000663503"
+    ],
+    "doc_ids": [],
+    "survey_dates": [
+     "11/5/2005"
+    ],
+    "surveyors": [],
+    "dob_jobs": [
+     "104233517"
+    ],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "1014290025",
+   "trans_num": 8384,
+   "change_date": "2008-10-23",
+   "change_type": "Condominium",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "1429",
+   "new_lot": 25,
+   "authority": "Condominium # 1960  Condominium Name: 255 East 74 Street Condominium  Approval Date: 10/06/2008  Decl  CRFN # 2008000409253  Maps CRFN # 2008000409254  Survey by: Fehringer Surveing, P.C   Survey done on 11/5/2005",
+   "cites": {
+    "crfns": [
+     "2008000409253",
+     "2008000409254"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [
+     "Fehringer Surveing, P.C"
+    ],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "1014290025",
+   "trans_num": 12743,
+   "change_date": "2009-02-04",
+   "change_type": "Condominium",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "1429",
+   "new_lot": 25,
+   "authority": "Condominium # 1960  Condominium Name: 255 East 74 Street Condominium  Approval Date: 10/6/2008  Decl  CRFN # 2008000409253  Maps CRFN # 2008000409254  Survey by: Fehringer Surveing, P.C  Survey done on 11/5/2005",
+   "cites": {
+    "crfns": [
+     "2008000409253",
+     "2008000409254"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [
+     "Fehringer Surveing, P.C"
+    ],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "1014290025",
+   "trans_num": 23705,
+   "change_date": "2010-02-19",
+   "change_type": "Condominium",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "1429",
+   "new_lot": 25,
+   "authority": "Condo#                 Condo. No. 1960-A  Condo s name:      255 East 74th Street Condominium  Decl. CRFN#        2010000056104  Maps CRFN#        2010000056105  Survey by:             None  Survey Date :        N/A",
+   "cites": {
+    "crfns": [
+     "2010000056104",
+     "2010000056105"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [
+     "None"
+    ],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "1014290027": [],
+ "1014290028": [
+  {
+   "bbl": "1014290028",
+   "trans_num": 82620,
+   "change_date": "2018-11-15",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "1429",
+   "new_lot": 28,
+   "authority": "REUC ident A2613-505 (AT&T) added to lot 28 as requested by the REUC Unit, 11/08/2018",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "1014290128": [],
+ "1014460001": [
+  {
+   "bbl": "1014460001",
+   "trans_num": 588545,
+   "change_date": "2026-05-15",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "1446",
+   "new_lot": 1,
+   "authority": "Deed for lot# 1,2,3 recorded on 09-30-2024 CRFN 2024000254255",
+   "cites": {
+    "crfns": [
+     "2024000254255"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "1014460002": [
+  {
+   "bbl": "1014460002",
+   "trans_num": 588545,
+   "change_date": "2026-05-15",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Dropped"
+   ],
+   "new_block": "1446",
+   "new_lot": 2,
+   "authority": "Deed for lot# 1,2,3 recorded on 09-30-2024 CRFN 2024000254255",
+   "cites": {
+    "crfns": [
+     "2024000254255"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "1014460003": [
+  {
+   "bbl": "1014460003",
+   "trans_num": 588545,
+   "change_date": "2026-05-15",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Dropped"
+   ],
+   "new_block": "1446",
+   "new_lot": 3,
+   "authority": "Deed for lot# 1,2,3 recorded on 09-30-2024 CRFN 2024000254255",
+   "cites": {
+    "crfns": [
+     "2024000254255"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "1014460004": [],
+ "1014460051": [
+  {
+   "bbl": "1014460051",
+   "trans_num": 48184,
+   "change_date": "2012-08-29",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "1446",
+   "new_lot": 51,
+   "authority": "REUC Ident # M6002-5 placed on lot 51 as requested by REUC unit on 8/20/2012",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "1014460052": [],
+ "1014460151": [],
+ "1014461101": [],
+ "1014461102": [],
+ "1014461103": [],
+ "1014461104": [],
+ "1014461105": [],
+ "1014461106": [],
+ "1014461107": [],
+ "1014461108": [],
+ "1014461109": [],
+ "1014461110": [],
+ "1014461111": [],
+ "1014461112": [],
+ "1014461113": [],
+ "1014461114": [],
+ "1014461115": [],
+ "1014461116": [],
+ "1014461117": [],
+ "1014461118": [],
+ "1014461119": [],
+ "1014461120": [],
+ "1014461121": [],
+ "1014461122": [],
+ "1014461123": [],
+ "1014461124": [],
+ "1014461125": [],
+ "1014461126": [],
+ "1014461127": [],
+ "1014461128": [],
+ "1014461129": [],
+ "1014461130": [],
+ "1014461131": [],
+ "1014461132": [],
+ "1014461133": [],
+ "1014461134": [],
+ "1014461135": [],
+ "1014461136": [],
+ "1014461137": [],
+ "1014461138": [],
+ "1014461139": [],
+ "1014461140": [],
+ "1014461141": [],
+ "1014461142": [],
+ "1014461143": [],
+ "1014461144": [],
+ "1014461145": [],
+ "1014461146": [],
+ "1014461147": [],
+ "1014461148": [],
+ "1014461149": [],
+ "1014461150": [],
+ "1014461151": [],
+ "1014461152": [],
+ "1014461153": [],
+ "1014461154": [],
+ "1014461155": [],
+ "1014461156": [],
+ "1014461157": [],
+ "1014461158": [],
+ "1014461159": [],
+ "1014461160": [],
+ "1014461161": [],
+ "1014461162": [],
+ "1014461163": [],
+ "1014461164": [],
+ "1014461165": [],
+ "1014461166": [],
+ "1014461167": [],
+ "1014461168": [],
+ "1014461169": [],
+ "1014461170": [],
+ "1014461171": [],
+ "1014461172": [],
+ "1014461173": [],
+ "1014461174": [],
+ "1014461175": [],
+ "1014461176": [],
+ "1014461177": [],
+ "1014461178": [],
+ "1014461179": [],
+ "1014461180": [],
+ "1014461181": [],
+ "1015400003": [
+  {
+   "bbl": "1015400003",
+   "trans_num": 50861,
+   "change_date": "2012-12-21",
+   "change_type": "Air and Subterranean",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "1540",
+   "new_lot": 3,
+   "authority": "Zelda Recorded on 12/10/2012  Zelda CRFN # 2012000483179  Survey by: Earl B. Lovell- S.P. Belcher Inc  Survey Date: 11/30/2012  PW 1 # 121354550",
+   "cites": {
+    "crfns": [
+     "2012000483179"
+    ],
+    "doc_ids": [],
+    "survey_dates": [
+     "11/30/2012"
+    ],
+    "surveyors": [
+     "Earl B. Lovell- S.P. Belcher Inc"
+    ],
+    "dob_jobs": [
+     "121354550"
+    ],
+    "instrument_kinds": [
+     "zlda"
+    ]
+   }
+  },
+  {
+   "bbl": "1015400003",
+   "trans_num": 78232,
+   "change_date": "2017-10-26",
+   "change_type": "Air and Subterranean",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "1540",
+   "new_lot": 3,
+   "authority": "Air rights lot 9003 was merged back into lot 3 as requested by the owner - 95 and Third LLC",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "1015400003",
+   "trans_num": 78234,
+   "change_date": "2017-10-26",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Dropped"
+   ],
+   "new_block": "1540",
+   "new_lot": 3,
+   "authority": "Deed Lots 2, 3, 45, Recorded on 12/31/2014  Deed CRFN # 2014000430833   Deed Lots 4, 46, 47, 48, 49, 9002, 9003, Recorded on 10/21/2015  Deed CRFN # 2015000377043",
+   "cites": {
+    "crfns": [
+     "2014000430833",
+     "2015000377043"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "1019080004": [],
+ "1019080060": [
+  {
+   "bbl": "1019080060",
+   "trans_num": 130901,
+   "change_date": "2024-04-08",
+   "change_type": "Condominium",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "1908",
+   "new_lot": 60,
+   "authority": "Condo No. 3194, Condo Name: THE 158 WEST 124TH STREET CONDOMINIUM, Condominium Approval/Recorded Date: 3/27/2024, 4/5/2024 , Decl.  CRFN # 2024000086716, Maps CRFN # 2024000086717",
+   "cites": {
+    "crfns": [
+     "2024000086716",
+     "2024000086717"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3024720002": [
+  {
+   "bbl": "3024720002",
+   "trans_num": 20706,
+   "change_date": "2009-10-29",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 2,
+   "authority": "removed bulkhead line created in error during the conversion to the digital tax map format",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720002",
+   "trans_num": 66517,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 2,
+   "authority": "Step one of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720002",
+   "trans_num": 83289,
+   "change_date": "2018-12-20",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Dropped"
+   ],
+   "new_block": "2472",
+   "new_lot": 2,
+   "authority": "Step one of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720002",
+   "trans_num": 83294,
+   "change_date": "2018-12-20",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 2,
+   "authority": "Deed recorded CRFN# 2005000628273 ,   11-10-2005 Survey bu Paul D Fisher,10/5/2018",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720002",
+   "trans_num": 86750,
+   "change_date": "2019-10-03",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 2,
+   "authority": "paper street removal",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720002",
+   "trans_num": 87034,
+   "change_date": "2019-10-15",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 2,
+   "authority": "paper street correction",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720002",
+   "trans_num": 93636,
+   "change_date": "2021-09-13",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 2,
+   "authority": "step one of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  }
+ ],
+ "3024720003": [
+  {
+   "bbl": "3024720003",
+   "trans_num": 83294,
+   "change_date": "2018-12-20",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 3,
+   "authority": "Deed recorded CRFN# 2005000628273 ,   11-10-2005 Survey bu Paul D Fisher,10/5/2018",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720003",
+   "trans_num": 84181,
+   "change_date": "2019-03-01",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 3,
+   "authority": "Correction to tax lot 21 and 3 lot face.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3024720010": [
+  {
+   "bbl": "3024720010",
+   "trans_num": 66517,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 10,
+   "authority": "Step one of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  }
+ ],
+ "3024720020": [
+  {
+   "bbl": "3024720020",
+   "trans_num": 66529,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 20,
+   "authority": "step 2 of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  }
+ ],
+ "3024720021": [
+  {
+   "bbl": "3024720021",
+   "trans_num": 66529,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 21,
+   "authority": "step 2 of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720021",
+   "trans_num": 83289,
+   "change_date": "2018-12-20",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 21,
+   "authority": "Step one of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720021",
+   "trans_num": 83294,
+   "change_date": "2018-12-20",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 21,
+   "authority": "Deed recorded CRFN# 2005000628273 ,   11-10-2005 Survey bu Paul D Fisher,10/5/2018",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720021",
+   "trans_num": 84181,
+   "change_date": "2019-03-01",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 21,
+   "authority": "Correction to tax lot 21 and 3 lot face.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720021",
+   "trans_num": 86750,
+   "change_date": "2019-10-03",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 21,
+   "authority": "paper street removal",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720021",
+   "trans_num": 87034,
+   "change_date": "2019-10-15",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 21,
+   "authority": "paper street correction",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720021",
+   "trans_num": 95288,
+   "change_date": "2022-03-04",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 21,
+   "authority": "Recorded/Filed : 2/9/2022  City Register File No (CRFN): 2022000060402  Survey By: Paul D Fisher   on date: 8/11/2021  SI (job #): 321600594",
+   "cites": {
+    "crfns": [
+     "2022000060402"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3024720025": [
+  {
+   "bbl": "3024720025",
+   "trans_num": 66529,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 25,
+   "authority": "step 2 of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  }
+ ],
+ "3024720030": [
+  {
+   "bbl": "3024720030",
+   "trans_num": 66517,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 30,
+   "authority": "Step one of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720030",
+   "trans_num": 89764,
+   "change_date": "2020-04-22",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 30,
+   "authority": "Corrected the tax lot faces for these lots.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720030",
+   "trans_num": 93640,
+   "change_date": "2021-09-13",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 30,
+   "authority": "Deed recorded CRFN# 2018000185731 , 06-05-2018 , Survey by Paul Fisher, 6/18/2021",
+   "cites": {
+    "crfns": [
+     "2018000185731"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "3024720035": [
+  {
+   "bbl": "3024720035",
+   "trans_num": 66529,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 35,
+   "authority": "step 2 of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  }
+ ],
+ "3024720045": [
+  {
+   "bbl": "3024720045",
+   "trans_num": 67479,
+   "change_date": "2014-10-31",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 45,
+   "authority": "Deed recorded CRFN# 2005000628273 , 11-10-2005 Survey By Paul Fisher ,9/4/2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "3024720050": [
+  {
+   "bbl": "3024720050",
+   "trans_num": 66532,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 50,
+   "authority": "step 3 of apportion",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720050",
+   "trans_num": 67469,
+   "change_date": "2014-10-31",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 50,
+   "authority": "step one of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720050",
+   "trans_num": 67479,
+   "change_date": "2014-10-31",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 50,
+   "authority": "Deed recorded CRFN# 2005000628273 , 11-10-2005 Survey By Paul Fisher ,9/4/2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720050",
+   "trans_num": 67577,
+   "change_date": "2014-11-17",
+   "change_type": "Lot Reconfiguration",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 50,
+   "authority": "Correction: Lot 65 give .01 inches to lot 50 lot boundary.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720050",
+   "trans_num": 67690,
+   "change_date": "2014-12-01",
+   "change_type": "Lot Reconfiguration",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 50,
+   "authority": "Tax lot 65  north lot face dimenison correction.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3024720055": [
+  {
+   "bbl": "3024720055",
+   "trans_num": 66532,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 55,
+   "authority": "step 3 of apportion",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3024720060": [
+  {
+   "bbl": "3024720060",
+   "trans_num": 66534,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 60,
+   "authority": "Deed recorded CRFN# 2005000628273 , 11-10-2005 Survey by Paul Fisher , 06-25-2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720060",
+   "trans_num": 73763,
+   "change_date": "2016-09-02",
+   "change_type": "Condominium",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 60,
+   "authority": "Condo No. 3638  Condo Name: THE 21 COMMERCIAL STREET CONDOMINIUM  Condominium Approval Date: 8-10-2016  Decl. CRFN  2016000304221  Maps CRFN  2016000304222",
+   "cites": {
+    "crfns": [
+     "2016000304221",
+     "2016000304222"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3024720065": [
+  {
+   "bbl": "3024720065",
+   "trans_num": 66891,
+   "change_date": "2014-08-06",
+   "change_type": "Admin",
+   "lot_actions": [
+    "Lot Number Changed"
+   ],
+   "new_block": "2472",
+   "new_lot": 65,
+   "authority": "Lot correction from lot 100 to lot 65",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720065",
+   "trans_num": 66960,
+   "change_date": "2014-08-15",
+   "change_type": "Admin",
+   "lot_actions": [
+    "Number Change (Old Number no longer exists)"
+   ],
+   "new_block": "2472",
+   "new_lot": 65,
+   "authority": "Deed recorded CRFN# 2005000628273, 11-10-2005  Survey by Paul Fisher , 8-13-2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720065",
+   "trans_num": 67479,
+   "change_date": "2014-10-31",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 65,
+   "authority": "Deed recorded CRFN# 2005000628273 , 11-10-2005 Survey By Paul Fisher ,9/4/2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720065",
+   "trans_num": 67577,
+   "change_date": "2014-11-17",
+   "change_type": "Lot Reconfiguration",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 65,
+   "authority": "Correction: Lot 65 give .01 inches to lot 50 lot boundary.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720065",
+   "trans_num": 67690,
+   "change_date": "2014-12-01",
+   "change_type": "Lot Reconfiguration",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 65,
+   "authority": "Tax lot 65  north lot face dimenison correction.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720065",
+   "trans_num": 67848,
+   "change_date": "2014-12-15",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 65,
+   "authority": "Lot dimension correction.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720065",
+   "trans_num": 80225,
+   "change_date": "2018-03-07",
+   "change_type": "Condominium",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 65,
+   "authority": "Condo # 4220  Approved by the Tax Map Unit, 2/09/2018  Declaration: 2018000077907, 3/6/2018  Maps:2018000077908, 3/6/2018",
+   "cites": {
+    "crfns": [
+     "2018000077907",
+     "2018000077908"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "declaration"
+    ]
+   }
+  }
+ ],
+ "3024720070": [
+  {
+   "bbl": "3024720070",
+   "trans_num": 66532,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 70,
+   "authority": "step 3 of apportion",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720070",
+   "trans_num": 67469,
+   "change_date": "2014-10-31",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Dropped"
+   ],
+   "new_block": "2472",
+   "new_lot": 70,
+   "authority": "step one of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720070",
+   "trans_num": 67479,
+   "change_date": "2014-10-31",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 70,
+   "authority": "Deed recorded CRFN# 2005000628273 , 11-10-2005 Survey By Paul Fisher ,9/4/2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720070",
+   "trans_num": 79776,
+   "change_date": "2018-02-14",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 70,
+   "authority": "Deed recorded CRFN# 2015000210422 ,6-19-2015 Survey by Paul Fisher, 1-3-2018",
+   "cites": {
+    "crfns": [
+     "2015000210422"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720070",
+   "trans_num": 96459,
+   "change_date": "2022-07-11",
+   "change_type": "Condominium",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 70,
+   "authority": "Condo No. 5614  Condo Name: H1H2 Condominium  Condominium Approval Date: 06/27/2022  Decl. CRFN: 2022000269441  Maps CRFN: 2022000269442",
+   "cites": {
+    "crfns": [
+     "2022000269441",
+     "2022000269442"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3024720075": [
+  {
+   "bbl": "3024720075",
+   "trans_num": 20706,
+   "change_date": "2009-10-29",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 75,
+   "authority": "removed bulkhead line created in error during the conversion to the digital tax map format",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720075",
+   "trans_num": 73048,
+   "change_date": "2016-06-13",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 75,
+   "authority": "Deed recorded CRFN# 2014000411724 , 12-15-2014",
+   "cites": {
+    "crfns": [
+     "2014000411724"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720075",
+   "trans_num": 86097,
+   "change_date": "2019-07-25",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 75,
+   "authority": "Digital measurement correction as per survey",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3024720080": [
+  {
+   "bbl": "3024720080",
+   "trans_num": 67479,
+   "change_date": "2014-10-31",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 80,
+   "authority": "Deed recorded CRFN# 2005000628273 , 11-10-2005 Survey By Paul Fisher ,9/4/2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "3024720090": [
+  {
+   "bbl": "3024720090",
+   "trans_num": 67479,
+   "change_date": "2014-10-31",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 90,
+   "authority": "Deed recorded CRFN# 2005000628273 , 11-10-2005 Survey By Paul Fisher ,9/4/2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "3024720100": [
+  {
+   "bbl": "3024720100",
+   "trans_num": 20706,
+   "change_date": "2009-10-29",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 100,
+   "authority": "removed bulkhead line created in error during the conversion to the digital tax map format",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720100",
+   "trans_num": 66532,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 100,
+   "authority": "step 3 of apportion",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720100",
+   "trans_num": 66534,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 100,
+   "authority": "Deed recorded CRFN# 2005000628273 , 11-10-2005 Survey by Paul Fisher , 06-25-2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720100",
+   "trans_num": 66891,
+   "change_date": "2014-08-06",
+   "change_type": "Admin",
+   "lot_actions": [
+    "Number Change (Old Number no longer exists)"
+   ],
+   "new_block": "2472",
+   "new_lot": 100,
+   "authority": "Lot correction from lot 100 to lot 65",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024720100",
+   "trans_num": 66960,
+   "change_date": "2014-08-15",
+   "change_type": "Admin",
+   "lot_actions": [
+    "Lot Number Changed"
+   ],
+   "new_block": "2472",
+   "new_lot": 100,
+   "authority": "Deed recorded CRFN# 2005000628273, 11-10-2005  Survey by Paul Fisher , 8-13-2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720100",
+   "trans_num": 67469,
+   "change_date": "2014-10-31",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Dropped"
+   ],
+   "new_block": "2472",
+   "new_lot": 100,
+   "authority": "step one of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720100",
+   "trans_num": 67479,
+   "change_date": "2014-10-31",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 100,
+   "authority": "Deed recorded CRFN# 2005000628273 , 11-10-2005 Survey By Paul Fisher ,9/4/2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720100",
+   "trans_num": 84130,
+   "change_date": "2019-02-21",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 100,
+   "authority": "Lot 100 Deed Recorded on 10/28/2015  Deed CRFN:2015000385925  Lot 200 Deed Recorded on 6/5/2018   Deed CRFN:2018000185724   Survey by: Paul Fisher  Survey Date:01/10/2019  PW1:320627327",
+   "cites": {
+    "crfns": [
+     "2015000385925",
+     "2018000185724"
+    ],
+    "doc_ids": [],
+    "survey_dates": [
+     "01/10/2019"
+    ],
+    "surveyors": [
+     "Paul Fisher"
+    ],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720100",
+   "trans_num": 96376,
+   "change_date": "2022-06-27",
+   "change_type": "Condominium",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 100,
+   "authority": "Condo No. 5609  Condo Name: ONE BLUE SLIP CONDOMINIUM  Condominium Approval Date: 6/07/2022  Decl. CRFN: 2022000250763  Maps CRFN: 2022000250764",
+   "cites": {
+    "crfns": [
+     "2022000250763",
+     "2022000250764"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3024720200": [
+  {
+   "bbl": "3024720200",
+   "trans_num": 79776,
+   "change_date": "2018-02-14",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 200,
+   "authority": "Deed recorded CRFN# 2015000210422 ,6-19-2015 Survey by Paul Fisher, 1-3-2018",
+   "cites": {
+    "crfns": [
+     "2015000210422"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720200",
+   "trans_num": 84130,
+   "change_date": "2019-02-21",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 200,
+   "authority": "Lot 100 Deed Recorded on 10/28/2015  Deed CRFN:2015000385925  Lot 200 Deed Recorded on 6/5/2018   Deed CRFN:2018000185724   Survey by: Paul Fisher  Survey Date:01/10/2019  PW1:320627327",
+   "cites": {
+    "crfns": [
+     "2015000385925",
+     "2018000185724"
+    ],
+    "doc_ids": [],
+    "survey_dates": [
+     "01/10/2019"
+    ],
+    "surveyors": [
+     "Paul Fisher"
+    ],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024720200",
+   "trans_num": 96842,
+   "change_date": "2022-08-25",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2472",
+   "new_lot": 200,
+   "authority": "Deeds Recorded on 6/5/2018, 9/24/2019  Deed CRFN: 2018000185724, 2019000307574  Survey by: Paul Fisher  Survey Date: 5/20/2022  PW1: 321600941",
+   "cites": {
+    "crfns": [
+     "2018000185724",
+     "2019000307574"
+    ],
+    "doc_ids": [],
+    "survey_dates": [
+     "5/20/2022"
+    ],
+    "surveyors": [
+     "Paul Fisher"
+    ],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "3024720475": [
+  {
+   "bbl": "3024720475",
+   "trans_num": 67479,
+   "change_date": "2014-10-31",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2472",
+   "new_lot": 475,
+   "authority": "Deed recorded CRFN# 2005000628273 , 11-10-2005 Survey By Paul Fisher ,9/4/2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "3024940003": [
+  {
+   "bbl": "3024940003",
+   "trans_num": 92702,
+   "change_date": "2021-06-01",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2494",
+   "new_lot": 3,
+   "authority": "Recorded/Filed : 12/27/1973  REEL -PAGE: 681/138  Survey  by :Paul D Fisher  On date:5/25/2021",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024940003",
+   "trans_num": 93176,
+   "change_date": "2021-07-27",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2494",
+   "new_lot": 3,
+   "authority": "REUC ident ?A1820-4.2A (DEP) added to lot 3 as requested by the REUC Unit, 7/9/2021",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3024940005": [
+  {
+   "bbl": "3024940005",
+   "trans_num": 66536,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2494",
+   "new_lot": 5,
+   "authority": "Deed recorded CRFN# 2005000628273 , 11-10-2005  Survey by Paul Fisher , 6-11-2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "3024940006": [
+  {
+   "bbl": "3024940006",
+   "trans_num": 46031,
+   "change_date": "2012-06-14",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2494",
+   "new_lot": 6,
+   "authority": "Request by NYO-Team leader to drop REUC Ident # A1820-42 from Bklyn. Block 2494 Lot 6 Company name: NYC DEP.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024940006",
+   "trans_num": 92702,
+   "change_date": "2021-06-01",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2494",
+   "new_lot": 6,
+   "authority": "Recorded/Filed : 12/27/1973  REEL -PAGE: 681/138  Survey  by :Paul D Fisher  On date:5/25/2021",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024940006",
+   "trans_num": 94223,
+   "change_date": "2021-11-10",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2494",
+   "new_lot": 6,
+   "authority": "REUC ident ?A1820-4.2 (DEP) deleted from lot 6 as requested by the REUC Unit, 11/5/2021",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024940006",
+   "trans_num": 95030,
+   "change_date": "2022-02-14",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2494",
+   "new_lot": 6,
+   "authority": "Recorded/Filed : 7/19/2021,7/19/2021  City Register File No (CRFN): 2021000274884, 2021000274895",
+   "cites": {
+    "crfns": [
+     "2021000274884",
+     "2021000274895"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3024940006",
+   "trans_num": 95036,
+   "change_date": "2022-02-14",
+   "change_type": "Lot Reconfiguration",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2494",
+   "new_lot": 6,
+   "authority": "Corrected the dimension",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3024940010": [
+  {
+   "bbl": "3024940010",
+   "trans_num": 66536,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2494",
+   "new_lot": 10,
+   "authority": "Deed recorded CRFN# 2005000628273 , 11-10-2005  Survey by Paul Fisher , 6-11-2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3024940010",
+   "trans_num": 95030,
+   "change_date": "2022-02-14",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Dropped"
+   ],
+   "new_block": "2494",
+   "new_lot": 10,
+   "authority": "Recorded/Filed : 7/19/2021,7/19/2021  City Register File No (CRFN): 2021000274884, 2021000274895",
+   "cites": {
+    "crfns": [
+     "2021000274884",
+     "2021000274895"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3024940020": [
+  {
+   "bbl": "3024940020",
+   "trans_num": 66536,
+   "change_date": "2014-06-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2494",
+   "new_lot": 20,
+   "authority": "Deed recorded CRFN# 2005000628273 , 11-10-2005  Survey by Paul Fisher , 6-11-2014",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "3024941001": [],
+ "3025020001": [
+  {
+   "bbl": "3025020001",
+   "trans_num": 20706,
+   "change_date": "2009-10-29",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 1,
+   "authority": "removed bulkhead line created in error during the conversion to the digital tax map format",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3025020001",
+   "trans_num": 83284,
+   "change_date": "2018-12-20",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 1,
+   "authority": "Deed recorded CRFN: 2005000628273 , 11-10-2005 Survey by Paul D Fisher , 10-30-18",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3025020001",
+   "trans_num": 84132,
+   "change_date": "2019-02-22",
+   "change_type": "Lot Reconfiguration",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 1,
+   "authority": "Correction to lots 1 & 2  Survey by Paul Fisher 10/05/2018",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3025020001",
+   "trans_num": 86752,
+   "change_date": "2019-10-03",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 1,
+   "authority": "paper street removal",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3025020001",
+   "trans_num": 87037,
+   "change_date": "2019-10-15",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 1,
+   "authority": "paper street correction",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3025020001",
+   "trans_num": 89646,
+   "change_date": "2020-04-06",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 1,
+   "authority": "Deeds recorded CRFN: 20200000816, 03/03/2020,                       2020000081646, 03/03/2020  Survey by Langan, 6-14-2019",
+   "cites": {
+    "crfns": [
+     "2020000081646"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3025020001",
+   "trans_num": 89764,
+   "change_date": "2020-04-22",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 1,
+   "authority": "Corrected the tax lot faces for these lots.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3025020001",
+   "trans_num": 93638,
+   "change_date": "2021-09-13",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 1,
+   "authority": "step one of apportionment",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "apportionment"
+    ]
+   }
+  },
+  {
+   "bbl": "3025020001",
+   "trans_num": 93644,
+   "change_date": "2021-09-13",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 1,
+   "authority": "Deed Recorded CRFN 2021000212704 , 6-8-2021 Survey by Paul Fisher,6-18-2021",
+   "cites": {
+    "crfns": [
+     "2021000212704"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3025020001",
+   "trans_num": 96233,
+   "change_date": "2022-06-01",
+   "change_type": "Lot Reconfiguration",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 1,
+   "authority": "Correction to boundary line to lot 1 and 5",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3025020001",
+   "trans_num": 98103,
+   "change_date": "2023-02-23",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 1,
+   "authority": "Deed for lot 1 recorded on 6-27-2022  CRFN 2022000252153  Survey by Paul Fisher on 8-24-2022  Vacant",
+   "cites": {
+    "crfns": [
+     "2022000252153"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3025020001",
+   "trans_num": 283343,
+   "change_date": "2025-04-08",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 1,
+   "authority": "Deed for Block 2502 recorded on 2-11-2025, CRFN # 2025000038393, Deed for Block 2510 recorded on 6-8-2021, CRFN # 2021000212703, Survey by Timothy OConnor 2-26-25",
+   "cites": {
+    "crfns": [
+     "2021000212703",
+     "2025000038393"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "3025020002": [
+  {
+   "bbl": "3025020002",
+   "trans_num": 83284,
+   "change_date": "2018-12-20",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "2502",
+   "new_lot": 2,
+   "authority": "Deed recorded CRFN: 2005000628273 , 11-10-2005 Survey by Paul D Fisher , 10-30-18",
+   "cites": {
+    "crfns": [
+     "2005000628273"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "3025020002",
+   "trans_num": 84132,
+   "change_date": "2019-02-22",
+   "change_type": "Lot Reconfiguration",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 2,
+   "authority": "Correction to lots 1 & 2  Survey by Paul Fisher 10/05/2018",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3025020002",
+   "trans_num": 84133,
+   "change_date": "2019-02-22",
+   "change_type": "Lot Reconfiguration",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 2,
+   "authority": "Correction to lot 2  Survey by Paul Fisher 10/05/2018",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3025020002",
+   "trans_num": 89764,
+   "change_date": "2020-04-22",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2502",
+   "new_lot": 2,
+   "authority": "Corrected the tax lot faces for these lots.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3025100001": [
+  {
+   "bbl": "3025100001",
+   "trans_num": 20706,
+   "change_date": "2009-10-29",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2510",
+   "new_lot": 1,
+   "authority": "removed bulkhead line created in error during the conversion to the digital tax map format",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3025100001",
+   "trans_num": 89646,
+   "change_date": "2020-04-06",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2510",
+   "new_lot": 1,
+   "authority": "Deeds recorded CRFN: 20200000816, 03/03/2020,                       2020000081646, 03/03/2020  Survey by Langan, 6-14-2019",
+   "cites": {
+    "crfns": [
+     "2020000081646"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3025100001",
+   "trans_num": 89764,
+   "change_date": "2020-04-22",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2510",
+   "new_lot": 1,
+   "authority": "Corrected the tax lot faces for these lots.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "3025100001",
+   "trans_num": 283343,
+   "change_date": "2025-04-08",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2510",
+   "new_lot": 1,
+   "authority": "Deed for Block 2502 recorded on 2-11-2025, CRFN # 2025000038393, Deed for Block 2510 recorded on 6-8-2021, CRFN # 2021000212703, Survey by Timothy OConnor 2-26-25",
+   "cites": {
+    "crfns": [
+     "2021000212703",
+     "2025000038393"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "3025200057": [
+  {
+   "bbl": "3025200057",
+   "trans_num": 20706,
+   "change_date": "2009-10-29",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2520",
+   "new_lot": 57,
+   "authority": "removed bulkhead line created in error during the conversion to the digital tax map format",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3027220008": [],
+ "3027220010": [
+  {
+   "bbl": "3027220010",
+   "trans_num": 3908,
+   "change_date": "2008-07-15",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2722",
+   "new_lot": 10,
+   "authority": "Deeds submitted 7/15/2008 to merge lots 10 & 34 . CRFN Lot # 10 2004000289616, recorded 5/10/2004. CRFN Lot # 34 2004000289073, recorded 5/7/2007.  New lot # 10.",
+   "cites": {
+    "crfns": [
+     "2004000289073",
+     "2004000289616"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3027220033": [],
+ "3027220034": [
+  {
+   "bbl": "3027220034",
+   "trans_num": 3908,
+   "change_date": "2008-07-15",
+   "change_type": "Lot Merger",
+   "lot_actions": [
+    "Dropped"
+   ],
+   "new_block": "2722",
+   "new_lot": 34,
+   "authority": "Deeds submitted 7/15/2008 to merge lots 10 & 34 . CRFN Lot # 10 2004000289616, recorded 5/10/2004. CRFN Lot # 34 2004000289073, recorded 5/7/2007.  New lot # 10.",
+   "cites": {
+    "crfns": [
+     "2004000289073",
+     "2004000289616"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3027220036": [],
+ "3027650014": [
+  {
+   "bbl": "3027650014",
+   "trans_num": 76271,
+   "change_date": "2017-03-17",
+   "change_type": "Condominium",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "2765",
+   "new_lot": 14,
+   "authority": "Condo No. 3701  Condo Name: THE 764 METROPOLITAN CONDOMINIUM  Condominium Approval Date: 3/6/2017  Decl. CRFN  2017000104176  Maps CRFN  2017000104177",
+   "cites": {
+    "crfns": [
+     "2017000104176",
+     "2017000104177"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "3027650035": [],
+ "3030230019": [],
+ "3030230020": [],
+ "4097930078": [
+  {
+   "bbl": "4097930078",
+   "trans_num": 76350,
+   "change_date": "2017-03-23",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "9793",
+   "new_lot": 78,
+   "authority": "Deed for lot 78 recorded on 8/6/2008 CRFN 2008000313687  Surveyed by Erlandsen Crowell and Shaw 4/19/16   Alt 1 No 421310922, NB No 420657113",
+   "cites": {
+    "crfns": [
+     "2008000313687"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "4097930079": [
+  {
+   "bbl": "4097930079",
+   "trans_num": 76350,
+   "change_date": "2017-03-23",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "9793",
+   "new_lot": 79,
+   "authority": "Deed for lot 78 recorded on 8/6/2008 CRFN 2008000313687  Surveyed by Erlandsen Crowell and Shaw 4/19/16   Alt 1 No 421310922, NB No 420657113",
+   "cites": {
+    "crfns": [
+     "2008000313687"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "4097930079",
+   "trans_num": 93174,
+   "change_date": "2021-07-27",
+   "change_type": "Condominium",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "9793",
+   "new_lot": 79,
+   "authority": "Condo No. 1196  Condo Name: Tree of Life Condominium  Condominium Approval Date: 6/22/2021  Decl. CRFN  2021000287223  Maps CRFN 2021000287224",
+   "cites": {
+    "crfns": [
+     "2021000287223",
+     "2021000287224"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "4097930086": [],
+ "4120990001": [
+  {
+   "bbl": "4120990001",
+   "trans_num": 52053,
+   "change_date": "2013-01-24",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 1,
+   "authority": "Request by NYO Team leader to add REUC Ident # 2830-149 to Queens Block 12099 Lot 1. Company name: MetroPC",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "4120990001",
+   "trans_num": 60706,
+   "change_date": "2013-11-21",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 1,
+   "authority": "Deed recorded CRFN#2007000208390, 04/23/2007 Survey by Robert Fehringer , 12/14/2012",
+   "cites": {
+    "crfns": [
+     "2007000208390"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "4120990001",
+   "trans_num": 60903,
+   "change_date": "2013-11-26",
+   "change_type": "Lot Reconfiguration",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 1,
+   "authority": "Correction: Lot attribute changed to westerly face of lot one.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "4120990001",
+   "trans_num": 66495,
+   "change_date": "2014-06-24",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 1,
+   "authority": "Request by NYO Team leader to Remove REUC Ident # 1501 E5.2 From Queens Block 12099 Lot 1. Company name:",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "4120990001",
+   "trans_num": 66504,
+   "change_date": "2014-06-25",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 1,
+   "authority": "Map No 5014. Approved by Queen\u2019s Borough Office of the President Topographical Bureau on February 15, 2012.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "4120990001",
+   "trans_num": 69900,
+   "change_date": "2015-07-16",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 1,
+   "authority": "Damage and Acquisition Map No 5839. In the matter of aquiing tittle in fee to parts of real property for 142 street from 135 ave to North Conduit Avenue",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "4120990001",
+   "trans_num": 79959,
+   "change_date": "2018-02-26",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 1,
+   "authority": "REUC Ident 2555 6 (Nextel) dropped from lot 1 at request of REUC Unit 1/30/18",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "4120990001",
+   "trans_num": 82005,
+   "change_date": "2018-09-11",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 1,
+   "authority": "REUC ident 2830-149 (METRO PCS) deleted from lot 1 as requested by the REUC Unit, 08/30/2018",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "4120990001",
+   "trans_num": 88288,
+   "change_date": "2020-01-02",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 1,
+   "authority": "Recorded deeds CRFN: 2013000522477, 12/20/2013   Survey by Fehringer Surveying, 12/05/2019",
+   "cites": {
+    "crfns": [
+     "2013000522477"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "4120990001",
+   "trans_num": 123523,
+   "change_date": "2023-12-01",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 1,
+   "authority": "Authority For Change: Request By REUC Team on 12/01/2023 to drop REUC 2554-6 on Appurtenant BBL: 4120990001. Company Name: SPRINT",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "4120990015": [
+  {
+   "bbl": "4120990015",
+   "trans_num": 88288,
+   "change_date": "2020-01-02",
+   "change_type": "Digital Alteration Book Wizard",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "12099",
+   "new_lot": 15,
+   "authority": "Recorded deeds CRFN: 2013000522477, 12/20/2013   Survey by Fehringer Surveying, 12/05/2019",
+   "cites": {
+    "crfns": [
+     "2013000522477"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ],
+ "4120990030": [
+  {
+   "bbl": "4120990030",
+   "trans_num": 60706,
+   "change_date": "2013-11-21",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "12099",
+   "new_lot": 30,
+   "authority": "Deed recorded CRFN#2007000208390, 04/23/2007 Survey by Robert Fehringer , 12/14/2012",
+   "cites": {
+    "crfns": [
+     "2007000208390"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  },
+  {
+   "bbl": "4120990030",
+   "trans_num": 66503,
+   "change_date": "2014-06-25",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 30,
+   "authority": "Map No 5014. Approved by Queen\u2019s Borough Office of the President Topographical Bureau on February 15, 2012.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "4120990030",
+   "trans_num": 99898,
+   "change_date": "2023-10-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 30,
+   "authority": "Deed recorded CRFN# 2014000134511 , 4/21/2014 Survey by Robert J Fehringer , 8/17/2023",
+   "cites": {
+    "crfns": [
+     "2014000134511"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "4120990032": [
+  {
+   "bbl": "4120990032",
+   "trans_num": 99898,
+   "change_date": "2023-10-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "12099",
+   "new_lot": 32,
+   "authority": "Deed recorded CRFN# 2014000134511 , 4/21/2014 Survey by Robert J Fehringer , 8/17/2023",
+   "cites": {
+    "crfns": [
+     "2014000134511"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "4120990034": [
+  {
+   "bbl": "4120990034",
+   "trans_num": 99898,
+   "change_date": "2023-10-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "12099",
+   "new_lot": 34,
+   "authority": "Deed recorded CRFN# 2014000134511 , 4/21/2014 Survey by Robert J Fehringer , 8/17/2023",
+   "cites": {
+    "crfns": [
+     "2014000134511"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "4120990036": [
+  {
+   "bbl": "4120990036",
+   "trans_num": 99898,
+   "change_date": "2023-10-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "12099",
+   "new_lot": 36,
+   "authority": "Deed recorded CRFN# 2014000134511 , 4/21/2014 Survey by Robert J Fehringer , 8/17/2023",
+   "cites": {
+    "crfns": [
+     "2014000134511"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "4120990038": [
+  {
+   "bbl": "4120990038",
+   "trans_num": 99898,
+   "change_date": "2023-10-26",
+   "change_type": "Lot Apportionment",
+   "lot_actions": [
+    "New"
+   ],
+   "new_block": "12099",
+   "new_lot": 38,
+   "authority": "Deed recorded CRFN# 2014000134511 , 4/21/2014 Survey by Robert J Fehringer , 8/17/2023",
+   "cites": {
+    "crfns": [
+     "2014000134511"
+    ],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": [
+     "deed"
+    ]
+   }
+  }
+ ],
+ "4120990050": [
+  {
+   "bbl": "4120990050",
+   "trans_num": 66497,
+   "change_date": "2014-06-24",
+   "change_type": "REUC",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 50,
+   "authority": "Request by NYO Team leader to Remove REUC Ident # 1501 E5.1 From Queens Block 12099 Lot 50. Company name:",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  },
+  {
+   "bbl": "4120990050",
+   "trans_num": 66503,
+   "change_date": "2014-06-25",
+   "change_type": "Boundary Line",
+   "lot_actions": [
+    "Affected"
+   ],
+   "new_block": "12099",
+   "new_lot": 50,
+   "authority": "Map No 5014. Approved by Queen\u2019s Borough Office of the President Topographical Bureau on February 15, 2012.",
+   "cites": {
+    "crfns": [],
+    "doc_ids": [],
+    "survey_dates": [],
+    "surveyors": [],
+    "dob_jobs": [],
+    "instrument_kinds": []
+   }
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "engine": "ppv6-rot",
+ "model": "PP-OCRv6_medium",
+ "device": "cpu",
+ "mkldnn": false,
+ "doc": "BK_6730047100023",
+ "angles": [
+  0,
+  90,
+  270
+ ],
+ "orientation_models": true,
+ "threads": 4,
+ "page_timeout": 300,
+ "pages": [
+  {
+   "page": "p006.png",
+   "lines": 218,
+   "sec": 219.4,
+   "status": "ok"
+  },
+  {
+   "page": "p007.png",
+   "lines": 218,
+   "sec": 229.4,
+   "status": "ok"
+  }
+ ],
+ "sec": 448.9,
+ "note": "CPU-only wheel, oneDNN off - speed NOT indicative of A100"
+}

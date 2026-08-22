@@ -1,0 +1,112 @@
+[
+ {
+  "file": "p001.png",
+  "era": "film",
+  "doc_type": "MTGE",
+  "doc_id": "FT_1680008647768",
+  "page": 1,
+  "year": 1981,
+  "tesseract_words": 746,
+  "rapidpool_words": 455,
+  "qwen_words": 734
+ },
+ {
+  "file": "p002.png",
+  "era": "film",
+  "doc_type": "MTGE",
+  "doc_id": "FT_1680008647768",
+  "page": 2,
+  "year": 1981,
+  "tesseract_words": 127,
+  "rapidpool_words": 142,
+  "qwen_words": 148
+ },
+ {
+  "file": "p003.png",
+  "era": "film",
+  "doc_type": "MTGE",
+  "doc_id": "FT_1680008647768",
+  "page": 3,
+  "year": 1981,
+  "tesseract_words": 739,
+  "rapidpool_words": 534,
+  "qwen_words": 709
+ },
+ {
+  "file": "p004.png",
+  "era": "film",
+  "doc_type": "MTGE",
+  "doc_id": "FT_1680008647768",
+  "page": 4,
+  "year": 1981,
+  "tesseract_words": 911,
+  "rapidpool_words": 713,
+  "qwen_words": 893
+ },
+ {
+  "file": "p005.png",
+  "era": "film",
+  "doc_type": "MTGE",
+  "doc_id": "FT_1680008647768",
+  "page": 5,
+  "year": 1981,
+  "tesseract_words": 1303,
+  "rapidpool_words": 988,
+  "qwen_words": 1322
+ },
+ {
+  "file": "p006.png",
+  "era": "film",
+  "doc_type": "MTGE",
+  "doc_id": "FT_1680008647768",
+  "page": 6,
+  "year": 1981,
+  "tesseract_words": 1364,
+  "rapidpool_words": 655,
+  "qwen_words": 1724
+ },
+ {
+  "file": "p007.png",
+  "era": "film",
+  "doc_type": "MTGE",
+  "doc_id": "FT_1680008647768",
+  "page": 7,
+  "year": 1981,
+  "tesseract_words": 1433,
+  "rapidpool_words": 1128,
+  "qwen_words": 1360
+ },
+ {
+  "file": "p008.png",
+  "era": "film",
+  "doc_type": "MTGE",
+  "doc_id": "FT_1680008647768",
+  "page": 8,
+  "year": 1981,
+  "tesseract_words": 1385,
+  "rapidpool_words": 992,
+  "qwen_words": 1309
+ },
+ {
+  "file": "p009.png",
+  "era": "film",
+  "doc_type": "MTGE",
+  "doc_id": "FT_1680008647768",
+  "page": 9,
+  "year": 1981,
+  "tesseract_words": 554,
+  "rapidpool_words": 458,
+  "qwen_words": 548
+ },
+ {
+  "file": "p010.png",
+  "era": "film",
+  "doc_type": "MTGE",
+  "doc_id": "FT_1680008647768",
+  "page": 10,
+  "year": 1981,
+  "tesseract_words": 331,
+  "rapidpool_words": 251,
+  "qwen_words": 764
+ }
+]

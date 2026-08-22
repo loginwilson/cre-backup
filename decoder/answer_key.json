@@ -1,0 +1,1150 @@
+{
+  "_note": "ARTIFACTS READ BY HAND OFF THE RENDERED PAGE. The slow answer key. Every value here was transcribed by looking at the image, never copied from an engine's output. `alts` are renderings that still carry the fact (spacing, punctuation, common OCR-plausible variants). `ambiguous` entries could not be resolved by the reader either, so NO engine is credited or penalised for them.",
+  "_scoring": "An engine scores a hit when the value or any alt appears in its text, normalised for case/whitespace/punctuation. Tiers: CRITICAL = lineage or parcel-matching breaks without it. MATERIAL = a function agent wants it. ROUTINE = boilerplate.",
+  "_why_this_exists": "Word count is a terrible proxy and it misled me twice today. A 51-word cover page carried 12 artifacts; a 1,764-word film page may carry fewer. And of six pages I flagged as 'suspected Tesseract failures' because they returned under 65 words, at least three turned out to be genuinely sparse pages - true negatives that would have been scored as silent losses that never happened.",
+  "film_1970s_LEAS_FT_1350008616835_p003.png": {
+    "kind": "backer / endorsement page, 1979 lease, almost entirely handwritten",
+    "artifacts": [
+      {
+        "id": "address",
+        "tier": "CRITICAL",
+        "value": "104-106 Charlton Street",
+        "alts": [
+          "104-106 Charlton St"
+        ]
+      },
+      {
+        "id": "lot",
+        "tier": "CRITICAL",
+        "value": "Lot 48",
+        "alts": [
+          "LOT 48"
+        ]
+      },
+      {
+        "id": "reel",
+        "tier": "CRITICAL",
+        "value": "REEL 503",
+        "alts": [
+          "REEL503",
+          "Reel 503"
+        ]
+      },
+      {
+        "id": "reel_page",
+        "tier": "CRITICAL",
+        "value": "1628",
+        "alts": [
+          "PAGE 1628"
+        ]
+      },
+      {
+        "id": "rec_year",
+        "tier": "CRITICAL",
+        "value": "1979",
+        "alts": [
+          "NOV 27 1979",
+          "1979 NOV 27"
+        ]
+      },
+      {
+        "id": "return_to",
+        "tier": "MATERIAL",
+        "value": "Robert S. Levy",
+        "alts": [
+          "Robert S Levy"
+        ]
+      },
+      {
+        "id": "return_addr",
+        "tier": "ROUTINE",
+        "value": "One Penn Plaza",
+        "alts": [
+          "1 Penn Plaza"
+        ]
+      },
+      {
+        "id": "county",
+        "tier": "MATERIAL",
+        "value": "NEW YORK COUNTY",
+        "alts": [
+          "RECORDED IN NEW YORK COUNTY"
+        ]
+      },
+      {
+        "id": "serial",
+        "tier": "MATERIAL",
+        "value": "16817",
+        "alts": []
+      },
+      {
+        "id": "zip",
+        "tier": "ROUTINE",
+        "value": "10001",
+        "alts": []
+      },
+      {
+        "id": "city_reg",
+        "tier": "ROUTINE",
+        "value": "CITY REGISTER",
+        "alts": []
+      }
+    ],
+    "ambiguous": [
+      {
+        "id": "block",
+        "note": "handwritten 'Block 5?7' - middle digit reads 7 or 9; unresolved by the reader"
+      },
+      {
+        "id": "rec_time",
+        "note": "stamped 'AM 11:5?' - final digit obscured"
+      }
+    ]
+  },
+  "modern_2000s_DEEDO_2005051200995001_p007.png": {
+    "kind": "near-blank faxed page with a hand-drawn X - a TRUE NEGATIVE",
+    "artifacts": [
+      {
+        "id": "fax_date",
+        "tier": "ROUTINE",
+        "value": "05/17/2005",
+        "alts": []
+      },
+      {
+        "id": "fax_number",
+        "tier": "ROUTINE",
+        "value": "19143751264",
+        "alts": []
+      },
+      {
+        "id": "body",
+        "tier": "MATERIAL",
+        "value": "Receiver's account",
+        "alts": [
+          "Receivers account"
+        ]
+      },
+      {
+        "id": "enter",
+        "tier": "ROUTINE",
+        "value": "ENTER",
+        "alts": []
+      },
+      {
+        "id": "surrogate",
+        "tier": "MATERIAL",
+        "value": "Surrogate",
+        "alts": []
+      }
+    ],
+    "ambiguous": [
+      {
+        "id": "signature",
+        "note": "handwritten surrogate initials - illegible"
+      }
+    ]
+  },
+  "modern_2010s_LOCC_2016051201067001_p002.png": {
+    "kind": "ACRIS cover-page continuation, clean laser print - 51 words but 12 artifacts",
+    "artifacts": [
+      {
+        "id": "agency",
+        "tier": "ROUTINE",
+        "value": "DEPARTMENT OF FINANCE",
+        "alts": [
+          "NYC DEPARTMENT OF FINANCE"
+        ]
+      },
+      {
+        "id": "office",
+        "tier": "ROUTINE",
+        "value": "OFFICE OF THE CITY REGISTER",
+        "alts": []
+      },
+      {
+        "id": "doc_id",
+        "tier": "CRITICAL",
+        "value": "2016051201067001",
+        "alts": []
+      },
+      {
+        "id": "doc_date",
+        "tier": "CRITICAL",
+        "value": "05-09-2016",
+        "alts": [
+          "05/09/2016"
+        ]
+      },
+      {
+        "id": "prep_date",
+        "tier": "ROUTINE",
+        "value": "06-15-2016",
+        "alts": [
+          "06/15/2016"
+        ]
+      },
+      {
+        "id": "doc_type",
+        "tier": "CRITICAL",
+        "value": "LIEN OF COMMON CHARGES",
+        "alts": []
+      },
+      {
+        "id": "party_role",
+        "tier": "CRITICAL",
+        "value": "PARTY ONE/DEBTOR",
+        "alts": [
+          "PARTY ONE",
+          "DEBTOR"
+        ]
+      },
+      {
+        "id": "party_name",
+        "tier": "CRITICAL",
+        "value": "INDITT CORPORATION",
+        "alts": []
+      },
+      {
+        "id": "party_addr",
+        "tier": "MATERIAL",
+        "value": "146 WEST 57TH STREET",
+        "alts": [
+          "146 W 57TH STREET"
+        ]
+      },
+      {
+        "id": "unit",
+        "tier": "CRITICAL",
+        "value": "UNIT 43D",
+        "alts": [
+          "43D"
+        ]
+      },
+      {
+        "id": "zip",
+        "tier": "ROUTINE",
+        "value": "10019",
+        "alts": []
+      },
+      {
+        "id": "page_of",
+        "tier": "ROUTINE",
+        "value": "PAGE 2 OF 4",
+        "alts": [
+          "2 OF 4"
+        ]
+      }
+    ],
+    "ambiguous": []
+  },
+  "film_1980s_DECL_FT_1170000291717_p002.png": {
+    "kind": "1989 declaration signature page - sparse text, dense with PARTIES",
+    "artifacts": [
+      {
+        "id": "reel",
+        "tier": "CRITICAL",
+        "value": "REEL 1540",
+        "alts": [
+          "REEL1540",
+          "1540"
+        ]
+      },
+      {
+        "id": "reel_page",
+        "tier": "CRITICAL",
+        "value": "0261",
+        "alts": [
+          "PAGE 0261",
+          "261"
+        ]
+      },
+      {
+        "id": "year",
+        "tier": "CRITICAL",
+        "value": "1989",
+        "alts": []
+      },
+      {
+        "id": "party1",
+        "tier": "CRITICAL",
+        "value": "204 EAST 32ND STREET",
+        "alts": [
+          "204 E 32ND STREET",
+          "204 East 32nd Street"
+        ]
+      },
+      {
+        "id": "party2",
+        "tier": "CRITICAL",
+        "value": "32ND STREET DEVELOPMENT",
+        "alts": [
+          "32nd Street Development"
+        ]
+      },
+      {
+        "id": "party3",
+        "tier": "CRITICAL",
+        "value": "Crescent Development",
+        "alts": [
+          "Crescent Development Project II"
+        ]
+      },
+      {
+        "id": "party4",
+        "tier": "CRITICAL",
+        "value": "RG 32nd Street",
+        "alts": [
+          "RG 32ND STREET"
+        ]
+      },
+      {
+        "id": "signer1",
+        "tier": "CRITICAL",
+        "value": "Harshad Shah",
+        "alts": [
+          "Harshad/Shah"
+        ]
+      },
+      {
+        "id": "signer2",
+        "tier": "CRITICAL",
+        "value": "Robert Gladstone",
+        "alts": []
+      },
+      {
+        "id": "title1",
+        "tier": "MATERIAL",
+        "value": "President",
+        "alts": []
+      },
+      {
+        "id": "partnership",
+        "tier": "MATERIAL",
+        "value": "a partnership",
+        "alts": [
+          "partnership"
+        ]
+      },
+      {
+        "id": "witness",
+        "tier": "ROUTINE",
+        "value": "IN WITNESS WHEREOF",
+        "alts": []
+      }
+    ],
+    "ambiguous": [
+      {
+        "id": "exec_date",
+        "note": "handwritten 'February 21' written over a struck-out typed 'January' - the operative date is genuinely unclear"
+      },
+      {
+        "id": "signer0",
+        "note": "first signature line, handwritten, reads approximately 'Lawrence Zombek' but is not legible with confidence"
+      }
+    ]
+  },
+  "film_1990s_MTGE_FT_4340004439734_p003.png": {
+    "kind": "1983 bargain-and-sale deed, Queens - metes and bounds, party wall, grantor/grantee",
+    "artifacts": [
+      {
+        "id": "reel",
+        "tier": "CRITICAL",
+        "value": "REEL 1617",
+        "alts": [
+          "REEL1617",
+          "1617"
+        ]
+      },
+      {
+        "id": "reel_page",
+        "tier": "CRITICAL",
+        "value": "1595",
+        "alts": [
+          "PAGE 1595"
+        ]
+      },
+      {
+        "id": "grantor1",
+        "tier": "CRITICAL",
+        "value": "FREDERICK QUELCH",
+        "alts": [
+          "Frederick Quelch"
+        ]
+      },
+      {
+        "id": "grantor2",
+        "tier": "CRITICAL",
+        "value": "JEAN QUELCH",
+        "alts": [
+          "Jean Quelch"
+        ]
+      },
+      {
+        "id": "grantee1",
+        "tier": "CRITICAL",
+        "value": "LORDE",
+        "alts": [
+          "JEANETTE",
+          "Jeanette"
+        ]
+      },
+      {
+        "id": "grantee2",
+        "tier": "CRITICAL",
+        "value": "VERNON HERDSMAN",
+        "alts": [
+          "Vernon Herdsman"
+        ]
+      },
+      {
+        "id": "month",
+        "tier": "CRITICAL",
+        "value": "November",
+        "alts": []
+      },
+      {
+        "id": "year_words",
+        "tier": "CRITICAL",
+        "value": "eighty-three",
+        "alts": [
+          "eighty three",
+          "1983"
+        ]
+      },
+      {
+        "id": "borough",
+        "tier": "CRITICAL",
+        "value": "Queens",
+        "alts": [
+          "County of Queens"
+        ]
+      },
+      {
+        "id": "street",
+        "tier": "CRITICAL",
+        "value": "97th Street",
+        "alts": [
+          "97th St"
+        ]
+      },
+      {
+        "id": "grantor_addr",
+        "tier": "MATERIAL",
+        "value": "25-57 97th Street",
+        "alts": [
+          "25-57 97th St"
+        ]
+      },
+      {
+        "id": "neighborhood",
+        "tier": "MATERIAL",
+        "value": "East Elmhurst",
+        "alts": []
+      },
+      {
+        "id": "mb_start",
+        "tier": "CRITICAL",
+        "value": "BEGINNING at a point",
+        "alts": [
+          "BEGINNING"
+        ]
+      },
+      {
+        "id": "mb_dist",
+        "tier": "CRITICAL",
+        "value": "540 feet",
+        "alts": []
+      },
+      {
+        "id": "mb_depth",
+        "tier": "CRITICAL",
+        "value": "97.50 feet",
+        "alts": [
+          "97.50"
+        ]
+      },
+      {
+        "id": "mb_width",
+        "tier": "MATERIAL",
+        "value": "20 feet",
+        "alts": []
+      },
+      {
+        "id": "cross_st",
+        "tier": "MATERIAL",
+        "value": "25th Avenue",
+        "alts": []
+      },
+      {
+        "id": "party_wall",
+        "tier": "CRITICAL",
+        "value": "party wall",
+        "alts": []
+      },
+      {
+        "id": "former_name",
+        "tier": "MATERIAL",
+        "value": "formerly known as 40th",
+        "alts": [
+          "40th Street"
+        ]
+      },
+      {
+        "id": "recital",
+        "tier": "MATERIAL",
+        "value": "Ten Dollars",
+        "alts": []
+      },
+      {
+        "id": "lot",
+        "tier": "CRITICAL",
+        "value": "61",
+        "alts": [
+          "Lot 61"
+        ]
+      },
+      {
+        "id": "lien_law",
+        "tier": "ROUTINE",
+        "value": "Lien Law",
+        "alts": [
+          "Section 13 of the Lien Law"
+        ]
+      }
+    ],
+    "ambiguous": [
+      {
+        "id": "grantee1_middle",
+        "note": "middle name of first grantee is typed then struck - reads MAY or RAY"
+      },
+      {
+        "id": "block",
+        "note": "TAX MAP DESIGNATION block digit is clipped at the page edge"
+      },
+      {
+        "id": "exec_day",
+        "note": "handwritten day of month, approximately '21st', low confidence"
+      }
+    ]
+  },
+  "modern_2020s_DEED, LE_2022102800045001_p005.png": {
+    "kind": "ACRIS supporting-document cover page, 2022, clean laser print",
+    "artifacts": [
+      {
+        "id": "doc_id",
+        "tier": "CRITICAL",
+        "value": "2022102800045001",
+        "alts": []
+      },
+      {
+        "id": "doc_date",
+        "tier": "CRITICAL",
+        "value": "09-12-2022",
+        "alts": [
+          "09/12/2022"
+        ]
+      },
+      {
+        "id": "prep_date",
+        "tier": "ROUTINE",
+        "value": "10-28-2022",
+        "alts": [
+          "10/28/2022"
+        ]
+      },
+      {
+        "id": "doc_type",
+        "tier": "CRITICAL",
+        "value": "LIFE ESTATE DEED",
+        "alts": []
+      },
+      {
+        "id": "tax_form_id",
+        "tier": "CRITICAL",
+        "value": "2022082900402",
+        "alts": []
+      },
+      {
+        "id": "sup_dep",
+        "tier": "MATERIAL",
+        "value": "WATER AND SEWER BILLING",
+        "alts": [
+          "DEP CUSTOMER REGISTRATION"
+        ]
+      },
+      {
+        "id": "sup_rptt",
+        "tier": "CRITICAL",
+        "value": "RPTT FILING FEE EXEMPTION AFFIDAVIT",
+        "alts": [
+          "RPTT FILING FEE EXEMPTION"
+        ]
+      },
+      {
+        "id": "sup_5217",
+        "tier": "CRITICAL",
+        "value": "RP - 5217 REAL PROPERTY TRANSFER REPORT",
+        "alts": [
+          "RP-5217",
+          "REAL PROPERTY TRANSFER REPORT"
+        ]
+      },
+      {
+        "id": "sup_smoke",
+        "tier": "ROUTINE",
+        "value": "SMOKE DETECTOR AFFIDAVIT",
+        "alts": []
+      },
+      {
+        "id": "cover_kind",
+        "tier": "ROUTINE",
+        "value": "SUPPORTING DOCUMENT COVER PAGE",
+        "alts": []
+      },
+      {
+        "id": "page_of",
+        "tier": "ROUTINE",
+        "value": "PAGE 1 OF 1",
+        "alts": [
+          "1 OF 1"
+        ]
+      }
+    ],
+    "ambiguous": []
+  },
+  "film_1970s_MISC_FT_1610008562261_p003.png": {
+    "kind": "1970s general bank acknowledgement (notary page), Chase Manhattan - clean serif film scan, faded centre block",
+    "artifacts": [
+      {
+        "id": "reel",
+        "tier": "CRITICAL",
+        "value": "REEL 371",
+        "alts": [
+          "REEL371",
+          "371"
+        ]
+      },
+      {
+        "id": "reel_page",
+        "tier": "CRITICAL",
+        "value": "656",
+        "alts": [
+          "PAGE 656"
+        ]
+      },
+      {
+        "id": "header",
+        "tier": "ROUTINE",
+        "value": "GENERAL BANK ACKNOWLEDGEMENT",
+        "alts": []
+      },
+      {
+        "id": "state",
+        "tier": "ROUTINE",
+        "value": "STATE OF NEW YORK",
+        "alts": [
+          "State of New York"
+        ]
+      },
+      {
+        "id": "county",
+        "tier": "MATERIAL",
+        "value": "COUNTY OF NEW YORK",
+        "alts": [
+          "County of New York"
+        ]
+      },
+      {
+        "id": "bank",
+        "tier": "CRITICAL",
+        "value": "CHASE MANHATTAN BANK",
+        "alts": [
+          "The Chase Manhattan Bank"
+        ]
+      },
+      {
+        "id": "bank_type",
+        "tier": "MATERIAL",
+        "value": "National Association",
+        "alts": []
+      },
+      {
+        "id": "notary_last",
+        "tier": "MATERIAL",
+        "value": "KIRKLAND",
+        "alts": [
+          "Kirkland"
+        ]
+      },
+      {
+        "id": "notary_no",
+        "tier": "MATERIAL",
+        "value": "03-4503797",
+        "alts": [
+          "No. 03-4503797"
+        ]
+      },
+      {
+        "id": "notary_county",
+        "tier": "MATERIAL",
+        "value": "Qualified in Bronx County",
+        "alts": [
+          "Bronx County"
+        ]
+      },
+      {
+        "id": "notary_pub",
+        "tier": "ROUTINE",
+        "value": "Notary Public",
+        "alts": []
+      },
+      {
+        "id": "seal",
+        "tier": "ROUTINE",
+        "value": "Impression Seal",
+        "alts": []
+      },
+      {
+        "id": "commission",
+        "tier": "ROUTINE",
+        "value": "Commission Expires",
+        "alts": []
+      },
+      {
+        "id": "board",
+        "tier": "ROUTINE",
+        "value": "Board of Directors",
+        "alts": []
+      },
+      {
+        "id": "sworn",
+        "tier": "ROUTINE",
+        "value": "duly sworn",
+        "alts": []
+      },
+      {
+        "id": "corp_seal",
+        "tier": "ROUTINE",
+        "value": "corporate seal",
+        "alts": []
+      }
+    ],
+    "ambiguous": [
+      {
+        "id": "exec_day",
+        "note": "handwritten day reads '31' or '21' - stroke is ambiguous"
+      },
+      {
+        "id": "exec_month",
+        "note": "handwritten month, cursive, not legible with confidence"
+      },
+      {
+        "id": "exec_year",
+        "note": "typed '197' + handwritten final digit, obscured"
+      },
+      {
+        "id": "officer_block",
+        "note": "centre block naming the executing officer is almost entirely faded out on the film"
+      },
+      {
+        "id": "notary_first",
+        "note": "first name partially struck by the stamp - reads Cynthia or Cinthia"
+      },
+      {
+        "id": "comm_expiry_year",
+        "note": "'March 30, 197_1' - digit overprinted"
+      }
+    ]
+  },
+  "film_2000s_DEED_FT_1300008730930_p007.png": {
+    "kind": "2002 deed acknowledgement page on film - three notary blocks, handwritten signer names, heavy edge artefacts",
+    "artifacts": [
+      {
+        "id": "reel",
+        "tier": "CRITICAL",
+        "value": "REEL 3565",
+        "alts": [
+          "REEL3565",
+          "3565"
+        ]
+      },
+      {
+        "id": "reel_page",
+        "tier": "CRITICAL",
+        "value": "1129",
+        "alts": [
+          "PG 1129",
+          "PAGE 1129"
+        ]
+      },
+      {
+        "id": "state",
+        "tier": "ROUTINE",
+        "value": "State of New York",
+        "alts": []
+      },
+      {
+        "id": "county",
+        "tier": "MATERIAL",
+        "value": "County of New York",
+        "alts": []
+      },
+      {
+        "id": "month",
+        "tier": "CRITICAL",
+        "value": "June",
+        "alts": []
+      },
+      {
+        "id": "year",
+        "tier": "CRITICAL",
+        "value": "2002",
+        "alts": []
+      },
+      {
+        "id": "signer1",
+        "tier": "CRITICAL",
+        "value": "MARTIN SHAW",
+        "alts": [
+          "Martin Shaw"
+        ]
+      },
+      {
+        "id": "signer2",
+        "tier": "CRITICAL",
+        "value": "Setsuko Forbes",
+        "alts": [
+          "SETSUKO FORBES"
+        ]
+      },
+      {
+        "id": "signer3",
+        "tier": "CRITICAL",
+        "value": "Sean Forbes",
+        "alts": [
+          "SEAN FORBES",
+          "Forbest"
+        ]
+      },
+      {
+        "id": "personally",
+        "tier": "MATERIAL",
+        "value": "personally known to me",
+        "alts": []
+      },
+      {
+        "id": "evidence",
+        "tier": "ROUTINE",
+        "value": "satisfactory evidence",
+        "alts": []
+      },
+      {
+        "id": "undersigned",
+        "tier": "ROUTINE",
+        "value": "the undersigned",
+        "alts": []
+      },
+      {
+        "id": "ackline",
+        "tier": "ROUTINE",
+        "value": "individual taking acknowledgment",
+        "alts": []
+      },
+      {
+        "id": "within",
+        "tier": "ROUTINE",
+        "value": "within instrument",
+        "alts": []
+      },
+      {
+        "id": "capacity",
+        "tier": "ROUTINE",
+        "value": "capacity",
+        "alts": []
+      }
+    ],
+    "ambiguous": [
+      {
+        "id": "notary_name",
+        "note": "stamp reads approximately 'ANN MARIE ... SMITH' - middle portion washed out"
+      },
+      {
+        "id": "comm_expiry",
+        "note": "'Commission expires July 31 ...' overwritten by a handwritten date"
+      },
+      {
+        "id": "block3_name",
+        "note": "third acknowledgement block is left blank"
+      }
+    ]
+  },
+  "modern_1970s_MTGE_BK_7940114801404_p003.png": {
+    "kind": "1970s savings-and-loan mortgage boilerplate, clauses 12-24 + execution - BOOK-era scan, and the reel stamp is ROTATED 90 DEGREES on the right edge",
+    "artifacts": [
+      {
+        "id": "reel",
+        "tier": "CRITICAL",
+        "value": "REEL 1118",
+        "alts": [
+          "REEL1118",
+          "1118"
+        ]
+      },
+      {
+        "id": "reel_page",
+        "tier": "CRITICAL",
+        "value": "1406",
+        "alts": [
+          "PAGE 1406"
+        ]
+      },
+      {
+        "id": "fhlbb",
+        "tier": "CRITICAL",
+        "value": "Federal Home Loan Bank Board",
+        "alts": []
+      },
+      {
+        "id": "mortgagee",
+        "tier": "CRITICAL",
+        "value": "Mortgagee",
+        "alts": []
+      },
+      {
+        "id": "mortgagor",
+        "tier": "CRITICAL",
+        "value": "Mortgagor",
+        "alts": []
+      },
+      {
+        "id": "witness",
+        "tier": "ROUTINE",
+        "value": "IN WITNESS WHEREOF",
+        "alts": []
+      },
+      {
+        "id": "presence",
+        "tier": "ROUTINE",
+        "value": "IN PRESENCE OF",
+        "alts": []
+      },
+      {
+        "id": "late_charge",
+        "tier": "MATERIAL",
+        "value": "late charge",
+        "alts": []
+      },
+      {
+        "id": "grace",
+        "tier": "MATERIAL",
+        "value": "fifteen (15) days",
+        "alts": [
+          "fifteen 15 days"
+        ]
+      },
+      {
+        "id": "five_cents",
+        "tier": "MATERIAL",
+        "value": "five cents",
+        "alts": []
+      },
+      {
+        "id": "six_cents",
+        "tier": "MATERIAL",
+        "value": "six cents",
+        "alts": []
+      },
+      {
+        "id": "joint_tenant",
+        "tier": "MATERIAL",
+        "value": "joint tenant",
+        "alts": []
+      },
+      {
+        "id": "trust_fund",
+        "tier": "MATERIAL",
+        "value": "trust fund",
+        "alts": []
+      },
+      {
+        "id": "foreclose",
+        "tier": "MATERIAL",
+        "value": "foreclose this mortgage",
+        "alts": []
+      },
+      {
+        "id": "principal_sum",
+        "tier": "MATERIAL",
+        "value": "principal sum",
+        "alts": []
+      },
+      {
+        "id": "single_family",
+        "tier": "MATERIAL",
+        "value": "single family dwellings",
+        "alts": []
+      },
+      {
+        "id": "tax_search",
+        "tier": "ROUTINE",
+        "value": "tax searches",
+        "alts": []
+      },
+      {
+        "id": "bylaws",
+        "tier": "ROUTINE",
+        "value": "charter and by-laws",
+        "alts": []
+      },
+      {
+        "id": "board",
+        "tier": "ROUTINE",
+        "value": "Board of Directors",
+        "alts": []
+      }
+    ],
+    "ambiguous": [
+      {
+        "id": "signature1",
+        "note": "handwritten mortgagor signature - illegible"
+      },
+      {
+        "id": "signature2",
+        "note": "second handwritten mortgagor signature - illegible"
+      },
+      {
+        "id": "witness_sig",
+        "note": "witness signature - illegible"
+      }
+    ]
+  },
+  "modern_2010s_MTGE_2019102900973003_p011.png": {
+    "kind": "Fannie Mae/Freddie Mac uniform NY security instrument, page 9 of 17 - clean laser print, the easy case",
+    "artifacts": [
+      {
+        "id": "loan_no",
+        "tier": "CRITICAL",
+        "value": "2696000863",
+        "alts": []
+      },
+      {
+        "id": "form_no",
+        "tier": "CRITICAL",
+        "value": "Form 3033 1/01",
+        "alts": [
+          "Form 3033"
+        ]
+      },
+      {
+        "id": "uniform",
+        "tier": "CRITICAL",
+        "value": "Fannie Mae/Freddie Mac UNIFORM INSTRUMENT",
+        "alts": [
+          "Fannie Mae",
+          "Freddie Mac",
+          "UNIFORM INSTRUMENT"
+        ]
+      },
+      {
+        "id": "state_form",
+        "tier": "MATERIAL",
+        "value": "NEW YORK -Single Family",
+        "alts": [
+          "NEW YORK - Single Family",
+          "Single Family"
+        ]
+      },
+      {
+        "id": "page_of",
+        "tier": "CRITICAL",
+        "value": "Page 9 of 17",
+        "alts": [
+          "9 of 17"
+        ]
+      },
+      {
+        "id": "doc_code",
+        "tier": "MATERIAL",
+        "value": "16509.4 GAP",
+        "alts": [
+          "16509.4"
+        ]
+      },
+      {
+        "id": "sec8",
+        "tier": "MATERIAL",
+        "value": "Borrower's Loan Application",
+        "alts": []
+      },
+      {
+        "id": "sec9",
+        "tier": "MATERIAL",
+        "value": "Lender's Right to Protect Its Rights",
+        "alts": []
+      },
+      {
+        "id": "maint",
+        "tier": "MATERIAL",
+        "value": "Maintenance and Protection of the Property",
+        "alts": []
+      },
+      {
+        "id": "inspect",
+        "tier": "MATERIAL",
+        "value": "Lender's Inspection of Property",
+        "alts": []
+      },
+      {
+        "id": "condemnation",
+        "tier": "MATERIAL",
+        "value": "Condemnation",
+        "alts": []
+      },
+      {
+        "id": "misc_proceeds",
+        "tier": "MATERIAL",
+        "value": "Miscellaneous Proceeds",
+        "alts": []
+      },
+      {
+        "id": "principal_res",
+        "tier": "MATERIAL",
+        "value": "principal residence",
+        "alts": []
+      },
+      {
+        "id": "security",
+        "tier": "ROUTINE",
+        "value": "Security Instrument",
+        "alts": []
+      },
+      {
+        "id": "attorneys",
+        "tier": "ROUTINE",
+        "value": "attorneys' fees",
+        "alts": [
+          "attorneys fees"
+        ]
+      },
+      {
+        "id": "bankruptcy",
+        "tier": "ROUTINE",
+        "value": "bankruptcy",
+        "alts": []
+      },
+      {
+        "id": "section5",
+        "tier": "ROUTINE",
+        "value": "Section 5",
+        "alts": []
+      },
+      {
+        "id": "section11",
+        "tier": "ROUTINE",
+        "value": "Section 11",
+        "alts": []
+      }
+    ],
+    "ambiguous": []
+  }
+}

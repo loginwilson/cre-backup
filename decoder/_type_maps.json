@@ -1,0 +1,22 @@
+[
+ {
+  "type": "EASE",
+  "docs": 20776,
+  "mapped": 20770,
+  "pages": 218608,
+  "instrument_pages": 214335,
+  "with_tax": 0,
+  "mean_pp": 10.5,
+  "secs": 106.2
+ },
+ {
+  "type": "ZONE",
+  "docs": 45996,
+  "mapped": 45987,
+  "pages": 216936,
+  "instrument_pages": 216936,
+  "with_tax": 0,
+  "mean_pp": 4.7,
+  "secs": 266.5
+ }
+]

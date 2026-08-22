@@ -1,0 +1,1187 @@
+{
+ "_doc": "BK_6730047100023",
+ "_note": "HAND-READ from 1800px renders before any OCR ran.",
+ "_summary": "MTGE recorded 1967-07-10, REC. 471 pages 23-27, Kings County. $21,000 FHA mortgage from MICHAEL and ROMULDA WINNICKI (738 Sheffield Ave, Brooklyn) to SPRINGFIELD EQUITIES LTD (88-22 161st St, Jamaica). Premises on the easterly side of East 92nd Street, 100 ft south of Avenue B, Brooklyn - a 100 x 20 lot sharing a party wall. Block 8110 Lot 30 Section 24, HANDWRITTEN ONLY. Loan 4-19230, recording tax $105, title by American Title Insurance Co, mortgage assigned/held via Peninsula National Bank, Inwood NY. Purchase-money first mortgage recorded simultaneously with the deed.",
+ "_structure": "p1 first page+legal (pg23) | p2,p3 DUPLICATE rider (pg24, stamp ROTATED 90) | p4 covenants 1-12 (pg25) | p5 covenants 13-20 (pg26) | p6,p7 DUPLICATE backer (pg27, bottom half ROTATED 90)",
+ "_match_checks": [
+  "$21,000 x 0.5% = $105 -> equals the RECORDING TAX stamp on the backer",
+  "metes and bounds CLOSES: E 100ft, S 20ft, W 100ft, N 20ft (a 100x20 rectangle)",
+  "p1 margin scrawl 'LOT 30' = backer 'Lot 30'; both handwritten, neither typed",
+  "acknowledged 1967-07-06 < recorded 1967-07-10 (JUL 10 1967 register stamp)",
+  "map recorded=1967-07-10 -> backer stamp JUL-10-67"
+ ],
+ "p001.png": {
+  "kind": "mortgage first page + legal description (REC 471 pg 23)",
+  "artifacts": [
+   {
+    "id": "rec_book",
+    "tier": "CRITICAL",
+    "value": "REC. 471",
+    "alts": [
+     "REC 471",
+     "471"
+    ]
+   },
+   {
+    "id": "rec_page",
+    "tier": "CRITICAL",
+    "value": "23",
+    "alts": []
+   },
+   {
+    "id": "title",
+    "tier": "CRITICAL",
+    "value": "MORTGAGE",
+    "alts": []
+   },
+   {
+    "id": "form_no",
+    "tier": "MATERIAL",
+    "value": "FORM NO. 2159",
+    "alts": [
+     "2159"
+    ]
+   },
+   {
+    "id": "exec_date",
+    "tier": "CRITICAL",
+    "value": "6th",
+    "alts": []
+   },
+   {
+    "id": "exec_month",
+    "tier": "CRITICAL",
+    "value": "July",
+    "alts": []
+   },
+   {
+    "id": "year",
+    "tier": "CRITICAL",
+    "value": "1967",
+    "alts": []
+   },
+   {
+    "id": "mortgagor1",
+    "tier": "CRITICAL",
+    "value": "MICHAEL WINNICKI",
+    "alts": []
+   },
+   {
+    "id": "mortgagor2",
+    "tier": "CRITICAL",
+    "value": "ROMULDA WINNICKI",
+    "alts": []
+   },
+   {
+    "id": "wife",
+    "tier": "MATERIAL",
+    "value": "his wife",
+    "alts": []
+   },
+   {
+    "id": "mortgagor_addr",
+    "tier": "CRITICAL",
+    "value": "738 Sheffield Avenue",
+    "alts": []
+   },
+   {
+    "id": "mortgagee",
+    "tier": "CRITICAL",
+    "value": "SPRINGFIELD EQUITIES LTD",
+    "alts": [
+     "SPRINGFIELD EQUITIES"
+    ]
+   },
+   {
+    "id": "mortgagee_addr",
+    "tier": "CRITICAL",
+    "value": "88-22",
+    "alts": [
+     "88-22 161st Street"
+    ]
+   },
+   {
+    "id": "mortgagee_st",
+    "tier": "CRITICAL",
+    "value": "161st Street",
+    "alts": []
+   },
+   {
+    "id": "mortgagee_city",
+    "tier": "MATERIAL",
+    "value": "Jamaica, New York",
+    "alts": []
+   },
+   {
+    "id": "amount_words",
+    "tier": "CRITICAL",
+    "value": "TWENTY ONE THOUSAND",
+    "alts": [
+     "TWENTY ONE"
+    ]
+   },
+   {
+    "id": "amount_figs",
+    "tier": "CRITICAL",
+    "value": "21,000.00",
+    "alts": [
+     "$21,000.00"
+    ]
+   },
+   {
+    "id": "borough",
+    "tier": "CRITICAL",
+    "value": "Brooklyn",
+    "alts": []
+   },
+   {
+    "id": "county",
+    "tier": "CRITICAL",
+    "value": "Kings",
+    "alts": []
+   },
+   {
+    "id": "begin",
+    "tier": "CRITICAL",
+    "value": "BEGINNING at a point",
+    "alts": [
+     "BEGINNING"
+    ]
+   },
+   {
+    "id": "street",
+    "tier": "CRITICAL",
+    "value": "East 92nd Street",
+    "alts": [
+     "92nd Street"
+    ]
+   },
+   {
+    "id": "avenue",
+    "tier": "CRITICAL",
+    "value": "Avenue B",
+    "alts": []
+   },
+   {
+    "id": "dim_100",
+    "tier": "CRITICAL",
+    "value": "100 feet",
+    "alts": []
+   },
+   {
+    "id": "dim_20",
+    "tier": "CRITICAL",
+    "value": "20 feet",
+    "alts": []
+   },
+   {
+    "id": "party_wall",
+    "tier": "CRITICAL",
+    "value": "party wall",
+    "alts": []
+   },
+   {
+    "id": "corp",
+    "tier": "MATERIAL",
+    "value": "a corporation organized",
+    "alts": []
+   },
+   {
+    "id": "witnesseth",
+    "tier": "ROUTINE",
+    "value": "WITNESSETH",
+    "alts": []
+   },
+   {
+    "id": "state_ny",
+    "tier": "ROUTINE",
+    "value": "State of New York",
+    "alts": []
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "hw_block",
+    "note": "handwritten 'BL 8110' in margin, middle digits overwritten"
+   },
+   {
+    "id": "hw_lot",
+    "note": "handwritten 'LOT 30' in margin"
+   },
+   {
+    "id": "hw_105",
+    "note": "handwritten '105 od' margin scrawl"
+   },
+   {
+    "id": "hw_initials",
+    "note": "circled handwritten initials lower left, illegible"
+   }
+  ]
+ },
+ "p002.png": {
+  "kind": "RIDER SHEET (pg 24) - stamp ROTATED 90 on the right edge",
+  "artifacts": [
+   {
+    "id": "rec_book",
+    "tier": "CRITICAL",
+    "value": "REC. 471",
+    "alts": [
+     "REC 471",
+     "471"
+    ]
+   },
+   {
+    "id": "rec_page",
+    "tier": "CRITICAL",
+    "value": "24",
+    "alts": []
+   },
+   {
+    "id": "rider",
+    "tier": "CRITICAL",
+    "value": "RIDER SHEET ATTACHED TO AND MADE PART OF MORTGAGE",
+    "alts": [
+     "RIDER SHEET"
+    ]
+   },
+   {
+    "id": "awards",
+    "tier": "MATERIAL",
+    "value": "award and awards",
+    "alts": []
+   },
+   {
+    "id": "municipal",
+    "tier": "MATERIAL",
+    "value": "Municipal or State authorities",
+    "alts": [
+     "Municipal"
+    ]
+   },
+   {
+    "id": "water_rates",
+    "tier": "MATERIAL",
+    "value": "water rates",
+    "alts": []
+   },
+   {
+    "id": "sewer_rents",
+    "tier": "MATERIAL",
+    "value": "sewer rents",
+    "alts": []
+   },
+   {
+    "id": "pmm",
+    "tier": "CRITICAL",
+    "value": "purchase money first mortgage",
+    "alts": []
+   },
+   {
+    "id": "simul",
+    "tier": "CRITICAL",
+    "value": "recorded simultaneously with the deed",
+    "alts": [
+     "simultaneously with the deed"
+    ]
+   },
+   {
+    "id": "bed_street",
+    "tier": "MATERIAL",
+    "value": "land lying in the bed of the street",
+    "alts": [
+     "bed of the street"
+    ]
+   },
+   {
+    "id": "center_lines",
+    "tier": "ROUTINE",
+    "value": "center lines thereof",
+    "alts": []
+   },
+   {
+    "id": "acquittances",
+    "tier": "ROUTINE",
+    "value": "receipts and acquittances",
+    "alts": []
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "hw_initials",
+    "note": "handwritten initials M.W. / R.W. at foot"
+   }
+  ]
+ },
+ "p003.png": {
+  "kind": "RIDER SHEET duplicate of p002 (pg 24) - stamp ROTATED 90",
+  "artifacts": [
+   {
+    "id": "rec_book",
+    "tier": "CRITICAL",
+    "value": "REC. 471",
+    "alts": [
+     "REC 471",
+     "471"
+    ]
+   },
+   {
+    "id": "rec_page",
+    "tier": "CRITICAL",
+    "value": "24",
+    "alts": []
+   },
+   {
+    "id": "rider",
+    "tier": "CRITICAL",
+    "value": "RIDER SHEET ATTACHED TO AND MADE PART OF MORTGAGE",
+    "alts": [
+     "RIDER SHEET"
+    ]
+   },
+   {
+    "id": "awards",
+    "tier": "MATERIAL",
+    "value": "award and awards",
+    "alts": []
+   },
+   {
+    "id": "municipal",
+    "tier": "MATERIAL",
+    "value": "Municipal or State authorities",
+    "alts": [
+     "Municipal"
+    ]
+   },
+   {
+    "id": "water_rates",
+    "tier": "MATERIAL",
+    "value": "water rates",
+    "alts": []
+   },
+   {
+    "id": "sewer_rents",
+    "tier": "MATERIAL",
+    "value": "sewer rents",
+    "alts": []
+   },
+   {
+    "id": "pmm",
+    "tier": "CRITICAL",
+    "value": "purchase money first mortgage",
+    "alts": []
+   },
+   {
+    "id": "simul",
+    "tier": "CRITICAL",
+    "value": "recorded simultaneously with the deed",
+    "alts": [
+     "simultaneously with the deed"
+    ]
+   },
+   {
+    "id": "bed_street",
+    "tier": "MATERIAL",
+    "value": "land lying in the bed of the street",
+    "alts": [
+     "bed of the street"
+    ]
+   },
+   {
+    "id": "center_lines",
+    "tier": "ROUTINE",
+    "value": "center lines thereof",
+    "alts": []
+   },
+   {
+    "id": "acquittances",
+    "tier": "ROUTINE",
+    "value": "receipts and acquittances",
+    "alts": []
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "hw_initials",
+    "note": "handwritten initials M.W. / R.W. at foot"
+   }
+  ]
+ },
+ "p004.png": {
+  "kind": "FHA covenants 1-12 (pg 25), dense small print",
+  "artifacts": [
+   {
+    "id": "rec_book",
+    "tier": "CRITICAL",
+    "value": "REC. 471",
+    "alts": [
+     "REC 471",
+     "471"
+    ]
+   },
+   {
+    "id": "rec_page",
+    "tier": "CRITICAL",
+    "value": "25",
+    "alts": []
+   },
+   {
+    "id": "covenants",
+    "tier": "ROUTINE",
+    "value": "further covenants with the Mortgagee",
+    "alts": []
+   },
+   {
+    "id": "nha",
+    "tier": "CRITICAL",
+    "value": "National Housing Act",
+    "alts": []
+   },
+   {
+    "id": "hud",
+    "tier": "CRITICAL",
+    "value": "Housing and Urban Development",
+    "alts": []
+   },
+   {
+    "id": "one_twelfth",
+    "tier": "MATERIAL",
+    "value": "one-twelfth (1/12)",
+    "alts": [
+     "one-twelfth"
+    ]
+   },
+   {
+    "id": "one_half",
+    "tier": "MATERIAL",
+    "value": "one-half (1/2) per centum",
+    "alts": [
+     "per centum"
+    ]
+   },
+   {
+    "id": "ground_rents",
+    "tier": "MATERIAL",
+    "value": "ground rents",
+    "alts": []
+   },
+   {
+    "id": "late_charge",
+    "tier": "MATERIAL",
+    "value": "late charge",
+    "alts": []
+   },
+   {
+    "id": "two_cents",
+    "tier": "MATERIAL",
+    "value": "two cents",
+    "alts": []
+   },
+   {
+    "id": "fifteen",
+    "tier": "MATERIAL",
+    "value": "fifteen (15) days",
+    "alts": [
+     "fifteen 15 days"
+    ]
+   },
+   {
+    "id": "warrants",
+    "tier": "CRITICAL",
+    "value": "warrants the title to the premises",
+    "alts": []
+   },
+   {
+    "id": "first_lien",
+    "tier": "CRITICAL",
+    "value": "valid first lien on the premises",
+    "alts": [
+     "first lien"
+    ]
+   },
+   {
+    "id": "one_parcel",
+    "tier": "MATERIAL",
+    "value": "sold in one parcel",
+    "alts": []
+   },
+   {
+    "id": "assign_rents",
+    "tier": "CRITICAL",
+    "value": "will not assign the rents",
+    "alts": [
+     "assign the rents"
+    ]
+   },
+   {
+    "id": "lien_law",
+    "tier": "CRITICAL",
+    "value": "Lien Law of the State of New York",
+    "alts": [
+     "Lien Law"
+    ]
+   },
+   {
+    "id": "amortization",
+    "tier": "MATERIAL",
+    "value": "amortization of the principal",
+    "alts": []
+   },
+   {
+    "id": "ten_days",
+    "tier": "ROUTINE",
+    "value": "ten (10) days",
+    "alts": [
+     "ten 10 days"
+    ]
+   },
+   {
+    "id": "twenty_days",
+    "tier": "ROUTINE",
+    "value": "twenty (20) days",
+    "alts": [
+     "twenty 20 days"
+    ]
+   }
+  ],
+  "ambiguous": []
+ },
+ "p005.png": {
+  "kind": "FHA covenants 13-20 (pg 26), incl. the race-restriction clause",
+  "artifacts": [
+   {
+    "id": "rec_book",
+    "tier": "CRITICAL",
+    "value": "REC. 471",
+    "alts": [
+     "REC 471",
+     "471"
+    ]
+   },
+   {
+    "id": "rec_page",
+    "tier": "CRITICAL",
+    "value": "26",
+    "alts": []
+   },
+   {
+    "id": "insurance",
+    "tier": "MATERIAL",
+    "value": "loss by fire and other hazards",
+    "alts": [
+     "loss by fire"
+    ]
+   },
+   {
+    "id": "loss_payable",
+    "tier": "MATERIAL",
+    "value": "loss payable clauses",
+    "alts": []
+   },
+   {
+    "id": "ninety",
+    "tier": "CRITICAL",
+    "value": "ninety days",
+    "alts": []
+   },
+   {
+    "id": "aforesaid",
+    "tier": "MATERIAL",
+    "value": "aforesaid",
+    "alts": []
+   },
+   {
+    "id": "nha",
+    "tier": "CRITICAL",
+    "value": "National Housing Act",
+    "alts": []
+   },
+   {
+    "id": "race_clause",
+    "tier": "CRITICAL",
+    "value": "on the basis of race, color, or creed",
+    "alts": [
+     "race, color, or creed"
+    ]
+   },
+   {
+    "id": "attorneys",
+    "tier": "MATERIAL",
+    "value": "attorneys' fees",
+    "alts": [
+     "attorneys fees"
+    ]
+   },
+   {
+    "id": "thirty",
+    "tier": "MATERIAL",
+    "value": "thirty (30) days",
+    "alts": [
+     "thirty 30 days"
+    ]
+   },
+   {
+    "id": "surrender",
+    "tier": "MATERIAL",
+    "value": "surrender possession",
+    "alts": []
+   },
+   {
+    "id": "dispossess",
+    "tier": "MATERIAL",
+    "value": "usual summary proceedings",
+    "alts": []
+   },
+   {
+    "id": "receiver",
+    "tier": "CRITICAL",
+    "value": "appointment of a receiver",
+    "alts": []
+   },
+   {
+    "id": "foreclose",
+    "tier": "MATERIAL",
+    "value": "action to foreclose",
+    "alts": []
+   },
+   {
+    "id": "eligibility",
+    "tier": "CRITICAL",
+    "value": "not be eligible for insurance",
+    "alts": [
+     "eligible for insurance"
+    ]
+   },
+   {
+    "id": "feminine",
+    "tier": "ROUTINE",
+    "value": "feminine gender",
+    "alts": []
+   }
+  ],
+  "ambiguous": []
+ },
+ "p006.png": {
+  "kind": "backer + acknowledgement (pg 27) - bottom half ROTATED 90",
+  "artifacts": [
+   {
+    "id": "rec_book",
+    "tier": "CRITICAL",
+    "value": "REC. 471",
+    "alts": [
+     "REC 471",
+     "471"
+    ]
+   },
+   {
+    "id": "rec_page",
+    "tier": "CRITICAL",
+    "value": "27",
+    "alts": []
+   },
+   {
+    "id": "witness",
+    "tier": "ROUTINE",
+    "value": "IN WITNESS WHEREOF",
+    "alts": []
+   },
+   {
+    "id": "signer1",
+    "tier": "CRITICAL",
+    "value": "MICHAEL WINNICKI",
+    "alts": []
+   },
+   {
+    "id": "signer2",
+    "tier": "CRITICAL",
+    "value": "ROMULDA WINNICKI",
+    "alts": []
+   },
+   {
+    "id": "presence",
+    "tier": "ROUTINE",
+    "value": "In presence of",
+    "alts": []
+   },
+   {
+    "id": "state",
+    "tier": "ROUTINE",
+    "value": "STATE OF NEW YORK",
+    "alts": []
+   },
+   {
+    "id": "county_ack",
+    "tier": "CRITICAL",
+    "value": "COUNTY OF NASSAU",
+    "alts": [
+     "NASSAU"
+    ]
+   },
+   {
+    "id": "ack_day",
+    "tier": "CRITICAL",
+    "value": "6th",
+    "alts": []
+   },
+   {
+    "id": "ack_month",
+    "tier": "CRITICAL",
+    "value": "July",
+    "alts": []
+   },
+   {
+    "id": "ack_year",
+    "tier": "CRITICAL",
+    "value": "sixty seven",
+    "alts": []
+   },
+   {
+    "id": "notary",
+    "tier": "CRITICAL",
+    "value": "SIDERMAN",
+    "alts": [
+     "DAVID S. SIDERMAN"
+    ]
+   },
+   {
+    "id": "notary_county",
+    "tier": "MATERIAL",
+    "value": "Qualified in Nassau County",
+    "alts": [
+     "Nassau County"
+    ]
+   },
+   {
+    "id": "notary_exp",
+    "tier": "MATERIAL",
+    "value": "March 30, 1969",
+    "alts": []
+   },
+   {
+    "id": "serial",
+    "tier": "MATERIAL",
+    "value": "24495",
+    "alts": []
+   },
+   {
+    "id": "loan_no",
+    "tier": "CRITICAL",
+    "value": "4-19230",
+    "alts": [
+     "4 - 19230",
+     "19230"
+    ]
+   },
+   {
+    "id": "instrument",
+    "tier": "CRITICAL",
+    "value": "Mortgage",
+    "alts": []
+   },
+   {
+    "id": "to_party",
+    "tier": "CRITICAL",
+    "value": "SPRINGFIELD EQUITIES LTD",
+    "alts": [
+     "SPRINGFIELD EQUITIES"
+    ]
+   },
+   {
+    "id": "rec_tax",
+    "tier": "CRITICAL",
+    "value": "RECORDING TAX",
+    "alts": []
+   },
+   {
+    "id": "bank",
+    "tier": "CRITICAL",
+    "value": "Peninsula National Bank",
+    "alts": [
+     "Peninsula National"
+    ]
+   },
+   {
+    "id": "bank_addr",
+    "tier": "MATERIAL",
+    "value": "165 Sheridan Boulevard",
+    "alts": [
+     "Sheridan Boulevard"
+    ]
+   },
+   {
+    "id": "bank_city",
+    "tier": "MATERIAL",
+    "value": "Inwood, New York",
+    "alts": [
+     "Inwood"
+    ]
+   },
+   {
+    "id": "title_co",
+    "tier": "CRITICAL",
+    "value": "AMERICAN TITLE INSURANCE",
+    "alts": [
+     "AMERICAN TITLE"
+    ]
+   },
+   {
+    "id": "title_div",
+    "tier": "MATERIAL",
+    "value": "GUARANTEED TITLE DIVISION",
+    "alts": [
+     "GUARANTEED TITLE"
+    ]
+   },
+   {
+    "id": "rec_date",
+    "tier": "CRITICAL",
+    "value": "JUL 10 1967",
+    "alts": [
+     "JUL-10-67",
+     "JUL 10"
+    ]
+   },
+   {
+    "id": "register",
+    "tier": "CRITICAL",
+    "value": "OFFICE OF CITY REGISTER",
+    "alts": [
+     "CITY REGISTER"
+    ]
+   },
+   {
+    "id": "register_co",
+    "tier": "CRITICAL",
+    "value": "Kings County",
+    "alts": []
+   },
+   {
+    "id": "recorded",
+    "tier": "ROUTINE",
+    "value": "RECORDED",
+    "alts": []
+   },
+   {
+    "id": "seal",
+    "tier": "ROUTINE",
+    "value": "Witness my hand and official seal",
+    "alts": [
+     "official seal"
+    ]
+   },
+   {
+    "id": "nha_form",
+    "tier": "MATERIAL",
+    "value": "National Housing Act",
+    "alts": []
+   },
+   {
+    "id": "sections",
+    "tier": "MATERIAL",
+    "value": "Sections 203 and 222",
+    "alts": [
+     "203 and 222"
+    ]
+   },
+   {
+    "id": "loc_ver",
+    "tier": "ROUTINE",
+    "value": "LOC. VER.",
+    "alts": [
+     "LOC VER"
+    ]
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "hw_sec_blk_lot",
+    "note": "handwritten sideways 'Sec 24 / Blk 8110 / Lot 30' - the ONLY parcel key in the document and it is handwriting"
+   },
+   {
+    "id": "hw_rec_tax_amt",
+    "note": "handwritten '$105' over the RECORDING TAX stamp"
+   },
+   {
+    "id": "hw_serial_no",
+    "note": "SERIAL NO. handwritten, overprinted"
+   },
+   {
+    "id": "sig_mortgagors",
+    "note": "both mortgagor signatures cursive"
+   },
+   {
+    "id": "sig_witness",
+    "note": "witness signature cursive, illegible"
+   },
+   {
+    "id": "sig_register",
+    "note": "City Register signature cursive, illegible"
+   },
+   {
+    "id": "hw_rr",
+    "note": "'R & R' sideways annotation, meaning unclear"
+   }
+  ]
+ },
+ "p007.png": {
+  "kind": "backer duplicate of p006 (pg 27) - bottom half ROTATED 90",
+  "artifacts": [
+   {
+    "id": "rec_book",
+    "tier": "CRITICAL",
+    "value": "REC. 471",
+    "alts": [
+     "REC 471",
+     "471"
+    ]
+   },
+   {
+    "id": "rec_page",
+    "tier": "CRITICAL",
+    "value": "27",
+    "alts": []
+   },
+   {
+    "id": "witness",
+    "tier": "ROUTINE",
+    "value": "IN WITNESS WHEREOF",
+    "alts": []
+   },
+   {
+    "id": "signer1",
+    "tier": "CRITICAL",
+    "value": "MICHAEL WINNICKI",
+    "alts": []
+   },
+   {
+    "id": "signer2",
+    "tier": "CRITICAL",
+    "value": "ROMULDA WINNICKI",
+    "alts": []
+   },
+   {
+    "id": "presence",
+    "tier": "ROUTINE",
+    "value": "In presence of",
+    "alts": []
+   },
+   {
+    "id": "state",
+    "tier": "ROUTINE",
+    "value": "STATE OF NEW YORK",
+    "alts": []
+   },
+   {
+    "id": "county_ack",
+    "tier": "CRITICAL",
+    "value": "COUNTY OF NASSAU",
+    "alts": [
+     "NASSAU"
+    ]
+   },
+   {
+    "id": "ack_day",
+    "tier": "CRITICAL",
+    "value": "6th",
+    "alts": []
+   },
+   {
+    "id": "ack_month",
+    "tier": "CRITICAL",
+    "value": "July",
+    "alts": []
+   },
+   {
+    "id": "ack_year",
+    "tier": "CRITICAL",
+    "value": "sixty seven",
+    "alts": []
+   },
+   {
+    "id": "notary",
+    "tier": "CRITICAL",
+    "value": "SIDERMAN",
+    "alts": [
+     "DAVID S. SIDERMAN"
+    ]
+   },
+   {
+    "id": "notary_county",
+    "tier": "MATERIAL",
+    "value": "Qualified in Nassau County",
+    "alts": [
+     "Nassau County"
+    ]
+   },
+   {
+    "id": "notary_exp",
+    "tier": "MATERIAL",
+    "value": "March 30, 1969",
+    "alts": []
+   },
+   {
+    "id": "serial",
+    "tier": "MATERIAL",
+    "value": "24495",
+    "alts": []
+   },
+   {
+    "id": "loan_no",
+    "tier": "CRITICAL",
+    "value": "4-19230",
+    "alts": [
+     "4 - 19230",
+     "19230"
+    ]
+   },
+   {
+    "id": "instrument",
+    "tier": "CRITICAL",
+    "value": "Mortgage",
+    "alts": []
+   },
+   {
+    "id": "to_party",
+    "tier": "CRITICAL",
+    "value": "SPRINGFIELD EQUITIES LTD",
+    "alts": [
+     "SPRINGFIELD EQUITIES"
+    ]
+   },
+   {
+    "id": "rec_tax",
+    "tier": "CRITICAL",
+    "value": "RECORDING TAX",
+    "alts": []
+   },
+   {
+    "id": "bank",
+    "tier": "CRITICAL",
+    "value": "Peninsula National Bank",
+    "alts": [
+     "Peninsula National"
+    ]
+   },
+   {
+    "id": "bank_addr",
+    "tier": "MATERIAL",
+    "value": "165 Sheridan Boulevard",
+    "alts": [
+     "Sheridan Boulevard"
+    ]
+   },
+   {
+    "id": "bank_city",
+    "tier": "MATERIAL",
+    "value": "Inwood, New York",
+    "alts": [
+     "Inwood"
+    ]
+   },
+   {
+    "id": "title_co",
+    "tier": "CRITICAL",
+    "value": "AMERICAN TITLE INSURANCE",
+    "alts": [
+     "AMERICAN TITLE"
+    ]
+   },
+   {
+    "id": "title_div",
+    "tier": "MATERIAL",
+    "value": "GUARANTEED TITLE DIVISION",
+    "alts": [
+     "GUARANTEED TITLE"
+    ]
+   },
+   {
+    "id": "rec_date",
+    "tier": "CRITICAL",
+    "value": "JUL 10 1967",
+    "alts": [
+     "JUL-10-67",
+     "JUL 10"
+    ]
+   },
+   {
+    "id": "register",
+    "tier": "CRITICAL",
+    "value": "OFFICE OF CITY REGISTER",
+    "alts": [
+     "CITY REGISTER"
+    ]
+   },
+   {
+    "id": "register_co",
+    "tier": "CRITICAL",
+    "value": "Kings County",
+    "alts": []
+   },
+   {
+    "id": "recorded",
+    "tier": "ROUTINE",
+    "value": "RECORDED",
+    "alts": []
+   },
+   {
+    "id": "seal",
+    "tier": "ROUTINE",
+    "value": "Witness my hand and official seal",
+    "alts": [
+     "official seal"
+    ]
+   },
+   {
+    "id": "nha_form",
+    "tier": "MATERIAL",
+    "value": "National Housing Act",
+    "alts": []
+   },
+   {
+    "id": "sections",
+    "tier": "MATERIAL",
+    "value": "Sections 203 and 222",
+    "alts": [
+     "203 and 222"
+    ]
+   },
+   {
+    "id": "loc_ver",
+    "tier": "ROUTINE",
+    "value": "LOC. VER.",
+    "alts": [
+     "LOC VER"
+    ]
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "hw_sec_blk_lot",
+    "note": "handwritten sideways 'Sec 24 / Blk 8110 / Lot 30' - the ONLY parcel key in the document and it is handwriting"
+   },
+   {
+    "id": "hw_rec_tax_amt",
+    "note": "handwritten '$105' over the RECORDING TAX stamp"
+   },
+   {
+    "id": "hw_serial_no",
+    "note": "SERIAL NO. handwritten, overprinted"
+   },
+   {
+    "id": "sig_mortgagors",
+    "note": "both mortgagor signatures cursive"
+   },
+   {
+    "id": "sig_witness",
+    "note": "witness signature cursive, illegible"
+   },
+   {
+    "id": "sig_register",
+    "note": "City Register signature cursive, illegible"
+   },
+   {
+    "id": "hw_rr",
+    "note": "'R & R' sideways annotation, meaning unclear"
+   }
+  ]
+ }
+}

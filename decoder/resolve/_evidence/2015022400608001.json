@@ -1,0 +1,6241 @@
+{
+ "doc_id": "2015022400608001",
+ "extractor_version": "fuse/1.1-token",
+ "channels": {
+  "vlm": "q35-fair",
+  "ocr": "ppbox",
+  "structured_record": false
+ },
+ "pages": [
+  {
+   "page": "p001",
+   "channels_present": [
+    "q35-fair",
+    "ppbox"
+   ],
+   "token_agreement": 0.575,
+   "accepted_text": "NYC DEPARTMENT OF FINANCE OFFICE OF THE CITY REGISTER This page is part of the instrument. The City Register will rely on the information provided by you on this page for purposes of indexing this [UNRESOLVED] information on this page will control for indexing purposes in the event of any conflict with the rest of the document. [UNRESOLVED] RECORDING AND ENDORSEMENT COVER PAGE PAGE 1 OF 6 Document ID: 2015022400608001 Document Date: 11-18-2014 Preparation Date: 02-24-2015 Document Type: MORTGAGE Document Page Count: 5 PRESENTER: [UNRESOLVED] NYC COMMISSIONER OF SOCIAL SERVICES 250 CHURCH STREET, 7TH FLOOR [UNRESOLVED] 250 CHURCH STREET, [UNRESOLVED] 7TH FLOOR 7TH FLOOR NEW YORK, NY 10013 [UNRESOLVED] 929-252-2481 [UNRESOLVED] STEWARTAAU@HRA.NYC.GOV PROPERTY DATA Borough: [UNRESOLVED] QUEENS [UNRESOLVED] 10140 [UNRESOLVED] 1112 [UNRESOLVED] Entire Lot [UNRESOLVED] 17C [UNRESOLVED] Property Type: SINGLE RESIDENTIAL CONDO UNIT CROSS REFERENCE DATA CRFN or DocumentID or Year Reel Page or File Number PARTIES MORTGAGOR/BORROWER: [UNRESOLVED] DARLENE EPPS [UNRESOLVED] 107-28 GUY R. BREWER BOULEVARD, 17C [UNRESOLVED] 250 CHURCH STREET, 7TH FLOOR [UNRESOLVED] NEW YORK, NY 10013 FEES AND TAXES Mortgage: [UNRESOLVED] Mortgage Amount: $ 50,000.00 [UNRESOLVED] Taxable Mortgage Amount: [UNRESOLVED] $ 0.00 NYC Real Property Transfer Tax: [UNRESOLVED] $ 0.00 NYS Real Estate Transfer Tax: [UNRESOLVED] $ 0.00 RECORDED OR FILED IN THE OFFICE [UNRESOLVED] OF THE CITY REGISTER OF THE [UNRESOLVED] CITY OF NEW YORK [UNRESOLVED] Recorded/Filed 03-06-2015 10:45 [UNRESOLVED] City Register File No.(CRFN): [UNRESOLVED] 2015000076576 [UNRESOLVED] City Register Official Signature [UNRESOLVED]",
+   "token_ledger": {
+    "order_artifact": 142,
+    "q35-fair_only": 3,
+    "ppbox_only": 9
+   },
+   "runs": [
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "NYC DEPARTMENT OF FINANCE OFFICE OF THE CITY REGISTER This page is part of the instrument. The City Register will rely on the information provided by you on this page for purposes of indexing this",
+     "n_tokens": 35,
+     "span": {
+      "q35-fair": [
+       0,
+       35
+      ],
+      "ppbox": [
+       0,
+       35
+      ]
+     },
+     "offsets": {
+      "q35-fair": 0,
+      "ppbox": 0
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "instrument. The",
+     "ppbox": "instrument.The",
+     "span": {
+      "q35-fair": [
+       35,
+       37
+      ],
+      "ppbox": [
+       35,
+       36
+      ]
+     },
+     "offsets": {
+      "q35-fair": 197,
+      "ppbox": 197
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "instrument",
+       "the"
+      ],
+      "ppbox": [
+       "instrumentthe"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "information on this page will control for indexing purposes in the event of any conflict with the rest of the document.",
+     "n_tokens": 21,
+     "span": {
+      "q35-fair": [
+       37,
+       58
+      ],
+      "ppbox": [
+       36,
+       57
+      ]
+     },
+     "offsets": {
+      "q35-fair": 213,
+      "ppbox": 212
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "2015022400608001001E706A",
+     "span": {
+      "q35-fair": [
+       58,
+       58
+      ],
+      "ppbox": [
+       57,
+       58
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 332
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "2015022400608001001e706a"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "RECORDING AND ENDORSEMENT COVER PAGE PAGE 1 OF 6 Document ID: 2015022400608001 Document Date: 11-18-2014 Preparation Date: 02-24-2015 Document Type: MORTGAGE Document Page Count: 5 PRESENTER:",
+     "n_tokens": 26,
+     "span": {
+      "q35-fair": [
+       58,
+       84
+      ],
+      "ppbox": [
+       58,
+       84
+      ]
+     },
+     "offsets": {
+      "q35-fair": 334,
+      "ppbox": 357
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 7,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "RETURN TO: NYC COMMISSIONER OF SOCIAL SERVICES",
+     "span": {
+      "q35-fair": [
+       84,
+       84
+      ],
+      "ppbox": [
+       84,
+       91
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 549
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 7
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "NYC COMMISSIONER OF SOCIAL SERVICES 250 CHURCH STREET, 7TH FLOOR",
+     "n_tokens": 10,
+     "span": {
+      "q35-fair": [
+       84,
+       94
+      ],
+      "ppbox": [
+       91,
+       101
+      ]
+     },
+     "offsets": {
+      "q35-fair": 528,
+      "ppbox": 596
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 15,
+     "scale": "block",
+     "q35-fair": "7TH FLOOR NEW YORK, NY 10013 929-252-2481 STEWARTAAU@HRA.NYC.GOV RETURN TO: NYC COMMISSIONER OF SOCIAL SERVICES",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       94,
+       109
+      ],
+      "ppbox": [
+       101,
+       101
+      ]
+     },
+     "offsets": {
+      "q35-fair": 593,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 15,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "250 CHURCH STREET,",
+     "n_tokens": 3,
+     "span": {
+      "q35-fair": [
+       109,
+       112
+      ],
+      "ppbox": [
+       101,
+       104
+      ]
+     },
+     "offsets": {
+      "q35-fair": 706,
+      "ppbox": 661
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "7TH FLOOR",
+     "span": {
+      "q35-fair": [
+       112,
+       112
+      ],
+      "ppbox": [
+       104,
+       106
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 680
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 2
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "7TH FLOOR 7TH FLOOR NEW YORK, NY 10013",
+     "n_tokens": 8,
+     "span": {
+      "q35-fair": [
+       112,
+       120
+      ],
+      "ppbox": [
+       106,
+       114
+      ]
+     },
+     "offsets": {
+      "q35-fair": 725,
+      "ppbox": 690
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 4,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "NEW YORK, NY 10013",
+     "span": {
+      "q35-fair": [
+       120,
+       120
+      ],
+      "ppbox": [
+       114,
+       118
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 729
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 4
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "929-252-2481",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       120,
+       121
+      ],
+      "ppbox": [
+       118,
+       119
+      ]
+     },
+     "offsets": {
+      "q35-fair": 764,
+      "ppbox": 748
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "929-252-2481 STEWARTAAU@HRA.NYC.GOV",
+     "span": {
+      "q35-fair": [
+       121,
+       121
+      ],
+      "ppbox": [
+       119,
+       121
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 761
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 2
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "STEWARTAAU@HRA.NYC.GOV PROPERTY DATA Borough:",
+     "n_tokens": 4,
+     "span": {
+      "q35-fair": [
+       121,
+       125
+      ],
+      "ppbox": [
+       121,
+       125
+      ]
+     },
+     "offsets": {
+      "q35-fair": 777,
+      "ppbox": 797
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 4,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Block Lot Unit Address",
+     "span": {
+      "q35-fair": [
+       125,
+       125
+      ],
+      "ppbox": [
+       125,
+       129
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 842
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 4
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "QUEENS",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       125,
+       126
+      ],
+      "ppbox": [
+       129,
+       130
+      ]
+     },
+     "offsets": {
+      "q35-fair": 824,
+      "ppbox": 865
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": "Block:",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       126,
+       127
+      ],
+      "ppbox": [
+       130,
+       130
+      ]
+     },
+     "offsets": {
+      "q35-fair": 831,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 1,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "10140",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       127,
+       128
+      ],
+      "ppbox": [
+       130,
+       131
+      ]
+     },
+     "offsets": {
+      "q35-fair": 838,
+      "ppbox": 872
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": "Lot:",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       128,
+       129
+      ],
+      "ppbox": [
+       131,
+       131
+      ]
+     },
+     "offsets": {
+      "q35-fair": 844,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 1,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "1112",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       129,
+       130
+      ],
+      "ppbox": [
+       131,
+       132
+      ]
+     },
+     "offsets": {
+      "q35-fair": 849,
+      "ppbox": 878
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": "Unit:",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       130,
+       131
+      ],
+      "ppbox": [
+       132,
+       132
+      ]
+     },
+     "offsets": {
+      "q35-fair": 854,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 1,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Entire Lot",
+     "n_tokens": 2,
+     "span": {
+      "q35-fair": [
+       131,
+       133
+      ],
+      "ppbox": [
+       132,
+       134
+      ]
+     },
+     "offsets": {
+      "q35-fair": 860,
+      "ppbox": 883
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": "Address:",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       133,
+       134
+      ],
+      "ppbox": [
+       134,
+       134
+      ]
+     },
+     "offsets": {
+      "q35-fair": 871,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 1,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "17C",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       134,
+       135
+      ],
+      "ppbox": [
+       134,
+       135
+      ]
+     },
+     "offsets": {
+      "q35-fair": 880,
+      "ppbox": 894
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 5,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "107-28 GUY R BREWER BLVD",
+     "span": {
+      "q35-fair": [
+       135,
+       135
+      ],
+      "ppbox": [
+       135,
+       140
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 898
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "10728",
+       "guy",
+       "r",
+       "brewer",
+       "blvd"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Property Type: SINGLE RESIDENTIAL CONDO UNIT CROSS REFERENCE DATA CRFN or DocumentID or Year Reel Page or File Number PARTIES MORTGAGOR/BORROWER:",
+     "n_tokens": 21,
+     "span": {
+      "q35-fair": [
+       135,
+       156
+      ],
+      "ppbox": [
+       140,
+       161
+      ]
+     },
+     "offsets": {
+      "q35-fair": 884,
+      "ppbox": 923
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "MORTGAGEE/LENDER:",
+     "span": {
+      "q35-fair": [
+       156,
+       156
+      ],
+      "ppbox": [
+       161,
+       162
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1069
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "DARLENE EPPS",
+     "n_tokens": 2,
+     "span": {
+      "q35-fair": [
+       156,
+       158
+      ],
+      "ppbox": [
+       162,
+       164
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1032,
+      "ppbox": 1087
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 5,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "NYC COMMISSIONER OF SOCIAL SERVICES",
+     "span": {
+      "q35-fair": [
+       158,
+       158
+      ],
+      "ppbox": [
+       164,
+       169
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1100
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 5
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "107-28 GUY R. BREWER BOULEVARD, 17C",
+     "n_tokens": 6,
+     "span": {
+      "q35-fair": [
+       158,
+       164
+      ],
+      "ppbox": [
+       169,
+       175
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1045,
+      "ppbox": 1136
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 9,
+     "scale": "phrase",
+     "q35-fair": "JAMAICA, NY 11433 MORTGAGEE/LENDER: NYC COMMISSIONER OF SOCIAL SERVICES",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       164,
+       173
+      ],
+      "ppbox": [
+       175,
+       175
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1081,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 9,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "250 CHURCH STREET, 7TH FLOOR",
+     "n_tokens": 5,
+     "span": {
+      "q35-fair": [
+       173,
+       178
+      ],
+      "ppbox": [
+       175,
+       180
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1154,
+      "ppbox": 1172
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "JAMAICA, NY 11433",
+     "span": {
+      "q35-fair": [
+       178,
+       178
+      ],
+      "ppbox": [
+       180,
+       183
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1201
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 3
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "NEW YORK, NY 10013 FEES AND TAXES Mortgage:",
+     "n_tokens": 8,
+     "span": {
+      "q35-fair": [
+       178,
+       186
+      ],
+      "ppbox": [
+       183,
+       191
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1183,
+      "ppbox": 1219
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": ": Filing Fee:",
+     "span": {
+      "q35-fair": [
+       186,
+       186
+      ],
+      "ppbox": [
+       191,
+       194
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1262
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 3
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Mortgage Amount: $ 50,000.00",
+     "n_tokens": 4,
+     "span": {
+      "q35-fair": [
+       186,
+       190
+      ],
+      "ppbox": [
+       194,
+       198
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1228,
+      "ppbox": 1276
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "$ 0.00",
+     "span": {
+      "q35-fair": [
+       190,
+       190
+      ],
+      "ppbox": [
+       198,
+       200
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1305
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 2
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Taxable Mortgage Amount:",
+     "n_tokens": 3,
+     "span": {
+      "q35-fair": [
+       190,
+       193
+      ],
+      "ppbox": [
+       200,
+       203
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1257,
+      "ppbox": 1312
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 43,
+     "scale": "block",
+     "q35-fair": "$ 0.00 Exemption: 255 TAXES: County (Basic): $ 0.00 City (Additional): $ 0.00 Spec (Additional): $ 0.00 TASF: $ 0.00 MTA: $ 0.00 NYCTA: $ 0.00 Additional MRT: $ 0.00 TOTAL: $ 0.00 Recording Fee: $ EXEMPT Affidavit Fee: $ 0.00 Filing Fee:",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       193,
+       236
+      ],
+      "ppbox": [
+       203,
+       203
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1282,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 43,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "$ 0.00 NYC Real Property Transfer Tax:",
+     "n_tokens": 7,
+     "span": {
+      "q35-fair": [
+       236,
+       243
+      ],
+      "ppbox": [
+       203,
+       210
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1521,
+      "ppbox": 1337
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 7,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Exemption: 255 $ 0.00 TAXES: County (Basic):",
+     "span": {
+      "q35-fair": [
+       243,
+       243
+      ],
+      "ppbox": [
+       210,
+       217
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1376
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 7
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "$ 0.00 NYS Real Estate Transfer Tax:",
+     "n_tokens": 7,
+     "span": {
+      "q35-fair": [
+       243,
+       250
+      ],
+      "ppbox": [
+       217,
+       224
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1560,
+      "ppbox": 1421
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 8,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "City (Additional): $ 0.00 $ 0.00 Spec (Additional):",
+     "span": {
+      "q35-fair": [
+       250,
+       250
+      ],
+      "ppbox": [
+       224,
+       232
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1458
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 8
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "$ 0.00 RECORDED OR FILED IN THE OFFICE",
+     "n_tokens": 8,
+     "span": {
+      "q35-fair": [
+       250,
+       258
+      ],
+      "ppbox": [
+       232,
+       240
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1597,
+      "ppbox": 1510
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "TASF: $ 0.00",
+     "span": {
+      "q35-fair": [
+       258,
+       258
+      ],
+      "ppbox": [
+       240,
+       243
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1549
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 3
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "OF THE CITY REGISTER OF THE",
+     "n_tokens": 6,
+     "span": {
+      "q35-fair": [
+       258,
+       264
+      ],
+      "ppbox": [
+       243,
+       249
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1637,
+      "ppbox": 1562
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "MTA: $ 0.00",
+     "span": {
+      "q35-fair": [
+       264,
+       264
+      ],
+      "ppbox": [
+       249,
+       252
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1590
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 3
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "CITY OF NEW YORK",
+     "n_tokens": 4,
+     "span": {
+      "q35-fair": [
+       264,
+       268
+      ],
+      "ppbox": [
+       252,
+       256
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1665,
+      "ppbox": 1602
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "NYCTA: $ 0.00",
+     "span": {
+      "q35-fair": [
+       268,
+       268
+      ],
+      "ppbox": [
+       256,
+       259
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1619
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 3
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Recorded/Filed 03-06-2015 10:45",
+     "n_tokens": 3,
+     "span": {
+      "q35-fair": [
+       268,
+       271
+      ],
+      "ppbox": [
+       259,
+       262
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1682,
+      "ppbox": 1633
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 4,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Additional MRT: $ 0.00",
+     "span": {
+      "q35-fair": [
+       271,
+       271
+      ],
+      "ppbox": [
+       262,
+       266
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1665
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 4
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "City Register File No.(CRFN):",
+     "n_tokens": 4,
+     "span": {
+      "q35-fair": [
+       271,
+       275
+      ],
+      "ppbox": [
+       266,
+       270
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1714,
+      "ppbox": 1688
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "TOTAL: $ 0.00",
+     "span": {
+      "q35-fair": [
+       275,
+       275
+      ],
+      "ppbox": [
+       270,
+       273
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1718
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 3
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "2015000076576",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       275,
+       276
+      ],
+      "ppbox": [
+       273,
+       274
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1744,
+      "ppbox": 1732
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 9,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Recording Fee: $ EXEMPT AnnettaMHill Affidavit Fee: $ 0.00",
+     "span": {
+      "q35-fair": [
+       276,
+       276
+      ],
+      "ppbox": [
+       274,
+       283
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1746
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 8
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "annettamhill"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "City Register Official Signature",
+     "n_tokens": 4,
+     "span": {
+      "q35-fair": [
+       276,
+       280
+      ],
+      "ppbox": [
+       283,
+       287
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1759,
+      "ppbox": 1805
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": "2015022400608001",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       280,
+       281
+      ],
+      "ppbox": [
+       287,
+       287
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1793,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "2015022400608001"
+      ],
+      "ppbox": []
+     }
+    }
+   ]
+  },
+  {
+   "page": "p002",
+   "channels_present": [
+    "q35-fair",
+    "ppbox"
+   ],
+   "token_agreement": 0.8077,
+   "accepted_text": "[UNRESOLVED] LR-205k (E) 10-21-2011 [UNRESOLVED] INVESTIGATION, REVENUE AND ENFORCEMENT ADMINISTRATION BUREAU OF ELIGIBILITY VERIFICATION [UNRESOLVED] REAL PROPERTY UNIT [UNRESOLVED] 253 SCHERMERHORN STREET, 4th FLOOR [UNRESOLVED] BROOKLYN, NY 11201 [UNRESOLVED] Darlene Epps To Commissioner of Social Services of The City of New York Social District BOND AND MORTGAGE The land affected by the within instrument lies in Section [UNRESOLVED] in Block [UNRESOLVED] Lot [UNRESOLVED] On the Tax Map of the County of [UNRESOLVED] KINDLY RECORD AND RETURN TO IREA/Liens And Recovery Real Property and Assets Unit 250 Church St., 7th Floor New York, N.Y. 10013",
+   "token_ledger": {
+    "order_artifact": 18,
+    "q35-fair_only": 2,
+    "ppbox_only": 2
+   },
+   "runs": [
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 8,
+     "scale": "phrase",
+     "q35-fair": "NYC Human Resources Administration Department of Social Services",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       0,
+       8
+      ],
+      "ppbox": [
+       0,
+       0
+      ]
+     },
+     "offsets": {
+      "q35-fair": 0,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 6,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "department",
+       "social"
+      ],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "LR-205k (E) 10-21-2011",
+     "n_tokens": 3,
+     "span": {
+      "q35-fair": [
+       8,
+       11
+      ],
+      "ppbox": [
+       0,
+       3
+      ]
+     },
+     "offsets": {
+      "q35-fair": 65,
+      "ppbox": 0
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "NYC",
+     "span": {
+      "q35-fair": [
+       11,
+       11
+      ],
+      "ppbox": [
+       3,
+       4
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 23
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "INVESTIGATION, REVENUE AND ENFORCEMENT ADMINISTRATION BUREAU OF ELIGIBILITY VERIFICATION",
+     "n_tokens": 9,
+     "span": {
+      "q35-fair": [
+       11,
+       20
+      ],
+      "ppbox": [
+       4,
+       13
+      ]
+     },
+     "offsets": {
+      "q35-fair": 88,
+      "ppbox": 27
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Human Resources",
+     "span": {
+      "q35-fair": [
+       20,
+       20
+      ],
+      "ppbox": [
+       13,
+       15
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 116
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 2
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "REAL PROPERTY UNIT",
+     "n_tokens": 3,
+     "span": {
+      "q35-fair": [
+       20,
+       23
+      ],
+      "ppbox": [
+       15,
+       18
+      ]
+     },
+     "offsets": {
+      "q35-fair": 177,
+      "ppbox": 132
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Administration",
+     "span": {
+      "q35-fair": [
+       23,
+       23
+      ],
+      "ppbox": [
+       18,
+       19
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 151
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "253 SCHERMERHORN STREET, 4th FLOOR",
+     "n_tokens": 5,
+     "span": {
+      "q35-fair": [
+       23,
+       28
+      ],
+      "ppbox": [
+       19,
+       24
+      ]
+     },
+     "offsets": {
+      "q35-fair": 196,
+      "ppbox": 166
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Departmont of",
+     "span": {
+      "q35-fair": [
+       28,
+       28
+      ],
+      "ppbox": [
+       24,
+       26
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 201
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "departmont"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "BROOKLYN, NY 11201",
+     "n_tokens": 3,
+     "span": {
+      "q35-fair": [
+       28,
+       31
+      ],
+      "ppbox": [
+       26,
+       29
+      ]
+     },
+     "offsets": {
+      "q35-fair": 231,
+      "ppbox": 215
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Sociel Services",
+     "span": {
+      "q35-fair": [
+       31,
+       31
+      ],
+      "ppbox": [
+       29,
+       31
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 234
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "sociel"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Darlene Epps To Commissioner of Social Services of The City of New York Social District BOND AND MORTGAGE The land affected by the within instrument lies in Section",
+     "n_tokens": 28,
+     "span": {
+      "q35-fair": [
+       31,
+       59
+      ],
+      "ppbox": [
+       31,
+       59
+      ]
+     },
+     "offsets": {
+      "q35-fair": 250,
+      "ppbox": 250
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "10140",
+     "span": {
+      "q35-fair": [
+       59,
+       59
+      ],
+      "ppbox": [
+       59,
+       60
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 415
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "in Block",
+     "n_tokens": 2,
+     "span": {
+      "q35-fair": [
+       59,
+       61
+      ],
+      "ppbox": [
+       60,
+       62
+      ]
+     },
+     "offsets": {
+      "q35-fair": 415,
+      "ppbox": 421
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "similarity": 0.444,
+     "q35-fair": "10140",
+     "ppbox": "1112",
+     "span": {
+      "q35-fair": [
+       61,
+       62
+      ],
+      "ppbox": [
+       62,
+       63
+      ]
+     },
+     "offsets": {
+      "q35-fair": 424,
+      "ppbox": 430
+     },
+     "elsewhere": {
+      "q35-fair": 1,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Lot",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       62,
+       63
+      ],
+      "ppbox": [
+       63,
+       64
+      ]
+     },
+     "offsets": {
+      "q35-fair": 430,
+      "ppbox": 435
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "similarity": 0.0,
+     "q35-fair": "1112",
+     "ppbox": "Queens",
+     "span": {
+      "q35-fair": [
+       63,
+       64
+      ],
+      "ppbox": [
+       64,
+       65
+      ]
+     },
+     "offsets": {
+      "q35-fair": 434,
+      "ppbox": 439
+     },
+     "elsewhere": {
+      "q35-fair": 1,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "On the Tax Map of the County of",
+     "n_tokens": 8,
+     "span": {
+      "q35-fair": [
+       64,
+       72
+      ],
+      "ppbox": [
+       65,
+       73
+      ]
+     },
+     "offsets": {
+      "q35-fair": 439,
+      "ppbox": 446
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": "Queens",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       72,
+       73
+      ],
+      "ppbox": [
+       73,
+       73
+      ]
+     },
+     "offsets": {
+      "q35-fair": 471,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 1,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "KINDLY RECORD AND RETURN TO IREA/Liens And Recovery Real",
+     "n_tokens": 9,
+     "span": {
+      "q35-fair": [
+       73,
+       82
+      ],
+      "ppbox": [
+       73,
+       82
+      ]
+     },
+     "offsets": {
+      "q35-fair": 478,
+      "ppbox": 478
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Property",
+     "n_tokens": 1,
+     "fuzzy": 0.933,
+     "span": {
+      "q35-fair": [
+       82,
+       83
+      ],
+      "ppbox": [
+       82,
+       83
+      ]
+     },
+     "offsets": {
+      "q35-fair": 535,
+      "ppbox": 535
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "and Assets Unit 250 Church St., 7th Floor New York, N.Y. 10013",
+     "n_tokens": 12,
+     "span": {
+      "q35-fair": [
+       83,
+       95
+      ],
+      "ppbox": [
+       83,
+       95
+      ]
+     },
+     "offsets": {
+      "q35-fair": 544,
+      "ppbox": 544
+     }
+    }
+   ]
+  },
+  {
+   "page": "p003",
+   "channels_present": [
+    "q35-fair",
+    "ppbox"
+   ],
+   "token_agreement": 0.9101,
+   "accepted_text": "[UNRESOLVED] This bond and mortgage, made the day of, [UNRESOLVED] two thousand and [UNRESOLVED] residing at 107-28 Guy [UNRESOLVED] Darlene Epps [UNRESOLVED] JAMAICA M11433 as Commissioner of Social Services of The City of New York Social Services District, with offices at 180 Water Street, Borough of Manhattan, City and State of New York, his successors or assigns, the mortgagee: Witnesseth, that the mortgagor does hereby acknowledge to be indebted to the mortgagee in the sum of Fifty [UNRESOLVED] and [UNRESOLVED] Dollars ($ 50,000.00.) lawful money of the United States, or so much thereof as has advanced or as may be advanced at any time by the mortgagee for the relief of the mortgagor or for the benefits of the mortgagor or on account of the mortgagor's liability under the provision of the Social Services Law of the State of New York, which the mortgagor, his heirs, grantees or assigns does hereby agree and bind himself to pay the mortgagee, his successors or assigns on demand, except that before the expiration of one year from the date hereof the mortgagor may redeem the same by the payment to the Commissioner of Social Services of The City of New York Social Services District of the amount expended by said Commissioner for the relief of the mortgagor, or for the benefit of the mortgagor or on account of the mortgagor's liability under the provisions of the Social Services Law of the State of New York, and to secure the payment of which the mortgagor hereby mortgages to the mortgagee. ALL that tract or parcel [UNRESOLVED] with the buildings and improvements thereon situate, lying and being in the County [UNRESOLVED] City [UNRESOLVED] State of NY and which is [UNRESOLVED] BEGINNING at a point on the westerly side of Guy Brewer Boulevard (70 feet wide) distant 193.60 feet southerly from the corner formed by the intersection of the southerly side of 107th Avenue (60 feet wide), and the westerly side of Guy Brewer Boulevard; and RUNNING THENCE westerly, and parallel with 107th Avenue, 115.00 feet to a point; THENCE southerly, and [UNRESOLVED] with Guy Brewer Boulevard, 145.58 feet to a point; THENCE easterly, and parallel with 107th Avenue, 115.00 feet to a point on the westerly side of Guy Brewer Boulevard; [UNRESOLVED] THENCE northerly, along the westerly side of Guy Brewer Boulevard, 145.58 feet to the point or place of BEGINNING. NOTE: Being District, [UNRESOLVED] Section, [UNRESOLVED] Block(s) 10140, Lot(s) 1112, Tax Map of the Borough of Queens, County of Queens. Page 2 of 5",
+   "token_ledger": {
+    "order_artifact": 2,
+    "q35-fair_only": 24,
+    "ppbox_only": 25
+   },
+   "runs": [
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 6,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "LR-205k (E) 10-21-2011 BOND AND MORTGAGE",
+     "span": {
+      "q35-fair": [
+       0,
+       0
+      ],
+      "ppbox": [
+       0,
+       6
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 0
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "lr205k",
+       "e",
+       "10212011",
+       "bond",
+       "mortgage"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "This bond and mortgage, made the day of,",
+     "n_tokens": 8,
+     "span": {
+      "q35-fair": [
+       0,
+       8
+      ],
+      "ppbox": [
+       6,
+       14
+      ]
+     },
+     "offsets": {
+      "q35-fair": 0,
+      "ppbox": 41
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": "11-18,",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       8,
+       9
+      ],
+      "ppbox": [
+       14,
+       14
+      ]
+     },
+     "offsets": {
+      "q35-fair": 41,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "1118"
+      ],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "two thousand and",
+     "n_tokens": 3,
+     "span": {
+      "q35-fair": [
+       9,
+       12
+      ],
+      "ppbox": [
+       14,
+       17
+      ]
+     },
+     "offsets": {
+      "q35-fair": 48,
+      "ppbox": 81
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "14",
+     "span": {
+      "q35-fair": [
+       12,
+       12
+      ],
+      "ppbox": [
+       17,
+       18
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 102
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "14"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "residing at",
+     "n_tokens": 2,
+     "span": {
+      "q35-fair": [
+       12,
+       14
+      ],
+      "ppbox": [
+       18,
+       20
+      ]
+     },
+     "offsets": {
+      "q35-fair": 65,
+      "ppbox": 105
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "107-28",
+     "n_tokens": 1,
+     "fuzzy": 0.8,
+     "span": {
+      "q35-fair": [
+       14,
+       15
+      ],
+      "ppbox": [
+       20,
+       21
+      ]
+     },
+     "offsets": {
+      "q35-fair": 77,
+      "ppbox": 117
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Guy",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       15,
+       16
+      ],
+      "ppbox": [
+       21,
+       22
+      ]
+     },
+     "offsets": {
+      "q35-fair": 84,
+      "ppbox": 124
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 6,
+     "scale": "phrase",
+     "q35-fair": "R. Brewer Boulevard, Queens, NY, between",
+     "ppbox": "h. BreweRbetween",
+     "span": {
+      "q35-fair": [
+       16,
+       22
+      ],
+      "ppbox": [
+       22,
+       24
+      ]
+     },
+     "offsets": {
+      "q35-fair": 88,
+      "ppbox": 128
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "r",
+       "brewer",
+       "boulevard",
+       "queens",
+       "ny",
+       "between"
+      ],
+      "ppbox": [
+       "h",
+       "brewerbetween"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Darlene Epps",
+     "n_tokens": 2,
+     "span": {
+      "q35-fair": [
+       22,
+       24
+      ],
+      "ppbox": [
+       24,
+       26
+      ]
+     },
+     "offsets": {
+      "q35-fair": 129,
+      "ppbox": 145
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "KoulovnRDl 1MC",
+     "span": {
+      "q35-fair": [
+       24,
+       24
+      ],
+      "ppbox": [
+       26,
+       28
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 158
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "koulovnrdl",
+       "1mc"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "JAMAICA M11433 as Commissioner of Social Services of The City of New York Social Services District, with offices at 180 Water Street, Borough of Manhattan, City and State of New York, his successors or assigns, the mortgagee: Witnesseth, that the mortgagor does hereby acknowledge to be indebted to the mortgagee in the sum of Fifty",
+     "n_tokens": 55,
+     "span": {
+      "q35-fair": [
+       24,
+       79
+      ],
+      "ppbox": [
+       28,
+       83
+      ]
+     },
+     "offsets": {
+      "q35-fair": 142,
+      "ppbox": 173
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": "Thousand Dollars",
+     "ppbox": "Thou Sand NollaRs",
+     "span": {
+      "q35-fair": [
+       79,
+       81
+      ],
+      "ppbox": [
+       83,
+       86
+      ]
+     },
+     "offsets": {
+      "q35-fair": 475,
+      "ppbox": 506
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "thousand",
+       "dollars"
+      ],
+      "ppbox": [
+       "thou",
+       "sand",
+       "nollars"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "and",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       81,
+       82
+      ],
+      "ppbox": [
+       86,
+       87
+      ]
+     },
+     "offsets": {
+      "q35-fair": 492,
+      "ppbox": 524
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "similarity": 0.444,
+     "q35-fair": "00/100.",
+     "ppbox": "0o//0o.",
+     "span": {
+      "q35-fair": [
+       82,
+       83
+      ],
+      "ppbox": [
+       87,
+       88
+      ]
+     },
+     "offsets": {
+      "q35-fair": 496,
+      "ppbox": 528
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "00100"
+      ],
+      "ppbox": [
+       "0o0o"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Dollars ($ 50,000.00.) lawful money of the United States, or so much thereof as has advanced or as may be advanced at any time by the mortgagee for the relief of the mortgagor or for the benefits of the mortgagor or on account of the mortgagor's liability under the provision of the Social Services Law of the State of New York, which the mortgagor, his heirs, grantees or assigns does hereby agree and bind himself to pay the mortgagee, his successors or assigns on demand, except that before the expiration of one year from the date hereof the mortgagor may redeem the same by the payment to the Commissioner of Social Services of The City of New York Social Services District of the amount expended by said Commissioner for the relief of the mortgagor, or for the benefit of the mortgagor or on account of the mortgagor's liability under the provisions of the Social Services Law of the State of New York, and to secure the payment of which the mortgagor hereby mortgages to the mortgagee. ALL that tract or parcel",
+     "n_tokens": 181,
+     "span": {
+      "q35-fair": [
+       83,
+       264
+      ],
+      "ppbox": [
+       88,
+       269
+      ]
+     },
+     "offsets": {
+      "q35-fair": 504,
+      "ppbox": 536
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "of land",
+     "ppbox": "ofland",
+     "span": {
+      "q35-fair": [
+       264,
+       266
+      ],
+      "ppbox": [
+       269,
+       270
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1522,
+      "ppbox": 1556
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "of",
+       "land"
+      ],
+      "ppbox": [
+       "ofland"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "with the buildings and improvements",
+     "n_tokens": 5,
+     "span": {
+      "q35-fair": [
+       266,
+       271
+      ],
+      "ppbox": [
+       270,
+       275
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1530,
+      "ppbox": 1563
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "thereon",
+     "n_tokens": 1,
+     "fuzzy": 0.769,
+     "span": {
+      "q35-fair": [
+       271,
+       272
+      ],
+      "ppbox": [
+       275,
+       276
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1566,
+      "ppbox": 1599
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "situate, lying and being in the County",
+     "n_tokens": 7,
+     "span": {
+      "q35-fair": [
+       272,
+       279
+      ],
+      "ppbox": [
+       276,
+       283
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1574,
+      "ppbox": 1606
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "of Queens",
+     "ppbox": "ofQUenS",
+     "span": {
+      "q35-fair": [
+       279,
+       281
+      ],
+      "ppbox": [
+       283,
+       284
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1613,
+      "ppbox": 1645
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "of",
+       "queens"
+      ],
+      "ppbox": [
+       "ofquens"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "City",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       281,
+       282
+      ],
+      "ppbox": [
+       284,
+       285
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1623,
+      "ppbox": 1653
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "of NY",
+     "ppbox": "ofY",
+     "span": {
+      "q35-fair": [
+       282,
+       284
+      ],
+      "ppbox": [
+       285,
+       286
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1628,
+      "ppbox": 1658
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "of",
+       "ny"
+      ],
+      "ppbox": [
+       "ofy"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "State of",
+     "n_tokens": 2,
+     "span": {
+      "q35-fair": [
+       284,
+       286
+      ],
+      "ppbox": [
+       286,
+       288
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1634,
+      "ppbox": 1662
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "NY",
+     "n_tokens": 1,
+     "fuzzy": 0.667,
+     "span": {
+      "q35-fair": [
+       286,
+       287
+      ],
+      "ppbox": [
+       288,
+       289
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1643,
+      "ppbox": 1671
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "and which is",
+     "n_tokens": 3,
+     "span": {
+      "q35-fair": [
+       287,
+       290
+      ],
+      "ppbox": [
+       289,
+       292
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1646,
+      "ppbox": 1673
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 7,
+     "scale": "phrase",
+     "q35-fair": "more particularly bounded and described as follows:",
+     "ppbox": "TO",
+     "span": {
+      "q35-fair": [
+       290,
+       297
+      ],
+      "ppbox": [
+       292,
+       293
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1659,
+      "ppbox": 1686
+     },
+     "elsewhere": {
+      "q35-fair": 1,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "more",
+       "particularly",
+       "bounded",
+       "described",
+       "as",
+       "follows"
+      ],
+      "ppbox": [
+       "to"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "BEGINNING at a point on the westerly side of Guy Brewer Boulevard (70 feet wide) distant 193.60 feet southerly from the corner formed by the intersection of the southerly side of 107th Avenue (60 feet wide), and the westerly side of Guy Brewer Boulevard; and RUNNING THENCE westerly, and parallel with 107th Avenue, 115.00 feet to a point; THENCE southerly, and",
+     "n_tokens": 61,
+     "span": {
+      "q35-fair": [
+       297,
+       358
+      ],
+      "ppbox": [
+       293,
+       354
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1711,
+      "ppbox": 1689
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "parallel",
+     "ppbox": "para llel",
+     "span": {
+      "q35-fair": [
+       358,
+       359
+      ],
+      "ppbox": [
+       354,
+       356
+      ]
+     },
+     "offsets": {
+      "q35-fair": 2073,
+      "ppbox": 2051
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "parallel"
+      ],
+      "ppbox": [
+       "para",
+       "llel"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "with Guy Brewer Boulevard, 145.58 feet to a point; THENCE easterly, and parallel with 107th Avenue, 115.00 feet to a point on the westerly side of Guy Brewer Boulevard;",
+     "n_tokens": 29,
+     "span": {
+      "q35-fair": [
+       359,
+       388
+      ],
+      "ppbox": [
+       356,
+       385
+      ]
+     },
+     "offsets": {
+      "q35-fair": 2082,
+      "ppbox": 2061
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": "and",
+     "ppbox": "an d 2",
+     "span": {
+      "q35-fair": [
+       388,
+       389
+      ],
+      "ppbox": [
+       385,
+       388
+      ]
+     },
+     "offsets": {
+      "q35-fair": 2251,
+      "ppbox": 2230
+     },
+     "elsewhere": {
+      "q35-fair": 1,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "an",
+       "d",
+       "2"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "THENCE northerly, along the westerly side of Guy Brewer Boulevard, 145.58 feet to the point or place of BEGINNING. NOTE: Being District,",
+     "n_tokens": 22,
+     "span": {
+      "q35-fair": [
+       389,
+       411
+      ],
+      "ppbox": [
+       388,
+       410
+      ]
+     },
+     "offsets": {
+      "q35-fair": 2255,
+      "ppbox": 2237
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": ",",
+     "span": {
+      "q35-fair": [
+       411,
+       411
+      ],
+      "ppbox": [
+       410,
+       411
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 2373
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       ""
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Section,",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       411,
+       412
+      ],
+      "ppbox": [
+       411,
+       412
+      ]
+     },
+     "offsets": {
+      "q35-fair": 2392,
+      "ppbox": 2375
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": ",",
+     "span": {
+      "q35-fair": [
+       412,
+       412
+      ],
+      "ppbox": [
+       412,
+       413
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 2383
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       ""
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Block(s) 10140, Lot(s) 1112, Tax Map of the Borough of Queens, County of Queens. Page 2 of 5",
+     "n_tokens": 18,
+     "span": {
+      "q35-fair": [
+       412,
+       430
+      ],
+      "ppbox": [
+       413,
+       431
+      ]
+     },
+     "offsets": {
+      "q35-fair": 2401,
+      "ppbox": 2385
+     }
+    }
+   ]
+  },
+  {
+   "page": "p004",
+   "channels_present": [
+    "q35-fair",
+    "ppbox"
+   ],
+   "token_agreement": 0.966,
+   "accepted_text": "[UNRESOLVED] TOGETHER with all right, title and interest of the mortgagor in and to the land lying in the street and roads in front of [UNRESOLVED] said premises; TOGETHER with all fixtures, chattels and articles of personal property now or hereafter attached to or used in connection with said premises, including but not limited to furnaces, boilers, oil burners, radiators and piping, coal stokers, plumbing and bathroom fixtures, refrigeration, air conditioning and sprinkler systems, wash-tubs, sinks, gas and electric fixtures, stoves, ranges, awnings, screens, window shades, elevators, motors, dynamos, refrigerators, kitchen cabinets, incinerators, plants and shrubbery and all other equipment and machinery, appliances, fittings, and fixtures of every kind in or used in the operation of the buildings standing on said premises, together with any and all replacements thereof and additions thereto; TOGETHER with all awards heretofore and hereafter made to the mortgagor for taking by eminent domain the whole or any part of said premises or any easement therein, including any awards for changes of grade Of street, which said awards are hereby assigned to the mortgagee, who is hereby authorized to collect and receive the proceeds of such awards and to give proper receipts and acquittances therefore, and to apply the same toward the payment of [UNRESOLVED] the amount owing on account of this mortgage and said bond may not be then due and payable; and the said mortgagor hereby agrees, upon request, to make, execute and deliver any and all assignments and other instruments sufficient for the purpose of assigning said awards to the mortgagee, free, clear and discharged of any encumbrances of any kind or nature whatsoever. AND the mortgagor covenants with the mortgagee as follows: 1. That the mortgagor will pay the indebtedness as hereinbefore provided. 2. That the mortgagor will keep the buildings on the premises insured against loss by fire for the benefit of the mortgagee; that he will assign and deliver the policies to the mortgagee; and that he will reimburse the mortgagee for any premiums paid for insurance made by the mortgagee on the mortgagor's default in so insuring the buildings or in so assigning and delivering the policies. 3. That no building on the premises shall be altered, removed or demolished without the consent of the mortgagee. 4. That the whole of said principal sum shall become due if the mortgagor ceases to own the property above described and conveyed as security for the indebtedness herein acknowledged, or after default in the payment of any installment of principal or of interest for thirty days, or after default in the payment of any tax, water rate or assessment for thirty days after notice and demand. [UNRESOLVED] 5. That the holder of this mortgage, in any action to foreclose it, shall be entitled to the appointment of a receiver without notice. 6. That the mortgagor will pay all taxes, assessments or water rates, and in default thereof the mortgagee may pay the same, and the amount thus paid shall be added to the amount due under this mortgage. 7. That the mortgagor within thirty days upon request in person or within thirty days upon request by mail will furnish a statement of the account due on this bond and mortgage, and whether any offsets or defenses exist against the mortgage debt. 8. That notice and demand or request may be in writing and may be served in person or by mail. Page 3 of 5",
+   "token_ledger": {
+    "order_artifact": 2,
+    "q35-fair_only": 1,
+    "ppbox_only": 18
+   },
+   "runs": [
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "LR-205k (E) 10-21-2011",
+     "span": {
+      "q35-fair": [
+       0,
+       0
+      ],
+      "ppbox": [
+       0,
+       3
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 0
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "lr205k",
+       "e",
+       "10212011"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "TOGETHER with all right, title and interest of the mortgagor in and to the land lying in the street and roads in front of",
+     "n_tokens": 24,
+     "span": {
+      "q35-fair": [
+       0,
+       24
+      ],
+      "ppbox": [
+       3,
+       27
+      ]
+     },
+     "offsets": {
+      "q35-fair": 0,
+      "ppbox": 23
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "and adjoining",
+     "ppbox": "and-adjoining",
+     "span": {
+      "q35-fair": [
+       24,
+       26
+      ],
+      "ppbox": [
+       27,
+       28
+      ]
+     },
+     "offsets": {
+      "q35-fair": 122,
+      "ppbox": 145
+     },
+     "elsewhere": {
+      "q35-fair": 1,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "adjoining"
+      ],
+      "ppbox": [
+       "andadjoining"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "said premises; TOGETHER with all fixtures, chattels and articles of personal property now or hereafter attached to or used in connection with said premises, including but not limited to furnaces, boilers, oil burners, radiators and piping, coal stokers, plumbing and bathroom fixtures, refrigeration, air conditioning and sprinkler systems, wash-tubs, sinks, gas and electric fixtures, stoves, ranges, awnings, screens, window shades, elevators, motors, dynamos, refrigerators, kitchen cabinets, incinerators, plants and shrubbery and all other equipment and machinery, appliances, fittings, and fixtures of every kind in or used in the operation of the buildings standing on said premises, together with any and all replacements thereof and additions thereto; TOGETHER with all awards heretofore and hereafter made to the mortgagor for taking by eminent domain the whole or any part of said premises or any easement therein, including any awards for changes of grade Of street, which said awards are hereby assigned to the mortgagee, who is hereby authorized to collect and receive the proceeds of such awards and to give proper receipts and acquittances therefore, and to apply the same toward the payment of",
+     "n_tokens": 182,
+     "span": {
+      "q35-fair": [
+       26,
+       208
+      ],
+      "ppbox": [
+       28,
+       210
+      ]
+     },
+     "offsets": {
+      "q35-fair": 136,
+      "ppbox": 159
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 14,
+     "scale": "block",
+     "q35-fair": null,
+     "ppbox": "the amount owing on account of this bond and mortgage, notwithstanding the fact that",
+     "span": {
+      "q35-fair": [
+       208,
+       208
+      ],
+      "ppbox": [
+       210,
+       224
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1371
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "the",
+       "amount",
+       "owing",
+       "on",
+       "account",
+       "of",
+       "this",
+       "bond",
+       "mortgage",
+       "notwithstanding",
+       "the",
+       "fact",
+       "that"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "the amount owing on account of this mortgage and said bond may not be then due and payable; and the said mortgagor hereby agrees, upon request, to make, execute and deliver any and all assignments and other instruments sufficient for the purpose of assigning said awards to the mortgagee, free, clear and discharged of any encumbrances of any kind or nature whatsoever. AND the mortgagor covenants with the mortgagee as follows: 1. That the mortgagor will pay the indebtedness as hereinbefore provided. 2. That the mortgagor will keep the buildings on the premises insured against loss by fire for the benefit of the mortgagee; that he will assign and deliver the policies to the mortgagee; and that he will reimburse the mortgagee for any premiums paid for insurance made by the mortgagee on the mortgagor's default in so insuring the buildings or in so assigning and delivering the policies. 3. That no building on the premises shall be altered, removed or demolished without the consent of the mortgagee. 4. That the whole of said principal sum shall become due if the mortgagor ceases to own the property above described and conveyed as security for the indebtedness herein acknowledged, or after default in the payment of any installment of principal or of interest for thirty days, or after default in the payment of any tax, water rate or assessment for thirty days after notice and demand.",
+     "n_tokens": 235,
+     "span": {
+      "q35-fair": [
+       208,
+       443
+      ],
+      "ppbox": [
+       224,
+       459
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1349,
+      "ppbox": 1456
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "1",
+     "span": {
+      "q35-fair": [
+       443,
+       443
+      ],
+      "ppbox": [
+       459,
+       460
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 2854
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "1"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "5. That the holder of this mortgage, in any action to foreclose it, shall be entitled to the appointment of a receiver without notice. 6. That the mortgagor will pay all taxes, assessments or water rates, and in default thereof the mortgagee may pay the same, and the amount thus paid shall be added to the amount due under this mortgage. 7. That the mortgagor within thirty days upon request in person or within thirty days upon request by mail will furnish a statement of the account due on this bond and mortgage, and whether any offsets or defenses exist against the mortgage debt. 8. That notice and demand or request may be in writing and may be served in person or by mail. Page 3 of 5",
+     "n_tokens": 128,
+     "span": {
+      "q35-fair": [
+       443,
+       571
+      ],
+      "ppbox": [
+       460,
+       588
+      ]
+     },
+     "offsets": {
+      "q35-fair": 2753,
+      "ppbox": 2856
+     }
+    }
+   ]
+  },
+  {
+   "page": "p005",
+   "channels_present": [
+    "q35-fair",
+    "ppbox"
+   ],
+   "token_agreement": 0.9686,
+   "accepted_text": "[UNRESOLVED] 9. That the mortgagor warrants the title to the premises. 10. That in the event of any default hereunder, if any owner or subsequent owner is occupying any part of the premises, it is hereby agreed that a reasonable rental for the part so occupied shall be paid by the occupant monthly in advance to the mortgagee or to receiver appointed as herein provided, and upon the appointment of such a receiver, such receiver may take possession of said premises from the mortgagor or any owner thereof and collect any and all rents. This covenant shall run with the land and shall bind the mortgagor, his heirs, legal representative, successors and assigns and all subsequent owners, tenants and assigns of said premises. [UNRESOLVED] Subject to the provisions of Section 12 following, as part of the consideration for the delivery of this instrument, the mortgagee, by the mortgagor(s) acceptance hereof, covenants and agrees that the payment of the principal sum secured herby will not be demanded or enforced until the mortgagor dies, conveys or leases the premises described herein to others or acts in a manner described in Section 12, or is confined to an institution for long term incapacity as defined by the New York State Code of Rules and Regulations. 12. Notwithstanding anything to the contrary started herein, the whole of said principal sum shall become due and payable upon formal written demand by the Department to the mortgagor(s), sent by certified mail, addressed to the premises described herein, for payment of the whole of the principal sum, but such demand shall not be made until after the Department\u2019s receipt of actual written notice, by certified mail, to the attention of the Commission of Social Services, of one of the following occurrences: A) The death of the mortgagor, if not survived by a spouse; if survived by a spouse, then upon the death of the spouse: B) Upon the mortgagor(s) vacating, conveying or leasing the premises to other; or the mortgagor(s) becoming a tenant of the premises described herein; or by any act by which the mortgagor(s) transfers any interest in the premises in whole or in part; or any other act by which the mortgagor(s) hinders, liens, encumbers, pledges or assigns the title thereto, or any part thereof; or conveys or leases said premises to others, or becomes a tenant(s) of the said premises by reason of a conveyance, or any other acts by which the mortgagor(s) affects, hinders, liens, pledges or assigns the title thereto, or ant part thereof; or C) The mortgagor(s) becomes a resident, patient or recipient of care at any long term care facility, skilled care facility, nursing home, intermediate care facility or other like institution, or ceases to occupy the premises described herein. This mortgage may not be changed or terminated orally. The covenants contained in this mortgage shall run with the land and bind the mortgagor, the heirs, personal representatives, successors and assigns of the mortgagor, and all subsequent owners, encumbrancers, tenants and subtenants of the premises, and shall ensure to the benefit of the mortgagor, his successors and assigns. The word \u201cmortgagor\u201d shall be construed as if it read \u201cmortgages\u201d and the word \u201cmortgagee\u201d shall be construed as if it read \u201cmortgagees\u201d whenever the since of this mortgage so requires. IN WITNESS WHEREOF, this bond and mortgage has [UNRESOLVED] executed by the mortgagor. [UNRESOLVED] IN PRESENCE OF: [UNRESOLVED] ROBERT A. MORRA Notary Public - State of New York [UNRESOLVED] Qualified in Queens County Commission Expires November 2, 2011 Page 4 of 5",
+   "token_ledger": {
+    "order_artifact": 0,
+    "q35-fair_only": 6,
+    "ppbox_only": 17
+   },
+   "runs": [
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "LR-205k (E) 10-21-2011",
+     "span": {
+      "q35-fair": [
+       0,
+       0
+      ],
+      "ppbox": [
+       0,
+       3
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 0
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "lr205k",
+       "e",
+       "10212011"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "9. That the mortgagor warrants the title to the premises. 10. That in the event of any default hereunder, if any owner or subsequent owner is occupying any part of the premises, it is hereby agreed that a reasonable rental for the part so occupied shall be paid by the occupant monthly in",
+     "n_tokens": 53,
+     "span": {
+      "q35-fair": [
+       0,
+       53
+      ],
+      "ppbox": [
+       3,
+       56
+      ]
+     },
+     "offsets": {
+      "q35-fair": 0,
+      "ppbox": 23
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "advance",
+     "n_tokens": 1,
+     "fuzzy": 0.933,
+     "span": {
+      "q35-fair": [
+       53,
+       54
+      ],
+      "ppbox": [
+       56,
+       57
+      ]
+     },
+     "offsets": {
+      "q35-fair": 290,
+      "ppbox": 312
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "to the mortgagee or to receiver appointed as herein provided, and upon the appointment of such a receiver, such receiver may take possession of said premises from the mortgagor or any owner thereof and collect any and all rents. This covenant shall run with the land and shall bind the mortgagor, his heirs, legal representative, successors and assigns and all subsequent owners, tenants and assigns of said premises.",
+     "n_tokens": 68,
+     "span": {
+      "q35-fair": [
+       54,
+       122
+      ],
+      "ppbox": [
+       57,
+       125
+      ]
+     },
+     "offsets": {
+      "q35-fair": 298,
+      "ppbox": 321
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "11. H.",
+     "ppbox": "11.H.",
+     "span": {
+      "q35-fair": [
+       122,
+       124
+      ],
+      "ppbox": [
+       125,
+       126
+      ]
+     },
+     "offsets": {
+      "q35-fair": 717,
+      "ppbox": 739
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "11",
+       "h"
+      ],
+      "ppbox": [
+       "11h"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Subject to the provisions of Section 12 following, as part of the consideration for the delivery of this instrument, the mortgagee, by the mortgagor(s) acceptance hereof, covenants and agrees that the payment of the principal sum secured herby will not be demanded or enforced until the mortgagor dies, conveys or leases the premises described herein to others or acts in a manner described in Section 12, or is confined to an institution for long term incapacity as defined by the New York State Code of Rules and Regulations. 12. Notwithstanding anything to the contrary started herein, the whole of said principal sum shall become due and payable upon formal written demand by the Department to the mortgagor(s), sent by certified mail, addressed to the premises described herein, for payment of the whole of the principal sum, but such demand shall not be made until after the Department\u2019s receipt of actual written notice, by certified mail, to the attention of the Commission of Social Services, of one of the following occurrences: A) The death of the mortgagor, if not survived by a spouse; if survived by a spouse, then upon the death of the spouse: B) Upon the mortgagor(s) vacating, conveying or leasing the premises to other; or the mortgagor(s) becoming a tenant of the premises described herein; or by any act by which the mortgagor(s) transfers any interest in the premises in whole or in part; or any other act by which the mortgagor(s) hinders, liens, encumbers, pledges or assigns the title thereto, or any part thereof; or conveys or leases said premises to others, or becomes a tenant(s) of the said premises by reason of a conveyance, or any other acts by which the mortgagor(s) affects, hinders, liens, pledges or assigns the title thereto, or ant part thereof; or C) The mortgagor(s) becomes a resident, patient or recipient of care at any long term care facility, skilled care facility, nursing home, intermediate care facility or other like institution, or ceases to occupy the premises described herein. This mortgage may not be changed or terminated orally. The covenants contained in this mortgage shall run with the",
+     "n_tokens": 356,
+     "span": {
+      "q35-fair": [
+       124,
+       480
+      ],
+      "ppbox": [
+       126,
+       482
+      ]
+     },
+     "offsets": {
+      "q35-fair": 724,
+      "ppbox": 745
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "land",
+     "n_tokens": 1,
+     "fuzzy": 0.857,
+     "span": {
+      "q35-fair": [
+       480,
+       481
+      ],
+      "ppbox": [
+       482,
+       483
+      ]
+     },
+     "offsets": {
+      "q35-fair": 2874,
+      "ppbox": 2890
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "and bind the mortgagor, the heirs, personal representatives, successors and assigns of the mortgagor, and all subsequent owners, encumbrancers, tenants and subtenants of the premises, and shall",
+     "n_tokens": 27,
+     "span": {
+      "q35-fair": [
+       481,
+       508
+      ],
+      "ppbox": [
+       483,
+       510
+      ]
+     },
+     "offsets": {
+      "q35-fair": 2879,
+      "ppbox": 2894
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "ensure",
+     "n_tokens": 1,
+     "fuzzy": 0.909,
+     "span": {
+      "q35-fair": [
+       508,
+       509
+      ],
+      "ppbox": [
+       510,
+       511
+      ]
+     },
+     "offsets": {
+      "q35-fair": 3073,
+      "ppbox": 3088
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "to the benefit of the mortgagor, his successors and assigns. The word \u201cmortgagor\u201d shall be construed as if it read",
+     "n_tokens": 20,
+     "span": {
+      "q35-fair": [
+       509,
+       529
+      ],
+      "ppbox": [
+       511,
+       531
+      ]
+     },
+     "offsets": {
+      "q35-fair": 3080,
+      "ppbox": 3094
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "\u201cmortgages\u201d",
+     "n_tokens": 1,
+     "fuzzy": 0.842,
+     "span": {
+      "q35-fair": [
+       529,
+       530
+      ],
+      "ppbox": [
+       531,
+       532
+      ]
+     },
+     "offsets": {
+      "q35-fair": 3195,
+      "ppbox": 3209
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "and the word \u201cmortgagee\u201d shall be construed as if it read \u201cmortgagees\u201d whenever the since of this mortgage so requires. IN WITNESS WHEREOF, this bond and mortgage has",
+     "n_tokens": 28,
+     "span": {
+      "q35-fair": [
+       530,
+       558
+      ],
+      "ppbox": [
+       532,
+       560
+      ]
+     },
+     "offsets": {
+      "q35-fair": 3207,
+      "ppbox": 3222
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "been duly",
+     "ppbox": "beenduly",
+     "span": {
+      "q35-fair": [
+       558,
+       560
+      ],
+      "ppbox": [
+       560,
+       561
+      ]
+     },
+     "offsets": {
+      "q35-fair": 3375,
+      "ppbox": 3389
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "been",
+       "duly"
+      ],
+      "ppbox": [
+       "beenduly"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "executed by the mortgagor.",
+     "n_tokens": 4,
+     "span": {
+      "q35-fair": [
+       560,
+       564
+      ],
+      "ppbox": [
+       561,
+       565
+      ]
+     },
+     "offsets": {
+      "q35-fair": 3385,
+      "ppbox": 3398
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Narlene epps",
+     "span": {
+      "q35-fair": [
+       564,
+       564
+      ],
+      "ppbox": [
+       565,
+       567
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 3425
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "narlene",
+       "epps"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "IN PRESENCE OF:",
+     "n_tokens": 3,
+     "span": {
+      "q35-fair": [
+       564,
+       567
+      ],
+      "ppbox": [
+       567,
+       570
+      ]
+     },
+     "offsets": {
+      "q35-fair": 3413,
+      "ppbox": 3438
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 7,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "L.S. Polt a. Mona Dallene Epps L.S.",
+     "span": {
+      "q35-fair": [
+       567,
+       567
+      ],
+      "ppbox": [
+       570,
+       577
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 3454
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "ls",
+       "polt",
+       "a",
+       "mona",
+       "dallene",
+       "epps",
+       "ls"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "ROBERT A. MORRA Notary Public - State of New York",
+     "n_tokens": 10,
+     "span": {
+      "q35-fair": [
+       567,
+       577
+      ],
+      "ppbox": [
+       577,
+       587
+      ]
+     },
+     "offsets": {
+      "q35-fair": 3430,
+      "ppbox": 3490
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": "No. 01MO6213232",
+     "ppbox": "L.S. No.01MO6213232 17",
+     "span": {
+      "q35-fair": [
+       577,
+       579
+      ],
+      "ppbox": [
+       587,
+       590
+      ]
+     },
+     "offsets": {
+      "q35-fair": 3480,
+      "ppbox": 3540
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "no",
+       "01mo6213232"
+      ],
+      "ppbox": [
+       "ls",
+       "no01mo6213232",
+       "17"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Qualified in Queens County Commission Expires November 2,",
+     "n_tokens": 8,
+     "span": {
+      "q35-fair": [
+       579,
+       587
+      ],
+      "ppbox": [
+       590,
+       598
+      ]
+     },
+     "offsets": {
+      "q35-fair": 3496,
+      "ppbox": 3563
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "2011",
+     "n_tokens": 1,
+     "fuzzy": 0.667,
+     "span": {
+      "q35-fair": [
+       587,
+       588
+      ],
+      "ppbox": [
+       598,
+       599
+      ]
+     },
+     "offsets": {
+      "q35-fair": 3554,
+      "ppbox": 3621
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Page 4 of 5",
+     "n_tokens": 4,
+     "span": {
+      "q35-fair": [
+       588,
+       592
+      ],
+      "ppbox": [
+       599,
+       603
+      ]
+     },
+     "offsets": {
+      "q35-fair": 3560,
+      "ppbox": 3624
+     }
+    }
+   ]
+  },
+  {
+   "page": "p006",
+   "channels_present": [
+    "q35-fair",
+    "ppbox"
+   ],
+   "token_agreement": 0.6761,
+   "accepted_text": "[UNRESOLVED] LR-205k (E) 10-21-2011 [UNRESOLVED] ACKNOWLEDGEMENTS [UNRESOLVED] Acknowledgements taken in New York State [UNRESOLVED] STATE OF NEW YORK COUNTY OF: [UNRESOLVED] On the [UNRESOLVED] of [UNRESOLVED] in the year [UNRESOLVED] before me [UNRESOLVED] Personally known to me or proved to me on the basis of satisfactory evidence, to be the individual(s) whose name(s) is (are) subscribed to the within instrument and acknowledged to me that (he) (she) (they) executed the same in (his) (her) (their) capacity (ies), and that by (his) (her) (their) signature (s) on the instrument, the individual (s) or the person upon behalf of which the individual (s) acted, executed the instrument. [UNRESOLVED] A. Morra Notary Public [UNRESOLVED] ROBERT A. MORRA Notary Public - State of New York [UNRESOLVED] 01MO6213232 Qualified in Queens County [UNRESOLVED] Page 5 of 5",
+   "token_ledger": {
+    "order_artifact": 6,
+    "q35-fair_only": 51,
+    "ppbox_only": 10
+   },
+   "runs": [
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 19,
+     "scale": "block",
+     "q35-fair": "Here is the transcription of every word of text visible in the scanned document page, exactly as printed: **Header**",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       0,
+       19
+      ],
+      "ppbox": [
+       0,
+       0
+      ]
+     },
+     "offsets": {
+      "q35-fair": 0,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "here",
+       "is",
+       "the",
+       "transcription",
+       "of",
+       "every",
+       "word",
+       "of",
+       "text",
+       "visible",
+       "in",
+       "the",
+       "scanned",
+       "document",
+       "page",
+       "exactly",
+       "as",
+       "printed",
+       "header"
+      ],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "LR-205k (E) 10-21-2011",
+     "n_tokens": 3,
+     "span": {
+      "q35-fair": [
+       19,
+       22
+      ],
+      "ppbox": [
+       0,
+       3
+      ]
+     },
+     "offsets": {
+      "q35-fair": 118,
+      "ppbox": 0
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "**Document Title**",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       22,
+       24
+      ],
+      "ppbox": [
+       3,
+       3
+      ]
+     },
+     "offsets": {
+      "q35-fair": 142,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "document",
+       "title"
+      ],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "ACKNOWLEDGEMENTS",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       24,
+       25
+      ],
+      "ppbox": [
+       3,
+       4
+      ]
+     },
+     "offsets": {
+      "q35-fair": 161,
+      "ppbox": 23
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "**Body Text**",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       25,
+       27
+      ],
+      "ppbox": [
+       4,
+       4
+      ]
+     },
+     "offsets": {
+      "q35-fair": 179,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "body",
+       "text"
+      ],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Acknowledgements taken in New York State",
+     "n_tokens": 6,
+     "span": {
+      "q35-fair": [
+       27,
+       33
+      ],
+      "ppbox": [
+       4,
+       10
+      ]
+     },
+     "offsets": {
+      "q35-fair": 193,
+      "ppbox": 40
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "**Formalities**",
+     "ppbox": "Kings :ss:",
+     "span": {
+      "q35-fair": [
+       33,
+       34
+      ],
+      "ppbox": [
+       10,
+       12
+      ]
+     },
+     "offsets": {
+      "q35-fair": 235,
+      "ppbox": 81
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 2
+     },
+     "unmatched": {
+      "q35-fair": [
+       "formalities"
+      ],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "STATE OF NEW YORK COUNTY OF:",
+     "n_tokens": 6,
+     "span": {
+      "q35-fair": [
+       34,
+       40
+      ],
+      "ppbox": [
+       12,
+       18
+      ]
+     },
+     "offsets": {
+      "q35-fair": 251,
+      "ppbox": 92
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": "Kings : SS:",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       40,
+       43
+      ],
+      "ppbox": [
+       18,
+       18
+      ]
+     },
+     "offsets": {
+      "q35-fair": 280,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 2,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       ""
+      ],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "On the",
+     "n_tokens": 2,
+     "span": {
+      "q35-fair": [
+       43,
+       45
+      ],
+      "ppbox": [
+       18,
+       20
+      ]
+     },
+     "offsets": {
+      "q35-fair": 292,
+      "ppbox": 121
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "18 day",
+     "ppbox": "18day",
+     "span": {
+      "q35-fair": [
+       45,
+       47
+      ],
+      "ppbox": [
+       20,
+       21
+      ]
+     },
+     "offsets": {
+      "q35-fair": 299,
+      "ppbox": 128
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "18",
+       "day"
+      ],
+      "ppbox": [
+       "18day"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "of",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       47,
+       48
+      ],
+      "ppbox": [
+       21,
+       22
+      ]
+     },
+     "offsets": {
+      "q35-fair": 306,
+      "ppbox": 134
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": "November ,",
+     "ppbox": "Nov em beR,",
+     "span": {
+      "q35-fair": [
+       48,
+       50
+      ],
+      "ppbox": [
+       22,
+       25
+      ]
+     },
+     "offsets": {
+      "q35-fair": 309,
+      "ppbox": 137
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "november",
+       ""
+      ],
+      "ppbox": [
+       "nov",
+       "em",
+       "ber"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "in the year",
+     "n_tokens": 3,
+     "span": {
+      "q35-fair": [
+       50,
+       53
+      ],
+      "ppbox": [
+       25,
+       28
+      ]
+     },
+     "offsets": {
+      "q35-fair": 320,
+      "ppbox": 149
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "2014",
+     "ppbox": "20 /4",
+     "span": {
+      "q35-fair": [
+       53,
+       54
+      ],
+      "ppbox": [
+       28,
+       30
+      ]
+     },
+     "offsets": {
+      "q35-fair": 332,
+      "ppbox": 161
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "2014"
+      ],
+      "ppbox": [
+       "20",
+       "4"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "before me",
+     "n_tokens": 2,
+     "span": {
+      "q35-fair": [
+       54,
+       56
+      ],
+      "ppbox": [
+       30,
+       32
+      ]
+     },
+     "offsets": {
+      "q35-fair": 337,
+      "ppbox": 167
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 8,
+     "scale": "phrase",
+     "q35-fair": "**Signature Block** The undersigned, personally appeared Darlene Egas",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       56,
+       64
+      ],
+      "ppbox": [
+       32,
+       32
+      ]
+     },
+     "offsets": {
+      "q35-fair": 348,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "signature",
+       "block",
+       "the",
+       "undersigned",
+       "personally",
+       "appeared",
+       "darlene",
+       "egas"
+      ],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Personally known to me or proved to me on the basis of satisfactory evidence, to be the individual(s) whose name(s) is (are) subscribed to the",
+     "n_tokens": 25,
+     "span": {
+      "q35-fair": [
+       64,
+       89
+      ],
+      "ppbox": [
+       32,
+       57
+      ]
+     },
+     "offsets": {
+      "q35-fair": 418,
+      "ppbox": 177
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "within",
+     "n_tokens": 1,
+     "fuzzy": 0.909,
+     "span": {
+      "q35-fair": [
+       89,
+       90
+      ],
+      "ppbox": [
+       57,
+       58
+      ]
+     },
+     "offsets": {
+      "q35-fair": 561,
+      "ppbox": 320
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "instrument and acknowledged to me that (he) (she) (they) executed the same in (his) (her) (their) capacity (ies), and that by (his) (her) (their) signature (s) on the instrument, the individual (s) or the person upon behalf of which the individual (s) acted, executed the instrument.",
+     "n_tokens": 46,
+     "span": {
+      "q35-fair": [
+       90,
+       136
+      ],
+      "ppbox": [
+       58,
+       104
+      ]
+     },
+     "offsets": {
+      "q35-fair": 568,
+      "ppbox": 326
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "**Signature** Robert",
+     "ppbox": "Robut",
+     "span": {
+      "q35-fair": [
+       136,
+       138
+      ],
+      "ppbox": [
+       104,
+       105
+      ]
+     },
+     "offsets": {
+      "q35-fair": 853,
+      "ppbox": 610
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "signature",
+       "robert"
+      ],
+      "ppbox": [
+       "robut"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "A.",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       138,
+       139
+      ],
+      "ppbox": [
+       105,
+       106
+      ]
+     },
+     "offsets": {
+      "q35-fair": 874,
+      "ppbox": 616
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Morra",
+     "n_tokens": 1,
+     "fuzzy": 0.667,
+     "span": {
+      "q35-fair": [
+       139,
+       140
+      ],
+      "ppbox": [
+       106,
+       107
+      ]
+     },
+     "offsets": {
+      "q35-fair": 877,
+      "ppbox": 619
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Notary Public",
+     "n_tokens": 2,
+     "span": {
+      "q35-fair": [
+       140,
+       142
+      ],
+      "ppbox": [
+       107,
+       109
+      ]
+     },
+     "offsets": {
+      "q35-fair": 883,
+      "ppbox": 625
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 5,
+     "scale": "phrase",
+     "q35-fair": "**Stamp** SEAL **Signature Block (Bottom)**",
+     "ppbox": "MC HikA te",
+     "span": {
+      "q35-fair": [
+       142,
+       147
+      ],
+      "ppbox": [
+       109,
+       112
+      ]
+     },
+     "offsets": {
+      "q35-fair": 898,
+      "ppbox": 639
+     },
+     "elsewhere": {
+      "q35-fair": 1,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "stamp",
+       "signature",
+       "block",
+       "bottom"
+      ],
+      "ppbox": [
+       "mc",
+       "hika",
+       "te"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "ROBERT A. MORRA Notary Public - State of New York",
+     "n_tokens": 10,
+     "span": {
+      "q35-fair": [
+       147,
+       157
+      ],
+      "ppbox": [
+       112,
+       122
+      ]
+     },
+     "offsets": {
+      "q35-fair": 943,
+      "ppbox": 650
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "similarity": 0.0,
+     "q35-fair": "No.",
+     "ppbox": "SEAL",
+     "span": {
+      "q35-fair": [
+       157,
+       158
+      ],
+      "ppbox": [
+       122,
+       123
+      ]
+     },
+     "offsets": {
+      "q35-fair": 993,
+      "ppbox": 700
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [
+       "no"
+      ],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "01MO6213232",
+     "n_tokens": 1,
+     "fuzzy": 0.917,
+     "span": {
+      "q35-fair": [
+       158,
+       159
+      ],
+      "ppbox": [
+       123,
+       124
+      ]
+     },
+     "offsets": {
+      "q35-fair": 997,
+      "ppbox": 705
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Qualified in Queens County",
+     "n_tokens": 4,
+     "span": {
+      "q35-fair": [
+       159,
+       163
+      ],
+      "ppbox": [
+       124,
+       128
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1009,
+      "ppbox": 721
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 6,
+     "scale": "phrase",
+     "q35-fair": "Commission Expires November 2, 2011 **Footer**",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       163,
+       169
+      ],
+      "ppbox": [
+       128,
+       128
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1036,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "commission",
+       "expires",
+       "november",
+       "2",
+       "2011",
+       "footer"
+      ],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Page 5 of 5",
+     "n_tokens": 4,
+     "span": {
+      "q35-fair": [
+       169,
+       173
+      ],
+      "ppbox": [
+       128,
+       132
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1084,
+      "ppbox": 748
+     }
+    }
+   ]
+  },
+  {
+   "page": "p007",
+   "channels_present": [
+    "q35-fair",
+    "ppbox"
+   ],
+   "token_agreement": 0.9737,
+   "accepted_text": "MORTGAGE CLAUSE [UNRESOLVED] This Security Instrument covers real property improved, or to be improved, by a one or two family dwelling only. OR [UNRESOLVED] This Security Instrument covers real property principally improved, or to be improved, by one or more structures containing, in the aggregate, no more than six residential dwelling units with each dwelling unit having its own cooking facilities. OR This Security Instrument does not cover real property improved as described above. KJB/Mortgage Clause-8-16-06",
+   "token_ledger": {
+    "order_artifact": 0,
+    "q35-fair_only": 0,
+    "ppbox_only": 2
+   },
+   "runs": [
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "MORTGAGE CLAUSE",
+     "n_tokens": 2,
+     "span": {
+      "q35-fair": [
+       0,
+       2
+      ],
+      "ppbox": [
+       0,
+       2
+      ]
+     },
+     "offsets": {
+      "q35-fair": 0,
+      "ppbox": 0
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "\u53e3",
+     "span": {
+      "q35-fair": [
+       2,
+       2
+      ],
+      "ppbox": [
+       2,
+       3
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 16
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       ""
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "This Security Instrument covers real property improved, or to be improved, by a one or two family dwelling only. OR",
+     "n_tokens": 20,
+     "span": {
+      "q35-fair": [
+       2,
+       22
+      ],
+      "ppbox": [
+       3,
+       23
+      ]
+     },
+     "offsets": {
+      "q35-fair": 17,
+      "ppbox": 18
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "0",
+     "span": {
+      "q35-fair": [
+       22,
+       22
+      ],
+      "ppbox": [
+       23,
+       24
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 134
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "0"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "This Security Instrument covers real property principally improved, or to be improved, by one or more structures containing, in the aggregate, no more than six residential dwelling units with each dwelling unit having its own cooking facilities. OR This Security Instrument does not cover real property improved as described above. KJB/Mortgage Clause-8-16-06",
+     "n_tokens": 52,
+     "span": {
+      "q35-fair": [
+       22,
+       74
+      ],
+      "ppbox": [
+       24,
+       76
+      ]
+     },
+     "offsets": {
+      "q35-fair": 135,
+      "ppbox": 136
+     }
+    }
+   ]
+  },
+  {
+   "page": "p008",
+   "channels_present": [
+    "q35-fair",
+    "ppbox"
+   ],
+   "token_agreement": 0.7959,
+   "accepted_text": "NYC DEPARTMENT OF FINANCE OFFICE OF THE CITY REGISTER [UNRESOLVED] SUPPORTING DOCUMENT COVER PAGE [UNRESOLVED] Document ID: 2015022400608001 Document Date: 11-18-2014 Preparation Date: 02-24-2015 Document Type: MORTGAGE SUPPORTING DOCUMENTS SUBMITTED: [UNRESOLVED] 255 MORTGAGE TAX EXEMPT AFFIDAVIT [UNRESOLVED] REMARKS: NYC DEPARTMENT OF SOCIAL SERVICES",
+   "token_ledger": {
+    "order_artifact": 4,
+    "q35-fair_only": 5,
+    "ppbox_only": 3
+   },
+   "runs": [
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "NYC DEPARTMENT OF FINANCE OFFICE OF THE CITY REGISTER",
+     "n_tokens": 9,
+     "span": {
+      "q35-fair": [
+       0,
+       9
+      ],
+      "ppbox": [
+       0,
+       9
+      ]
+     },
+     "offsets": {
+      "q35-fair": 0,
+      "ppbox": 0
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "2015022400608001001SBEEB",
+     "span": {
+      "q35-fair": [
+       9,
+       9
+      ],
+      "ppbox": [
+       9,
+       10
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 54
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "2015022400608001001sbeeb"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "SUPPORTING DOCUMENT COVER PAGE",
+     "n_tokens": 4,
+     "span": {
+      "q35-fair": [
+       9,
+       13
+      ],
+      "ppbox": [
+       10,
+       14
+      ]
+     },
+     "offsets": {
+      "q35-fair": 54,
+      "ppbox": 79
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 4,
+     "scale": "phrase",
+     "q35-fair": "PAGE 1 OF 1",
+     "ppbox": "PAGE1 OF1",
+     "span": {
+      "q35-fair": [
+       13,
+       17
+      ],
+      "ppbox": [
+       14,
+       16
+      ]
+     },
+     "offsets": {
+      "q35-fair": 85,
+      "ppbox": 110
+     },
+     "elsewhere": {
+      "q35-fair": 1,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "1",
+       "of",
+       "1"
+      ],
+      "ppbox": [
+       "page1",
+       "of1"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Document ID: 2015022400608001 Document Date: 11-18-2014 Preparation Date: 02-24-2015 Document Type: MORTGAGE SUPPORTING DOCUMENTS SUBMITTED:",
+     "n_tokens": 15,
+     "span": {
+      "q35-fair": [
+       17,
+       32
+      ],
+      "ppbox": [
+       16,
+       31
+      ]
+     },
+     "offsets": {
+      "q35-fair": 97,
+      "ppbox": 120
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Page Count",
+     "span": {
+      "q35-fair": [
+       32,
+       32
+      ],
+      "ppbox": [
+       31,
+       33
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 261
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 2
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "255 MORTGAGE TAX EXEMPT AFFIDAVIT",
+     "n_tokens": 5,
+     "span": {
+      "q35-fair": [
+       32,
+       37
+      ],
+      "ppbox": [
+       33,
+       38
+      ]
+     },
+     "offsets": {
+      "q35-fair": 238,
+      "ppbox": 272
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": "Page Count 1",
+     "ppbox": null,
+     "span": {
+      "q35-fair": [
+       37,
+       40
+      ],
+      "ppbox": [
+       38,
+       38
+      ]
+     },
+     "offsets": {
+      "q35-fair": 272,
+      "ppbox": null
+     },
+     "elsewhere": {
+      "q35-fair": 2,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "1"
+      ],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "REMARKS: NYC DEPARTMENT OF SOCIAL SERVICES",
+     "n_tokens": 6,
+     "span": {
+      "q35-fair": [
+       40,
+       46
+      ],
+      "ppbox": [
+       38,
+       44
+      ]
+     },
+     "offsets": {
+      "q35-fair": 285,
+      "ppbox": 306
+     }
+    }
+   ]
+  },
+  {
+   "page": "p009",
+   "channels_present": [
+    "q35-fair",
+    "ppbox"
+   ],
+   "token_agreement": 0.8118,
+   "accepted_text": "[UNRESOLVED] NYC [UNRESOLVED] Human Resources Administration Department of Social Services Investigation, Revenue, and Enforcement Administration [UNRESOLVED] OF NEW YORK) [UNRESOLVED] SS: Mortgage Recording Tax Exemption Affidavit [UNRESOLVED] COUNTY OF NEW YORK) [UNRESOLVED] Aaron [UNRESOLVED] being duly authorized, Deposes and says: [UNRESOLVED] That I am an employee of IREA/Department of Social Services of the City of New, a Municipal Corporation having its principal office and place of business at 250 Church [UNRESOLVED] Street, State and City of New York, and I am fully familiar with all the facts here set [UNRESOLVED] forth. 1. That the Mortgage herewith presented for recording is identified as [UNRESOLVED] follows: a. Date of Instrument: 11-18-14 Obligor: Darlene Epps Oblige: The City of New York acting by and though it's Department of Social Services b. Principal Amount $ [UNRESOLVED] c. Covering Premises: [UNRESOLVED] Guy [UNRESOLVED] Block: 10140 Lot: 1112 2. That the City of New York, a Municipality of the State of New York and oblige of the instrument herein presented for recording, is Exempt from Paying the Mortgage Recording Tax Pursuant to 20 NYCRR SECTION 644.1(a) and it is not feasible to pass this tax and fee obligation onto the obligor. WHEREFORE, your deponent respectfully requests that such instrument be declared [UNRESOLVED] exempt from taxation. SIGNATURE Affirmed before me this 24th Day of [UNRESOLVED] 2015 [UNRESOLVED] DONNA A. HESS Notary Public, State of New York [UNRESOLVED] New York County Commission Expires April 26, 20",
+   "token_ledger": {
+    "order_artifact": 10,
+    "q35-fair_only": 11,
+    "ppbox_only": 43
+   },
+   "runs": [
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "W-2-548",
+     "span": {
+      "q35-fair": [
+       0,
+       0
+      ],
+      "ppbox": [
+       0,
+       1
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 0
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "NYC",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       0,
+       1
+      ],
+      "ppbox": [
+       1,
+       2
+      ]
+     },
+     "offsets": {
+      "q35-fair": 0,
+      "ppbox": 8
+     }
+    },
+    {
+     "status": "unaligned",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "08/14",
+     "span": {
+      "q35-fair": [
+       1,
+       1
+      ],
+      "ppbox": [
+       2,
+       3
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 12
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": []
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Human Resources Administration Department of Social Services Investigation, Revenue, and Enforcement Administration",
+     "n_tokens": 12,
+     "span": {
+      "q35-fair": [
+       1,
+       13
+      ],
+      "ppbox": [
+       3,
+       15
+      ]
+     },
+     "offsets": {
+      "q35-fair": 4,
+      "ppbox": 18
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": "W-2-548 08/14 STATE",
+     "ppbox": "STAT\u00c9",
+     "span": {
+      "q35-fair": [
+       13,
+       16
+      ],
+      "ppbox": [
+       15,
+       16
+      ]
+     },
+     "offsets": {
+      "q35-fair": 120,
+      "ppbox": 134
+     },
+     "elsewhere": {
+      "q35-fair": 2,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "state"
+      ],
+      "ppbox": [
+       "stat"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "OF NEW YORK)",
+     "n_tokens": 3,
+     "span": {
+      "q35-fair": [
+       16,
+       19
+      ],
+      "ppbox": [
+       16,
+       19
+      ]
+     },
+     "offsets": {
+      "q35-fair": 140,
+      "ppbox": 140
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Steven Banks Commissioner",
+     "span": {
+      "q35-fair": [
+       19,
+       19
+      ],
+      "ppbox": [
+       19,
+       22
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 153
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "steven",
+       "banks",
+       "commissioner"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "SS: Mortgage Recording Tax Exemption Affidavit",
+     "n_tokens": 6,
+     "span": {
+      "q35-fair": [
+       19,
+       25
+      ],
+      "ppbox": [
+       22,
+       28
+      ]
+     },
+     "offsets": {
+      "q35-fair": 153,
+      "ppbox": 179
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Saratu Grace Ghartey",
+     "span": {
+      "q35-fair": [
+       25,
+       25
+      ],
+      "ppbox": [
+       28,
+       31
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 226
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "saratu",
+       "grace",
+       "ghartey"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "COUNTY OF NEW YORK)",
+     "n_tokens": 4,
+     "span": {
+      "q35-fair": [
+       25,
+       29
+      ],
+      "ppbox": [
+       31,
+       35
+      ]
+     },
+     "offsets": {
+      "q35-fair": 200,
+      "ppbox": 247
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 4,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Chief Program Accountability Officer",
+     "span": {
+      "q35-fair": [
+       29,
+       29
+      ],
+      "ppbox": [
+       35,
+       39
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 267
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "chief",
+       "program",
+       "accountability",
+       "officer"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Aaron",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       29,
+       30
+      ],
+      "ppbox": [
+       39,
+       40
+      ]
+     },
+     "offsets": {
+      "q35-fair": 220,
+      "ppbox": 304
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "Stewart,",
+     "ppbox": "STEwnut ,",
+     "span": {
+      "q35-fair": [
+       30,
+       31
+      ],
+      "ppbox": [
+       40,
+       42
+      ]
+     },
+     "offsets": {
+      "q35-fair": 226,
+      "ppbox": 310
+     },
+     "elsewhere": {
+      "q35-fair": 1,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "stewnut",
+       ""
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "being duly authorized, Deposes and says:",
+     "n_tokens": 6,
+     "span": {
+      "q35-fair": [
+       31,
+       37
+      ],
+      "ppbox": [
+       42,
+       48
+      ]
+     },
+     "offsets": {
+      "q35-fair": 235,
+      "ppbox": 320
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 5,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "Bedros L. Boodanian Deputy Commissioner",
+     "span": {
+      "q35-fair": [
+       37,
+       37
+      ],
+      "ppbox": [
+       48,
+       53
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 361
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "bedros",
+       "l",
+       "boodanian",
+       "deputy",
+       "commissioner"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "That I am an employee of IREA/Department of Social Services of the City of New, a Municipal Corporation having its principal office and place of business at 250 Church",
+     "n_tokens": 29,
+     "span": {
+      "q35-fair": [
+       37,
+       66
+      ],
+      "ppbox": [
+       53,
+       82
+      ]
+     },
+     "offsets": {
+      "q35-fair": 276,
+      "ppbox": 401
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "250 Church Street",
+     "span": {
+      "q35-fair": [
+       66,
+       66
+      ],
+      "ppbox": [
+       82,
+       85
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 569
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "250",
+       "church",
+       "street"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Street, State and City of New York, and I am fully familiar with all the facts here set",
+     "n_tokens": 18,
+     "span": {
+      "q35-fair": [
+       66,
+       84
+      ],
+      "ppbox": [
+       85,
+       103
+      ]
+     },
+     "offsets": {
+      "q35-fair": 444,
+      "ppbox": 587
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 4,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "New York, NY 10013",
+     "span": {
+      "q35-fair": [
+       84,
+       84
+      ],
+      "ppbox": [
+       103,
+       107
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 675
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "new",
+       "york",
+       "ny",
+       "10013"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "forth. 1. That the Mortgage herewith presented for recording is identified as",
+     "n_tokens": 12,
+     "span": {
+      "q35-fair": [
+       84,
+       96
+      ],
+      "ppbox": [
+       107,
+       119
+      ]
+     },
+     "offsets": {
+      "q35-fair": 532,
+      "ppbox": 694
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "929 252 3020",
+     "span": {
+      "q35-fair": [
+       96,
+       96
+      ],
+      "ppbox": [
+       119,
+       122
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 772
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "929",
+       "252",
+       "3020"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "follows: a. Date of Instrument: 11-18-14 Obligor: Darlene Epps Oblige: The City of New York acting by and though it's Department of Social Services b. Principal Amount $",
+     "n_tokens": 28,
+     "span": {
+      "q35-fair": [
+       96,
+       124
+      ],
+      "ppbox": [
+       122,
+       150
+      ]
+     },
+     "offsets": {
+      "q35-fair": 610,
+      "ppbox": 785
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": "50,000.00",
+     "ppbox": "50 000. 0.0",
+     "span": {
+      "q35-fair": [
+       124,
+       125
+      ],
+      "ppbox": [
+       150,
+       153
+      ]
+     },
+     "offsets": {
+      "q35-fair": 780,
+      "ppbox": 955
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "5000000"
+      ],
+      "ppbox": [
+       "50",
+       "000",
+       "00"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "c. Covering Premises:",
+     "n_tokens": 3,
+     "span": {
+      "q35-fair": [
+       125,
+       128
+      ],
+      "ppbox": [
+       153,
+       156
+      ]
+     },
+     "offsets": {
+      "q35-fair": 790,
+      "ppbox": 967
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": "107-28",
+     "ppbox": "107- 28",
+     "span": {
+      "q35-fair": [
+       128,
+       129
+      ],
+      "ppbox": [
+       156,
+       158
+      ]
+     },
+     "offsets": {
+      "q35-fair": 812,
+      "ppbox": 989
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "10728"
+      ],
+      "ppbox": [
+       "107",
+       "28"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Guy",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       129,
+       130
+      ],
+      "ppbox": [
+       158,
+       159
+      ]
+     },
+     "offsets": {
+      "q35-fair": 819,
+      "ppbox": 997
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": "R. BREWER",
+     "ppbox": "F. BRE WER",
+     "span": {
+      "q35-fair": [
+       130,
+       132
+      ],
+      "ppbox": [
+       159,
+       162
+      ]
+     },
+     "offsets": {
+      "q35-fair": 823,
+      "ppbox": 1001
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "r",
+       "brewer"
+      ],
+      "ppbox": [
+       "f",
+       "bre",
+       "wer"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Block:",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       132,
+       133
+      ],
+      "ppbox": [
+       162,
+       163
+      ]
+     },
+     "offsets": {
+      "q35-fair": 833,
+      "ppbox": 1012
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "10140",
+     "n_tokens": 1,
+     "fuzzy": 0.75,
+     "span": {
+      "q35-fair": [
+       133,
+       134
+      ],
+      "ppbox": [
+       163,
+       164
+      ]
+     },
+     "offsets": {
+      "q35-fair": 840,
+      "ppbox": 1019
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "Lot:",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       134,
+       135
+      ],
+      "ppbox": [
+       164,
+       165
+      ]
+     },
+     "offsets": {
+      "q35-fair": 846,
+      "ppbox": 1025
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "1112",
+     "n_tokens": 1,
+     "fuzzy": 0.857,
+     "span": {
+      "q35-fair": [
+       135,
+       136
+      ],
+      "ppbox": [
+       165,
+       166
+      ]
+     },
+     "offsets": {
+      "q35-fair": 851,
+      "ppbox": 1030
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "2. That the City of New York, a Municipality of the State of New York and oblige of the instrument herein presented for recording, is Exempt from Paying the Mortgage Recording Tax Pursuant to 20 NYCRR SECTION 644.1(a) and it is not feasible to pass this tax and fee obligation onto the obligor. WHEREFORE, your deponent respectfully requests that such instrument be declared",
+     "n_tokens": 63,
+     "span": {
+      "q35-fair": [
+       136,
+       199
+      ],
+      "ppbox": [
+       166,
+       229
+      ]
+     },
+     "offsets": {
+      "q35-fair": 856,
+      "ppbox": 1035
+     }
+    },
+    {
+     "status": "single_channel",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 2,
+     "scale": "phrase",
+     "q35-fair": null,
+     "ppbox": "9. Stewart",
+     "span": {
+      "q35-fair": [
+       199,
+       199
+      ],
+      "ppbox": [
+       229,
+       231
+      ]
+     },
+     "offsets": {
+      "q35-fair": null,
+      "ppbox": 1410
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 1
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "9"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "exempt from taxation. SIGNATURE Affirmed before me this 24th Day of",
+     "n_tokens": 11,
+     "span": {
+      "q35-fair": [
+       199,
+       210
+      ],
+      "ppbox": [
+       231,
+       242
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1231,
+      "ppbox": 1421
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 1,
+     "scale": "phrase",
+     "similarity": 0.571,
+     "q35-fair": "February",
+     "ppbox": "Fefway",
+     "span": {
+      "q35-fair": [
+       210,
+       211
+      ],
+      "ppbox": [
+       242,
+       243
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1299,
+      "ppbox": 1489
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [
+       "february"
+      ],
+      "ppbox": [
+       "fefway"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "2015",
+     "n_tokens": 1,
+     "span": {
+      "q35-fair": [
+       211,
+       212
+      ],
+      "ppbox": [
+       243,
+       244
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1308,
+      "ppbox": 1496
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 3,
+     "scale": "phrase",
+     "q35-fair": "Notary Public",
+     "ppbox": "Ponan Q. He",
+     "span": {
+      "q35-fair": [
+       212,
+       214
+      ],
+      "ppbox": [
+       244,
+       247
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1313,
+      "ppbox": 1501
+     },
+     "elsewhere": {
+      "q35-fair": 2,
+      "ppbox": 0
+     },
+     "unmatched": {
+      "q35-fair": [],
+      "ppbox": [
+       "ponan",
+       "q",
+       "he"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "DONNA A. HESS Notary Public, State of New York",
+     "n_tokens": 9,
+     "span": {
+      "q35-fair": [
+       214,
+       223
+      ],
+      "ppbox": [
+       247,
+       256
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1327,
+      "ppbox": 1513
+     }
+    },
+    {
+     "status": "disputed",
+     "established_by": "unresolved",
+     "accepted": null,
+     "n_tokens": 5,
+     "scale": "phrase",
+     "q35-fair": "No. 01 HE6221160 Qualified in",
+     "ppbox": "No.01HE6221160 Notary Public Qualifiedin",
+     "span": {
+      "q35-fair": [
+       223,
+       228
+      ],
+      "ppbox": [
+       256,
+       260
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1374,
+      "ppbox": 1560
+     },
+     "elsewhere": {
+      "q35-fair": 0,
+      "ppbox": 2
+     },
+     "unmatched": {
+      "q35-fair": [
+       "no",
+       "01",
+       "he6221160",
+       "qualified",
+       "in"
+      ],
+      "ppbox": [
+       "no01he6221160",
+       "qualifiedin"
+      ]
+     }
+    },
+    {
+     "status": "agreed",
+     "established_by": "image_agreement",
+     "accepted": "New York County Commission Expires April 26, 20",
+     "n_tokens": 8,
+     "span": {
+      "q35-fair": [
+       228,
+       236
+      ],
+      "ppbox": [
+       260,
+       268
+      ]
+     },
+     "offsets": {
+      "q35-fair": 1404,
+      "ppbox": 1601
+     }
+    }
+   ]
+  }
+ ],
+ "coverage": {
+  "pages_total": 9,
+  "pages_both_channels": 9,
+  "tokens_total": 2675,
+  "tokens_agreed": 2303,
+  "tokens_disputed": 82,
+  "tokens_unaligned": 147,
+  "tokens_single_channel": 143,
+  "agreement_rate": 0.8609,
+  "unmatched_tokens": {
+   "q35-fair": 103,
+   "ppbox": 129
+  }
+ },
+ "structured_record": null
+}

@@ -1,0 +1,859 @@
+{
+ "page": "2003013001838001/p002",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "ZONINGLOTANDDEVELOPMENTAGREEMENT",
+   "box": [
+    [
+     717,
+     387
+    ],
+    [
+     1919,
+     387
+    ],
+    [
+     1919,
+     435
+    ],
+    [
+     717,
+     435
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9918
+  },
+  {
+   "text": "ANDDECLARATIONOFRESTRICTIONS",
+   "box": [
+    [
+     834,
+     447
+    ],
+    [
+     1808,
+     447
+    ],
+    [
+     1808,
+     495
+    ],
+    [
+     834,
+     495
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9962
+  },
+  {
+   "text": "Agreement (this \u201cAgreement\u201dor \u201cDeclaration\") made as of the 12th day of December,",
+   "box": [
+    [
+     489,
+     564
+    ],
+    [
+     2289,
+     562
+    ],
+    [
+     2289,
+     619
+    ],
+    [
+     489,
+     621
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9747
+  },
+  {
+   "text": "2002 between 691 EIGHTH AVENUE CORP. (\"Owner\"), a New York corporation, having an",
+   "box": [
+    [
+     334,
+     621
+    ],
+    [
+     2307,
+     627
+    ],
+    [
+     2307,
+     681
+    ],
+    [
+     334,
+     675
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9741
+  },
+  {
+   "text": "address c/o Mark Friedlander, Esq., 15 Maiden Lane,Suite 2000, New York, New York",
+   "box": [
+    [
+     339,
+     686
+    ],
+    [
+     2203,
+     686
+    ],
+    [
+     2203,
+     740
+    ],
+    [
+     339,
+     740
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9643
+  },
+  {
+   "text": "10038, and 306 West 44 LLC, a New York limited liability company (\"Developer\"), a New",
+   "box": [
+    [
+     334,
+     742
+    ],
+    [
+     2238,
+     740
+    ],
+    [
+     2238,
+     803
+    ],
+    [
+     334,
+     805
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9923
+  },
+  {
+   "text": "York limited liability company, having an address c/o Lowell Harwood, 26 Journal Square,",
+   "box": [
+    [
+     334,
+     803
+    ],
+    [
+     2230,
+     803
+    ],
+    [
+     2230,
+     863
+    ],
+    [
+     334,
+     863
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9898
+  },
+  {
+   "text": "Suite 804, Jersey City, New Jersey 07306.",
+   "box": [
+    [
+     336,
+     867
+    ],
+    [
+     1223,
+     865
+    ],
+    [
+     1225,
+     920
+    ],
+    [
+     336,
+     922
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9529
+  },
+  {
+   "text": "Owner is the owner of certain land in the City and County of NewYork with the",
+   "box": [
+    [
+     487,
+     986
+    ],
+    [
+     2161,
+     986
+    ],
+    [
+     2161,
+     1041
+    ],
+    [
+     487,
+     1041
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9755
+  },
+  {
+   "text": "building(s) and improvements thereon, known as 691 Eighth Avenue, designated as Block",
+   "box": [
+    [
+     339,
+     1047
+    ],
+    [
+     2194,
+     1047
+    ],
+    [
+     2194,
+     1101
+    ],
+    [
+     339,
+     1101
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9937
+  },
+  {
+   "text": "1034, Lot 33, on the Tax Map of the City of New York (the\"Tax Map\"), and being more",
+   "box": [
+    [
+     339,
+     1101
+    ],
+    [
+     2188,
+     1108
+    ],
+    [
+     2188,
+     1164
+    ],
+    [
+     339,
+     1158
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9853
+  },
+  {
+   "text": "particularly described in Schedule \"A\" annexed hereto (said land being herein called \"Owner's",
+   "box": [
+    [
+     334,
+     1168
+    ],
+    [
+     2286,
+     1168
+    ],
+    [
+     2286,
+     1223
+    ],
+    [
+     334,
+     1223
+    ]
+   ],
+   "angle": 0,
+   "score": 0.98
+  },
+  {
+   "text": "Parcel\").",
+   "box": [
+    [
+     332,
+     1227
+    ],
+    [
+     525,
+     1227
+    ],
+    [
+     525,
+     1283
+    ],
+    [
+     332,
+     1283
+    ]
+   ],
+   "angle": 0,
+   "score": 0.991
+  },
+  {
+   "text": "Developer owns certain land in the City and County of New York, with the existing",
+   "box": [
+    [
+     485,
+     1342
+    ],
+    [
+     2222,
+     1346
+    ],
+    [
+     2222,
+     1407
+    ],
+    [
+     485,
+     1402
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9831
+  },
+  {
+   "text": "building(s) and improvements thereon,known as 306West 44\"h Street,designated as Block",
+   "box": [
+    [
+     339,
+     1404
+    ],
+    [
+     2209,
+     1404
+    ],
+    [
+     2209,
+     1459
+    ],
+    [
+     339,
+     1459
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9766
+  },
+  {
+   "text": "1034, Lot 37, on the Tax Map and being more particularly described in Schedule \"B\" annexed",
+   "box": [
+    [
+     336,
+     1463
+    ],
+    [
+     2289,
+     1463
+    ],
+    [
+     2289,
+     1524
+    ],
+    [
+     336,
+     1524
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9824
+  },
+  {
+   "text": "hereto (said land being herein called \"Developer's Parcel\").",
+   "box": [
+    [
+     334,
+     1530
+    ],
+    [
+     1568,
+     1530
+    ],
+    [
+     1568,
+     1584
+    ],
+    [
+     334,
+     1584
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9722
+  },
+  {
+   "text": "Developer intends to demolish or renovate, in whole or in part, the building(s) existing",
+   "box": [
+    [
+     485,
+     1645
+    ],
+    [
+     2284,
+     1647
+    ],
+    [
+     2284,
+     1703
+    ],
+    [
+     485,
+     1701
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9839
+  },
+  {
+   "text": "on Developer's Parcel and/or to construct a new building or a renovation or alteration of the",
+   "box": [
+    [
+     336,
+     1708
+    ],
+    [
+     2243,
+     1708
+    ],
+    [
+     2243,
+     1762
+    ],
+    [
+     336,
+     1762
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9677
+  },
+  {
+   "text": "present building(s) upon all or a portion of Developer's Parcel which will contain or use more",
+   "box": [
+    [
+     330,
+     1766
+    ],
+    [
+     2282,
+     1764
+    ],
+    [
+     2282,
+     1825
+    ],
+    [
+     330,
+     1827
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9812
+  },
+  {
+   "text": "floor area and development rights than are now available for use on Developer's Parcel",
+   "box": [
+    [
+     332,
+     1825
+    ],
+    [
+     2140,
+     1827
+    ],
+    [
+     2140,
+     1883
+    ],
+    [
+     332,
+     1881
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9881
+  },
+  {
+   "text": "pursuant to the Zoning Resolution.",
+   "box": [
+    [
+     330,
+     1889
+    ],
+    [
+     1053,
+     1885
+    ],
+    [
+     1053,
+     1942
+    ],
+    [
+     330,
+     1946
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9673
+  },
+  {
+   "text": "The Parties hereto desire to utilize the'procedure available pursuant to section 12-10 of",
+   "box": [
+    [
+     487,
+     2006
+    ],
+    [
+     2284,
+     2006
+    ],
+    [
+     2284,
+     2061
+    ],
+    [
+     487,
+     2061
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9746
+  },
+  {
+   "text": "the Zoning Resolution for combining Owner's Parcel and Developer's Parcel into a single",
+   "box": [
+    [
+     334,
+     2067
+    ],
+    [
+     2188,
+     2067
+    ],
+    [
+     2188,
+     2121
+    ],
+    [
+     334,
+     2121
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9824
+  },
+  {
+   "text": "zoning lot (the \"Combined Zoning Lot\") for the purpose of transferring Available",
+   "box": [
+    [
+     334,
+     2126
+    ],
+    [
+     2023,
+     2128
+    ],
+    [
+     2023,
+     2184
+    ],
+    [
+     334,
+     2182
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9864
+  },
+  {
+   "text": "Development Rights appurtenant to Owner's Parcel to Developers\u2019 Parcel and Owner is willing",
+   "box": [
+    [
+     332,
+     2182
+    ],
+    [
+     2303,
+     2186
+    ],
+    [
+     2303,
+     2247
+    ],
+    [
+     332,
+     2243
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9796
+  },
+  {
+   "text": "to transfer such Available Development Rights to Developer's Parcel in perpetuity;",
+   "box": [
+    [
+     330,
+     2243
+    ],
+    [
+     2050,
+     2249
+    ],
+    [
+     2050,
+     2305
+    ],
+    [
+     330,
+     2299
+    ]
+   ],
+   "angle": 0,
+   "score": 0.982
+  },
+  {
+   "text": "Owner, Developer, Royal Bank of Pennsylvania and The Provident Bank constitute all",
+   "box": [
+    [
+     483,
+     2360
+    ],
+    [
+     2276,
+     2362
+    ],
+    [
+     2276,
+     2422
+    ],
+    [
+     483,
+     2420
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9917
+  },
+  {
+   "text": "of the\"parties in interest\" (as such term is defined in Section 12-10 of the Zoning Resolution),",
+   "box": [
+    [
+     334,
+     2422
+    ],
+    [
+     2284,
+     2424
+    ],
+    [
+     2284,
+     2479
+    ],
+    [
+     334,
+     2477
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9878
+  },
+  {
+   "text": "in Owner's Parcel, as certified by First American Title Insurance Company of New York in",
+   "box": [
+    [
+     330,
+     2481
+    ],
+    [
+     2234,
+     2483
+    ],
+    [
+     2234,
+     2539
+    ],
+    [
+     330,
+     2537
+    ]
+   ],
+   "angle": 0,
+   "score": 0.976
+  },
+  {
+   "text": "the certificate marked Schedule \"C\" and annexed hereto and made a part hereof and all such",
+   "box": [
+    [
+     330,
+     2541
+    ],
+    [
+     2238,
+     2544
+    ],
+    [
+     2238,
+     2598
+    ],
+    [
+     330,
+     2596
+    ]
+   ],
+   "angle": 0,
+   "score": 0.972
+  },
+  {
+   "text": "\"parties in interest\"have executed waivers and subordinations to the Zoning Lot and",
+   "box": [
+    [
+     339,
+     2602
+    ],
+    [
+     2082,
+     2604
+    ],
+    [
+     2082,
+     2658
+    ],
+    [
+     339,
+     2656
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9811
+  },
+  {
+   "text": "Development Agreement and Declaration of Restrictions; and",
+   "box": [
+    [
+     334,
+     2665
+    ],
+    [
+     1611,
+     2665
+    ],
+    [
+     1611,
+     2719
+    ],
+    [
+     334,
+     2719
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9903
+  },
+  {
+   "text": "The parties hereto wish to set forth certain agreements with respect to their rights and",
+   "box": [
+    [
+     483,
+     2773
+    ],
+    [
+     2253,
+     2780
+    ],
+    [
+     2253,
+     2840
+    ],
+    [
+     483,
+     2834
+    ]
+   ],
+   "angle": 0,
+   "score": 0.981
+  },
+  {
+   "text": "obligations in and to the Combined Zoning Lot and other matters;",
+   "box": [
+    [
+     334,
+     2832
+    ],
+    [
+     1699,
+     2840
+    ],
+    [
+     1699,
+     2901
+    ],
+    [
+     334,
+     2893
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9877
+  },
+  {
+   "text": "1",
+   "box": [
+    [
+     1300,
+     2966
+    ],
+    [
+     1338,
+     2966
+    ],
+    [
+     1338,
+     3005
+    ],
+    [
+     1300,
+     3005
+    ]
+   ],
+   "angle": 0,
+   "score": 0.885
+  },
+  {
+   "text": "bll fth Avenue Newallc,y",
+   "box": [
+    [
+     190,
+     3158
+    ],
+    [
+     1156,
+     3131
+    ],
+    [
+     1158,
+     3214
+    ],
+    [
+     192,
+     3242
+    ]
+   ],
+   "angle": 0,
+   "score": 0.6728
+  }
+ ]
+}

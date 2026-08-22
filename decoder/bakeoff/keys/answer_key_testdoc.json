@@ -1,0 +1,1375 @@
+{
+ "_doc": "FT_1680008647768",
+ "_note": "HAND-READ FROM THE 1800px RENDER before any OCR was run on this document. Tiers: CRITICAL = lineage/parcel/party/money breaks without it. MATERIAL = a function agent wants it. ROUTINE = boilerplate.",
+ "_summary": "MTGE recorded 1981-10-02, REEL 586 PAGES 761-770 (sequential). $4,000,000 from CITIBANK N.A. (399 Park Ave) to 387 P.A.S. ENTERPRISES, a NY limited partnership c/o O.S.L. Shipping & Development, 1270 Ave of the Americas. General partner Sisson Realty N.V. Inc.; signed by attorney-in-fact Ariel Gratch under a POA dated 1981-09-14, acknowledged 1981-09-17 before notary Elliott Bakst. Premises = Section 3 BLOCK 883 LOT 1, New York County: the NE corner of E 27th St and Fourth Ave (now PARK AVENUE SOUTH), 98 ft 9 in by 166 ft 8 in. Recording tax $60,000 incl. $10,000 special additional.",
+ "_structure": "p1 mortgage first page (marked-up conformed copy) | p2 Schedule A | p3 SAME first page, clean duplicate | p4 covenants 1-5a | p5 covenants 5b-13 | p6 covenants 14-17 (Art 16 = assignment of leases and rents) | p7 Article 18 defaults a-p | p8 covenants 22-27 | p9 covenants 28-32 + execution | p10 acknowledgement + backer",
+ "_match_checks": [
+  "$4,000,000 x 1.5% = $60,000 -> equals the handwritten figure on p1 AND the RECORDING TAX stamp on p10",
+  "p1 bottom column 40,000 + 10,000 + 10,000 = 60,000 -> internally consistent",
+  "'387 P.A.S.' in the mortgagor name = 387 Park Avenue South -> independently confirmed by Schedule A (Fourth Ave = Park Ave South, corner of 27th)",
+  "p1 left-margin scrawl '883 / 1' = BLOCK 883 LOT 1 printed on the p10 backer",
+  "map recorded=1981-10-02 -> register stamp '1981 OCT 2 AM 10:25' and '(S) 10-2-81'",
+  "metes and bounds CLOSES: N 98-9, E 166-8, S 98-9, W 166-8 (a rectangle)",
+  "chronology: POA 1981-09-14 < acknowledged 1981-09-17 < recorded 1981-10-02"
+ ],
+ "p001.png": {
+  "kind": "mortgage first page, MARKED-UP conformed copy - the money page",
+  "artifacts": [
+   {
+    "id": "reel",
+    "tier": "CRITICAL",
+    "value": "REEL 586",
+    "alts": [
+     "REEL586",
+     "586"
+    ]
+   },
+   {
+    "id": "reel_page",
+    "tier": "CRITICAL",
+    "value": "761",
+    "alts": []
+   },
+   {
+    "id": "doc_type",
+    "tier": "CRITICAL",
+    "value": "THIS MORTGAGE",
+    "alts": []
+   },
+   {
+    "id": "year",
+    "tier": "CRITICAL",
+    "value": "1981",
+    "alts": []
+   },
+   {
+    "id": "mortgagor",
+    "tier": "CRITICAL",
+    "value": "387 P.A.S. ENTERPRISES",
+    "alts": [
+     "387 P.A.S.ENTERPRISES",
+     "387 PAS ENTERPRISES"
+    ]
+   },
+   {
+    "id": "mortgagor_form",
+    "tier": "CRITICAL",
+    "value": "a New York limited partnership",
+    "alts": [
+     "New York limited partnership"
+    ]
+   },
+   {
+    "id": "care_of",
+    "tier": "MATERIAL",
+    "value": "Shipping & Development",
+    "alts": [
+     "O.S.L. Shipping",
+     "OSL Shipping"
+    ]
+   },
+   {
+    "id": "mortgagor_addr",
+    "tier": "CRITICAL",
+    "value": "1270 Avenue of the Americas",
+    "alts": []
+   },
+   {
+    "id": "mortgagor_zip",
+    "tier": "MATERIAL",
+    "value": "10021",
+    "alts": []
+   },
+   {
+    "id": "mortgagee",
+    "tier": "CRITICAL",
+    "value": "CITIBANK, N.A.",
+    "alts": [
+     "CITIBANK N.A.",
+     "CITIBANK"
+    ]
+   },
+   {
+    "id": "mortgagee_form",
+    "tier": "MATERIAL",
+    "value": "a national banking association",
+    "alts": []
+   },
+   {
+    "id": "mortgagee_addr",
+    "tier": "CRITICAL",
+    "value": "399 Park Avenue",
+    "alts": []
+   },
+   {
+    "id": "mortgagee_zip",
+    "tier": "MATERIAL",
+    "value": "10043",
+    "alts": []
+   },
+   {
+    "id": "amount_words",
+    "tier": "CRITICAL",
+    "value": "Four Million",
+    "alts": []
+   },
+   {
+    "id": "amount_figs",
+    "tier": "CRITICAL",
+    "value": "$4,000,000",
+    "alts": [
+     "4,000,000"
+    ]
+   },
+   {
+    "id": "witnesseth",
+    "tier": "ROUTINE",
+    "value": "WITNESSETH",
+    "alts": []
+   },
+   {
+    "id": "the_note",
+    "tier": "ROUTINE",
+    "value": "the Note",
+    "alts": []
+   },
+   {
+    "id": "schedule_a",
+    "tier": "CRITICAL",
+    "value": "Schedule A",
+    "alts": []
+   },
+   {
+    "id": "bldg_equip",
+    "tier": "MATERIAL",
+    "value": "Building Equipment",
+    "alts": []
+   },
+   {
+    "id": "ucc",
+    "tier": "MATERIAL",
+    "value": "Section 9-105 of the Uniform Commercial Code",
+    "alts": [
+     "Section 9-105"
+    ]
+   },
+   {
+    "id": "sec_agree",
+    "tier": "ROUTINE",
+    "value": "Security Agreements",
+    "alts": []
+   },
+   {
+    "id": "eminent",
+    "tier": "MATERIAL",
+    "value": "eminent domain",
+    "alts": []
+   },
+   {
+    "id": "so_in_orig",
+    "tier": "MATERIAL",
+    "value": "SO IN ORIGINAL",
+    "alts": []
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "exec_day",
+    "note": "day of month left blank/faded on the form"
+   },
+   {
+    "id": "exec_month",
+    "note": "month left blank/faded on the form"
+   },
+   {
+    "id": "hw_tax_top",
+    "note": "handwritten '$60,000.00' top-left margin - handwriting"
+   },
+   {
+    "id": "hw_block_lot",
+    "note": "handwritten '883' and '1' left margin - matches p10 but is a scrawl"
+   },
+   {
+    "id": "hw_tax_column",
+    "note": "handwritten column 40,000/10,000/10,000/60,000 bottom-left"
+   }
+  ]
+ },
+ "p002.png": {
+  "kind": "SCHEDULE A - the legal description; closes as a rectangle",
+  "artifacts": [
+   {
+    "id": "reel",
+    "tier": "CRITICAL",
+    "value": "REEL 586",
+    "alts": [
+     "586"
+    ]
+   },
+   {
+    "id": "reel_page",
+    "tier": "CRITICAL",
+    "value": "762",
+    "alts": []
+   },
+   {
+    "id": "schedule",
+    "tier": "CRITICAL",
+    "value": "SCHEDULE A",
+    "alts": []
+   },
+   {
+    "id": "borough",
+    "tier": "CRITICAL",
+    "value": "Borough of Manhattan",
+    "alts": []
+   },
+   {
+    "id": "county",
+    "tier": "CRITICAL",
+    "value": "County and State of New York",
+    "alts": []
+   },
+   {
+    "id": "begin",
+    "tier": "CRITICAL",
+    "value": "BEGINNING at the corner",
+    "alts": [
+     "BEGINNING"
+    ]
+   },
+   {
+    "id": "street",
+    "tier": "CRITICAL",
+    "value": "27th Street",
+    "alts": []
+   },
+   {
+    "id": "avenue",
+    "tier": "CRITICAL",
+    "value": "Fourth Avenue",
+    "alts": []
+   },
+   {
+    "id": "side1",
+    "tier": "MATERIAL",
+    "value": "Northerly side of 27th Street",
+    "alts": []
+   },
+   {
+    "id": "side2",
+    "tier": "MATERIAL",
+    "value": "Easterly side of Fourth Avenue",
+    "alts": []
+   },
+   {
+    "id": "dim_ns",
+    "tier": "CRITICAL",
+    "value": "98 feet 9 inches",
+    "alts": []
+   },
+   {
+    "id": "dim_ew",
+    "tier": "CRITICAL",
+    "value": "166 feet 8 inches",
+    "alts": []
+   },
+   {
+    "id": "centerline",
+    "tier": "MATERIAL",
+    "value": "center line of the block",
+    "alts": []
+   },
+   {
+    "id": "cross_st",
+    "tier": "MATERIAL",
+    "value": "28th Streets",
+    "alts": [
+     "27th and 28th Streets"
+    ]
+   },
+   {
+    "id": "alias",
+    "tier": "CRITICAL",
+    "value": "PARK AVENUE SOUTH",
+    "alts": []
+   },
+   {
+    "id": "alias_phrase",
+    "tier": "CRITICAL",
+    "value": "now known as PARK AVENUE SOUTH",
+    "alts": [
+     "is now known as"
+    ]
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "stray_head",
+    "note": "faint typed fragment above SCHEDULE A, illegible"
+   }
+  ]
+ },
+ "p003.png": {
+  "kind": "mortgage first page AGAIN - clean duplicate of p1, no annotations",
+  "artifacts": [
+   {
+    "id": "reel",
+    "tier": "CRITICAL",
+    "value": "REEL 586",
+    "alts": [
+     "586"
+    ]
+   },
+   {
+    "id": "reel_page",
+    "tier": "CRITICAL",
+    "value": "763",
+    "alts": []
+   },
+   {
+    "id": "mortgagor",
+    "tier": "CRITICAL",
+    "value": "387 P.A.S. ENTERPRISES",
+    "alts": [
+     "387 P.A.S.ENTERPRISES"
+    ]
+   },
+   {
+    "id": "mortgagee",
+    "tier": "CRITICAL",
+    "value": "CITIBANK, N.A.",
+    "alts": [
+     "CITIBANK"
+    ]
+   },
+   {
+    "id": "amount_words",
+    "tier": "CRITICAL",
+    "value": "Four Million",
+    "alts": []
+   },
+   {
+    "id": "amount_figs",
+    "tier": "CRITICAL",
+    "value": "$4,000,000",
+    "alts": [
+     "4,000,000"
+    ]
+   },
+   {
+    "id": "mortgagor_addr",
+    "tier": "CRITICAL",
+    "value": "1270 Avenue of the Americas",
+    "alts": []
+   },
+   {
+    "id": "mortgagee_addr",
+    "tier": "CRITICAL",
+    "value": "399 Park Avenue",
+    "alts": []
+   },
+   {
+    "id": "year",
+    "tier": "CRITICAL",
+    "value": "1981",
+    "alts": []
+   },
+   {
+    "id": "schedule_a",
+    "tier": "MATERIAL",
+    "value": "Schedule A",
+    "alts": []
+   },
+   {
+    "id": "bldg_equip",
+    "tier": "MATERIAL",
+    "value": "Building Equipment",
+    "alts": []
+   },
+   {
+    "id": "witnesseth",
+    "tier": "ROUTINE",
+    "value": "WITNESSETH",
+    "alts": []
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "exec_date",
+    "note": "day and month blank on this copy too"
+   }
+  ]
+ },
+ "p004.png": {
+  "kind": "covenants 1-5(a); HANDWRITTEN interlineations change legal meaning",
+  "artifacts": [
+   {
+    "id": "reel",
+    "tier": "CRITICAL",
+    "value": "REEL 586",
+    "alts": [
+     "586"
+    ]
+   },
+   {
+    "id": "reel_page",
+    "tier": "CRITICAL",
+    "value": "764",
+    "alts": []
+   },
+   {
+    "id": "covenants",
+    "tier": "ROUTINE",
+    "value": "covenants with the Mortgagee",
+    "alts": []
+   },
+   {
+    "id": "insurance",
+    "tier": "MATERIAL",
+    "value": "extended coverage endorsement",
+    "alts": []
+   },
+   {
+    "id": "flood",
+    "tier": "MATERIAL",
+    "value": "National Flood Insurance Act",
+    "alts": []
+   },
+   {
+    "id": "hud",
+    "tier": "MATERIAL",
+    "value": "Housing and Urban Development",
+    "alts": []
+   },
+   {
+    "id": "rpl254",
+    "tier": "CRITICAL",
+    "value": "Section 254 of the Real Property Law",
+    "alts": [
+     "Section 254"
+    ]
+   },
+   {
+    "id": "renewal",
+    "tier": "MATERIAL",
+    "value": "fifteen (15) days",
+    "alts": [
+     "fifteen 15 days"
+    ]
+   },
+   {
+    "id": "rider_tenant",
+    "tier": "CRITICAL",
+    "value": "except for tenant work and cosmetic work",
+    "alts": [
+     "tenant work and cosmetic work"
+    ]
+   },
+   {
+    "id": "rider_struct",
+    "tier": "MATERIAL",
+    "value": "does not affect the structure of the building",
+    "alts": []
+   },
+   {
+    "id": "taxes",
+    "tier": "MATERIAL",
+    "value": "water rates, sewer rents",
+    "alts": []
+   },
+   {
+    "id": "art4",
+    "tier": "ROUTINE",
+    "value": "Article 4",
+    "alts": []
+   },
+   {
+    "id": "art13",
+    "tier": "ROUTINE",
+    "value": "Article 13",
+    "alts": []
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "hw_commonly",
+    "note": "handwritten 'commonly' inserted over struck text"
+   },
+   {
+    "id": "hw_reasonably",
+    "note": "handwritten 'reasonably' inserted over struck text"
+   }
+  ]
+ },
+ "p005.png": {
+  "kind": "covenants 5(b)-13; heavy strikethrough + typed insertions",
+  "artifacts": [
+   {
+    "id": "reel",
+    "tier": "CRITICAL",
+    "value": "REEL 586",
+    "alts": [
+     "586"
+    ]
+   },
+   {
+    "id": "reel_page",
+    "tier": "CRITICAL",
+    "value": "765",
+    "alts": []
+   },
+   {
+    "id": "escrow",
+    "tier": "CRITICAL",
+    "value": "one-twelfth (1/12)",
+    "alts": [
+     "one twelfth"
+    ]
+   },
+   {
+    "id": "receiver",
+    "tier": "CRITICAL",
+    "value": "appointment of a receiver",
+    "alts": []
+   },
+   {
+    "id": "estoppel",
+    "tier": "MATERIAL",
+    "value": "offsets or defenses exist",
+    "alts": []
+   },
+   {
+    "id": "warrants",
+    "tier": "CRITICAL",
+    "value": "warrants the title to the Premises",
+    "alts": []
+   },
+   {
+    "id": "one_parcel",
+    "tier": "MATERIAL",
+    "value": "sold in one parcel",
+    "alts": []
+   },
+   {
+    "id": "counsel",
+    "tier": "MATERIAL",
+    "value": "reasonable counsel fees",
+    "alts": []
+   },
+   {
+    "id": "repair",
+    "tier": "MATERIAL",
+    "value": "good condition and repair",
+    "alts": []
+   },
+   {
+    "id": "waste",
+    "tier": "MATERIAL",
+    "value": "commit or suffer any waste",
+    "alts": []
+   },
+   {
+    "id": "rider_law",
+    "tier": "CRITICAL",
+    "value": "unless required by law or court decree",
+    "alts": [
+     "required by law or court decree"
+    ]
+   },
+   {
+    "id": "emdomain",
+    "tier": "MATERIAL",
+    "value": "eminent domain",
+    "alts": []
+   },
+   {
+    "id": "ten_days",
+    "tier": "MATERIAL",
+    "value": "within ten days upon request",
+    "alts": []
+   },
+   {
+    "id": "art18",
+    "tier": "ROUTINE",
+    "value": "Article 18",
+    "alts": []
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "struck_5b",
+    "note": "opening of 5(b) struck: 'at its option to be exercised by twenty (20) days written notice'"
+   },
+   {
+    "id": "struck_7",
+    "note": "'within five days upon request in person or' struck"
+   },
+   {
+    "id": "hw_shall",
+    "note": "'may' struck, 'shall' typed above, in covenant 8"
+   }
+  ]
+ },
+ "p006.png": {
+  "kind": "covenants 14-17; Article 16 = ASSIGNMENT OF LEASES AND RENTS",
+  "artifacts": [
+   {
+    "id": "reel",
+    "tier": "CRITICAL",
+    "value": "REEL 586",
+    "alts": [
+     "586"
+    ]
+   },
+   {
+    "id": "reel_page",
+    "tier": "CRITICAL",
+    "value": "766",
+    "alts": []
+   },
+   {
+    "id": "inspect",
+    "tier": "MATERIAL",
+    "value": "enter and inspect the Premises",
+    "alts": []
+   },
+   {
+    "id": "financials",
+    "tier": "MATERIAL",
+    "value": "generally accepted accounting principles",
+    "alts": []
+   },
+   {
+    "id": "ninety",
+    "tier": "MATERIAL",
+    "value": "ninety (90) days",
+    "alts": [
+     "ninety 90 days"
+    ]
+   },
+   {
+    "id": "rent_roll",
+    "tier": "CRITICAL",
+    "value": "rent roll showing the names of tenants",
+    "alts": [
+     "rent roll"
+    ]
+   },
+   {
+    "id": "psf",
+    "tier": "MATERIAL",
+    "value": "per square foot",
+    "alts": []
+   },
+   {
+    "id": "assign_rents",
+    "tier": "CRITICAL",
+    "value": "assigns to the Mortgagee",
+    "alts": []
+   },
+   {
+    "id": "rents_phrase",
+    "tier": "CRITICAL",
+    "value": "rents, issues and profits",
+    "alts": []
+   },
+   {
+    "id": "quiet",
+    "tier": "MATERIAL",
+    "value": "covenant of quiet enjoyment",
+    "alts": []
+   },
+   {
+    "id": "dispossess",
+    "tier": "MATERIAL",
+    "value": "usual summary proceedings",
+    "alts": []
+   },
+   {
+    "id": "rpl291f",
+    "tier": "CRITICAL",
+    "value": "Section 291-f of the Real Property Law",
+    "alts": [
+     "Section 291-f"
+    ]
+   },
+   {
+    "id": "five_years",
+    "tier": "MATERIAL",
+    "value": "not less than five (5) years",
+    "alts": [
+     "five 5 years"
+    ]
+   },
+   {
+    "id": "sublease",
+    "tier": "MATERIAL",
+    "value": "leases or subleases",
+    "alts": []
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "hw_14",
+    "note": "handwritten insertion in covenant 14 over struck text, partly illegible"
+   },
+   {
+    "id": "hw_17",
+    "note": "handwritten insertion in covenant 17 over struck text, partly illegible"
+   },
+   {
+    "id": "hw_materially",
+    "note": "'materially' handwritten in 17, low confidence"
+   }
+  ]
+ },
+ "p007.png": {
+  "kind": "ARTICLE 18 events of default (a)-(p) + negotiated change-of-control carve-out",
+  "artifacts": [
+   {
+    "id": "reel",
+    "tier": "CRITICAL",
+    "value": "REEL 586",
+    "alts": [
+     "586"
+    ]
+   },
+   {
+    "id": "reel_page",
+    "tier": "CRITICAL",
+    "value": "767",
+    "alts": []
+   },
+   {
+    "id": "default",
+    "tier": "CRITICAL",
+    "value": "due at the option of the Mortgagee",
+    "alts": []
+   },
+   {
+    "id": "five_days",
+    "tier": "MATERIAL",
+    "value": "five (5) days",
+    "alts": [
+     "five 5 days"
+    ]
+   },
+   {
+    "id": "twenty_days",
+    "tier": "MATERIAL",
+    "value": "twenty (20) days",
+    "alts": [
+     "twenty 20 days"
+    ]
+   },
+   {
+    "id": "thirty_days",
+    "tier": "MATERIAL",
+    "value": "thirty (30) days",
+    "alts": [
+     "thirty 30 days"
+    ]
+   },
+   {
+    "id": "judgment",
+    "tier": "CRITICAL",
+    "value": "Fifty Thousand ($50,000)",
+    "alts": [
+     "$50,000",
+     "Fifty Thousand"
+    ]
+   },
+   {
+    "id": "bankruptcy",
+    "tier": "MATERIAL",
+    "value": "petition in bankruptcy",
+    "alts": []
+   },
+   {
+    "id": "receiver",
+    "tier": "MATERIAL",
+    "value": "receiver, liquidator or trustee",
+    "alts": []
+   },
+   {
+    "id": "due_on_sale",
+    "tier": "CRITICAL",
+    "value": "sold or otherwise transferred",
+    "alts": []
+   },
+   {
+    "id": "stock",
+    "tier": "CRITICAL",
+    "value": "controlling amount of its voting stock",
+    "alts": []
+   },
+   {
+    "id": "partnership",
+    "tier": "CRITICAL",
+    "value": "partnership, joint venture, syndicate",
+    "alts": []
+   },
+   {
+    "id": "carveout",
+    "tier": "CRITICAL",
+    "value": "remains the general partner",
+    "alts": [
+     "Sisson Realty, N.V., Inc. remains the general partner",
+     "except in such circumstances"
+    ]
+   },
+   {
+    "id": "sisson",
+    "tier": "CRITICAL",
+    "value": "Sisson Realty",
+    "alts": [
+     "Sisson Realty, N.V., Inc."
+    ]
+   },
+   {
+    "id": "lien_law",
+    "tier": "CRITICAL",
+    "value": "Section 13 of the Lien Law",
+    "alts": [
+     "Lien Law"
+    ]
+   },
+   {
+    "id": "trust_fund",
+    "tier": "MATERIAL",
+    "value": "trust fund",
+    "alts": []
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "struck_18e",
+    "note": "'if without such consent the Mortgagor shall further encumber the Premises for debt' struck"
+   }
+  ]
+ },
+ "p008.png": {
+  "kind": "covenants 22-27",
+  "artifacts": [
+   {
+    "id": "reel",
+    "tier": "CRITICAL",
+    "value": "REEL 586",
+    "alts": [
+     "586"
+    ]
+   },
+   {
+    "id": "reel_page",
+    "tier": "CRITICAL",
+    "value": "768",
+    "alts": []
+   },
+   {
+    "id": "stamps",
+    "tier": "MATERIAL",
+    "value": "internal revenue stamps",
+    "alts": []
+   },
+   {
+    "id": "ucc_fs",
+    "tier": "CRITICAL",
+    "value": "Uniform Commercial Code Financing Statement",
+    "alts": [
+     "Financing Statement"
+    ]
+   },
+   {
+    "id": "debtor",
+    "tier": "MATERIAL",
+    "value": "Debtor and Secured Party",
+    "alts": []
+   },
+   {
+    "id": "ucc9402",
+    "tier": "CRITICAL",
+    "value": "Section 9-402(2)(e)",
+    "alts": [
+     "9-402"
+    ]
+   },
+   {
+    "id": "moratorium",
+    "tier": "MATERIAL",
+    "value": "stay or extension or moratorium law",
+    "alts": []
+   },
+   {
+    "id": "marshaled",
+    "tier": "MATERIAL",
+    "value": "Premises marshaled",
+    "alts": []
+   },
+   {
+    "id": "joint_several",
+    "tier": "CRITICAL",
+    "value": "jointly and severally liable",
+    "alts": []
+   },
+   {
+    "id": "rpl254",
+    "tier": "CRITICAL",
+    "value": "Section 254 of the Real Property Law",
+    "alts": [
+     "Section 254"
+    ]
+   },
+   {
+    "id": "valid_lien",
+    "tier": "MATERIAL",
+    "value": "valid mortgage lien upon the Premises",
+    "alts": []
+   },
+   {
+    "id": "form_rev",
+    "tier": "ROUTINE",
+    "value": "Mtg. Rev. 1/80",
+    "alts": [
+     "Mtg Rev 1/80"
+    ]
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "hw_adversely",
+    "note": "'adversely' handwritten into covenant 24 over struck text"
+   }
+  ]
+ },
+ "p009.png": {
+  "kind": "covenants 28-32 + EXECUTION; clause 32 typed in a different face (negotiated rider)",
+  "artifacts": [
+   {
+    "id": "reel",
+    "tier": "CRITICAL",
+    "value": "REEL 586",
+    "alts": [
+     "586"
+    ]
+   },
+   {
+    "id": "reel_page",
+    "tier": "CRITICAL",
+    "value": "769",
+    "alts": []
+   },
+   {
+    "id": "late_charge",
+    "tier": "CRITICAL",
+    "value": "four cents for each dollar",
+    "alts": [
+     "four cents"
+    ]
+   },
+   {
+    "id": "arrears",
+    "tier": "MATERIAL",
+    "value": "ten (10) days in arrears",
+    "alts": [
+     "ten 10 days"
+    ]
+   },
+   {
+    "id": "cure_mon",
+    "tier": "CRITICAL",
+    "value": "monetary default - 10 days",
+    "alts": [
+     "monetary default 10 days"
+    ]
+   },
+   {
+    "id": "cure_non",
+    "tier": "CRITICAL",
+    "value": "non-monetary default - 30 days",
+    "alts": [
+     "non-monetary default 30 days"
+    ]
+   },
+   {
+    "id": "art18a",
+    "tier": "MATERIAL",
+    "value": "Article 18(a)",
+    "alts": []
+   },
+   {
+    "id": "run_with_land",
+    "tier": "CRITICAL",
+    "value": "run with the land",
+    "alts": []
+   },
+   {
+    "id": "witness",
+    "tier": "ROUTINE",
+    "value": "IN WITNESS WHEREOF",
+    "alts": []
+   },
+   {
+    "id": "presence",
+    "tier": "ROUTINE",
+    "value": "IN PRESENCE OF",
+    "alts": []
+   },
+   {
+    "id": "mortgagor",
+    "tier": "CRITICAL",
+    "value": "387 P.A.S. ENTERPRISES",
+    "alts": [
+     "387 P.A.S.ENTERPRISES"
+    ]
+   },
+   {
+    "id": "gen_partner",
+    "tier": "CRITICAL",
+    "value": "Sisson Realty, N.V., Inc.",
+    "alts": [
+     "Sisson Realty"
+    ]
+   },
+   {
+    "id": "gp_title",
+    "tier": "CRITICAL",
+    "value": "General Partner",
+    "alts": []
+   },
+   {
+    "id": "aif",
+    "tier": "CRITICAL",
+    "value": "Attorney-in-Fact",
+    "alts": [
+     "Attorney in Fact"
+    ]
+   },
+   {
+    "id": "no_recourse",
+    "tier": "CRITICAL",
+    "value": "without personal",
+    "alts": [
+     "without personal liability"
+    ]
+   },
+   {
+    "id": "form_rev",
+    "tier": "ROUTINE",
+    "value": "Mtg. Rev. 1/80",
+    "alts": [
+     "Mtg Rev 1/80"
+    ]
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "sig_aif",
+    "note": "attorney-in-fact signature, cursive, approximately 'A. Gratch' - not legible alone"
+   },
+   {
+    "id": "sig_witness",
+    "note": "witness signature, cursive, approximately 'Stuart ...' - illegible"
+   }
+  ]
+ },
+ "p010.png": {
+  "kind": "ACKNOWLEDGEMENT + BACKER - the parcel key and every recording stamp",
+  "artifacts": [
+   {
+    "id": "reel",
+    "tier": "CRITICAL",
+    "value": "REEL 586",
+    "alts": [
+     "586"
+    ]
+   },
+   {
+    "id": "reel_page",
+    "tier": "CRITICAL",
+    "value": "770",
+    "alts": []
+   },
+   {
+    "id": "ack_day",
+    "tier": "CRITICAL",
+    "value": "17 day of September",
+    "alts": [
+     "day of September"
+    ]
+   },
+   {
+    "id": "ack_year",
+    "tier": "CRITICAL",
+    "value": "1981",
+    "alts": []
+   },
+   {
+    "id": "aif_name",
+    "tier": "CRITICAL",
+    "value": "Ariel Gratch",
+    "alts": [
+     "Arial Gratch"
+    ]
+   },
+   {
+    "id": "aif_role",
+    "tier": "CRITICAL",
+    "value": "attorney-in-fact",
+    "alts": []
+   },
+   {
+    "id": "gen_partner",
+    "tier": "CRITICAL",
+    "value": "Sisson Realty",
+    "alts": [
+     "Sisson Realty, N.V., Inc."
+    ]
+   },
+   {
+    "id": "partnership",
+    "tier": "CRITICAL",
+    "value": "387 P.A.S.",
+    "alts": [
+     "387 P.A.S. Enterprises"
+    ]
+   },
+   {
+    "id": "poa",
+    "tier": "CRITICAL",
+    "value": "power of attorney",
+    "alts": []
+   },
+   {
+    "id": "poa_simul",
+    "tier": "CRITICAL",
+    "value": "recorded simultaneously",
+    "alts": [
+     "simultaneously herewith"
+    ]
+   },
+   {
+    "id": "notary",
+    "tier": "CRITICAL",
+    "value": "ELLIOTT BAKST",
+    "alts": [
+     "Elliott Bakst"
+    ]
+   },
+   {
+    "id": "notary_no",
+    "tier": "CRITICAL",
+    "value": "24-0141715",
+    "alts": [
+     "No 24-0141715"
+    ]
+   },
+   {
+    "id": "notary_county",
+    "tier": "MATERIAL",
+    "value": "Kings County",
+    "alts": [
+     "Qual. in Kings County"
+    ]
+   },
+   {
+    "id": "notary_exp",
+    "tier": "MATERIAL",
+    "value": "March 30, 1983",
+    "alts": []
+   },
+   {
+    "id": "section",
+    "tier": "CRITICAL",
+    "value": "SECTION 3",
+    "alts": []
+   },
+   {
+    "id": "block",
+    "tier": "CRITICAL",
+    "value": "BLOCK 883",
+    "alts": [
+     "883"
+    ]
+   },
+   {
+    "id": "lot",
+    "tier": "CRITICAL",
+    "value": "LOT 1",
+    "alts": []
+   },
+   {
+    "id": "county",
+    "tier": "CRITICAL",
+    "value": "NEW YORK",
+    "alts": []
+   },
+   {
+    "id": "instrument",
+    "tier": "CRITICAL",
+    "value": "Mortgage",
+    "alts": []
+   },
+   {
+    "id": "title_no",
+    "tier": "CRITICAL",
+    "value": "732441",
+    "alts": [
+     "7,32441"
+    ]
+   },
+   {
+    "id": "to_citibank",
+    "tier": "CRITICAL",
+    "value": "CITIBANK, N.A.",
+    "alts": [
+     "CITIBANK"
+    ]
+   },
+   {
+    "id": "return_to",
+    "tier": "CRITICAL",
+    "value": "JOHN GUTHEIL",
+    "alts": [
+     "John Gutheil"
+    ]
+   },
+   {
+    "id": "law_firm",
+    "tier": "CRITICAL",
+    "value": "TRUBIN SILLCOCKS EDELMAN & KNAPP",
+    "alts": [
+     "Trubin Sillcocks"
+    ]
+   },
+   {
+    "id": "firm_addr",
+    "tier": "MATERIAL",
+    "value": "375 PARK AVENUE",
+    "alts": []
+   },
+   {
+    "id": "firm_zip",
+    "tier": "MATERIAL",
+    "value": "10022",
+    "alts": []
+   },
+   {
+    "id": "file_no",
+    "tier": "MATERIAL",
+    "value": "35201",
+    "alts": []
+   },
+   {
+    "id": "title_co",
+    "tier": "CRITICAL",
+    "value": "ABSTRACT CORP",
+    "alts": [
+     "TITLE ABSTRACT CORP"
+    ]
+   },
+   {
+    "id": "title_addr",
+    "tier": "MATERIAL",
+    "value": "280 BROADWAY",
+    "alts": []
+   },
+   {
+    "id": "title_zip",
+    "tier": "MATERIAL",
+    "value": "10007",
+    "alts": []
+   },
+   {
+    "id": "rec_tax",
+    "tier": "CRITICAL",
+    "value": "RECORDING TAX",
+    "alts": []
+   },
+   {
+    "id": "rec_date",
+    "tier": "CRITICAL",
+    "value": "1981 OCT 2",
+    "alts": [
+     "OCT 2 1981"
+    ]
+   },
+   {
+    "id": "rec_time",
+    "tier": "MATERIAL",
+    "value": "AM 10:25",
+    "alts": [
+     "10:25"
+    ]
+   },
+   {
+    "id": "register",
+    "tier": "CRITICAL",
+    "value": "CITY REGISTER",
+    "alts": [
+     "OFFICE OF CITY REGISTER"
+    ]
+   },
+   {
+    "id": "register_co",
+    "tier": "MATERIAL",
+    "value": "New York County",
+    "alts": []
+   },
+   {
+    "id": "recorded",
+    "tier": "ROUTINE",
+    "value": "RECORDED",
+    "alts": []
+   },
+   {
+    "id": "seal",
+    "tier": "ROUTINE",
+    "value": "official seal",
+    "alts": [
+     "Witness my hand and official seal"
+    ]
+   },
+   {
+    "id": "serial",
+    "tier": "MATERIAL",
+    "value": "12973",
+    "alts": []
+   },
+   {
+    "id": "form_rev",
+    "tier": "ROUTINE",
+    "value": "Mtg Rev. 1/80",
+    "alts": [
+     "Mtg Rev 1/80"
+    ]
+   }
+  ],
+  "ambiguous": [
+   {
+    "id": "hw_rec_tax_amt",
+    "note": "'$60,000' handwritten diagonally across the RECORDING TAX stamp"
+   },
+   {
+    "id": "hw_received",
+    "note": "RECEIVED Recording Tax of $__ / Addt'l Tax of $__ - handwritten 60,000 and 10,000"
+   },
+   {
+    "id": "serial_no",
+    "note": "SERIAL NO. handwritten, partly overprinted"
+   },
+   {
+    "id": "sig_register",
+    "note": "City Register signature, cursive, illegible"
+   },
+   {
+    "id": "loc_ver",
+    "note": "'LOC. VER.' handwritten annotation top-right, illegible"
+   },
+   {
+    "id": "usr",
+    "note": "'(USR 11836)' beside the title number - handwritten, digits uncertain"
+   }
+  ]
+ }
+}

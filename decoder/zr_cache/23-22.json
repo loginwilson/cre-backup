@@ -1,0 +1,100 @@
+{
+ "section": "23-22",
+ "url": "https://zr.planning.nyc.gov/article-ii/chapter-3/23-22",
+ "title": "23-22 | Zoning Resolution",
+ "last_amended": "12/5/2024",
+ "fetched": "2026-08-05",
+ "footnotes": {
+  "1": "For zoning lots , or portions thereof, located within 100 feet of a wide street",
+  "2": "Outside of Mandatory Inclusionary Housing areas , for zoning lots , or portions thereof, located within 100 feet of a wide street , containing UAP developments or qualifying senior housing"
+ },
+ "tables": [
+  [
+   [
+    "District",
+    "Standard residences",
+    "Qualifying affordable housing or qualifying senior housing"
+   ],
+   [
+    "R6A R6^1 R6-1 \n\n R7B",
+    "3.00",
+    "3.90"
+   ],
+   [
+    "R6",
+    "2.20",
+    "3.90"
+   ],
+   [
+    "R6B",
+    "2.00",
+    "2.40"
+   ],
+   [
+    "R6D R6-2",
+    "2.50",
+    "3.00"
+   ],
+   [
+    "R7A R7-1^1 R7-2^1",
+    "4.00",
+    "5.01"
+   ],
+   [
+    "R7-1 R7-2",
+    "3.44",
+    "5.01"
+   ],
+   [
+    "R7D",
+    "4.66",
+    "5.60"
+   ],
+   [
+    "R7X R7-3",
+    "5.00",
+    "6.00"
+   ],
+   [
+    "R8A R8X R8",
+    "6.02",
+    "7.20"
+   ],
+   [
+    "R8",
+    "7.20^1",
+    "8.64^2"
+   ],
+   [
+    "R8B",
+    "4.00",
+    "4.80"
+   ],
+   [
+    "R9A R9",
+    "7.52",
+    "9.02"
+   ],
+   [
+    "R9D R9X R9-1",
+    "9.00",
+    "10.80"
+   ],
+   [
+    "R10A R10X R10",
+    "10.00",
+    "12.00"
+   ],
+   [
+    "R11",
+    "12.00",
+    "15.00"
+   ],
+   [
+    "R12",
+    "15.00",
+    "18.00"
+   ]
+  ]
+ ]
+}

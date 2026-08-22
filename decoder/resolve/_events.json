@@ -1,0 +1,263 @@
+[
+ {
+  "event_id": "BK_6730047100023-fin",
+  "date": "1966",
+  "action": "MORTGAGE",
+  "functions": [
+   "financing"
+  ],
+  "effects": [
+   {
+    "party_or_parcel": "MICHAEL WINNICKI and ROMULDA WINNICKI, his wife, who reside(s) at 738 Sheffield Avenue, Brooklyn, New York",
+    "role": "mortgagor",
+    "effect": "encumbered"
+   },
+   {
+    "party_or_parcel": "SPRINGFIELD EQUITIES LTD. a corporation organized and existing under the laws of the State of New York and having its principal place of business at 88-22 161st Street, Jamaica, New York",
+    "role": "mortgagee",
+    "effect": "created"
+   }
+  ],
+  "acts_on": null,
+  "governing": null,
+  "quantity": 21000,
+  "unit": "USD",
+  "document_id": "BK_6730047100023",
+  "page": "p001",
+  "resolved_from": "image",
+  "confidence": {
+   "established": true,
+   "unsettled_fields": []
+  },
+  "claims": [
+   {
+    "kind": "mortgagor",
+    "value": "MICHAEL WINNICKI and ROMULDA WINNICKI, his wife, who reside(s) at 738 Sheffield Avenue, Brooklyn, New York",
+    "page": "p001",
+    "span": [
+     144,
+     250
+    ],
+    "derivation": "recital: 'between X, the MORTGAGOR'",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "mortgagee",
+    "value": "SPRINGFIELD EQUITIES LTD. a corporation organized and existing under the laws of the State of New York and having its principal place of business at 88-22 161st Street, Jamaica, New York",
+    "page": "p001",
+    "span": [
+     272,
+     458
+    ],
+    "derivation": "recital: 'and Y' in the same MORTGAGOR clause",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 5
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "amount",
+    "value": 21000,
+    "page": "p001",
+    "span": [
+     623,
+     634
+    ],
+    "derivation": "figure with $ sign",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "year",
+    "value": "1966",
+    "page": "p001",
+    "span": [
+     24,
+     28
+    ],
+    "derivation": "4-digit year",
+    "provenance": {
+     "grade": "single_channel",
+     "order_safe": false,
+     "filled": [
+      "q35-fair"
+     ],
+     "runs": 1
+    },
+    "established": false,
+    "resolved_from": "unresolved"
+   },
+   {
+    "kind": "year",
+    "value": "1966",
+    "page": "p001",
+    "span": [
+     68,
+     72
+    ],
+    "derivation": "4-digit year",
+    "provenance": {
+     "grade": "single_channel",
+     "order_safe": false,
+     "filled": [
+      "ppbox"
+     ],
+     "runs": 1
+    },
+    "established": false,
+    "resolved_from": "unresolved"
+   },
+   {
+    "kind": "year",
+    "value": "1967",
+    "page": "p001",
+    "span": [
+     130,
+     134
+    ],
+    "derivation": "4-digit year",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "amount",
+    "value": 109,
+    "page": "p006",
+    "span": [
+     903,
+     907
+    ],
+    "derivation": "figure with $ sign",
+    "provenance": {
+     "grade": "disputed",
+     "order_safe": false,
+     "filled": [
+      "q35-fair"
+     ],
+     "runs": 1
+    },
+    "established": false,
+    "resolved_from": "unresolved"
+   },
+   {
+    "kind": "amount",
+    "value": 105,
+    "page": "p006",
+    "span": [
+     1049,
+     1053
+    ],
+    "derivation": "figure with $ sign",
+    "provenance": {
+     "grade": "disputed",
+     "order_safe": false,
+     "filled": [
+      "q35-fair"
+     ],
+     "runs": 1
+    },
+    "established": false,
+    "resolved_from": "unresolved"
+   },
+   {
+    "kind": "year",
+    "value": "1969",
+    "page": "p006",
+    "span": [
+     682,
+     686
+    ],
+    "derivation": "4-digit year",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   },
+   {
+    "kind": "amount",
+    "value": 109,
+    "page": "p007",
+    "span": [
+     861,
+     865
+    ],
+    "derivation": "figure with $ sign",
+    "provenance": {
+     "grade": "disputed",
+     "order_safe": false,
+     "filled": [
+      "q35-fair"
+     ],
+     "runs": 1
+    },
+    "established": false,
+    "resolved_from": "unresolved"
+   },
+   {
+    "kind": "amount",
+    "value": 105,
+    "page": "p007",
+    "span": [
+     1055,
+     1060
+    ],
+    "derivation": "figure with $ sign",
+    "provenance": {
+     "grade": "single_channel",
+     "order_safe": false,
+     "filled": [
+      "q35-fair"
+     ],
+     "runs": 1
+    },
+    "established": false,
+    "resolved_from": "unresolved"
+   },
+   {
+    "kind": "year",
+    "value": "1969",
+    "page": "p007",
+    "span": [
+     659,
+     663
+    ],
+    "derivation": "4-digit year",
+    "provenance": {
+     "grade": "image_agreement",
+     "order_safe": true,
+     "filled": [],
+     "runs": 1
+    },
+    "established": true,
+    "resolved_from": "image"
+   }
+  ]
+ }
+]

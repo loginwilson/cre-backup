@@ -1,0 +1,534 @@
+{
+ "1008000033": {
+  "bbl": "1008000033",
+  "polygon_area_sf": 5812.6,
+  "pluto_lot_area_sf": 5712.0,
+  "polygon_vs_pluto": 0.0176,
+  "district_area_sf": {
+   "M1-8A/R11": 3057.6,
+   "C6-4X": 2754.9
+  },
+  "shares": {
+   "M1-8A/R11": 0.526,
+   "C6-4X": 0.474
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "1008000074": {
+  "bbl": "1008000074",
+  "polygon_area_sf": 4166.9,
+  "pluto_lot_area_sf": 3835.0,
+  "polygon_vs_pluto": 0.0865,
+  "district_area_sf": {
+   "C6-3X": 2343.3,
+   "M1-8A/R11": 1823.6
+  },
+  "shares": {
+   "C6-3X": 0.5624,
+   "M1-8A/R11": 0.4376
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "1014290103": {
+  "bbl": "1014290103",
+  "polygon_area_sf": 2505.1,
+  "pluto_lot_area_sf": 2425.0,
+  "polygon_vs_pluto": 0.033,
+  "district_area_sf": {
+   "C1-9": 1842.9,
+   "R8B": 662.3
+  },
+  "shares": {
+   "C1-9": 0.7356,
+   "R8B": 0.2644
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "1014460005": {
+  "bbl": "1014460005",
+  "polygon_area_sf": 10524.8,
+  "pluto_lot_area_sf": 10216.0,
+  "polygon_vs_pluto": 0.0302,
+  "district_area_sf": {
+   "R8B": 8091.7,
+   "C1-9": 2433.0
+  },
+  "shares": {
+   "R8B": 0.7688,
+   "C1-9": 0.2312
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "1014460023": {
+  "bbl": "1014460023",
+  "polygon_area_sf": 43071.4,
+  "pluto_lot_area_sf": 40866.0,
+  "polygon_vs_pluto": 0.054,
+  "district_area_sf": {
+   "R10A": 32178.0,
+   "R8B": 10893.5
+  },
+  "shares": {
+   "R10A": 0.7471,
+   "R8B": 0.2529
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {
+   "C1-5": 0.5932
+  },
+  "overlay_by_district": {
+   "R10A": {
+    "overlay": "C1-5",
+    "covered_fraction_of_district": 0.7161
+   },
+   "R8B": {
+    "overlay": "C1-5",
+    "covered_fraction_of_district": 0.23
+   }
+  }
+ },
+ "1015400005": {
+  "bbl": "1015400005",
+  "polygon_area_sf": 2929.1,
+  "pluto_lot_area_sf": 2819.0,
+  "polygon_vs_pluto": 0.0391,
+  "district_area_sf": {
+   "C2-8": 2451.0,
+   "C4-6": 478.1
+  },
+  "shares": {
+   "C2-8": 0.8368,
+   "C4-6": 0.1632
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "1015400111": {
+  "bbl": "1015400111",
+  "polygon_area_sf": 2626.8,
+  "pluto_lot_area_sf": 2491.0,
+  "polygon_vs_pluto": 0.0545,
+  "district_area_sf": {
+   "C4-6": 2161.4,
+   "C2-8": 465.5
+  },
+  "shares": {
+   "C4-6": 0.8228,
+   "C2-8": 0.1772
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "3024720002": {
+  "bbl": "3024720002",
+  "polygon_area_sf": 7026.4,
+  "pluto_lot_area_sf": 6815.0,
+  "polygon_vs_pluto": 0.031,
+  "district_area_sf": {
+   "R6": 6250.0,
+   "R8": 776.4
+  },
+  "shares": {
+   "R6": 0.8895,
+   "R8": 0.1105
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "EASEMENT_FLAG": "E",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "3024720004": {
+  "bbl": "3024720004",
+  "polygon_area_sf": 2599.2,
+  "pluto_lot_area_sf": 2750.0,
+  "polygon_vs_pluto": -0.0548,
+  "district_area_sf": {
+   "R6": 1812.3,
+   "R8": 786.9
+  },
+  "shares": {
+   "R6": 0.6972,
+   "R8": 0.3028
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "EASEMENT_FLAG": "E",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "3024720050": {
+  "bbl": "3024720050",
+  "polygon_area_sf": 47755.4,
+  "pluto_lot_area_sf": 48560.0,
+  "polygon_vs_pluto": -0.0166,
+  "district_area_sf": {
+   "R8": 36595.1,
+   "R6": 11160.2,
+   "PARK": 0.0
+  },
+  "shares": {
+   "R8": 0.7663,
+   "R6": 0.2337,
+   "PARK": 0.0
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {
+   "C2-4": 0.1256
+  },
+  "overlay_by_district": {
+   "R6": {
+    "overlay": "C2-4",
+    "covered_fraction_of_district": 0.5376
+   },
+   "R8": {
+    "overlay": "C2-4",
+    "covered_fraction_of_district": 0.0
+   }
+  }
+ },
+ "3024720075": {
+  "bbl": "3024720075",
+  "polygon_area_sf": 271613.1,
+  "pluto_lot_area_sf": 278872.0,
+  "polygon_vs_pluto": -0.026,
+  "district_area_sf": {
+   "R6": 225434.5,
+   "PARK": 45035.0,
+   "R8": 1143.5
+  },
+  "shares": {
+   "R6": 0.83,
+   "PARK": 0.1658,
+   "R8": 0.0042
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "EASEMENT_FLAG": "E",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "3024720200": {
+  "bbl": "3024720200",
+  "polygon_area_sf": 45536.4,
+  "pluto_lot_area_sf": 43933.0,
+  "polygon_vs_pluto": 0.0365,
+  "district_area_sf": {
+   "R8": 39784.9,
+   "R6": 5751.5
+  },
+  "shares": {
+   "R8": 0.8737,
+   "R6": 0.1263
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "3024720210": {
+  "bbl": "3024720210",
+  "polygon_area_sf": 6475.7,
+  "pluto_lot_area_sf": 6348.0,
+  "polygon_vs_pluto": 0.0201,
+  "district_area_sf": {
+   "R8": 3405.7,
+   "R6": 3070.0
+  },
+  "shares": {
+   "R8": 0.5259,
+   "R6": 0.4741
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {
+   "C2-4": 0.4351
+  },
+  "overlay_by_district": {
+   "R6": {
+    "overlay": "C2-4",
+    "covered_fraction_of_district": 0.9178
+   }
+  }
+ },
+ "3024940020": {
+  "bbl": "3024940020",
+  "polygon_area_sf": 22516.7,
+  "pluto_lot_area_sf": 20025.0,
+  "polygon_vs_pluto": 0.1244,
+  "district_area_sf": {
+   "R6": 20257.9,
+   "R8": 2258.8
+  },
+  "shares": {
+   "R6": 0.8997,
+   "R8": 0.1003
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "EASEMENT_FLAG": "E",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "3025020001": {
+  "bbl": "3025020001",
+  "polygon_area_sf": 142770.0,
+  "pluto_lot_area_sf": 150004.0,
+  "polygon_vs_pluto": -0.0482,
+  "district_area_sf": {
+   "R8": 88112.0,
+   "R6": 54658.0
+  },
+  "shares": {
+   "R8": 0.6172,
+   "R6": 0.3828
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "EASEMENT_FLAG": "E",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {
+   "C2-4": 0.1686
+  },
+  "overlay_by_district": {
+   "R8": {
+    "overlay": "C2-4",
+    "covered_fraction_of_district": 0.0
+   },
+   "R6": {
+    "overlay": "C2-4",
+    "covered_fraction_of_district": 0.4403
+   }
+  }
+ },
+ "3025020002": {
+  "bbl": "3025020002",
+  "polygon_area_sf": 1252.6,
+  "pluto_lot_area_sf": 1253.0,
+  "polygon_vs_pluto": -0.0003,
+  "district_area_sf": {
+   "R6": 946.8,
+   "R8": 305.8
+  },
+  "shares": {
+   "R6": 0.7558,
+   "R8": 0.2442
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "EASEMENT_FLAG": "E",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "3025020005": {
+  "bbl": "3025020005",
+  "polygon_area_sf": 14280.9,
+  "pluto_lot_area_sf": 14586.0,
+  "polygon_vs_pluto": -0.0209,
+  "district_area_sf": {
+   "R8": 9569.5,
+   "R6": 4711.4
+  },
+  "shares": {
+   "R8": 0.6701,
+   "R6": 0.3299
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "EASEMENT_FLAG": "E",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {
+   "C2-4": 0.2687
+  },
+  "overlay_by_district": {
+   "R8": {
+    "overlay": "C2-4",
+    "covered_fraction_of_district": 0.0
+   },
+   "R6": {
+    "overlay": "C2-4",
+    "covered_fraction_of_district": 0.8145
+   }
+  }
+ },
+ "3025100001": {
+  "bbl": "3025100001",
+  "polygon_area_sf": 286204.8,
+  "pluto_lot_area_sf": 304197.0,
+  "polygon_vs_pluto": -0.0591,
+  "district_area_sf": {
+   "R6": 171813.9,
+   "R8": 114390.9
+  },
+  "shares": {
+   "R6": 0.6003,
+   "R8": 0.3997
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "EASEMENT_FLAG": "E",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {
+   "C2-4": 0.3119
+  },
+  "overlay_by_district": {
+   "R8": {
+    "overlay": "C2-4",
+    "covered_fraction_of_district": 0.5187
+   },
+   "R6": {
+    "overlay": "C2-4",
+    "covered_fraction_of_district": 0.1743
+   }
+  }
+ },
+ "3025100100": {
+  "bbl": "3025100100",
+  "polygon_area_sf": 13058.0,
+  "pluto_lot_area_sf": 13491.0,
+  "polygon_vs_pluto": -0.0321,
+  "district_area_sf": {
+   "R6": 10365.1,
+   "R8": 2692.9
+  },
+  "shares": {
+   "R6": 0.7938,
+   "R8": 0.2062
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "EASEMENT_FLAG": "E",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "3025200100": {
+  "bbl": "3025200100",
+  "polygon_area_sf": 74925.3,
+  "pluto_lot_area_sf": 65000.0,
+  "polygon_vs_pluto": 0.1527,
+  "district_area_sf": {
+   "R6": 59076.7,
+   "R8": 15848.6
+  },
+  "shares": {
+   "R6": 0.7885,
+   "R8": 0.2115
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ },
+ "3027650003": {
+  "bbl": "3027650003",
+  "polygon_area_sf": 14247.4,
+  "pluto_lot_area_sf": 13750.0,
+  "polygon_vs_pluto": 0.0362,
+  "district_area_sf": {
+   "R7A": 9165.7,
+   "R6A": 4977.3,
+   "R6B": 104.5
+  },
+  "shares": {
+   "R7A": 0.6433,
+   "R6A": 0.3493,
+   "R6B": 0.0073
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {
+   "C2-4": 0.9925
+  },
+  "overlay_by_district": {
+   "R7A": {
+    "overlay": "C2-4",
+    "covered_fraction_of_district": 0.9997
+   },
+   "R6A": {
+    "overlay": "C2-4",
+    "covered_fraction_of_district": 1.0
+   },
+   "R6B": {
+    "overlay": "C2-4",
+    "covered_fraction_of_district": 0.0
+   }
+  }
+ },
+ "4097930089": {
+  "bbl": "4097930089",
+  "polygon_area_sf": 23182.3,
+  "pluto_lot_area_sf": 22944.0,
+  "polygon_vs_pluto": 0.0104,
+  "district_area_sf": {
+   "C4-4D": 16439.8,
+   "C6-3": 6742.6
+  },
+  "shares": {
+   "C4-4D": 0.7092,
+   "C6-3": 0.2908
+  },
+  "coverage": 1.0,
+  "source": "tax-lot polygon \u2229 DCP nyzd, EPSG:2263",
+  "BILL_BBL_FLAG": 0,
+  "geometry_source": "DOF Digital Tax Map",
+  "overlay_shares": {},
+  "overlay_by_district": {}
+ }
+}

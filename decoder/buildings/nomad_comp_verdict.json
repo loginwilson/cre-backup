@@ -1,0 +1,112 @@
+[
+ {
+  "name": "The Mason",
+  "tab": "Back",
+  "bbl": "1008610059",
+  "sheet_psf": 108.2,
+  "n": 0,
+  "total": 182,
+  "our_psf": null,
+  "verdict": "NO EVIDENCE"
+ },
+ {
+  "name": "Hollingsworth",
+  "tab": "Back",
+  "bbl": "1008380001",
+  "sheet_psf": 99.5,
+  "n": 100,
+  "total": 1104,
+  "our_psf": 95,
+  "verdict": "supported"
+ },
+ {
+  "name": "Ruby Chelsea",
+  "tab": "Back",
+  "bbl": "4097960063",
+  "sheet_psf": 134.9,
+  "n": 0,
+  "total": 273,
+  "our_psf": null,
+  "verdict": "NO EVIDENCE"
+ },
+ {
+  "name": "Maverick Chelsea",
+  "tab": "Back",
+  "bbl": "1007780025",
+  "sheet_psf": 117.8,
+  "n": 2,
+  "total": 143,
+  "our_psf": 112,
+  "verdict": "THIN"
+ },
+ {
+  "name": "Mabel",
+  "tab": "Crit",
+  "bbl": "1007510020",
+  "sheet_psf": 119.1,
+  "n": 7,
+  "total": 88,
+  "our_psf": 120,
+  "verdict": "supported"
+ },
+ {
+  "name": "Quincy",
+  "tab": "Crit",
+  "bbl": "1008380001",
+  "sheet_psf": 107.4,
+  "n": 0,
+  "total": 64,
+  "our_psf": null,
+  "verdict": "NO EVIDENCE"
+ },
+ {
+  "name": "The Dian",
+  "tab": "Crit",
+  "bbl": "1008910044",
+  "sheet_psf": 132.4,
+  "n": 0,
+  "total": 50,
+  "our_psf": null,
+  "verdict": "NO EVIDENCE"
+ },
+ {
+  "name": "EOS",
+  "tab": "Std",
+  "bbl": "1008067502",
+  "sheet_psf": 107.7,
+  "n": 480,
+  "total": 1095,
+  "our_psf": 92,
+  "verdict": "supported"
+ },
+ {
+  "name": "Solari",
+  "tab": "Std",
+  "bbl": "1008340069",
+  "sheet_psf": 98.3,
+  "n": 110,
+  "total": 490,
+  "our_psf": 82,
+  "verdict": "supported"
+ },
+ {
+  "name": "Chelsea29",
+  "tab": "Std",
+  "bbl": "1007790027",
+  "sheet_psf": 91.1,
+  "n": 179,
+  "total": 230,
+  "our_psf": 82,
+  "verdict": "supported"
+ },
+ {
+  "name": "Chelsea Park",
+  "tab": "Std",
+  "bbl": "1007757502",
+  "sheet_psf": 92.8,
+  "n": 69,
+  "total": 692,
+  "our_psf": 73,
+  "verdict": "supported"
+ }
+]

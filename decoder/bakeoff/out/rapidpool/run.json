@@ -1,0 +1,7 @@
+{
+ "engine": "rapidpool",
+ "model": "incumbent (2025 gen, local)",
+ "rot": false,
+ "sec_per_page": 9.0,
+ "note": "wall time from earlier local runs, NOT comparable to GPU box"
+}

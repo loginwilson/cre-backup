@@ -1,0 +1,47 @@
+[
+ {
+  "workers": 1,
+  "pages": 32,
+  "ok": 32,
+  "failed": 0,
+  "wall_s": 528.9,
+  "pages_per_hour": 218,
+  "sec_per_page_ok": 16.47
+ },
+ {
+  "workers": 2,
+  "pages": 32,
+  "ok": 32,
+  "failed": 0,
+  "wall_s": 293.1,
+  "pages_per_hour": 393,
+  "sec_per_page_ok": 16.43
+ },
+ {
+  "workers": 4,
+  "pages": 32,
+  "ok": 31,
+  "failed": 1,
+  "wall_s": 241.3,
+  "pages_per_hour": 462,
+  "sec_per_page_ok": 27.12
+ },
+ {
+  "workers": 6,
+  "pages": 32,
+  "ok": 5,
+  "failed": 27,
+  "wall_s": 68.2,
+  "pages_per_hour": 264,
+  "sec_per_page_ok": 18.8
+ },
+ {
+  "workers": 8,
+  "pages": 32,
+  "ok": 3,
+  "failed": 29,
+  "wall_s": 48.5,
+  "pages_per_hour": 223,
+  "sec_per_page_ok": 24.82
+ }
+]

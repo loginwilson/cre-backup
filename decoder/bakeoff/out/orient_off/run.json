@@ -1,0 +1,29 @@
+{
+ "tag": "orient_off",
+ "src": "C:\\Users\\smile\\Downloads\\Source Folder (Real Estate Data)\\Decoder Prompt\\decoder\\bakeoff\\pages_rot\\FT",
+ "angles": [
+  0
+ ],
+ "side": 1440,
+ "pages": [
+  {
+   "page": "p010_a000.png",
+   "lines": 101,
+   "sec": 1281.0,
+   "status": "ok"
+  },
+  {
+   "page": "p010_a090.png",
+   "lines": 108,
+   "sec": 75.3,
+   "status": "ok"
+  },
+  {
+   "page": "p010_a270.png",
+   "lines": 107,
+   "sec": 69.6,
+   "status": "ok"
+  }
+ ],
+ "sec": 1426.0
+}

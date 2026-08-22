@@ -1,0 +1,253 @@
+{
+ "doc": "FT_1680008647768",
+ "pages": 10,
+ "totals": {
+  "scored": 71,
+  "placed": 44,
+  "misplaced": 16,
+  "not_in_ocr": 9,
+  "unplaced_line": 2,
+  "unmapped": 30
+ },
+ "placed_over_reachable": 0.7096774193548387,
+ "unmapped_ids": {
+  "rider_law": 1,
+  "rent_roll": 1,
+  "rents_phrase": 1,
+  "rpl291f": 1,
+  "default": 1,
+  "judgment": 1,
+  "due_on_sale": 1,
+  "stock": 1,
+  "carveout": 1,
+  "sisson": 1,
+  "ucc_fs": 1,
+  "ucc9402": 1,
+  "joint_several": 1,
+  "late_charge": 1,
+  "cure_mon": 1,
+  "cure_non": 1,
+  "run_with_land": 1,
+  "gp_title": 1,
+  "aif": 1,
+  "no_recourse": 1,
+  "aif_name": 1,
+  "aif_role": 1,
+  "poa": 1,
+  "poa_simul": 1,
+  "section": 1,
+  "title_no": 1,
+  "to_citibank": 1,
+  "return_to": 1,
+  "law_firm": 1,
+  "title_co": 1
+ },
+ "misplaced": [
+  {
+   "page": "p001",
+   "id": "amount_words",
+   "want": [
+    "amount"
+   ],
+   "got": [
+    "granting_clause"
+   ],
+   "line": "WITNESSETH,that to secure the payment of an indebted",
+   "value": "Four Million"
+  },
+  {
+   "page": "p001",
+   "id": "amount_figs",
+   "want": [
+    "amount"
+   ],
+   "got": [
+    "granting_clause"
+   ],
+   "line": "\uff08$4,000,000\uff09-",
+   "value": "$4,000,000"
+  },
+  {
+   "page": "p006",
+   "id": "reel",
+   "want": [
+    "recording_stamp"
+   ],
+   "got": [
+    "other"
+   ],
+   "line": "REEL 586\u00b7Act 766",
+   "value": "REEL 586"
+  },
+  {
+   "page": "p006",
+   "id": "reel_page",
+   "want": [
+    "recording_stamp"
+   ],
+   "got": [
+    "other"
+   ],
+   "line": "REEL 586\u00b7Act 766",
+   "value": "766"
+  },
+  {
+   "page": "p007",
+   "id": "reel",
+   "want": [
+    "recording_stamp"
+   ],
+   "got": [
+    "other"
+   ],
+   "line": "586 767",
+   "value": "REEL 586"
+  },
+  {
+   "page": "p007",
+   "id": "reel_page",
+   "want": [
+    "recording_stamp"
+   ],
+   "got": [
+    "other"
+   ],
+   "line": "586 767",
+   "value": "767"
+  },
+  {
+   "page": "p007",
+   "id": "lien_law",
+   "want": [
+    "covenants"
+   ],
+   "got": [
+    "granting_clause"
+   ],
+   "line": "the event of the passage of any law deducting from t",
+   "value": "Section 13 of the Lien Law"
+  },
+  {
+   "page": "p008",
+   "id": "reel",
+   "want": [
+    "recording_stamp"
+   ],
+   "got": [
+    "legal_description"
+   ],
+   "line": "586\u00b1 768",
+   "value": "REEL 586"
+  },
+  {
+   "page": "p008",
+   "id": "reel_page",
+   "want": [
+    "recording_stamp"
+   ],
+   "got": [
+    "legal_description"
+   ],
+   "line": "586\u00b1 768",
+   "value": "768"
+  },
+  {
+   "page": "p009",
+   "id": "mortgagor",
+   "want": [
+    "parties"
+   ],
+   "got": [
+    "signature"
+   ],
+   "line": "387 P.A.S.ENTERPRISES",
+   "value": "387 P.A.S. ENTERPRISES"
+  },
+  {
+   "page": "p009",
+   "id": "gen_partner",
+   "want": [
+    "parties"
+   ],
+   "got": [
+    "signature"
+   ],
+   "line": "Sisson Realty,N.V.,nc.",
+   "value": "Sisson Realty, N.V., Inc."
+  },
+  {
+   "page": "p010",
+   "id": "gen_partner",
+   "want": [
+    "parties"
+   ],
+   "got": [
+    "notary"
+   ],
+   "line": "the attorney-in-fact fcr Sisson Pealty,",
+   "value": "Sisson Realty"
+  },
+  {
+   "page": "p010",
+   "id": "partnership",
+   "want": [
+    "parties"
+   ],
+   "got": [
+    "notary",
+    "recording_stamp"
+   ],
+   "line": "of387 P.A.S.",
+   "value": "387 P.A.S."
+  },
+  {
+   "page": "p010",
+   "id": "block",
+   "want": [
+    "legal_description"
+   ],
+   "got": [
+    "recording_stamp"
+   ],
+   "line": "883",
+   "value": "BLOCK 883"
+  },
+  {
+   "page": "p010",
+   "id": "county",
+   "want": [
+    "legal_description"
+   ],
+   "got": [
+    "notary",
+    "recording_stamp"
+   ],
+   "line": "STATE OF NEW YORK,COUNTY OF NEW YORK",
+   "value": "NEW YORK"
+  },
+  {
+   "page": "p010",
+   "id": "instrument",
+   "want": [
+    "recording_stamp"
+   ],
+   "got": [
+    "notary"
+   ],
+   "line": "murigagr",
+   "value": "Mortgage"
+  }
+ ],
+ "confusions": {
+  "recording_stamp->other": 4,
+  "amount->granting_clause": 2,
+  "recording_stamp->legal_description": 2,
+  "parties->signature": 2,
+  "parties->notary": 2,
+  "legal_description->recording_stamp": 2,
+  "covenants->granting_clause": 1,
+  "parties->recording_stamp": 1,
+  "legal_description->notary": 1,
+  "recording_stamp->notary": 1
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "personal_master": {
+  "rows": 4547264,
+  "live": 4547264,
+  "requests": 143,
+  "splits": 22,
+  "failed": 0,
+  "seconds": 785,
+  "complete": true
+ }
+}

@@ -1,0 +1,445 @@
+{
+ "page": "2003013001838001/p010",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "First American Title Insurance Company of New York",
+   "box": [
+    [
+     542,
+     367
+    ],
+    [
+     1959,
+     363
+    ],
+    [
+     1959,
+     425
+    ],
+    [
+     542,
+     429
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9675
+  },
+  {
+   "text": "SCHEDULEA",
+   "box": [
+    [
+     1090,
+     542
+    ],
+    [
+     1423,
+     542
+    ],
+    [
+     1423,
+     604
+    ],
+    [
+     1090,
+     604
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9965
+  },
+  {
+   "text": "The subject tract of land with respect to which the foregoing parties are the parties in interest as",
+   "box": [
+    [
+     263,
+     673
+    ],
+    [
+     2196,
+     665
+    ],
+    [
+     2198,
+     731
+    ],
+    [
+     265,
+     740
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9877
+  },
+  {
+   "text": "aforesaid, is known as Tax Lot Numbers 33 and 37 in Block 1034 as shown on the Tax Map of",
+   "box": [
+    [
+     265,
+     731
+    ],
+    [
+     2188,
+     723
+    ],
+    [
+     2188,
+     786
+    ],
+    [
+     267,
+     794
+    ]
+   ],
+   "angle": 0,
+   "score": 0.988
+  },
+  {
+   "text": "the City of New York, New York County and more particularly described as follows:",
+   "box": [
+    [
+     265,
+     792
+    ],
+    [
+     1986,
+     786
+    ],
+    [
+     1986,
+     848
+    ],
+    [
+     265,
+     854
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9865
+  },
+  {
+   "text": "Block1034Lot33",
+   "box": [
+    [
+     265,
+     913
+    ],
+    [
+     654,
+     913
+    ],
+    [
+     654,
+     969
+    ],
+    [
+     265,
+     969
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9922
+  },
+  {
+   "text": "ALL that certain plot, piece or parcel of land, situate, lying and being in the Borough of",
+   "box": [
+    [
+     263,
+     1025
+    ],
+    [
+     2042,
+     1019
+    ],
+    [
+     2042,
+     1081
+    ],
+    [
+     263,
+     1088
+    ]
+   ],
+   "angle": 0,
+   "score": 0.98
+  },
+  {
+   "text": "Manhattan, City, County and State of New York, known as Lot No. S05 on\u201cMap of Tract of land",
+   "box": [
+    [
+     263,
+     1086
+    ],
+    [
+     2232,
+     1077
+    ],
+    [
+     2234,
+     1134
+    ],
+    [
+     263,
+     1142
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9302
+  },
+  {
+   "text": "commonly called The Henmitage, showing the same as subdivided into lots on the intersections",
+   "box": [
+    [
+     263,
+     1140
+    ],
+    [
+     2186,
+     1134
+    ],
+    [
+     2186,
+     1196
+    ],
+    [
+     263,
+     1202
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9919
+  },
+  {
+   "text": "of avenues and streets compiled from authentic surveys, 2/1825, by Daniel Ewen, C.s.\" bounded",
+   "box": [
+    [
+     260,
+     1200
+    ],
+    [
+     2219,
+     1192
+    ],
+    [
+     2221,
+     1252
+    ],
+    [
+     260,
+     1261
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9865
+  },
+  {
+   "text": "and described as follows:",
+   "box": [
+    [
+     263,
+     1257
+    ],
+    [
+     786,
+     1261
+    ],
+    [
+     786,
+     1317
+    ],
+    [
+     260,
+     1313
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9583
+  },
+  {
+   "text": "BEGINNING at a point on the westerly side of 8* Avenue, distant 75 feet 3 inches (record",
+   "box": [
+    [
+     256,
+     1369
+    ],
+    [
+     2111,
+     1361
+    ],
+    [
+     2111,
+     1429
+    ],
+    [
+     258,
+     1438
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9854
+  },
+  {
+   "text": "description) (75 feet 3 % inches on tax map) southerly from southwesterly from the comer",
+   "box": [
+    [
+     263,
+     1429
+    ],
+    [
+     2084,
+     1427
+    ],
+    [
+     2084,
+     1490
+    ],
+    [
+     263,
+     1492
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9933
+  },
+  {
+   "text": "formed by the intersection of 8\"h Avenue and 44h Street;",
+   "box": [
+    [
+     260,
+     1482
+    ],
+    [
+     1407,
+     1482
+    ],
+    [
+     1407,
+     1550
+    ],
+    [
+     260,
+     1550
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9638
+  },
+  {
+   "text": "RUNNING THENCE westerly parallel with 44\" Strcet, 100 feet;",
+   "box": [
+    [
+     256,
+     1602
+    ],
+    [
+     1600,
+     1596
+    ],
+    [
+     1602,
+     1663
+    ],
+    [
+     258,
+     1669
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9803
+  },
+  {
+   "text": "THENCE southerly parallel with 8th Avenue, 25 feet 1 inch (record description) (25 feet 1 %",
+   "box": [
+    [
+     258,
+     1715
+    ],
+    [
+     2146,
+     1713
+    ],
+    [
+     2146,
+     1782
+    ],
+    [
+     258,
+     1784
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9662
+  },
+  {
+   "text": "inches on tax map);",
+   "box": [
+    [
+     260,
+     1784
+    ],
+    [
+     667,
+     1784
+    ],
+    [
+     667,
+     1846
+    ],
+    [
+     260,
+     1846
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9945
+  },
+  {
+   "text": "THENCE northerly along the westerly side of 8\" Avenue, 25 feet 1 (record description) (25 feet",
+   "box": [
+    [
+     258,
+     2009
+    ],
+    [
+     2215,
+     2002
+    ],
+    [
+     2217,
+     2071
+    ],
+    [
+     258,
+     2077
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9886
+  },
+  {
+   "text": "1 % inches on tax map) inch to the point or place of BEGINNING.",
+   "box": [
+    [
+     260,
+     2073
+    ],
+    [
+     1623,
+     2073
+    ],
+    [
+     1623,
+     2134
+    ],
+    [
+     260,
+     2134
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9898
+  }
+ ]
+}

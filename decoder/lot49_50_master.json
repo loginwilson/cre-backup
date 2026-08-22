@@ -1,0 +1,868 @@
+[
+{
+"document_id": "2003110900238001",
+"doc_type": "AGMT",
+"document_date": "2003-10-28T00:00:00.000",
+"recorded_datetime": "2003-11-28T00:00:00.000",
+"document_amt": "969656.99"
+},
+{
+"document_id": "2007062101109001",
+"doc_type": "DEED",
+"document_date": "2007-06-20T00:00:00.000",
+"recorded_datetime": "2007-06-29T00:00:00.000",
+"document_amt": "42700000"
+},
+{
+"document_id": "2007062101109002",
+"doc_type": "RPTT&RET",
+"document_date": "2007-06-20T00:00:00.000",
+"recorded_datetime": "2007-06-29T00:00:00.000",
+"document_amt": "2300000"
+},
+{
+"document_id": "2007062101109003",
+"doc_type": "ASST",
+"document_date": "2007-06-20T00:00:00.000",
+"recorded_datetime": "2007-06-29T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2007062101109004",
+"doc_type": "MTGE",
+"document_date": "2007-06-20T00:00:00.000",
+"recorded_datetime": "2007-06-29T00:00:00.000",
+"document_amt": "38311287.86"
+},
+{
+"document_id": "2007062101109005",
+"doc_type": "AGMT",
+"document_date": "2007-06-20T00:00:00.000",
+"recorded_datetime": "2007-06-29T00:00:00.000",
+"document_amt": "39229334"
+},
+{
+"document_id": "2007062101109006",
+"doc_type": "AL&R",
+"document_date": "2007-06-20T00:00:00.000",
+"recorded_datetime": "2007-06-29T00:00:00.000",
+"document_amt": "39229334"
+},
+{
+"document_id": "2010102601040002",
+"doc_type": "CERT",
+"document_date": "2010-10-14T00:00:00.000",
+"recorded_datetime": "2010-11-16T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2010102601040003",
+"doc_type": "SAGE",
+"document_date": "2010-10-14T00:00:00.000",
+"recorded_datetime": "2010-11-16T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2010102601040004",
+"doc_type": "SAGE",
+"document_date": "2010-09-13T00:00:00.000",
+"recorded_datetime": "2010-11-16T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2010102601040005",
+"doc_type": "SAGE",
+"document_date": "2010-11-03T00:00:00.000",
+"recorded_datetime": "2010-11-16T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2010102601040006",
+"doc_type": "DEVR",
+"document_date": "2010-10-14T00:00:00.000",
+"recorded_datetime": "2010-11-16T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2010110900202001",
+"doc_type": "RPTT",
+"document_date": "2010-10-14T00:00:00.000",
+"recorded_datetime": "2010-11-10T00:00:00.000",
+"document_amt": "5000000"
+},
+{
+"document_id": "2011112200806001",
+"doc_type": "ASST",
+"document_date": "2011-11-08T00:00:00.000",
+"recorded_datetime": "2011-12-06T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2011112200841001",
+"doc_type": "ASST",
+"document_date": "2011-11-08T00:00:00.000",
+"recorded_datetime": "2011-12-06T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2011112200888001",
+"doc_type": "AALR",
+"document_date": "2011-11-08T00:00:00.000",
+"recorded_datetime": "2011-12-06T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2011112200913001",
+"doc_type": "AALR",
+"document_date": "2011-11-08T00:00:00.000",
+"recorded_datetime": "2011-12-06T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2012101500666002",
+"doc_type": "AALR",
+"document_date": "2012-10-05T00:00:00.000",
+"recorded_datetime": "2012-10-31T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2012101500666003",
+"doc_type": "TL&R",
+"document_date": "2012-10-05T00:00:00.000",
+"recorded_datetime": "2012-10-31T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2012101500666004",
+"doc_type": "ASST",
+"document_date": "2012-10-05T00:00:00.000",
+"recorded_datetime": "2012-10-31T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2012101500666005",
+"doc_type": "ASST",
+"document_date": "2012-10-05T00:00:00.000",
+"recorded_datetime": "2012-10-31T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2012101500666006",
+"doc_type": "MTGE",
+"document_date": "2012-10-05T00:00:00.000",
+"recorded_datetime": "2012-10-31T00:00:00.000",
+"document_amt": "1607226.43"
+},
+{
+"document_id": "2012101500666007",
+"doc_type": "AGMT",
+"document_date": "2012-10-05T00:00:00.000",
+"recorded_datetime": "2012-10-31T00:00:00.000",
+"document_amt": "39000000"
+},
+{
+"document_id": "2012101500666008",
+"doc_type": "AL&R",
+"document_date": "2012-10-05T00:00:00.000",
+"recorded_datetime": "2012-10-31T00:00:00.000",
+"document_amt": "39000000"
+},
+{
+"document_id": "2012122701550001",
+"doc_type": "CERT",
+"document_date": "2012-12-07T00:00:00.000",
+"recorded_datetime": "2013-01-08T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2012122701550002",
+"doc_type": "SAGE",
+"document_date": "2012-12-19T00:00:00.000",
+"recorded_datetime": "2013-01-08T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2012122701550003",
+"doc_type": "DEVR",
+"document_date": "2012-12-19T00:00:00.000",
+"recorded_datetime": "2013-01-08T00:00:00.000",
+"document_amt": "4614690"
+},
+{
+"document_id": "2012122701550004",
+"doc_type": "SAGE",
+"document_date": "2012-12-14T00:00:00.000",
+"recorded_datetime": "2013-01-08T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2013052101674001",
+"doc_type": "CERT",
+"document_date": "2013-05-17T00:00:00.000",
+"recorded_datetime": "2013-06-19T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2013052101674002",
+"doc_type": "SAGE",
+"document_date": "2013-05-17T00:00:00.000",
+"recorded_datetime": "2013-06-19T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2013052101674003",
+"doc_type": "SMIS",
+"document_date": "2013-05-17T00:00:00.000",
+"recorded_datetime": "2013-06-19T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2013052101674004",
+"doc_type": "DEVR",
+"document_date": "2013-05-17T00:00:00.000",
+"recorded_datetime": "2013-06-19T00:00:00.000",
+"document_amt": "1450000"
+},
+{
+"document_id": "2013052101674005",
+"doc_type": "CERT",
+"document_date": "2013-05-17T00:00:00.000",
+"recorded_datetime": "2013-06-19T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2013052101674006",
+"doc_type": "SAGE",
+"document_date": "2013-05-17T00:00:00.000",
+"recorded_datetime": "2013-06-19T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2013052101674007",
+"doc_type": "SMIS",
+"document_date": "2013-05-17T00:00:00.000",
+"recorded_datetime": "2013-06-19T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2013052101674008",
+"doc_type": "DEVR",
+"document_date": "2013-05-17T00:00:00.000",
+"recorded_datetime": "2013-06-19T00:00:00.000",
+"document_amt": "1340250"
+},
+{
+"document_id": "2013080901116001",
+"doc_type": "SMIS",
+"document_date": "2013-08-07T00:00:00.000",
+"recorded_datetime": "2013-08-27T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2013080901116002",
+"doc_type": "EASE",
+"document_date": "2013-08-07T00:00:00.000",
+"recorded_datetime": "2013-08-27T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2013080901116003",
+"doc_type": "DEED",
+"document_date": "2013-08-07T00:00:00.000",
+"recorded_datetime": "2013-08-27T00:00:00.000",
+"document_amt": "67500000"
+},
+{
+"document_id": "2013081200922001",
+"doc_type": "ASST",
+"document_date": "2013-07-29T00:00:00.000",
+"recorded_datetime": "2013-08-28T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2013081200922002",
+"doc_type": "MTGE",
+"document_date": "2013-08-07T00:00:00.000",
+"recorded_datetime": "2013-08-28T00:00:00.000",
+"document_amt": "1500000"
+},
+{
+"document_id": "2013081200922003",
+"doc_type": "AGMT",
+"document_date": "2013-08-07T00:00:00.000",
+"recorded_datetime": "2013-08-28T00:00:00.000",
+"document_amt": "40500000"
+},
+{
+"document_id": "2013081200922004",
+"doc_type": "AL&R",
+"document_date": "2013-08-07T00:00:00.000",
+"recorded_datetime": "2013-08-28T00:00:00.000",
+"document_amt": "40500000"
+},
+{
+"document_id": "2013081200922005",
+"doc_type": "TL&R",
+"document_date": "2013-08-07T00:00:00.000",
+"recorded_datetime": "2013-08-28T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2014080700619001",
+"doc_type": "SAGE",
+"document_date": "2014-07-14T00:00:00.000",
+"recorded_datetime": "2014-08-13T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2014112601161001",
+"doc_type": "TL&R",
+"document_date": "2014-11-25T00:00:00.000",
+"recorded_datetime": "2014-12-02T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2014112601161002",
+"doc_type": "SAGE",
+"document_date": "2014-11-25T00:00:00.000",
+"recorded_datetime": "2014-12-02T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2014112601161003",
+"doc_type": "ASST",
+"document_date": "2014-11-25T00:00:00.000",
+"recorded_datetime": "2014-12-02T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2014112601161004",
+"doc_type": "MTGE",
+"document_date": "2014-11-25T00:00:00.000",
+"recorded_datetime": "2014-12-02T00:00:00.000",
+"document_amt": "7500000"
+},
+{
+"document_id": "2014112601161005",
+"doc_type": "AGMT",
+"document_date": "2014-11-25T00:00:00.000",
+"recorded_datetime": "2014-12-02T00:00:00.000",
+"document_amt": "48000000"
+},
+{
+"document_id": "2023110100486001",
+"doc_type": "DEED",
+"document_date": "2023-10-16T00:00:00.000",
+"recorded_datetime": "2023-11-06T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2023110100486010",
+"doc_type": "AGMT",
+"document_date": "2023-10-16T00:00:00.000",
+"recorded_datetime": "2023-11-06T00:00:00.000",
+"document_amt": "120000000.00"
+},
+{
+"document_id": "2023110100486011",
+"doc_type": "AL&R",
+"document_date": "2023-10-16T00:00:00.000",
+"recorded_datetime": "2023-11-06T00:00:00.000",
+"document_amt": "120000000.00"
+},
+{
+"document_id": "2023110100486009",
+"doc_type": "MTGE",
+"document_date": "2023-10-16T00:00:00.000",
+"recorded_datetime": "2023-11-06T00:00:00.000",
+"document_amt": "25490000.00"
+},
+{
+"document_id": "2023110100486008",
+"doc_type": "ASST",
+"document_date": "2023-10-16T00:00:00.000",
+"recorded_datetime": "2023-11-06T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2023110100486007",
+"doc_type": "ASST",
+"document_date": "2023-10-16T00:00:00.000",
+"recorded_datetime": "2023-11-06T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2023110100486006",
+"doc_type": "ASST",
+"document_date": "2023-10-16T00:00:00.000",
+"recorded_datetime": "2023-11-06T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2023110100486005",
+"doc_type": "ASST",
+"document_date": "2023-10-16T00:00:00.000",
+"recorded_datetime": "2023-11-06T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2023110100486004",
+"doc_type": "TL&R",
+"document_date": "2023-10-16T00:00:00.000",
+"recorded_datetime": "2023-11-06T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2023110100486003",
+"doc_type": "TL&R",
+"document_date": "2023-10-16T00:00:00.000",
+"recorded_datetime": "2023-11-06T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2023110100486002",
+"doc_type": "TL&R",
+"document_date": "2023-10-16T00:00:00.000",
+"recorded_datetime": "2023-11-06T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2023102700777001",
+"doc_type": "SAGE",
+"document_date": "2023-10-16T00:00:00.000",
+"recorded_datetime": "2023-10-31T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2022120700082001",
+"doc_type": "SMIS",
+"document_date": "2022-04-25T00:00:00.000",
+"recorded_datetime": "2022-12-08T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2022090900922001",
+"doc_type": "SMIS",
+"document_date": "2022-04-25T00:00:00.000",
+"recorded_datetime": "2022-09-13T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2021100701521001",
+"doc_type": "SMIS",
+"document_date": "2021-06-18T00:00:00.000",
+"recorded_datetime": "2021-11-19T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2018113000347001",
+"doc_type": "AGMT",
+"document_date": "2018-11-19T00:00:00.000",
+"recorded_datetime": "2018-12-03T00:00:00.000",
+"document_amt": "48000000.00"
+},
+{
+"document_id": "2020081400407002",
+"doc_type": "AL&R",
+"document_date": "2020-08-05T00:00:00.000",
+"recorded_datetime": "2020-08-19T00:00:00.000",
+"document_amt": "5000000.00"
+},
+{
+"document_id": "2020081400407001",
+"doc_type": "MTGE",
+"document_date": "2020-08-05T00:00:00.000",
+"recorded_datetime": "2020-08-19T00:00:00.000",
+"document_amt": "5000000.00"
+},
+{
+"document_id": "2020061600455001",
+"doc_type": "SMIS",
+"document_date": "2020-06-08T00:00:00.000",
+"recorded_datetime": "2020-06-16T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2019102200213001",
+"doc_type": "MLEA",
+"document_date": "2019-10-17T00:00:00.000",
+"recorded_datetime": "2019-10-31T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2019102100741003",
+"doc_type": "TL&R",
+"document_date": "2019-10-17T00:00:00.000",
+"recorded_datetime": "2019-10-21T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2019102200213005",
+"doc_type": "MTGE",
+"document_date": "2019-10-17T00:00:00.000",
+"recorded_datetime": "2019-10-31T00:00:00.000",
+"document_amt": "17364166.00"
+},
+{
+"document_id": "2019102200213004",
+"doc_type": "MTGE",
+"document_date": "2019-10-17T00:00:00.000",
+"recorded_datetime": "2019-10-31T00:00:00.000",
+"document_amt": "45092752.00"
+},
+{
+"document_id": "2019102200213003",
+"doc_type": "AGMT",
+"document_date": "2019-10-17T00:00:00.000",
+"recorded_datetime": "2019-10-31T00:00:00.000",
+"document_amt": "16243082.00"
+},
+{
+"document_id": "2019102200213002",
+"doc_type": "ASST",
+"document_date": "2019-10-17T00:00:00.000",
+"recorded_datetime": "2019-10-31T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2019102100741004",
+"doc_type": "DEED",
+"document_date": "2019-10-17T00:00:00.000",
+"recorded_datetime": "2019-10-21T00:00:00.000",
+"document_amt": "74159181.64"
+},
+{
+"document_id": "2019071700601003",
+"doc_type": "EASE",
+"document_date": "2019-05-20T00:00:00.000",
+"recorded_datetime": "2019-07-22T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2019071700601001",
+"doc_type": "SAGE",
+"document_date": "2019-06-18T00:00:00.000",
+"recorded_datetime": "2019-07-22T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2019071700601002",
+"doc_type": "SAGE",
+"document_date": "2019-05-20T00:00:00.000",
+"recorded_datetime": "2019-07-22T00:00:00.000",
+"document_amt": "0.00"
+},
+{
+"document_id": "2018113000677004",
+"doc_type": "REL",
+"document_date": "2018-11-19T00:00:00.000",
+"recorded_datetime": "2018-12-03T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2018113000677003",
+"doc_type": "REL",
+"document_date": "2018-11-19T00:00:00.000",
+"recorded_datetime": "2018-12-03T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2018113000677002",
+"doc_type": "PREL",
+"document_date": "2018-11-19T00:00:00.000",
+"recorded_datetime": "2018-12-03T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2018113000677001",
+"doc_type": "PREL",
+"document_date": "2018-11-19T00:00:00.000",
+"recorded_datetime": "2018-12-03T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2018113000347005",
+"doc_type": "AL&R",
+"document_date": "2018-11-19T00:00:00.000",
+"recorded_datetime": "2018-12-03T00:00:00.000",
+"document_amt": "27000000"
+},
+{
+"document_id": "2018113000347004",
+"doc_type": "AGMT",
+"document_date": "2018-11-19T00:00:00.000",
+"recorded_datetime": "2018-12-03T00:00:00.000",
+"document_amt": "27000000"
+},
+{
+"document_id": "2018113000347003",
+"doc_type": "MTGE",
+"document_date": "2018-11-19T00:00:00.000",
+"recorded_datetime": "2018-12-03T00:00:00.000",
+"document_amt": "4500000"
+},
+{
+"document_id": "2018113000347002",
+"doc_type": "AGMT",
+"document_date": "2018-11-19T00:00:00.000",
+"recorded_datetime": "2018-12-03T00:00:00.000",
+"document_amt": "22500000"
+},
+{
+"document_id": "2018113000347001",
+"doc_type": "AGMT",
+"document_date": "2018-11-19T00:00:00.000",
+"recorded_datetime": "2018-12-03T00:00:00.000",
+"document_amt": "48000000"
+},
+{
+"document_id": "2018070201269001",
+"doc_type": "DEED",
+"document_date": "2017-06-08T00:00:00.000",
+"recorded_datetime": "2018-07-06T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2015043000681001",
+"doc_type": "SAGE",
+"document_date": "2015-04-29T00:00:00.000",
+"recorded_datetime": "2015-06-11T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2016060801066001",
+"doc_type": "SAGE",
+"document_date": "2016-05-13T00:00:00.000",
+"recorded_datetime": "2016-06-16T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2015101301338001",
+"doc_type": "ZONE",
+"document_date": "2015-10-12T00:00:00.000",
+"recorded_datetime": "2015-10-15T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2015091001439001",
+"doc_type": "SAGE",
+"document_date": "2015-08-12T00:00:00.000",
+"recorded_datetime": "2015-09-17T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2015091001439002",
+"doc_type": "AGMT",
+"document_date": "2015-09-02T00:00:00.000",
+"recorded_datetime": "2015-09-17T00:00:00.000",
+"document_amt": "48000000"
+},
+{
+"document_id": "2015091001439005",
+"doc_type": "AL&R",
+"document_date": "2015-09-02T00:00:00.000",
+"recorded_datetime": "2015-09-17T00:00:00.000",
+"document_amt": "113710000"
+},
+{
+"document_id": "2015091001439004",
+"doc_type": "MTGE",
+"document_date": "2015-09-02T00:00:00.000",
+"recorded_datetime": "2015-09-17T00:00:00.000",
+"document_amt": "33780000"
+},
+{
+"document_id": "2015091001439003",
+"doc_type": "MTGE",
+"document_date": "2015-09-02T00:00:00.000",
+"recorded_datetime": "2015-09-17T00:00:00.000",
+"document_amt": "31930000"
+},
+{
+"document_id": "2015041300292001",
+"doc_type": "DEVR",
+"document_date": "2015-03-31T00:00:00.000",
+"recorded_datetime": "2015-06-18T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2015052900388001",
+"doc_type": "CERT",
+"document_date": "2015-05-22T00:00:00.000",
+"recorded_datetime": "2015-06-04T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2015051301826001",
+"doc_type": "ZONE",
+"document_date": "2015-05-12T00:00:00.000",
+"recorded_datetime": "2015-05-21T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2015043000681001",
+"doc_type": "SAGE",
+"document_date": "2015-04-29T00:00:00.000",
+"recorded_datetime": "2015-06-11T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2014112601161006",
+"doc_type": "AL&R",
+"document_date": "2014-11-25T00:00:00.000",
+"recorded_datetime": "2014-12-02T00:00:00.000",
+"document_amt": "48000000"
+},
+{
+"document_id": "2026051801182001",
+"doc_type": "ASST",
+"document_date": "2026-04-24T00:00:00.000",
+"recorded_datetime": "2026-05-22T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2025100300103001",
+"doc_type": "TERL",
+"document_date": "2025-09-30T00:00:00.000",
+"recorded_datetime": "2025-10-06T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2025100300103002",
+"doc_type": "DEED",
+"document_date": "2025-09-30T00:00:00.000",
+"recorded_datetime": "2025-10-06T00:00:00.000",
+"document_amt": "168618594"
+},
+{
+"document_id": "2025100300103003",
+"doc_type": "MLEA",
+"document_date": "2025-09-30T00:00:00.000",
+"recorded_datetime": "2025-10-06T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2025100300103004",
+"doc_type": "ASST",
+"document_date": "2025-09-30T00:00:00.000",
+"recorded_datetime": "2025-10-06T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2025100300103005",
+"doc_type": "AGMT",
+"document_date": "2025-09-30T00:00:00.000",
+"recorded_datetime": "2025-10-06T00:00:00.000",
+"document_amt": "105000000"
+},
+{
+"document_id": "2025101700864001",
+"doc_type": "TL&R",
+"document_date": "2025-10-16T00:00:00.000",
+"recorded_datetime": "2025-10-23T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2025101700864002",
+"doc_type": "ASST",
+"document_date": "2025-10-16T00:00:00.000",
+"recorded_datetime": "2025-10-23T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "2025101700864003",
+"doc_type": "MTGE",
+"document_date": "2025-10-16T00:00:00.000",
+"recorded_datetime": "2025-10-23T00:00:00.000",
+"document_amt": "3000000"
+},
+{
+"document_id": "2025101700864005",
+"doc_type": "AL&R",
+"document_date": "2025-10-16T00:00:00.000",
+"recorded_datetime": "2025-10-23T00:00:00.000",
+"document_amt": "123000000"
+},
+{
+"document_id": "2025101700864004",
+"doc_type": "AGMT",
+"document_date": "2025-10-16T00:00:00.000",
+"recorded_datetime": "2025-10-23T00:00:00.000",
+"document_amt": "123000000"
+},
+{
+"document_id": "2024101800411001",
+"doc_type": "M&CON",
+"document_date": "2024-10-17T00:00:00.000",
+"recorded_datetime": "2024-10-22T00:00:00.000",
+"document_amt": "78700000"
+},
+{
+"document_id": "2024101800411002",
+"doc_type": "MTGE",
+"document_date": "2024-10-17T00:00:00.000",
+"recorded_datetime": "2024-10-22T00:00:00.000",
+"document_amt": "26300000"
+},
+{
+"document_id": "FT_1260006667226",
+"doc_type": "SAGE",
+"recorded_datetime": "1999-06-29T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "FT_1320008495632",
+"doc_type": "DEED",
+"recorded_datetime": "1971-10-27T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "FT_1330008495633",
+"doc_type": "DEED",
+"recorded_datetime": "1971-10-27T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "FT_1370006667337",
+"doc_type": "AGMT",
+"recorded_datetime": "1999-06-29T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "FT_1570006671557",
+"doc_type": "DEED",
+"document_date": "1998-11-23T00:00:00.000",
+"recorded_datetime": "1999-06-29T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "FT_1710006669171",
+"doc_type": "MTGE",
+"recorded_datetime": "1999-06-29T00:00:00.000",
+"document_amt": "226378.12"
+},
+{
+"document_id": "FT_1730006667273",
+"doc_type": "ASST",
+"recorded_datetime": "1999-06-29T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "FT_1810006667281",
+"doc_type": "ASST",
+"recorded_datetime": "1999-06-29T00:00:00.000",
+"document_amt": "0"
+},
+{
+"document_id": "FT_1980000345898",
+"doc_type": "MTGE",
+"recorded_datetime": "1990-07-05T00:00:00.000",
+"document_amt": "1000000"
+},
+{
+"document_id": "FT_1990000345899",
+"doc_type": "ASST",
+"recorded_datetime": "1990-07-05T00:00:00.000",
+"document_amt": "0"
+}
+]

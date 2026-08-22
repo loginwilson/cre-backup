@@ -1,0 +1,7 @@
+{
+ "engine": "tesseract",
+ "model": "incumbent (2025 gen, local)",
+ "rot": false,
+ "sec_per_page": 0.7,
+ "note": "wall time from earlier local runs, NOT comparable to GPU box"
+}

@@ -1,0 +1,898 @@
+[
+ {
+  "page": "p001",
+  "run_index": 2,
+  "status": "single_channel",
+  "n_tokens": 6,
+  "box": [
+   255,
+   405,
+   732,
+   481
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "BI NO. 2159 T7 ctobor 1966",
+  "crop": "p001_r002_single_channel.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 4,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   250,
+   490,
+   455,
+   573
+  ],
+  "how": "ok",
+  "vlm": "LOT",
+  "ocr": "1OT30",
+  "crop": "p001_r004_disputed.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 5,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   241,
+   575,
+   369,
+   631
+  ],
+  "how": "ok",
+  "vlm": "30",
+  "ocr": "10501",
+  "crop": "p001_r005_disputed.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 7,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   1036,
+   569,
+   1241,
+   602
+  ],
+  "how": "ok",
+  "vlm": "of July,",
+  "ocr": "ofJuly",
+  "crop": "p001_r007_disputed.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 9,
+  "status": "single_channel",
+  "n_tokens": 3,
+  "box": [
+   1320,
+   631,
+   1533,
+   658
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": ", the MORTGAGOR,",
+  "crop": "p001_r009_single_channel.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 17,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   365,
+   869,
+   1525,
+   901
+  ],
+  "how": "ok",
+  "vlm": "00/100-----------------------------Dollars",
+  "ocr": "00/100. -Dollars",
+  "crop": "p001_r017_disputed.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 21,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   367,
+   901,
+   1531,
+   928
+  ],
+  "how": "ok",
+  "vlm": "to a",
+  "ocr": "to.a",
+  "crop": "p001_r021_disputed.png"
+ },
+ {
+  "page": "p001",
+  "run_index": 29,
+  "status": "single_channel",
+  "n_tokens": 1,
+  "box": [
+   262,
+   1437,
+   337,
+   1516
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "8",
+  "crop": "p001_r029_single_channel.png"
+ },
+ {
+  "page": "p002",
+  "run_index": 5,
+  "status": "single_channel",
+  "n_tokens": 3,
+  "box": [
+   1467,
+   356,
+   1537,
+   581
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "REC. 471 PAGE",
+  "crop": "p002_r005_single_channel.png"
+ },
+ {
+  "page": "p002",
+  "run_index": 15,
+  "status": "single_channel",
+  "n_tokens": 1,
+  "box": [
+   1466,
+   608,
+   1525,
+   679
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "2",
+  "crop": "p002_r015_single_channel.png"
+ },
+ {
+  "page": "p002",
+  "run_index": 41,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   633,
+   1748,
+   875,
+   1976
+  ],
+  "how": "ok",
+  "vlm": "c.",
+  "ocr": "M.W. R",
+  "crop": "p002_r041_disputed.png"
+ },
+ {
+  "page": "p003",
+  "run_index": 3,
+  "status": "single_channel",
+  "n_tokens": 3,
+  "box": [
+   1488,
+   355,
+   1552,
+   577
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "REC. 471 PAGE",
+  "crop": "p003_r003_single_channel.png"
+ },
+ {
+  "page": "p003",
+  "run_index": 17,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   516,
+   605,
+   1543,
+   677
+  ],
+  "how": "ok",
+  "vlm": "gagee",
+  "ocr": "24 gegee",
+  "crop": "p003_r017_disputed.png"
+ },
+ {
+  "page": "p003",
+  "run_index": 33,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   514,
+   1071,
+   1376,
+   1112
+  ],
+  "how": "ok",
+  "vlm": "encum-",
+  "ocr": "en-",
+  "crop": "p003_r033_disputed.png"
+ },
+ {
+  "page": "p003",
+  "run_index": 51,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   644,
+   1747,
+   882,
+   1880
+  ],
+  "how": "ok",
+  "vlm": "M. W.",
+  "ocr": "M.W.",
+  "crop": "p003_r051_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 3,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   331,
+   645,
+   1511,
+   700
+  ],
+  "how": "ok",
+  "vlm": "payments",
+  "ocr": "pay- ments",
+  "crop": "p004_r003_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 7,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   374,
+   730,
+   1513,
+   782
+  ],
+  "how": "ok",
+  "vlm": "instrument",
+  "ocr": "in- strument",
+  "crop": "p004_r007_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 9,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   438,
+   810,
+   1512,
+   836
+  ],
+  "how": "ok",
+  "vlm": "(I)",
+  "ocr": "(1)",
+  "crop": "p004_r009_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 21,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   483,
+   978,
+   1514,
+   1025
+  ],
+  "how": "ok",
+  "vlm": "computed",
+  "ocr": "com- puted",
+  "crop": "p004_r021_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 25,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   418,
+   1059,
+   1510,
+   1082
+  ],
+  "how": "ok",
+  "vlm": "on",
+  "ocr": "cn",
+  "crop": "p004_r025_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 27,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   418,
+   1085,
+   1511,
+   1111
+  ],
+  "how": "ok",
+  "vlm": "estimated by",
+  "ocr": "estimated-by",
+  "crop": "p004_r027_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 33,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   425,
+   1376,
+   877,
+   1398
+  ],
+  "how": "ok",
+  "vlm": "(IV)",
+  "ocr": "(1V)",
+  "crop": "p004_r033_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 35,
+  "status": "single_channel",
+  "n_tokens": 1,
+  "box": [
+   374,
+   1376,
+   1516,
+   1600
+  ],
+  "how": "anchored",
+  "vlm": "a",
+  "ocr": null,
+  "crop": "p004_r035_single_channel.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 39,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   331,
+   1571,
+   1515,
+   1626
+  ],
+  "how": "ok",
+  "vlm": "payments",
+  "ocr": "pay- ments",
+  "crop": "p004_r039_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 47,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   330,
+   1769,
+   1512,
+   1821
+  ],
+  "how": "ok",
+  "vlm": "represented",
+  "ocr": "re- presented",
+  "crop": "p004_r047_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 55,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   330,
+   1934,
+   1510,
+   1986
+  ],
+  "how": "ok",
+  "vlm": "remaining",
+  "ocr": "re- maining",
+  "crop": "p004_r055_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 61,
+  "status": "disputed",
+  "n_tokens": 3,
+  "box": [
+   330,
+   1960,
+   1510,
+   2014
+  ],
+  "how": "ok",
+  "vlm": "remaining unpaid",
+  "ocr": "remain- ing unpald",
+  "crop": "p004_r061_disputed.png"
+ },
+ {
+  "page": "p004",
+  "run_index": 91,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   331,
+   2444,
+   1510,
+   2495
+  ],
+  "how": "ok",
+  "vlm": "obtaining",
+  "ocr": "obtain- ing",
+  "crop": "p004_r091_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 4,
+  "status": "disputed",
+  "n_tokens": 3,
+  "box": [
+   911,
+   687,
+   1523,
+   762
+  ],
+  "how": "ok",
+  "vlm": "MICHAEL WINNICKI (L.S.)",
+  "ocr": "Rommualde Wimmedee.s.)",
+  "crop": "p006_r004_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 6,
+  "status": "disputed",
+  "n_tokens": 5,
+  "box": [
+   344,
+   752,
+   1517,
+   921
+  ],
+  "how": "ok",
+  "vlm": "AQUINA HURING",
+  "ocr": "ROMULDA WINNICKI Amm hnecon (L.S.)",
+  "crop": "p006_r006_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 8,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   327,
+   925,
+   588,
+   959
+  ],
+  "how": "ok",
+  "vlm": "OF NEW",
+  "ocr": "ONEW",
+  "crop": "p006_r008_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 10,
+  "status": "single_channel",
+  "n_tokens": 1,
+  "box": [
+   703,
+   964,
+   742,
+   987
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "SS:",
+  "crop": "p006_r010_single_channel.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 22,
+  "status": "single_channel",
+  "n_tokens": 2,
+  "box": [
+   1068,
+   1240,
+   1430,
+   1315
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "Danids. sdihma",
+  "crop": "p006_r022_single_channel.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 24,
+  "status": "disputed",
+  "n_tokens": 4,
+  "box": [
+   1110,
+   1327,
+   1298,
+   1354
+  ],
+  "how": "ok",
+  "vlm": "SIDHINA DAVID S. SIDHINA",
+  "ocr": "SIDEAN",
+  "crop": "p006_r024_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 26,
+  "status": "disputed",
+  "n_tokens": 3,
+  "box": [
+   1061,
+   1346,
+   1339,
+   1377
+  ],
+  "how": "ok",
+  "vlm": "Public, State",
+  "ocr": "Pet F e",
+  "crop": "p006_r026_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 30,
+  "status": "single_channel",
+  "n_tokens": 2,
+  "box": [
+   1061,
+   1346,
+   1339,
+   1419
+  ],
+  "how": "anchored",
+  "vlm": "000-00 to",
+  "ocr": null,
+  "crop": "p006_r030_single_channel.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 32,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   1088,
+   1390,
+   1316,
+   1419
+  ],
+  "how": "ok",
+  "vlm": "Nassau",
+  "ocr": "a au",
+  "crop": "p006_r032_disputed.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 36,
+  "status": "single_channel",
+  "n_tokens": 1,
+  "box": [
+   347,
+   1545,
+   417,
+   2042
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "L0aAN0",
+  "crop": "p006_r036_single_channel.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 38,
+  "status": "single_channel",
+  "n_tokens": 18,
+  "box": [
+   302,
+   1545,
+   1586,
+   2075
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "1N 50 9 t Ro TR SPRT ANMMANY en 05 6rd 17 Morgage II LOC VER. NOTSAO 3",
+  "crop": "p006_r038_single_channel.png"
+ },
+ {
+  "page": "p006",
+  "run_index": 40,
+  "status": "disputed",
+  "n_tokens": 547,
+  "box": [
+   219,
+   1771,
+   1542,
+   2634
+  ],
+  "how": "ok",
+  "vlm": "STATE OF NEW YORK Mortgage LOAN No. 4-19230 MICHAEL WINNICKI and ROMULDA WINNICKI, his wife, SPRINGFIELD EQUITIES LTD. REC. TAX $109 R & R PENINSULA NATIONAL BANK 165 Sheridan Boulevard Inwood, New York AMERICAN TITLE INSURANCE COMPANY GUARANTEED TITLE DIVISION REC. TAX OF $105 JUL-10-67 92394 JUL-10-67 92395 JUL-10-67 92396 JUL-10-67 92397 JUL-10-67 92398 JUL-10-67 92399 JUL-10-67 92400 JUL-10-67 92401 JUL-10-67 92402 JUL-10-67 92403 JUL-10-67 92404 JUL-10-67 92405 JUL-10-67 92406 JUL-10-67 92407 JUL-10-67 92408 JUL-10-67 92409 JUL-10-67 92410 JUL-10-67 92411 JUL-10-67 92412 JUL-10-67 92413 JUL-10-67 92414 JUL-10-67 92415 JUL-10-67 92416 JUL-10-67 92417 JUL-10-67 92418 JUL-10-67 92419 JUL-10-67 92420 JUL-10-67 92421 JUL-10-67 92422 JUL-10-67 92423 JUL-10-67 92424 JUL-10-67 92425 JUL-10-67 92426 JUL-10-67 92427 JUL-10-67 92428 JUL-10-67 92429 JUL-10-67 92430 JUL-10-67 92431 JUL-10-67 92432 JUL-10-67 92433 JUL-10-67 92434 JUL-10-67 92435 JUL-10-67 92436 JUL-10-67 92437 JUL-10-67 92438 JUL-10-67 92439 JUL-10-67 92440 JUL-10-67 92441 JUL-10-67 92442 JUL-10-67 92443 JUL-10-67 92444 JUL-10-67 92445 JUL-10-67 92446 JUL-10-67 92447 JUL-10-67 92448 JUL-10-67 92449 JUL-10-67 92450 JUL-10-67 92451 JUL-10-67 92452 JUL-10-67 92453 JUL-10-67 92454 JUL-10-67 92455 JUL-10-67 92456 JUL-10-67 92457 JUL-10-67 92458 JUL-10-67 92459 JUL-10-67 92460 JUL-10-67 92461 JUL-10-67 92462 JUL-10-67 92463 JUL-10-67 92464 JUL-10-67 92465 JUL-10-67 92466 JUL-10-67 92467 JUL-10-67 92468 JUL-10-67 92469 JUL-10-67 92470 JUL-10-67 92471 JUL-10-67 92472 JUL-10-67 92473 JUL-10-67 92474 JUL-10-67 92475 JUL-10-67 92476 JUL-10-67 92477 JUL-10-67 92478 JUL-10-67 92479 JUL-10-67 92480 JUL-10-67 92481 JUL-10-67 92482 JUL-10-67 92483 JUL-10-67 92484 JUL-10-67 92485 JUL-10-67 92486 JUL-10-67 92487 JUL-10-67 92488 JUL-10-67 92489 JUL-10-67 92490 JUL-10-67 92491 JUL-10-67 92492 JUL-10-67 92493 JUL-10-67 92494 JUL-10-67 92495 JUL-10-67 92496 JUL-10-67 92497 JUL-10-67 92498 JUL-10-67 92499 JUL-10-67 92500 JUL-10-67 92501 JUL-10-67 92502 JUL-10-67 92503 JUL-10-67 92504 JUL-10-67 92505 JUL-10-67 92506 JUL-10-67 92507 JUL-10-67 92508 JUL-10-67 92509 JUL-10-67 92510 JUL-10-67 92511 JUL-10-67 92512 JUL-10-67 92513 JUL-10-67 92514 JUL-10-67 92515 JUL-10-67 92516 JUL-10-67 92517 JUL-10-67 92518 JUL-10-67 92519 JUL-10-67 92520 JUL-10-67 92521 JUL-10-67 92522 JUL-10-67 92523 JUL-10-67 92524 JUL-10-67 92525 JUL-10-67 92526 JUL-10-67 92527 JUL-10-67 92528 JUL-10-67 92529 JUL-10-67 92530 JUL-10-67 92531 JUL-10-67 92532 JUL-10-67 92533 JUL-10-67 92534 JUL-10-67 92535 JUL-10-67 92536 JUL-10-67 92537 JUL-10-67 92538 JUL-10-67 92539 JUL-10-67 92540 JUL-10-67 92541 JUL-10-67 92542 JUL-10-67 92543 JUL-10-67 92544 JUL-10-67 92545 JUL-10-67 92546 JUL-10-67 92547 JUL-10-67 92548 JUL-10-67 92549 JUL-10-67 92550 JUL-10-67 92551 JUL-10-67 92552 JUL-10-67 92553 JUL-10-67 92554 JUL-10-67 92555 JUL-10-67 92556 JUL-10-67 92557 JUL-10-67 92558 JUL-10-67 92559 JUL-10-67 92560 JUL-10-67 92561 JUL-10-67 92562 JUL-10-67 92563 JUL-10-67 92564 JUL-10-67 92565 JUL-10-67 92566 JUL-10-67 92567 JUL-10-67 92568 JUL-10-67 92569 JUL-10-67 92570 JUL-10-67 92571 JUL-10-67 92572 JUL-10-67 92573 JUL-10-67 92574 JUL-10-67 92575 JUL-10-67 92576 JUL-10-67 92577 JUL-10-67 92578 JUL-10-67 92579 JUL-10-67 92580 JUL-10-67 92581 JUL-10-67 92582 JUL-10-67 92583 JUL-10-67 92584 JUL-10-67 92585 JUL-10-67 92586 JUL-10-67 92587 JUL-10-67 92588 JUL-10-67 92589 JUL-10-67 92590 JUL-10-67 92591 JUL-10-67 92592 JUL-10-67 92593 JUL-10-67 92594 JUL-10-67 92595 JUL-10-67 92596 JUL-10-67 92597 JUL-10-67 92598 JUL-10-67 92599 JUL-10-67 92600 JUL-10-67 92601 JUL-10-67 92602 JUL-10-67 92603 JUL-10-67 92604 JUL-10-67 92605 JUL-10-67 92606 JUL-10-67 92607 JUL-10-67 92608 JUL-10-67 92609 JUL-10-67 92610 JUL-10-67 92611 JUL-10-67 92612 JUL-10-67 92613 JUL-10-67 92614 JUL-10-67 92615 JUL-10-67 92616 JUL-10-67 92617 JUL-10-67 92618 JUL-10-67 92619 JUL-10-67 92620 JUL-10-67 92621 JUL-10-67 92622 JUL-10-67 92623 JUL-10-67 92624 JUL-10-67 92625 JUL-10-67 92626 JUL-10-67 92627 JUL-10-67 92628 JUL-10-67 92629 JUL-10-67 92630 JUL-10-67 92631 JUL-10-67 92632 JUL-10-67 92633 JUL-10-67 92634 JUL-10-67 92635 JUL-10-67 92636 JUL-10-67 92637 JUL-10-67 92638 JUL-10-67 92639 JUL-10-67 92640 JUL-10-67 92641 JUL-10-67 92642 JUL-10-67 92643 JUL-10-67 92644 JUL-10-67",
+  "ocr": "Inrk TO S\u3064 RECOMEING TIA 101 2m 67 O Thisi bbb ty \u00e9nsssnaa s to e d 23c. d tor d oa tnand t beebbbbenrurrr. 2e Caucnty \u00e9igsonty ZCDD J10 1692301 106 TLID J0-1079285 2 \u3044a",
+  "crop": "p006_r040_disputed.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 1,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   740,
+   388,
+   975,
+   451
+  ],
+  "how": "ok",
+  "vlm": "471 PAGE",
+  "ocr": "471PAGE",
+  "crop": "p007_r001_disputed.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 3,
+  "status": "disputed",
+  "n_tokens": 3,
+  "box": [
+   936,
+   686,
+   1511,
+   762
+  ],
+  "how": "ok",
+  "vlm": "MICHAEL WINNICKI (L.S.)",
+  "ocr": "Rommualde Wimedres.",
+  "crop": "p007_r003_disputed.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 5,
+  "status": "disputed",
+  "n_tokens": 5,
+  "box": [
+   348,
+   751,
+   1505,
+   910
+  ],
+  "how": "ok",
+  "vlm": "AQUINA HURTING",
+  "ocr": "ROMULDA WINNICKI eusm hnrlconig (L.S.)",
+  "crop": "p007_r005_disputed.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 7,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   321,
+   921,
+   581,
+   957
+  ],
+  "how": "ok",
+  "vlm": "OF NEW",
+  "ocr": "OFNEW",
+  "crop": "p007_r007_disputed.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 9,
+  "status": "single_channel",
+  "n_tokens": 1,
+  "box": [
+   695,
+   963,
+   733,
+   986
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "SS:",
+  "crop": "p007_r009_single_channel.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 13,
+  "status": "single_channel",
+  "n_tokens": 9,
+  "box": [
+   735,
+   1076,
+   1528,
+   1112
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": ", before me personally came MICHAEL WINNICKI and ROMULDA",
+  "crop": "p007_r013_single_channel.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 15,
+  "status": "single_channel",
+  "n_tokens": 8,
+  "box": [
+   320,
+   1110,
+   1503,
+   1171
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "me personally known and known to me to",
+  "crop": "p007_r015_single_channel.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 19,
+  "status": "single_channel",
+  "n_tokens": 3,
+  "box": [
+   322,
+   1166,
+   641,
+   1204
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "acknowledged that they",
+  "crop": "p007_r019_single_channel.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 21,
+  "status": "single_channel",
+  "n_tokens": 2,
+  "box": [
+   1057,
+   1243,
+   1422,
+   1314
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "Danids. Sdchma",
+  "crop": "p007_r021_single_channel.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 23,
+  "status": "disputed",
+  "n_tokens": 7,
+  "box": [
+   1050,
+   1326,
+   1326,
+   1376
+  ],
+  "how": "ok",
+  "vlm": "SIDHUJA DAVID S. SIDHUJA Ratary Clerk, State",
+  "ocr": "SID.AN Notary Pel.",
+  "crop": "p007_r023_disputed.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 25,
+  "status": "disputed",
+  "n_tokens": 1,
+  "box": [
+   1050,
+   1347,
+   1326,
+   1376
+  ],
+  "how": "ok",
+  "vlm": "New",
+  "ocr": "Soo",
+  "crop": "p007_r025_disputed.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 27,
+  "status": "disputed",
+  "n_tokens": 3,
+  "box": [
+   1077,
+   1371,
+   1304,
+   1418
+  ],
+  "how": "ok",
+  "vlm": "No. 4050-150 Qualified",
+  "ocr": "07050 Qunlified",
+  "crop": "p007_r027_disputed.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 29,
+  "status": "disputed",
+  "n_tokens": 2,
+  "box": [
+   1077,
+   1390,
+   1304,
+   1418
+  ],
+  "how": "ok",
+  "vlm": "Nassau",
+  "ocr": "a sau",
+  "crop": "p007_r029_disputed.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 33,
+  "status": "single_channel",
+  "n_tokens": 14,
+  "box": [
+   299,
+   1542,
+   1573,
+   2073
+  ],
+  "how": "ok",
+  "vlm": null,
+  "ocr": "LNNN-- 8 49 TAR SPI ENE ANY en 02 6 SBBrd 17 Mogage NOSAN",
+  "crop": "p007_r033_single_channel.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 35,
+  "status": "disputed",
+  "n_tokens": 24,
+  "box": [
+   221,
+   1770,
+   1407,
+   2635
+  ],
+  "how": "ok",
+  "vlm": "STATE OF NEW YORK Mortgage LOAN NO. 4-19230 MICHAEL WINNICKI",
+  "ocr": "Inork TO S\u3064 RECORENG TA 101 2m 17 O iie ty \u00e9inss to e n n cgn o beeben .n tor d ocea itny",
+  "crop": "p007_r035_disputed.png"
+ },
+ {
+  "page": "p007",
+  "run_index": 37,
+  "status": "disputed",
+  "n_tokens": 26,
+  "box": [
+   238,
+   2247,
+   1530,
+   2484
+  ],
+  "how": "ok",
+  "vlm": "ROMULDA WINNICKI, his wife, SPRINGFIELD EQUITIES LTD. RECORDING TAX $109 R E R Peninsula National Bank 165 Sheridan Boulevard Inwood, New York AMERICAN TITLE INSURANCE COMPANY",
+  "ocr": "\u00e9fgs County J7-10 192301 CD 106 LIO m J0-1077 9235",
+  "crop": "p007_r037_disputed.png"
+ }
+]

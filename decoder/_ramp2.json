@@ -1,0 +1,62 @@
+[
+ {
+  "workers": 1,
+  "n": 32,
+  "ok": 32,
+  "wall_s": 12.78,
+  "req_per_s": 2.5,
+  "mean_lat": 0.399,
+  "p95": 0.524,
+  "errors": 0,
+  "refused": false,
+  "mb": 1.8
+ },
+ {
+  "workers": 4,
+  "n": 32,
+  "ok": 32,
+  "wall_s": 2.97,
+  "req_per_s": 10.79,
+  "mean_lat": 0.352,
+  "p95": 0.451,
+  "errors": 0,
+  "refused": false,
+  "mb": 1.4
+ },
+ {
+  "workers": 8,
+  "n": 32,
+  "ok": 32,
+  "wall_s": 1.69,
+  "req_per_s": 18.89,
+  "mean_lat": 0.375,
+  "p95": 0.534,
+  "errors": 0,
+  "refused": false,
+  "mb": 1.6
+ },
+ {
+  "workers": 12,
+  "n": 32,
+  "ok": 32,
+  "wall_s": 1.49,
+  "req_per_s": 21.41,
+  "mean_lat": 0.349,
+  "p95": 0.426,
+  "errors": 0,
+  "refused": false,
+  "mb": 1.8
+ },
+ {
+  "workers": 16,
+  "n": 32,
+  "ok": 32,
+  "wall_s": 1.17,
+  "req_per_s": 27.45,
+  "mean_lat": 0.383,
+  "p95": 0.464,
+  "errors": 0,
+  "refused": false,
+  "mb": 1.8
+ }
+]

@@ -1,0 +1,237 @@
+"""THE KEYING PASS - the follower process (login runtime design,
+2026-08-20 evening: "two processes simultaneously... the keying will follow
+up the doc id row after the land to determine its key type and key. if it
+cant be keyed it is saved for second pass with pdf url").
+
+Sweeps the one table for rows with recorded_details but no key and writes
+the conclusion per the evidence ladder:
+
+  parcel     details.parcels carry BBL(s)      key = all of them (";"-joined;
+             multi-parcel = the involved lots, login)
+  reference  a referenced doc RESOLVES to a parcel - via this table's own
+             keyed rows or the spec's parcel_document (one hop, v1; hop
+             depth extends only after being measured)
+  pdf-pass   neither - SAVED FOR PHASE 2: the pdf url keys it (document
+             rung / federal-lien residence / terminal party)
+
+--loop makes it a daemon that trails the walker; one sweep otherwise.
+Keys are written ONLY from custodian-asserted evidence - same bulletproof
+stack as the walker (the details landed id-echoed; references are the
+register's own edges).
+"""
+import argparse
+import json
+import pathlib
+import sqlite3
+import sys
+import time
+
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
+import corpus_paths as CP
+
+ap = argparse.ArgumentParser()
+ap.add_argument("--loop", action="store_true",
+                help="run as the follower daemon (sweep, sleep 30s, repeat)")
+ap.add_argument("--limit", type=int, default=0,
+                help="key at most N rows this run (the login's graduated"
+                     " approval: 1 -> 10 -> 50 -> 100 -> free rein)")
+ap.add_argument("--show", action="store_true",
+                help="print each decision with its evidence")
+ap.add_argument("--rescan", action="store_true",
+                help="restart the cursor at the top to collect rows skipped"
+                     " as ref-pending - the deliberate end-of-pull pass, NOT"
+                     " something to run in a 30s loop (it walks all 24M rows)")
+ap.add_argument("--sleep", type=int, default=30,
+                help="seconds between sweeps when looping")
+ap.add_argument("--lo", default="", help="key ids > this")
+ap.add_argument("--hi", default="￿", help="key ids < this")
+ap.add_argument("--src", choices=["acris", "rc", "all"], default="all",
+                help="follow one source's completions (login 2026-08-20:"
+                     " one keyer behind acris, one behind rc)")
+a = ap.parse_args()
+SRC_FILTER = {"acris": " AND id NOT LIKE 'RC_%'",
+              "rc": " AND id LIKE 'RC_%'",
+              "all": ""}[a.src]
+
+con = sqlite3.connect(f"file:{CP.NAV_DB}", uri=True, timeout=600)
+# 5 min: a store migration's single commit measured LONGER than 60s and
+# killed the rc keyer mid-sweep (2026-08-20) - the follower must outwait
+# any one writer's transaction, never die to it
+con.execute("PRAGMA busy_timeout=300000")
+# second connection, read-only - the proven pattern every script here uses
+# (ATTACH chokes on this path's spaces/colon across encodings; two
+# connections do the same job with zero URI ceremony)
+spec = sqlite3.connect(f"file:{CP.SPEC_DB}?mode=ro", uri=True, timeout=120)
+
+
+def ref_bbls(ref):
+    """one hop: the referenced doc's parcels, from our own table first,
+    then the spec's register capture"""
+    row = con.execute("SELECT keyed_by, key FROM navigation WHERE id=?",
+                      (ref,)).fetchone()
+    if row and row[0] == "parcel" and row[1]:
+        return row[1].split(";")
+    rows = spec.execute("SELECT DISTINCT bbl FROM parcel_document"
+                        " WHERE document_id=? AND TRIM(COALESCE(bbl,''))!=''",
+                        (ref,)).fetchall()
+    return [r[0] for r in rows]
+
+
+# ⚠ ONE CURSOR PER ID RANGE, MATCHING THE WALKERS. A single shared cursor
+# was WRONG: there are TWO rd lanes (digital from '0', film from 'A'), and
+# the one cursor raced to the end of the film range (FT_1000004272600) and
+# left every row the DIGITAL lane landed stranded behind it - the keyer
+# posted +0 for four straight ticks while rd kept landing rows. A cursor may
+# only ride a frontier it is the sole follower of.
+CURSOR_F = CP.NAV_WORK / f"nav_key_{a.src}_{a.lo or 'start'}.cursor"
+
+
+def load_cursor():
+    try:
+        return CURSOR_F.read_text(encoding="utf-8").strip()
+    except Exception:
+        return ""
+
+
+def sweep():
+    # ⚠ THE CURSOR PERSISTS ACROSS SWEEPS. It used to reset to '' every pass,
+    # and because neither recorded_details nor keyed_by is indexed, each pass
+    # WALKED ALL 24M ROWS just to prove there was no more work - then slept
+    # 30s and did it again. Two keyers doing that pinned the USB drive at
+    # 3.3% idle and starved every pull lane (measured 2026-08-21: stopping
+    # them took D: to 92.7% idle and rd from 2.6 to 12.9+ docs/s).
+    # rd lands top-to-bottom in id order, so the keyer just follows the
+    # frontier; new rows always arrive BEYOND the cursor.
+    # ⚠ Rows skipped as ref-pending are left behind by this. That is correct
+    # for now: an unresolved reference is a CRFN whose document has not been
+    # pulled yet, so it cannot resolve until the pull completes anyway
+    # (nav_key's own standing note). --rescan restarts from '' to collect
+    # them, and that is a deliberate end-of-pull pass, not a 30s loop.
+    sweep.cursor = a.lo if a.rescan else (load_cursor() or a.lo)
+    n = {"parcel": 0, "reference": 0, "pdf-pass": 0}
+    while True:
+        room = (a.limit - sum(n.values())) if a.limit else 5000
+        if room <= 0:
+            break
+        # MAX SPEED (login settled 2026-08-20 after weighing the strict
+        # rd->pdf->key relay): the bbl evidence is ENTIRELY in the rd, so
+        # keys fire on rd completion and never wait out the pdf campaign.
+        # The rows that truly need a pdf (no parcels, no refs) wait anyway
+        # - the keyer marks them pdf-pass and phase 2 owns them.
+        batch = con.execute(
+            "SELECT id, recorded_details FROM navigation"
+            " WHERE recorded_details != '' AND (keyed_by IS NULL OR keyed_by='')"
+            " AND id > ? AND id < ?" + SRC_FILTER + " ORDER BY ID LIMIT ?",
+            (sweep.cursor, a.hi, min(room, 5000))).fetchall()
+        if not batch:
+            # ⚠ WRAP, DO NOT PARK. Reaching the end means "nothing left ahead
+            # of me", NOT "nothing left". There are two rd lanes filling two
+            # id ranges (digital from '0', film from 'A'), so a cursor that
+            # stops at the far end strands every row the OTHER lane lands
+            # behind it - measured 2026-08-21: the keyer parked at
+            # FT_1000004272600 and posted +0 for four straight ticks while rd
+            # kept landing rows. Wrapping costs one index walk per sweep when
+            # caught up, which is why --sleep must stay generous.
+            sweep.cursor = a.lo
+            break
+        sweep.cursor = batch[-1][0]   # advance past skipped (ref-pending) rows
+        for did, det in batch:
+            try:
+                d = json.loads(det)
+            except ValueError:
+                continue
+            pcls = d.get("parcels") or []
+            bbls = []
+            for p in pcls:
+                b = p.get("bbl") if isinstance(p, dict) else p
+                if b:
+                    bbls.append(str(b))
+            if bbls:
+                kb, key = "parcel", ";".join(dict.fromkeys(bbls))
+            else:
+                inherited = []
+                for ref in (d.get("references") or []):
+                    # structured refs (rd_parse: {doc_id/crfn/file_nbr...})
+                    # and legacy string refs both resolve on their doc id;
+                    # crfn-only refs wait for the map that completes with
+                    # the pull (login: "reference converges at the end")
+                    target = (ref.get("doc_id") if isinstance(ref, dict)
+                              else ref if isinstance(ref, str) else None)
+                    if target and (target[:1].isdigit()
+                                   or target[:3] in ("FT_", "BK_")):
+                        inherited += ref_bbls(target)
+                if inherited:
+                    kb, key = "reference", ";".join(dict.fromkeys(inherited))
+                elif d.get("references"):
+                    # refs exist but don't resolve YET (a CRFN whose doc
+                    # lands later; the map completes when the pull does -
+                    # login 2026-08-20). Leave unkeyed; a later sweep
+                    # retries. NEVER a premature pdf-pass verdict.
+                    continue
+                else:
+                    # NO parcels, NO references - genuinely rd-unkeyable:
+                    # saved for the second pass, the pdf url keys it
+                    kb, key = "pdf-pass", ""
+            # ⚠ NEVER DIE ON A LOCK (measured twice: an index build and a
+            # bulk UPDATE each held an exclusive txn long enough to kill the
+            # keyer mid-sweep). Retry, then skip the row - a later sweep
+            # re-finds it, because the table is the work list.
+            for _try in range(120):
+                try:
+                    con.execute("UPDATE navigation SET keyed_by=?, key=?"
+                                " WHERE id=?", (kb, key, did))
+                    break
+                except sqlite3.OperationalError:
+                    time.sleep(5)
+            else:
+                continue
+            n[kb] += 1
+            if a.show:
+                ev = (f"parcels panel -> {key}" if kb == "parcel" else
+                      f"references {d.get('references')} -> {key}"
+                      if kb == "reference" else
+                      f"no parcels, refs={d.get('references', [])!r},"
+                      f" slid={d.get('slid', '-')} -> saved for pdf pass")
+                print(f"  {did}  {d.get('type', '?'):<10} {kb:<9} {ev}",
+                      flush=True)
+        for _try in range(120):      # same guard on the batch commit
+            try:
+                con.commit()
+                break
+            except sqlite3.OperationalError:
+                time.sleep(5)
+        # persist AFTER the commit, never before: a cursor ahead of the
+        # committed keys would silently skip rows on the next start
+        try:
+            CURSOR_F.write_text(sweep.cursor, encoding="utf-8")
+        except Exception:
+            pass
+    # persist AFTER the loop as well, so a WRAP is saved. Without this a
+    # restart resumes at the old far-end cursor and strands rows again.
+    try:
+        CURSOR_F.write_text(sweep.cursor, encoding="utf-8")
+    except Exception:
+        pass
+    return n
+
+
+while True:
+    t0 = time.time()
+    n = sweep()
+    total = sum(n.values())
+    if total:
+        msg = (f"keyed {total:,} in {time.time()-t0:.1f}s · "
+               f"parcel {n['parcel']:,} · reference {n['reference']:,} · "
+               f"pdf-pass {n['pdf-pass']:,}")
+        print(msg, flush=True)
+        # THE BOARD FEED (login 2026-08-22: organization must show live,
+        # per source, like every other phase). One log per --src so the
+        # board can carry an acris row and a richmond row separately;
+        # routine_update glob-sums "keyed N" newer than the baseline.
+        with (CP.NAV_WORK / f"nav_key_{a.src}.log").open(
+                "a", encoding="utf-8") as fh:
+            fh.write(msg + "\n")
+    if not a.loop:
+        break
+    time.sleep(a.sleep)

@@ -1,0 +1,3149 @@
+{
+ "events": [
+  {
+   "event_id": "2003010601086002-e1",
+   "source": "acris",
+   "source_ref": "2003010601086002",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+   "instrument_title": "ZONING LOTANDDEVELOPMENTAGREEMENT",
+   "exhibits": [
+    "EXHIBIT A",
+    "EXHIBIT B",
+    "EXHIBIT C",
+    "EXHIBIT D",
+    "EXHIBIT E"
+   ],
+   "executed_date": "12-18-2002",
+   "recorded_date": "05-16-2003",
+   "crfn": "2003000132479",
+   "functions": [
+    "envelope",
+    "encumbrance",
+    "identity"
+   ],
+   "participants": [
+    {
+     "party": "AUTOMOBILE CLUB OF NEW YORK, INC. (''ACNY'')",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "54 C.F. OPERATING CORPORATION (''54 CF'')",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1064 lot 22",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "417 WEST 54 STREET",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 1,
+   "quantities": [
+    {
+     "kind": "area",
+     "value_num": 30244.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p013",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      1560,
+      1578
+     ],
+     "quote": "30,244 square feet"
+    },
+    {
+     "kind": "area",
+     "value_num": 18032.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p013",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      1758,
+      1776
+     ],
+     "quote": "18,032 square feet"
+    },
+    {
+     "kind": "area",
+     "value_num": 9016.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p013",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      1875,
+      1892
+     ],
+     "quote": "9,016 square feet"
+    },
+    {
+     "kind": "area",
+     "value_num": 7561.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_exhibit",
+     "page": "p037",
+     "region": "exhibit",
+     "exhibit": "EXHIBIT E",
+     "span": [
+      664,
+      673
+     ],
+     "quote": "7,561 s.f"
+    },
+    {
+     "kind": "area",
+     "value_num": 143080.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_exhibit",
+     "page": "p037",
+     "region": "exhibit",
+     "exhibit": "EXHIBIT E",
+     "span": [
+      389,
+      407
+     ],
+     "quote": "Floor Area 143,080"
+    },
+    {
+     "kind": "consideration",
+     "value_num": 1565500.0,
+     "unit": "USD",
+     "presence": "present",
+     "established_by": "derived_from_rett",
+     "confidence": "derived",
+     "derivation": "RETT 6262.0 / 0.004",
+     "bound": "upper",
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 6,
+   "unbound_quantities": 9,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 2
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": true,
+   "refused_because": [],
+   "conservable": false,
+   "open_questions": [
+    "only one side present (receiver) \u2014 counterparty parcel not identified",
+    "consideration is an UPPER BOUND (RETT rounds up to $500)"
+   ]
+  },
+  {
+   "event_id": "2003013001838001-e1",
+   "source": "acris",
+   "source_ref": "2003013001838001",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OFDEVELOPMENTRIGHTS",
+   "instrument_title": "ZONINGLOTANDDEVELOPMENTAGREEMENT ANDDECLARATIONOFRESTRICTIONS AGREEMENT",
+   "exhibits": [],
+   "executed_date": "12-12-2002",
+   "recorded_date": "06-11-2003",
+   "crfn": "2003000164836",
+   "functions": [
+    "envelope",
+    "encumbrance",
+    "identity"
+   ],
+   "participants": [
+    {
+     "party": "691 EIGHTH AVENUE CORPORATION",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "306 WEST 44 LLC",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1034 lot 33",
+     "role": "sender",
+     "sign": -1,
+     "status": "resolved",
+     "address": "691 8 AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "address",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1034 lot 37",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "306 WEST 44 STREET",
+     "established_by": "legals_index",
+     "side_established_by": "address",
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": 816500.0,
+     "unit": "USD",
+     "presence": "present",
+     "established_by": "derived_from_rett",
+     "confidence": "derived",
+     "derivation": "RETT 3266.0 / 0.004",
+     "bound": "upper",
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 7,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 2
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": true,
+   "refused_because": [],
+   "conservable": true,
+   "open_questions": [
+    "consideration is an UPPER BOUND (RETT rounds up to $500)"
+   ]
+  },
+  {
+   "event_id": "2003021302514009-e1",
+   "source": "acris",
+   "source_ref": "2003021302514009",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+   "instrument_title": "ZONINGLOTDEVELOPMENTANDEASEMENTAGREEMENT AGREEMENT",
+   "exhibits": [
+    "EXHIBIT A",
+    "EXHIBIT B",
+    "EXHIBIT C",
+    "EXHIBIT D",
+    "EXHIBIT E"
+   ],
+   "executed_date": "02-13-2003",
+   "recorded_date": "04-04-2003",
+   "crfn": null,
+   "functions": [
+    "envelope",
+    "encumbrance"
+   ],
+   "participants": [
+    {
+     "party": "31 COOPER INC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "29-31 COOPER SQUARE ASSOCIATES LLC",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 461 lot 3",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "29 COOPER SQUARE",
+     "established_by": "legals_index",
+     "side_established_by": "address",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 461 lot 4",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "31 COOPER SQUARE",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 461 lot 2",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "27 COOPER SQUARE",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "area",
+     "value_num": 8248.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p009",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      26,
+      40
+     ],
+     "quote": "8248squarefeet"
+    },
+    {
+     "kind": "area",
+     "value_num": 6152.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p009",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      1062,
+      1078
+     ],
+     "quote": "6152 square feet"
+    },
+    {
+     "kind": "area",
+     "value_num": 30000.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p038",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      363,
+      381
+     ],
+     "quote": "30,000 square feet"
+    },
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 4,
+   "unbound_quantities": 10,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 2
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": true,
+   "refused_because": [],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (1/3 sided) \u2014 conservation cannot run"
+   ]
+  },
+  {
+   "event_id": "2003021400219004-e1",
+   "source": "acris",
+   "source_ref": "2003021400219004",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+   "instrument_title": "ZONINGLOTANDDEVELOPMENTAGREEMENT AGREEMENT",
+   "exhibits": [
+    "EXHIBIT A",
+    "EXHIBIT B",
+    "EXHIBIT C",
+    "EXHIBIT D",
+    "EXHIBIT E",
+    "SCHEDULE A",
+    "SCHEDULE B"
+   ],
+   "executed_date": "12-18-2002",
+   "recorded_date": "06-02-2003",
+   "crfn": "2003000150279",
+   "functions": [
+    "envelope",
+    "encumbrance",
+    "identity"
+   ],
+   "participants": [
+    {
+     "party": "FIFTH AT 42ND LLC",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "509 OWNERS LLC",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1277 lot 4",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "507 5 AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1277 lot 2",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "505 5 AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1277 lot 72",
+     "role": "sender",
+     "sign": -1,
+     "status": "resolved",
+     "address": "509 5 AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1277 lot 1",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "503 5 AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "area",
+     "value_num": 21240.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p004",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      455,
+      473
+     ],
+     "quote": "21,240 square feet"
+    },
+    {
+     "kind": "consideration",
+     "value_num": 2655000.0,
+     "unit": "USD",
+     "presence": "present",
+     "established_by": "derived_from_rett",
+     "confidence": "derived",
+     "derivation": "RETT 10620.0 / 0.004",
+     "bound": "upper",
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 2,
+   "unbound_quantities": 10,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 2
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": true,
+   "refused_because": [],
+   "conservable": true,
+   "open_questions": [
+    "consideration is an UPPER BOUND (RETT rounds up to $500)"
+   ]
+  },
+  {
+   "event_id": "2003022602133001-e1",
+   "source": "acris",
+   "source_ref": "2003022602133001",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DECOFDEVELOPMENTRIGHTS",
+   "instrument_title": "ZONINGLOTDEVELOPMENTAGREEMENT THIS ZONING LOT DEVELOPMENT AGREEMENT",
+   "exhibits": [
+    "EXHIBIT B",
+    "EXHIBIT E"
+   ],
+   "executed_date": "12-23-2002",
+   "recorded_date": "09-30-2003",
+   "crfn": "2003000401747",
+   "functions": [
+    "envelope",
+    "encumbrance",
+    "identity"
+   ],
+   "participants": [
+    {
+     "party": "42/9 RESIDENTIAL LLC",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "42/43 REALTY LLC",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "CLINTON 42ND STREET LLC",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1033 lot 101",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "361 WEST 42 STREET",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1033 lot 1",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "360 WEST 43 STREET",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1033 lot 109",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "350 WEST 43 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1033 lot 161",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "598 9 AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1033 lot 63",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "594 9 AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1033 lot 64",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "592 9 AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1033 lot 61",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "600 9 AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1033 lot 162",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "596 9 AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1033 lot 2",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "584 9 AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "area",
+     "value_num": 1090.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p006",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      1674,
+      1690
+     ],
+     "quote": "1090 square feet"
+    },
+    {
+     "kind": "consideration",
+     "value_num": 111000.0,
+     "unit": "USD",
+     "presence": "present",
+     "established_by": "derived_from_rett",
+     "confidence": "derived",
+     "derivation": "RETT 444.0 / 0.004",
+     "bound": "upper",
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 2,
+   "unbound_quantities": 14,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 3
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": true,
+   "refused_because": [],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (4/9 sided) \u2014 conservation cannot run",
+    "consideration is an UPPER BOUND (RETT rounds up to $500)"
+   ]
+  },
+  {
+   "event_id": "2003041400735009-e1",
+   "source": "acris",
+   "source_ref": "2003041400735009",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DECOFDEVELOPMENTRIGHTS",
+   "instrument_title": "ZONINGLOTDEVELOPMENTAGREEMENT THIS ZONING LOT DEVELOPMENT AGREEMENT",
+   "exhibits": [
+    "EXHIBIT D",
+    "EXHIBIT S"
+   ],
+   "executed_date": "04-09-2003",
+   "recorded_date": "06-11-2003",
+   "crfn": "2003000164365",
+   "functions": [
+    "envelope",
+    "encumbrance",
+    "identity"
+   ],
+   "participants": [
+    {
+     "party": "TWIN TOWER EQUITIES, LLC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "PARK PLACE PARTNERS, LLC.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "3 block 939 lot 39",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "300 FLATBUSH AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "3 block 939 lot 42",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "302 FLATBUSH AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "3 block 939 lot 35",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "288 FLATBUSH AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "3 block 939 lot 40",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "300B FLATBUSH AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "3 block 939 lot 41",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "300C FLATBUSH AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "area",
+     "value_num": 20600.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p004",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      1103,
+      1121
+     ],
+     "quote": "20,600 square feet"
+    },
+    {
+     "kind": "consideration",
+     "value_num": 750000.0,
+     "unit": "USD",
+     "presence": "present",
+     "established_by": "derived_from_rett",
+     "confidence": "derived",
+     "derivation": "RETT 3000.0 / 0.004",
+     "bound": "upper",
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 2,
+   "unbound_quantities": 6,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 2
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": true,
+   "refused_because": [],
+   "conservable": false,
+   "open_questions": [
+    "only one side present (receiver) \u2014 counterparty parcel not identified",
+    "consideration is an UPPER BOUND (RETT rounds up to $500)"
+   ]
+  },
+  {
+   "event_id": "2003052001090003-e1",
+   "source": "acris",
+   "source_ref": "2003052001090003",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+   "instrument_title": "ZONINGLOT DEVELOPMENTAGREEMENT",
+   "exhibits": [
+    "SCHEDULE BTO"
+   ],
+   "executed_date": "05-15-2003",
+   "recorded_date": "06-18-2003",
+   "crfn": "2003000176443",
+   "functions": [
+    "envelope",
+    "encumbrance",
+    "identity"
+   ],
+   "participants": [
+    {
+     "party": "VESTA 24 LLC",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "DARLING, GARY",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index",
+     "located": false
+    },
+    {
+     "party": "DARLING, JANE",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index",
+     "located": false
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 695 lot 37",
+     "role": "sender",
+     "sign": -1,
+     "status": "resolved",
+     "address": "229 10 AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 695 lot 39",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "231 10 AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "area",
+     "value_num": 8400.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p004",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      785,
+      802
+     ],
+     "quote": "8,400 square feet"
+    },
+    {
+     "kind": "area",
+     "value_num": 10167.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p004",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      1807,
+      1825
+     ],
+     "quote": "10,167 square feet"
+    },
+    {
+     "kind": "consideration",
+     "value_num": 504000.0,
+     "unit": "USD",
+     "presence": "present",
+     "established_by": "derived_from_rett",
+     "confidence": "derived",
+     "derivation": "RETT 2016.0 / 0.004",
+     "bound": "upper",
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 3,
+   "unbound_quantities": 8,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 3
+   },
+   "unlocated_parties": 2,
+   "role_inversion": null,
+   "established": true,
+   "refused_because": [],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (1/2 sided) \u2014 conservation cannot run",
+    "consideration is an UPPER BOUND (RETT rounds up to $500)"
+   ]
+  },
+  {
+   "event_id": "2003052701726001-e1",
+   "source": "acris",
+   "source_ref": "2003052701726001",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+   "instrument_title": "ZONINGLOTDEVELOPMENTAGREEMENT",
+   "exhibits": [
+    "EXHIBIT A",
+    "EXHIBIT B",
+    "EXHIBIT C"
+   ],
+   "executed_date": "05-09-2003",
+   "recorded_date": "06-23-2003",
+   "crfn": null,
+   "functions": [
+    "envelope",
+    "encumbrance",
+    "identity"
+   ],
+   "participants": [
+    {
+     "party": "FIFTH CHURCH OF CHRIST, SCIENTIST",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "340 MADISON OWNER LLC",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1278 lot 14",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "334 MADISON AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1278 lot 15",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "336 MADISON AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1278 lot 17",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "340 MADISON AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "address+ownership",
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "area",
+     "value_num": 516.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p014",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      658,
+      673
+     ],
+     "quote": "516 square feet"
+    },
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 2,
+   "unbound_quantities": 10,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 2
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": true,
+   "refused_because": [],
+   "conservable": false,
+   "open_questions": [
+    "only one side present (receiver) \u2014 counterparty parcel not identified"
+   ]
+  },
+  {
+   "event_id": "2003060400703001-e1",
+   "source": "acris",
+   "source_ref": "2003060400703001",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DECOFDEVELOPMENTRIGHTS",
+   "instrument_title": "ZONINGLOTANDDEVELOPMENTAGREEMENT AGREEMENT",
+   "exhibits": [
+    "EXHIBIT A",
+    "EXHIBIT B"
+   ],
+   "executed_date": "05-09-2003",
+   "recorded_date": "06-30-2003",
+   "crfn": "2003000202399",
+   "functions": [
+    "envelope",
+    "encumbrance",
+    "identity"
+   ],
+   "participants": [
+    {
+     "party": "340 MADISON OWNER LLC",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "BERKELEY REALTY COMPANY, L.L.C.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1278 lot 14",
+     "role": "sender",
+     "sign": -1,
+     "status": "resolved",
+     "address": "334 MADISON AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1278 lot 8",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "3 EAST 43 STREET",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1278 lot 15",
+     "role": "sender",
+     "sign": -1,
+     "status": "resolved",
+     "address": "336 MADISON AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1278 lot 17",
+     "role": "sender",
+     "sign": -1,
+     "status": "resolved",
+     "address": "340 MADISON AVENUE",
+     "established_by": "legals_index",
+     "side_established_by": "address+ownership",
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "area",
+     "value_num": 29128.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p004",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      80,
+      98
+     ],
+     "quote": "29,128 square feet"
+    },
+    {
+     "kind": "consideration",
+     "value_num": 1835500.0,
+     "unit": "USD",
+     "presence": "present",
+     "established_by": "derived_from_rett",
+     "confidence": "derived",
+     "derivation": "RETT 7342.0 / 0.004",
+     "bound": "upper",
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 2,
+   "unbound_quantities": 7,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 2
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": true,
+   "refused_because": [],
+   "conservable": true,
+   "open_questions": [
+    "consideration is an UPPER BOUND (RETT rounds up to $500)"
+   ]
+  },
+  {
+   "event_id": "2003061201945006-e1",
+   "source": "acris",
+   "source_ref": "2003061201945006",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OFDEVELOPMENTRIGHTS",
+   "instrument_title": "ZONINGLOTDEVELOPMENTANDEASEMENTAGREEMENT THISZONINGLOTDEVELOPMENTANDEASEMENTAGREEMENT",
+   "exhibits": [
+    "EXHIBIT A",
+    "EXHIBIT B"
+   ],
+   "executed_date": "06-04-2003",
+   "recorded_date": "07-02-2003",
+   "crfn": null,
+   "functions": [
+    "envelope",
+    "encumbrance",
+    "identity"
+   ],
+   "participants": [
+    {
+     "party": "BML REALTY CORP.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "THE TRUSTEES OF COLUMBIA UNIVERSITY",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1875 lot 41",
+     "role": "sender",
+     "sign": -1,
+     "status": "resolved",
+     "address": "218 WEST 104TH ST.",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1875 lot 40",
+     "role": "sender",
+     "sign": -1,
+     "status": "resolved",
+     "address": "216 WEST 104TH ST.",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1875 lot 18",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "213-223 WEST 103RD ST.",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "area",
+     "value_num": 9937.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p004",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      2594,
+      2611
+     ],
+     "quote": "9,937 square feet"
+    },
+    {
+     "kind": "area",
+     "value_num": 15095.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p004",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      2779,
+      2797
+     ],
+     "quote": "15,095 square feet"
+    },
+    {
+     "kind": "consideration",
+     "value_num": 477500.0,
+     "unit": "USD",
+     "presence": "present",
+     "established_by": "derived_from_rett",
+     "confidence": "derived",
+     "derivation": "RETT 1910.0 / 0.004",
+     "bound": "upper",
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 3,
+   "unbound_quantities": 3,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 2
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": true,
+   "refused_because": [],
+   "conservable": true,
+   "open_questions": [
+    "consideration is an UPPER BOUND (RETT rounds up to $500)"
+   ]
+  },
+  {
+   "event_id": "2003061800429003-e1",
+   "source": "acris",
+   "source_ref": "2003061800429003",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DECOFDEVELOPMENTRIGHTS",
+   "instrument_title": "ZONINGLOTDEVELOPMENTANDEASEMENTAGREEMENT",
+   "exhibits": [
+    "EXHIBIT A",
+    "EXHIBIT B"
+   ],
+   "executed_date": "06-05-2003",
+   "recorded_date": "07-02-2003",
+   "crfn": "2003000207759",
+   "functions": [
+    "envelope",
+    "encumbrance",
+    "identity"
+   ],
+   "participants": [
+    {
+     "party": "KIWI REALTY LLC",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "THE TRUSTEES OF COLUMBIA UNIVERSITY",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1875 lot 42",
+     "role": "sender",
+     "sign": -1,
+     "status": "resolved",
+     "address": "220-222 WEST 104TH STREET",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1875 lot 18",
+     "role": "receiver",
+     "sign": 1,
+     "status": "resolved",
+     "address": "213-223 WEST 103RD STREET",
+     "established_by": "legals_index",
+     "side_established_by": "ownership",
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "area",
+     "value_num": 5810.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p004",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      1332,
+      1349
+     ],
+     "quote": "5,810 square feet"
+    },
+    {
+     "kind": "area",
+     "value_num": 2348.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p004",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      1410,
+      1427
+     ],
+     "quote": "2,348 square feet"
+    },
+    {
+     "kind": "area",
+     "value_num": 6688.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p004",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      1734,
+      1751
+     ],
+     "quote": "6,688 square feet"
+    },
+    {
+     "kind": "consideration",
+     "value_num": 535000.0,
+     "unit": "USD",
+     "presence": "present",
+     "established_by": "derived_from_rett",
+     "confidence": "derived",
+     "derivation": "RETT 2140.0 / 0.004",
+     "bound": "upper",
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 4,
+   "unbound_quantities": 6,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 2
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": true,
+   "refused_because": [],
+   "conservable": true,
+   "open_questions": [
+    "consideration is an UPPER BOUND (RETT rounds up to $500)"
+   ]
+  },
+  {
+   "event_id": "2003062701790001-e1",
+   "source": "acris",
+   "source_ref": "2003062701790001",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+   "instrument_title": "ZONING LOT AND DEVELOPMENT AGREEMENT",
+   "exhibits": [
+    "EXHIBIT A",
+    "EXHIBIT B",
+    "EXHIBIT C"
+   ],
+   "executed_date": "06-27-2003",
+   "recorded_date": "08-01-2003",
+   "crfn": "2003000273949",
+   "functions": [
+    "envelope",
+    "identity"
+   ],
+   "participants": [
+    {
+     "party": "THECITY OF NEW YORK, ACTING BY AND THROUGH ITS",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "CVP I, LLC",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 427 lot 14",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "271 BOWERY",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 427 lot 30",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "N/A EAST HOUSTON STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "area",
+     "value_num": 6282.0,
+     "unit": "SF",
+     "presence": "present",
+     "established_by": "text_body",
+     "page": "p004",
+     "region": "body",
+     "exhibit": null,
+     "span": [
+      1645,
+      1684
+     ],
+     "quote": "Development Rights of approximately6282"
+    },
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 2,
+   "unbound_quantities": 11,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 2
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": true,
+   "refused_because": [],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (0/2 sided) \u2014 conservation cannot run"
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "event_id": "2003030700273001-e1",
+   "source": "acris",
+   "source_ref": "2003030700273001",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OFDEVELOPMENT RIGHTS",
+   "instrument_title": null,
+   "exhibits": [
+    "SCHEDULE A",
+    "SCHEDULE B",
+    "SCHEDULE C"
+   ],
+   "executed_date": "02-20-2002",
+   "recorded_date": "04-10-2003",
+   "crfn": null,
+   "functions": [
+    "envelope",
+    "encumbrance",
+    "identity"
+   ],
+   "participants": [
+    {
+     "party": "1000 SECOND AVENUE LLC",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "308 EAST 53 LLC",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1345 lot 48",
+     "role": "sender",
+     "sign": -1,
+     "status": "resolved",
+     "address": "308 EAST 53 STREET",
+     "established_by": "legals_index",
+     "side_established_by": "address+ownership",
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 1,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 7,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 2
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": false,
+   "refused_because": [
+    "no quantity"
+   ],
+   "conservable": false,
+   "open_questions": [
+    "only one side present (sender) \u2014 counterparty parcel not identified"
+   ]
+  },
+  {
+   "event_id": "2003070100714001-e1",
+   "source": "acris",
+   "source_ref": "2003070100714001",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OFDEVELOPMENTRIGHTS",
+   "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+   "exhibits": [
+    "SCHEDULE A"
+   ],
+   "executed_date": "07-15-2002",
+   "recorded_date": "07-14-2003",
+   "crfn": "2003000228301",
+   "functions": [
+    "envelope"
+   ],
+   "participants": [
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1927 lot 8",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "263 WEST 121 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1927 lot 7",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "265 WEST 121 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 6,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 4
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": false,
+   "refused_because": [
+    "no quantity",
+    "mis-filed \u2014 instrument is a PARTY WALL DECLARATION OF RESTRICTIONS"
+   ],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (0/2 sided) \u2014 conservation cannot run"
+   ]
+  },
+  {
+   "event_id": "2003070100714002-e1",
+   "source": "acris",
+   "source_ref": "2003070100714002",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DECOFDEVELOPMENTRIGHTS",
+   "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+   "exhibits": [
+    "SCHEDULE A"
+   ],
+   "executed_date": "07-15-2002",
+   "recorded_date": "07-14-2003",
+   "crfn": null,
+   "functions": [],
+   "participants": [
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1928 lot 7",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "269 WEST 122 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1928 lot 107",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "267 WEST 122 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 8,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 4
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": false,
+   "refused_because": [
+    "no function changed",
+    "no quantity",
+    "mis-filed \u2014 instrument is a PARTY WALL DECLARATION OF RESTRICTIONS"
+   ],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (0/2 sided) \u2014 conservation cannot run"
+   ]
+  },
+  {
+   "event_id": "2003070100714003-e1",
+   "source": "acris",
+   "source_ref": "2003070100714003",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OFDEVELOPMENT RIGHTS",
+   "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+   "exhibits": [
+    "SCHEDULE A"
+   ],
+   "executed_date": "07-15-2002",
+   "recorded_date": "07-14-2003",
+   "crfn": "2003000228303",
+   "functions": [
+    "envelope"
+   ],
+   "participants": [
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1928 lot 21",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "227 WEST 122 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1928 lot 120",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "N/A WEST 122 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1928 lot 20",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "231 WEST 122 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 6,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 4
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": false,
+   "refused_because": [
+    "no quantity",
+    "mis-filed \u2014 instrument is a PARTY WALL DECLARATION OF RESTRICTIONS"
+   ],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (0/3 sided) \u2014 conservation cannot run"
+   ]
+  },
+  {
+   "event_id": "2003070100714004-e1",
+   "source": "acris",
+   "source_ref": "2003070100714004",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DECOFDEVELOPMENTRIGHTS",
+   "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+   "exhibits": [
+    "SCHEDULE A"
+   ],
+   "executed_date": "07-15-2002",
+   "recorded_date": "07-14-2003",
+   "crfn": "2003000228304",
+   "functions": [],
+   "participants": [
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1928 lot 45",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "226 WEST 123 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1928 lot 46",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "228 WEST 123 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 6,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 4
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": false,
+   "refused_because": [
+    "no function changed",
+    "no quantity",
+    "mis-filed \u2014 instrument is a PARTY WALL DECLARATION OF RESTRICTIONS"
+   ],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (0/2 sided) \u2014 conservation cannot run"
+   ]
+  },
+  {
+   "event_id": "2003070100714005-e1",
+   "source": "acris",
+   "source_ref": "2003070100714005",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+   "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+   "exhibits": [
+    "SCHEDULE A"
+   ],
+   "executed_date": "07-15-2002",
+   "recorded_date": "07-14-2003",
+   "crfn": "2003000228305",
+   "functions": [
+    "envelope"
+   ],
+   "participants": [
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1928 lot 18",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "237 WEST 122 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1911 lot 19",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "129 WEST 126TH ST",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1911 lot 18",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "133 WEST 126 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1911 lot 118",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "131 WEST 126 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 7,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 4
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": false,
+   "refused_because": [
+    "no quantity",
+    "mis-filed \u2014 instrument is a PARTY WALL DECLARATION OF RESTRICTIONS"
+   ],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (0/4 sided) \u2014 conservation cannot run"
+   ]
+  },
+  {
+   "event_id": "2003070100714006-e1",
+   "source": "acris",
+   "source_ref": "2003070100714006",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+   "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+   "exhibits": [
+    "SCHEDULE A"
+   ],
+   "executed_date": "07-15-2002",
+   "recorded_date": "07-14-2003",
+   "crfn": "2003000228306",
+   "functions": [
+    "envelope"
+   ],
+   "participants": [
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1911 lot 23",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "117 WEST 126 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1911 lot 122",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "119 WEST 126 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 6,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 4
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": false,
+   "refused_because": [
+    "no quantity",
+    "mis-filed \u2014 instrument is a PARTY WALL DECLARATION OF RESTRICTIONS"
+   ],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (0/2 sided) \u2014 conservation cannot run"
+   ]
+  },
+  {
+   "event_id": "2003070100714007-e1",
+   "source": "acris",
+   "source_ref": "2003070100714007",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+   "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+   "exhibits": [
+    "SCHEDULE A"
+   ],
+   "executed_date": "07-15-2002",
+   "recorded_date": "07-14-2003",
+   "crfn": "2003000228307",
+   "functions": [
+    "envelope"
+   ],
+   "participants": [
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1911 lot 52",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "142 WEST 127 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1911 lot 151",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "140 WEST 127 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 9,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 4
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": false,
+   "refused_because": [
+    "no quantity",
+    "mis-filed \u2014 instrument is a PARTY WALL DECLARATION OF RESTRICTIONS"
+   ],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (0/2 sided) \u2014 conservation cannot run"
+   ]
+  },
+  {
+   "event_id": "2003070100714008-e1",
+   "source": "acris",
+   "source_ref": "2003070100714008",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OF DEVELOPMENTRIGHTS",
+   "instrument_title": "PARTYWALL DECLARATION OF RESTRICTIONS",
+   "exhibits": [
+    "SCHEDULE A"
+   ],
+   "executed_date": "07-15-2002",
+   "recorded_date": "07-14-2003",
+   "crfn": null,
+   "functions": [],
+   "participants": [
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1912 lot 139",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "112 WEST 128TH STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1912 lot 39",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "108 WEST 128 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1912 lot 138",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "108 WEST 128TH STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1912 lot 39",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "112 WEST 128TH STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 6,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 4
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": false,
+   "refused_because": [
+    "no function changed",
+    "no quantity",
+    "mis-filed \u2014 instrument is a PARTYWALL DECLARATION OF RESTRICTIONS"
+   ],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (0/4 sided) \u2014 conservation cannot run"
+   ]
+  },
+  {
+   "event_id": "2003070100714009-e1",
+   "source": "acris",
+   "source_ref": "2003070100714009",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+   "instrument_title": "PARTYWALL DECLARATION OF RESTRICTIONS",
+   "exhibits": [
+    "SCHEDULE A"
+   ],
+   "executed_date": "07-15-2002",
+   "recorded_date": "07-14-2003",
+   "crfn": "2003000228309",
+   "functions": [
+    "envelope"
+   ],
+   "participants": [
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1913 lot 6",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "149 WEST 128 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1913 lot 7",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "145 WEST 128 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1913 lot 106",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "147 WEST 128 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 6,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 4
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": false,
+   "refused_because": [
+    "no quantity",
+    "mis-filed \u2014 instrument is a PARTYWALL DECLARATION OF RESTRICTIONS"
+   ],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (0/3 sided) \u2014 conservation cannot run"
+   ]
+  },
+  {
+   "event_id": "2003070100714010-e1",
+   "source": "acris",
+   "source_ref": "2003070100714010",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+   "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+   "exhibits": [
+    "SCHEDULE A"
+   ],
+   "executed_date": "07-15-2002",
+   "recorded_date": "07-14-2003",
+   "crfn": "2003000228310",
+   "functions": [
+    "envelope"
+   ],
+   "participants": [
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1913 lot 19",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "123 WEST 128 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1913 lot 18",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "125 WEST 128 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 2,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 7,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 4
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": false,
+   "refused_because": [
+    "no quantity",
+    "mis-filed \u2014 instrument is a PARTY WALL DECLARATION OF RESTRICTIONS"
+   ],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (0/2 sided) \u2014 conservation cannot run"
+   ]
+  },
+  {
+   "event_id": "2003070100714011-e1",
+   "source": "acris",
+   "source_ref": "2003070100714011",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DEC OF DEVELOPMENT RIGHTS",
+   "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+   "exhibits": [
+    "SCHEDULE A"
+   ],
+   "executed_date": "07-15-2002",
+   "recorded_date": "07-14-2003",
+   "crfn": "2003000228311",
+   "functions": [
+    "envelope"
+   ],
+   "participants": [
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1913 lot 44",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "128 WEST 129TH STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1913 lot 44",
+     "role": null,
+     "sign": 0,
+     "status": "unresolved",
+     "address": "126 WEST 129 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 1,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 5,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 4
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": false,
+   "refused_because": [
+    "no quantity",
+    "mis-filed \u2014 instrument is a PARTY WALL DECLARATION OF RESTRICTIONS"
+   ],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (0/2 sided) \u2014 conservation cannot run"
+   ]
+  },
+  {
+   "event_id": "2003070100714012-e1",
+   "source": "acris",
+   "source_ref": "2003070100714012",
+   "action": "declare",
+   "action_established_by": "cover_page",
+   "doc_type": "DECOFDEVELOPMENTRIGHTS",
+   "instrument_title": "PARTY WALL DECLARATION OF RESTRICTIONS",
+   "exhibits": [],
+   "executed_date": "07-15-2002",
+   "recorded_date": "07-14-2003",
+   "crfn": "2003000228312",
+   "functions": [],
+   "participants": [
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "NYC PARTNERSHIP HOUSING DEVELOPMENT FUND COMPANY,",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "receiver",
+     "sign": 1,
+     "party_type": "2",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    },
+    {
+     "party": "LANDMARK PROJECTS IV, INC.",
+     "role": "sender",
+     "sign": -1,
+     "party_type": "1",
+     "text_sign": null,
+     "text_word": null,
+     "established_by": "index+text",
+     "located": true
+    }
+   ],
+   "parcels": [
+    {
+     "value": "1 block 1725 lot 17",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "47 WEST 127TH STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    },
+    {
+     "value": "1 block 1725 lot 17",
+     "role": null,
+     "sign": 0,
+     "status": "ambiguous",
+     "address": "45 WEST 127 STREET",
+     "established_by": "legals_index",
+     "side_established_by": null,
+     "incomplete": false
+    }
+   ],
+   "parcels_on_cover": 1,
+   "quantities": [
+    {
+     "kind": "consideration",
+     "value_num": null,
+     "unit": "USD",
+     "presence": "absent_by_nature",
+     "established_by": "cover_spatial",
+     "confidence": "read",
+     "derivation": "transfer-tax stamp printed 0.00",
+     "bound": null,
+     "page": "p001"
+    }
+   ],
+   "n_quantities": 1,
+   "unbound_quantities": 8,
+   "convention": {
+    "agree": 0,
+    "disagree": 0,
+    "untested": 4
+   },
+   "unlocated_parties": 0,
+   "role_inversion": null,
+   "established": false,
+   "refused_because": [
+    "no function changed",
+    "no quantity",
+    "mis-filed \u2014 instrument is a PARTY WALL DECLARATION OF RESTRICTIONS"
+   ],
+   "conservable": false,
+   "open_questions": [
+    "parcel sides unresolved (0/2 sided) \u2014 conservation cannot run"
+   ]
+  }
+ ]
+}

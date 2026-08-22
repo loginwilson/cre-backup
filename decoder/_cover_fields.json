@@ -1,0 +1,1202 @@
+[
+ {
+  "doc": "2003010601086002",
+  "read_id": "2003010601086002",
+  "rptt": 25.0,
+  "rett": null,
+  "rptt_conf": 16.266663,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003013001838001",
+  "read_id": "2003013001838001",
+  "rptt": 25.0,
+  "rett": 3266.0,
+  "rptt_conf": 47.580528,
+  "rett_conf": 52.115864
+ },
+ {
+  "doc": "2003021302514009",
+  "read_id": "2003021302514009",
+  "rptt": 0.0,
+  "rett": 0.0,
+  "rptt_conf": 88.979752,
+  "rett_conf": 96.955803
+ },
+ {
+  "doc": "2003021400219004",
+  "read_id": "20030214002",
+  "rptt": 25.0,
+  "rett": 10620.0,
+  "rptt_conf": 95.040207,
+  "rett_conf": 95.022789
+ },
+ {
+  "doc": "2003022602133001",
+  "read_id": "2003022602",
+  "rptt": 0.0,
+  "rett": 25.0,
+  "rptt_conf": 94.10955,
+  "rett_conf": 95.722
+ },
+ {
+  "doc": "2003030700273001",
+  "read_id": "2003030700273001",
+  "rptt": 0.0,
+  "rett": null,
+  "rptt_conf": 96.834244,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003041400735009",
+  "read_id": "2003041400735009",
+  "rptt": null,
+  "rett": 3000.0,
+  "rptt_conf": null,
+  "rett_conf": 52.32618
+ },
+ {
+  "doc": "2003052001090003",
+  "read_id": "2003052001090003",
+  "rptt": 0.0,
+  "rett": 2016.0,
+  "rptt_conf": 92.266853,
+  "rett_conf": 58.230522
+ },
+ {
+  "doc": "2003052701726001",
+  "read_id": "2003052701726001",
+  "rptt": 25.0,
+  "rett": null,
+  "rptt_conf": 96.369804,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003060400703001",
+  "read_id": "2003060400703001",
+  "rptt": 25.0,
+  "rett": 7342.0,
+  "rptt_conf": 96.69175,
+  "rett_conf": 77.675133
+ },
+ {
+  "doc": "2003061201945006",
+  "read_id": "2003061201945006",
+  "rptt": 50.0,
+  "rett": null,
+  "rptt_conf": 96.370041,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003061800429003",
+  "read_id": "2003061800429003",
+  "rptt": 50.0,
+  "rett": 50.0,
+  "rptt_conf": 96.941139,
+  "rett_conf": 96.941139
+ },
+ {
+  "doc": "2003062701790001",
+  "read_id": "2003062701790001",
+  "rptt": 50.0,
+  "rett": null,
+  "rptt_conf": 96.521561,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003070100714001",
+  "read_id": "2003070100714001",
+  "rptt": 0.0,
+  "rett": null,
+  "rptt_conf": 96.272514,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003070100714002",
+  "read_id": "2003070100714002",
+  "rptt": 25.0,
+  "rett": null,
+  "rptt_conf": 96.359146,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003070100714003",
+  "read_id": "2003070100714003",
+  "rptt": 25.0,
+  "rett": null,
+  "rptt_conf": 96.802483,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003070100714004",
+  "read_id": "2003070100714004",
+  "rptt": 25.0,
+  "rett": 25.0,
+  "rptt_conf": 96.636635,
+  "rett_conf": 96.636635
+ },
+ {
+  "doc": "2003070100714005",
+  "read_id": "2003070100714005",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003070100714006",
+  "read_id": "2003070100714006",
+  "rptt": 0.0,
+  "rett": 0.0,
+  "rptt_conf": 95.534248,
+  "rett_conf": 96.918068
+ },
+ {
+  "doc": "2003070100714007",
+  "read_id": null,
+  "rptt": null,
+  "rett": 0.0,
+  "rptt_conf": null,
+  "rett_conf": 96.92485
+ },
+ {
+  "doc": "2003070100714008",
+  "read_id": "2003070100714008",
+  "rptt": 25.0,
+  "rett": 0.0,
+  "rptt_conf": 80.303741,
+  "rett_conf": 96.792809
+ },
+ {
+  "doc": "2003070100714009",
+  "read_id": "2003070100714009",
+  "rptt": 25.0,
+  "rett": null,
+  "rptt_conf": 91.728737,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003070100714010",
+  "read_id": "2003070100714010",
+  "rptt": 0.0,
+  "rett": null,
+  "rptt_conf": 96.106964,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003070100714011",
+  "read_id": "2003070100714011",
+  "rptt": 25.0,
+  "rett": 0.0,
+  "rptt_conf": 96.565819,
+  "rett_conf": 33.935944
+ },
+ {
+  "doc": "2003070100714012",
+  "read_id": "2003070100714012",
+  "rptt": 25.0,
+  "rett": 0.0,
+  "rptt_conf": 63.830391,
+  "rett_conf": 57.22364
+ },
+ {
+  "doc": "2003070100714013",
+  "read_id": "2003070100714013",
+  "rptt": 25.0,
+  "rett": null,
+  "rptt_conf": 96.758667,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003070100714014",
+  "read_id": "2003070100714014",
+  "rptt": 0.0,
+  "rett": 25.0,
+  "rptt_conf": 96.543365,
+  "rett_conf": 96.497826
+ },
+ {
+  "doc": "2003070100714015",
+  "read_id": "2003070100714015",
+  "rptt": 0.0,
+  "rett": null,
+  "rptt_conf": 96.561432,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003070800636007",
+  "read_id": "2003070800636007",
+  "rptt": 50.0,
+  "rett": null,
+  "rptt_conf": 93.209862,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003071500315002",
+  "read_id": "2003071500315002",
+  "rptt": 50.0,
+  "rett": 2280.0,
+  "rptt_conf": 96.922554,
+  "rett_conf": 0.556244
+ },
+ {
+  "doc": "2003072300287002",
+  "read_id": "2003072300287002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003072300287004",
+  "read_id": null,
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003081401423003",
+  "read_id": "2003081401423003",
+  "rptt": 50.0,
+  "rett": null,
+  "rptt_conf": 74.861557,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003082001662002",
+  "read_id": "2003082001662002",
+  "rptt": 0.0,
+  "rett": null,
+  "rptt_conf": 95.4953,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003082001662003",
+  "read_id": "2003082001662003",
+  "rptt": 50.0,
+  "rett": null,
+  "rptt_conf": 95.400139,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003090200490001",
+  "read_id": "2003090200490001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003090500077001",
+  "read_id": "2003090500077001",
+  "rptt": 50.0,
+  "rett": null,
+  "rptt_conf": 96.932457,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003090901951007",
+  "read_id": "2003090901951007",
+  "rptt": 50.0,
+  "rett": 50.0,
+  "rptt_conf": 96.964249,
+  "rett_conf": 96.964249
+ },
+ {
+  "doc": "2003091201275003",
+  "read_id": "2003091201275003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003092601364001",
+  "read_id": "2003092601364001",
+  "rptt": 80.0,
+  "rett": 0.0,
+  "rptt_conf": 35.465363,
+  "rett_conf": 54.553677
+ },
+ {
+  "doc": "2003093001041002",
+  "read_id": "2003093001041002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003100101950001",
+  "read_id": "2003100101950001",
+  "rptt": 25.0,
+  "rett": 0.0,
+  "rptt_conf": 96.355049,
+  "rett_conf": 96.249748
+ },
+ {
+  "doc": "2003100101950004",
+  "read_id": "2003100101950004",
+  "rptt": 25.0,
+  "rett": 0.0,
+  "rptt_conf": 96.497368,
+  "rett_conf": 96.621666
+ },
+ {
+  "doc": "2003100101950005",
+  "read_id": "2003100161950005",
+  "rptt": 25.0,
+  "rett": 0.0,
+  "rptt_conf": 96.676514,
+  "rett_conf": 96.407745
+ },
+ {
+  "doc": "2003100102177014",
+  "read_id": "2003100102177014",
+  "rptt": 50.0,
+  "rett": null,
+  "rptt_conf": 93.209862,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003110602051001",
+  "read_id": "2003110602051001",
+  "rptt": 50.0,
+  "rett": null,
+  "rptt_conf": 93.209862,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003111600129001",
+  "read_id": "2003111600129001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003112002061001",
+  "read_id": "2003112002061001",
+  "rptt": 25.0,
+  "rett": null,
+  "rptt_conf": 95.909454,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003112100342003",
+  "read_id": "2003112100342003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003112502304002",
+  "read_id": "2003112502304002",
+  "rptt": 50.0,
+  "rett": null,
+  "rptt_conf": 93.209862,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003120401559003",
+  "read_id": "2003120401559003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003121000090002",
+  "read_id": "2003121000090002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003121601528001",
+  "read_id": "2003121601528001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003121801891001",
+  "read_id": "2003121801891001",
+  "rptt": 25.0,
+  "rett": null,
+  "rptt_conf": 95.909454,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003122401357005",
+  "read_id": "2003122401357005",
+  "rptt": 50.0,
+  "rett": null,
+  "rptt_conf": 93.209862,
+  "rett_conf": null
+ },
+ {
+  "doc": "2003122800009001",
+  "read_id": "2003122800009001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004010801341002",
+  "read_id": "2004010801341002",
+  "rptt": 50.0,
+  "rett": null,
+  "rptt_conf": 93.209862,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004030300193003",
+  "read_id": "2004030300193003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004032600644001",
+  "read_id": "2004032600644001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004032600644005",
+  "read_id": "2004032600644005",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004032600644006",
+  "read_id": "2004032600644006",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004032901975001",
+  "read_id": "2004032901975001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004042001456001",
+  "read_id": "2004042001456001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004042002144003",
+  "read_id": "2004042002144003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004042002205001",
+  "read_id": "2004042002205001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004042900057002",
+  "read_id": "2004042900057002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004050300211003",
+  "read_id": "2004050300211003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004051002329001",
+  "read_id": "2004051002329001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004070900873002",
+  "read_id": "2004070900873002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004081202162001",
+  "read_id": "2004081202162001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004081701268001",
+  "read_id": "2004081701268001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004082001973005",
+  "read_id": "2004082001973005",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004082100204007",
+  "read_id": "2004082100204007",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004082302587002",
+  "read_id": "2004082302587002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004082502535004",
+  "read_id": "2004082502535004",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004082502535006",
+  "read_id": "2004082502535006",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004082502535009",
+  "read_id": "2004082502535009",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004090900434001",
+  "read_id": "2004090900434001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004090900434002",
+  "read_id": "2004090900434002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004091002123009",
+  "read_id": "2004091002123009",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004091600862001",
+  "read_id": "2004091600862001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004092701704001",
+  "read_id": "2004092701704001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004092800085001",
+  "read_id": "2004092800085001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004110300542003",
+  "read_id": "2004110300542003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004110301042003",
+  "read_id": "2004110301042003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2004111702126001",
+  "read_id": "2004111702126001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005011000116002",
+  "read_id": "2005011000116002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005011100972004",
+  "read_id": "2005011100972004",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005012401485003",
+  "read_id": "2005012401485003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005012700156004",
+  "read_id": "2005012700156004",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005012800797002",
+  "read_id": "2005012800797002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005012801714002",
+  "read_id": "2005012801714002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005020101674002",
+  "read_id": "2005020101674002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005020302378003",
+  "read_id": "2005020302378003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005021100406003",
+  "read_id": "2005021100406003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005021700737002",
+  "read_id": "2005021700737002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005021800770004",
+  "read_id": "2005021800770004",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005021800770005",
+  "read_id": "2005021800770005",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005022302175001",
+  "read_id": "2005022302175001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005030700857009",
+  "read_id": "2005030700857009",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005030700982004",
+  "read_id": "2005030700982004",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005031400848002",
+  "read_id": "2005031400848002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005031800334001",
+  "read_id": "2005031800334001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005031800334002",
+  "read_id": "2005031800334002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005033002369002",
+  "read_id": "2005033002369002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005040100455001",
+  "read_id": "2005040100455001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005040401945001",
+  "read_id": "2005040401945001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005042200456013",
+  "read_id": "2005042200456013",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005050400758008",
+  "read_id": "2005050400758008",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005050600540001",
+  "read_id": "2005050600540001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005050600540002",
+  "read_id": "2005050600540002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005050600540003",
+  "read_id": "2005050600540003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005050600540004",
+  "read_id": "2005050600540004",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005050600540005",
+  "read_id": "2005050600540005",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005050600540006",
+  "read_id": "2005050600540006",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005050901956005",
+  "read_id": "2005050901956005",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005051600993002",
+  "read_id": "2005051600993002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005051801350002",
+  "read_id": "2005051801350002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005051801350003",
+  "read_id": "2005051801350003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005051801875011",
+  "read_id": "2005051801875011",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005060500022003",
+  "read_id": "2005060500022003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005060800763010",
+  "read_id": "2005060800763010",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005060900276001",
+  "read_id": "2005060900276001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005071301946001",
+  "read_id": "2005071301946001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005071401274001",
+  "read_id": "2005071401274001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005071401274005",
+  "read_id": "2005071401274005",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005071900853003",
+  "read_id": "2005071900853003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005071902278002",
+  "read_id": "2005071902278002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005072800138003",
+  "read_id": "2005072800138003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005072900122003",
+  "read_id": "2005072900122003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005080301896001",
+  "read_id": "2005080301896001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005080800697003",
+  "read_id": "2005080800697003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005081600703006",
+  "read_id": "2005081600703006",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005081901781003",
+  "read_id": "2005081901781003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005082200323001",
+  "read_id": "2005082200323001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005083001975001",
+  "read_id": "2005083001975001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005083100660001",
+  "read_id": "2005083100660001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005091901608003",
+  "read_id": "2005091901608003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005091901785004",
+  "read_id": "2005091901785004",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005092001076002",
+  "read_id": "2005092001076002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005100701549001",
+  "read_id": "2005100701549001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005101400455003",
+  "read_id": "2005101400455003",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005101400455004",
+  "read_id": "2005101400455004",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005101801561007",
+  "read_id": "2005101801561007",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005110101434001",
+  "read_id": "2005110101434001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005110800810001",
+  "read_id": "2005110800810001",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005111400388002",
+  "read_id": "2005111400388002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005111501773004",
+  "read_id": "2005111501773004",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005112100536002",
+  "read_id": "2005112100536002",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ },
+ {
+  "doc": "2005112901081004",
+  "read_id": "2005112901081004",
+  "rptt": null,
+  "rett": null,
+  "rptt_conf": null,
+  "rett_conf": null
+ }
+]

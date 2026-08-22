@@ -1,0 +1,115 @@
+{
+ "engine": "q35-strict",
+ "model": "35-2B-Q4_K_M.gguf",
+ "ctx": 16384,
+ "max_tokens": 4096,
+ "width": 1400,
+ "restart_every": 1,
+ "thinking": false,
+ "prompt_variant": "strict",
+ "prompt": "Transcribe every word of text visible in this scanned document page, exactly as printed. Include reel, record and page stamps, document numbers, names, dollar amounts and dates. Output only characters that are physically printed, typed, stamped or handwritten on the page. Do not add section headings, labels, titles or any description of the layout. Do not mark up or format the output. If part of the page is illegible, write [ILLEGIBLE] rather than describing it. Do not summarize.",
+ "imgtok": 2560,
+ "pages": [
+  {
+   "doc": "2015022400608001",
+   "page": "p001.png",
+   "sec": 43.7,
+   "boot": 33.3,
+   "ttft": 22.2,
+   "finish_reason": "stop",
+   "truncated": false,
+   "status": "ok",
+   "words": 288
+  },
+  {
+   "doc": "2015022400608001",
+   "page": "p002.png",
+   "sec": 379.0,
+   "boot": 5.6,
+   "ttft": 0.0,
+   "finish_reason": null,
+   "truncated": false,
+   "status": "FAILED:TimeoutError",
+   "words": 0
+  },
+  {
+   "doc": "2015022400608001",
+   "page": "p003.png",
+   "sec": 37.3,
+   "boot": 5.5,
+   "ttft": 20.0,
+   "finish_reason": "stop",
+   "truncated": false,
+   "status": "ok",
+   "words": 429
+  },
+  {
+   "doc": "2015022400608001",
+   "page": "p004.png",
+   "sec": 43.5,
+   "boot": 5.5,
+   "ttft": 22.4,
+   "finish_reason": "stop",
+   "truncated": false,
+   "status": "ok",
+   "words": 574
+  },
+  {
+   "doc": "2015022400608001",
+   "page": "p005.png",
+   "sec": 46.9,
+   "boot": 3.6,
+   "ttft": 21.4,
+   "finish_reason": "stop",
+   "truncated": false,
+   "status": "ok",
+   "words": 593
+  },
+  {
+   "doc": "2015022400608001",
+   "page": "p006.png",
+   "sec": 30.8,
+   "boot": 3.5,
+   "ttft": 23.4,
+   "finish_reason": "stop",
+   "truncated": false,
+   "status": "ok",
+   "words": 150
+  },
+  {
+   "doc": "2015022400608001",
+   "page": "p007.png",
+   "sec": 23.3,
+   "boot": 3.6,
+   "ttft": 20.6,
+   "finish_reason": "stop",
+   "truncated": false,
+   "status": "ok",
+   "words": 74
+  },
+  {
+   "doc": "2015022400608001",
+   "page": "p008.png",
+   "sec": 26.5,
+   "boot": 4.6,
+   "ttft": 22.6,
+   "finish_reason": "stop",
+   "truncated": false,
+   "status": "ok",
+   "words": 47
+  },
+  {
+   "doc": "2015022400608001",
+   "page": "p009.png",
+   "sec": 33.2,
+   "boot": 3.5,
+   "ttft": 22.3,
+   "finish_reason": "stop",
+   "truncated": false,
+   "status": "ok",
+   "words": 238
+  }
+ ],
+ "sec": 756.3,
+ "note": "server restarted under the run; wall time includes model loading and is NOT a throughput measurement"
+}

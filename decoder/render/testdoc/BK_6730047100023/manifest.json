@@ -1,0 +1,79 @@
+[
+ {
+  "file": "p001.png",
+  "era": "book",
+  "doc_type": "MTGE",
+  "doc_id": "BK_6730047100023",
+  "page": 1,
+  "year": 1967,
+  "tesseract_words": 279,
+  "rapidpool_words": 240,
+  "qwen_words": 262
+ },
+ {
+  "file": "p002.png",
+  "era": "book",
+  "doc_type": "MTGE",
+  "doc_id": "BK_6730047100023",
+  "page": 2,
+  "year": 1967,
+  "tesseract_words": 379,
+  "rapidpool_words": 384,
+  "qwen_words": 386
+ },
+ {
+  "file": "p003.png",
+  "era": "book",
+  "doc_type": "MTGE",
+  "doc_id": "BK_6730047100023",
+  "page": 3,
+  "year": 1967,
+  "tesseract_words": 379,
+  "rapidpool_words": 368,
+  "qwen_words": 386
+ },
+ {
+  "file": "p004.png",
+  "era": "book",
+  "doc_type": "MTGE",
+  "doc_id": "BK_6730047100023",
+  "page": 4,
+  "year": 1967,
+  "tesseract_words": 1289,
+  "rapidpool_words": 1114,
+  "qwen_words": 1247
+ },
+ {
+  "file": "p005.png",
+  "era": "book",
+  "doc_type": "MTGE",
+  "doc_id": "BK_6730047100023",
+  "page": 5,
+  "year": 1967,
+  "tesseract_words": 1403,
+  "rapidpool_words": 1251,
+  "qwen_words": 1408
+ },
+ {
+  "file": "p006.png",
+  "era": "book",
+  "doc_type": "MTGE",
+  "doc_id": "BK_6730047100023",
+  "page": 6,
+  "year": 1967,
+  "tesseract_words": 100,
+  "rapidpool_words": 156,
+  "qwen_words": 1218
+ },
+ {
+  "file": "p007.png",
+  "era": "book",
+  "doc_type": "MTGE",
+  "doc_id": "BK_6730047100023",
+  "page": 7,
+  "year": 1967,
+  "tesseract_words": 120,
+  "rapidpool_words": 168,
+  "qwen_words": 206
+ }
+]

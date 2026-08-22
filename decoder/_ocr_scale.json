@@ -1,0 +1,30 @@
+[
+ {
+  "scale": 1.0,
+  "sec_per_page": 14.5,
+  "pages_per_hour": 248,
+  "locate": 0.36,
+  "chars": 2398
+ },
+ {
+  "scale": 0.75,
+  "sec_per_page": 11.46,
+  "pages_per_hour": 314,
+  "locate": 0.323,
+  "chars": 2365
+ },
+ {
+  "scale": 0.5,
+  "sec_per_page": 10.77,
+  "pages_per_hour": 334,
+  "locate": 0.333,
+  "chars": 2322
+ },
+ {
+  "scale": 0.35,
+  "sec_per_page": 11.25,
+  "pages_per_hour": 320,
+  "locate": 0.222,
+  "chars": 2040
+ }
+]

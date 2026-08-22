@@ -1,0 +1,121 @@
+{
+ "doc": "2006082400263003",
+ "pages": 11,
+ "clauses": 114,
+ "first_seen": {
+  "mode:observes": 2,
+  "encumbrance": 2,
+  "mode:transacts": 2,
+  "mode:signals": 2,
+  "capital": 2,
+  "occupancy": 3
+ },
+ "per_page": {
+  "1": [
+   1760,
+   17,
+   {},
+   {}
+  ],
+  "2": [
+   2995,
+   10,
+   {
+    "encumbrance": 1,
+    "capital": 1
+   },
+   {
+    "observes": 1,
+    "transacts": 1,
+    "signals": 1
+   }
+  ],
+  "3": [
+   3574,
+   14,
+   {
+    "capital": 2,
+    "occupancy": 1
+   },
+   {
+    "signals": 3,
+    "transacts": 1
+   }
+  ],
+  "4": [
+   3830,
+   16,
+   {
+    "capital": 1
+   },
+   {
+    "signals": 1
+   }
+  ],
+  "5": [
+   3848,
+   15,
+   {
+    "capital": 1
+   },
+   {
+    "signals": 2
+   }
+  ],
+  "6": [
+   1079,
+   8,
+   {},
+   {}
+  ],
+  "7": [
+   3166,
+   11,
+   {},
+   {
+    "signals": 1
+   }
+  ],
+  "8": [
+   146,
+   2,
+   {},
+   {}
+  ],
+  "9": [
+   2325,
+   6,
+   {
+    "occupancy": 1
+   },
+   {
+    "signals": 1
+   }
+  ],
+  "10": [
+   869,
+   10,
+   {},
+   {}
+  ],
+  "11": [
+   767,
+   5,
+   {},
+   {}
+  ]
+ },
+ "blank_pages": [],
+ "absent": [
+  "envelope",
+  "identity",
+  "title"
+ ],
+ "unread": [
+  "ENTITLEMENT",
+  "PERMIT",
+  "ASBUILT",
+  "VALUE",
+  "COST"
+ ]
+}

@@ -1,0 +1,537 @@
+{
+ "page": "2003013001838001/p014",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "First American TitleInsurance Company of NewYork",
+   "box": [
+    [
+     625,
+     344
+    ],
+    [
+     2048,
+     344
+    ],
+    [
+     2048,
+     406
+    ],
+    [
+     625,
+     406
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9576
+  },
+  {
+   "text": "SCHEDULEACONTINUED",
+   "box": [
+    [
+     1011,
+     531
+    ],
+    [
+     1661,
+     527
+    ],
+    [
+     1663,
+     583
+    ],
+    [
+     1011,
+     588
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9974
+  },
+  {
+   "text": "Block1034 Lot 37",
+   "box": [
+    [
+     354,
+     711
+    ],
+    [
+     738,
+     711
+    ],
+    [
+     738,
+     765
+    ],
+    [
+     354,
+     765
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9547
+  },
+  {
+   "text": "ALL that certain plot, piece or parcel of land, situate, lying and being in the Borough of",
+   "box": [
+    [
+     354,
+     827
+    ],
+    [
+     2132,
+     827
+    ],
+    [
+     2132,
+     888
+    ],
+    [
+     354,
+     888
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9887
+  },
+  {
+   "text": "Manhattan, City, County and State of NewYork, bounded and described as follows:",
+   "box": [
+    [
+     356,
+     892
+    ],
+    [
+     2052,
+     888
+    ],
+    [
+     2052,
+     942
+    ],
+    [
+     356,
+     946
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9743
+  },
+  {
+   "text": "BEGINNING at a point on the Southerly side of West 44th Street distant 100 feet westerly from",
+   "box": [
+    [
+     352,
+     1006
+    ],
+    [
+     2305,
+     1002
+    ],
+    [
+     2305,
+     1063
+    ],
+    [
+     352,
+     1067
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9886
+  },
+  {
+   "text": "the corner formed by the intersection of the southerly side of West 44th Street with the westerly",
+   "box": [
+    [
+     354,
+     1067
+    ],
+    [
+     2275,
+     1065
+    ],
+    [
+     2275,
+     1121
+    ],
+    [
+     354,
+     1123
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9678
+  },
+  {
+   "text": "side of 8th Avenue;",
+   "box": [
+    [
+     352,
+     1121
+    ],
+    [
+     754,
+     1129
+    ],
+    [
+     754,
+     1186
+    ],
+    [
+     350,
+     1177
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9551
+  },
+  {
+   "text": "RUNNING THENCE Southerly parallel with the Westerly side of 8th Avenue 200 feet 10",
+   "box": [
+    [
+     354,
+     1242
+    ],
+    [
+     2194,
+     1242
+    ],
+    [
+     2194,
+     1304
+    ],
+    [
+     354,
+     1304
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9828
+  },
+  {
+   "text": "inchestotheNortherlysideofWest43Street",
+   "box": [
+    [
+     356,
+     1304
+    ],
+    [
+     1277,
+     1304
+    ],
+    [
+     1277,
+     1359
+    ],
+    [
+     356,
+     1359
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9951
+  },
+  {
+   "text": "THENCE Westerly along theNortherly side ofWest 43Street 25feet;",
+   "box": [
+    [
+     358,
+     1425
+    ],
+    [
+     1790,
+     1425
+    ],
+    [
+     1790,
+     1479
+    ],
+    [
+     358,
+     1479
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9772
+  },
+  {
+   "text": "THENCE Northerly parallel with the Westerly side of 8th Avenue 100 feet 5 inches to the center",
+   "box": [
+    [
+     356,
+     1540
+    ],
+    [
+     2319,
+     1540
+    ],
+    [
+     2319,
+     1602
+    ],
+    [
+     356,
+     1602
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9964
+  },
+  {
+   "text": "line of the block;",
+   "box": [
+    [
+     352,
+     1592
+    ],
+    [
+     700,
+     1600
+    ],
+    [
+     700,
+     1663
+    ],
+    [
+     350,
+     1654
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9994
+  },
+  {
+   "text": "THENCE Westerly along the cenier line of the block 75 feet;",
+   "box": [
+    [
+     356,
+     1721
+    ],
+    [
+     1602,
+     1721
+    ],
+    [
+     1602,
+     1782
+    ],
+    [
+     356,
+     1782
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9912
+  },
+  {
+   "text": "THENCE Northerly parallel with the westerly side of 8th Avenue one inch;",
+   "box": [
+    [
+     356,
+     1840
+    ],
+    [
+     1884,
+     1838
+    ],
+    [
+     1884,
+     1894
+    ],
+    [
+     356,
+     1896
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9828
+  },
+  {
+   "text": "THENCE Westerly parallel with the southerly side of West 44th Street 25 feet;",
+   "box": [
+    [
+     356,
+     1957
+    ],
+    [
+     1961,
+     1957
+    ],
+    [
+     1961,
+     2017
+    ],
+    [
+     356,
+     2017
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9839
+  },
+  {
+   "text": "THENCE Southerly parallel with the westerly side of 8th Avenue one inch to the centerline of",
+   "box": [
+    [
+     356,
+     2075
+    ],
+    [
+     2273,
+     2075
+    ],
+    [
+     2273,
+     2136
+    ],
+    [
+     356,
+     2136
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9866
+  },
+  {
+   "text": "the block;",
+   "box": [
+    [
+     354,
+     2136
+    ],
+    [
+     554,
+     2136
+    ],
+    [
+     554,
+     2192
+    ],
+    [
+     354,
+     2192
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9524
+  },
+  {
+   "text": "THENCE Westerly along the center line of the block 50 feet;",
+   "box": [
+    [
+     352,
+     2253
+    ],
+    [
+     1600,
+     2255
+    ],
+    [
+     1598,
+     2315
+    ],
+    [
+     352,
+     2313
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9799
+  },
+  {
+   "text": "THENCE Northerly parallel with the westerly side of 8th Avenue 100 feet 5 inches to the",
+   "box": [
+    [
+     352,
+     2369
+    ],
+    [
+     2167,
+     2371
+    ],
+    [
+     2167,
+     2434
+    ],
+    [
+     352,
+     2432
+    ]
+   ],
+   "angle": 0,
+   "score": 0.998
+  },
+  {
+   "text": "southerly side of West 44th Street;",
+   "box": [
+    [
+     352,
+     2428
+    ],
+    [
+     1052,
+     2432
+    ],
+    [
+     1052,
+     2494
+    ],
+    [
+     350,
+     2490
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9964
+  },
+  {
+   "text": "THENCE Easterly along the southerly side of West 44th Street 175 feet to the point or place of",
+   "box": [
+    [
+     350,
+     2548
+    ],
+    [
+     2284,
+     2553
+    ],
+    [
+     2284,
+     2615
+    ],
+    [
+     350,
+     2611
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9882
+  },
+  {
+   "text": "BEGINNING.",
+   "box": [
+    [
+     356,
+     2615
+    ],
+    [
+     656,
+     2615
+    ],
+    [
+     656,
+     2665
+    ],
+    [
+     356,
+     2665
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9994
+  }
+ ]
+}

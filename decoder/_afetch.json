@@ -1,0 +1,38 @@
+[
+ {
+  "concurrency": 8,
+  "n": 48,
+  "ok": 48,
+  "wall_s": 2.0,
+  "req_per_s": 24.03,
+  "mean_lat": 0.3,
+  "p95": 0.519,
+  "errors": 0,
+  "refused": false,
+  "mb": 2.6
+ },
+ {
+  "concurrency": 16,
+  "n": 48,
+  "ok": 48,
+  "wall_s": 1.72,
+  "req_per_s": 27.93,
+  "mean_lat": 0.371,
+  "p95": 0.673,
+  "errors": 0,
+  "refused": false,
+  "mb": 2.2
+ },
+ {
+  "concurrency": 24,
+  "n": 48,
+  "ok": 48,
+  "wall_s": 2.14,
+  "req_per_s": 22.38,
+  "mean_lat": 0.648,
+  "p95": 1.463,
+  "errors": 0,
+  "refused": false,
+  "mb": 2.4
+ }
+]

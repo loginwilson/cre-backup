@@ -1,0 +1,80 @@
+[
+ {
+  "sessions": 1,
+  "conc_each": 16,
+  "total_conn": 16,
+  "pages": 256,
+  "ok": 256,
+  "wall": 5.01,
+  "req_per_s": 51.1,
+  "mb": 12.3,
+  "mb_per_s": 2.45,
+  "mean_lat": 0.306,
+  "saved": 256
+ },
+ {
+  "sessions": 2,
+  "conc_each": 8,
+  "total_conn": 16,
+  "pages": 256,
+  "ok": 256,
+  "wall": 4.32,
+  "req_per_s": 59.29,
+  "mb": 10.6,
+  "mb_per_s": 2.45,
+  "mean_lat": 0.26,
+  "saved": 256
+ },
+ {
+  "sessions": 4,
+  "conc_each": 4,
+  "total_conn": 16,
+  "pages": 256,
+  "ok": 256,
+  "wall": 4.32,
+  "req_per_s": 59.19,
+  "mb": 12.2,
+  "mb_per_s": 2.81,
+  "mean_lat": 0.259,
+  "saved": 256
+ },
+ {
+  "sessions": 1,
+  "conc_each": 16,
+  "total_conn": 16,
+  "pages": 256,
+  "ok": 256,
+  "wall": 4.91,
+  "req_per_s": 52.12,
+  "mb": 12.9,
+  "mb_per_s": 2.62,
+  "mean_lat": 0.292,
+  "saved": 256
+ },
+ {
+  "sessions": 2,
+  "conc_each": 8,
+  "total_conn": 16,
+  "pages": 256,
+  "ok": 256,
+  "wall": 4.23,
+  "req_per_s": 60.59,
+  "mb": 13.8,
+  "mb_per_s": 3.27,
+  "mean_lat": 0.253,
+  "saved": 256
+ },
+ {
+  "sessions": 4,
+  "conc_each": 4,
+  "total_conn": 16,
+  "pages": 256,
+  "ok": 256,
+  "wall": 4.22,
+  "req_per_s": 60.62,
+  "mb": 11.9,
+  "mb_per_s": 2.81,
+  "mean_lat": 0.244,
+  "saved": 256
+ }
+]

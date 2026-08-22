@@ -1,0 +1,511 @@
+{
+ "chart": {
+  "present": false
+ },
+ "doc_id": "2026012000388002",
+ "decoder": "agent-vision-pass-1 BRANCH decode, 2026-08-05",
+ "parties": [
+  {
+   "name": "Board of Managers of The Knickerbocker Condominium",
+   "tax_lot": "1/1446/1101-1181",
+   "normalized_role": "declarant"
+  },
+  {
+   "name": "DBMJ 1390.5 Second Ave LLC (70%)",
+   "tax_lot": "1/1446/151",
+   "normalized_role": "declarant"
+  },
+  {
+   "name": "SZ 1390.5 Second Ave LLC (30%)",
+   "tax_lot": "1/1446/151",
+   "normalized_role": "declarant"
+  },
+  {
+   "name": "301 East 71 Investors LLC",
+   "tax_lot": "1/1446/1+2+3",
+   "normalized_role": "declarant"
+  },
+  {
+   "name": "Metropolitan Transportation Authority",
+   "note": "fee owner lot 51 by 2010 condemnation; consents + waives, conditioned that NOTHING be recorded against lot 51",
+   "tax_lot": "1/1446/51",
+   "normalized_role": "other_zoning_lot_member"
+  },
+  {
+   "name": "RSL 1388 Second LLC",
+   "tax_lot": "1/1446/4",
+   "normalized_role": "other_zoning_lot_member"
+  },
+  {
+   "name": "1390 Second Avenue Realty, LLC",
+   "tax_lot": "1/1446/52",
+   "normalized_role": "other_zoning_lot_member"
+  },
+  {
+   "name": "Maspeth Federal Savings and Loan Association",
+   "tax_lot": "1/1446/52",
+   "normalized_role": "consenting_mortgagee"
+  },
+  {
+   "name": "East West Bank",
+   "note": "waiver dated 2025-12-17 'to be recorded' — not annexed; likely batch sibling 388001 (SMIS)",
+   "tax_lot": "1/1446/151",
+   "normalized_role": "consenting_mortgagee"
+  }
+ ],
+ "anomalies": [
+  "⚠ SWEEP-DESIGN FINDING: lot 51 is bound by this Declaration but is DELIBERATELY omitted from the cover property data (MTA condition that nothing be recorded against lot 51) — a parcel-keyed ACRIS pull on lot 51 will NEVER surface this instrument; only the document's own roster reveals it",
+  "cover lists lot 1102 twice (88 entries / 87 distinct)",
+  "title page and MTA consent omit lot 51 from the lot list while the certification includes it — certification controls",
+  "REEL/PAGE CONFLICT unrepaired: 1995 DZLR cited as Reel 2196 Page 2342 (body p11) vs Page 2338 (MTA consent p32)",
+  "Exhibit C courses compute 22,987.50 vs certified 22,987.14 (0.36 SF, survey uses 102.17 vs 102'2\")",
+  "Royal Abstract certification appears TWICE in full (pp23-29 and pp40-46)",
+  "certification signature block: 'Michael Roberts, C.O.O.' struck through, 'Alexandra E. Hirn' handwritten, uninitialed",
+  "signatures predate the as-of date (12/17, 12/18 vs 1/9); counterparts clause permits",
+  "'BEGGININNG' typo in MTA Exhibit C perimeter",
+  "Exhibit C prints 'the point or place of BEGGININNG' — transcribed as printed.",
+  "★ CONFIRMS THE SWEEP-DESIGN FINDING: the MTA's Acknowledgment and Consent (pp.33-35, signed for the Authority) consents to the 2026 Zoning Lot Merger while stipulating that none of the 2026 Zoning Lot Expansion Documents will be recorded against the Lot 51 Land. Lot 51 is therefore bound into the zoning lot and invisible to any parcel-keyed ACRIS pull on lot 51 — but it IS described, as Parcel E of the title certification at p42.",
+  "Legal descriptions located by targeted fetch of pp.33-47 (15 pages, 2026-08-13). The instrument's own exhibits are A (p38) and C (p47); B (p39) is 'Certification [attached behind]' = the Zoning Lot Exhibit II at pp.40-46. Images read and deleted.",
+  "★ CROSS-DOCUMENT CHECK, INDEPENDENTLY TRANSCRIBED: Exhibit A here walks to 10,029.8 sf at 0.00 ft closure — the same figure sibling document 2026012000388003's Condominium Land produced on a separate day from a different page (12 courses, irregular). Two recorded instruments, two transcriptions, one area.",
+  "★ ZONING-LOT CONSERVATION (candidate, not an answer): Exhibit C's perimeter walks to 22,987.5 sf. Known members: Condominium Land 10,029.8 + Developer Lot 1 2,037.5 + Lots 2+3 3,750.0 + Lot 151 1,022.0 = 16,839.3, leaving 6,148.2 sf for MTA Lot 51 and any remainder. Recorded as arithmetic to be checked against the certification's Parcel E when that is transcribed — not accepted."
+ ],
+ "consideration": {
+  "index_amt": 0,
+  "in_document": null,
+  "zero_verified": "cover p1: RPTT $0.00, RETT $0.00, recording fee only — declaration moves no consideration"
+ },
+ "decode_status": "validated_with_findings",
+ "quantities_sf": [
+  {
+   "name": "certified total LAND area of merged zoning lot",
+   "page": 27,
+   "value": 22987.14,
+   "how_stated": "zoning lot certification"
+  },
+  {
+   "name": "Developer Zoning Lot land (lots 1+2+3+4)",
+   "page": 20,
+   "value": 7662.5,
+   "how_stated": "computed from Exhibit B-1 courses (2,037.5+3,750+1,875)"
+  },
+  {
+   "name": "residual land, lots 51+52+151+condo",
+   "page": 27,
+   "value": 15324.64,
+   "how_stated": "computed 22,987.14 - 7,662.50"
+  },
+  {
+   "name": "FLOOR area / FAR / zoning district",
+   "value": null,
+   "how_stated": "NOT STATED ANYWHERE on any of 47 pages — no floor area, no FAR, no district"
+  }
+ ],
+ "effective_dates": {
+  "crfn": "2026000019204",
+  "recorded": "2026-01-20",
+  "document_date": "2026-01-09"
+ },
+ "instrument_kind": "declaration_of_zoning_lot_restrictions",
+ "validation_tier": "arithmetic",
+ "consents_waivers": [
+  {
+   "page": 31,
+   "party": "Metropolitan Transportation Authority (lot 51)",
+   "instrument": "consent",
+   "present_in_doc": true
+  },
+  {
+   "page": 13,
+   "party": "Board of Managers, Knickerbocker Condominium",
+   "instrument": "joinder",
+   "present_in_doc": true
+  },
+  {
+   "page": 14,
+   "party": "DBMJ + SZ (lot 151)",
+   "instrument": "joinder",
+   "present_in_doc": true
+  },
+  {
+   "page": 15,
+   "party": "301 East 71 Investors LLC",
+   "instrument": "joinder",
+   "present_in_doc": true
+  },
+  {
+   "page": 23,
+   "party": "RSL 1388 Second LLC (lot 4)",
+   "instrument": "waiver",
+   "present_in_doc": false
+  },
+  {
+   "page": 23,
+   "party": "1390 Second Avenue Realty (lot 52)",
+   "instrument": "waiver",
+   "present_in_doc": false
+  },
+  {
+   "page": 23,
+   "party": "Maspeth Federal (lot 52 mortgagee)",
+   "instrument": "waiver",
+   "present_in_doc": false
+  },
+  {
+   "page": 23,
+   "party": "East West Bank (lot 151 mortgagee)",
+   "instrument": "waiver",
+   "present_in_doc": false
+  },
+  {
+   "page": 12,
+   "party": "Owner — FORWARD BLANKET WAIVER of right to execute any amended/replacement Declaration for future enlargement, subdivision, or transfer of rights to/from any parcel of land OR AIR",
+   "instrument": "consent",
+   "present_in_doc": true
+  }
+ ],
+ "instrument_title": {
+  "page": 9,
+  "value": "DECLARATION OF ZONING LOT RESTRICTIONS"
+ },
+ "lot_areas_by_bbl": {
+  "values": {
+   "1014460001": 2037.5,
+   "1014460004": 1875
+  },
+  "provenance": "Exhibit B-1 parcels A/C p20"
+ },
+ "cross_instruments": [
+  {
+   "page": 10,
+   "what": "Condominium Declaration 1996",
+   "how_cited": "reel_page",
+   "identifier": "Reel 2393 Page 1293"
+  },
+  {
+   "page": 10,
+   "what": "condo declaration amendments 1-3",
+   "how_cited": "crfn",
+   "identifier": "2006000306643, 2013000499512, 2014000424759"
+  },
+  {
+   "page": 11,
+   "what": "1995 DZLR (condo + lot 51)",
+   "how_cited": "reel_page",
+   "identifier": "Reel 2196 Page 2342 (body) / Page 2338 (MTA consent) — CONFLICT"
+  },
+  {
+   "page": 32,
+   "what": "1995 ZLDA (lot 51)",
+   "how_cited": "reel_page",
+   "identifier": "Reel 2196 Page 2305"
+  },
+  {
+   "page": 11,
+   "what": "1995 DZLR (adds lot 52)",
+   "how_cited": "reel_page",
+   "identifier": "Reel 2204 Page 1553"
+  },
+  {
+   "page": 11,
+   "what": "2024 DZLR (developer lot + lot 4)",
+   "how_cited": "crfn",
+   "identifier": "CRFN2024000254257"
+  },
+  {
+   "page": 23,
+   "what": "Lot 4 ZLDA",
+   "how_cited": "crfn",
+   "identifier": "CRFN2024000254258"
+  },
+  {
+   "page": 12,
+   "what": "ZLDA of even date = sibling 2026012000388003",
+   "how_cited": "date_parties",
+   "identifier": "simultaneous"
+  },
+  {
+   "page": 23,
+   "what": "Royal Abstract zoning lot certification (Chicago Title)",
+   "how_cited": "doc_id",
+   "identifier": "File No. 186076, certified 2025-12-17"
+  },
+  {
+   "page": 32,
+   "what": "MTA condemnation of lot 51",
+   "how_cited": "date_parties",
+   "identifier": "2010-12-10"
+  },
+  {
+   "page": 23,
+   "what": "East West Bank waiver",
+   "how_cited": "date_parties",
+   "identifier": "2025-12-17, to be recorded"
+  }
+ ],
+ "fills_sibling_gap": {
+  "why": "no floor area, FAR, or zoning district anywhere in 47 pages; only LAND areas. Deriving the transferred SF needs an FAR this document never supplies.",
+  "newly_supplied": "definitive 88-lot roster; certified merged land area 22,987.14 SF; developer-side land 7,662.50 SF; residual 15,324.64 SF",
+  "answers_sibling_003_quantity": false
+ },
+ "zoning_lot_roster": [
+  {
+   "bbl": "1014460001"
+  },
+  {
+   "bbl": "1014460002"
+  },
+  {
+   "bbl": "1014460003"
+  },
+  {
+   "bbl": "1014460004"
+  },
+  {
+   "bbl": "1014460051"
+  },
+  {
+   "bbl": "1014460052"
+  },
+  {
+   "bbl": "1014460151"
+  }
+ ],
+ "self_checks_summary": {
+  "fails": 3,
+  "passes": 6,
+  "highlights": [
+   "perimeter 150x102.1667 + 75x102.1667 = 22,987.50 vs certified 22,987.14 (delta 0.36)",
+   "developer parcels 2,037.5+3,750+1,875 = 7,662.50 = southern rectangle exactly",
+   "9 certified parties in interest = 5 executing + 4 relying on prior waivers",
+   "FAIL (reported, not inferred): cannot compute sibling 003's SF — no FAR anywhere; 149,436.84 does not appear"
+  ]
+ },
+ "summary_what_it_does": "BRANCH DECODE (sibling of ...388003/388004). Creates the 2026 Merged Zoning Lot on Manhattan B1446 from three predecessor zoning lots: the 1995 Condominium Zoning Lot (Knickerbocker units 1101-1181 + lot 51 + lot 52), the Lot 151 Land, and the 2024 Developer Zoning Lot (lots 1/2/3 + lot 4). Certified total LAND area 22,987.14 SF. MTA (condemned lot 51 in 2010) consents and waives via annexed Acknowledgment. Owner grants a forward blanket waiver letting the Developer later enlarge, subdivide, or transfer rights without a new Knickerbocker signature.",
+ "zoning_lot_roster_note": "DEFINITIVE roster per certification p24 = lots 1,2,3,4,51,52,151 + condo units 1101-1181 (88 lots). Condo units carried on sibling 003's posting; not duplicated here.",
+ "legal_descriptions": [
+  {
+   "exhibit": "A — Block 1446, Lots 1101-1181 (Parcel G)",
+   "bbl": null,
+   "shape": "perimeter",
+   "covers_bbls": [
+    "1014461101",
+    "1014461102",
+    "1014461103",
+    "1014461104",
+    "1014461105",
+    "1014461106",
+    "1014461107",
+    "1014461108",
+    "1014461109",
+    "1014461110",
+    "1014461111",
+    "1014461112",
+    "1014461113",
+    "1014461114",
+    "1014461115",
+    "1014461116",
+    "1014461117",
+    "1014461118",
+    "1014461119",
+    "1014461120",
+    "1014461121",
+    "1014461122",
+    "1014461123",
+    "1014461124",
+    "1014461125",
+    "1014461126",
+    "1014461127",
+    "1014461128",
+    "1014461129",
+    "1014461130",
+    "1014461131",
+    "1014461132",
+    "1014461133",
+    "1014461134",
+    "1014461135",
+    "1014461136",
+    "1014461137",
+    "1014461138",
+    "1014461139",
+    "1014461140",
+    "1014461141",
+    "1014461142",
+    "1014461143",
+    "1014461144",
+    "1014461145",
+    "1014461146",
+    "1014461147",
+    "1014461148",
+    "1014461149",
+    "1014461150",
+    "1014461151",
+    "1014461152",
+    "1014461153",
+    "1014461154",
+    "1014461155",
+    "1014461156",
+    "1014461157",
+    "1014461158",
+    "1014461159",
+    "1014461160",
+    "1014461161",
+    "1014461162",
+    "1014461163",
+    "1014461164",
+    "1014461165",
+    "1014461166",
+    "1014461167",
+    "1014461168",
+    "1014461169",
+    "1014461170",
+    "1014461171",
+    "1014461172",
+    "1014461173",
+    "1014461174",
+    "1014461175",
+    "1014461176",
+    "1014461177",
+    "1014461178",
+    "1014461179",
+    "1014461180",
+    "1014461181"
+   ],
+   "courses_verbatim": "BEGINNING at a point on the southerly side of East 72nd Street, distant 20 feet easterly from the corner formed by the intersection of the said southerly side of East 72nd Street with the easterly side of Second Avenue;\n\nRUNNING THENCE southerly, parallel with said easterly side of Second Avenue and part of the way through a party wall, 53 feet 11 inches, more or less, to the northerly side of the northerly wall of the building on the premises adjoining on the south;\n\nTHENCE easterly, parallel with said southerly side of East 72nd Street and along the northerly side of said northerly wall of said building on the premises adjoining on the south, 11 feet 2 inches to a projection on said wall;\n\nTHENCE northerly, parallel with the said easterly side of Second Avenue and along the westerly side of said projections, 4 feet to the northerly side thereof;\n\nTHENCE easterly, again parallel with the southerly side of East 72nd Street and along the northerly side of said projections, 8 feet 9-1/2 inches to the easterly side thereof;\n\nTHENCE southerly, again parallel with the said easterly side of Second Avenue and along the easterly side of said projections, 4 feet to the northerly side of the northerly wall of the building on the premises adjoining on the south;\n\nTHENCE easterly, again parallel with East 72nd Street and along the northerly side of said northerly wall of the building on the premises adjoining on the south and a line continuation thereof, 20 feet 0-1/2 inch;\n\nTHENCE southerly, again parallel with the easterly side of Second Avenue, 16 feet 1 inch;\n\nTHENCE easterly, again parallel with the southerly side of East 72nd Street, 40 feet;\n\nTHENCE southerly, again parallel with the easterly side of Second Avenue, 32 feet 2 inches;\n\nTHENCE easterly, again parallel with the southerly side of East 72nd Street, 50 feet;\n\nTHENCE northerly, again parallel with the said easterly side of Second Avenue and part of the way through another party wall, 102 feet 2 inches, more or less, to the said southerly side of East 72nd Street; and\n\nTHENCE westerly along said southerly side of East 72nd Street, 130 feet to the point or place of BEGINNING.",
+   "stated_area_sf": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 38,
+   "traverse": {
+    "walked_area_sf": 10029.8,
+    "closure_error_ft": 0.0,
+    "n_courses": 12,
+    "verdict": "closes",
+    "parser": "metes.py 2026-08-13 (DMS guard, bug #10)"
+   },
+   "covers_bbls_provenance": "the exhibit's own heading 'Block 1446, Lots 1101-1181 (Parcel G)' — 81 condominium unit lots, enumerated from the stated range"
+  },
+  {
+   "exhibit": "C — the expanded zoning lot (Second Avenue / East 71st / East 72nd)",
+   "bbl": null,
+   "shape": "perimeter",
+   "covers_bbls": [
+    "1014460001",
+    "1014460002",
+    "1014460003",
+    "1014460004",
+    "1014460051",
+    "1014460052",
+    "1014460151",
+    "1014461101",
+    "1014461102",
+    "1014461103",
+    "1014461104",
+    "1014461105",
+    "1014461106",
+    "1014461107",
+    "1014461108",
+    "1014461109",
+    "1014461110",
+    "1014461111",
+    "1014461112",
+    "1014461113",
+    "1014461114",
+    "1014461115",
+    "1014461116",
+    "1014461117",
+    "1014461118",
+    "1014461119",
+    "1014461120",
+    "1014461121",
+    "1014461122",
+    "1014461123",
+    "1014461124",
+    "1014461125",
+    "1014461126",
+    "1014461127",
+    "1014461128",
+    "1014461129",
+    "1014461130",
+    "1014461131",
+    "1014461132",
+    "1014461133",
+    "1014461134",
+    "1014461135",
+    "1014461136",
+    "1014461137",
+    "1014461138",
+    "1014461139",
+    "1014461140",
+    "1014461141",
+    "1014461142",
+    "1014461143",
+    "1014461144",
+    "1014461145",
+    "1014461146",
+    "1014461147",
+    "1014461148",
+    "1014461149",
+    "1014461150",
+    "1014461151",
+    "1014461152",
+    "1014461153",
+    "1014461154",
+    "1014461155",
+    "1014461156",
+    "1014461157",
+    "1014461158",
+    "1014461159",
+    "1014461160",
+    "1014461161",
+    "1014461162",
+    "1014461163",
+    "1014461164",
+    "1014461165",
+    "1014461166",
+    "1014461167",
+    "1014461168",
+    "1014461169",
+    "1014461170",
+    "1014461171",
+    "1014461172",
+    "1014461173",
+    "1014461174",
+    "1014461175",
+    "1014461176",
+    "1014461177",
+    "1014461178",
+    "1014461179",
+    "1014461180",
+    "1014461181"
+   ],
+   "courses_verbatim": "ALL THAT CERTAIN plot, piece or parcel of land, situate, lying and being in the Borough of Manhattan, County, City and State of New York, bounded and described as follows:\n\nBEGINNING at the corner formed by the intersection of the northerly side of East 71st Street with the easterly side of Second Avenue;\n\nRUNNING THENCE northerly and along said easterly side of Second Avenue, a distance of 204 feet 4 inches to the intersection of the easterly side of Second Avenue with the southerly side of East 72nd Street;\n\nTHENCE easterly along said southerly side of East 72nd Street, a distance of 150 feet to a point;\n\nTHENCE southerly and parallel with the easterly side of Second Avenue a distance of 102 feet 2 inches to a point on the center line of block;\n\nTHENCE westerly along the center line of block and parallel with East 72nd Street, a distance of 75 feet to a point;\n\nTHENCE southerly and parallel with the easterly side of Second Avenue, a distance of 102 feet 2 inches to the northerly side of East 71st Street;\n\nTHENCE westerly along said northerly side of East 71st Street, a distance of 75 feet to the point or place of BEGGININNG.",
+   "stated_area_sf": null,
+   "incorporates_by_reference": null,
+   "description_verbatim": null,
+   "vertical_extent": null,
+   "page": 47,
+   "traverse": {
+    "walked_area_sf": 22987.5,
+    "closure_error_ft": 0.0,
+    "n_courses": 6,
+    "verdict": "closes",
+    "parser": "metes.py 2026-08-13 (DMS guard, bug #10)"
+   },
+   "covers_bbls_provenance": "zoning_lot_roster of this decode (certification p24): lots 1, 2, 3, 4, 51, 52, 151 plus condo units 1101-1181 = 88 lots. Exhibit C itself enumerates no lots — it is a bound, and the membership comes from the roster, not from the courses."
+  }
+ ],
+ "pending_descriptions": [
+  {
+   "what": "Zoning Lot Exhibit II certification (title file no. 186076), Parcels A/B/C/D/E...",
+   "pages": [
+    41,
+    42,
+    43,
+    44
+   ],
+   "why_pending": "Located and read but not yet transcribed verbatim. These are the TITLE COMPANY'S roster of the whole zoning lot, carried inside Exhibit B of this Declaration ('Certification [attached behind]', p39). Parcel E is LOT 51 — the MTA parcel that is deliberately absent from lot 51's own index legals — described with surveyed bearings and NY state-plane coordinates (point of beginning N 219,306.7406 E 995,802.4483).",
+   "images_deleted": true
+  }
+ ]
+}

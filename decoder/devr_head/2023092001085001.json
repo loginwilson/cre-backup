@@ -1,0 +1,18 @@
+{
+ "doc_id": "2023092001085001",
+ "engine": "PP-OCRv4/openvino",
+ "pages": [
+  {
+   "page": "p001",
+   "accepted_text": ""
+  },
+  {
+   "page": "p002",
+   "accepted_text": ""
+  },
+  {
+   "page": "p003",
+   "accepted_text": "N411589 ZONINGLOTDEVELOPMENTAGREEMENT NEWYORKCOUNTY BLOCK 440, LOT 44 and LOT 7503 (which is comprised of Lots 1201-1213) RECORDANDRETURNTO: Herrick, Feinstein LLP 2ParkAvenue New York,NY 10016 Attention: Robert Huberman, Esq."
+  }
+ ]
+}

@@ -1,0 +1,468 @@
+{
+ "page": "2003021302514009/p003",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "ZONINGLOTDEVELOPMENTANDEASEMENTAGREEMENT",
+   "box": [
+    [
+     579,
+     338
+    ],
+    [
+     2029,
+     342
+    ],
+    [
+     2029,
+     407
+    ],
+    [
+     579,
+     403
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9866
+  },
+  {
+   "text": "AGREEMENT, made as of the 13th day of February 2003, between 31",
+   "box": [
+    [
+     636,
+     514
+    ],
+    [
+     2272,
+     518
+    ],
+    [
+     2272,
+     579
+    ],
+    [
+     636,
+     575
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9771
+  },
+  {
+   "text": "Saddle River, New Jersey 07458 (\"Owner\") and 29-31 COOPER SQUARE",
+   "box": [
+    [
+     332,
+     743
+    ],
+    [
+     2281,
+     745
+    ],
+    [
+     2281,
+     808
+    ],
+    [
+     332,
+     806
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9671
+  },
+  {
+   "text": "770 Broadway, 2\"d Floor, New York, New York 10003 (\"Developer\").",
+   "box": [
+    [
+     332,
+     963
+    ],
+    [
+     1832,
+     974
+    ],
+    [
+     1832,
+     1043
+    ],
+    [
+     329,
+     1032
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9533
+  },
+  {
+   "text": "WITNESSETH:",
+   "box": [
+    [
+     1068,
+     1087
+    ],
+    [
+     1544,
+     1091
+    ],
+    [
+     1542,
+     1154
+    ],
+    [
+     1066,
+     1150
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9856
+  },
+  {
+   "text": "WHEREAS Owner is the owner in fee of a certain parcel of land, with the",
+   "box": [
+    [
+     632,
+     1192
+    ],
+    [
+     2283,
+     1194
+    ],
+    [
+     2283,
+     1257
+    ],
+    [
+     632,
+     1255
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9514
+  },
+  {
+   "text": "existing buildings and improvements erected thereon, located in the City, County and",
+   "box": [
+    [
+     334,
+     1311
+    ],
+    [
+     2281,
+     1311
+    ],
+    [
+     2281,
+     1372
+    ],
+    [
+     334,
+     1372
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9765
+  },
+  {
+   "text": "State of New York, known as and by (i) the street address 27 Cooper Square, New",
+   "box": [
+    [
+     332,
+     1423
+    ],
+    [
+     2279,
+     1425
+    ],
+    [
+     2279,
+     1488
+    ],
+    [
+     332,
+     1485
+    ]
+   ],
+   "angle": 0,
+   "score": 0.983
+  },
+  {
+   "text": "York, New York, and more particularly described in Exhibit A annexed hereto and made",
+   "box": [
+    [
+     334,
+     1540
+    ],
+    [
+     2281,
+     1540
+    ],
+    [
+     2281,
+     1601
+    ],
+    [
+     334,
+     1601
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9868
+  },
+  {
+   "text": "a part hereof, and (i) Section 2, Block 461, Lot 2 on the Tax Map of the City of New",
+   "box": [
+    [
+     329,
+     1658
+    ],
+    [
+     2279,
+     1658
+    ],
+    [
+     2279,
+     1718
+    ],
+    [
+     329,
+     1718
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9809
+  },
+  {
+   "text": "         ",
+   "box": [
+    [
+     336,
+     1888
+    ],
+    [
+     2281,
+     1893
+    ],
+    [
+     2281,
+     1955
+    ],
+    [
+     334,
+     1951
+    ]
+   ],
+   "angle": 0,
+   "score": 0.5542
+  },
+  {
+   "text": "hereinafter referred to as the \"Owner's 27 Building\", and said land and existing buildings",
+   "box": [
+    [
+     332,
+     2004
+    ],
+    [
+     2279,
+     2008
+    ],
+    [
+     2279,
+     2069
+    ],
+    [
+     329,
+     2065
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9682
+  },
+  {
+   "text": "and improvements being hereinafter collectively referred to as the \u201cOwner's 27",
+   "box": [
+    [
+     332,
+     2121
+    ],
+    [
+     2281,
+     2119
+    ],
+    [
+     2281,
+     2182
+    ],
+    [
+     332,
+     2184
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9772
+  },
+  {
+   "text": "Property\");",
+   "box": [
+    [
+     329,
+     2228
+    ],
+    [
+     579,
+     2237
+    ],
+    [
+     575,
+     2308
+    ],
+    [
+     327,
+     2300
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9797
+  },
+  {
+   "text": "WHEREAS Owner is also the owner in fee of a certainparcel of land,with",
+   "box": [
+    [
+     638,
+     2396
+    ],
+    [
+     2279,
+     2396
+    ],
+    [
+     2279,
+     2457
+    ],
+    [
+     638,
+     2457
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9486
+  },
+  {
+   "text": "the existing buildings and improvements erected thereon, located in the City, County",
+   "box": [
+    [
+     332,
+     2514
+    ],
+    [
+     2281,
+     2514
+    ],
+    [
+     2281,
+     2574
+    ],
+    [
+     332,
+     2574
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9934
+  },
+  {
+   "text": "and State of New York, known as and by (i) the street address 29 Cooper Square, New",
+   "box": [
+    [
+     336,
+     2629
+    ],
+    [
+     2285,
+     2629
+    ],
+    [
+     2285,
+     2690
+    ],
+    [
+     336,
+     2690
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9811
+  },
+  {
+   "text": "York, New York, and more particularly described in Exhibit B annexed hereto and made",
+   "box": [
+    [
+     332,
+     2738
+    ],
+    [
+     2285,
+     2736
+    ],
+    [
+     2285,
+     2799
+    ],
+    [
+     332,
+     2801
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9778
+  },
+  {
+   "text": "a part hereof, and (i) Section 2, Block 461, Lot 3 on the Tax Map of the City of New",
+   "box": [
+    [
+     336,
+     2853
+    ],
+    [
+     2283,
+     2849
+    ],
+    [
+     2283,
+     2910
+    ],
+    [
+     338,
+     2914
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9738
+  },
+  {
+   "text": "York (said land being hereinafter referred to as \"Owner's 29 Land,\u201d and said existing",
+   "box": [
+    [
+     336,
+     2967
+    ],
+    [
+     2285,
+     2967
+    ],
+    [
+     2285,
+     3028
+    ],
+    [
+     336,
+     3028
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9757
+  }
+ ]
+}

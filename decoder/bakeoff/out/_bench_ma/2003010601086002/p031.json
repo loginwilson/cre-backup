@@ -1,0 +1,100 @@
+{
+ "page": "2003010601086002/p031",
+ "angles": [
+  0
+ ],
+ "items": [
+  {
+   "text": "THENCE southerly parallel with Ninth Avenue, loo feet 5 inches to the",
+   "box": [
+    [
+     321,
+     488
+    ],
+    [
+     2213,
+     478
+    ],
+    [
+     2213,
+     532
+    ],
+    [
+     321,
+     543
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9646
+  },
+  {
+   "text": "northerly sideof 54th Streetaforesaid;and",
+   "box": [
+    [
+     323,
+     547
+    ],
+    [
+     1530,
+     539
+    ],
+    [
+     1530,
+     587
+    ],
+    [
+     323,
+     595
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9602
+  },
+  {
+   "text": "THENcE easterly along the northerly side of 54th Street, 25 feet to",
+   "box": [
+    [
+     321,
+     656
+    ],
+    [
+     2158,
+     645
+    ],
+    [
+     2161,
+     700
+    ],
+    [
+     321,
+     710
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9534
+  },
+  {
+   "text": "the point or place of BEGINNING.",
+   "box": [
+    [
+     327,
+     713
+    ],
+    [
+     1195,
+     710
+    ],
+    [
+     1195,
+     759
+    ],
+    [
+     327,
+     761
+    ]
+   ],
+   "angle": 0,
+   "score": 0.9353
+  }
+ ]
+}

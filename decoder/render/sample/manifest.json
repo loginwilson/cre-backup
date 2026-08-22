@@ -1,0 +1,866 @@
+[
+ {
+  "file": "film__LEAS__FT_1160000125016__p001.png",
+  "doc_id": "FT_1160000125016",
+  "era": "film",
+  "doc_type": "LEAS",
+  "page": 1,
+  "recorded": "1986-01-10"
+ },
+ {
+  "file": "film__LEAS__FT_1160000125016__p002.png",
+  "doc_id": "FT_1160000125016",
+  "era": "film",
+  "doc_type": "LEAS",
+  "page": 2,
+  "recorded": "1986-01-10"
+ },
+ {
+  "file": "film__LEAS__FT_1160000125016__p003.png",
+  "doc_id": "FT_1160000125016",
+  "era": "film",
+  "doc_type": "LEAS",
+  "page": 3,
+  "recorded": "1986-01-10"
+ },
+ {
+  "file": "film__LEAS__FT_2520004429852__p001.png",
+  "doc_id": "FT_2520004429852",
+  "era": "film",
+  "doc_type": "LEAS",
+  "page": 1,
+  "recorded": "1994-09-21"
+ },
+ {
+  "file": "film__LEAS__FT_2520004429852__p002.png",
+  "doc_id": "FT_2520004429852",
+  "era": "film",
+  "doc_type": "LEAS",
+  "page": 2,
+  "recorded": "1994-09-21"
+ },
+ {
+  "file": "film__LEAS__FT_2520004429852__p003.png",
+  "doc_id": "FT_2520004429852",
+  "era": "film",
+  "doc_type": "LEAS",
+  "page": 3,
+  "recorded": "1994-09-21"
+ },
+ {
+  "file": "film__LEAS__FT_4980002699598__p001.png",
+  "doc_id": "FT_4980002699598",
+  "era": "film",
+  "doc_type": "LEAS",
+  "page": 1,
+  "recorded": "1990-09-26"
+ },
+ {
+  "file": "film__LEAS__FT_4980002699598__p002.png",
+  "doc_id": "FT_4980002699598",
+  "era": "film",
+  "doc_type": "LEAS",
+  "page": 2,
+  "recorded": "1990-09-26"
+ },
+ {
+  "file": "film__LEAS__FT_4980002699598__p003.png",
+  "doc_id": "FT_4980002699598",
+  "era": "film",
+  "doc_type": "LEAS",
+  "page": 3,
+  "recorded": "1990-09-26"
+ },
+ {
+  "file": "film__LEAS__FT_4840001924484__p001.png",
+  "doc_id": "FT_4840001924484",
+  "era": "film",
+  "doc_type": "LEAS",
+  "page": 1,
+  "recorded": "1983-01-24"
+ },
+ {
+  "file": "film__LEAS__FT_4840001924484__p002.png",
+  "doc_id": "FT_4840001924484",
+  "era": "film",
+  "doc_type": "LEAS",
+  "page": 2,
+  "recorded": "1983-01-24"
+ },
+ {
+  "file": "film__LEAS__FT_4840001924484__p003.png",
+  "doc_id": "FT_4840001924484",
+  "era": "film",
+  "doc_type": "LEAS",
+  "page": 3,
+  "recorded": "1983-01-24"
+ },
+ {
+  "file": "film__AGMT__FT_3510007868051__p001.png",
+  "doc_id": "FT_3510007868051",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "2001-10-30"
+ },
+ {
+  "file": "film__AGMT__FT_3510007868051__p002.png",
+  "doc_id": "FT_3510007868051",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "2001-10-30"
+ },
+ {
+  "file": "film__AGMT__FT_3510007868051__p003.png",
+  "doc_id": "FT_3510007868051",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "2001-10-30"
+ },
+ {
+  "file": "film__AGMT__FT_1150000250315__p001.png",
+  "doc_id": "FT_1150000250315",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1988-06-02"
+ },
+ {
+  "file": "film__AGMT__FT_1150000250315__p002.png",
+  "doc_id": "FT_1150000250315",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1988-06-02"
+ },
+ {
+  "file": "film__AGMT__FT_1150000250315__p003.png",
+  "doc_id": "FT_1150000250315",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1988-06-02"
+ },
+ {
+  "file": "film__AGMT__FT_4740002271874__p001.png",
+  "doc_id": "FT_4740002271874",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1986-12-23"
+ },
+ {
+  "file": "film__AGMT__FT_4740002271874__p002.png",
+  "doc_id": "FT_4740002271874",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1986-12-23"
+ },
+ {
+  "file": "film__AGMT__FT_4740002271874__p003.png",
+  "doc_id": "FT_4740002271874",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1986-12-23"
+ },
+ {
+  "file": "film__AGMT__FT_1430008515543__p001.png",
+  "doc_id": "FT_1430008515543",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1973-01-23"
+ },
+ {
+  "file": "film__AGMT__FT_1430008515543__p002.png",
+  "doc_id": "FT_1430008515543",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1973-01-23"
+ },
+ {
+  "file": "film__AGMT__FT_1430008515543__p003.png",
+  "doc_id": "FT_1430008515543",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1973-01-23"
+ },
+ {
+  "file": "film__AGMT__FT_3300008413130__p001.png",
+  "doc_id": "FT_3300008413130",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "2002-05-10"
+ },
+ {
+  "file": "film__AGMT__FT_3300008413130__p002.png",
+  "doc_id": "FT_3300008413130",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "2002-05-10"
+ },
+ {
+  "file": "film__AGMT__FT_3300008413130__p003.png",
+  "doc_id": "FT_3300008413130",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "2002-05-10"
+ },
+ {
+  "file": "film__AGMT__FT_3690006948969__p001.png",
+  "doc_id": "FT_3690006948969",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1999-12-14"
+ },
+ {
+  "file": "film__AGMT__FT_3690006948969__p002.png",
+  "doc_id": "FT_3690006948969",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1999-12-14"
+ },
+ {
+  "file": "film__AGMT__FT_3690006948969__p003.png",
+  "doc_id": "FT_3690006948969",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1999-12-14"
+ },
+ {
+  "file": "film__AGMT__FT_1960008561296__p001.png",
+  "doc_id": "FT_1960008561296",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1976-05-14"
+ },
+ {
+  "file": "film__AGMT__FT_1960008561296__p002.png",
+  "doc_id": "FT_1960008561296",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1976-05-14"
+ },
+ {
+  "file": "film__AGMT__FT_1960008561296__p003.png",
+  "doc_id": "FT_1960008561296",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1976-05-14"
+ },
+ {
+  "file": "film__AGMT__FT_4030002571403__p001.png",
+  "doc_id": "FT_4030002571403",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1989-06-14"
+ },
+ {
+  "file": "film__AGMT__FT_4030002571403__p002.png",
+  "doc_id": "FT_4030002571403",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1989-06-14"
+ },
+ {
+  "file": "film__AGMT__FT_4030002571403__p003.png",
+  "doc_id": "FT_4030002571403",
+  "era": "film",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1989-06-14"
+ },
+ {
+  "file": "book__LEAS__BK_7340072201719__p001.png",
+  "doc_id": "BK_7340072201719",
+  "era": "book",
+  "doc_type": "LEAS",
+  "page": 1,
+  "recorded": "1973-12-12"
+ },
+ {
+  "file": "book__LEAS__BK_7340072201719__p002.png",
+  "doc_id": "BK_7340072201719",
+  "era": "book",
+  "doc_type": "LEAS",
+  "page": 2,
+  "recorded": "1973-12-12"
+ },
+ {
+  "file": "book__LEAS__BK_7340072201719__p003.png",
+  "doc_id": "BK_7340072201719",
+  "era": "book",
+  "doc_type": "LEAS",
+  "page": 3,
+  "recorded": "1973-12-12"
+ },
+ {
+  "file": "book__LEAS__BK_6940034200591__p001.png",
+  "doc_id": "BK_6940034200591",
+  "era": "book",
+  "doc_type": "LEAS",
+  "page": 1,
+  "recorded": "1969-08-08"
+ },
+ {
+  "file": "book__LEAS__BK_6940034200591__p002.png",
+  "doc_id": "BK_6940034200591",
+  "era": "book",
+  "doc_type": "LEAS",
+  "page": 2,
+  "recorded": "1969-08-08"
+ },
+ {
+  "file": "book__LEAS__BK_6940034200591__p003.png",
+  "doc_id": "BK_6940034200591",
+  "era": "book",
+  "doc_type": "LEAS",
+  "page": 3,
+  "recorded": "1969-08-08"
+ },
+ {
+  "file": "book__LEAS__BK_6820036700156__p001.png",
+  "doc_id": "BK_6820036700156",
+  "era": "book",
+  "doc_type": "LEAS",
+  "page": 1,
+  "recorded": "1968-06-19"
+ },
+ {
+  "file": "book__LEAS__BK_6820036700156__p002.png",
+  "doc_id": "BK_6820036700156",
+  "era": "book",
+  "doc_type": "LEAS",
+  "page": 2,
+  "recorded": "1968-06-19"
+ },
+ {
+  "file": "book__LEAS__BK_6820036700156__p003.png",
+  "doc_id": "BK_6820036700156",
+  "era": "book",
+  "doc_type": "LEAS",
+  "page": 3,
+  "recorded": "1968-06-19"
+ },
+ {
+  "file": "book__AGMT__BK_7320021500590__p001.png",
+  "doc_id": "BK_7320021500590",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1973-07-18"
+ },
+ {
+  "file": "book__AGMT__BK_7320021500590__p002.png",
+  "doc_id": "BK_7320021500590",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1973-07-18"
+ },
+ {
+  "file": "book__AGMT__BK_7320021500590__p003.png",
+  "doc_id": "BK_7320021500590",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1973-07-18"
+ },
+ {
+  "file": "book__AGMT__BK_6730036200073__p001.png",
+  "doc_id": "BK_6730036200073",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1967-02-16"
+ },
+ {
+  "file": "book__AGMT__BK_6730036200073__p002.png",
+  "doc_id": "BK_6730036200073",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1967-02-16"
+ },
+ {
+  "file": "book__AGMT__BK_6730036200073__p003.png",
+  "doc_id": "BK_6730036200073",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1967-02-16"
+ },
+ {
+  "file": "book__AGMT__BK_6820036400226__p001.png",
+  "doc_id": "BK_6820036400226",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1968-06-12"
+ },
+ {
+  "file": "book__AGMT__BK_6820036400226__p002.png",
+  "doc_id": "BK_6820036400226",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1968-06-12"
+ },
+ {
+  "file": "book__AGMT__BK_6820036400226__p003.png",
+  "doc_id": "BK_6820036400226",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1968-06-12"
+ },
+ {
+  "file": "book__AGMT__BK_6640021300141__p001.png",
+  "doc_id": "BK_6640021300141",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1966-08-24"
+ },
+ {
+  "file": "book__AGMT__BK_6640021300141__p002.png",
+  "doc_id": "BK_6640021300141",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1966-08-24"
+ },
+ {
+  "file": "book__AGMT__BK_6640021300141__p003.png",
+  "doc_id": "BK_6640021300141",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1966-08-24"
+ },
+ {
+  "file": "book__AGMT__BK_7040043901937__p001.png",
+  "doc_id": "BK_7040043901937",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1970-11-17"
+ },
+ {
+  "file": "book__AGMT__BK_7040043901937__p002.png",
+  "doc_id": "BK_7040043901937",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1970-11-17"
+ },
+ {
+  "file": "book__AGMT__BK_7040043901937__p003.png",
+  "doc_id": "BK_7040043901937",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1970-11-17"
+ },
+ {
+  "file": "book__AGMT__BK_7220017801271__p001.png",
+  "doc_id": "BK_7220017801271",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1972-03-20"
+ },
+ {
+  "file": "book__AGMT__BK_7220017801271__p002.png",
+  "doc_id": "BK_7220017801271",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1972-03-20"
+ },
+ {
+  "file": "book__AGMT__BK_7220017801271__p003.png",
+  "doc_id": "BK_7220017801271",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1972-03-20"
+ },
+ {
+  "file": "book__AGMT__BK_6720024200040__p001.png",
+  "doc_id": "BK_6720024200040",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1967-07-31"
+ },
+ {
+  "file": "book__AGMT__BK_6720024200040__p002.png",
+  "doc_id": "BK_6720024200040",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1967-07-31"
+ },
+ {
+  "file": "book__AGMT__BK_6720024200040__p003.png",
+  "doc_id": "BK_6720024200040",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1967-07-31"
+ },
+ {
+  "file": "book__AGMT__BK_7440079800052__p001.png",
+  "doc_id": "BK_7440079800052",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1974-11-07"
+ },
+ {
+  "file": "book__AGMT__BK_7440079800052__p002.png",
+  "doc_id": "BK_7440079800052",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1974-11-07"
+ },
+ {
+  "file": "book__AGMT__BK_7440079800052__p003.png",
+  "doc_id": "BK_7440079800052",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1974-11-07"
+ },
+ {
+  "file": "book__AGMT__BK_7540084601946__p001.png",
+  "doc_id": "BK_7540084601946",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "1975-07-18"
+ },
+ {
+  "file": "book__AGMT__BK_7540084601946__p002.png",
+  "doc_id": "BK_7540084601946",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "1975-07-18"
+ },
+ {
+  "file": "book__AGMT__BK_7540084601946__p003.png",
+  "doc_id": "BK_7540084601946",
+  "era": "book",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "1975-07-18"
+ },
+ {
+  "file": "digital__LEAS__2012070301238002__p001.png",
+  "doc_id": "2012070301238002",
+  "era": "digital",
+  "doc_type": "LEAS",
+  "page": 1,
+  "recorded": "2012-07-12"
+ },
+ {
+  "file": "digital__LEAS__2012070301238002__p002.png",
+  "doc_id": "2012070301238002",
+  "era": "digital",
+  "doc_type": "LEAS",
+  "page": 2,
+  "recorded": "2012-07-12"
+ },
+ {
+  "file": "digital__LEAS__2012070301238002__p003.png",
+  "doc_id": "2012070301238002",
+  "era": "digital",
+  "doc_type": "LEAS",
+  "page": 3,
+  "recorded": "2012-07-12"
+ },
+ {
+  "file": "digital__AGMT__2009030500539003__p001.png",
+  "doc_id": "2009030500539003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "2009-03-11"
+ },
+ {
+  "file": "digital__AGMT__2009030500539003__p002.png",
+  "doc_id": "2009030500539003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "2009-03-11"
+ },
+ {
+  "file": "digital__AGMT__2009030500539003__p003.png",
+  "doc_id": "2009030500539003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "2009-03-11"
+ },
+ {
+  "file": "digital__AGMT__2008081900458002__p001.png",
+  "doc_id": "2008081900458002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "2008-08-27"
+ },
+ {
+  "file": "digital__AGMT__2008081900458002__p002.png",
+  "doc_id": "2008081900458002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "2008-08-27"
+ },
+ {
+  "file": "digital__AGMT__2008081900458002__p003.png",
+  "doc_id": "2008081900458002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "2008-08-27"
+ },
+ {
+  "file": "digital__AGMT__2003082000808002__p001.png",
+  "doc_id": "2003082000808002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "2004-07-04"
+ },
+ {
+  "file": "digital__AGMT__2003082000808002__p002.png",
+  "doc_id": "2003082000808002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "2004-07-04"
+ },
+ {
+  "file": "digital__AGMT__2003082000808002__p003.png",
+  "doc_id": "2003082000808002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "2004-07-04"
+ },
+ {
+  "file": "digital__AGMT__2013071900607003__p001.png",
+  "doc_id": "2013071900607003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "2013-07-25"
+ },
+ {
+  "file": "digital__AGMT__2013071900607003__p002.png",
+  "doc_id": "2013071900607003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "2013-07-25"
+ },
+ {
+  "file": "digital__AGMT__2013071900607003__p003.png",
+  "doc_id": "2013071900607003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "2013-07-25"
+ },
+ {
+  "file": "digital__AGMT__2003122200710003__p001.png",
+  "doc_id": "2003122200710003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "2004-03-06"
+ },
+ {
+  "file": "digital__AGMT__2003122200710003__p002.png",
+  "doc_id": "2003122200710003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "2004-03-06"
+ },
+ {
+  "file": "digital__AGMT__2003122200710003__p003.png",
+  "doc_id": "2003122200710003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "2004-03-06"
+ },
+ {
+  "file": "digital__AGMT__2004120201054002__p001.png",
+  "doc_id": "2004120201054002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "2004-12-21"
+ },
+ {
+  "file": "digital__AGMT__2004120201054002__p002.png",
+  "doc_id": "2004120201054002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "2004-12-21"
+ },
+ {
+  "file": "digital__AGMT__2004120201054002__p003.png",
+  "doc_id": "2004120201054002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "2004-12-21"
+ },
+ {
+  "file": "digital__AGMT__2006120100168001__p001.png",
+  "doc_id": "2006120100168001",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "2007-01-09"
+ },
+ {
+  "file": "digital__AGMT__2006120100168001__p002.png",
+  "doc_id": "2006120100168001",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "2007-01-09"
+ },
+ {
+  "file": "digital__AGMT__2006120100168001__p003.png",
+  "doc_id": "2006120100168001",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "2007-01-09"
+ },
+ {
+  "file": "digital__AGMT__2010121000260002__p001.png",
+  "doc_id": "2010121000260002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "2010-12-21"
+ },
+ {
+  "file": "digital__AGMT__2010121000260002__p002.png",
+  "doc_id": "2010121000260002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "2010-12-21"
+ },
+ {
+  "file": "digital__AGMT__2010121000260002__p003.png",
+  "doc_id": "2010121000260002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "2010-12-21"
+ },
+ {
+  "file": "digital__AGMT__2003012901201002__p001.png",
+  "doc_id": "2003012901201002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "2003-06-27"
+ },
+ {
+  "file": "digital__AGMT__2003012901201002__p002.png",
+  "doc_id": "2003012901201002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "2003-06-27"
+ },
+ {
+  "file": "digital__AGMT__2003012901201002__p003.png",
+  "doc_id": "2003012901201002",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "2003-06-27"
+ },
+ {
+  "file": "digital__AGMT__2003011701718003__p001.png",
+  "doc_id": "2003011701718003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "2003-02-26"
+ },
+ {
+  "file": "digital__AGMT__2003011701718003__p002.png",
+  "doc_id": "2003011701718003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "2003-02-26"
+ },
+ {
+  "file": "digital__AGMT__2003011701718003__p003.png",
+  "doc_id": "2003011701718003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "2003-02-26"
+ },
+ {
+  "file": "digital__AGMT__2008051601040003__p001.png",
+  "doc_id": "2008051601040003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 1,
+  "recorded": "2008-05-30"
+ },
+ {
+  "file": "digital__AGMT__2008051601040003__p002.png",
+  "doc_id": "2008051601040003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 2,
+  "recorded": "2008-05-30"
+ },
+ {
+  "file": "digital__AGMT__2008051601040003__p003.png",
+  "doc_id": "2008051601040003",
+  "era": "digital",
+  "doc_type": "AGMT",
+  "page": 3,
+  "recorded": "2008-05-30"
+ }
+]

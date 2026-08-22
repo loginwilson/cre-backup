@@ -1,0 +1,22 @@
+{
+  "2017053000419005/4097930078": {
+    "kind": "map_lag",
+    "doc_sf": 5271, "vintage_at_filing": "p17v1", "vintage_sf": 29568,
+    "evidence": "p18v1 shows 5,271 — PLUTO caught up ~1 year after the Jan-2017 subdivision (ownership statement CRFN 2017000021137). The document led the tax map."
+  },
+  "2021070601644010/3024940006": {
+    "kind": "map_lag",
+    "doc_sf": 9011, "vintage_at_filing": "p21v2", "vintage_sf": 12194,
+    "evidence": "p21v4 shows 9,000 (0.12%) — PLUTO caught up within the same year after lot 3 was reapportioned out of lot 6."
+  },
+  "2010102601040006/1008000049": {
+    "kind": "survey_vs_taxmap",
+    "doc_sf": 15639, "vintage_at_filing": "p10v2", "vintage_sf": 16745,
+    "evidence": "PLUTO holds 16,745 unchanged across p11v1, p11v2, p12v1 and p13v1 — never converges on the document. A persistent 1,106 SF (6.6%) survey-vs-tax-map difference. Reported, not repaired."
+  },
+  "2021070601644010/3024940003": {
+    "kind": "survey_vs_taxmap",
+    "doc_sf": 2703, "vintage_at_filing": "current", "vintage_sf": 2814,
+    "evidence": "PLUTO holds 2,814 across p21v3, p21v4 and p22v1 — never converges. Newly reapportioned lot; the document's metes-and-bounds compute 2,703 while DOF assigned 2,814. 111 SF (4%). Reported, not repaired."
+  }
+}

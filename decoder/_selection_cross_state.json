@@ -1,0 +1,13 @@
+{
+ "checked_at": "2026-08-18T13:54:40",
+ "repair": false,
+ "acris_rows": 17065090,
+ "local_distinct": 17062326,
+ "supabase_rows": 17062326,
+ "uncounted_slices": [],
+ "slices_short_in_db": [],
+ "slices_extra_in_db": [],
+ "missing_locally": 0,
+ "dataset_stamp": "2026-08-10T13:35:44.257Z",
+ "verdict": "clean"
+}

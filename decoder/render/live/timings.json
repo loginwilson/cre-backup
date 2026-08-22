@@ -1,0 +1,37 @@
+{
+ "qwenfast": {
+  "sec": 437.6,
+  "pages": 20,
+  "pages_per_sec": 0.0457,
+  "workers": 2,
+  "mode": "thread"
+ },
+ "tesseract": {
+  "sec": 5.8,
+  "pages": 20,
+  "pages_per_sec": 3.467,
+  "workers": 8,
+  "mode": "thread"
+ },
+ "rapid": {
+  "sec": 276.7,
+  "pages": 20,
+  "pages_per_sec": 0.0723,
+  "workers": 1,
+  "mode": "batch"
+ },
+ "rapidpool": {
+  "sec": 117.9,
+  "pages": 20,
+  "pages_per_sec": 0.1697,
+  "workers": 4,
+  "mode": "process"
+ },
+ "paddle": {
+  "sec": 1201.1,
+  "pages": 20,
+  "pages_per_sec": 0.0167,
+  "workers": 1,
+  "mode": "batch"
+ }
+}

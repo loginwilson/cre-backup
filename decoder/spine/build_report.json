@@ -1,0 +1,18 @@
+{
+ "tax_lot_lines": 858168,
+ "tax_lot_dupes": 73,
+ "tax_lot_bad": 0,
+ "condo_lines": 307436,
+ "condo_dupes": 708,
+ "condo_bad": 0,
+ "collisions": [
+  "5016681206",
+  "3039640001",
+  "3039640002"
+ ],
+ "billing_lines": 11141,
+ "billing_added": 11132,
+ "parcels": 1175952,
+ "edges": 306443,
+ "reconciled": true
+}

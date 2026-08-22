@@ -1,0 +1,176 @@
+{
+ "holes": 3449,
+ "sampled": 40,
+ "classes": {
+  "REAL+PARCEL": 12,
+  "PERSONAL": 28,
+  "UNISSUED": 0
+ },
+ "examples": {
+  "REAL+PARCEL": [
+   [
+    2026000217983,
+    "INITIAL UCC1",
+    "2048470001"
+   ],
+   [
+    2026000219334,
+    "UCC3 TERMINATION",
+    "4124520019"
+   ],
+   [
+    2026000219517,
+    "UCC3 AMENDMENT",
+    "4005051075"
+   ],
+   [
+    2026000220010,
+    "INITIAL COOP UCC1",
+    "4012350070"
+   ],
+   [
+    2026000222392,
+    "UCC3 AMENDMENT",
+    "4004141118"
+   ],
+   [
+    2026000226527,
+    "UCC3 TERMINATION",
+    "2033430170"
+   ],
+   [
+    2026000227062,
+    "UCC3 TERMINATION",
+    "4015380010"
+   ],
+   [
+    2026000228655,
+    "UCC3 TERMINATION",
+    "2041700046"
+   ],
+   [
+    2026000229048,
+    "UCC3 TERMINATION",
+    "4006540034"
+   ],
+   [
+    2026000229767,
+    "UCC3 TERMINATION",
+    "4089550041"
+   ],
+   [
+    2026000231237,
+    "UCC3 AMENDMENT",
+    "4013521347"
+   ],
+   [
+    2026000232055,
+    "UCC3 TERMINATION",
+    "2026120004"
+   ]
+  ],
+  "PERSONAL": [
+   [
+    2026000216689,
+    "UCC3 TERMINATION",
+    ""
+   ],
+   [
+    2026000217161,
+    "UCC3 AMENDMENT",
+    ""
+   ],
+   [
+    2026000217592,
+    "FEDERAL LIEN-IRS",
+    ""
+   ],
+   [
+    2026000218705,
+    "RELEASE OF FEDERAL LIEN",
+    ""
+   ],
+   [
+    2026000219002,
+    "FEDERAL LIEN-IRS",
+    ""
+   ],
+   [
+    2026000220420,
+    "UCC3 AMENDMENT",
+    ""
+   ],
+   [
+    2026000220831,
+    "UCC3 TERMINATION",
+    ""
+   ],
+   [
+    2026000221276,
+    "INITIAL UCC1",
+    ""
+   ],
+   [
+    2026000221834,
+    "RELEASE OF FEDERAL LIEN",
+    ""
+   ],
+   [
+    2026000222997,
+    "UCC3 CONTINUATION",
+    ""
+   ],
+   [
+    2026000223603,
+    "INITIAL COOP UCC1",
+    ""
+   ],
+   [
+    2026000224113,
+    "INITIAL COOP UCC1",
+    ""
+   ],
+   [
+    2026000224771,
+    "UCC3 CONTINUATION",
+    ""
+   ],
+   [
+    2026000225308,
+    "UCC3 TERMINATION",
+    ""
+   ],
+   [
+    2026000225684,
+    "UCC3 CONTINUATION",
+    ""
+   ],
+   [
+    2026000226070,
+    "UCC3 TERMINATION",
+    ""
+   ],
+   [
+    2026000227660,
+    "UCC3 TERMINATION",
+    ""
+   ],
+   [
+    2026000228191,
+    "RELEASE OF FEDERAL LIEN",
+    ""
+   ],
+   [
+    2026000229406,
+    "UCC3 CONTINUATION",
+    ""
+   ],
+   [
+    2026000229576,
+    "RELEASE OF FEDERAL LIEN",
+    ""
+   ]
+  ],
+  "UNISSUED": []
+ }
+}

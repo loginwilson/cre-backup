@@ -1,0 +1,10 @@
+[
+ "CREATE INDEX ix_pd_bbl ON parcel_document(bbl)",
+ "CREATE INDEX ix_pd_doc ON parcel_document(document_id)",
+ "CREATE INDEX ix_doc_date ON document(doc_date)",
+ "CREATE INDEX ix_le_child ON lineage_edge(child)",
+ "CREATE INDEX ix_le_parent ON lineage_edge(parent)",
+ "CREATE INDEX ix_pd_name ON party_document(name)",
+ "CREATE INDEX ix_ref_doc ON reference_document(document_id)",
+ "CREATE INDEX ix_rem_doc ON remark_document(document_id)"
+]
