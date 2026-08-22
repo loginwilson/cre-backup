@@ -3674,3 +3674,111 @@ the namespaces elsewhere (the 1889 and 1870 runs prove they diverge).
 - Reconciliation: book 396 ✓ page 339 ✓ recorded 9/25/1912 ✓ DEED ✓
   image present ✓ · keyed_by=parcel (both lots keyed — multi-parcel key
   observed working).
+
+# RULINGS DECIDED 2026-08-22 (delegated: "do what you think is best")
+
+## RULING: in-document AL&R / UCC = OWN ROWS (run 8 queue item)
+
+An assignment of leases and rents, or a UCC/fixture grant, made INSIDE a
+mortgage instrument gets its own COLLATERAL row (same instrument, linked
+to the parent CAPITAL row) — never folded into the mortgage's
+conditions. Deciding principle: ADDRESSABILITY. Later instruments target
+these packages specifically (assignments and releases of L&R arrive as
+separate recorded documents); a resolution chain can only attach to a
+row, and a condition has no address. The same lesson the phase docs
+taught about configs — what is unaddressable is not merely hidden, it is
+unusable. Cost: one extra row per financing package. Benefit: the chain
+never dead-ends when the L&R is later assigned or released separately.
+
+## RULING: modifies-row orientation — the one-line law
+
+A modifies row keeps the ORIGINAL row's direction — obligor → holder —
+because the arrow names the obligation, never the paperwork; whoever
+initiated the amendment, the debt still points the same way.
+(Corollary: a modification that TRANSFERS the holder side is two rows —
+assigns + modifies — not one row with a bent arrow.)
+
+Rulings queue: EMPTY as of 2026-08-22.
+
+# RANDOM-DOCUMENT RUN 13 — RC_1043006 · CONSOLIDATION (CEMA) · 2009
+
+27 pages, modern Richmond, the largest RC draw yet. New York
+Consolidation, Extension, and Modification Agreement (Fannie/Freddie
+Form 3172) dated 2009-08-25, recorded 2009-09-16: MICHAEL HELLER and
+JEAN HELLER, 37 Gwenn Loop (block 1965 lot 92) with BANK OF AMERICA,
+N.A. One instrument = agreement (7pp) + Exhibit A chain list + Exhibit B
+metes + Exhibit C Consolidated Note + Exhibit D Consolidated Mortgage
+(Form 3033, 11pp) + Section 255 Tax Law affidavit. Chain: 2007 mortgage
+Document# 216849 to MERS as nominee for Countrywide Bank FSB, $399,900
+(recorded 2009-09-11... 09/11/2007), unpaid $390,964.05 + new gap
+mortgage $17,635.95 = single lien $408,600.00 — the arithmetic
+self-checks to the penny. Restated terms: 5.875% fixed, $2,417.02/mo
+from 2009-10-01, MATURITY 2039-09-01. Exercised the fresh orientation
+ruling (obligor→holder: Heller → Bank of America on the modifies row)
+and the package-component row logic on its first day.
+
+## R13-1 — CEMA ANATOMY + THE §255 AFFIDAVIT (the exemption documents itself)
+
+Mortgage tax was paid ONLY on the new money: $331.54 on $17,635.95 —
+not on the $408,600 face. The instrument carries its own justification:
+a sworn affidavit under Tax Law §255 (Jerri Ann Cirino, attorney for
+the bank) reciting the 2007 tax already paid ($8,167.95 on $399,900)
+and the new-money tax due. The CLAUDE.md trap confirmed in the wild: a
+naive rate×face stamp check flags every CEMA; the affidavit IS the
+exemption's paperwork and must be read as the price-witness for the
+consolidation. Face ≠ taxable base on consolidations, by design.
+
+## R13-2 — EXAMINER MARGINALIA, VERIFIED (a third voice in the document)
+
+Exhibit A carries handwritten annotations in a clerk/examiner hand:
+"N/K/A Bank of America NA" on the Countrywide mortgagee, "mtge tax pd
+$8,167.95", "mtge tax to be pd ~$330". The typed §255 affidavit later
+CONFIRMS the tax figures — the marginalia was the examiner reconciling
+the chain, and the document itself corroborates it. Two consequences:
+(1) handwriting on modern typed instruments is not noise — it can carry
+tax facts and chain corrections; (2) the lender chain rides CORPORATE
+SUCCESSION ("N/K/A" — Countrywide became Bank of America), not a
+recorded assignment; MERS-as-nominee resolves by merger history, not by
+an instrument. Resolution must not demand an assignment document that
+never existed.
+
+## R13-3 — FIVE NUMBERS ON ONE INSTRUMENT (rd chose the land doc#)
+
+Cover Document Id 311973 · LAND DOC# stamp 308983 · lender's Doc ID
+00021066707208009 · Loan # 210667072 · Title # 09-7405-791429-SI. The
+rd row's instrument field holds 308983 — the LAND DOC number, not the
+cover's Document Id. The namespace family's rule sharpened: even
+WITHIN one custodian's cover page there are two candidate "document
+numbers", and the index picked the stamp, not the header. Verify by
+recorded date + parcel, never by whichever number is largest on the
+page.
+
+## R13-4 — THE INDEX IS AMOUNT-BLIND WHERE THE MONEY IS (debt maturity lives in extraction)
+
+rd amount: $0.00 — for a $408,600 consolidation with a stated rate,
+payment, and maturity date. The complete debt-maturity answer (5.875%,
+$2,417.02/mo, matures 2039-09-01) exists ONLY inside the pdf. This is
+the debt-maturity product's evidence in one document: the index can
+say a consolidation happened; only extraction can say what the debt IS
+and WHEN it comes due.
+
+## CONFIRMATIONS
+
+- Cover party block compresses ("And Others") while the INDEX carries
+  all three parties in full — the inverse of the film truncation trap;
+  the cover's parties block is not the index and neither is the other.
+- Consolidation arithmetic pass: 390,964.05 + 17,635.95 = 408,600.00 ✓
+  (P-4 satisfied by the instrument's own figures).
+- Gap mortgage (Exhibit A item 1) listed "To Be Duly Recorded" —
+  package sibling pending at execution; CAPITAL·creates row carried
+  with recording-state unknown rather than invented.
+- No rider boxes checked on the consolidated mortgage; 1-2 family
+  dwelling boxes checked on agreement §X and mortgage §25 consistently.
+- Two same-day acks, different counties (borrowers Richmond p7, bank
+  officer Eileen Nicklaus Suffolk p5-6) — D-3 per-signatory clocks, span
+  0 days this time. Notary Michael J. Cirino and affidavit attorney
+  Jerri Ann Cirino share a surname — observation only, no claim.
+- Reconciliation: parcel 5019650092 ✓ (= tax map info "9-1965-92" on
+  p25) · type CONSOLIDATION AGR ✓ · recorded 9/16/2009 ✓ · parties 3/3
+  full-printed ✓ · instrument = land doc# (R13-3) · amount $0.00
+  (R13-4).
