@@ -19,3 +19,4 @@ run 21 · RC_1052597 · 2026-08-22 · 21/21 pages · 0 new columns · streak 18 
 run 22 · RC_1022240 · 2026-08-22 · 2/2 pages · 0 new columns · streak 19 · 1958 subject-to deed + photostat stamp limit + liber digit catch · reader: fable-5 direct-pdf
 run 23 · RC_1009281 · 2026-08-22 · 2/2 pages · 0 new columns · streak 20 · 1968 RETT gap + same-name identity case + X-mark · reader: fable-5 direct-pdf
 run 24 · RC_1051736 · 2026-08-22 · 2/2 pages · 0 new columns · streak 21 · 1910 deed recorded 1918: the 8-year gap + template corpus · reader: fable-5 direct-pdf
+run 25 · RC_1010265 · 2026-08-22 · 3/3 pages · 0 new columns · streak 22 · FIRST SATISFACTION: debt death cert + agent-for-co-lenders ceiling · reader: fable-5 direct-pdf

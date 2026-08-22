@@ -4571,3 +4571,72 @@ strengthens R12-3: rd keys these plan lots as tax lots 48/49 in block
   developer's right-to-build-bigger reserved on the same named
   streets (Richmond Turnpike, Merrill Avenue, Watchogue Road, Wyona
   Avenue) — the subdivision's master plan restated verbatim.
+
+# RANDOM-DOCUMENT RUN 25 — RC_1010265 · SATISFACTION OF MORTGAGE · 2018
+
+3 pages, born-digital (LAND DOC# 684974, fee code 26-SATS) — the FIRST
+SATISFACTION in 25 runs, drawn from the new DRAW BOARD (login's rule:
+target unseen type x era cells, sampled from disk + typed by indexed
+lookup; board banked at Bootcamp\Draw Board.md). Dated 2018-01-02,
+recorded 2018-01-22 (exam 1/19, recorded next business day): ALPHA
+LOAN SERVICING, LLC AS AGENT FOR CO-LENDERS (29 Union Avenue,
+Lakehurst, NJ; MARK CALLAZZO, Managing Member) certifies that the
+mortgage given by 151 HENDRICKS AVE, LLC (90 State St, Albany — a
+registered-agent address; the SPE is NAMED FOR ITS PROPERTY, 151
+Hendricks Avenue, block 45 lot 51) in the original principal amount of
+$260,000.00, dated 2016-10-25, recorded 2016-11-03 as Land Doc 627636,
+"is paid," consents to discharge, and warrants "Said Mortgage has not
+been further assigned of record." Presenter Boston National Title
+(NY17101558). Notary Melissa L. Silverglate, NEW JERSEY (Ocean
+County) — over boilerplate reading "Notary Public of the State of New
+York" and "that SHE executed" for Mark Callazzo: two form defects in
+one ack, both non-events (form-noise family).
+
+## R25-1 — THE SATISFACTION SHAPE (the debt's death certificate)
+
+CAPITAL·releases, scope FULL — closes the CAPITAL row it names. The
+release family now has three shapes: ceremonial partial ($1, run 14),
+priced partial ($18,750, run 15), and full satisfaction (this). The
+target is identified by ORIGINAL PRINCIPAL + dated + recorded + land
+doc cite — everything resolution needs to find the row without
+ambiguity. And the clause "has not been further assigned of record" is
+not boilerplate courtesy: a satisfaction signed by a non-holder is
+void, so the satisfier WARRANTS it still owns the note — the
+chain-clear assertion is the instrument's own validity condition.
+
+## R25-2 — THE CAPACITY CLAUSE IS INDEX-INVISIBLE (double-blind syndicate)
+
+The document says "ALPHA LOAN SERVICING, LLC AS AGENT FOR CO-LENDERS";
+the index party row says "ALPHA LOAN SERVICING, LLC" — capacity
+STRIPPED. And the co-lenders are unnamed even in the document. Two
+walls: the index hides that Alpha is only an agent; the instrument
+hides who the money actually belonged to. A reach ladder ends at the
+agent — the true lenders of a private syndicate are structurally
+unreachable from the record. Banked as a reach CEILING, not a gap to
+chase.
+
+## R25-3 — ONE DOCUMENT DATES BOTH ENDPOINTS OF A LOAN
+
+Origination recited (2016-10-25, $260,000, LD 627636) + death dated
+(2018-01-02) = a ~14-month loan life readable WITHOUT opening the
+mortgage: the profile of PRIVATE BRIDGE MONEY (SPE borrower named for
+the address, NJ private-money agent, agent-for-co-lenders syndicate,
+14-month hold). For the debt-maturity product: satisfactions both
+CLOSE rows and date-stamp full lifecycles; a parcel's satisfaction
+history is its refinance cadence.
+
+## CONFIRMATIONS
+
+- rd: key 5000450051 ✓ instrument = LAND DOC 684974 ✓ SAT ✓ 1/22/2018
+  ✓ · amount $0.00 (dead debt's size invisible — amounts are for live
+  MORTGAGE rows only, R20-3 holds) · dual-entry casing QUADRUPLE
+  (MORTGAGOR/Mortgagor x2 — R21-3 pattern, second instance).
+- Roles name the underlying mortgage relationship, not the
+  instrument's direction (R15-3 third confirmation — mortgagee
+  discharges TO mortgagor).
+- SPE-named-for-property + registered-agent address: the entity name
+  IS a parcel pointer (151 Hendricks Ave LLC ↔ 151 Hendricks Avenue) —
+  a free, fallible join hint; the Albany address is the agent, not the
+  principal (never geocode a registered agent).
+- Exam Friday 1/19 → recorded Monday 1/22 11:24 AM — modern clerk
+  pipeline latency measured again (run 17: 1 day).
