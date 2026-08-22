@@ -31,3 +31,4 @@ run 33 · BK_6640023700437 · 2026-08-22 · 2/2 frames · 0 new columns · strea
 run 33 amended · grade A− → B+ · heirs over-claim + single-look + vacuous-✓ rules added
 protocol · assumption law + grading protocol recorded (single=grade-on-prompt, auto=self-grade)
 backward re-check · 4 banked defects corrected in place + 4 chat over-claims acknowledged · narrative-layer pattern identified
+protocol · overnight grade rotation adopted (grade N-1 at iteration open; last run left for login)

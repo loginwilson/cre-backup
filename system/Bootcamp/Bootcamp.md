@@ -5241,3 +5241,17 @@ protocol. Pattern note: every defect found was a RELATIONSHIP or
 MOTIVE claim (family, heirship, business role, cause of delay/death of
 liens) — the narrative layer's temptations; quantities, dates, cites
 and functions survived the audit clean across all 22 runs.
+
+## GRADING PROTOCOL AMENDMENT — THE OVERNIGHT GRADE ROTATION
+
+Login: "is there a way for your overnight to rotate bootcamp, grade,
+bootcamp, grade?" Adopted: in auto mode, NO run is graded in the same
+breath as its report. Each iteration OPENS by grading the PREVIOUS run
+— re-reading its banked entry cold after a full document of unrelated
+work — using the adversarial checklist measured from the 2026-08-22
+audit: (1) relationship/motive claims stated as fact; (2) unmarked
+inferences; (3) vacuous reconciliation ✓s; (4) single-look values on
+degraded film. Sequence: grade N-1 → report N → grade N (next
+iteration) → ... The final run of the night is left UNGRADED for the
+login to grade in the morning — the human stays in the calibration
+loop. Single-run mode unchanged: login prompts the grade.

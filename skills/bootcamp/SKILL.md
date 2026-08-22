@@ -32,6 +32,19 @@ are the constitution; this skill is only the trigger.
   not archaeology. Corrections and rulings queue up as usual — never
   decided silently just because nobody is watching.
 
+  **THE GRADE ROTATION (login 2026-08-22): never grade in the same
+  breath.** Each iteration opens by GRADING THE PREVIOUS RUN — re-read
+  its banked entry cold (a full document of other work has displaced
+  its momentum) with the adversarial checklist: (1) relationship or
+  motive claims stated as fact (family, heirship, business role, cause
+  of delay/death — the measured defect class); (2) unmarked inferences
+  anywhere in summary or table; (3) vacuous reconciliation ✓s (was the
+  document-side reading strong enough to EARN the agreement?); (4)
+  single-look values on degraded film. Then draw the next document.
+  Sequence: grade N-1 → run N report → grade N → run N+1 report → ...
+  The LAST run of the night stays ungraded — the login grades it in
+  the morning (keeps the human in the calibration loop).
+
 ## 1 · DRAW — random from the disk store, coverage-aware
 
 Check `D:\CRE Decoding System\Bootcamp\Run Log.md` for eras/types already
