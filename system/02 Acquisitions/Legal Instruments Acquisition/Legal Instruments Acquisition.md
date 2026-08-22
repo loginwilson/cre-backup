@@ -29,12 +29,42 @@ ceiling (same total time, completed docs far sooner).
 **The sequence, not a static fleet:** acris rd is the priority until it
 closes (~2.3 days), then the machine flips to the pdf campaigns.
 
-    NOW (overnight standing):
-      acris rd    4 × 28                      ~100 docs/s   ≈ 2.3 days
-      acris pdf   2 × 28 (digital + film)     ~8 docs/s     the long pole
+    NOW (standing as of 2026-08-22 ~16:00 - supersedes the block below):
+      acris rd    4 × 28                      ~81 docs/s    ≈ 2.0 days
+      acris pdf   3 × 28 - THREE ARMS: digital [0..3] + film SPLIT at FT_2
+                  ([3..FT_2] and [FT_2..end]) - **12.8-13 docs/s measured
+                  (17-min window), ETA 19 days, ABOVE the 8 target.** This
+                  IS the "point more arms at film" lever, exercised: film's
+                  low page-density (~3.7 pg/doc) converts the same page
+                  ceiling into more docs/s. Cost: acris rd ~90 → ~73-81.
+                  Priced and ACCEPTED - pdf is the long pole, its ETA fell
+                  ~18 days for rd's +0.4.
       richmond rd CLOSED - walker = daily follower
-      richmond pdf feed(32 miners, ahead 300) → ONE visible browser
-                  (2 pullers ~1.5-2 docs/s) → raw lander; converter PARKED
+      richmond pdf feed(24 miners, ahead 300) → ONE visible Chrome browser
+                  → raw lander; converter PARKED. ⚠ TWO CAPS IN THE FEED,
+                  both required: MAX_SERVE=10 per poll AND MAX_IN_FLIGHT=15
+                  (serve nothing while ≥15 partials sit in _incoming). The
+                  batch cap alone DID NOT cap concurrency - the worker
+                  re-polls while downloads run; 10/poll compounded to 708
+                  in flight, and Edge spawns ONE quarantine.mojom scanner
+                  PER download (254 procs / 6.13 GB measured - the RAM that
+                  blocked the third pdf arm). Outstanding-work is the unit;
+                  the disk (_incoming partials) is its counter. At the caps:
+                  1.95 docs/s ≈ the per-IP wall. The lander also reaps
+                  partials with mtime > 15 min (dead-download corpses hold
+                  Chrome download slots forever).
+      priorities  every lane process runs AboveNormal (board/bridge stay
+                  Normal - observers must not compete with the work).
+                  ⚠ A RESTART RESETS PRIORITY - re-apply on every lane
+                  restart; a restarted feed silently ran Normal for hours.
+      backup      the brain (py/md/json + db schema/triggers) banks nightly
+                  to github.com/loginwilson/cre-backup as the sync's last
+                  act (refresh.ps1); stores and dbs stay local by design.
+
+    PREVIOUS (2026-08-22 morning, kept for the record):
+      acris rd    4 × 28                      ~100 docs/s
+      acris pdf   2 × 28 (digital + film)     ~8 docs/s     the long pole
+      richmond pdf feed(32 miners) → ONE visible browser (2 pullers)
                   — the session lives in CHROME (Edge is the user's daily
                   browser; the download stream must not ride in it). A
                   fully-covered or minimized window counts as HIDDEN to
