@@ -3158,3 +3158,263 @@ richmond will get there first (rd 100% · keys 100% · pdfs accruing at the
 wall). Derivation bootcamp after resolution holds. Never in parallel from
 scratch: each phase's bootcamp reads the previous phase's OUTPUT, so
 starting one early means bootcamping on material that is still moving.
+
+---
+
+# RANDOM-DOCUMENT RUN 7 — `RC_103439` (Richmond 2197/12, DEED, 7 pp, 2016)
+
+Modern-Richmond first. Cold read 7/7 pages (instrument + Schedule A + RP-5217
++ certification — the supporting docs ride in the same pdf), rd reconciled
+after. **Zero new columns, zero new vocabulary — streak: four consecutive.**
+Instrument 601980 · recorded 2016-04-25 (made 2016-04-08, contract 2016-04-05).
+
+## R7-1 — THE SPLIT ESTATE: A DEED CAN KEEP MORE THAN IT GIVES
+
+LUCY GUERRIERO conveys 39 Nostrand Avenue to RONALD FICAROTTA and DARLYNE
+FICAROTTA **as tenants by the entirety** — and "HEREBY RESERVES LIFE
+ESTATE." One fee becomes two estates: the REMAINDER moves, the LIFE ESTATE
+stays. ONE event, TWO TITLE rows:
+
+    row 1  TITLE · transfers · remainder in fee, Lucy -> the Ficarottas,
+           term = fee simple absolute UPON termination of the life estate
+           (tenancy: by the entirety - carried in term qualifiers)
+    row 2  TITLE · creates · life estate BY RESERVATION (severed from the
+           fee, held by the grantor), term = the life of Lucy Guerriero
+
+Downstream this is load-bearing: possession stays with Lucy for life with
+NO occupancy event; her death EXTINGUISHES row 2 and matures row 1 with no
+recorded instrument at all — a chain that expects a closing document for
+every interest will wait forever. G-015 held ("the estate is the term") and
+stretched: two estates from one fee, each row carrying its own.
+
+## R7-2 — $0 CAN BE TRUE: THREE WITNESSES MAKE A GIFT, NOT A GAP
+
+M-007 says never record $0 tax as $0 price. REFINED, not broken: here THREE
+independent in-document witnesses agree — both transfer-tax stamps $0.00
+(code 6095) · the RP-5217's own "Full Sale Price: $0" · condition box A
+"Sale Between Relatives" checked — plus all parties at the SAME ADDRESS
+(39 Nostrand). Consideration records as **$0 — gift/family transfer**, a
+VALUE, not `unresolved`. The rule's shape: one $0 witness = a signal to
+explain; a CONVERGENT SET including the sale-price form's own $0 = the
+explanation itself. The recited purpose closes it: the deed preserves
+Lucy's veterans/senior/STAR exemptions (RPTL 458/467/425 recited) — the
+classic estate-planning shape, stated in the instrument.
+
+## R7-3 — MODERN RICHMOND: THE COVER IS STRUCTURED, AND THE 5217 RIDES ALONG
+
+R-005 (the modern cover is extraction already done) extends to Richmond's
+CRFN-era equivalent: doc type · page count · block/lot · parties WITH
+DECLARED ROLES (grantor/grantee — contrast 1971's role-blind "Mortgagor")
+· the supporting-document list · fees · instrument #. And the RP-5217 in
+the same pdf carried the facts the deed never states: sale price, the
+relatives condition, building class B2, assessed value $32,563, 2-3 family
+use. Reading scope = every page of the file, again (L-9's third proof).
+
+## R7-4 — "And Others" IS COVER SHORTHAND, NOT INDEX TRUNCATION (corrected same hour)
+
+⚠ FIRST VERSION OF THIS ENTRY WAS WRONG, caught at grading by the check it
+should have had before recording: the claim "Darlyne exists only in the
+deed body" was written from the COVER without reading the INDEX party list
+- a one-look claim (G-004's shape, on a table instead of an image). The
+index carries ALL THREE parties. Corrected findings:
+
+- The COVER names one party per side + "And Others"; the INDEX is complete.
+  Cover shorthand ≠ index truncation - the two must be checked separately.
+- The TENANCY (by the entirety) remains instrument-only. True as written.
+- NEW, found by the verification itself: modern Richmond indexes EVERY
+  PARTY TWICE - once "GUERRIERO LUCY" (last-first, role GRANTOR) and once
+  "LUCY GUERRIERO" (first-last, role Grantor). Six rows for three people:
+  the N-4 case-variant split PLUS name-order variance in one table. A
+  party count reads 2x; a name join must normalize BOTH case and order.
+
+RULE: a claim about what the index lacks is made by READING THE INDEX,
+never inferred from the cover - and a wrong recorded finding is corrected
+in place, loudly, the same day it is caught.
+
+## CONFIRMATIONS
+
+- Ancestor rung: prior deed 1977-12-23, recorded 1977-12-28, Liber 2230
+  p.112 (Lucy's 39-year tenure, chainable).
+- The attorney hub, third sighting (R5-4 family): LOUIS LEPORE = notary +
+  return-to; commission-expiry struck and handwritten "May 5, 2018".
+- Metes: 40 x 100 ft, bearings-and-distances (modern form), closes.
+- Reconciliation: instrument/recorded/BBL/type all ✓ · keyed_by=parcel ✓
+  (richmond org 100% covers the modern era) · index amount $0.00 is TRUE
+  here — first document where the index price and the truth agree.
+
+---
+
+# RANDOM-DOCUMENT RUN 8 — `2003010601184002` (Queens 16186/32, MTGE, 43 pp, 2002/2005)
+
+First digital-era ACRIS document. Cold read 43/43 (cover count 42 + 1 cover
+✓), rd reconciled after, sibling row pulled for the package. **Zero new
+columns, zero new vocabulary — streak: five consecutive.** One ruling
+queued (P-3 exercised for the first time).
+
+    MORTGAGE, 113 ROCK HOTEL CORP. -> INTERBAY FUNDING, LLC · $320,000
+    147 Beach 113th Street, Rockaway Park (Queens 16186/32, 3-family)
+    executed 2002-12-11 (ack, KINGS county) · recorded 2005-10-19 15:52:19
+    maturity 2018-01-01 · lender loan no. 2019007 (every page footer)
+
+## R8-1 — MAP-LOTS ARE NOT TAX LOTS: THE DESCRIPTION CITES A DIFFERENT NAMESPACE
+
+Schedule A describes "Lot Nos. 359, 360, 361 and 362 in Block No. 7" — of
+the **"Map of Rockaway Park" FILED IN 1889**. The tax parcel is Block 16186
+Lot 32, ONE lot. A keyer that reads lot numbers out of a metes description
+would mint FOUR phantom parcels in a block namespace that stopped existing
+generations ago. RULE: the description's lot citations are a REFERENCE
+(the filed map is the authority they point at), never a key; the key comes
+from the cover/index BBL, and the rd proved it right (both package rows:
+4161860032). Same family as the reel-vs-BBL trap (a number's namespace is
+part of the number).
+
+## R8-2 — THE PACKAGE IS THE STORY; ONE MEMBER IS ONLY A CLAUSE OF IT
+
+Schedule A: "Being the same premises CONVEYED to the parties of the first
+part herein by deed recorded SIMULTANEOUSLY HEREWITH." The sibling
+`...001` (rd): **CORRECTION DEED, MATTHEW SAFOS -> the corporation, $0,
+recorded 2005-10-19 15:52:18 — ONE SECOND before the mortgage.** And the
+mortgage's signer: Matthew Safos, President of the borrower. So: a
+purchase-money mortgage signed 2002-12-11 whose recording waited 1,043
+days — and the CORRECTION deed recorded with it reads as why. ⚠ HYPOTHESIS,
+NOT FACT: "title defect cured before the lender would record" is an
+inference from timestamps and the word CORRECTION; the sibling's 3 pages
+were not opened this run, and the inference is labeled so a later reader
+knows it was never verified. (M-012's rule at package scale: capture the
+evidence, do not judge.) D-3's new extreme:
+the sign->record gap now spans 0 to 1,043 days, and here the LAG ITSELF
+is evidence — a package recorded years late with a correction deed at its
+head is a title-cure story told entirely by timestamps.
+
+## R8-3 — THE DIGITAL INDEX CARRIES MONEY (G-010 IS FILM-SCOPED), AND DISAGREES WITH ITSELF ELSEWHERE
+
+rd `amount: $320,000.00` echoes the instrument exactly — G-010 ("the index
+amount is dead") is hereby SCOPED to the film/pre-ACRIS era; digital-era
+amounts are live and usable as a witness. But the same index calls the
+property 3-FAMILY on the mortgage row and 2-FAMILY on the deed row one
+second apart — and the examiner's handwritten note on p2 says "converted
+rooming house." Index fields are per-row claims, never parcel facts.
+
+## R8-4 — THE ITEMIZED TAX PANEL IS ITS OWN RATE TABLE
+
+County $1,600 (0.50%) + City $3,200 (1.00%) + TASF $800 (0.25%) + MTA
+$800 (0.25%) = **$6,400 = 2.00% of $320,000, exact to the dollar.** The
+digital cover doesn't just validate the principal (R-003) — its itemization
+IS the era's rate schedule, self-labeled. Any future principal check can
+verify per-line, which localizes a mismatch to the specific tax instead of
+the total.
+
+## RULING QUEUED (P-3, first use)
+
+    OPEN: does an IN-DOCUMENT absolute assignment of leases & rents
+    (§1.2, "present, absolute assignment... not for additional security
+    only", license back) and the §1.3 UCC security interest in personal
+    property earn their OWN ROWS, or attach as conditions/claims to the
+    ENCUMBRANCE row? Rows written this run: CAPITAL + ENCUMBRANCE only,
+    with both collateral grants as claims marked `ruling: pending`.
+    (Standalone AL&R documents already have their answer — M-010:
+    collateral, not new money. The question is the in-document form.)
+
+## CONFIRMATIONS
+
+- G-018 held: CAPITAL creates (lender->borrower, $320,000, maturity
+  2018-01-01 — the day's first FULLY SUFFICIENT capital event: parties +
+  principal + maturity all read) · ENCUMBRANCE creates (lien, until
+  satisfied), one event_id.
+- The Note holds the rate — `interest_rate: unread, lives in the Note
+  (unrecorded)` — the honest pointer, not a fabrication (the 1981 6.0%
+  lesson standing).
+- Due-on-sale Article 7 as claims, incl. the 49%-equity transfer
+  threshold — a fact brokers ask about, captured with its anchor.
+- D-9 filter: ~30 of 43 pages produced zero rows and zero claims
+  (remedies, waivers, environmental boilerplate, ERISA, notices).
+- Reconciliation: pages 43 ✓ · recorded-to-the-second ✓ · BBL ✓ (one lot,
+  not four) · amount ✓ · keyed_by=parcel ✓ (early-digital range was
+  already keyed).
+
+---
+
+# RANDOM-DOCUMENT RUN 9 — `RC_1003663` (Richmond blk 3333, DEED, 2 pp, 1958)
+
+Oldest document yet (the custodian holds back to 1945). Cold read 2/2,
+reconciled after — party list VERIFIED IN FULL before any claim about it
+(the R7-4 lesson, applied). **Zero new columns, zero new vocabulary —
+streak: six consecutive.** Instrument 4567 · Liber 1420/393-394 ·
+signed 1958-04-17 · recorded 1958-04-22 PM 2:43.
+
+    BARGAIN AND SALE DEED (with covenant vs grantor) - Blumberg form 691
+    CARMILLA BIGGICA, also known as CARMELA BIGGICA -> PIETRO BIGGICA
+    both at No. 284 Atlantic Ave., Staten Island 5
+    THE PREMISES: a FIVE-FOOT STRIP x 100 ft deep - "the most
+    northwesterly 5 feet of Lot No. 683" on the Map of Burgher Farm,
+    Linden Park, SURVEYED 1870 (Map No. 290) - tax block 3333 only in
+    the clerk's hand on the back panel
+
+## R9-1 — THE INDEX EXPLODES AN ALIAS INTO A SECOND PERSON
+
+The instrument says one woman with two spellings: "CARMILLA BIGGICA, also
+known as CARMELA BIGGICA." The index (verified in full) lists THREE party
+rows: Grantor BIGGICA CARMILLA + Grantor BIGGICA CARMELA + Grantee
+BIGGICA PIETRO — **the aka became a phantom second grantor.** A party
+count reads two sellers; an entity spine hunts a woman who does not
+exist. And the DOCUMENT is the identity authority: "also known as" is the
+record itself asserting sameness — an alias edge for free, stated under
+signature. RULE: aka/fka phrases are ENTITY-IDENTITY CLAIMS (capture the
+edge); index party rows sharing a role on an aka instrument are variant
+spellings of one party until the instrument says otherwise. Third member
+of the index-party family: truncation (R4-3), dual-entry casing (R7-4),
+alias explosion (R9-1).
+
+## R9-2 — A DEED CAN CONVEY FIVE FEET (the partial-premises rule, 1958 form)
+
+The conveyance is a 5 x 100 ft sliver of a map lot — a side-strip
+adjustment between family members. The block-scope key (5033330000, lot
+0000 - R5-3 again) is CORRECT for organization, but resolution must read
+the PREMISES, not the key: a chain that treats this as "the parcel
+transferred" moves a whole lot on paper when five feet moved on earth
+(M-005's key-set rule at sub-lot grain). And R8-1 held ONE RUN LATER in
+its 1870 costume: Lot Nos. 682/683 are FILED-MAP lots (Map No. 290,
+surveyed 1870); the custodian keyed the tax block, never the map lots.
+
+## CONFIRMATIONS
+
+- **The 1958 price witness is a FEDERAL documentary stamp** (NY had no
+  RETT until 1968): stamp present, pen-cancelled, denomination
+  UNREADABLE in this scan -> consideration = $10 recited, stamp unread,
+  price unresolved; family markers (same surname, same address) captured
+  per M-012, verdict left to derivation.
+- The attorney hub, FOURTH sighting: JOSEPH A. LOBUE = witness + notary
+  + record-and-return (3074 Amboy Road). The pattern is now 4-for-4 on
+  Richmond family-scale documents: one lawyer IS the transaction's
+  recorded infrastructure.
+- Reconciliation: liber/page ✓ recorded ✓ block ✓ film-era amount $0.00
+  (G-010 scope holds) · keyed_by=parcel ✓.
+
+## P-5 · THE BOOTCAMP LOOP (login 2026-08-22: "run it, grade and ask why
+## it matters, adjust, run again")
+
+The loop the runs have been converging on, now stated as law. Every run:
+
+    1  DRAW      random from the DISK store; coverage-aware (note era/
+                 type/shape drawn so far; prefer unseen shapes; never
+                 cherry-pick ease)
+    2  READ COLD the whole file, open-events ledger maintained (P-1),
+                 per-step guards loaded (P-2)
+    3  RECONCILE against the rd row, field by field; NEGATIVE claims
+                 about the index require reading the index (R7-4);
+                 package siblings pulled when the document cites them
+    4  VERDICTS  the three tests, graded honestly, WITH the miss ledger
+                 - an unflagged miss found later costs double
+    5  WHY-PASS  ask "why does it matter" of everything kept - as a
+                 FILTER it selects claims; as an ANSWER it may only
+                 produce LABELED HYPOTHESES (run 8's lesson)
+    6  ADJUST    new rules/refinements/corrections written in place;
+                 judgment calls to the RULINGS QUEUE (P-3), never
+                 decided silently
+    7  BANK      the entries ride the nightly push (or refresh.ps1 now)
+    8  REPEAT    the adjustment shapes the next draw
+
+The streak (runs with zero schema changes) is measured ACROSS this loop;
+grading is INSIDE it. The loop is what a production harness will one day
+execute with a VLM in step 2 - which is why every step must stay
+mechanical enough to hand off.

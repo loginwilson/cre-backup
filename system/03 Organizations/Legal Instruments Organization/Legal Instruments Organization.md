@@ -270,3 +270,24 @@ RULE: a completion question about a parcel is answered from keys + By
 Document, never by listing `By Parcel/`. A tree only a retired pilot wrote is
 an audit of the pilot, not of the corpus. (Same family as reading a filter's
 own output.)
+
+## ⚠ ROUTE-3 GUARD: FILED-MAP LOTS ARE NOT TAX LOTS (bootcamp R8-1, 2026-08-22)
+
+Route 3 reads the PDF for the parcel — which means reading descriptions,
+and descriptions cite lot numbers from PRIVATE FILED MAPS, not the tax
+roll. Measured on `2003010601184002`: Schedule A says "Lot Nos. 359, 360,
+361 and 362 in Block No. 7" — of the "Map of Rockaway Park" FILED 1889.
+The tax parcel is 4-16186-0032, ONE lot. A route-3 keyer that trusts
+description numbers writes FOUR phantom parcels in a block namespace that
+no longer exists, each looking precise.
+
+THE TELL is in the text itself: "as laid down on a certain map entitled
+'...' filed in the Office of the County Clerk" — numbers following that
+phrase belong to the MAP's namespace. RULE: route 3 keys from (in order)
+the cover/back-panel block-lot block · a tax-map (Section/Block/Lot)
+citation · the address resolved against the spine — NEVER from a
+description's lot numbers when a filed-map citation governs them; those
+are REFERENCES to the map. Same law as R5-3 (Richmond lot 0000 =
+block-scope) and the reel-number-read-as-BBL incident: **a number's
+namespace is part of the number, and descriptions mix namespaces
+mid-sentence.**
