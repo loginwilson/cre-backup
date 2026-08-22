@@ -50,3 +50,67 @@ bootcamped, by priority: SATISFACTION (debt dies) → ASSIGNMENT OF
 MORTGAGE (debt changes hands) → UCC1 (fixture layer) → SUBORDINATION
 (G-037's native instrument) → EASEMENT/DECLARATION → P/ATTY → R/LIEN →
 WAIVER. Cross off as drawn; resample when exhausted.
+AGREEMENT                      5/6/1988                 FT_2720000716672        1386KB
+AGREEMENT                      9/1/1994                 FT_2720004407472        1471KB
+AGREEMENTS                     10/26/1960               RC_1024211               135KB
+AGREEMENTS                     12/27/1961               RC_1049189                63KB
+AGREEMENTS                     2/13/1953                RC_1056868               360KB
+AGREEMENTS                     3/3/1972                 RC_1009474               217KB
+AGREEMENTS                     7/1/1969                 RC_105378                113KB
+ASSIGNMENT, MORTGAGE           1/14/2004 6:12:08 PM     2003021302118001         134KB
+ASSIGNMENT, MORTGAGE           10/26/1998               FT_2850006316785         123KB
+ASSIGNMENT, MORTGAGE           10/5/1982                FT_2890000566689         317KB
+ASSIGNMENT, MORTGAGE           10/8/1986                FT_2970000656597         130KB
+ASSIGNMENT, MORTGAGE           11/29/1991               FT_2710000820471         221KB
+ASSIGNMENT, MORTGAGE           11/8/1989                FT_2840000764284         109KB
+ASSIGNMENT, MORTGAGE           12/1/1988                FT_2870000734687         143KB
+ASSIGNMENT, MORTGAGE           12/28/1990               FT_2910000798291         216KB
+ASSIGNMENT, MORTGAGE           2/16/1988                FT_2960000708196         185KB
+ASSIGNMENT, MORTGAGE           3/11/1988                FT_2920000711192         648KB
+ASSIGNMENT, MORTGAGE           3/13/1990                FT_2740000774674         103KB
+ASSIGNMENT, MORTGAGE           3/13/2002                FT_2820008040382         169KB
+ASSIGNMENT, MORTGAGE           3/2/2001                 FT_2910007538291          88KB
+ASSIGNMENT, MORTGAGE           3/26/1997                FT_2930005546293         294KB
+ASSIGNMENT, MORTGAGE           3/9/1987                 FT_2810000672481         325KB
+ASSIGNMENT, MORTGAGE           4/17/2001                FT_2740007609474         129KB
+ASSIGNMENT, MORTGAGE           5/30/1985                FT_2870000617987         107KB
+ASSIGNMENT, MORTGAGE           6/13/2001                FT_2750007693575         131KB
+ASSIGNMENT, MORTGAGE           7/10/2002                FT_2900008707490          99KB
+ASSIGNMENT, MORTGAGE           7/15/2003 1:24:08 PM     2003032700250001         142KB
+ASSIGNMENT, MORTGAGE           7/17/1989                FT_2840000755384         180KB
+ASSIGNMENT, MORTGAGE           9/23/1966                BK_6640023700437         141KB
+DECLARATION                    1/22/1976                RC_1032054               214KB
+DECLARATION                    12/21/2005               RC_1004683               131KB
+DECLARATION                    6/26/1984                RC_1029519               107KB
+DECLARATION                    7/25/2007                RC_1021905               106KB
+EASEMENT                       10/6/1969                RC_1003223               100KB
+EASEMENT                       7/31/1995                RC_1000859                59KB
+LEASE                          5/13/1990                FT_2710000782271         412KB
+LEASE                          8/1/1956                 RC_1050386               891KB
+P/ATTY                         10/30/2018               RC_1044085               117KB
+P/ATTY                         11/2/2005                RC_1018235               111KB
+P/ATTY                         12/16/2014               RC_1021058               301KB
+P/ATTY                         5/29/2018                RC_1051529               585KB
+P/ATTY                         6/29/2007                RC_1043123               192KB
+POWER OF ATTORNEY              1/24/1983                FT_2920000571492         132KB
+POWER OF ATTORNEY              4/1/2005 3:26:23 PM      2003031001828001         277KB
+POWER OF ATTORNEY              4/30/2004 10:10:24 AM    2003030601489001         243KB
+POWER OF ATTORNEY              5/19/1997                FT_2740005615674         343KB
+RELEASE                        9/19/1988                FT_2790000728279         211KB
+SUNDRY AGREEMENT               11/15/1967               BK_6730058000213         222KB
+SUNDRY AGREEMENT               8/1/1994                 FT_2940004364594         268KB
+UCC3 RELEASE/UCC AMENDMENT     2/26/1990                FT_2860003881386          53KB
+
+[exited with code 0]
+
+# RESTOCK 2026-08-22 (evening) — the missing types found
+
+Appended above: 22 ASSIGNMENT-MORTGAGE (1966 BK_ through 2004 digital —
+the lender-chain edge in every era), 4 DECLARATION (1976/1984/2005/2007
+Richmond), 2 EASEMENT (1969, 1995), 9 POWER OF ATTORNEY (1983-2018,
+film + digital + modern RC), 2 LEASE (1956 at 891KB!, 1990 film), 7
+AGREEMENT(S) (1953-1994), 2 SUNDRY AGREEMENT (a NEW type name, 1967 BK_
++ 1994 film), 1 RELEASE 1988, 1 UCC3 RELEASE 1990. Drawn so far from
+board: SAT 2018 (run 25) · SUBORDINATION 2004 (run 26) · R/LIEN 1950
+(run 27) · UCC 2013 (run 28) · WAIVER 1972 (run 29) · UCC3 TERMINATION
+2000 (run 30) · R/LIEN 2018 (run 31) · UCC3 CONTINUATION 1991 (run 32).
