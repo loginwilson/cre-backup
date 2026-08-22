@@ -3782,3 +3782,99 @@ and WHEN it comes due.
   p25) · type CONSOLIDATION AGR ✓ · recorded 9/16/2009 ✓ · parties 3/3
   full-printed ✓ · instrument = land doc# (R13-3) · amount $0.00
   (R13-4).
+
+# RANDOM-DOCUMENT RUN 14 — RC_103895 · TRUSTEE'S PARTIAL RELEASE · 1944
+
+6 pages, typed liber transcription (book 865 pp.97-102), the first
+CORPORATE-TRUST instrument drawn. Made 1943-12-30, recorded 1944-02-04
+2:02 P.M. (Charles F. Pallister, Clerk; return to Title Guarantee and
+Trust Co., 56 Bay St., St. George). CITY BANK FARMERS TRUST COMPANY
+(22 William Street, Manhattan), as Trustee under Brooklyn Edison's
+Mortgage Trust Indenture, releases-and-quitclaims to BROOKLYN EDISON
+COMPANY, INC. (360 Pearl Street, Brooklyn), for $1, four Arthur Kill
+waterfront parcels — "Parcel No. 29" of the indenture, block 7167 —
+because Edison's board resolved the land no longer necessary and sold
+it to ROSEVILLE IMPROVEMENT COMPANY, INC. for $67,500 ($32,500 cash +
+$35,000 purchase-money bond and mortgage). The 1936-05-15 indenture is
+a BLANKET lien ("all its plant and property then or thereafter owned or
+acquired") recorded in TWO counties (Kings liber 8113 mtges p.266;
+Richmond Liber 742 mtges p.1; 1938-11-15 supplement Kings 8322/79,
+Richmond 768/541). Rest-of-lien-unaffected clause. Executed Walter
+Brown, VP (resides 12 Cole Terrace, New Rochelle); attest H. Katterner,
+Asst. Secretary; ack 1943-12-30 NY County before Francis M. Pitt
+(Nassau notary, certs filed in five counties, commission expires
+1945-03-30); PLUS county-clerk authentication No. 38170 (Archibald R.
+Watson, 1944-02-03) certifying the notary himself.
+
+## R14-1 — THE RELEASE LEAKS THE PRICE (cross-document price witness)
+
+The release recites the UNDERLYING SALE's full consideration structure:
+$67,500, split $32,500 cash + $35,000 purchase-money bond and mortgage.
+The deed to Roseville (a separate instrument) almost certainly recites
+$1 — but ITS price is sitting HERE, in the lienholder's paperwork,
+because the trustee needed the sale facts to justify the release. Rule:
+a release/consent instrument is a price-witness CLAIM for its sibling
+conveyance; extraction must bank the recital with anchors so resolution
+can attach it to the deed's event. The $10-recital wall has a
+documented crack: follow the lien paperwork.
+
+## R14-2 — DISCLAIMED RECITALS (claims carry an author)
+
+"The recitals herein are made by Brooklyn Edison Company, Inc., and
+City Bank Farmers Trust Company assumes no responsibility therefor."
+The instrument itself declares WHO asserts its facts — the signer
+disclaims them. RULING (decided in-run, P-3 satisfied): NO new column —
+the disclaimer is itself a claim anchored to its line; the claims tier
+already records verbatim text with anchors, so authorship is
+recoverable at resolution time. But the lesson stands: a recital's
+author is not always the instrument's maker, and where stated it must
+be captured as a claim.
+
+## R14-3 — BLANKET + AFTER-ACQUIRED LIEN (chronology inverts)
+
+The 1936 indenture lien attaches to property "then or THEREAFTER owned
+or acquired" — a parcel can fall under a mortgage recorded before the
+owner even bought it, and leave it parcel-by-parcel via numbered
+partial releases (the indenture tracks its collateral as its own parcel
+list — "Parcel No. 29"). Resolution consequences: (1) lien coverage is
+not derivable from recording order; (2) partial releases must subtract
+SCOPE from the blanket row, never close it ("all the rest ... shall
+remain subject"); (3) one instrument can live in two counties' libers
+at once — the Richmond cite is not THE mortgage, it is one custodian's
+copy of it.
+
+## R14-4 — A RELEASE FILED AS "DEED" (the catch-all hides lien surgery)
+
+rd doc_type: DEED. The instrument's operative words are quitclaim-form
+("grant, remise, release, quitclaim and set over"), and the register
+filed it as a conveyance — but its function is release-of-lien, and
+title does not move (Edison already owned; the trustee held only the
+security interest). A chain-walker trusting rd types would insert a
+phantom conveyance from a bank to Edison. G-008 extended into the
+pre-war era: the type code is a shelf, the document is the function.
+
+## CONFIRMATIONS
+
+- Key 5071670000 = block 7167 lot 0000 — the BLOCK-SCOPE key on a
+  metes-only multi-parcel instrument, agreeing with the document's own
+  "Section 5 in Block 7167" endnote.
+- Zero party fields in rd (all keys printed) — 1944 like 1912: the
+  parties exist only in the document; amount $0.00 against $67,500 of
+  recited consideration (amount-blind index, R13-4 family).
+- Book 865 / page 97 verified by internal page numerals 98-102 on
+  pp.2-6 (start = 97, arithmetic not trust).
+- instrument "2997" ≠ the face's "(No. 19147 FEE $7.00)" — two more
+  members of the number-namespace family on one document; verified by
+  liber/page + date, never by number-match.
+- Provenance depth 3: signature → notary (five-county certs) →
+  county-clerk authentication of the notary. Corporate-trust execution
+  adds a layer below the ack.
+- Source transcription defect: Crocheron deed cite typed "liber 4620"
+  of deeds p.327 (1916 libers ran ~459-460) — banked as a defect claim,
+  not repaired (never repair a number).
+- Chain citations for future walks: 1936 + 1938 indentures (dual-county
+  libers), the expected Roseville deed, the expected $35,000
+  purchase-money mortgage (Edison as LENDER — a role inversion for the
+  reach ladder), 1916 assembly deeds (Winsor 459/322, Winants estate
+  459/326, Crocheron [459?]/327), water grants 469/294 + 478/490, land
+  grants Timalot (Patents 54/66) and Winant (Patents 44/150).
