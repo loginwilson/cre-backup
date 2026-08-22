@@ -10,3 +10,4 @@ run 12 · RC_1002473 · 2026-08-22 · 2/2 pages · 0 new columns · streak 9 · 
 run 13 · RC_1043006 · 2026-08-22 · 27/27 pages · 0 new columns · streak 10 · modern CEMA + §255 affidavit + marginalia · reader: fable-5 direct-pdf
 run 14 · RC_103895 · 2026-08-22 · 6/6 pages · 0 new columns · streak 11 · 1944 corporate-trust partial release + price leak · reader: fable-5 direct-pdf
 run 15 · RC_1023 · 2026-08-22 · 5/5 pages · 0 new columns · streak 12 · 1975 priced partial release, REL-vs-DEED era lesson · reader: fable-5 direct-pdf
+run 16 · FT_2750004791475 · 2026-08-22 · 5/5 pages · 0 new columns · streak 13 · first OCCUPANCY + first Bronx + G-037 exercised · reader: fable-5 direct-pdf

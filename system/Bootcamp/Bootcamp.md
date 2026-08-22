@@ -3948,3 +3948,76 @@ instrument's operative words; roles identify the relationship acted on.
 - Chain expectations banked: the 1974 $350,000 construction mortgage
   (2073/326), sibling releases against it (cadence!), and LBS's sale
   deeds out of block 5442 that these releases enabled.
+
+# RANDOM-DOCUMENT RUN 16 — FT_2750004791475 · MEMORANDUM OF LEASE · 1995 (BRONX)
+
+5 pages, film (REEL 1331 PG 1560-1564) — FIRST OCCUPANCY INSTRUMENT in
+sixteen runs, and the first non-Richmond draw (Bronx block 4287 lot 18,
+2100 White Plains Road — the corpus's FT_ film spans boroughs). U.S.
+Postal Service Facilities Department forms: GEORGE TSILOGIANNIS (c/o
+Galaxy Management, 1757 Merrick Avenue, Merrick; return address 111
+Fifth Avenue) leases ~1,232 SF of single-story storefront (51'1"x23'3"
++ 10'8"x5'0", NE corner White Plains Road & Maran Place) to the UNITED
+STATES POSTAL SERVICE ("Parkway Finance Station"), executed as of
+1995-03-21, term 1995-06-01 to 2000-05-31, ONE 5-year renewal at USPS's
+sole option on 60 days' notice; USPS may terminate on 60 days' notice
+only during the renewal term. Attached: TWO Mortgagee's Agreements —
+ATLANTIC BANK OF NEW YORK (Linda M. Kolachny, VP; holder of the FIRST
+mortgage $841,930.80 AND a THIRD mortgage $6,371,572.80) sworn
+1995-02-06, and OLYMPIAN BANK (512 86th Street, Brooklyn; rank
+UNSTATED; $396,091.51) sworn 1995-02-13 — each consenting to the lease
+and agreeing any foreclosure sale is made SUBJECT TO the lease.
+Contracting officer Henry Burmeister acknowledged in HOBOKEN, NEW
+JERSEY (Hudson County). Recorded Bronx 1995-07-24 with transfer-tax
+stamp block (control 007160; slid 015210 stamped and indexed).
+
+## R16-1 — THE MEMORANDUM SHAPE: RENT IS OMITTED BY DESIGN
+
+A memorandum of lease is a NOTICE instrument: parties, premises, term,
+options — and NO RENT. The money lives in the unrecorded lease. This is
+OCCUPANCY's twin of the $10 deed recital, but structural: no stamp or
+sibling will supply it; quantity resolves `unavailable` (the record
+cannot hold it), while TERM is fully witnessed and is the product here
+(occupancy horizon + option ladder). Extraction must not hold the row
+open waiting for a rent that is not coming.
+
+## R16-2 — G-037 EXERCISED, AND ITS FIRST CONDITIONAL (rows 2 and 3)
+
+The mortgagee agreements are TITLE·modifies per G-037: from = the bank
+yielding rank, to = the USPS leasehold advanced (lease survives
+foreclosure); liens untouched. Atlantic's form carries a TYPED INSERT:
+"Provided that there are no defaults (after notice, if required, and
+expiration of any applicable cure period) by the U.S. Postal Service" —
+a NEGOTIATED CONDITION on rank-yielding, absent from Olympian's
+otherwise-identical government form. Same form, different bargains:
+extraction reads each copy, never assumes form-text is constant.
+
+## R16-3 — A LEASE MEMO IS A CAPITAL INTELLIGENCE SOURCE (and the index hides it)
+
+The recorded lease package discloses the parcel's full debt stack WITH
+BALANCES: 1st $841,930.80 (Atlantic), $396,091.51 (Olympian, rank
+unstated), 3rd $6,371,572.80 (Atlantic — larger than the first;
+⚠ HYPOTHESIS: cross-collateralized/blanket). The odd cents mark these
+as OUTSTANDING BALANCES at consent time, not faces (L-2 qty_role) — a
+mid-life debt snapshot no mortgage instrument provides. And the index
+shows NONE of it: parties = lessor + lessee only; the banks are
+invisible (attached instruments' parties unindexed), amount $0.00. The
+richest CAPITAL fact in the package is index-dark.
+
+## CONFIRMATIONS
+
+- rd: LEASE / "MEMORANDUM/LEASE" remarks ✓ · 5 pages ✓ · reel 1331-1560
+  ✓ · recorded 7/24/1995 = stamp ✓ · borough BRONX, BBL 2042870018
+  ENTIRE LOT ("PRE-ACRIS" use flag) ✓ · slid 015210 = the ink stamp ✓.
+- Index party defect: "UNITED STATES POSTALSERVICE" (concatenation, no
+  space) — transcription-defect family; role fields empty on this film
+  index era.
+- keyed_by/key empty — FT film rides ACRIS parcels, org backfill
+  pending (run 11 pattern).
+- Out-of-state acknowledgment (New Jersey notary John P. D'Ercole, for
+  the federal contracting officer) — provenance may cross state lines
+  on government instruments.
+- Government tenant (USPS) — occupancy signal class; renewal/termination
+  asymmetry (options run one way, to the tenant).
+- OCCUPANCY joins the exercised set: 6 of 11 functions now seen live
+  (TITLE, ENCUMBRANCE, CAPITAL, COST, OCCUPANCY, IDENTITY-via-maps).
