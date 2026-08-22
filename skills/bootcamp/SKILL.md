@@ -45,31 +45,28 @@ are the constitution; this skill is only the trigger.
   The LAST run of the night stays ungraded — the login grades it in
   the morning (keeps the human in the calibration loop).
 
-## 1 · DRAW — random from the disk store, coverage-aware
+## 1 · DRAW — the DRAW BOARD first, db-first always
 
-Check `D:\CRE Decoding System\Bootcamp\Run Log.md` for eras/types already
-drawn. Sample from disk (NEVER a nav-table scan — both attempts to sample
-"complete" rows from the hot table had to be killed):
+`D:\CRE Decoding System\Bootcamp\Draw Board.md` holds typed candidates
+(doc_type · recorded date · id · size) and marks what has been drawn.
+Check `Run Log.md` for eras/types already covered, then take an UNSEEN
+type × era cell — never prefer ease.
 
-```python
-import pathlib, random
-random.seed()
-S = pathlib.Path(r"D:/CRE Decoding System/02 Acquisitions/Legal Instruments Acquisition/By Document")
-years = [d for d in S.iterdir() if d.is_dir()]
-picks = []
-for _ in range(10):
-    p = random.choice(years)
-    for _ in range(4):
-        kids = [k for k in p.iterdir() if k.is_dir()]
-        if not kids: break
-        p = random.choice(kids)
-    if p.is_dir():
-        pdfs = list(p.glob("*.pdf"))
-        if pdfs: picks.append(random.choice(pdfs))
-print(random.choice(picks))
-```
+**The db is READABLE while the lanes acquire** (login 2026-08-22): WAL
+allows unlimited readers alongside the single writer. Open read-only
+with a timeout and use INDEXED lookups (`WHERE id=?`, `id IN (...)`) or
+a BOUNDED rowid window (`WHERE rowid BETWEEN r AND r+500`) at a random
+offset — that is a range read, not a scan. **Barred: full-table scans
+(they walk millions of rows) and any write (that seat is the lanes').**
 
-Prefer an unseen shape (era/type/length) among the picks; never prefer ease.
+The rd row IS the draw sheet — it carries `doc_type`, `pages`, the
+recorded date, and everything needed to open the pdf. **Derive the path
+from the recorded date** (`By Document\<YYYY>\<MM Mon>\<DD>\<id>.pdf`);
+NEVER `rglob` the By Document tree — a full-tree glob hangs for minutes
+and was killed twice.
+
+To restock the board with unseen types, sample ids from disk directory
+walks and type them with ONE batched indexed lookup (100 ids per query).
 
 ## 2 · READ COLD — every page, no rd fields in view
 
@@ -120,6 +117,11 @@ anchored, five-state honest, plus claims) · **3 · The event test** (all
 eleven functions asked of every page; ledger closed empty or honestly).
 Then a candid GRADE with the miss ledger — an unflagged miss found later
 costs double.
+
+⚠ **The verdict is a TEACHING artifact, never the DB record** (THE
+LENGTH LAW, Bootcamp.md). The corpus stores rows + gated claims +
+a summary GENERATED FROM the rows — not this prose. Length in the
+verdict is free; length in the spec costs cluster wall-clock.
 
 ## 5 · WHY-PASS
 
