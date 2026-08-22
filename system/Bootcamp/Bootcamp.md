@@ -4021,3 +4021,69 @@ richest CAPITAL fact in the package is index-dark.
   asymmetry (options run one way, to the tenant).
 - OCCUPANCY joins the exercised set: 6 of 11 functions now seen live
   (TITLE, ENCUMBRANCE, CAPITAL, COST, OCCUPANCY, IDENTITY-via-maps).
+
+# RANDOM-DOCUMENT RUN 17 — RC_2825423 · DEED (TRUST TRANSFER) · 2026
+
+7 pages, born-digital modern Richmond — THE FRESHNESS FRONTIER: recorded
+2026-08-13, randomly drawn from the store 2026-08-22, already acquired
+and parcel-keyed (ingest-to-bootcamp latency ≤9 days; clerk pipeline:
+reviewed "HC 8-12-26", recorded 8-13 11:08:57). Bargain & Sale deed
+with covenant against grantor's acts, made 2026-06-16 (58-day
+exec→record lag): LISA ARGENZIANO → JAMES ARGENZIANO as Trustee of THE
+LISA ARGENZIANO IRREVOCABLE TRUST, both of 155 Bay Street 5H — Unit 5H,
+The Pointe Condominium (block 1 lot 2044 + 1.187% common interest;
+declaration recorded 2012-02-16 as Land Doc 414704, Condo Plan 147).
+TEN dollars; RETT $0.00 / RPT $0.00 (code 281 lines); RP-5217 Full Sale
+Price $0, class R4, assessed $40,173. Prior deed cited as LAND DOC
+#664055 (Gerald P. Cucchiara, Jr., 2017). Notary = submitting attorney
+= return-to: Matthew Lenza. LAND DOC# 1016553.
+
+## R17-1 — THE MODERN CHAIN LIVES IN THE LAND-DOC NAMESPACE
+
+The deed cites its own history by LAND DOC number (#664055 prior deed;
+#414704 condo declaration) — no libers, no reels. Modern Richmond
+chain-walking is a land-doc-number graph, and rd's instrument field
+holds exactly that number (1016553 here; R13-3 settled which of the
+cover's numbers it is). The citation namespaces by era: Patents → liber
+(two series) → reel-page → land doc. One chain, four addressing schemes.
+
+## R17-2 — THE $0 THAT VERIFIES (the stamps-rule refined, not broken)
+
+"$0 never verifies" is a rule about SALES. Here zero is affirmatively
+witnessed three ways — RETT $0 + RPT $0 (coded lines) + RP-5217 "Full
+Sale Price: 0" — and the context (grantor → her own irrevocable trust,
+same address, trustee is family) says NON-SALE: a beneficial transfer.
+The event is real TITLE·transfers; the price is TRUE ZERO, not hidden.
+Flag NOMINAL (excluded from comps, per the nominal-deed discipline);
+the trust unmask is the product: legal owner becomes the trust, the
+beneficial family stays. RP-5217 condition boxes checked "J None" — not
+even "sale between relatives" — the CHECKBOX layer under-reports;
+context and deed text outrank the form's self-description.
+
+## R17-3 — TRUST DUAL-ENTRY (one grantee, two index rows)
+
+Cover and index both render the grantee twice: "The Lisa Argenziano
+Irrevocable Trust" (company row) + "James Argenziano" (name row) — one
+legal grantee (trustee-of-trust) as two party rows. The R7 dual-entry
+family's trust variant: identity resolution must merge trustee+trust
+rows into one titleholder, or every trust deed double-counts its
+grantee. (The index faithfully mirrors the cover here — the defect is
+in the CONVENTION, not the transcription.)
+
+## CONFIRMATIONS
+
+- rd: key 5000012044 (condo UNIT lot — the spine's condo-billing lesson
+  territory) ✓ · instrument = LAND DOC 1016553 ✓ · Deed · 8/13/2026 ✓ ·
+  parties 3 rows ✓ · amount $0.00 (TRUE zero, R17-2).
+- Assessed value $40,173 + class R4 banked as VALUE·observes claims
+  (RP-5217 is a VALUE source riding inside deed packages).
+- Attorney-notary-submitter one person (Matthew Lenza) — modern small-
+  transfer anatomy; notary reg 02LE6117255, expires 2028-10-25.
+- Blank ack variants + 40-row attachment signature sheet = form
+  anatomy, zero events (G-form-noise family).
+- Open chain question (NOT asserted): the 2017 cite says "parties of
+  the first part" — whether Lisa took title alone in #664055 is
+  answerable only there; if she had a co-owner, this deed moved only
+  her interest. Banked as chain expectation.
+- 58-day execution→recording lag measured — the freshness product's
+  caveat: recording date ≠ event date; both are carried.
