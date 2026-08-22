@@ -1,9 +1,9 @@
 ---
 name: bootcamp
-description: Run one full extraction-bootcamp iteration per the P-5 loop — draw a random completed document from the store, read it cold, reconcile against its rd row, grade it against the three tests, record entries in Bootcamp.md, and bank. Use when the user types /bootcamp (optionally /bootcamp N for N consecutive iterations, e.g. overnight learning runs).
+description: Run extraction-bootcamp iterations per the P-5 loop — draw a random completed document from the store, read it cold, reconcile against its rd row, grade it against the three tests, record entries in Bootcamp.md, and bank. Use when the user types /bootcamp (one run), /bootcamp N (N consecutive runs), or /bootcamp auto (keep running until the user returns — overnight learning mode).
 ---
 
-# THE BOOTCAMP LOOP — one iteration of P-5
+# THE BOOTCAMP LOOP — iterations of P-5
 
 **The law is `D:\CRE Decoding System\Bootcamp\Bootcamp.md`. Read it in full
 before the first iteration of a session** (three Read calls, ~2,900 lines) —
@@ -11,8 +11,20 @@ before the first iteration of a session** (three Read calls, ~2,900 lines) —
 four process laws (P-1..P-4), the loop itself (P-5), and every G/R/M entry
 are the constitution; this skill is only the trigger.
 
-If the user passed a number N, run N consecutive iterations, each complete
-before the next begins. Default 1.
+## Modes (from the argument)
+
+- **no argument** — ONE iteration, then stop and report. The
+  watch-and-monitor mode: the login likes to push back mid-run, and the
+  best rules have come from exactly that.
+- **a number N** — N consecutive iterations, each complete (recorded and
+  graded) before the next begins.
+- **`auto` / `until-back`** — the overnight mode: keep running full
+  iterations back-to-back until the login sends a message; ALWAYS finish
+  and record the current run before stopping (a half-recorded run is
+  worse than one fewer run). Report a one-line progress note after each
+  run (doc id · pages · grade · streak) so the morning read is a table,
+  not archaeology. Corrections and rulings queue up as usual — never
+  decided silently just because nobody is watching.
 
 ## 1 · DRAW — random from the disk store, coverage-aware
 
