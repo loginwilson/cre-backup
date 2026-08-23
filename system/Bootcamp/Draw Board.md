@@ -114,3 +114,25 @@ AGREEMENT(S) (1953-1994), 2 SUNDRY AGREEMENT (a NEW type name, 1967 BK_
 board: SAT 2018 (run 25) · SUBORDINATION 2004 (run 26) · R/LIEN 1950
 (run 27) · UCC 2013 (run 28) · WAIVER 1972 (run 29) · UCC3 TERMINATION
 2000 (run 30) · R/LIEN 2018 (run 31) · UCC3 CONTINUATION 1991 (run 32).
+
+## DRAWN — keep this current or the board re-offers what is done
+
+Marked off through run 36: SAT 2018 (r25) · SUBORDINATION 2004 (r26) ·
+R/LIEN 1950 (r27) · UCC 2013 (r28) · WAIVER 1972 (r29) · UCC3
+TERMINATION 2000 (r30) · R/LIEN 2018 (r31) · UCC3 CONTINUATION 1991
+(r32) · ASSIGNMENT MORTGAGE 1966 BK_6640023700437 (r33) · DECLARATION
+1976 RC_1032054 (r34) · LEASE 1956 RC_1050386 (r35) · SUNDRY AGREEMENT
+1967 BK_6730058000213 (r36).
+
+STILL UNOPENED: POWER OF ATTORNEY (9 candidates, 1983-2018 — the
+authority layer: who may sign for whom, a stakeholder-graph edge) ·
+EASEMENT (1969, 1995) · DECLARATION x3 more (1984, 2005, 2007 — one may
+be a condo declaration = IDENTITY·creates, never yet seen) · LEASE 1990
+film · AGREEMENT/AGREEMENTS (7, 1953-1994 — catch-alls; per R36-1 read
+rd REMARKS first, they may name the true class) · SUNDRY AGREEMENT 1994
+· RELEASE 1988 · UCC3 RELEASE 1990 · 21 more ASSIGNMENT, MORTGAGE
+across 1982-2004.
+
+RULE (from the r33-r36 lapse): mark the board IN THE SAME COMMIT as the
+run entry. An unmarked board silently re-offers drawn documents, and the
+loop's coverage claim becomes false without anything looking wrong.

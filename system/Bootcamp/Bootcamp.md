@@ -5793,3 +5793,30 @@ conflation, instrument's own nouns preserved, parcel key EARNED with
 both document-side witnesses named and the weaker half (lot 78, margin
 only) flagged, length down ~50% from the R35 redo with no content loss.
 The trigger list fired where the two previous runs failed.
+
+# THE FOUR-FILE CLOSE (login 2026-08-22: "graded filings must be
+# recorded so each bootcamp is improved upon")
+
+An audit at run 36 found the record COMPLETE but not CONSULTABLE: 34 run
+entries banked, grades all recorded, rulings queue empty — yet the Draw
+Board had not been marked since run 32 (it would have re-offered four
+drawn documents), no lexicon existed despite the Context Line depending
+on one, and every graded miss sat in prose where RECURRENCE WAS
+INVISIBLE. That invisibility is exactly how the motive-claim defect
+reached a fourth occurrence.
+
+**A run is not closed until FOUR files are written:**
+
+  1 `Bootcamp.md`     the run entry + any new law
+  2 `Run Log.md`      the one-line stamp (id · pages · streak · grade)
+  3 `Grade Ledger.md` the graded miss BY CLASS + where the fix landed
+  4 `Draw Board.md`   the drawn document marked off
+
+Plus, when a document teaches a class-level term: `Lexicon.md`.
+Plus, when the fix is compose-time behaviour: `Compose Card.md`.
+
+The ledger is the improvement mechanism, not the archive: at grading,
+name the miss CLASS and check whether it already has rows. A class with
+3+ rows is not a discipline problem, it is a MISSING STRUCTURE — stop
+writing rules and change the shape. (That is what produced the trigger
+list after the third motive claim.)
