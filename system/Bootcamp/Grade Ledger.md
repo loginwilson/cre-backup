@@ -46,7 +46,9 @@ grade is harsher: a repeat of a recorded lesson costs double.**
 |---|---|---|
 | **narrative: motive / relationship / era asserted as fact** | 10, 33, 34, 35 | **4 occurrences.** Rule existed from R10; failed twice more. Fixed structurally at R35 with the Compose Card TRIGGER LIST, not another rule. CLEAN at R36 — first evidence the trigger works. Watch for 5 more runs before believing it. |
 | **single-look value on degraded film** | 22, 33, 35 | Crop law written at R19, violated at R33 and R35. R35's violation HID AN EVENT-SHAPING DELETION. Card #9 now names term lines and identity strings explicitly. CLEAN at R36 (crop run before composing). |
-| **qty_role: face vs unpaid vs consideration** | 11, 36 | 2 occurrences, 25 runs apart. Card #10 added. |
+| **qty_role: face vs unpaid vs consideration** | 11, 33, 36 | **3 occurrences → MISSING STRUCTURE, not discipline.** Card #10 is not enough: the row schema must REQUIRE a qty_role value so a bare amount is UNREPRESENTABLE. Queued as a schema change for the extraction spec. |
+| **name integrity (principal misspelled)** | 21 | Found on backward re-check, not at grading. Worst class for a stakeholder product: the join breaks silently while the row looks complete. Principal names get a second look before banking. |
+| **class label applied to an instance** | 25 | The lexicon DEFINES a class; only the document places an instance in it — else a definition becomes a diagnosis. |
 | **vacuous reconciliation ✓** | 33 | Rule added same run; correctly applied at 34, 35, 36. |
 | **length drift** | 35 | Measured 2.4x growth in one day. Card #8. R36 came in ~50% shorter. |
 | **non-canonical vocabulary** | 35 | If no canonical verb fits, it is a RULING to queue, never a verb to coin. |
