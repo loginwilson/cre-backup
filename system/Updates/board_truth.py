@@ -163,6 +163,20 @@ def counts(con):
                       "WHERE pdf='' AND id>=? AND id<?", RC_LO, RC_HI)
     a_todo, t3 = one("acris_todo", "SELECT count(*) FROM navigation "
                      "WHERE pdf='' AND id<?", RC_LO)
+    # ⚠ TIMESTAMP THE COUNTS, NOT THE WRITE. The rate was differenced against
+    # the previous anchor's `at`, which is when the file was WRITTEN - and the
+    # nullprobe runs BETWEEN the counting and the write (121-217 s of it). So
+    # the span was understated by exactly that gap and the rate came out
+    # inflated by the same factor:
+    #
+    #     published  21.50/s   span 174 s   <- write-to-count
+    #     true        9.56/s   span 393 s   <- count-to-count
+    #     ratio 2.25 = the nullprobe sitting inside the interval
+    #
+    # Caught only because the column had been measured directly and
+    # independently (9.56/s over 448 s) an hour earlier. **A derived number
+    # needs an independent measurement, not a plausible one.**
+    counted_at = time.strftime("%Y-%m-%dT%H:%M:%S")
     totals, when = ledger_totals()
     rc_total, total = totals.get("richmond", 0), None
     a_total = totals.get("acris", 0)
@@ -194,18 +208,16 @@ def counts(con):
         "richmond": (rc_total, rc_todo),
         "null_probe": nulls,
         "ledger_run": when,
+        "counted_at": counted_at,
     }
 
 
 def measure():
     # the previous anchor, so this pass can publish a table-derived rate
-    prev, age_s = None, 0.0
+    prev = None
     if OUT.exists():
         try:
-            import datetime as _dt
             prev = json.loads(OUT.read_text(encoding="utf-8"))
-            age_s = (_dt.datetime.now()
-                     - _dt.datetime.fromisoformat(prev["at"])).total_seconds()
         except Exception:
             prev = None
 
@@ -219,6 +231,7 @@ def measure():
            "source": "todo counted from pdf column; total from sync ledger",
            "depends_on": "navigation LEVEL (rows == ledger)",
            "ledger_run": c.get("ledger_run"),
+           "counted_at": c.get("counted_at"),
            "null_probe_first_200k": c["null_probe"], "sources": {}}
     # ⚠ AN IMPOSSIBLE NUMBER MUST REFUSE TO PUBLISH. There was no sanity gate
     # here, so a bad denominator sailed straight through to a written anchor:
@@ -255,7 +268,13 @@ def measure():
         # it observes; this window IS the update.
         if prev:
             p = (prev.get("sources") or {}).get(src)
-            span = age_s
+            # count-to-count, so the nullprobe cannot sit inside the span
+            span = 0.0
+            if prev.get("counted_at"):
+                import datetime as _dt
+                span = (_dt.datetime.fromisoformat(c["counted_at"])
+                        - _dt.datetime.fromisoformat(prev["counted_at"])
+                        ).total_seconds()
             if p and span and span > 60 and p.get("landed") is not None:
                 d = landed - p["landed"]
                 if d >= 0:                 # a lane restart can never un-land

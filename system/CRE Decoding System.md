@@ -1178,3 +1178,58 @@ the distinction is the whole point: aliasing comes from a window SHORTER than th
 update it observes. A 60-second tick sampling a 30-minute step reads 0.0. The
 anchor's own interval IS the update, so it cannot alias. **Same arithmetic,
 opposite verdict, decided by the span.**
+
+
+# ⚠ THE SPAN WAS MEASURED FROM THE WRONG END (2026-08-23 01:31)
+
+The anchor's own rate — the fix for the previous rate bug — **was itself wrong on
+its first run**, and this one is worth writing down because the error was
+invisible from the inside.
+
+`board_truth` differenced two anchors and divided by the time since the previous
+anchor's `at`. But `at` is when the file was **WRITTEN**, and the nullprobe runs
+**between the counting and the write** — 121 to 217 seconds of it. So the counts
+were taken at one time and dated at another:
+
+    counted 01:22:47 ... nullprobe 217 s ... written 01:26:24
+    counted 01:29:20 ... nullprobe 121 s ... written 01:31:22
+
+    true span, count to count    393 s
+    span used, write to count    174 s
+    ratio                        2.26
+
+    published   21.50/s  ·  richmond 32.94/s
+    true         9.56/s  ·  richmond ~13/s
+
+**The published rate was inflated by exactly the probe's own duration.** A
+measurement that includes its own instrument in the interval it reports.
+
+## ⚠ WHY IT WOULD HAVE SURVIVED
+
+21.50/s is not an absurd number. It is the right order of magnitude, it moves
+when the fleet moves, and it would have made every ETA on the board optimistic by
+2.26x — acris pdf reading ~10 days instead of ~22. Nothing internal contradicted
+it. `landed` was right, both anchors were right, the subtraction was right; only
+the denominator was quietly short.
+
+**It was caught for one reason: the column had been counted DIRECTLY and
+INDEPENDENTLY an hour earlier** — twice, 448 s apart, giving 9.56/s. Without that
+external number there was nothing to disagree with.
+
+⚠ **A DERIVED NUMBER NEEDS AN INDEPENDENT MEASUREMENT, NOT A PLAUSIBLE ONE.**
+This is the same rule as the two-tier verification law, applied to a rate: our
+own arithmetic can only ever tell us we are consistent with ourselves.
+
+Fixed by stamping `counted_at` at the moment the counts are taken and
+differencing count-to-count, so the instrument can never sit inside its own span.
+
+## ⚠ AND NOTE WHAT THIS IS THE THIRD OF
+
+    the level    logs vs the pdf column      35% low  (richmond 102,241 vs 156,677)
+    the rate     anchored counter differenced over the wrong window  (1.37 vs 11)
+    the span     write-to-count vs count-to-count      2.26x  (21.50 vs 9.56)
+
+Three attempts at one number, each fixing the previous and introducing the next.
+**Every fix was correct and every fix was incomplete**, because each one moved the
+error somewhere the previous check was not looking. The only thing that ended the
+sequence was measuring the same quantity a second way.
