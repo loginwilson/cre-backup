@@ -6066,3 +6066,82 @@ action that either happened or did not, and can be audited afterwards.
 memory is not recorded. Memory is context-scoped, model-specific, and
 outside the backup. THIS FILE is what informs whoever reads the corpus
 next. Every durable law lands here first; memory holds pointers only.
+
+
+# RUN 38 — RC_1003223 · UTILITY EASEMENT · 1969
+
+5 pages (Liber 1878 pp.59-63). Indenture made 1969-09-15, ack same day
+(Richmond; notary ARTHUR C. CASTELLANO [surname read at 450dpi from a
+degraded stamp, MODERATE confidence], Kings County, commission expiring
+1970-03-30), recorded 1969-10-06 3:35 PM (Augustine B. Casey, County
+Clerk; fee $9.10[?]; return to New York Telephone Co., 101 Willoughby
+St., Brooklyn). MONTREAL DEVELOPMENT CORP. (1645-65th Street, Brooklyn;
+JULIUS KOZIAL, President — name confirmed at 450dpi) grants to NEW YORK
+TELEPHONE COMPANY (140 West Street) a telephone-service easement over
+land shown on Exhibit A, for $1.00 "and other sufficient and valuable
+considerations". Grantor recites it "is constructing or intends to
+construct buildings on said land."
+
+## R38-1 — THE RETT STAMP READS $00.00 (a witnessed zero, and a dated regime)
+
+The Real Estate Transfer Tax stamp — State of New York, Dept. of
+Taxation & Finance, Richmond County serial 008340, "OCT-6'69", PD.
+10955 — carries "= 00.00". Two things follow. (1) A stamped zero is a
+WITNESSED zero (run 17's family, 49 years earlier): the easement grant
+was processed through the transfer-tax counter and assessed at nothing.
+(2) ⚠ R23-1's open question gets a document-side LOWER BOUND: whatever
+its start date, the NYS RETT regime was OPERATING by 1969-10-06,
+because here is its stamp. The 1968 gap hypothesis is not settled —
+only bounded — and it is bounded by evidence rather than by era memory.
+
+## R38-2 — THE EASEMENT BINDS LOTS THAT DO NOT EXIST YET
+
+FIRST clause: the rights run over "all of the lots shown on 'Exhibit A'
+OR AS SUCH LOTS MAY HEREAFTER BE SUBDIVIDED OR CONSOLIDATED". The
+instrument anticipates its own parcels being re-cut and binds the
+successors of that re-cutting. This is the LOT-LINEAGE problem written
+into a 1969 instrument: a parcel-keyed system that indexes this
+easement to today's lots will LOSE it the moment those lots merge or
+split, exactly as retired BBLs drop out of gate-keyed pulls. Encumbrance
+scope must ride LINEAGE, not lot identity.
+
+## R38-3 — AN OPEN BENEFICIARY SET (the grantee may admit other utilities)
+
+THIRD clause: "The right to permit OTHER PUBLIC UTILITY COMPANIES to
+attach or place their cables, wires or facilities within the easement
+area hereby granted." The burdened owner consented once; the grantee
+may thereafter admit parties never named and never signing. For the
+stakeholder graph: an encumbrance's beneficiary can be a SET THAT GROWS
+WITHOUT FURTHER RECORDING — so "who benefits from this easement" is not
+answerable from the record alone, only "who may admit them."
+
+## R38-4 — THE SCOPE LIVES IN AN EXHIBIT THAT CANNOT BE READ
+
+Exhibit A (p.62) is a blueprint-style lot diagram — circled lot
+numbers, "UNR." blocks, a street reading "PE____ ST." — and it does NOT
+resolve at 140dpi OR 400dpi. This is UNREAD-BY-SOURCE (R22-2), tested,
+not assumed. Consequence stated plainly: THE EASEMENT'S EXTENT IS NOT
+DETERMINABLE FROM THIS ARTIFACT. rd's block-scope key (5047200000 =
+block 4720, matching the backer's "Indexed under Block Number 4720 on
+the Land Map") is the only scope available, and it is the BLOCK, not
+the lots. A better copy could settle it; nothing else can.
+
+## CONFIRMATIONS
+
+- rd: EASEMENT ✓ liber 1878/59 ✓ 10/6/1969 ✓ parties 2/2 ✓ · key
+  5047200000 EARNED (backer's block number is a document-side witness)
+  · amount $0.00 — and here it AGREES with a stamped $00.00 rather than
+  merely being blind.
+- PRE-BANK PASS run before banking (Card #12): principal name Julius
+  Kozial re-read at 450dpi (confirmed); notary surname re-read and held
+  at moderate; tax stamp cropped (produced R38-1); exhibit cropped
+  (produced R38-4). The checklist fired on its first outing and two of
+  the four crops changed the entry.
+- Indemnity clause (FOURTH): Company guards excavations and holds the
+  Grantor harmless for injuries from Company negligence — a risk
+  allocation riding an ENCUMBRANCE row as a term claim.
+- Development context READ, not inferred: the grantor's own recital
+  says it is constructing or intends to construct buildings.
+- Attest line left BLANK beneath the corporate seal — execution anatomy
+  (R36 family: parties are not signatories, and forms are not always
+  fully filled).

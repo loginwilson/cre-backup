@@ -139,3 +139,5 @@ loop's coverage claim becomes false without anything looking wrong.
 
 - r37 drawn: P/ATTY 2018 RC_1044085 (limited POA, Freddie Mac -> Ocwen).
   POWER OF ATTORNEY still has 8 candidates.
+
+- r38 drawn: EASEMENT 1969 RC_1003223 (NY Telephone). EASEMENT: 1 left (1995 Con Ed, RC_1000859).

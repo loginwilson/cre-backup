@@ -31,6 +31,7 @@ alone; add it when a document teaches it.**
 | **memorandum of lease** | Recorded notice of a lease stating parties, premises, term and options but NOT rent, by design | R16 |
 | **sublease-back** | The same premises leased in both directions between the same two parties, often same-day; both leases are live simultaneously | R35 |
 | **restrictive covenant scheme** | Developer-imposed use/build rules binding successors; may sunset by DATE, by EVENT, or run perpetually | R12, R24, R29, R34 |
+| **utility easement (blanket)** | A utility's recorded right to install and maintain service lines across described land; typically runs with the land, may bind lots as later subdivided or consolidated, and may allow the grantee to admit other utilities | R38 |
 | **covenant running with the land** | An obligation attaching to the parcel, binding every future owner regardless of who signed | R29, R34 |
 | **tax lien certificate (NYC)** | The City sells delinquent property-tax debt; the lien is assigned into a trust and collected by a custodian. Certificate = distress event; discharge = recovery event | R31 |
 | **estate tax lien** | Attaches automatically at death by statute — no instrument is recorded creating it; its RELEASE is the record's only sighting | R27 |
