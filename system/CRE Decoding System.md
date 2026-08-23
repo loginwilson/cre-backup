@@ -1271,3 +1271,91 @@ tested that step.**
 documents and ran the insert (as a no-op, correctly). The richmond window had
 nothing new because the register is closed at the weekend. Same test design, two
 different depths, decided by what the source happened to be doing.
+
+
+# ⚠ THE BACKUP SCRIPT SAID "pushed" WHEN THE PUSH FAILED (2026-08-23 01:38)
+
+    fatal: unable to access 'https://github.com/...': Could not resolve host
+    refreshed + pushed: 3 file(s) changed
+
+Both lines, from one run. `refresh.ps1` committed locally, the push hit transient
+DNS failure, git wrote the error to stderr, PowerShell carried on, and the script
+printed its success line unconditionally. **The commit existed only on this
+machine and the one line anybody reads said it was banked.**
+
+⚠ **THIS IS THE SAME DEFECT SHAPE AS EVERYTHING ELSE TONIGHT** — a failure that
+renders as success because nothing checked the negative branch — **and it is the
+worst possible place for it.** This script is the thing that stops work being
+lost. Login's instruction was explicit: *"make sure everything is recorded and
+backed up. even the back up repo. I dont want to lose the code."* A backup that
+lies about succeeding is worse than no backup, because it removes the reason to
+check.
+
+FIXED: `$LASTEXITCODE` is checked, one retry (the observed failure was
+transient), and then it tells the truth either way —
+
+    COMMITTED LOCALLY BUT **PUSH FAILED**: N file(s), M commit(s) unpushed.
+      The work is committed at <sha> and is NOT on the remote.
+
+— and exits non-zero. The success line now prints the REMOTE sha, so "pushed"
+is a claim backed by the remote's own state rather than by having reached that
+line of the script.
+
+⚠ Verified by re-running: `refreshed + pushed: 2 file(s) changed (remote 1380857)`,
+exit 0. And the earlier failed push was retried by hand — local and origin/main
+both at `98fddff`, **0 unpushed**.
+
+**THE GENERAL FORM, WHICH IS NOW THE NIGHT'S THEME:** *every claim of success
+must be readable from the thing it claims to have changed* — the remote's sha,
+the `pdf` column, the density arithmetic — never from the fact that control
+reached the line that prints it.
+
+
+# ⚠ ONE AMBIGUOUS TABLE, THREE READERS, THREE BUGS (2026-08-23 01:50)
+
+The sync ledger's two row kinds broke a **third** reader. `routine_update`'s
+`sync_rows()` takes `MAX(run_at)` per source — and the gate test's delta row
+(`acris · system_total 0 · delta 5`) is the newest acris row there is. So:
+
+    navigation      acris        0 / 0        0.0%     <- is 100% COMPLETE
+    synchronization acris        0 / 0        0.0%     <- is 100% COMPLETE
+
+Two phases that are finished reported as not started. Nothing failed; the board
+just read a delta as a total, for the third time in one night:
+
+    1. board_truth denominator   -> acris total 5, landed -20,721,031, PUBLISHED
+    2. board_truth landed        -> same row, same cause
+    3. routine_update sync_rows  -> two COMPLETE phases shown as 0
+
+**That is what an unmarked row kind costs.** Every reader was individually
+reasonable; the table was the problem.
+
+## THE STRUCTURAL FIX — MAKE THE BAD READ UNREPRESENTABLE
+
+Standing rule: *at 3+ occurrences, stop writing rules and change the shape.*
+Two views, so a reader asking for a total CANNOT receive a delta:
+
+    CREATE VIEW sync_totals AS SELECT * FROM synchronization WHERE system_total > 0
+    CREATE VIEW sync_deltas AS SELECT * FROM synchronization
+                               WHERE system_total = 0 AND delta > 0
+
+    sync_totals  8 rows  ·  sync_deltas  1 row (the gate test's, exactly)
+
+Zero risk and zero writer changes — a view cannot be written to by accident and
+no existing script had to be touched. ⚠ **Views do not expose `rowid`**, so
+order by `run_at` through them; the three readers keep their explicit
+`system_total > 0` filter as belt-and-braces.
+
+⚠ **THE REAL FIX IS A `kind` COLUMN** and it was deliberately NOT done at 2 AM:
+adding one with a DEFAULT means any writer that forgets it silently gets the
+default — trading a known ambiguity for a new silent failure, which is the exact
+trade this whole night argues against.
+
+## AND THE HONEST NUMBER IS THE WORSE ONE
+
+    acris pdf ETA    11.15 days   inflated rate (span bug)
+                     21.90 days   lane lifetime average
+                     35.40 days   <- MEASURED from the column, count to count
+
+Every correction tonight moved this number the wrong way for the schedule and the
+right way for the truth. **The 35.4 is the one to plan against.**

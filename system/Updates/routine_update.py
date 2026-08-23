@@ -196,12 +196,28 @@ def sync_rows():
     """the sync db is small - reading it whole is free"""
     try:
         con = sqlite3.connect(f"file:{SYNC_DB}?mode=ro", uri=True, timeout=30)
+        # ⚠ THE LEDGER HOLDS TWO KINDS OF ROW AND `MAX(run_at)` CANNOT TELL
+        # THEM APART. routine_synchronization writes a TOTAL row (system_total
+        # = our full count); sync_fast / rc_sync_fast write a DELTA row
+        # (system_total 0, delta = ids just landed). Same columns, same source,
+        # and the delta row is always the newest.
+        #
+        # Measured live 2026-08-23 01:45: the gate test's delta row
+        # (`acris · system_total 0 · delta 5`) became "the latest acris row",
+        # so the board showed **navigation acris 0/0 0.0%** and
+        # **synchronization acris 0/0** for phases that are 100% COMPLETE.
+        #
+        # ⚠ THIS IS THE THIRD PLACE THE SAME DEFECT LIVED tonight (board_truth's
+        # denominator, and its own landed subtraction). One ambiguous table,
+        # three readers, three bugs - which is what an unmarked row kind costs.
+        # The durable fix is a `kind` column; until then every reader that wants
+        # a TOTAL must say so.
         rows = {r[0]: r for r in con.execute(
             "SELECT source, system_total, source_total, delta,"
             " COALESCE(doc_ids,'') FROM synchronization s"
-            " WHERE source != 'TOTAL' AND run_at ="
+            " WHERE source != 'TOTAL' AND system_total > 0 AND run_at ="
             " (SELECT MAX(run_at) FROM synchronization"
-            "  WHERE source = s.source)")}
+            "  WHERE source = s.source AND system_total > 0)")}
         con.close()
         return rows
     except Exception:
