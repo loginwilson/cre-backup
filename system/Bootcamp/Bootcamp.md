@@ -6347,3 +6347,65 @@ LOADED at compose time. Its reliability is the loading step's
 reliability, never better. Structure (mechanism 3) has no loading step,
 which is why it outranks both scan and checklist wherever it is
 available.
+
+
+# ⚠ THE FABRICATED SERIES — a new defect class, found 2026-08-22
+
+Login: "you are hallucinating." Correct, and the worst instance in this
+file was not a sentence — it was a COUNT.
+
+## WHAT HAPPENED
+
+"The notary-is-counsel pattern" was banked at R21 as the **THIRD
+sighting**. No first or second sighting exists anywhere in this file.
+The series was invented at its own third element, then incremented at
+R23 ("fourth") and R39 ("5th"). A reader of this file would reasonably
+conclude five instances had been observed across the corpus. ZERO were
+recorded before the count began.
+
+Compounding it, each "sighting" also asserted an IDENTITY the documents
+never state — that a notary and a same-named return-to attorney are the
+same person — and at R39 the claim conflated a PERSON with a
+PROFESSIONAL CORPORATION ("William W. Mizrahi" vs "William W. Mizrahi,
+P.C."), which is the person/entity class (R35) recurring inside a
+fabricated series.
+
+## WHY THIS IS THE WORST CLASS SO FAR
+
+Every other defect misstates ONE fact. A fabricated count MANUFACTURES
+CORROBORATION: it makes a single unmarked inference look like an
+accumulated, measured pattern — the exact currency this file trades in.
+It is self-reinforcing (each increment cites the last), it survives
+review (nobody re-counts), and it poisons the ledger, which exists
+precisely to make recurrence visible. **An invented count is a lie
+about evidence, not about a document.**
+
+## THE RULE
+
+**NO ORDINAL, COUNT, OR "Nth SIGHTING" MAY BE WRITTEN WITHOUT GREPPING
+THE FILE FOR THE PRIOR ONES IN THE SAME ACTION.** Applies to: "Nth
+sighting/instance/occurrence", "the Xth time", "N runs", "twice",
+"three times", streak values, "first ever", "never seen". If the grep
+is not run, the count is not written — say "another instance" or "seen
+before at R__" with the reference verified. The Grade Ledger's
+recurrence table is the ONLY place counts belong, because it lists its
+members.
+
+⚠ Note what this class defeats: the trigger word-scan (ordinals are
+ordinary words), the pre-bank checklist as written (it checks names,
+sources, slots — not arithmetic about the file itself), and the
+assumption law (a count feels like a fact about the record, not an
+inference). It needs its own mechanism: a GREP, i.e. an action with an
+artifact.
+
+## CORRECTIONS MADE (in place, same day)
+
+- R21: "third sighting" → name coincidence, one instance, no series.
+- R23: "fourth sighting" → same correction.
+- R39: "5th sighting" → removed; person-vs-P.C. conflation marked; the
+  identity claim reduced to what the document supports (a shared name).
+- R39 interest terms: "9.5% interest compounding monthly" → the
+  document says "based upon A MINIMUM OF annual interest rate of 9 1/2%
+  CUMULATED MONTHLY". A floor was delivered as a rate, and "cumulated"
+  (the document's word) was delivered as "compounding" (a different
+  mechanism). Both corrected; the 9.5% now carries its qty_role.

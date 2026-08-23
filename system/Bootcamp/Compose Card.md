@@ -114,3 +114,20 @@ Before writing the entry, run these three:
           Recall is not a source.
   SLOTS   every row: function canonical? amount carries a role? term
           shape named (date / event / perpetual)? ✓ marks earned?
+
+
+## 13 · NO COUNT WITHOUT A GREP
+
+Never write an ordinal or a tally about this corpus from memory:
+"Nth sighting", "the third time", "twice", "N runs", "first ever",
+"never seen", streak values. GREP FOR THE PRIOR MEMBERS IN THE SAME
+ACTION, or write "another instance" instead.
+
+A fabricated count manufactures CORROBORATION — it makes one unmarked
+inference look like measured evidence, cites itself as it increments,
+and survives review because nobody re-counts. "Notary-is-counsel" was
+banked as the THIRD sighting with zero prior sightings recorded, then
+incremented twice (R21/R23/R39, all corrected 2026-08-22).
+
+Counts belong in `Grade Ledger.md`, which lists its members and can be
+checked.
