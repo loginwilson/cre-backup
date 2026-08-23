@@ -5880,3 +5880,105 @@ were graded under rules that did not yet exist — the sweep found three
 defects in entries that had all been graded A or A−. Backward re-check
 is not optional maintenance; it is how a rule reaches the runs that
 predate it. EVERY new rule gets swept backward on the day it is minted.
+
+# RUN 37 — RC_1044085 · LIMITED POWER OF ATTORNEY · 2018 (re-recorded 2015 FL original)
+
+4 pages, born-digital cover + a CERTIFIED COPY of an out-of-state
+instrument. LAND DOC# 718350, fee code "33C-MISC W/BLACK", recorded
+Richmond 2018-10-30 09:04:07 (exam 2018-10-29), fee $38, presented and
+returned by FIRST AMERICAN MORTGAGE SOLUTIONS, LLC (Idaho Falls, ID).
+Property block 4046 lot 26, Entire Lot.
+
+FEDERAL HOME LOAN MORTGAGE CORPORATION (a/k/a "Freddie Mac", 8200 Jones
+Branch Drive, McLean, Virginia) appoints OCWEN LOAN SERVICING, LLC
+(5720 Premier Park Drive, West Palm Beach, Florida) its "true and lawful
+Attorney-in-Fact" to execute, endorse and acknowledge documents for
+seven enumerated purposes. Executed 2015-08-19 by REBECCA THOMAS and
+BRANDEN RYAN, both Assistant Treasurer; ack Fairfax County, VIRGINIA
+(notary Valerie Lea Cunningham, commission expiring 2016-10-31).
+
+## R37-1 — THE RE-RECORDED CERTIFIED COPY (one instrument, many counties)
+
+The recorded object is NOT the original. The original was recorded in
+PALM BEACH COUNTY, FLORIDA — FILE NUM 20150346601, BOOK/PAGE
+27810/1663-1664, 2015-08-21 08:25:59 — and certified a true copy by
+Sharon R. Bock, Clerk of the Circuit Court, on 2015-09-29; that
+certified copy was then re-recorded in Richmond County THREE YEARS
+LATER (2018-10-30). New artifact class alongside film scans, liber
+transcriptions and modern covers: THE FOREIGN CERTIFIED COPY.
+Consequences: (1) provenance has FOUR layers — execution (VA) →
+original recording (FL) → clerk certification (FL) → re-recording (NY);
+(2) the same instrument exists in multiple custodians' records, so
+de-duplication across counties must key on the ORIGINAL's cite, not on
+the local land-doc number; (3) recording date here says nothing about
+when the authority began — it began 2015-08-19.
+
+## R37-2 — A POA'S PARCEL KEY IS A POINTER, NOT ITS SUBJECT
+
+The instrument's own scope is "as to ONE-TO-FOUR FAMILY mortgages,
+deeds to secure debt, or deeds of trust OWNED BY FREDDIE MAC AND
+SERVICED ... BY SAID ATTORNEY-IN-FACT" — a portfolio-wide grant with NO
+parcel in it. Yet rd keys it to 5040460026 and the cover names one
+block and lot. The parcel key exists because some OTHER instrument
+touching that lot was signed by the attorney-in-fact and needed its
+authority of record. READING RULE: for authority-layer instruments, the
+parcel is a POINTER — "expect an instrument on this lot executed by
+X as attorney-in-fact for Y" — and the POA's CONTENT must never be
+scoped to that parcel. Any derivation that treats the POA as an event
+about block 4046 lot 26 misreads it entirely.
+
+## R37-3 — THE POA ENUMERATES THE FUNCTION VOCABULARY FROM THE INDUSTRY SIDE
+
+The seven granted powers map cleanly onto the model: (i) full
+satisfaction/release → CAPITAL·releases · (ii) release of borrower from
+personal liability → a CAPITAL term change (recourse→non-recourse, the
+R11 shape) · (iii) partial release → CAPITAL·releases scoped · (iv)
+modification or extension → CAPITAL·modifies · (v) SUBORDINATION of
+lien → TITLE·modifies (G-037, confirmed from the industry's own
+carving) · (vi) foreclosure completion/termination/rescission, successor
+trustee, notices of default, assignments to convey title · (vii) check
+endorsement. An outside party independently carved servicer authority
+into the same joints the eleven functions use — the strongest external
+corroboration the model has received.
+
+## R37-4 — AUTHORITY CASCADES TWO DELEGATIONS DEEP
+
+Freddie Mac → Ocwen (entity) → "an employee of the Attorney-in-Fact
+designated by the Attorney-in-fact with the requisite signing and
+document execution authority ... in the division of mortgage servicing."
+So the human whose signature appears on a satisfaction is TWO
+delegations from the principal, and is named on THAT instrument, not
+here. Stakeholder resolution: a signer may be neither the lender nor an
+officer of the record holder; the party graph needs an ACTS-FOR edge,
+and this instrument is where that edge is recorded. Third parties
+"without actual notice may rely."
+
+## CONFIRMATIONS
+
+- rd: P/ATTY ✓ instrument = LAND DOC 718350 ✓ 10/30/2018 ✓ key
+  5040460026 ✓ (cover states block 4046 lot 26 — document-side witness,
+  earned) · amount $0.00 (no money in the instrument).
+- SIX party rows for TWO parties: the dual-entry casing family PLUS an
+  alias split — "FEDERAL HOME LOAN MORTGAGE CORPORATION" and "FREDDIE
+  MAC" are indexed as SEPARATE ASSIGNOR rows though the document says
+  "a/k/a". Identity resolution must fold a/k/a aliases or one principal
+  becomes two.
+- Cover compresses to "And Others" while the index lists all six —
+  cover-vs-index divergence again (R16/R28 family).
+- TERM IS EVENT-BOUNDED (R34 family): effective from execution until
+  suspension/termination as Freddie Mac Seller or Servicer · transfer
+  of servicing for cause · receiver or conservator appointed ·
+  bankruptcy petition — or written revocation. Undecidable from this
+  document; ⚠ the servicing industry's later events are the outside
+  witness.
+- Governing document named but NOT attached: Freddie Mac Single-Family
+  Seller/Servicer Guide, "as amended from time to time" — an
+  off-record, MOVING authority (worse than unrecorded: its content
+  changes after recording).
+- Ack form defect: two signers (Thomas, Ryan) but the certificate
+  recites singular "the same person whose name is subscribed" and "her
+  own free and voluntary act" (R25 family — form defects are non-events
+  but are banked).
+- Notary commission expired 2016-10-31, two years BEFORE the NY
+  recording — a recorded instrument outlives its witnesses' credentials
+  without losing effect.

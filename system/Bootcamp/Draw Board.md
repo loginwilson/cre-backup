@@ -136,3 +136,6 @@ across 1982-2004.
 RULE (from the r33-r36 lapse): mark the board IN THE SAME COMMIT as the
 run entry. An unmarked board silently re-offers drawn documents, and the
 loop's coverage claim becomes false without anything looking wrong.
+
+- r37 drawn: P/ATTY 2018 RC_1044085 (limited POA, Freddie Mac -> Ocwen).
+  POWER OF ATTORNEY still has 8 candidates.
