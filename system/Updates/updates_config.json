@@ -1,12 +1,24 @@
 {
   "_comment": "cadence seconds per phase, adjustable at request; 'show' is the whitelist of phases reported right now - empty list = all phases",
-  "show": ["synchronization", "navigation", "acquisition rd", "acquisition pdf", "organization"],
+  "show": [
+    "synchronization",
+    "acquisition rd",
+    "acquisition pdf",
+    "keying pass 1",
+    "keying pass 2",
+    "keying pass 3"
+  ],
   "cadence": {
-    "synchronization": 300,
-    "navigation": 300,
+    "synchronization": 60,
     "acquisition rd": 300,
     "acquisition pdf": 300,
-    "organization": 600
+    "keying pass 1": 300,
+    "keying pass 2": 300,
+    "keying pass 3": 300
   },
-  "parked": ["organization"]
+  "parked": [],
+  "_retired": {
+    "navigation": "db trigger mint_urls - 100% by construction, never informative",
+    "organization": "db trigger key_on_rd fills `parcel` keys free at sync time; `pdf-pass` is extraction's inbox and `reference` is resolution's. The 6.0M pre-trigger backfill is held by org_backfill_arm until acris rd hits 99.95% - re-add a row when it releases."
+  }
 }

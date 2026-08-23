@@ -10,21 +10,42 @@ It never gathers a doc id, never mints a url, never writes the nav db. It
 answers one yes/no and hands the answer to sync. That is why it can tick every
 minute while sync — which scans, gathers and writes — cannot.
 
-    MONITOR  "has anything shown up?"      1-8 requests
+    MONITOR  "has anything shown up?"      3 requests, ~2s, BOTH custodians
     SYNC     "exactly what, and land it"   gallop+bisect + gather + write
 
-⚠ NOT SOCRATA (login: "socrata isnt good... socrata lags"). Socrata is a
-REPUBLISHED MIRROR on its own refresh schedule, so `:updated_at` says when
-Open Data reposted, not when the Register recorded. On a one-minute cadence it
-shows nothing for hours and then dumps. **The CRFN counter and the date-range
-window are the live surfaces — the same ones sync uses.**
+⚠ BOTH LANES ARE PLAIN GETs AS OF 2026-08-23 — no session, no token, no sleep.
+Login: *"to me its all about direct gets and making sure you can access."*
+Richmond went first (`rc_sync.quick_day`, 12 requests -> 1) and ACRIS followed
+the same morning (`acris_edge.quick_crfn`, session+token POST -> 1 GET).
 
-⚠ A BLANK IS NOT THE EDGE. The CRFN counter has genuine holes (11 measured in
-July, all verified unissued). Probing only edge+1 would report "quiet" forever
-if a hole sits there while filings land at edge+5. So the monitor probes a
-SPAN above the edge and reports new if ANY resolves. crfn_monitor.py needs
-CONFIRM_BLANKS=8 to declare an edge; a monitor only needs to know SOMETHING is
-there, which is why it is cheap.
+    acris     GET DocumentDetail?hid_CRFN=<n>&SearchType=DocID   0.5-0.9s
+    richmond  GET Search/DateRangeSearch?StartSearchDate=...     0.6-0.7s
+
+⚠ NOT SOCRATA (login: "socrata isnt good... socrata lags"). Measured 2026-08-23
+and it is far worse than "lags": the ACRIS master dataset's newest
+recorded_datetime is **2026-07-31**, top CRFN 2026000216051, while our edge is
+2026000237865. The open dataset is **21,814 documents and 23 days behind us**.
+A monitor there would report calm through three weeks of filings.
+
+⚠ ACRIS HAS NO USABLE DATE WINDOW, WHICH IS WHY THIS COUNTS INSTEAD OF DATING.
+Login asked for the date shape first, for a good reason — *"the delta becomes
+much easier since its just comparison of 60 second changes"* — a re-read window
+makes delta a SET DIFFERENCE, which self-heals and needs no watermark. That is
+exactly how richmond works. ACRIS will not sell it: the ID/CRFN search has no
+date field at all, and the Document TYPE search HAS dates (Last 7 / Last 31 /
+range) but REQUIRES a doc type and refuses a GET — every parameter set tried
+returned the same 21,724-byte search-options menu, and the tokened POST bounced
+to the form too. So "everything recorded today" is 60-odd searches, not one.
+The CRFN counter is the only live re-readable window ACRIS offers.
+
+⚠ A BLANK IS NOT THE EDGE — BUT THE MONITOR STILL ONLY PROBES +1. The counter
+has genuine holes (11 measured in July, all verified unissued), so a hole at
+edge+1 costs one tick of delay. That is the deliberate trade: the next tick
+re-probes the same number and anything real above it is still there, whereas a
+span-wide walk pays `span` requests on every QUIET minute, which is the common
+case. Confirming a blank is SYNC's job - sync_fast.py requires CONFIRM_BLANKS=8
+consecutive misses before believing one. (`--span` now affects nothing on the
+acris lane; it is kept only so existing service invocations still parse.)
 
 ⚠ THIS FILE NEVER ADVANCES A WATERMARK. index_daily.py learned it the
 expensive way: "state saved before the work meant a report-only run moved the
@@ -69,9 +90,10 @@ ap.add_argument("--gate", action="store_true", help="fire sync on a hit")
 ap.add_argument("--once", action="store_true")
 ap.add_argument("--source", choices=["both", "acris", "richmond"],
                 default="both")
-ap.add_argument("--closed-every", type=int, default=900,
+ap.add_argument("--closed-every", type=int, default=0,
                 help="seconds between probes on a day the register cannot "
-                     "record (weekends). 0 disables the backoff.")
+                     "record (weekends). 0 = OFF, the default: never stop "
+                     "monitoring.")
 a = ap.parse_args()
 LOG = HERE / "phase_monitor.log"
 
@@ -216,36 +238,75 @@ def probe_acris():
     # every probe threw, a broad `except` turned each error into found=False,
     # and it printed "quiet" after 8 instant failures. A MALFORMED REQUEST
     # LOOKS EXACTLY LIKE AN EMPTY ONE. Never let an error become a negative.
-    import live_delta as LD
+    #
+    # ⚠ NOW A PLAIN GET - no session, no token, no PACE sleep (2026-08-23).
+    # `hid_CRFN` works as a query parameter; see acris_edge.py for the four
+    # measurements. This is the ACRIS twin of rc_sync.quick_day(), which
+    # collapsed richmond's probe from 12 requests to 1 the same morning.
+    # ⚠ ASK THE REAL QUESTION FIRST; PAY FOR THE CONTROL ONLY IF THE ANSWER IS
+    # A BLANK. Login 2026-08-23: *"what are you requesting for 3 requests
+    # instead of 1?"* — and the honest answer was that the control ran first
+    # unconditionally, every tick, forever.
+    #
+    # A LIVE ANSWER IS ITS OWN CONTROL. If edge+1 returns a parsed detail page
+    # with a doc id, the route works, the parse works and the host is up — a
+    # separate control request proves nothing the answer did not already prove.
+    # Only a BLANK is ambiguous (absent CRFN / malformed request / changed route
+    # / 503 all look alike), and only a blank needs the second request.
+    #
+    #     busy minute   edge+1 live   -> 1 request   (the common case at rush hour:
+    #                                   acris records ~3.2/min on a business day)
+    #     quiet minute  edge+1 blank  -> 2 requests
+    #
+    # ⚠ THE CONTROL IS NOT OPTIONAL ON A BLANK, ONLY DEFERRED. Reporting "quiet"
+    # off an unproven blank is the exact failure this file shipped with once
+    # already: it printed quiet after 8 instant failures.
+    import acris_edge as AE
+    hits, calls, errs = [], 0, 0
+    ctrl_doc = None
     try:
-        s = LD.Session().open().open_crfn()
-        control = LC.parse_detail(LC.detail_html(s, edge)) is not None
+        calls += 1
+        state, did = AE.quick_crfn(edge + 1)
+        if state == "live":
+            # self-proving: the route answered with a real document
+            say("acris    edge %d · probed +1 (1 req) · NEW at %d -> %s"
+                % (edge, edge + 1, did))
+            return True
+        ok, ctrl_doc = AE.edge_holds(edge)
+        calls += 1
     except Exception as e:
-        say("acris    PROBE UNPROVEN (%s) - reporting NOTHING, not 'quiet'"
-            % type(e).__name__)
+        # ⚠ NAME THE STATUS, NOT JUST THE CLASS. "HTTPError" alone cannot
+        # distinguish a 500 we should shrug at from a 403 we must STOP on, and
+        # this line printed exactly that for one tick on 2026-08-23 while the
+        # answer sat one attribute away.
+        code = getattr(e, "code", None)
+        say("acris    PROBE UNPROVEN (%s%s: %.90s) - reporting NOTHING, not "
+            "'quiet'" % (type(e).__name__,
+                         " %d" % code if code else "", e))
         return None
-    if not control:
+    if not ok:
         say("acris    CONTROL %s did not resolve - probe unproven, reporting "
-            "NOTHING" % f"{edge:,}")
+            "NOTHING" % str(edge))
         return None
 
-    hits, calls, errs = [], 0, 0
-    for k in range(1, a.span + 1):
-        n = edge + k
-        calls += 1
-        try:
-            if LC.parse_detail(LC.detail_html(s, n)) is not None:
-                hits.append(n)
-                break                  # something is there; sync finds the rest
-        except Exception:
-            errs += 1                  # an error is NOT an absence
-    if errs and not hits:
-        say("acris    %d/%d probes ERRORED - reporting NOTHING" % (errs, calls))
-        return None
-    say("acris    edge %s · control ok · probed +1..+%d (%d req) · %s"
-        % (f"{edge:,}", a.span, calls + 1,
-           ("NEW at %s" % f"{hits[0]:,}") if hits else "quiet"))
-    return bool(hits)
+    # ⚠ ONE STEP, NOT A SPAN. The old probe walked +1..+span looking for the
+    # first hit, which cost `span` requests on every QUIET minute - the common
+    # case. The monitor's only job is to answer "is there anything above the
+    # edge"; CRFN is a dense ascending counter, so edge+1 answers it. Walking
+    # for the rest is sync_fast's job, and sync_fast already knows how (it
+    # confirms CONFIRM_BLANKS=8 in a row before believing a blank, because the
+    # counter has genuine unissued holes - 11 measured in July).
+    #
+    # ⚠ SO A LONE UNISSUED NUMBER AT edge+1 DELAYS DETECTION BY ONE TICK, and
+    # that is deliberate: the next tick re-probes the same number, and any real
+    # document above it is still there. A missed minute is recoverable; a
+    # `span`-wide walk every quiet minute is a standing cost with no payer.
+    #
+    # Reaching here means edge+1 came back BLANK and the control then RESOLVED:
+    # a PROVEN quiet. The blank was request 1, the control request 2.
+    say("acris    edge %d · +1 blank, control ok (%s) · quiet (%d req)"
+        % (edge, ctrl_doc or "?", calls))
+    return False
 
 
 def probe_richmond():
@@ -273,23 +334,59 @@ def probe_richmond():
     # not a fault, but it is also not an EDGE. Walk back to the last day that
     # actually recorded something; otherwise every weekend the monitor would
     # either cry failure or forget where the source had got to.
-    day, tried, edge, npages = _dt.date.today(), [], None, 0
-    for _ in range(5):
-        d = day.strftime("%m/%d/%Y")
-        try:
-            edge, npages = RCS.Window(d, d).edge()
-        except Exception as e:
-            say("richmond %s window FAILED (%s) - reporting NOTHING, not a "
-                "zero we did not measure" % (d, type(e).__name__))
-            return None
-        if edge:
-            break
-        tried.append(day.strftime("%a"))
-        day -= _dt.timedelta(days=1)
-    if not edge:
-        say("richmond no rows in the last 5 days (%s) - that is NOT a quiet "
-            "week, it is a broken read. Reporting NOTHING." % ",".join(tried))
+    # ⚠ ONE GET, AND THE SERVER SAYS WHETHER IT IS EMPTY. Rewritten 2026-08-23
+    # from login's find: the date-range search answers a plain query-string GET
+    # with no session, no POST and no token — 0.7 s against the ~12 requests and
+    # ~15 s a Window cost. That collapse matters twice over:
+    #
+    #   COST      12 all-or-nothing requests -> 1. The old shape failed as a
+    #             UNIT, so ~1% per-request flakiness became ~12% per probe
+    #             (measured: 12.5% richmond probe failures while acris, on the
+    #             same network in the same minutes, was clean).
+    #   TRUTH     the page SAYS "NO RECORDS FOUND FOR 8/23/2026-8/23/2026".
+    #             We used to INFER quiet from parsing zero rows — the exact
+    #             inference that was silently wrong for weeks.
+    #
+    # ⚠ AND THE WALK-BACK IS GONE. It existed to find "the last day that
+    # recorded something", which was never the question. The question is "did
+    # anything file TODAY", and an explicit NO RECORDS answers it outright. A
+    # closed weekend is now a definite answer costing one request, not three
+    # windows costing twelve.
+    today = _dt.date.today().strftime("%m/%d/%Y")
+    try:
+        state, rows, npages = RCS.quick_day(today)
+    except Exception as e:
+        say("richmond %s FAILED (%s) - reporting NOTHING, not a zero we did "
+            "not measure" % (today, type(e).__name__))
         return None
+
+    if state == "unknown":
+        # ⚠ THE STATE THAT DID NOT USED TO EXIST. Neither rows nor the
+        # server's own empty message: the page changed under us, or we cannot
+        # read it. This used to be indistinguishable from "quiet".
+        say("richmond %s · page parsed NEITHER rows NOR 'NO RECORDS FOUND' - "
+            "the markup may have changed again. Reporting NOTHING." % today)
+        return None
+
+    if state == "empty":
+        st = seen()
+        say("richmond %s · server says NO RECORDS FOUND · quiet (1 req) · "
+            "edge holds at %s" % (today, f"{st.get('richmond_edge', 0):,}"))
+        return False
+
+    # rows today -> the edge is on the LAST page (rows ascend), 1 extra request
+    edge = None
+    if npages > 1:
+        _, last, _ = RCS.quick_day(today, page=npages)
+        rows = last or rows
+    nums = [int(r["instrument"]) for r in rows if r["instrument"].isdigit()]
+    edge = max(nums) if nums else None
+    if not edge:
+        say("richmond %s · rows parsed but no instrument numbers - reporting "
+            "NOTHING" % today)
+        return None
+    day = _dt.date.today()
+    tried = []
 
     st = seen()
     prev = st.get("richmond_edge")
@@ -298,7 +395,7 @@ def probe_richmond():
     remember(st)
     new = prev is not None and edge > prev
     say("richmond %s · edge %s · %d pages%s%s"
-        % (day.strftime("%m/%d/%Y"), f"{edge:,}", npages,
+        % (day.strftime("%m/%d/%Y"), str(edge), npages,
            (" (walked back past %s)" % ",".join(tried)) if tried else "",
            "" if prev is None else
            ("  NEW (was %s)" % f"{prev:,}" if new else "  quiet")))
@@ -320,7 +417,7 @@ while True:
             say("%-8s register CLOSED (%s) - holding · last edge %s · next "
                 "look in %dm  [the answer cannot change today]"
                 % (src, time.strftime("%A"),
-                   f"{edge:,}" if edge else "-", max(0, left) // 60))
+                   str(edge) if edge else "-", max(0, left) // 60))
             continue
         try:
             hit = fn()

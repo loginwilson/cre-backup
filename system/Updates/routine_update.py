@@ -707,6 +707,37 @@ def main(loop):
                 f" | now {rate_now:5.1f}/s | avg {rate:5.1f}/s | +{d:>7,} {pct_i:+7.2f}%"
                 f" | {landed:>10,} / {needed:>10,} = {pct_t:6.2f}%"
                 f" | ETA {eta:>9} | {status}")
+        # ── THE THREE KEYING ROWS (login 2026-08-23: "no more organization
+        # phase, just keying as part of the natural progression of rd under
+        # pass 1... pass 2 and 3 havent happened yet so they await") ─────────
+        # ⚠ PASS 1 COUNTS NOTHING. key_on_rd keys IN THE SAME TRANSACTION as
+        # every rd landing, so keyed ≡ rd-landed BY CONSTRUCTION - the row
+        # copies acquisition rd's numbers outright and exists to make the
+        # attachment visible. Counting it separately would be a scan to
+        # re-learn an identity. Verified 2026-08-23 by full scan: 15,432,975
+        # rd rows, 0 unkeyed (parcel 94.62%, pdf-pass 830,014, reference 76).
+        for ksrc in ("acris", "richmond"):
+            r = con.execute(
+                "SELECT rate_now, rate, increase, pct_increase, landed,"
+                " needed, pct_of_total, eta FROM update_board"
+                " WHERE phase='acquisition rd' AND source=?",
+                (ksrc,)).fetchone()
+            if r:
+                kst = "LOCKSTEP" if r[4] < r[5] else "COMPLETE"
+                con.execute(
+                    "INSERT OR REPLACE INTO update_board VALUES"
+                    " (?,?,?,?,?,?,?,?,?,?,?,?)",
+                    ("keying pass 1", ksrc, r[0], r[1], r[2], r[3],
+                     r[4], r[5], r[6], r[7], kst, win))
+        # ⚠ PASSES 2/3 AWAIT THEIR GATES (pass 2 = rd 100%, pass 3 = pdf
+        # 100%). `needed` is the pdf-pass pool ANCHORED by the 2026-08-23
+        # verify scan - an accounted figure; the pass itself re-measures.
+        for kphase, gate in (("keying pass 2", "AWAITING RD 100%"),
+                             ("keying pass 3", "AWAITING PDF 100%")):
+            con.execute("INSERT OR REPLACE INTO update_board VALUES"
+                        " (?,?,?,?,?,?,?,?,?,?,?,?)",
+                        (kphase, "all", 0.0, 0.0, 0, 0.0,
+                         0, 830014, 0.0, "-", gate, win))
         # the board drops only UNKNOWN phases (schema leftovers - login:
         # "still have the rows I dont want"). A KNOWN phase outside `show`
         # keeps its row: phase routines write their rows as they run, and

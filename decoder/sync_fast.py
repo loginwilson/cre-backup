@@ -61,9 +61,8 @@ HERE = pathlib.Path(__file__).parent
 sys.path.insert(0, str(HERE))
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
+import acris_edge as AE
 import corpus_paths as CP
-import live_crfn as LC
-import live_delta as LD
 
 EDGE_STATE = HERE / "_crfn_edge.json"
 LEDGER = ("D:/CRE Decoding System/00 Synchronizations"
@@ -88,29 +87,65 @@ def urls(did):
 
 state = json.loads(EDGE_STATE.read_text(encoding="utf-8"))
 edge = int(state["edge"])
-print(f"our top   CRFN {edge:,}")
+print(f"our top   CRFN {edge}")
 
-s = LD.Session().open().open_crfn()
-if LC.parse_detail(LC.detail_html(s, edge)) is None:
-    sys.exit(f"⚠ CONTROL {edge:,} did not resolve - probe unproven, "
+# ⚠ THE PROBE IS A PLAIN GET AS OF 2026-08-23 - no session, no token, no
+# LD.PACE sleep. See acris_edge.py for the measurements. This used
+# LD.Session().open().open_crfn() + LC.detail_html's tokened POST.
+#
+# ⚠ AND THE PROBE IS NOW THE WHOLE OF SYNC. Login 2026-08-23: *"the question is
+# if monitor can get new doc id without sync. If it can, this should become the
+# new sync... sync would run the python to check the edge and grab new doc id to
+# feed db that nav uses."* Correct, and the redundancy was real: `quick_crfn`
+# returns (state, doc_id) because the 131 KB detail page IS the record, so the
+# monitor was reading the doc id, DISCARDING it, and firing this script to go
+# fetch the identical page a second time. One GET answers both questions.
+#
+# So phase_monitor no longer needs to gate this - this walk is cheap enough to
+# BE the minute-by-minute path. The monitor's remaining job is levelness
+# (system vs source vs delta), which is an audit and not part of the pipeline.
+# ⚠ AN UNREACHABLE HOST MUST READ AS ONE LINE, NOT A TRACEBACK. Measured
+# 2026-08-23 11:04: a836-acris.nyc.gov returned 503 on EVERY route including
+# the bare root (site-wide maintenance, not a refusal and not our doing), and
+# this exited with a 12-line urllib stack that says "HTTPError" at the bottom.
+# In a service log that is indistinguishable from a code bug, and it buries the
+# one fact that matters: WE LEARNED NOTHING, so nothing may be written.
+try:
+    ctrl_ok, ctrl_doc = AE.edge_holds(edge)
+except Exception as e:
+    code = getattr(e, "code", None)
+    sys.exit(f"⚠ CONTROL {edge} UNREACHABLE ({type(e).__name__}"
+             f"{' %d' % code if code else ''}: {e}) - the source did not "
+             f"answer, which is NOT an absence. Nothing written, edge NOT "
+             f"advanced; the next run re-asks.")
+if not ctrl_ok:
+    sys.exit(f"⚠ CONTROL {edge} did not resolve - probe unproven, "
              f"reporting NOTHING. A malformed request looks like an empty one.")
-print("control resolves - probe OK")
+print(f"control resolves ({ctrl_doc}) - probe OK")
 
 # ── WALK: forward from our top, stopping only on CONFIRM_BLANKS in a row ──
+# ⚠ STILL CONFIRM_BLANKS, NOT ONE. The counter has genuine unissued holes (11
+# measured in July). The MONITOR may stop at edge+1 because a one-tick delay
+# costs nothing; this walk must not, because it is the thing that decides what
+# gets written.
 found, blanks, n, calls = [], 0, edge, 1
 while blanks < CONFIRM_BLANKS and (n - edge) < a.max:
     n += 1
     calls += 1
     try:
-        d = LC.parse_detail(LC.detail_html(s, n))
+        state, did = AE.quick_crfn(n)
     except Exception as e:
-        sys.exit(f"⚠ probe ERRORED at {n:,} ({type(e).__name__}) - stopping. "
+        sys.exit(f"⚠ probe ERRORED at {n} ({type(e).__name__}: {e}) - stopping. "
                  f"An error is not an absence; nothing written.")
-    if d is None:
+    if state != "live":
         blanks += 1
         continue
     blanks = 0
-    found.append((n, d["doc_id"], d.get("doc_type", ""), d.get("recorded", "")))
+    # ⚠ doc_type / recorded are NOT read here any more. The old POST parse
+    # returned them and they were printed, never stored - the nav insert below
+    # only ever used the doc id. Reading a field to print it is not a reason to
+    # keep a heavier request shape.
+    found.append((n, did, "", ""))
 
 if (n - edge) >= a.max:
     sys.exit(f"⚠ walked {a.max} numbers without {CONFIRM_BLANKS} consecutive "
@@ -121,7 +156,7 @@ if (n - edge) >= a.max:
 new_edge = found[-1][0] if found else edge
 print(f"walked +{n - edge} ({calls} requests) · found {len(found)} new")
 for crfn, did, dt, rec in found[:10]:
-    print(f"    {crfn:,}  {did}  {dt[:28]:<28} {rec[:20]}")
+    print(f"    {crfn}  {did}  {dt[:28]:<28} {rec[:20]}")
 if len(found) > 10:
     print(f"    ... and {len(found) - 10} more")
 
@@ -219,4 +254,4 @@ except Exception as e:
 state["edge"] = new_edge
 state["watermark"] = new_edge
 EDGE_STATE.write_text(json.dumps(state, indent=1), encoding="utf-8")
-print(f"edge advanced {edge:,} -> {new_edge:,}  (after the commit, never before)")
+print(f"edge advanced {edge} -> {new_edge}  (after the commit, never before)")

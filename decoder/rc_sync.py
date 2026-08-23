@@ -107,6 +107,58 @@ def _iso(mdy):
     return "%s-%s-%s" % (y, m, d)
 
 
+_NO_RECORDS = "NO RECORDS FOUND"
+_DRS = ("https://www.richmondcountyclerk.com/Search/DateRangeSearch"
+        "?StartSearchDate=%s&EndSearchDate=%s&SelectedDocumentIdentifier=0")
+
+
+def quick_day(mdy_a, mdy_b=None, page=None, timeout=45):
+    """ONE GET. No session, no POST, no token. (login 2026-08-23)
+
+    The date-range search answers a plain query-string GET — login found it in
+    the browser address bar. Measured: **0.7 s, 8.8 KB empty / 29.3 KB full.**
+    `Window` opens a session with three requests and then walks pages; for the
+    MONITOR'S question — "did anything file today?" — all of that is waste.
+
+    ⚠ AND THE SERVER STATES ITS EMPTINESS OUT LOUD:
+
+        NO RECORDS FOUND FOR 8/23/2026-8/23/2026
+
+    That is an EXPLICIT negative, and we were never asking for it. The monitor
+    inferred "quiet" from parsing zero rows — the exact inference that was
+    silently WRONG for weeks when the markup changed and every day reported
+    "0 new documents" while looking healthy. **A server that tells you it is
+    empty is worth more than any amount of careful inference**, because the
+    three states finally separate:
+
+        'empty'    the page SAYS no records          -> trustworthy quiet
+        'rows'     rows parsed                       -> real data
+        'unknown'  neither                           -> the page changed,
+                                                        or we cannot read it
+
+    'unknown' is the state that did not exist before. It used to be spelled
+    'empty', and that is how a dead parser passed for weeks.
+
+    Returns (state, rows, pages)."""
+    import urllib.request
+    url = _DRS % (_iso(mdy_a), _iso(mdy_b or mdy_a))
+    if page:
+        url += "&pageNumber=%d" % page
+    req = urllib.request.Request(
+        url, headers={"User-Agent": RC.UA, "Accept": "text/html",
+                      "Referer": "https://www.richmondcountyclerk.com/"})
+    html = _retry(lambda: urllib.request.urlopen(
+        req, timeout=timeout).read().decode("utf-8", "replace"))
+    rows = Window._parse(html)
+    if rows:
+        m = _PAGES.search(html)
+        return "rows", rows, (int(m.group(2)) if m else 1)
+    if _NO_RECORDS in html.upper():
+        return "empty", [], 0
+    # ⚠ NOT EMPTY — UNREADABLE. Refuse to call this quiet.
+    return "unknown", [], 0
+
+
 class Window:
     """One date-range search, held open so details can be re-POSTed against it."""
 
