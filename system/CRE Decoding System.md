@@ -1046,3 +1046,69 @@ lane got the LANE_RATE entry it never had.
 
 ⚠ **AN ANCHORED COUNTER IS AUTHORITATIVE ABOUT THE LEVEL AND USELESS AS A
 DERIVATIVE.** Never difference one to get a rate.
+
+
+# THE PIPELINE — WHERE IT STANDS, 2026-08-23 01:30  (plain terms)
+
+Everything below is running right now, unattended.
+
+## THE FIVE STEPS, AND WHO DOES THEM
+
+    00  MONITOR    "has anything new been filed?"          phase_monitor.py --gate
+    01  SYNC       "get me the ids of whatever is new"     sync_fast.py / rc_sync_fast.py
+    02  NAVIGATE   "put every id in the table with a url"  routine_navigation.py
+    03  ACQUIRE    "attach the actual pdf"                 rd_walk / image_walk / rc_pdf_pull
+    04  ORGANIZE   "key each document to what it is about" nav_key.py
+
+The monitor asks the cheap question once a minute. When the answer is yes it
+fires the FAST sync, which lands only the new ids. The lanes then pick those rows
+up **with no restart**, because a new row is written with its work columns empty
+and each lane selects on exactly that.
+
+## WHAT IS ACTUALLY RUNNING (11 python processes)
+
+    4 x rd_walk.py      --workers 28    the recorded-detail walk
+    3 x image_walk.py   --workers 28    the acris pdf lanes
+    1 x rc_pdf_pull.py  --workers 16    richmond pdfs, pure python
+    1 x rc_pdf_land.py                  drains the old richmond backlog
+    1 x rc_feed.py                      richmond feed
+    1 x org_backfill_arm.py             the keyer
+    +   phase_monitor (gated) · board_truth (30 min) · routine_update (60 s)
+
+## THE NUMBERS, FROM THE COLUMN NOT THE LOGS
+
+    acquisition rd   acris      9,667,266 / 21,612,715   44.7%   ~66/s   eta 2.1 d
+    acquisition rd   richmond   2,501,589 / 2,501,589    100%    COMPLETE
+    acquisition pdf  acris        872,897 / 21,612,715    4.0%  11.06/s  eta 21.7 d
+    acquisition pdf  richmond     158,916 /  2,501,589    6.4%  10.71/s  eta  2.5 d
+    organization     acris      3,747,509 /  9,656,707   38.8%
+
+## WHAT IS PROVEN AND WHAT IS NOT — read this part
+
+    monitor   PROVEN     edge known, and the gate FIRED live (tested, not assumed)
+    sync      PROVEN     acris delta 0 · richmond delta 0
+    nav       UNPROVEN   tail probe clean (last 200,000 rows, 0 missing urls)
+    acq       UNPROVEN   busy-guard: cannot scan while the fleet writes
+    org       UNPROVEN   busy-guard: same
+
+⚠ **2 of 5. A phase that could not be checked is NOT a phase that passed**, and
+the board says so rather than printing a comfortable "LEVEL".
+
+**THE ONE THING BLOCKING THE OTHER THREE** is that their audits are full table
+scans (~2.2 hours) and the fleet never pauses. The fix is measured and prepared
+in `migrate_audit_indexes.py` — partial "todo" indexes, the same trick that took
+board_truth from 28 minutes-and-unfinished to 131 seconds. ⚠ **It needs a
+deliberate pause of the fleet and it is login's call**, because CREATE INDEX
+takes the writer seat for the whole build. Nothing was run.
+
+## THE SEPARATE QUESTION NOBODY HAS ANSWERED: rd IS AT HALF ITS CEILING
+
+The fleet is at the proven operating point (rd 4x28) but running **~56-84/s
+against a measured aggregate ceiling of ~138/s**. It has been ~69/s all night,
+including with the keyer stopped. That is 2 days vs 1 day for the rd backfill.
+
+⚠ **NOT INVESTIGATED, DELIBERATELY.** Settling it needs controlled A/B, which
+means stopping lanes — against the standing instruction to keep everything
+running. And the prior lesson applies: *a single-lane bump reads linear by
+borrowing the controls' headroom; only the full-fleet reading settles it.*
+Flagged for a waking decision rather than guessed at overnight.
