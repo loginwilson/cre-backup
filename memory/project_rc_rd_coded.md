@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-23T05:49:18.582Z
+  modified: 2026-08-23T06:51:15.806Z
 ---
 
 **THE GRANT RULE (re-cracked 2026-08-21 night):** on the redesigned
@@ -90,6 +90,20 @@ architecture on it. ⚠ This is an HONEST self-identifying UA, not a spoofed
 Chrome one — naming yourself truthfully is not working around bot
 detection; presenting a fake fingerprint would be, and still is the line.
 **ALL FOUR LANES ARE NOW PURE PYTHON. No browser anywhere in the system.**
+⛔ **BUT THE PDF LANE WAS REFUSED AT ~87,000 DOCUMENTS IN ONE RUN**
+(2026-08-23 01:40): `REFUSED 403 on RC_1188180 — STOPPING THE LANE`. It
+stopped itself; **not restarted, and must not be without login's call.**
+⚠ A DIFFERENT refusal from the UA one — that was IDENTITY (fixed
+correctly), this is VOLUME/DURATION. Never "fix" it by touching headers;
+that is working around bot detection. ⚠ **THE HOST ESCALATED FIRST AND
+OUR OWN LOG SHOWED IT**: `err` sat flat at 14 for many lines, then
+18·22·26·30·42·46·59 with `+0` documents for six PROGRESS lines, THEN the
+403. **A rising err beside +0 is the back-off signal — watch for it before
+the refusal.** Only the DOCUMENT route
+(`/ViewVscmsDocument/ViewContent`) is refused; the SEARCH routes still
+work (the monitor fetched a 7-page window minutes later), so richmond
+sync/monitor are unaffected. State at stop: 203,917/2,501,589 (8.15%),
+`_incoming` drained to 0, nothing lost.
 The browser-worker/token-TTL material below is HISTORY — kept for the
 concurrency-pool findings, not as the current design.
 
