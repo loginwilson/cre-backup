@@ -8,6 +8,28 @@ metadata:
   modified: 2026-08-23T05:28:33.546Z
 ---
 
+**⚠ BOARD REDESIGNED 2026-08-23 (login's final spec) — NINE ROWS, THREE
+TIMESCALES, FOUR STATUSES.** Rows: sync ×2 · acq rd ×2 · acq pdf ×2 · keying
+pass 1 (ONE summed "all" row = Σ of both acq-rd rows, since keying ≡ rd by the
+trigger) · pass 2 "all" · pass 3 "all". Columns per row: NOW kit (rate_now ·
+increase_now · pct_now · eta_now, 60s) + WINDOW kit (rate · increase ·
+pct_increase · eta, 5 min — **eta is the 5-minute basis**) + TOTAL (landed ·
+needed · pct_of_total). All pct denominators = NEEDED (fixed ruler). Statuses:
+COMPLETE · ACTIVE · **PENDING (deliberate: parked lanes show eta="paused" with
+rates zeroed; gated passes show "at rd/pdf 100%") · STALLED (unexpected break —
+incl. wedged-but-alive lanes via heartbeat-log mtime >3 min)**. as_of carries
+"now=60s · window=5m". ⚠ TRAPS from the rebuild: (1) PowerShell ConvertTo-Json
+writes a **UTF-8 BOM** that silently blanked the config (cfg() now utf-8-sig +
+loud fallback); (2) schema changes must DROP update_board (N_COLS check) or
+INSERTs die while the table survives; (3) walkers launched without stdout
+redirects are invisible to the board — logs must land in NAV_WORK as
+rd_walk_a[1-4].log / image_walk_i[1-3].log; (4) rd_walk feeders have NO cursor:
+every restart re-wades from --lo through rd-complete rows (~4 min quiet drive,
+HOURS under pdf load — pause pdf lanes to let rd feeders reach frontier).
+FUTURE SOURCE PRINCIPLE (login): built sync-first from day one, a new source
+never needs acq/backfill lanes at all — "just run sync up to the decode";
+the acq rows exist only because this corpus predates the live lanes.
+
 **The Updates board is login's one way of seeing how routines perform**
 (2026-08-21). Every routine built from now on ships with its row here —
 never a bespoke dashboard again.

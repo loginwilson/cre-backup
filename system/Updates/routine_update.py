@@ -31,11 +31,10 @@ rate. If a new lane's log only prints pages, fix THE LANE to print docs.
 look identical unless the reporter checks BOTH the numbers and the process
 list - that confusion cost an hour on 2026-08-21:
     COMPLETE     landed == needed (and needed > 0)
-    ACTIVE       increased since the last pass
-    PENDING      a process is working for this row but nothing landed yet
-    STALLED      partial progress, no process, not parked
-    NOT STARTED  nothing landed, no process
-    PARKED       deliberately off (declared in updates_config.json)
+    ACTIVE       work is landing on this row
+    PENDING      deliberately waiting - parked lanes, gated passes, not-yet
+    STALLED      an unexpected break - wedged, errored, or died
+    (four and only four - login 2026-08-23)
 
 ⚠ NO FULL TABLE SCANS ON A TICK. A 24M-row COUNT stops the WAL
 checkpointing and starves the lanes (measured: WAL grew to 1.45 GB).
@@ -69,7 +68,37 @@ SYNC_DB = (pathlib.Path(r"D:\CRE Decoding System\00 Synchronizations")
            / "Legal Instruments Synchronization"
            / "Legal Instruments Synchronization.db")
 W = CP.NAV_WORK                       # the lanes' log folder
-RATE_WINDOW = 20 * 60
+# ⚠ BY THE MINUTE + BY THE WINDOW (login 2026-08-23: "rate now shows the 60
+# sec performance and the window is a 5 minute window... that solves the issue
+# of wanting to see performance in a moment and over time"). rate_now = last
+# ~60s, rate/increase/pct_increase = the 5-min window, ETA extrapolates the
+# window. The old 20-min window meant a stall stayed invisible for 20 minutes.
+RATE_WINDOW = 5 * 60
+
+# lane heartbeat logs per (phase, source) - the stall alarm reads MTIME only.
+# rd/image lanes print PROGRESS ~1/min into these; richmond pdf logs its pulls.
+_HEARTBEAT = {
+    ("acquisition rd", "acris"): "rd_walk_a[1-4].log",
+    ("acquisition pdf", "acris"): "image_walk_i[1-3].log",
+    ("acquisition pdf", "richmond"): "rc_pdf_land.log",
+}
+_STALE_S = 180
+
+
+def _lane_log_stale(phase, src, now):
+    """True when EVERY heartbeat log for this lane is >3 min old. One fresh
+    file = the lane breathes (multi-arm lanes stay healthy while one arm is
+    mid-wade). No matching files = no verdict (False) - absence of a log is
+    a setup problem, not evidence of a hang."""
+    import pathlib as _pl
+    pat = _HEARTBEAT.get((phase, src))
+    if not pat:
+        return False
+    root = W if "/" not in pat else _pl.Path(".")
+    hits = list(root.glob(pat))
+    if not hits:
+        return False
+    return all(now - p.stat().st_mtime > _STALE_S for p in hits)
 # ⚠ NOW_WINDOW MUST EXCEED MIN_SPAN OR `rate_now` CAN NEVER FIRE. They were
 # both 180 s, so the recent slice could never span MORE than the minimum it
 # had to clear - with samples 60 s apart the oldest one inside the window sits
@@ -77,7 +106,7 @@ RATE_WINDOW = 20 * 60
 # every pass. The board printed "now 6.6/s | avg 6.6/s" forever and looked
 # frozen while landed climbed steadily (login 2026-08-22: "the rate and rate
 # now arent different"). A window and its own minimum are not the same number.
-NOW_WINDOW = 5 * 60        # the "what is it doing right now" window
+NOW_WINDOW = 90            # ~the last minute (90s so two 60s passes fit)
 # ⚠ NEVER DIVIDE BY A GAP SHORTER THAN THE SOURCE'S OWN UPDATE INTERVAL.
 # Lane logs arrive in lumps ~60s apart, so a sample pair 11s apart divides
 # a whole minute of work by 11s: on the 2026-08-22 daemon restart that
@@ -86,7 +115,7 @@ NOW_WINDOW = 5 * 60        # the "what is it doing right now" window
 # filled - but a spike that corrects itself is still a spike that got
 # published. Below MIN_SPAN there is no rate yet, and saying so beats
 # inventing one.
-MIN_SPAN = 3 * 60
+MIN_SPAN = 45
 # filled by rows(): the rate each lane REPORTS about itself, per (phase,
 # source). Preferred over any rate the board differences for itself.
 LANE_RATE = {}
@@ -102,13 +131,24 @@ ORG_BACKFILL = {}
 
 # phase | source | metrics | status | as_of - nothing else (login: "cadence
 # makes no sense here"; it is a config knob, not a measurement)
+# ⚠ THE SYMMETRIC LAYOUT (login 2026-08-23: "rate now should have its
+# increase and percentage relative to needed. then rate (the larger window)
+# gets increase and pct increase to needed... then the eta should be one on
+# the rate now and rate window"). Three timescales, each with its full kit:
+#   NOW (60s)     rate_now · increase_now · pct_now · eta_now
+#   WINDOW (5m)   rate · increase · pct_increase · eta
+#   TOTAL         landed / needed · pct_of_total
+# eta_now vs eta disagreeing IS the signal something just changed.
 DDL = """CREATE TABLE IF NOT EXISTS update_board (
     phase TEXT NOT NULL, source TEXT NOT NULL,
-    rate_now REAL, rate REAL, increase INTEGER, pct_increase REAL,
+    rate_now REAL, increase_now INTEGER, pct_now REAL, eta_now TEXT,
+    rate REAL, increase INTEGER, pct_increase REAL, eta TEXT,
     landed INTEGER, needed INTEGER, pct_of_total REAL,
-    eta TEXT,
     status TEXT, as_of TEXT,
     PRIMARY KEY (phase, source))"""
+N_COLS = 15   # ⚠ schema changes DROP the old table or every INSERT dies with
+              # a column-count error while the table survives (measured; the
+              # board is rebuilt every pass, so dropping loses nothing)
 
 
 def eta_of(landed, needed, rate):
@@ -121,11 +161,10 @@ def eta_of(landed, needed, rate):
         time left    = windows left x window length   ==   remaining / rate
 
     Both forms are the same number; the code uses remaining/rate because
-    rate already carries the window. ⚠ DO NOT extrapolate from the
-    pct_increase COLUMN: its denominator is LANDED, not needed, so it
-    describes growth relative to work already done - using it would model
-    compounding and shrink every ETA as the phase progresses. Percentages
-    only extrapolate honestly against a FIXED denominator.
+    rate already carries the window. pct_increase now shares the same fixed
+    denominator (NEEDED - login 2026-08-23), so it is this window's slice of
+    pct_of_total; the old landed-denominator form modelled compounding and
+    was banned from ETA use for exactly that reason.
 
     A stalled lane gets "-", never "never": no rate is no evidence about
     the future."""
@@ -181,9 +220,17 @@ PROC_SIG = {
 
 
 def cfg():
+    # ⚠ utf-8-sig: a PowerShell ConvertTo-Json edit wrote a BOM on 2026-08-23
+    # and the silent fallback below BLANKED the whole config - show-filter off,
+    # parked list gone, retired phases back on the board. A config that fails
+    # to parse must SAY so, because the fallback is indistinguishable from
+    # "no config" and reads as a board full of ghosts.
     try:
-        return json.loads(CONF.read_text(encoding="utf-8"))
-    except Exception:
+        return json.loads(CONF.read_text(encoding="utf-8-sig"))
+    except Exception as e:
+        print("⚠ updates_config.json UNREADABLE (%s) - running with NO show "
+              "filter and NO parked list; the board will show every phase"
+              % e, flush=True)
         return {"cadence": {}, "parked": []}
 
 
@@ -496,6 +543,10 @@ def main(loop):
     if cols and (set(want) - set(cols) or "cadence" in cols):
         con.execute("DROP TABLE update_board")     # old schema, transient data
     con.execute(DDL)
+    cols = con.execute("PRAGMA table_info(update_board)").fetchall()
+    if len(cols) != N_COLS:
+        con.execute("DROP TABLE update_board")
+        con.execute(DDL)
     st = {"hist": {}, "due": {}}
     if STATE.exists():
         try:
@@ -616,17 +667,19 @@ def main(loop):
             # its upstream's output, which is still growing: when it has
             # keyed everything keyable it is PENDING (waiting on evidence),
             # and it is only COMPLETE once the upstream itself is.
-            up = {"organization": "acquisition rd"}.get(phase)
+            up = None   # organization retired 2026-08-23 - keying is
+            # pass 1 (lockstep row), pass 2/3 (gated rows); no follower
+            # phase remains that waits on an upstream
             if up and landed >= needed:
                 u = rows.get((up, src))
                 if not (u and u[0] >= u[1] and u[1] > 0):
                     con.execute(
                         "INSERT OR REPLACE INTO update_board VALUES"
-                        " (?,?,?,?,?,?,?,?,?,?,?,?)",
-                        (phase, src, round(rate_now, 2), round(rate, 2),
-                         d, round(pct_i, 3),
-                         landed, needed, round(pct_t, 2),
-                         "waiting on acq", "PENDING", win))
+                        " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                        (phase, src,
+                         round(rate_now, 2), d, round(pct_i, 3), "waiting",
+                         round(rate, 2), d, round(pct_i, 3), "waiting on acq",
+                         landed, needed, round(pct_t, 2), "PENDING", win))
                     lines.append(
                         f"UPDATE {phase:<15} | {src:<9} | {win}"
                         f" | now {rate_now:5.1f}/s | avg {rate:5.1f}/s | +{d:>7,} {pct_i:+7.2f}%"
@@ -637,42 +690,55 @@ def main(loop):
                 # needed == 0 is a MEASURED nothing-owed (a zero-delta sync
                 # run), not an absence - nothing owed IS complete
                 status = "COMPLETE"
-            elif worked or d > 0:
+            elif worked and d == 0 and _lane_log_stale(phase, src, now):
+                # ⚠ THE 20-MINUTE BLINDNESS (login 2026-08-23: "if it stops
+                # working, we lose 20 minutes"). A hung-but-ALIVE lane keeps
+                # its process (worked=True) so it read ACTIVE while the rate
+                # decayed for a full window. The lanes print PROGRESS about
+                # once a minute, so a lane log untouched for 3+ minutes with
+                # its process still present is WEDGED - visible here within
+                # ~3 min instead of 20. Log MTIME only: zero queries, and a
+                # busy lane that simply had a flat tick (d==0 from commit
+                # batching) still has a fresh log, so it stays ACTIVE.
+                status = "STALLED"
+            elif worked:
                 status = "ACTIVE"
-                # ⚠ ACTIVE CANNOT DISTINGUISH "a process is spending the
-                # machine on this" from "a trigger rides another phase's
-                # writes for free" - and the login read the difference as
-                # a leak ("organization still looks like its running" -
-                # 2026-08-22, minutes after pausing the keyer so ALL power
-                # went to the acqs). Organization moving with NO keyer
-                # process is the key_on_rd trigger keying inside rd's own
-                # transaction: zero cost, nothing to pause. Name that state
-                # TRIGGER so a fleet-watcher never has to wonder whether
-                # the pause took.
-                if phase == "organization" and not worked:
-                    status = "TRIGGER"
-                    # ⚠ AND THE RATE READS 0.0, NOT rd's (login 2026-08-22:
-                    # "organization still shows a rate even though it should
-                    # be 0 and paused"). The rate column's unit is WORK BEING
-                    # SPENT on the row; trigger keys ride rd's transaction,
-                    # so their spend is already displayed as rd's own rate -
-                    # printing it here a second time double-displays one
-                    # stream of work and reads as an unpaused process.
-                    # Movement stays visible where it belongs: increase and
-                    # landed keep climbing, ETA already extrapolates only
-                    # backfill keys.
-                    rate = rate_now = 0.0
+            elif d > 0:
+                # ⚠ AN INCREASE WITHOUT A PROCESS IS NOT "ACTIVE". Login
+                # 2026-08-23, minutes after pausing the pdf lanes: "the status
+                # should reflect it not say its active if paused." The old
+                # `worked or d > 0` let a freshly-paused lane coast on the
+                # window's residual increase and read ACTIVE for a full
+                # window. Landed-but-nobody-working is the STALLED definition
+                # ("partial progress, no process") - unless the increase came
+                # from a trigger riding another lane, which the LOCKSTEP rows
+                # already represent.
+                status = "STALLED"
             elif landed > 0:
                 status = "STALLED"
             else:
                 status = "PENDING"
-            pct_i = d / was * 100 if was else 0.0
+            # ⚠ DENOMINATOR IS NEEDED, NOT LANDED (login 2026-08-23: "the pct
+            # increase should be the increase amounts percentage relative to
+            # the needed"). Against landed it described growth relative to
+            # work already done - compounding, so the same increase read
+            # smaller as the phase progressed. Against needed it is a fixed
+            # denominator: pct_increase and pct_of_total finally share a
+            # ruler, and this window's increase IS the pct_of_total delta.
+            pct_i = d / needed * 100 if needed else 0.0
             pct_t = landed / needed * 100 if needed else 0.0
-            # as_of = plain freshness stamp (rate/increase carry their own
-            # ~20-min window). If this goes stale, the daemon is dead.
+            # as_of = freshness stamp + THE WINDOW THE NUMBERS DESCRIBE.
+            # Login 2026-08-23: "not knowing its context of how much in a
+            # given time frame makes it hard" - a bare stamp forced the
+            # reader to already know that rate/increase are a trailing
+            # ~20-min measure. Say it in the row itself: `increase` is docs
+            # in the last N min, rate = that / the window's seconds. The
+            # span right after a (re)start is shorter than 20m until the
+            # history refills; the label states the design window.
             win = ("as of " + time.strftime("%B %d, %Y %I:%M %p",
                                             time.localtime(now))
-                   .replace(" 0", " "))
+                   .replace(" 0", " ")
+                   + " · now=60s · window=%dm" % (RATE_WINDOW // 60))
             # ⚠ AN ETA MUST EXTRAPOLATE THE RATE THAT CLOSES *THIS* GAP.
             # organization's rate is dominated by the key_on_rd TRIGGER,
             # which keys each row as rd lands it - so that component arrives
@@ -683,30 +749,35 @@ def main(loop):
             # keys close it, so only their rate may date it. Same family as
             # the pct_increase trap above - a rate against the wrong
             # denominator is not a slow answer, it is a false one.
-            if phase == "organization":
-                bkey = f"orgfill|{src}"
-                bf = ORG_BACKFILL.get(src, 0)
-                bh = [s for s in st["hist"].get(bkey, [])
-                      if now - s[0] <= RATE_WINDOW] + [[now, bf]]
-                if len(bh) > 1 and bf < bh[-2][1]:
-                    bh = [[now, bf]]
-                st["hist"][bkey] = bh
-                bspan = now - bh[0][0]
-                eta = eta_of(landed, needed,
-                             (bf - bh[0][1]) / bspan
-                             if bspan >= MIN_SPAN else 0.0)
-            else:
-                eta = eta_of(landed, needed, rate)
+            eta = eta_of(landed, needed, rate)
+            eta_now = eta_of(landed, needed, rate_now)
+            # increase_now mirrors rate_now's own span; same fallback rule
+            d_now = (landed - recent[0][1]) if len(recent) > 1 else d
+            pct_n = d_now / needed * 100 if needed else 0.0
+            # FOUR STATUSES ONLY (login 2026-08-23): COMPLETE - ACTIVE -
+            # PENDING (deliberately waiting: parked lanes, gated passes) -
+            # STALLED (an unexpected break). Parked wins over everything
+            # but COMPLETE: a paused lane is a decision, not a defect.
+            if phase in c.get("parked", []) and status != "COMPLETE":
+                status = "PENDING"
+                eta = eta_now = "paused"
+                # and the rates read 0.0: the anchored lane-rate is a span
+                # that can straddle the pause (login saw 1.26/s on a lane
+                # paused for 20 min). A paused lane spends nothing.
+                rate = rate_now = 0.0
+                d = d_now = 0
+                pct_i = pct_n = 0.0
             con.execute("INSERT OR REPLACE INTO update_board VALUES"
-                        " (?,?,?,?,?,?,?,?,?,?,?,?)",
-                        (phase, src, round(rate_now, 2), round(rate, 2),
-                         d, round(pct_i, 3),
-                         landed, needed, round(pct_t, 2), eta, status, win))
+                        " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                        (phase, src,
+                         round(rate_now, 2), d_now, round(pct_n, 3), eta_now,
+                         round(rate, 2), d, round(pct_i, 3), eta,
+                         landed, needed, round(pct_t, 2), status, win))
             lines.append(
                 f"UPDATE {phase:<15} | {src:<9} | {win}"
-                f" | now {rate_now:5.1f}/s | avg {rate:5.1f}/s | +{d:>7,} {pct_i:+7.2f}%"
-                f" | {landed:>10,} / {needed:>10,} = {pct_t:6.2f}%"
-                f" | ETA {eta:>9} | {status}")
+                f" | now {rate_now:5.1f}/s +{d_now:,} {pct_n:+.3f}% eta {eta_now}"
+                f" | 5m {rate:5.1f}/s +{d:,} {pct_i:+.3f}% eta {eta}"
+                f" | {landed:>10,} / {needed:>10,} = {pct_t:6.2f}% | {status}")
         # ── THE THREE KEYING ROWS (login 2026-08-23: "no more organization
         # phase, just keying as part of the natural progression of rd under
         # pass 1... pass 2 and 3 havent happened yet so they await") ─────────
@@ -716,28 +787,34 @@ def main(loop):
         # attachment visible. Counting it separately would be a scan to
         # re-learn an identity. Verified 2026-08-23 by full scan: 15,432,975
         # rd rows, 0 unkeyed (parcel 94.62%, pdf-pass 830,014, reference 76).
-        for ksrc in ("acris", "richmond"):
-            r = con.execute(
-                "SELECT rate_now, rate, increase, pct_increase, landed,"
-                " needed, pct_of_total, eta FROM update_board"
-                " WHERE phase='acquisition rd' AND source=?",
-                (ksrc,)).fetchone()
-            if r:
-                kst = "LOCKSTEP" if r[4] < r[5] else "COMPLETE"
-                con.execute(
-                    "INSERT OR REPLACE INTO update_board VALUES"
-                    " (?,?,?,?,?,?,?,?,?,?,?,?)",
-                    ("keying pass 1", ksrc, r[0], r[1], r[2], r[3],
-                     r[4], r[5], r[6], r[7], kst, win))
+        con.execute("DELETE FROM update_board WHERE phase='keying pass 1'"
+                    " AND source!='all'")
+        k = con.execute(
+            "SELECT SUM(rate_now), SUM(increase_now), SUM(rate),"
+            " SUM(increase), SUM(landed), SUM(needed)"
+            " FROM update_board WHERE phase='acquisition rd'").fetchone()
+        if k and k[5]:
+            krn, kdn, kr, kd, kl, kn = (x or 0 for x in k)
+            con.execute(
+                "INSERT OR REPLACE INTO update_board VALUES"
+                " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                ("keying pass 1", "all",
+                 round(krn, 2), kdn, round(kdn / kn * 100, 3),
+                 eta_of(kl, kn, krn),
+                 round(kr, 2), kd, round(kd / kn * 100, 3),
+                 eta_of(kl, kn, kr),
+                 kl, kn, round(kl / kn * 100, 2),
+                 "ACTIVE" if kl < kn else "COMPLETE", win))
         # ⚠ PASSES 2/3 AWAIT THEIR GATES (pass 2 = rd 100%, pass 3 = pdf
         # 100%). `needed` is the pdf-pass pool ANCHORED by the 2026-08-23
         # verify scan - an accounted figure; the pass itself re-measures.
-        for kphase, gate in (("keying pass 2", "AWAITING RD 100%"),
-                             ("keying pass 3", "AWAITING PDF 100%")):
+        for kphase, gate in (("keying pass 2", "at rd 100%"),
+                             ("keying pass 3", "at pdf 100%")):
             con.execute("INSERT OR REPLACE INTO update_board VALUES"
-                        " (?,?,?,?,?,?,?,?,?,?,?,?)",
-                        (kphase, "all", 0.0, 0.0, 0, 0.0,
-                         0, 830014, 0.0, "-", gate, win))
+                        " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                        (kphase, "all", 0.0, 0, 0.0, gate,
+                         0.0, 0, 0.0, gate,
+                         0, 830014, 0.0, "PENDING", win))
         # the board drops only UNKNOWN phases (schema leftovers - login:
         # "still have the rows I dont want"). A KNOWN phase outside `show`
         # keeps its row: phase routines write their rows as they run, and
