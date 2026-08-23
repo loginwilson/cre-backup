@@ -338,3 +338,57 @@ free**.
 3. `_incoming` backlog is unbounded by design. Nothing is lost, but the
    lander only drains when the lanes quiet.
 4. Extraction has no routine and no gate.
+
+
+## ⚠ THE WRITER-SEAT LAW — one root cause, three symptoms (2026-08-22)
+
+Login named it: *"the db lag is what is slowing down updates, the org cant run
+cause of it, and the concern over sync feeding nav is the same issue."*
+
+**MEASURED THREE TIMES THE SAME NIGHT, SAME NUMBER, DIFFERENT CODE:**
+
+    rc_pdf_land.py     per-file commit            1.8/s
+    rc_pdf_pull.py     per-file commit (new code) ~2/s
+    rc_pdf_pull.py     BATCHED bare UPDATEs       keeps up with 12.5/s, queue 0
+
+Two independently written per-row writers landed on the same ~2/s. That is the
+signature of a SHARED RESOURCE CEILING, not slow code: SQLite has ONE writer
+seat and eight lanes queue on it. **Making a stage faster cannot help, because
+the constraint is not in any stage.**
+
+### THE RULE, STATED CORRECTLY
+
+rc_pdf_land.py's comment was read for a year as "never batch". Its last line
+is the actual rule: **"converted OUTSIDE the transaction"**. What collapsed
+acris rd from 99 to 16 docs/s was holding the lock across ~50 CPU-heavy
+CONVERSIONS - the slow WORK inside the transaction, not the batch.
+
+    ⚠ BATCHING WORK      fatal   - lock held for seconds
+    ✅ BATCHING WRITES   correct - lock held for milliseconds, ONE seat
+                                   acquisition instead of N
+
+Do the slow thing (fetch, convert, compute a key) OUTSIDE, then apply the
+result as a batch of bare UPDATEs.
+
+### IT DISSOLVES ALL THREE
+
+| symptom | mechanism | fix |
+|---|---|---|
+| board rates lag reality | pdf column written per-row | batched - DONE, queue 0 |
+| org cannot run during backfill | keying sweep holds long transactions | compute keys outside, apply batched |
+| sync feeding nav feared | assumed contention | 1,650 ids/day = ONE batch/day |
+
+⚠ Sync was never the risk. Volume, not writing, is what starves a seat:
+sync appends 0.019 rows/s; the lander wanted 12/s; the keyer swept millions.
+
+### AND A SEPARATE BUG THE SAME NIGHT - THE BOARD WAS BLIND, NOT WRONG
+
+`routine_update.py` reported richmond pdf at 0.20/s while the lane ran 13/s.
+Two causes, both stale references to a pipeline that had changed underneath:
+  - the LANE MAP named only `rc_feed.py` + `rc_pdf_land.py`, never the new
+    `rc_pdf_pull.py`, so a live lane read as idle;
+  - `landed` was parsed out of `rc_pdf_land.log`, and the puller writes
+    straight to the store, so its work never appeared in that log at all.
+**A board that reads a process list and a log file is only as true as its
+map of the system.** When a lane is replaced, the board must be edited in
+the same commit or it will confidently report the old world.
