@@ -72,3 +72,16 @@ deliverable.
 On degraded artifacts, the high-dpi second look is MANDATORY for:
 stamps · identity strings (address, block/lot) · **term lines** ·
 signature and date lines. A deletion on a term line changes the ROW.
+
+## 10 · EVERY MONEY VALUE CARRIES ITS ROLE
+
+face · unpaid · consideration · cap · charge · assessed. A bare amount
+is an unlabeled claim, and in a debt product the default reading is
+"owed" — which is usually wrong. "Principal sum $17,200" is not
+"owed $17,200" (R36; R11 measured the same error at 4x).
+
+## 11 · THE DELIVERY INHERITS EVERY CAVEAT IN THE RECORD
+
+If the banked entry hedges (single witness · read at 420dpi · partly
+legible), the delivered table hedges in the same words. The delivery is
+what gets acted on.

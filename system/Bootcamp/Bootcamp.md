@@ -5766,3 +5766,30 @@ includes the senior lender's costs.
   R18/R33 family of typed remark cites).
 - Return-to name partly legible ("Am_tt & Becker"[?], 55 Liberty St,
   New York) — held, not asserted.
+
+## R36 GRADE (login-prompted, cold) — A−, two precision misses
+
+1. FACE REPORTED AS BALANCE. Delivered "Elstar already owed $17,200"
+   — the page says "in the PRINCIPAL SUM of $17,200.00", i.e. the
+   ORIGINATION FACE. Outstanding balance in 1967 is NOT STATED. This is
+   L-2 (qty_role) recurring after run 11, where face $250,000 vs unpaid
+   $60,493.17 would have overstated debt 4x. The table repeated the
+   flaw quietly by carrying "$17,200.00" with NO role label.
+   RULE HARDENED: every money value in a row or summary carries its
+   QTY_ROLE explicitly — face / unpaid / consideration / cap / charge.
+   A bare amount is an unlabeled claim, and in a DEBT product an
+   unlabeled amount defaults to being read as "owed", which is the
+   wrong default.
+2. CAVEAT LOST BETWEEN RECORD AND DELIVERY. The banked entry says the
+   underlying-mortgage liber was "read at 420dpi, SINGLE WITNESS"; the
+   delivered table presented "liber 512 ... p.399" as settled. It is a
+   handwritten numeral on degraded film AND a chain edge. RULE: the
+   delivery inherits every caveat in the record — if the entry hedges,
+   the table hedges. The delivery is what gets acted on.
+
+HELD (first run with the Compose Card in force): no motive claim, no
+relationship claim, no era/industry generalization, no officer/entity
+conflation, instrument's own nouns preserved, parcel key EARNED with
+both document-side witnesses named and the weaker half (lot 78, margin
+only) flagged, length down ~50% from the R35 redo with no content loss.
+The trigger list fired where the two previous runs failed.
