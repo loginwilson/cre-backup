@@ -56,6 +56,13 @@ company; the president is a person who signed for it.
 "residential units" ≠ "houses". "computor pumps" ≠ "pumps". If a word
 carries arithmetic or is a term of art, quote it and teach it in place.
 
+⚠ WATCHED WORD: **"houses"**. Twice (R34 "residential units", R38
+"buildings") a broad noun was silently narrowed to "houses" — the same
+default both times. If "house(s)" appears in a draft, confirm the
+document uses it; if it does not, restore the document's noun.
+Neighbours to watch the same way: "apartment", "store", "office",
+"family" — any word that names a BUILDING TYPE the record did not.
+
 ## 7 · RECONCILIATION MARKS ARE EARNED
 
 ✓ only when TWO independent readings agree. When the document-side
@@ -73,6 +80,9 @@ deliverable.
 ## 9 · IF IT CANNOT BE DONE, SAY SO
 
 "Too faint to read" is a deliverable. Unknown beats wrong, always.
+AND: bank whatever is readable ABOUT HOW TO READ IT — legends, scales,
+keys, headers, form numbers (R38-4a). An unread state should carry its
+own recovery instructions.
 On degraded artifacts, the high-dpi second look is MANDATORY for:
 stamps · identity strings (address, block/lot) · **term lines** ·
 signature and date lines. A deletion on a term line changes the ROW.

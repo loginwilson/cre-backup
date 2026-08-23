@@ -6120,7 +6120,16 @@ answerable from the record alone, only "who may admit them."
 Exhibit A (p.62) is a blueprint-style lot diagram — circled lot
 numbers, "UNR." blocks, a street reading "PE____ ST." — and it does NOT
 resolve at 140dpi OR 400dpi. This is UNREAD-BY-SOURCE (R22-2), tested,
-not assumed. Consequence stated plainly: THE EASEMENT'S EXTENT IS NOT
+not assumed.
+
+⚠ BUT THE LEGEND IS READABLE, AND THE LEGEND IS THE INSTRUCTIONS:
+"SCALE 1"=60'" and "○ = LOT NO." — i.e. the circled figures on the
+diagram ARE lot numbers, at sixty feet to the inch. Banked because it
+tells whoever obtains a BETTER SCAN exactly how to read it. GENERAL
+RULE (R38-4a): WHEN AN ARTIFACT IS UNREADABLE, BANK WHATEVER IS
+READABLE ABOUT HOW TO READ IT — legends, scales, keys, column headers,
+form numbers. The unread state then carries its own recovery
+instructions instead of only its failure. Consequence stated plainly: THE EASEMENT'S EXTENT IS NOT
 DETERMINABLE FROM THIS ARTIFACT. rd's block-scope key (5047200000 =
 block 4720, matching the backer's "Indexed under Block Number 4720 on
 the Land Map") is the only scope available, and it is the BLOCK, not
@@ -6141,7 +6150,10 @@ the lots. A better copy could settle it; nothing else can.
   Grantor harmless for injuries from Company negligence — a risk
   allocation riding an ENCUMBRANCE row as a term claim.
 - Development context READ, not inferred: the grantor's own recital
-  says it is constructing or intends to construct buildings.
+  says it is constructing or intends to construct BUILDINGS.
+  ⚠ The DELIVERED summary narrowed this to "houses" — corrected at
+  grading; the entry was always correct. Building TYPE is unstated and
+  the easement footprint differs by type.
 - Attest line left BLANK beneath the corporate seal — execution anatomy
   (R36 family: parties are not signatories, and forms are not always
   fully filled).
