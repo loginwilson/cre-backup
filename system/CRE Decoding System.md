@@ -477,3 +477,63 @@ acquisition is at 3%.
 each tick (which scans our own rows - it timed out at 100 s against a busy
 table). That is exactly the cost the monitor exists to avoid. Build the
 one-request question first; everything else already exists.
+
+
+# THE PHASE TREE — stated whole (login 2026-08-22)
+
+    monitorization -> synchronization -> navigation -> acquisition ->
+    organization                                    ... LIVE SOURCE DATABASE
+
+    extraction -> resolution -> derivation           ... DECODED DATABASE
+
+    productization                                   ... PRODUCT DESIGN
+
+⚠ `monitorization` is NEW and completes the -ation grammar. Every phase is a
+noun of process; the monitor was the only one named as a thing rather than a
+doing. Its claim is the smallest in the system: THE SOURCE'S COUNT IS KNOWN,
+AS OF SECONDS AGO. See PHASE 00- THE MONITOR above.
+
+⚠ NUMBERING IS AN OPEN QUESTION, DELIBERATELY LEFT OPEN. The folders are
+`00 Synchronizations` .. `07 Productizations` and every path reference in the
+code depends on those numbers. Renumbering eight folders to insert a new 00
+would break references throughout for a cosmetic gain. Decide it explicitly;
+do not let a script decide it by accident.
+
+## WHY THE TWO-TIER SPLIT IS LOAD-BEARING
+
+The tiers make DIFFERENT CLAIMS, VERIFIED BY DIFFERENT AUTHORITIES, and they
+FAIL IN DIFFERENT SHAPES. That is why they are two databases and not one.
+
+| | LIVE SOURCE DATABASE | DECODED DATABASE |
+|---|---|---|
+| claim | completeness + freshness: we hold everything the custodian holds, right now, keyed | correctness of reading: the row says what the document says |
+| authority | **EXTERNAL** - ask the source its count and compare | **THE DOCUMENT ITSELF** - nothing else can settle it |
+| gate | `landed + imageless + unlanded == total` | the three tests; every claim anchored to a page |
+| failure shape | **SILENT AND TOTAL** - a gate-keyed pull drops retired BBLs and the audit reads its own filter's output | **PLAUSIBLE AND LOCAL** - a fabricated section label, a face amount read as a balance |
+| how it is caught | arithmetic against a number we did not invent | a second reader, a crop, a witness on another page |
+
+**The first tier can be proven. The second can only be evidenced.** That is
+the whole reason the bootcamp exists for one and the update board for the
+other: an external count settles tier one; nothing external settles tier two.
+
+⚠ The rule that guards the boundary, from routine_4am: *"a count computed
+from our own output is not evidence; every failure today looked like success
+by that measure."* It applies to BOTH tiers and is the only rule that does.
+
+## STATUS 2026-08-22
+
+    monitorization    designed, NOT BUILT - the one-request question
+    synchronization   PYTHON, confirmed (map_delta.py / rc_sync.py)
+    navigation        PYTHON, 100% both sources
+    acquisition       PYTHON as of tonight - the browser was the last
+                      non-python link in the entire system and it is gone
+    organization      PYTHON - richmond complete, acris armed
+    ---------------------------------------------------------------
+    extraction        not built - the ONLY phase under the inflow rate
+    resolution        modelled
+    derivation        modelled
+    productization    -
+
+**TIER ONE IS NOW FULLY AUTOMATABLE.** Not automated - backfill still has to
+finish and the monitor still has to be built - but every phase in it is code
+that can be scheduled. That was not true this morning.
