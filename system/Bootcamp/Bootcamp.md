@@ -5562,3 +5562,45 @@ anchor it or mark it ⚠ INFERRED:
 Make the bad state unrepresentable rather than detected (P-2 family):
 the trigger list belongs in the extraction PROMPT, so the VLM cannot
 emit a motive sentence without an anchor slot to fill.
+
+## R35-4 — THE CROP FOUND A MISSED EVENT-SHAPING DELETION (redo, 400dpi)
+
+The R35 grade's miss #4 (crop rule not applied) was CLOSED BY DOING IT.
+Three 400dpi crops of page 1 returned:
+
+- ADDRESS CONFIRMED: "Being premises known as 5801 Amboy Road, Staten
+  Island 9, New York" — second witness obtained, identity string now
+  READ rather than single-look.
+- VERBATIM SPELLING: the list says "2-COMPUTOR Pumps" (the document's
+  own spelling, not "computer") — banked verbatim per the length law's
+  words-are-the-fact class.
+- ⚠ A MISSED FINDING, NOT A RENDERING DETAIL: the term line's tail is
+  STRUCK THROUGH — "but subject to termination by lessee at the end of
+  the first year or any time thereafter upon thirty (30) days prior
+  written notice from lessee to lessor." THE PRINTED FORM GAVE THE
+  TENANT A ONE-YEAR ESCAPE AND IT WAS DELETED. The term is therefore a
+  FIRM fifteen years, not a one-year-then-cancel arrangement — two
+  completely different assets, and the original run reported the wrong
+  one by silence.
+
+LESSON (harder than the original miss): the strike layer is not
+decoration, it is TERM-SHAPING, and strikes survive only at resolution.
+At 130dpi the struck tail read as page noise. Rule promoted: TERM LINES
+AND SIGNATURE/DATE LINES GET THE HIGH-DPI PASS ON ANY DEGRADED
+ARTIFACT, alongside stamps and identity strings — because a deletion
+there changes the row, not the prose.
+
+## THE REDO PRACTICE (login 2026-08-22: "how would you change this past
+## run if it clearly struggled")
+
+When a run grades poorly, REDO IT and bank the pair. The redo is not
+penance — it is the highest-value artifact the loop produces, because a
+BEFORE/AFTER pair on the SAME document teaches what a single good run
+cannot: which sentences were unanchored, which label broke the grammar,
+which region needed the second look. For the VLM, paired bad/good
+output on identical input is the most direct training signal available.
+Redo protocol: (1) re-render the regions the grade flagged, at 400dpi;
+(2) recompose the verdict against the compose-time trigger list; (3)
+correct the row grammar to canonical vocabulary; (4) bank BOTH versions
+with the grade between them; (5) if the redo finds a NEW substantive
+miss (as R35-4 did), the original grade was generous — say so.
