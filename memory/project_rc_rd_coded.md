@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-22T14:38:52.949Z
+  modified: 2026-08-23T05:49:18.582Z
 ---
 
 **THE GRANT RULE (re-cracked 2026-08-21 night):** on the redesigned
@@ -54,9 +54,13 @@ was recorded freezes PREMATURE — instrument blank (the label is
 and image_state 'absent' (scan lag) — which hides it from instrument
 audits AND from pdf selection forever: `rc_rd_refresh.py` (inside the
 daily sync) re-walks young premature docs until they mature.
-Pdf lane: feed mints ahead → browser WORKER loop → rc_pdf_land --raw
-lands ~10/s → rc_convert is OPTIONAL (raw IS the acquired doc; ~870 GB
-raw vs ~350 GB converted against 18 TB free).
+Pdf lane (CURRENT): `rc_pdf_pull.py --workers 16` writes straight to the
+store, ONE db-writer thread batching 250 updates per commit (the
+writer-seat law). `rc_pdf_land --raw` still drains the older `_incoming`
+backlog. rc_convert is OPTIONAL (raw IS the acquired doc; ~870 GB raw vs
+~350 GB converted against 18 TB free). ⚠ `rc_pull.log` is written to the
+DECODER cwd, not NAV_WORK — a board branch pointed at NAV_WORK and
+silently omitted 45,986 landed pdfs.
 
 **THE COUNTY'S REAL ENVELOPE — never under-run it again:** night_chain ran
 rc_detail_pull at conc 80 ×2 CONCURRENT SWEEPS = 160 connections,
@@ -74,14 +78,20 @@ rd → the walk fills them coded (empty cell = work list). ⚠ 8 heavy python
 processes ≈ all 8 cores — at 160-conn Richmond + 4 rd + 2 pdf, machine CPU
 binds before either server; read ACRIS sag as OUR cpu, not their pool.
 
-**⚠ RICHMOND PDF IS THE ONE NON-PYTHON LANE — SETTLED 2026-08-22, do not
-re-litigate.** Python asking the FINAL image url with a valid fresh token
-and a wholly normal request (real Chrome UA, Referer, Accept) gets **HTTP
-403** while the browser is served the same token seconds later: the host
-fingerprints below the header layer (TLS), and presenting a fake
-fingerprint = working around bot detection = the line we don't cross.
-So: acris rd · acris pdf · richmond rd = pure python; richmond pdf = a
-real user-driven browser with the extension, permanently.
+**✅ RICHMOND PDF IS PURE PYTHON — the "non-python lane" claim was WRONG
+and is retracted (2026-08-22 late; still true 2026-08-23).** `rc_pdf_pull.py`
+runs headless at **10.8–13 docs/s**, 80,000+ documents landed, no browser.
+⚠ **THE 403 WAS THE USER-AGENT, NOT TLS FINGERPRINTING.** Measured on the
+courts host: `python-requests/2.34.2` (library default) → ReadTimeout at
+45 s, 2/2; **`acris-decoder/1.0` (this project's own honest UA) → HTTP 200
+with the full pdf in 1.5 s, 2/2.** The earlier diagnosis named a cause
+(TLS) from a single failing configuration and built a permanent
+architecture on it. ⚠ This is an HONEST self-identifying UA, not a spoofed
+Chrome one — naming yourself truthfully is not working around bot
+detection; presenting a fake fingerprint would be, and still is the line.
+**ALL FOUR LANES ARE NOW PURE PYTHON. No browser anywhere in the system.**
+The browser-worker/token-TTL material below is HISTORY — kept for the
+concurrency-pool findings, not as the current design.
 
 **THE WALL IS PER-CONNECTION-POOL, not per-cookie (measured):** a second
 worker fetching `credentials:'omit'` SPLIT the same ~1.8 docs/s
