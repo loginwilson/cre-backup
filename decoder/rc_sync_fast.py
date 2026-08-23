@@ -122,8 +122,73 @@ for r in rows:
 con.close()
 print(f"  held {len(rows)-len(fresh):,} · NEW {len(fresh):,}")
 
+
+def write_ledger(landed_ids, outstanding=0):
+    """One ledger row per RUN — including a run that found nothing.
+
+    ⚠ THE ROW ANSWERS ONE QUESTION: DOES SYSTEM MATCH SOURCE? Login
+    2026-08-23: *"seeing that system matches source is the key of sync. the
+    delta is just the way to find the id and adjust system up to source until
+    we tick again."* So the row is the state AFTER absorbing:
+
+        system_total  what we hold now, having absorbed this run's ids
+        source_total  what the custodian holds
+        delta         source - system = STILL OUTSTANDING · 0 means LEVEL
+        doc_ids       what this run moved to get there
+
+    Read a row left to right and the answer is visible: two equal numbers and
+    a zero is a healthy sync. ⚠ The schema comment said system_total was the
+    count BEFORE absorbing while routine_update read it as AFTER — one column,
+    two meanings, which is how the -20,721,031 got onto the board. AFTER wins,
+    because it is the reading that makes "system == source" checkable.
+
+    ⚠ A ROW PER SYNC EVENT — NOT A HEARTBEAT. Login 2026-08-23: *"it just
+    updates if monitor doesnt flag it doesnt move, but if monitor flags then it
+    does fast sync, finds the delta, id, and then the system total should be
+    level after that feeds nav."* Sync only RUNS when the monitor flags, so the
+    absence of a row is not ambiguous — it means the monitor found nothing, and
+    the monitor's own log already proves it was alive and checking every minute.
+    **Proof-of-life belongs in the monitor's log; the ledger is for events.**
+    An earlier draft of this wrote hourly heartbeat rows: 1,440 near-identical
+    rows a day into a table that is read by eye, to re-state something another
+    log already said.
+
+    ⚠ It DOES still write when a flagged run finds nothing (`NEW 0`) — that is
+    a real and interesting result: the monitor said something changed and sync
+    disagreed. Worth a row precisely because it is a discrepancy.
+
+    ⚠ THE TOTAL IS ACCOUNTED, NOT MEASURED — previous + exactly what we landed,
+    so it needs no scan. `routine_synchronization` re-measures both sides daily
+    and re-anchors it. Never let the accounted figure outlive its anchor."""
+    lg = sqlite3.connect(LEDGER, timeout=120)
+    try:
+        prev = lg.execute(
+            "SELECT system_total FROM synchronization"
+            " WHERE source='richmond' AND system_total > 0"
+            " ORDER BY run_at DESC LIMIT 1").fetchone()
+        system = (prev[0] if prev else 0) + len(landed_ids)
+        source = system + outstanding
+        stamp = time.strftime("%Y-%m-%d %H:%M")
+        lg.execute(
+            "INSERT OR REPLACE INTO synchronization"
+            " (run_at, source, system_total, source_total, delta, doc_ids)"
+            " VALUES (?,?,?,?,?,?)",
+            (stamp, "richmond", system, source, outstanding,
+             ";".join(landed_ids)))
+        lg.commit()
+        print(f"  ledger {stamp}: system {system:,} · source {source:,} · "
+              f"delta {outstanding}"
+              + ("  LEVEL" if outstanding == 0 else "  OUTSTANDING"))
+    finally:
+        lg.close()
+
+
 if not fresh:
     print("level - nothing to land")
+    if a.apply:
+        # ⚠ STILL RECORD THE RUN. "Nothing new" is a RESULT and the most
+        # common one; it is exactly the answer that must be visible.
+        write_ledger([])
     sys.exit(0)
 for d in fresh[:10]:
     print(f"    + {d}")
@@ -159,14 +224,8 @@ print("  the running lanes pick them up with no restart: rc_feed sees "
 
 # ── LEDGER, then the watermark. IN THAT ORDER, AFTER THE COMMIT. ──────────
 try:
-    lg = sqlite3.connect(LEDGER, timeout=120)
-    lg.execute("INSERT INTO synchronization"
-               " (run_at, source, system_total, source_total, delta, doc_ids)"
-               " VALUES (?,?,?,?,?,?)",
-               (time.strftime("%Y-%m-%d %H:%M"), "richmond", 0, 0,
-                len(fresh), ";".join(fresh)))
-    lg.commit()
-    lg.close()
+    # landed everything the window held, so nothing is outstanding
+    write_ledger(fresh, outstanding=0)
 except Exception as e:
     print(f"  ⚠ ledger write failed ({e}) - watermark NOT advanced, so the "
           f"next run re-finds these rather than stepping over them")

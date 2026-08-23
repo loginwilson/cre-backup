@@ -43,6 +43,60 @@ import re as _re
 # mid-keying: the path a config asserts is a claim like any other.
 ROOT = pathlib.Path(os.environ.get("ACRIS_CORPUS_ROOT", "D:/Ignore"))
 
+# ── THE SYSTEM TREE'S PHASES ────────────────────────────────────────────────
+# ⚠ THE NUMBER IS A DISPLAY DETAIL. THE NAME IS THE IDENTITY.
+#
+# Login 2026-08-23: *"we now need a monitorization folder so everything bumps up
+# a number like sync becoming 01."* Monitorization is a real phase (phase_monitor
+# has been running as a service since last night) and it belongs at 00, which
+# pushes every folder below it up one.
+#
+# That renumber would have edited 26 hardcoded paths across 22 files — and the
+# NEXT renumber would edit them all again. So the fix is not to change the
+# numbers in the code, it is to stop the code from knowing them: `phase()`
+# resolves a folder by its NAME and accepts whatever two-digit prefix is on
+# disk. Rename `00 Synchronizations` to `01 Synchronizations` and every caller
+# keeps working, with no edit and no restart.
+#
+# ⚠ IT RESOLVES AGAINST THE DISK, NOT AGAINST THIS TABLE. The glob is the
+# authority; PHASE_ORDER below is only the number to use when CREATING a folder
+# that does not exist yet. A table that disagrees with the filesystem must lose,
+# because the filesystem is what the lanes actually write to.
+SYS = pathlib.Path(r"D:\CRE Decoding System")
+
+PHASE_DIRS = {
+    "monitorization": "Monitorizations",
+    "synchronization": "Synchronizations",
+    "navigation": "Navigations",
+    "acquisition": "Acquisitions",
+    "organization": "Organizations",
+    "extraction": "Extractions",
+    "resolution": "Resolutions",
+    "derivation": "Derivations",
+    "productization": "Productizations",
+}
+# the intended numbering AFTER the 2026-08-23 bump — used only to create
+PHASE_ORDER = {n: i for i, n in enumerate(PHASE_DIRS)}
+
+
+def phase(name):
+    """The folder for a phase, whatever number currently prefixes it.
+
+    ⚠ Never build a system-tree path from a literal like "00 Synchronizations".
+    That literal is a claim about the numbering, and the numbering changed."""
+    want = PHASE_DIRS[name]
+    hit = sorted(SYS.glob("[0-9][0-9] " + want))
+    if hit:
+        return hit[0]
+    return SYS / ("%02d %s" % (PHASE_ORDER[name], want))
+
+
+MONITOR_DIR = phase("monitorization")
+SYNC_DIR = phase("synchronization")
+NAV_DIR = phase("navigation")
+ACQ_DIR = phase("acquisition")
+ORG_DIR = phase("organization")
+
 RUN = (ROOT / "00 Live Syncs" / "Legal Instruments Live Sync"
        / "Legal Instruments Live Sync Outputs")
 STATE = RUN / "state"

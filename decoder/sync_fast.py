@@ -165,12 +165,51 @@ print(f"landed {landed} ids into navigation (urls minted)")
 # ── LEDGER, then the watermark. IN THAT ORDER, AFTER THE COMMIT. ───────────
 try:
     lg = sqlite3.connect(LEDGER, timeout=120)
-    lg.execute("INSERT INTO synchronization"
+    # ⚠ FILL THE COLUMNS THE TABLE ACTUALLY DEFINES. This wrote
+    # `system_total 0, source_total 0, delta = len(found)` — zeros in two
+    # columns whose schema comments say "what we held BEFORE absorbing" and
+    # "what the custodian holds", and the found-count dumped into a column
+    # that means "source - system = the work". It violated the table's own
+    # contract, and three separate readers then took `system_total + delta`
+    # from it as a TOTAL: the board showed acris 5 and landed -20,721,031.
+    #
+    # Login 2026-08-23, looking at it in DB Browser: *"this tells me id but
+    # not totals by system or source"* — exactly right, and the fix needs no
+    # scan. **Nav's count is already known**, so:
+    #
+    #     system_total = what the last ledger row says we held
+    #     source_total = system_total + what this walk found
+    #     delta        = what this walk found (the outstanding work)
+    #
+    # ⚠ THIS TOTAL IS ACCOUNTED, NOT MEASURED — previous + exactly what we
+    # landed. It is correct per-run and can only drift if a run dies between
+    # the nav commit and this write. `routine_synchronization` re-measures
+    # both sides daily and re-anchors it, the same anchor/estimate split
+    # board_truth uses. Never let the accounted figure outlive its anchor.
+    # ⚠ THE ROW IS THE STATE *AFTER* ABSORBING, so "system == source, delta 0"
+    # reads as healthy at a glance (login: "seeing that system matches source
+    # is the key of sync. the delta is just the way to find the id and adjust
+    # system up to source until we tick again").
+    prev = lg.execute(
+        "SELECT system_total FROM synchronization"
+        " WHERE source='acris' AND system_total > 0"
+        " ORDER BY run_at DESC LIMIT 1").fetchone()
+    system = (prev[0] if prev else 0) + landed
+    # ⚠ OUTSTANDING IS REAL WHEN WE HIT THE CAP. --max stops the walk early by
+    # design; pretending delta is 0 there would report LEVEL while documents
+    # are still unabsorbed. Anything found-but-not-landed stays outstanding.
+    outstanding = max(0, len(found) - landed)
+    source = system + outstanding
+    lg.execute("INSERT OR REPLACE INTO synchronization"
                " (run_at, source, system_total, source_total, delta, doc_ids)"
                " VALUES (?,?,?,?,?,?)",
-               (time.strftime("%Y-%m-%d %H:%M"), "acris", 0, 0, len(found),
+               (time.strftime("%Y-%m-%d %H:%M"), "acris",
+                system, source, outstanding,
                 ";".join(d for _, d, _, _ in found)))
     lg.commit()
+    print(f"  ledger: system {system:,} · source {source:,} · "
+          f"delta {outstanding}" + ("  LEVEL" if not outstanding
+                                    else "  OUTSTANDING"))
     lg.close()
 except Exception as e:
     print(f"  ⚠ ledger write failed ({e}) - edge NOT advanced, so the next "
