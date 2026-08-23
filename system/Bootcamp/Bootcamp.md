@@ -5693,3 +5693,76 @@ A sentence that cannot name its source DOES NOT EMIT. This makes motive
 claims UNREPRESENTABLE rather than discouraged (P-2), and composes with
 the length law's "summary generated FROM the rows" — the rows have no
 slot for intent, so a row-sourced summary cannot contain one.
+
+# RUN 36 — BK_6730058000213 · SUBORDINATION filed as "SUNDRY AGREEMENT" · 1967 (BROOKLYN)
+
+4 frames (REC 580 pp.213-216), N.Y.B.T.U. Form 8030 — Subordination
+Agreement (of Mortgage). FIFTH BOROUGH (Kings). Executed 1967-11-06
+(two witnesses: agreement date + ack, both "6th ... November ... sixty
+seven"), recorded 1967-11-15. BELLA KAHN (7602 21st Avenue, Brooklyn),
+holder of a $17,200.00 mortgage made by ELSTAR REALTY CORP. to her
+(dated the 28th[?] day of August, 196_ [last digit unread], Kings liber
+512 of Mortgages p.399 — read at 420dpi, single witness), subordinates
+it to a $42,000.00 mortgage ELSTAR is "about to execute and deliver" to
+BAY RIDGE SAVINGS BANK (5th Avenue at 54th Street), covering 1623 44th
+Street, Brooklyn. Recital: the bank "has refused to accept said
+mortgage unless" Kahn's is subordinated.
+
+## R36-1 — THE REMARKS FIELD RESCUES A CATCH-ALL TYPE
+
+rd type = "SUNDRY AGREEMENT" (a bucket). rd remarks = "SUBORDINATION
+AGMT BOOK/PAGES: 252/179". The index KNOWS the instrument's real class
+and files it in REMARKS while the type field stays generic. G-008
+extended: when doc_type is a catch-all (SUNDRY AGREEMENT, AGREEMENT,
+AGREEMENTS), READ REMARKS BEFORE THE PAGES — it may name the true type
+for free. Corollary for corpus statistics: type-code histograms
+UNDERCOUNT specific classes by whatever the catch-alls absorb;
+subordinations are more numerous than "SUBORDINATION*" rows suggest.
+
+## R36-2 — SUBORDINATION IS EXECUTED BY THE YIELDING PARTY ALONE
+
+"BAY RIDGE SAVINGS BANK BY: ______" — the signature line is BLANK, and
+the only acknowledgment taken is Bella Kahn's. The beneficiary of the
+rank-yield signs nothing. Anatomy family with run 29 (owner covenants
+to the City, City signs nothing) and run 34 (declarant alone): a
+recorded instrument's PARTIES are not its SIGNATORIES. Extraction must
+not treat an unsigned party block as an incomplete document, and the
+execution/provenance tier records who actually bound themselves — here,
+one person.
+
+## R36-3 — THE CAPPED YIELD CONFIRMED AS A PATTERN, WITH ITS SOFT-COST TAIL
+
+R26-2 (13-yr-later Manhattan, institutional) found the yield capped at
+the new lien's amount. Same shape here: subordinate to the $42,000 lien
+"and interest ... and to all advances heretofore made or which
+hereafter may be made thereon ... TO THE EXTENT OF THE LAST MENTIONED
+AMOUNT AND INTEREST." The advances are ENUMERATED and include the
+lender's own transaction costs — brokerage commissions, consideration
+paid for making the loan, mortgage recording tax, documentary stamps,
+title examination, surveys, "any other disbursements" — may be made
+WITHOUT NOTICE to Kahn, and extend to "any extensions, renewals and
+modifications." Two instances, two eras, two lender classes: the
+subordination row's quantity slot holds a CAP, and the cap's interior
+includes the senior lender's costs.
+
+## CONFIRMATIONS
+
+- Parcel key EARNED (not accepted): block 5379 has TWO document-side
+  witnesses — the clerk's left-margin notation ("5379 / 78", read at
+  420dpi) and the backer's certification ("Section 16 in Block 5379 on
+  the LAND MAP of the County of Kings"). rd key 3053790078 agrees. Lot
+  78 rests on the margin alone.
+- Land-map block == tax block IN THIS INSTANCE (Kings 5379). Richmond
+  showed divergence (tax 3549 vs land-map 3540-V, run 29). One instance
+  each; the relationship is not yet measured for any borough.
+- Film date-clone confirmed a third time: instrument says 1967-11-06,
+  rd doc_date = 11/15/1967 = recorded (R18-3 family).
+- amount $0.00 while $17,200 and $42,000 both appear (R20-3 holds:
+  amounts ride MORTGAGE rows only).
+- Private individual as senior-lien holder subordinating to a bank —
+  the reach ladder's lender rung is a person here, not an institution
+  (run 33 family: individuals hold paper).
+- Unverified index cross-ref "BOOK/PAGES: 252/179" (referent unknown —
+  R18/R33 family of typed remark cites).
+- Return-to name partly legible ("Am_tt & Becker"[?], 55 Liberty St,
+  New York) — held, not asserted.

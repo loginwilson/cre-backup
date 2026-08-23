@@ -37,3 +37,4 @@ law · THE LENGTH LAW recorded (verdict vs record; claim gate a/b/c; summary gen
 run 35 · RC_1050386 · 2026-08-22 · 6/6 pages · 0 new columns · streak 32 · grade B→B− on redo (crop found MISSED struck termination clause; term is FIRM 15yr) · gas-station lease: rent stated (memo contrast) + sublease-back + blank-price option · reader: fable-5 direct-pdf
 redo 35 · REDO PRACTICE established: bank before/after pairs as the loop's highest-value artifact
 law · THE CONTEXT LINE recorded (class-vs-instance; effect-derivable-intent-never; 3 tiers; 3-source sentence rule)
+run 36 · BK_6730058000213 · 2026-08-22 · 4/4 frames · 0 new columns · streak 33 · grade: PENDING LOGIN · subordination as SUNDRY: remarks rescue type + yielding party signs alone + capped yield confirmed · reader: fable-5 direct-pdf
