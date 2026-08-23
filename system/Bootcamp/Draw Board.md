@@ -141,3 +141,6 @@ loop's coverage claim becomes false without anything looking wrong.
   POWER OF ATTORNEY still has 8 candidates.
 
 - r38 drawn: EASEMENT 1969 RC_1003223 (NY Telephone). EASEMENT: 1 left (1995 Con Ed, RC_1000859).
+
+- r39 drawn: DECLARATION 1984 RC_1029519 (Allied Woodbrook private sewer).
+  DECLARATION: 2 left (2005 RC_1004683, 2007 RC_1021905) — neither is a condo declaration (both short, individual parties), so IDENTITY-creates remains UNEXERCISED; a condo declaration must be sought deliberately.

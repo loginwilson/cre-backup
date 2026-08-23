@@ -44,3 +44,4 @@ run 37 · RC_1044085 · 2026-08-22 · 4/4 pages · 0 new columns · streak 34 ·
 law · THE FIRING LAW recorded (enforcement shape must match defect shape: scan / checklist / structure; memory is not a record)
 run 38 · RC_1003223 · 2026-08-22 · 5/5 pages · 0 new columns · streak 35 · grade A− (keep-the-noun 2nd: buildings→houses; PRE-BANK PASS worked on first outing — 2 of 4 crops changed the entry) · utility easement: RETT $00.00 witnessed zero + binds future lots + unreadable exhibit · reader: fable-5 direct-pdf
 fix · r38 defects repaired: Exhibit A legend banked (R38-4a rule minted) + 'houses' narrowing noted in entry + WATCHED WORD added to Card #6 + recovery-instructions rule added to Card #9
+run 39 · RC_1029519 · 2026-08-22 · 5/5 pages · 0 new columns · streak 36 · grade: PENDING LOGIN · private-sewer covenant is a CLASS (2nd instance) + document misspells its own declarant + Richmond REEL series · reader: fable-5 direct-pdf
