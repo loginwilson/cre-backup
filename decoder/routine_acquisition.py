@@ -96,11 +96,26 @@ except Exception:
     ps = ""
 alive = sorted({name for name in LANES if name in ps})
 
-if alive and not (a.dry or a.anyway):
+# ⚠ `--dry` USED TO BYPASS THIS GUARD AND IT WAS NEVER SAFE TO. The condition
+# was `if alive and not (a.dry or a.anyway)`, and the message below told the
+# reader to "run --dry for a safe read" - but --dry only skips the WRITE, and
+# the write was never the expensive part. Steps 1-2 read `recorded_details` and
+# `pdf`, so they are a TABLE scan of 16.5 GB either way: measured 64.8 s per
+# 200,000 rows under lane load, ~2.2 hours for the corpus.
+#
+# Caught by running the chain: `phase_chain.py --dry` walked straight past the
+# guard and started exactly the unguarded scan this file was written to prevent
+# (the one that dropped rd from 17 to 1.5 docs/s). A guard with an exemption for
+# the mode everyone reaches for by default is not a guard.
+#
+# ⚠ ONLY --anyway OVERRIDES NOW, because only --anyway is a deliberate choice.
+# `--dry` means "change nothing", which is a promise about WRITES; it can never
+# be a promise about COST.
+if alive and not a.anyway:
     print("lanes are writing: " + ", ".join(alive))
     print("a full scan here would slow them (measured: rd 17 -> 1.5 docs/s).")
-    print("run --dry for a safe read, --anyway to scan deliberately, or wait"
-          " for a pause")
+    print("--dry does NOT make this cheap - it skips the write, not the scan.")
+    print("run --anyway to scan deliberately, or wait for a pause")
     sys.exit(1)
 
 con = sqlite3.connect(f"file:{CP.NAV_DB}?mode=ro", uri=True, timeout=600)

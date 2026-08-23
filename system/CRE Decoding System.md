@@ -704,3 +704,202 @@ the id index and both counts become range scans on an index that already exists
 `pdf IS NULL` is in neither set and would silently inflate `landed`. It is
 counted separately and reported, never absorbed. *Never repair a number to make
 a check pass.*
+
+
+# THE CHAIN RAN END TO END — and what it found (2026-08-23 ~01:00)
+
+Task 5. `phase_chain.py` runs the five phases in order, each gated by its own
+assertion. ⚠ Searched first (rule 1): `chain.py` is the FINANCING chain,
+`pipeline.py` is the workflow on ONE DOCUMENT, `routine_4am.py` is the daily
+ACRIS routine. None of them ran the phases in order.
+
+**THE POINT IS THE GATES, NOT THE SEQUENCE.** Five scripts back to back is a
+batch file. What makes it a chain is that each phase makes ONE claim and a phase
+that cannot prove its claim does not hand work to the next.
+
+⚠ **A PHASE THAT DECLINES IS NOT A PHASE THAT FAILED.** `routine_acquisition.py`
+refuses to scan while the walkers write. With the fleet running that is the
+CORRECT answer. The chain reports DECLINED separately from NOT LEVEL — folding
+them together teaches us to ignore real failures.
+
+## ⚠ THE GRADER MUST SPEAK THE PHASE'S LANGUAGE
+
+First run scored a perfectly healthy monitor as **NO VERDICT**. The routines say
+`LEVEL` / `NOT LEVEL`; the monitor says `quiet` / `NEW` / `reporting NOTHING`
+and never says LEVEL at all. A grader that does not speak the phase's vocabulary
+**reports the GRADER's gap as the PHASE's failure** — the same disease as
+reading an error as a zero, one level up. `verdict()` is now per-phase.
+
+And note what the monitor's claim actually is: *the edge is KNOWN*, not
+*something arrived*. **`quiet` is a PASS.** The failure is the monitor declining
+to answer.
+
+## ⚠ THE PHASES WERE COMPETING FOR THE SAME SCAN
+
+Running the chain revealed it: `routine_synchronization` STEP 1 computes system
+totals by scanning 24.1M rows, and `board_truth` was computing the same number
+at the same moment, while `nav_key` wrote the very index one of them was
+scanning (`ix_nav_key`). Three processes, one index, all slow.
+
+**MEASURED, AND THE ASYMMETRY IS THE LESSON:**
+
+    ix_nav_pdf_todo   23,097,031 entries    30 s     ~770,000/s   HOT
+    PK autoindex       2,501,589 entries   168 s      ~15,000/s   COLD
+
+Same machine, same minute, 50x apart. The partial todo index is hot because the
+walkers query `pdf=''` constantly; the PK's `RC_` range is touched by nobody.
+**Index choice is not a detail here — it is the whole cost.** A count is cheap
+or catastrophic depending on whether the fleet already keeps that index warm.
+
+## THE MEASURED GAP — logs vs the pdf column
+
+    richmond pdf   board  102,241     TRUE  152,237     board is 49% LOW
+    acris pdf      board  860,283     TRUE  ~868,066    board is ~1% low
+
+⚠ **AND THE CAUSE WAS NOT DRIFT.** `routine_update.py` gained a branch to count
+`rc_pull.log` on 2026-08-22 — pointed at `NAV_WORK`, while `rc_pdf_pull.py`
+writes the log into its own cwd. `pp.exists()` was False on every pass, so the
+branch did nothing and 45,986 landed pdfs were omitted. That is **92% of the
+49,996 gap**, and it is a fix that failed the same night it was written.
+
+**A FIX THAT DOES NOT FIRE IS INDISTINGUISHABLE FROM THE BUG IT FIXED.** In code
+the tell is a guard whose negative branch is SILENT — `if p.exists()`, a regex
+that matches nothing, a count that returns 0. Three defects tonight share it:
+this path, the richmond row regex, and the richmond page-1 edge. Every one
+returned a clean, healthy-looking, wrong answer.
+
+The durable answer is not a better log parser. It is that **`landed` is counted
+from the `pdf` column**, which no path assumption can hide.
+
+
+# BOARD TRUTH IS LIVE — `landed` now comes from the column (2026-08-23 01:05)
+
+Task 3 closed and verified end to end. `board_truth.py --loop --every 1800` runs
+beside the fleet; `routine_update.py` prefers its anchor over the logs.
+
+    ROW                     BEFORE (logs)      AFTER (pdf column)
+    acquisition pdf acris        860,283              871,297
+    acquisition pdf richmond     102,241              156,677     +53%
+
+## THE DESIGN CHANGED ONCE, BECAUSE THE FIRST ONE WAS TOO SLOW TO RUN
+
+v1 counted everything itself and **ran 28 minutes without finishing**. The
+measurement that killed it, taken on the same machine in the same minute:
+
+    ix_nav_pdf_todo   23,097,031 entries    30 s   ~770,000/s   HOT
+    PK autoindex       2,501,589 entries   168 s    ~15,000/s   COLD
+
+**50x, from index choice alone.** The walkers query `pdf=''` constantly so that
+index is always warm; the PK's `RC_` range is touched by nobody. Worse, a plain
+`count(*)` picks `ix_nav_key` — the index `nav_key.py` is actively WRITING — and
+a long read against a hot index in WAL mode degrades as it accumulates frames.
+
+**v2: COUNT THE TODO SET, READ THE TOTAL.**
+
+    todo   counted off ix_nav_pdf_todo        hot, ~25 s
+    total  read from the SYNC LEDGER          free
+    landed = total - todo
+
+**131 seconds a pass**, down from >28 minutes and unfinished.
+
+⚠ **VALIDATED, NOT ASSUMED.** The chain's `routine_synchronization` STEP 1
+finished its own independent full scan minutes later and returned
+**acris 21,615,745 · richmond 2,501,589** — exactly the ledger figures v2
+substituted. The shortcut was checked against the long way before being trusted.
+
+## ⚠ IT COMPOSES ANOTHER PHASE'S ASSERTION AND SAYS SO
+
+`landed = total - todo` is only true if our table holds a row per source
+document. **That is navigation's claim, not this file's** — so the anchor records
+which sync run it leaned on (`ledger_run`) and declares `depends_on: navigation
+LEVEL`. Composing assertions across phases is exactly what the chain is for;
+hiding that you composed them is how a number becomes unfalsifiable.
+
+The denominator now comes from OUTSIDE our own database, which is the point: a
+total taken from our own table can only ever tell us we are consistent with
+ourselves.
+
+## ⚠ A STALE ANCHOR MUST NOT WIN
+
+An anchor older than 2 hours cannot see the last hour of landings, which makes it
+*worse* than the live log estimate. `routine_update` ignores it past TRUTH_FRESH
+and falls back. **Never silently prefer an old truth to a live estimate.**
+
+## ⚠ AND THE GUARD I WROTE COULD NOT HAVE FAILED
+
+`nullprobe` checks for rows inserted but never minted (`pdf IS NULL`), which
+would silently inflate `landed`. v1 probed `rowid <= 200000` — **the OLDEST rows,
+minted years ago and long since landed.** It could only ever return 0. That is
+not a passing check, it is an absent one (rule 4: *a counter sitting at zero is a
+claim to verify, not a result*). Now probes the TAIL, where sync actually
+inserts. Current reading: **0 of the last 200,000** — and now that means
+something.
+
+
+# ⚠ THE PRODUCTION HALF BLOCKS THE VERIFICATION HALF (2026-08-23 ~01:20)
+
+The chain's first end-to-end run answered a question nobody had asked directly:
+**three of the five phases cannot prove their claim while the fleet is running.**
+
+    monitor   LEVEL              cheap by design - a few requests
+    sync      LEVEL both sources delta 0 / delta 0
+    nav       DECLINED           busy-guard; tail probe clean
+    acq       DECLINED           busy-guard
+    org       DECLINED           busy-guard
+
+Every DECLINE has the same cause: **that phase's audit is a full TABLE scan**,
+and the fleet never stops. Measured 64.8 s per 200,000 rows under lane load —
+~2.2 hours for the corpus, and the scan is what dropped rd from 17 to 1.5 docs/s
+the day the guards were written. The guards are correct. The AUDITS are wrong.
+
+    nav   reads rd_url, pdf_url          -> table scan
+    acq   reads recorded_details, pdf    -> table scan
+    org   groups by keyed_by             -> table scan
+
+## THE FIX ALREADY EXISTS IN THIS SYSTEM AND WAS PROVEN TONIGHT
+
+`board_truth.py` had exactly this problem and solved it: it stopped scanning the
+table and counted a **partial index on the todo condition** instead.
+
+    ix_nav_pdf_todo  ON navigation(id) WHERE pdf = ''
+
+    table scan          200,000 rows      64.8 s      ~3,000/s
+    partial index    23,097,031 rows        30 s    ~770,000/s
+
+The index is fast *because the walkers keep it hot* — they query `pdf=''`
+constantly. **The audit rides on the fleet's own working set instead of fighting
+it.** That is the whole trick, and it generalises: give every phase's claim a
+partial "todo" index and each audit becomes ~30 s instead of ~2.2 hours.
+
+    ix_nav_url_todo    WHERE COALESCE(rd_url,'')='' OR COALESCE(pdf_url,'')=''
+    ix_nav_rd_todo     WHERE COALESCE(recorded_details,'')=''
+    ix_nav_keyed_todo  WHERE keyed_by IS NULL
+
+⚠ **NOT TONIGHT, AND NOT WHILE ELEVEN LANES WRITE.** Building an index on a
+24.1M-row / 16.5 GB table is one long WRITE transaction — it would take the
+writer seat and hold it, which is the writer-seat law violated as hard as it can
+be violated. **This needs a quiet window, and it is a schema change, so it is
+login's call.** Recorded here as the identified next move, not done unilaterally.
+
+## THE INTERIM POSITION IS HONEST, NOT LEVEL
+
+Until then: `nav` runs a bounded TAIL probe when it cannot afford the full scan
+(~65 s, last 200,000 rows, currently **0 missing urls**), and reports
+`DECLINED (tail ok)` — strictly more than "declined", strictly less than LEVEL.
+`board_truth` states `depends_on: navigation LEVEL` rather than pretending its
+subtraction is self-evident.
+
+**A phase that cannot be checked is not a phase that passed**, and the board now
+distinguishes those three states instead of two.
+
+## ⚠ AND A GUARD WITH AN EXEMPTION FOR THE DEFAULT MODE IS NOT A GUARD
+
+`routine_acquisition.py` read `if alive and not (a.dry or a.anyway)` and its own
+message said *"run --dry for a safe read"*. But `--dry` skips the WRITE, and the
+write was never the expensive part — steps 1-2 scan 16.5 GB either way. So
+`phase_chain.py --dry` walked straight past the guard and started precisely the
+unguarded scan the file exists to prevent. Caught only because running the chain
+made it visible.
+
+**`--dry` is a promise about WRITES. It can never be a promise about COST.**
+Only `--anyway` overrides now.

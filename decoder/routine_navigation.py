@@ -69,6 +69,35 @@ except Exception:
 if any(k in ps for k in ("rd_walk", "image_walk", "nav_key", "live_gap.py")):
     print("lanes are writing the table - navigation audit waits; run again"
           " at a pause")
+    # ⚠ DECLINING WITH NOTHING IS A WASTED TRIP. The full audit reads
+    # rd_url/pdf_url, so it is a TABLE scan of 16.5 GB - measured 64.8 s per
+    # 200,000 rows under lane load, ~2.2 HOURS - and the guard above is right
+    # to refuse it (an unguarded scan once dropped rd from 17 to 1.5 docs/s).
+    #
+    # But the fleet runs nearly all the time, so "wait for a pause" means this
+    # phase's claim goes UNPROVEN for days while `board_truth.py` openly
+    # depends on it. A bounded tail probe costs ~65 s and answers the part that
+    # actually changes: the mint is a pure function of the id (see urls()) and
+    # every insert path mints, so an unminted row is a NEW row that slipped
+    # through - and new rows are at the TAIL.
+    #
+    # ⚠ THIS IS A PARTIAL RESULT AND MUST NEVER PRINT "LEVEL". It narrows the
+    # unknown from everything to everything-but-the-tail; it does not close it.
+    try:
+        _c = sqlite3.connect(f"file:{CP.NAV_DB}?mode=ro", uri=True, timeout=600)
+        _mx = _c.execute("SELECT max(rowid) FROM navigation").fetchone()[0] or 0
+        _n, _miss = _c.execute(
+            "SELECT COUNT(*), SUM(CASE WHEN COALESCE(rd_url,'')=''"
+            " OR COALESCE(pdf_url,'')='' THEN 1 ELSE 0 END)"
+            " FROM navigation WHERE rowid>?", (_mx - 200000,)).fetchone()
+        _c.close()
+        print(f"  PARTIAL tail probe · last {_n:,} rows ·"
+              f" missing urls {_miss or 0:,}"
+              + ("  (tail clean - the full claim is still UNPROVEN)"
+                 if not _miss else
+                 "  ⚠ UNMINTED ROWS AT THE TAIL - report, do not repair"))
+    except Exception as _e:
+        print(f"  tail probe failed ({type(_e).__name__}) - reporting nothing")
     sys.exit(1)
 
 con = sqlite3.connect(CP.NAV_DB, timeout=600)

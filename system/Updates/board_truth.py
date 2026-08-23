@@ -78,6 +78,32 @@ def say(m):
         f.write(line + "\n")
 
 
+SYNC_DB = (r"D:\CRE Decoding System\00 Synchronizations"
+           r"\Legal Instruments Synchronization"
+           r"\Legal Instruments Synchronization.db")
+
+
+def ledger_totals():
+    """The SOURCE's count per source, as sync last published it.
+
+    ⚠ `system_total + delta` is the source's number, not ours - that is the
+    whole point of the sync ledger, and it is the only figure in this file
+    that comes from OUTSIDE our own database. A denominator taken from our own
+    table can only ever tell us we are consistent with ourselves."""
+    con = sqlite3.connect("file:%s?mode=ro" % SYNC_DB, uri=True, timeout=120)
+    try:
+        out, when = {}, "-"
+        for src in ("acris", "richmond"):
+            r = con.execute(
+                "SELECT system_total + delta, run_at FROM synchronization"
+                " WHERE source=? ORDER BY rowid DESC LIMIT 1", (src,)).fetchone()
+            if r:
+                out[src], when = r[0] or 0, r[1]
+        return out, when
+    finally:
+        con.close()
+
+
 def counts(con):
     """Four index-only counts -> per-source (total, todo, null)."""
     q = con.execute
@@ -92,24 +118,58 @@ def counts(con):
         say("    %-10s %13s  %.0fs" % (label, f"{v:,}", time.time() - t))
         return v, time.time() - t
 
-    rc_total, t2 = one("rc_total",
-                       "SELECT count(*) FROM navigation WHERE id>=? AND id<?",
-                       RC_LO, RC_HI)
+    # ⚠ COUNT THE TODO SET, READ THE TOTAL. Measured 2026-08-23, and the
+    # asymmetry is 50x on the same machine in the same minute:
+    #
+    #     ix_nav_pdf_todo   23,097,031 entries    30 s   ~770,000/s   HOT
+    #     PK autoindex       2,501,589 entries   168 s    ~15,000/s   COLD
+    #
+    # The walkers query `pdf=''` constantly so that index is always warm; the
+    # PK's RC_ range is touched by nobody. Worse, a full `count(*)` picks
+    # ix_nav_key - the index `nav_key.py` is actively WRITING - and a long read
+    # against a hot index in WAL mode degrades as it accumulates frames. That
+    # scan ran 28 minutes and was still going.
+    #
+    # So: TODO is counted (cheap, hot, and it is the number that actually moves
+    # minute to minute). TOTAL is READ FROM THE SYNC LEDGER, which is where
+    # `routine_synchronization` already publishes it after its own full pass.
+    #
+    # ⚠ THIS BORROWS SYNC'S ASSERTION AND MUST SAY SO. The ledger total is the
+    # SOURCE's count, and `landed = total - todo` is only true if our table
+    # holds a row per source document. That is navigation's claim, checked by
+    # `routine_navigation.py` (rows == ledger, "LEVEL"). If nav is NOT level
+    # these numbers are wrong - so the anchor records which sync run it leaned
+    # on rather than presenting itself as self-evident. Composing assertions is
+    # fine; hiding that you composed them is not.
     rc_todo, t4 = one("rc_todo", "SELECT count(*) FROM navigation "
                       "WHERE pdf='' AND id>=? AND id<?", RC_LO, RC_HI)
-    todo, t3 = one("todo_all", "SELECT count(*) FROM navigation WHERE pdf=''")
-    total, t1 = one("total_all", "SELECT count(*) FROM navigation")
+    a_todo, t3 = one("acris_todo", "SELECT count(*) FROM navigation "
+                     "WHERE pdf='' AND id<?", RC_LO)
+    totals, when = ledger_totals()
+    rc_total, total = totals.get("richmond", 0), None
+    a_total = totals.get("acris", 0)
+    say("    ledger totals  acris %s · richmond %s   (sync run %s)"
+        % (f"{a_total:,}", f"{rc_total:,}", when))
+    total, todo, t1, t2 = a_total + rc_total, a_todo + rc_todo, 0.0, 0.0
     # ⚠ NULL is the assumption-breaker. It is NOT in the todo index and NOT a
     # path, so `total - todo` would silently count it as landed. Counted here
     # so it can never hide. This one does touch the table - but only for rows
     # that should not exist, and it is bounded by being reported, not summed.
+    # ⚠ PROBE THE TAIL, NOT THE HEAD. The first version read `rowid<=200000` -
+    # the OLDEST rows, minted years ago and long since landed. It could only
+    # ever return 0, which is a check that cannot fail and therefore proves
+    # nothing (CLAUDE.md rule 4: "a counter sitting at zero is a claim to
+    # verify, not a result"). A NULL `pdf` means a row was inserted without
+    # being minted, so it would appear where sync INSERTS - at the tail.
+    mx = q("SELECT max(rowid) FROM navigation").fetchone()[0] or 0
     nulls, t5 = one("nullprobe", "SELECT count(*) FROM navigation "
-                    "WHERE pdf IS NULL AND rowid<=200000")
+                    "WHERE pdf IS NULL AND rowid>?", mx - 200000)
     say("  counted in %.0fs total" % (t1 + t2 + t3 + t4 + t5))
     return {
-        "acris": (total - rc_total, todo - rc_todo),
+        "acris": (a_total, a_todo),
         "richmond": (rc_total, rc_todo),
         "null_probe": nulls,
+        "ledger_run": when,
     }
 
 
@@ -120,7 +180,10 @@ def measure():
     finally:
         con.close()
 
-    out = {"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "source": "pdf column",
+    out = {"at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+           "source": "todo counted from pdf column; total from sync ledger",
+           "depends_on": "navigation LEVEL (rows == ledger)",
+           "ledger_run": c.get("ledger_run"),
            "null_probe_first_200k": c["null_probe"], "sources": {}}
     for src in ("acris", "richmond"):
         total, todo = c[src]

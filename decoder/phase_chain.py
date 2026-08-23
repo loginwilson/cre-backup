@@ -76,17 +76,43 @@ if a.only:
     PHASES = [p for p in PHASES if p[0] == a.only]
 
 
-def verdict(text, rc):
+def verdict(name, text, rc):
     """⚠ READ THE PHASE'S OWN WORDS, don't infer from a return code. These
     routines print `LEVEL` / `NOT LEVEL - report, do not repair` and several
-    exit 0 either way, because being not-level is a RESULT, not a crash."""
+    exit 0 either way, because being not-level is a RESULT, not a crash.
+
+    ⚠ AND EACH PHASE STATES ITS CLAIM IN ITS OWN VOCABULARY. The first version
+    of this file used one LEVEL/NOT-LEVEL heuristic for all five and scored a
+    perfectly healthy monitor run as NO VERDICT - the monitor's language is
+    `quiet` / `NEW` / `reporting NOTHING`, and it never says LEVEL. A grader
+    that does not speak the phase's language reports the GRADER's gap as the
+    PHASE's failure, which is the same disease as reading an error as a zero."""
     t = text.upper()
+
+    if name == "monitor":
+        # ⚠ The claim is "THE EDGE IS KNOWN", not "something arrived". `quiet`
+        # is a PASS - a quiet minute is the answer working. The failure is the
+        # monitor declining to answer, which it says explicitly and by design.
+        if "REPORTING NOTHING" in t or "UNPROVEN" in t or "NO KNOWN EDGE" in t:
+            return "NOT LEVEL"
+        if "BROKEN READ" in t:
+            return "NOT LEVEL"
+        edges = t.count("EDGE ")
+        return "LEVEL" if edges >= 2 else "NO VERDICT"
+
     if "NOT LEVEL" in t:
         return "NOT LEVEL"
     if "LEVEL" in t:
         return "LEVEL"
-    # routine_acquisition's busy-guard: it declines rather than fights the lanes
+    # the busy-guards: these decline rather than fight the lanes
     if "LANES" in t and ("WRIT" in t or "BUSY" in t or "REFUS" in t):
+        # ⚠ A DECLINE THAT STILL MEASURED SOMETHING SHOULD SAY SO. nav runs a
+        # bounded tail probe when it cannot afford the full scan - "tail clean"
+        # is strictly more than "declined", and strictly less than LEVEL.
+        if "UNMINTED ROWS AT THE TAIL" in t:
+            return "NOT LEVEL"
+        if "TAIL CLEAN" in t:
+            return "DECLINED (tail ok)"
         return "DECLINED"
     if rc != 0:
         return "ERROR rc=%d" % rc
@@ -114,7 +140,7 @@ for name, script, args, dry_args, cap in PHASES:
         cap_hit = False
     el = time.time() - t0
     text = log.read_text(encoding="utf-8", errors="replace")
-    v = "TIMEOUT >%ds" % cap if cap_hit else verdict(text, rc)
+    v = "TIMEOUT >%ds" % cap if cap_hit else verdict(name, text, rc)
     results.append((name, v, el, log))
     for ln in text.strip().splitlines()[-6:]:
         print("   " + ln)

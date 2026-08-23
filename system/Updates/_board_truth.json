@@ -1,0 +1,19 @@
+{
+ "at": "2026-08-23T00:46:39",
+ "source": "todo counted from pdf column; total from sync ledger",
+ "depends_on": "navigation LEVEL (rows == ledger)",
+ "ledger_run": "2026-08-22 11:34",
+ "null_probe_first_200k": 0,
+ "sources": {
+  "acris": {
+   "total": 21615745,
+   "todo": 20742848,
+   "landed": 872897
+  },
+  "richmond": {
+   "total": 2501589,
+   "todo": 2342673,
+   "landed": 158916
+  }
+ }
+}

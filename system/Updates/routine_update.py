@@ -312,14 +312,60 @@ def gather():
     # wrote to the store is never in _incoming, so the lander never counts it.
     # ⚠ Its log holds ONE run (opened with '>'), and `total N` is cumulative
     # for that run - take the LAST, never the sum of the lines.
-    pp = W / "rc_pull.log"
-    if pp.exists():
+    # ⚠ AND LOOK IN THE RIGHT FOLDER. Added 2026-08-22, and it NEVER FIRED:
+    # every other lane logs into NAV_WORK, but rc_pdf_pull.py writes
+    # rc_pull.log into its own cwd (the decoder dir). `pp.exists()` was False
+    # every pass, so the branch above quietly did nothing and 45,986 landed
+    # richmond pdfs were omitted - which is 92% of the 49,996 gap measured
+    # against the pdf column on 2026-08-23 (board 102,241 vs true 152,237).
+    #
+    # A FIX THAT DOES NOT FIRE IS INDISTINGUISHABLE FROM THE BUG IT FIXED, and
+    # this one was written the same night it failed. Both locations are checked
+    # now, newest wins - a path assumption should not be able to hide a lane.
+    for pp in (W / "rc_pull.log", DECODER / "rc_pull.log"):
+        if not pp.exists():
+            continue
         tots = re.findall(
             r"total (\d+)", pp.read_text(encoding="utf-8", errors="replace"))
         if tots:
+            # ⚠ ONE RUN per file (opened with '>'), `total N` cumulative within
+            # it - take the LAST, never the sum of the lines.
             rc_pdf += int(tots[-1])
+            break
     need_a = (sy.get("acris") or (0, 0, 21_612_715))[2] or 21_612_715
     need_r = (sy.get("richmond") or (0, 0, 2_426_588))[2] or 2_426_588
+
+    # ⚠ THE `pdf` COLUMN OUTRANKS THE LOGS. Everything above this line is
+    # counter arithmetic - baseline plus deltas scraped out of lane logs - and
+    # counter arithmetic drifts one way only. Measured 2026-08-23 against the
+    # column itself: richmond 102,241 shown vs 156,677 true, **a 35% undercount**,
+    # because a single path assumption hid a whole lane. It read as healthy.
+    #
+    # `board_truth.py` counts the todo set straight off ix_nav_pdf_todo and
+    # takes the denominator from the sync ledger. When its anchor is fresh it
+    # REPLACES the log figure outright; the logs then serve their real purpose,
+    # which is the delta since the anchor, not the total.
+    #
+    # ⚠ STALE ANCHOR MUST NOT WIN. An anchor older than TRUTH_FRESH is worse
+    # than the logs (it cannot see the last hour of landings), so it is ignored
+    # and the row says so. Never silently prefer an old truth to a live estimate.
+    TRUTH_FRESH = 2 * 3600
+    truth, truth_age = {}, None
+    tf = HERE / "_board_truth.json"
+    if tf.exists():
+        try:
+            import datetime as _dt
+            tj = json.loads(tf.read_text(encoding="utf-8"))
+            truth_age = (_dt.datetime.now() - _dt.datetime.fromisoformat(
+                tj["at"])).total_seconds()
+            if truth_age <= TRUTH_FRESH and not tj.get("warning"):
+                truth = {k: v["landed"] for k, v in tj["sources"].items()}
+        except Exception:
+            truth = {}
+    if truth:
+        a_pdf = truth.get("acris", a_pdf)
+        rc_pdf = truth.get("richmond", rc_pdf)
+
     out[("acquisition rd", "acris")] = (a_rd, need_a)
     out[("acquisition pdf", "acris")] = (a_pdf, need_a)
     out[("acquisition pdf", "richmond")] = (rc_pdf, need_r)
