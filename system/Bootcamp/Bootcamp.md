@@ -5894,7 +5894,9 @@ Branch Drive, McLean, Virginia) appoints OCWEN LOAN SERVICING, LLC
 (5720 Premier Park Drive, West Palm Beach, Florida) its "true and lawful
 Attorney-in-Fact" to execute, endorse and acknowledge documents for
 seven enumerated purposes. Executed 2015-08-19 by REBECCA THOMAS and
-BRANDEN RYAN, both Assistant Treasurer; ack Fairfax County, VIRGINIA
+BRANDEN RYAN [given name PARTLY OBSCURED by the signature stroke —
+"-den Ryan" visible at 450dpi, first letters under ink; moderate
+confidence, corrected at grading 2026-08-22], both Assistant Treasurer; ack Fairfax County, VIRGINIA
 (notary Valerie Lea Cunningham, commission expiring 2016-10-31).
 
 ## R37-1 — THE RE-RECORDED CERTIFIED COPY (one instrument, many counties)
@@ -5982,3 +5984,39 @@ and this instrument is where that edge is recorded. Third parties
 - Notary commission expired 2016-10-31, two years BEFORE the NY
   recording — a recorded instrument outlives its witnesses' credentials
   without losing effect.
+
+
+## R37 GRADE (login-prompted, cold; ledger consulted first) — B+
+
+TWO FAILURES, BOTH OF RULES THAT ALREADY EXISTED AND DID NOT FIRE:
+
+1. NARRATIVE CLASS, 5th OCCURRENCE. Delivered "Freddie Mac owns
+   millions of home loans" — an unanchored scale-claim about a specific
+   party. The document gave the safe version for free in its own scope
+   clause ("one-to-four family mortgages owned by Freddie Mac and
+   serviced ... by said Attorney-in-Fact"). ⚠ The trigger list did NOT
+   catch it: no trigger word appears in that sentence. HOLE IDENTIFIED
+   — the scan catches motive and relationship words but not ENTITY
+   SCALE/SCOPE claims ("owns millions", "one of the largest", "operates
+   nationwide"). Card #4 extended.
+2. NAME INTEGRITY, 2nd OCCURRENCE — and the rule was written EARLIER
+   THE SAME DAY (R21 backward re-check: "principal names get a second
+   look before banking"). "Branden Ryan" was banked from one 130dpi
+   read on a block where the signature crosses the printed name. The
+   450dpi crop taken AT GRADING shows the given name partly under ink.
+   ⚠ Also not a trigger word — it is a WORKFLOW step, not a phrase.
+   Card #12 added: a mandatory pre-bank name pass.
+3. Minor: handwritten reference 0454641183 (p.2, presumably the
+   presenter's order number) unbanked — number-namespace family.
+4. Lexicon gap: "servicer" was used as class knowledge with NO ENTRY to
+   cite, violating the three-source rule not by inventing but by
+   RECALLING. Entry added.
+
+HELD: no verb coined for the authority grant — queued as a ruling
+instead (R35's lesson applied correctly); parcel ✓ earned with witness
+named; no length drift; qty_role correctly N/A rather than skipped.
+
+DIAGNOSIS: the Compose Card's trigger scan is PHRASE-shaped, so it
+cannot catch (a) unanchored claims that use ordinary words, or (b)
+missed workflow steps. Both need a different mechanism — a PRE-BANK
+CHECKLIST, not a word scan. Added as Card #12.

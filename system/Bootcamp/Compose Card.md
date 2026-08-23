@@ -41,6 +41,10 @@ The product wants the number, not the intention.
     any relationship word (wife, son, family, partner, related)
     any role word not printed on the page (manager, operator, developer)
     any motive ("wanted to", "needed to", "so they could")
+    any ENTITY SCALE or SCOPE claim ("owns millions", "one of the
+      largest", "operates nationwide", "the biggest") — R37: these use
+      ORDINARY WORDS and slip the scan; ask instead "does the document
+      state this about this party?"
 
 ## 5 · PEOPLE vs ENTITIES
 
@@ -85,3 +89,18 @@ is an unlabeled claim, and in a debt product the default reading is
 If the banked entry hedges (single witness · read at 420dpi · partly
 legible), the delivered table hedges in the same words. The delivery is
 what gets acted on.
+
+
+## 12 · THE PRE-BANK PASS (a checklist, not a word scan)
+
+Two defects escaped the trigger scan because they are not phrases.
+Before writing the entry, run these three:
+
+  NAMES   every principal, signer and officer re-read at high dpi.
+          Signature ink crossing a printed name = flag it, always.
+          (R21 "Leader"/LEIDER; R37 "Branden" under ink.)
+  SOURCES every class-level statement names its Lexicon entry. No
+          entry = add one from the document, or delete the sentence.
+          Recall is not a source.
+  SLOTS   every row: function canonical? amount carries a role? term
+          shape named (date / event / perpetual)? ✓ marks earned?

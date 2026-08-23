@@ -39,15 +39,16 @@ grade is harsher: a repeat of a recorded lesson costs double.**
 | 34 | RC_1032054 1976 | A− | exec-date vs ack conflated · instrument's noun dropped ("units"→"houses") · **era context flat** | keep-the-noun rule |
 | 35 | RC_1050386 1956 | **B→B−** | **MOTIVE asserted** ("how the majors did business") · person/entity conflation · non-canonical verb · **crop rule not applied → MISSED a struck term clause** · **length drift 2.4x** | **COMPOSE CARD created** · trigger list · redo practice · term-lines-get-the-crop |
 | 36 | BK_67…0213 1967 | A− | **qty_role** (face reported as balance) · caveat lost between record and delivery | Card #10 (money carries its role) · Card #11 (delivery inherits caveats) |
+| 37 | RC_1044085 2018 | **B+** | **narrative (5th)** — entity scale-claim slipped the word scan · **name integrity (2nd)** — rule written same day did not fire · lexicon gap (recall, not lookup) | Card #4 extended (scale/scope claims) · **Card #12 PRE-BANK PASS** · Lexicon: servicer |
 
 ## RECURRENCE — the reason this file exists
 
 | class | runs | status |
 |---|---|---|
-| **narrative: motive / relationship / era asserted as fact** | 10, 33, 34, 35 | **4 occurrences.** Rule existed from R10; failed twice more. Fixed structurally at R35 with the Compose Card TRIGGER LIST, not another rule. CLEAN at R36 — first evidence the trigger works. Watch for 5 more runs before believing it. |
+| **narrative: motive / relationship / era / SCALE asserted as fact** | 10, 33, 34, 35, 37 | **4 occurrences.** Rule existed from R10; failed twice more. Fixed structurally at R35 with the Compose Card TRIGGER LIST, not another rule. CLEAN at R36; FAILED AGAIN at R37 — but differently: the claim used ORDINARY WORDS, so the phrase-scan could not see it. The trigger list works for its shape and is blind to others. Card #4 extended; the general fix is the PRE-BANK PASS (#12). |
 | **single-look value on degraded film** | 22, 33, 35 | Crop law written at R19, violated at R33 and R35. R35's violation HID AN EVENT-SHAPING DELETION. Card #9 now names term lines and identity strings explicitly. CLEAN at R36 (crop run before composing). |
 | **qty_role: face vs unpaid vs consideration** | 11, 33, 36 | **3 occurrences → MISSING STRUCTURE, not discipline.** Card #10 is not enough: the row schema must REQUIRE a qty_role value so a bare amount is UNREPRESENTABLE. Queued as a schema change for the extraction spec. |
-| **name integrity (principal misspelled)** | 21 | Found on backward re-check, not at grading. Worst class for a stakeholder product: the join breaks silently while the row looks complete. Principal names get a second look before banking. |
+| **name integrity (principal misspelled / unverified)** | 21, 37 | Found on backward re-check, not at grading. Worst class for a stakeholder product: the join breaks silently while the row looks complete. Principal names get a second look before banking — **written after R21 and did NOT fire at R37 the same day**, because it is a WORKFLOW step and the card only scanned phrases. Now Card #12. |
 | **class label applied to an instance** | 25 | The lexicon DEFINES a class; only the document places an instance in it — else a definition becomes a diagnosis. |
 | **vacuous reconciliation ✓** | 33 | Rule added same run; correctly applied at 34, 35, 36. |
 | **length drift** | 35 | Measured 2.4x growth in one day. Card #8. R36 came in ~50% shorter. |

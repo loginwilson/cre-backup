@@ -43,6 +43,7 @@ alone; add it when a document teaches it.**
 | **computor pump** | (Document's own spelling.) A gasoline pump with a built-in mechanical calculator multiplying gallons by price | R35 |
 | **sidewalk waiver (NYC)** | Owner's recorded covenant waiving claims and promising future sidewalk conformance, given to obtain the Highways Commissioner's consent to a Certificate of Occupancy | R29 |
 | **securitization trust as holder** | "X Bank as trustee for [Series]" — the beneficial owners are certificate holders; the actionable party is the servicer, who is not of record | R28 |
+| **servicer** | The company that collects payments and administers a loan on behalf of whoever owns it; ownership and servicing are separate roles and either can change hands independently | R28, R37 |
 | **limited power of attorney (servicing)** | A loan owner appoints its servicer attorney-in-fact to execute enumerated instrument types (satisfactions, releases, modifications, subordinations, foreclosure papers) portfolio-wide; scope is by loan population, not by parcel | R37 |
 | **attorney-in-fact** | An entity or person authorized to sign in another's name; the actual human signer is typically a designated employee of the attorney-in-fact, two delegations from the principal | R37 |
 | **foreign certified copy (re-recording)** | An instrument recorded in one jurisdiction, certified a true copy by that clerk, then recorded again elsewhere; the local document number is not the original's cite | R37 |
