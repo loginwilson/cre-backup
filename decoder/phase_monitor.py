@@ -69,8 +69,49 @@ ap.add_argument("--gate", action="store_true", help="fire sync on a hit")
 ap.add_argument("--once", action="store_true")
 ap.add_argument("--source", choices=["both", "acris", "richmond"],
                 default="both")
+ap.add_argument("--closed-every", type=int, default=900,
+                help="seconds between probes on a day the register cannot "
+                     "record (weekends). 0 disables the backoff.")
 a = ap.parse_args()
 LOG = HERE / "phase_monitor.log"
+
+# ⚠ DO NOT POLL A CLOSED OFFICE ONCE A MINUTE. Measured 2026-08-23 07:00, a
+# SUNDAY: 53 richmond ticks in one hour, each opening a session, walking back
+# Sun -> Sat -> Fri and RE-FETCHING ALL SEVEN PAGES of Friday's results — to
+# learn a number that had not moved all night (richmond 1,017,350 and acris
+# 2,026,000,237,865, constant across ~300 ticks).
+#
+# Both registers record on BUSINESS DAYS ONLY - measured over two weekends,
+# every Sat/Sun returns 0 documents while weekday density is perfect. So on a
+# weekend the expensive question has a known answer and we were asking it
+# anyway, ~540 requests an hour, at a county clerk that had already refused our
+# document route hours earlier. That is not a cost THEY should carry for us.
+#
+# ⚠ THE BACKOFF MUST ANNOUNCE ITSELF. A monitor that goes quiet is
+# indistinguishable from a monitor that died - the exact failure this whole
+# system keeps re-learning. Every held tick prints why it held, what the last
+# known edge was, and when it will look again.
+#
+# ⚠ HOLIDAYS ARE NOT HANDLED and deliberately so: a Monday holiday just polls
+# normally and finds nothing, which is wasteful but CORRECT. A wrong holiday
+# calendar would make us blind on a day that does record.
+_LAST_CLOSED_PROBE = {}
+
+
+def register_closed(now=None):
+    """Sat/Sun. Both custodians record on business days only (measured)."""
+    return (now or time.localtime()).tm_wday >= 5
+
+
+def hold_closed(src):
+    """True if we should SKIP this source's probe on a closed day."""
+    if not a.closed_every or not register_closed():
+        return False
+    last = _LAST_CLOSED_PROBE.get(src, 0)
+    if time.time() - last >= a.closed_every:
+        _LAST_CLOSED_PROBE[src] = time.time()
+        return False
+    return True
 
 
 def say(m):
@@ -270,6 +311,16 @@ while True:
     t0 = time.time()
     for src, fn in (("acris", probe_acris), ("richmond", probe_richmond)):
         if a.source not in ("both", src):
+            continue
+        if hold_closed(src):
+            st = seen()
+            edge = (st.get("richmond_edge") if src == "richmond"
+                    else known_edge())
+            left = a.closed_every - (time.time() - _LAST_CLOSED_PROBE.get(src, 0))
+            say("%-8s register CLOSED (%s) - holding · last edge %s · next "
+                "look in %dm  [the answer cannot change today]"
+                % (src, time.strftime("%A"),
+                   f"{edge:,}" if edge else "-", max(0, left) // 60))
             continue
         try:
             hit = fn()

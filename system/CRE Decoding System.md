@@ -1631,3 +1631,55 @@ four chances to record a false zero into the delta path.** None was taken.
 1 TimeoutError window · 2 UNPROVEN probes · 1 git DNS failure. **This box has
 flaky DNS. That is the baseline** — and the lanes and anchor were unaffected
 (anchor measured acris 13.50/s at 05:00, 1,038,527 landed).
+
+
+# ⚠ WE WERE POLLING A CLOSED OFFICE 53 TIMES AN HOUR (2026-08-23 07:00)
+
+Found while chasing a richmond-specific uptick in transient failures (06:35,
+06:58, 06:59 — three in 25 minutes, against 2.5-hour gaps earlier, with ACRIS
+clean throughout). The failures were the symptom. **This was the cause.**
+
+    richmond ticks in one hour          53
+    each tick                           opens a session, walks back
+                                        Sun -> Sat -> Fri, and RE-FETCHES
+                                        ALL SEVEN PAGES of Friday's results
+    richmond edge across ~300 ticks     1,017,350 — never moved
+    acris edge across ~300 ticks        2,026,000,237,865 — never moved
+
+**It is Sunday. Neither register records on a weekend** — measured over two
+weekends, every Sat/Sun returns 0 documents while weekday density is perfect. So
+the monitor spent the night asking, ~540 requests an hour, a question whose
+answer could not change, of a county clerk that had already refused our document
+route at 01:40.
+
+⚠ **THE MONITOR'S WHOLE JUSTIFICATION IS THAT IT ASKS THE CHEAP QUESTION.**
+Cheap for US. It was never cheap for THEM, and nobody had checked which one the
+design meant. A "1 request a minute" monitor that actually costs ~9 requests a
+minute, forever, against a closed office, is not the thing that was designed.
+
+## THE FIX — BACK OFF ON A DAY THAT CANNOT RECORD
+
+`--closed-every` (default 900 s). On Sat/Sun each source is probed every 15
+minutes instead of every 60 seconds. **53 richmond probes an hour -> 4.**
+Monday resumes the full cadence automatically; nothing to remember or undo.
+
+⚠ **THE BACKOFF ANNOUNCES ITSELF EVERY TICK.** A monitor that goes quiet is
+indistinguishable from a monitor that died — the failure this system keeps
+re-learning — so a held tick still prints, and prints MORE than a working one:
+
+    07:06:07  richmond register CLOSED (Sunday) - holding · last edge 1,017,350
+              · next look in 14m  [the answer cannot change today]
+
+⚠ **HOLIDAYS ARE DELIBERATELY NOT HANDLED.** A Monday holiday polls normally and
+finds nothing: wasteful but CORRECT. A wrong holiday calendar would make us blind
+on a day that does record, and being blind is the expensive error — being
+wasteful is the cheap one. **When a guess can fail in both directions, pick the
+direction that fails safe.**
+
+## AND THE REAL LESSON IS ABOUT WHAT I WAS OPTIMISING
+
+Every efficiency measured tonight — the hot index, the count-to-count span, the
+50,000-row probe — asked "what does this cost US?" This is the first one that
+asked what it costs the SOURCE, and it was by far the largest waste in the
+system: a 13x reduction, available all night, invisible because the meter only
+ever pointed inward.
