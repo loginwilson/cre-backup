@@ -1423,3 +1423,65 @@ night, including with the keyer stopped. Settling it needs controlled A/B, which
 means stopping lanes, which contradicts "keep everything running". Flagged, not
 guessed at. ⚠ And the standing warning applies: *a single-lane bump reads linear
 by borrowing the controls' headroom; only the full-fleet reading settles it.*
+
+
+# ⛔ RICHMOND PDF LANE REFUSED — STOPPED, NOT RESTARTED (2026-08-23 01:40)
+
+    !! REFUSED 403 on RC_1188180 - STOPPING THE LANE. No retry, no rotation.
+    DONE  86,935 fetched · 86,926 db rows · 30,256.6 MB · 10.63/s · err 59
+
+**The lane did exactly the right thing and stopped itself.** Standing rule:
+*"On a refusal: stop; do not retry, do not rotate anything."* **IT HAS NOT BEEN
+RESTARTED AND MUST NOT BE without login deciding.** This is a decision about how
+we treat a source, not a bug to route around.
+
+## THE HOST ESCALATED FIRST — the ramp was visible in our own log
+
+    err 14 ×14 lines ... then 18 · 22 · 26 · 30 · 42 · 46 · 59
+    +0 documents for six consecutive PROGRESS lines while err climbed
+
+A flat error floor of 14 held for a long stretch, then rose steadily over the
+final minutes with throughput collapsing to zero, and only then came the
+outright 403. **The refusal was not sudden; it was the end of a conversation the
+host had been having with us for several minutes.** ⚠ A rising `err` count next
+to `+0` is the signal to back off — worth watching for BEFORE the 403 next time.
+
+## WHAT IS AND IS NOT AFFECTED
+
+    /ViewVscmsDocument/ViewContent   the DOCUMENT/image route   ⛔ REFUSED
+    /Search/DateRangeSearch          the search routes          ✅ still fine
+
+The richmond monitor fetched a 7-page window at 02:48, minutes after the check,
+with no trouble. **Two routes on one host, different protection** — the
+long-standing finding, confirmed again. So richmond SYNC and the monitor are
+unaffected; only pdf acquisition stopped.
+
+⚠ Note this refusal came at ~87,000 documents in one continuous run. The
+earlier 403 (2026-08-22) was diagnosed as a User-Agent problem and that
+diagnosis was CORRECT — the honest UA got 200s and 87,000 documents. **This is a
+different refusal: volume/duration, not identity.** Do not conflate them, and do
+not "fix" this one by touching headers — that would be working around bot
+detection, which is the line.
+
+## STATE AT THE STOP
+
+    richmond pdf   203,917 / 2,501,589   8.15%   STALLED
+    _incoming      drained to 0 (rc_pdf_land has nothing left)
+    rc_feed        idle at its mint cap: 121,594 minted, 1,490 ready, no consumer
+
+Nothing was lost. Everything fetched is landed and counted.
+
+# ⚠ AND THE BOARD CALLED A DEAD LANE "ACTIVE"
+
+For an hour the row read **ACTIVE** with a measured rate of **0.00/s**, because
+`PROC_SIG` listed `rc_feed.py` and `rc_pdf_land.py` alongside the acquirer — and
+both were still alive, idle. An idle helper is not pulling.
+
+**Masking a stopped acquirer behind two idle helpers defeats the STALLED state,
+which is the one state whose entire job is to say "somebody needs to look at
+this."** The signature is now the acquirer alone, and the row reads STALLED.
+
+⚠ **THE ANCHOR WAS RIGHT THE WHOLE TIME** and said so plainly:
+`richmond measured +0 docs over 654s -> 0.00/s`. The number was honest; the
+STATUS lied. Worth noting which layer failed — a rate of zero beside a green
+status is a contradiction the board should never have been able to display.

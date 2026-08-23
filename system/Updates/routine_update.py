@@ -162,8 +162,19 @@ PROC_SIG = {
     # 0.20/s while the lane fetched 13/s (login: "still dont think update is
     # reading the richmond pdf acq right since its sub 1 but we expect over
     # 10"). A lane map that names dead processes reports a live lane as idle.
-    ("acquisition pdf", "richmond"): ("rc_feed.py", "rc_pdf_land.py",
-                                      "rc_pdf_pull.py"),
+    # ⚠ ONLY THE ACQUIRER, NOT ITS HELPERS. Listing rc_feed and rc_pdf_land
+    # here made a DEAD LANE read ACTIVE. Measured 2026-08-23 02:48:
+    # rc_pdf_pull stopped itself on a 403 at 01:40, richmond pdf sat at
+    # 203,917 with a measured rate of **0.00/s** - and the row still said
+    # ACTIVE, because rc_feed (idle at its mint cap, 1,490 ready and nobody
+    # consuming) and rc_pdf_land (backlog drained to 0) were both still alive.
+    #
+    # The board's own definition is "ACTIVE means a process IS PULLING on this
+    # row - not that a process related to it happens to exist." An idle helper
+    # is not pulling. Masking a stopped acquirer behind two idle helpers
+    # defeats the entire STALLED state, which is the one state that says
+    # "somebody needs to look at this".
+    ("acquisition pdf", "richmond"): ("rc_pdf_pull.py",),
     ("organization", "acris"): ("nav_key.py --src acris",),
     ("organization", "richmond"): ("nav_key.py --src rc",),
 }
