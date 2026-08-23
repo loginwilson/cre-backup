@@ -1,24 +1,24 @@
 {
- "at": "2026-08-23T07:00:44",
+ "at": "2026-08-23T08:51:17",
  "source": "todo counted from pdf column; total from sync ledger",
  "depends_on": "navigation LEVEL (rows == ledger)",
  "ledger_run": "2026-08-23 04:04",
- "counted_at": "2026-08-23T06:59:50",
+ "counted_at": "2026-08-23T08:50:25",
  "null_probe_first_200k": 0,
  "sources": {
   "acris": {
    "total": 21615745,
-   "todo": 20487362,
-   "landed": 1128383,
-   "rate": 12.57,
-   "rate_span_s": 658
+   "todo": 20409451,
+   "landed": 1206294,
+   "rate": 12.39,
+   "rate_span_s": 666
   },
   "richmond": {
    "total": 2501589,
    "todo": 2297672,
    "landed": 203917,
    "rate": 0.0,
-   "rate_span_s": 658
+   "rate_span_s": 666
   }
  }
 }

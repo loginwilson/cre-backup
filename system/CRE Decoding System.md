@@ -1683,3 +1683,64 @@ Every efficiency measured tonight — the hot index, the count-to-count span, th
 asked what it costs the SOURCE, and it was by far the largest waste in the
 system: a 13x reduction, available all night, invisible because the meter only
 ever pointed inward.
+
+
+# ⚠ CORRECTION — THE BACKOFF WAS NOT THE FIX. I NAMED THE WRONG CAUSE.
+
+**Retracting a causal claim written into this file 90 minutes ago.** The
+closed-day backoff entry says of the richmond failures: *"The failures were the
+symptom. **This was the cause.**"* **That is wrong**, and the experiment that
+disproved it is the backoff itself.
+
+    BEFORE backoff   ~7 failures / ~290 ticks    ~2.4% per probe
+    AFTER  backoff    1 failure  /    8 probes   12.5% per probe
+
+Cutting request volume **13x did not reduce failures.** Our volume was never the
+cause. I had flagged the hypothesis as unproven; it is now disproven, which is
+the better outcome than it quietly persisting as fact.
+
+⚠ The backoff was still RIGHT — polling a closed office 540 times an hour is
+indefensible on its own terms. **But being right about the ethics is not
+evidence about the mechanism**, and I let the two ride together.
+
+## THE ACTUAL CAUSE — THE RETRY UNIT, AGAIN
+
+acris was CLEAN 12 seconds either side of every richmond failure, on the same
+network. So it was never the host and never DNS at those moments. The difference
+is the SHAPE of the two probes:
+
+    richmond   ~12 requests (session setup ×3, three windows, seven pages)
+               ALL-OR-NOTHING - one failure raises and kills all twelve
+    acris       9 requests, each counted separately, none aborts the probe
+
+At ~1% per-request flakiness, twelve all-or-nothing requests fail ~12% of the
+time. **That is exactly the rate measured.** The arithmetic and the observation
+agree, and neither needs the host to be doing anything to us.
+
+⚠ **THIS IS THE rc_rd_walk LESSON, VERBATIM, AND I RE-INTRODUCED IT LAST
+NIGHT:** *"the walker restarts a failed window from page 1, so one mid-walk
+timeout aborted the whole window every sweep — the retry unit must never be
+bigger than the failure unit."* That cost 339 documents in August and was fixed
+with per-page retry. I wrote `rc_sync.Window` yesterday with **no retry at all**
+and shipped the identical defect into the monitor path.
+
+FIXED: `_retry()` on the three session-setup calls and per-PAGE retry inside
+`page()` — 3 attempts, 1.5s increasing backoff.
+
+⚠ **A REFUSAL IS NEVER RETRIED.** 403/Forbidden re-raises immediately. The
+richmond document route was refused at 01:40 and "stop; do not retry, do not
+rotate" is not negotiable — the retry exists solely for the connection/timeout
+class, which was proven local with a neutral DNS control.
+
+## THE PATTERN THIS MAKES ELEVEN
+
+Every defect tonight had a check that could not distinguish "nothing" from
+"clean". This one adds a second edge: **a fix that could not distinguish "I
+changed the thing that mattered" from "I changed a thing, and the number moved
+for its own reasons."** The backoff and the failure rate were never causally
+linked; I connected them because they were adjacent in time and I had just done
+the work.
+
+**The rule that caught it is the same one as always — measure the thing you
+claim, separately from the thing you changed.** Counting probes-vs-failures
+after the change took one command and overturned the conclusion.

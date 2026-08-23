@@ -81,6 +81,25 @@ _ROW = re.compile(
 _PAGES = re.compile(r'Page\s*<span[^>]*>\s*(\d+)\s*</span>\s*of\s*(\d+)')
 
 
+def _retry(fn, tries=3):
+    """Run fn, retrying TRANSIENT network faults only.
+
+    ⚠ A REFUSAL IS NEVER RETRIED. 403/Forbidden re-raises immediately — the
+    richmond document route was refused 2026-08-23 01:40 and the standing rule
+    is "stop; do not retry, do not rotate anything." This exists solely for the
+    connection/timeout class, which was proven LOCAL with a neutral DNS control
+    (github.com resolution timed out during the same window)."""
+    for k in range(tries):
+        try:
+            return fn()
+        except Exception as e:
+            if "403" in str(e) or "Forbidden" in str(e):
+                raise
+            if k == tries - 1:
+                raise
+            time.sleep(1.5 * (k + 1))
+
+
 def _iso(mdy):
     """MM/DD/YYYY -> YYYY-MM-DD. ⚠ The POST form takes the first, the
     pagination GET takes the second. They are not interchangeable."""
@@ -93,13 +112,18 @@ class Window:
 
     def __init__(self, a, b):
         self.a, self.b = a, b
+        # ⚠ THE SESSION SETUP IS THREE MORE ALL-OR-NOTHING REQUESTS, and the
+        # measured failures name the FIRST window - i.e. right here. Same rule
+        # as page(): retry the transient, never the refusal.
         self.s = RC.Session()
-        tok = RR.token(self.s.get("/Search/SearchIndex"))
-        _, page = RR.post(self.s, "/Search/SearchIndex",
-                          {"button": "DateRangeSearch", "hbutton": "DateRangeSearch",
-                           "htoken": "", "__RequestVerificationToken": tok})
+        tok = RR.token(_retry(lambda: self.s.get("/Search/SearchIndex")))
+        _, page = _retry(lambda: RR.post(
+            self.s, "/Search/SearchIndex",
+            {"button": "DateRangeSearch", "hbutton": "DateRangeSearch",
+             "htoken": "", "__RequestVerificationToken": tok}))
         self.tok = RR.token(page)
-        _, self.html = RR.post(self.s, "/Search/DateRangeSearch", self._f())
+        _, self.html = _retry(
+            lambda: RR.post(self.s, "/Search/DateRangeSearch", self._f()))
         self.tok = RR.token(self.html) or self.tok
 
     def _f(self, **extra):
@@ -141,26 +165,53 @@ class Window:
         total = int(m.group(2))
         for p in range(2, total + 1):
             try:
-                h = self.s.get(
-                    "/Search/DateRangeSearch"
-                    f"?StartSearchDate={_iso(self.a)}"
-                    f"&EndSearchDate={_iso(self.b)}"
-                    f"&SelectedDocumentIdentifier=0&pageNumber={p}")
-            except Exception:
+                # page() retries transient faults per PAGE - the retry unit
+                # matching the failure unit. It still raises once a page is
+                # genuinely unreachable, and re-raises a 403 immediately.
+                out.extend(self.page(p))
+            except Exception as e:
                 # ⚠ Partial is not whole. Say so rather than returning a
                 # short list that looks complete.
                 raise RuntimeError(
-                    f"page {p} of {total} failed for {self.a}..{self.b} - "
-                    f"refusing to return a partial window")
-            out.extend(self._parse(h))
+                    f"page {p} of {total} failed for {self.a}..{self.b} "
+                    f"({type(e).__name__}) - refusing to return a partial "
+                    f"window")
         return out
 
-    def page(self, p):
-        """One page of an already-open window. Plain GET, ISO dates."""
-        return self._parse(self.s.get(
-            "/Search/DateRangeSearch"
-            f"?StartSearchDate={_iso(self.a)}&EndSearchDate={_iso(self.b)}"
-            f"&SelectedDocumentIdentifier=0&pageNumber={p}"))
+    def page(self, p, tries=3):
+        """One page of an already-open window. Plain GET, ISO dates.
+
+        ⚠ THE RETRY UNIT MUST NEVER BE BIGGER THAN THE FAILURE UNIT — the
+        lesson rc_rd_walk paid for ("the walker restarts a failed window from
+        page 1, so one mid-walk timeout aborted the whole window every sweep";
+        per-page retry landed the last 339 documents in one pass). I wrote this
+        class without it and it cost the same way, measured 2026-08-23:
+
+            richmond probe   ~12 requests, ALL-OR-NOTHING   12.5% of probes failed
+            acris probe       9 requests, counted singly     0% over the same hours
+
+        Same network, same minutes — acris was clean 12 seconds either side of
+        every richmond failure. It was never the host; it was that one flaky
+        request out of twelve killed all twelve. At ~1% per request that is
+        ~12% per probe, which is what we measured.
+
+        ⚠ RETRIES ARE FOR TRANSIENT NETWORK FAULTS ONLY. A refusal that names
+        itself (HTTP 403) is re-raised immediately and never retried — the
+        richmond document route was refused tonight and "do not retry, do not
+        rotate" is not negotiable. This retries connection/timeout errors, the
+        class we proved is local flakiness with a neutral DNS control."""
+        url = ("/Search/DateRangeSearch"
+               f"?StartSearchDate={_iso(self.a)}&EndSearchDate={_iso(self.b)}"
+               f"&SelectedDocumentIdentifier=0&pageNumber={p}")
+        for k in range(tries):
+            try:
+                return self._parse(self.s.get(url))
+            except Exception as e:
+                if "403" in str(e) or "Forbidden" in str(e):
+                    raise                      # a refusal is never retried
+                if k == tries - 1:
+                    raise
+                time.sleep(1.5 * (k + 1))      # brief, increasing, polite
 
     def pages(self):
         m = _PAGES.search(self.html)
