@@ -1233,3 +1233,41 @@ Three attempts at one number, each fixing the previous and introducing the next.
 **Every fix was correct and every fix was incomplete**, because each one moved the
 error somewhere the previous check was not looking. The only thing that ended the
 sequence was measuring the same quantity a second way.
+
+
+# ✅ BOTH GATES PROVEN LIVE — richmond too (2026-08-23 01:38)
+
+The richmond half was tested the same way as acris: drop the stored edge, watch
+the whole chain react. **Neither gate had ever fired**, and waiting until Monday
+to discover whether they work is not a test.
+
+    01:37:55  richmond 08/21/2026 · edge 1,017,350 · 7 pages  NEW (was 1,017,300)
+    01:37:56  --> firing rc_sync_fast.py for richmond
+              2026-08-21 .. 2026-08-23 -> 103 documents over 7 page(s)  12 s
+              density: 103 slots · 103 docs · missing 0
+              held 103 · NEW 0
+              level - nothing to land
+    01:38:10  sync returned for richmond
+
+**Fourteen seconds, detect to return.** The watermark self-restored to 1,017,350
+on the next tick — nothing had to be put back by hand.
+
+    ACRIS     detect (2 req) -> sync_fast    -> 5 documents resolved -> ~66 s
+    RICHMOND  detect         -> rc_sync_fast -> 103 checked, 0 new   ->  14 s
+
+That is the pile-up requirement satisfied on both sources: *"sync must move quick
+from top of our count to the edge of theirs and find those ids quick to send to
+nav."* The alternative — firing `routine_synchronization` — takes **464 s at
+best** because its STEP 1 counts 24.1M rows before it looks at the source at all.
+
+⚠ **THE RICHMOND TEST PROVED THE WIRING, NOT THE LANDING.** With `NEW 0` it
+exits before any write, so `rc_sync_fast`'s INSERT path is still unexercised
+against the live table. It IS verified against a scratch table (all three lanes
+see the row, no NULLs, present in `ix_nav_pdf_todo`) — but say which of the two
+that is. **A test that could not have failed at the step you care about has not
+tested that step.**
+
+⚠ **AND NOTE WHY THE ACRIS TEST WAS THE STRONGER ONE**: it found 5 real
+documents and ran the insert (as a no-op, correctly). The richmond window had
+nothing new because the register is closed at the weekend. Same test design, two
+different depths, decided by what the source happened to be doing.
