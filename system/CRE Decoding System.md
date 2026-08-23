@@ -392,3 +392,88 @@ Two causes, both stale references to a pipeline that had changed underneath:
 **A board that reads a process list and a log file is only as true as its
 map of the system.** When a lane is replaced, the board must be edited in
 the same commit or it will confidently report the old world.
+
+
+# PHASE 00- · THE MONITOR — a new phase ahead of sync (login 2026-08-22)
+
+Login: *"i think we have a monitor phase ahead of sync and a new count
+indicates sync to kick off"* and *"the monitor indicates the delta which the
+sync gets doc id for to send to nav"*.
+
+## WHY IT IS A PHASE AND NOT PART OF SYNC
+
+Each phase makes ONE claim. Sync's is expensive: *every doc id the source has,
+the system has.* The monitor's is smaller, cheaper, and answerable constantly:
+
+    THE SOURCE'S COUNT IS KNOWN, AS OF SECONDS AGO.
+
+It never touches a doc id, never writes the nav db, never mints a url. It
+decides ONE thing: whether sync should run. That is why it can tick every
+minute while sync — which scans, gathers ids and writes — cannot.
+
+## MONITOR vs PROBE — the cost split that makes live affordable
+
+    MONITOR   "has anything changed at all?"     ONE request
+    PROBE     "what exactly is the edge?"        gallop+bisect, ~30 requests
+
+Probing every minute costs ~1,800 requests/hour. Monitoring every minute
+costs ~60, and only fires the probe when the answer is non-zero. **The cheap
+question gates the expensive one.** At steady state the answer is almost
+always zero, so almost every tick costs one request.
+
+    monitor (1 req)  ->  delta > 0?  ->  sync (probe + gather ids)
+                                            ->  nav (mint urls)
+                                               ->  acq (pull rd + pdf)
+                                                  ->  org (key to bbl)
+
+## THE ONE-REQUEST QUESTION, PER SOURCE
+
+    ACRIS      count(*) where :updated_at > watermark   (Socrata, 1 request)
+               ⚠ :updated_at, NEVER recorded_datetime - that column LAGS ~11
+               DAYS. Measured 2026-08-11: newest recorded_datetime in all of
+               ACRIS was 2026-07-31 while 28,196 rows had actually landed.
+               A monitor on the wrong field reports "nothing new" FOREVER and
+               looks healthy while falling permanently behind.
+               (Alternative, also 1 request: does known_edge + 1 resolve?)
+
+    RICHMOND   today's date-range window                (1 request)
+               ⚠ CORRECTION 2026-08-22: the date-range search is NOT the
+               Cloudflare-protected route. The 403 finding belongs to
+               /ViewVscmsDocument/ViewContent, the DOCUMENT route. rc_feed and
+               rc_sync hit the search endpoints from python continuously. Two
+               routes on one host with different protection - do not inherit
+               one route's caution onto the other.
+
+## CAN A CONSTANT REQUEST BE SUSTAINED? THE EVIDENCE SAYS YES
+
+routine_4am.py, measured: *"CONCURRENCY IS THE TRIP RISK, NOT VOLUME. What
+tripped the server was 12,077 documents at CONC 16 in a burst. This runs
+sequential at 2.5 s - 48 KB/s, one connection."*
+
+**Bursts trip these hosts; steady sequential requests do not.** routine_4am
+already makes a request every 2.5 s against ACRIS as normal daily practice.
+One request per 60 s is 24x gentler than something already running. Socrata
+with an app token permits thousands/hour; 60 is noise.
+
+## LATENCY IS SOURCE-BOUND, NOT MONITOR-BOUND
+
+    ACRIS     400/400 imaged same-day   -> minute-live END TO END
+    RICHMOND  overnight step at ~24h    -> minute-live on KNOWING,
+                                           next-day on HAVING
+
+Richmond's index arrives in a minute at any polling rate; the scan arrives
+tomorrow. That is the source's clock and no monitor changes it. Record at the
+event as `pending`, recheck next morning, terminal at 7 days -> `imageless`.
+
+## WHAT THE MONITOR OWES THE BOARD
+
+Its own phase x source rows, same as every other phase, carrying the LIVE
+DENOMINATOR. Every percentage on the board is measured against `needed`, and
+`needed` is otherwise frozen at whatever the last sync said. The monitor makes
+the denominator true continuously - so completeness is honest even while
+acquisition is at 3%.
+
+⚠ NOT BUILT YET. sync_live.py is the placeholder and it runs the FULL routine
+each tick (which scans our own rows - it timed out at 100 s against a busy
+table). That is exactly the cost the monitor exists to avoid. Build the
+one-request question first; everything else already exists.
