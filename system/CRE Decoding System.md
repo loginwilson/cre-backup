@@ -1533,3 +1533,45 @@ The probe was 217 s of a 220 s pass — the only query touching the table rather
 than an index. ⚠ It reads the TAIL (where sync inserts), which is the hot region,
 so it costs ~4x per row what the cold head does. 50,000 rows still covers WEEKS
 of inserts at ~1,550/business day.
+
+
+# CALIBRATION — what NORMAL network flakiness looks like (2026-08-23 04:18)
+
+Two monitor window failures across ~150 ticks in 2.5 hours, **both
+self-recovered on the next tick**:
+
+    01:43:14  richmond 08/22 window FAILED (TimeoutError)   -> clean at 01:44
+    04:17:20  richmond 08/23 window FAILED (URLError)       -> clean at 04:18:24
+
+**~1.3% transient failure rate.** Same machine also lost a git push to
+`Could not resolve host: github.com` at 01:38 and succeeded on retry. This box
+has intermittent DNS/connection blips; that is the BASELINE, not a signal.
+
+## ⚠ WHY THIS IS WORTH RECORDING AT ALL
+
+Hours after a genuine 403 refusal on the same host, a network error on that host
+is exactly the thing to over-read. **It was not an escalation** and the evidence
+says so specifically:
+
+    URLError / TimeoutError   network layer - DNS, connect, timeout
+    403                       the host answering, and declining
+
+Different layers. The refusal names itself; a blip does not. And the SEARCH
+routes were fine on 13 consecutive ticks before the failure and clean again on
+the next one, while the DOCUMENT route remains refused — **the route split is
+still holding.**
+
+⚠ **A REFUSAL NAMES ITSELF; A HANG GETS WHATEVER CAUSE THE READER ALREADY
+BELIEVES.** Standing rule, and it cuts both ways: it stopped us reading a
+timeout as "fine" earlier tonight, and it stops us reading one as "banned" now.
+The correct response to the blip was to READ THE MONITOR'S OWN RETRIES, not to
+probe the host to find out — probing a host that refused us hours ago, to test
+whether it still refuses us, is the retry the rule forbids.
+
+## THE GUARD WORKED, BOTH TIMES
+
+    "window FAILED (URLError) - reporting NOTHING, not a zero we did not measure"
+
+Never once did a network failure become a "0 documents today". That distinction
+is the whole reason the richmond delta path can be trusted, and it is the same
+distinction the dead regex silently destroyed for weeks.
