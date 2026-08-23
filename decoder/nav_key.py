@@ -136,6 +136,24 @@ def sweep():
             sweep.cursor = a.lo
             break
         sweep.cursor = batch[-1][0]   # advance past skipped (ref-pending) rows
+        # ⚠ THE WRITER-SEAT LAW (measured 2026-08-22). This loop used to call
+        # con.execute(UPDATE) PER ROW, which opens a write transaction on the
+        # FIRST row and holds the exclusive lock until the commit ~5,000 rows
+        # later - while every remaining row parses json and runs TWO MORE
+        # QUERIES for reference resolution (ref_bbls hits `con` AND `spec`).
+        # Thousands of lookups performed while holding the write lock: that is
+        # why "a live keyer blocked every walker" and why this phase was
+        # parked behind a busy-guard.
+        #
+        # rc_pdf_land.py had the rule right all along - "converted OUTSIDE the
+        # transaction" - and rc_pdf_pull.py measured the payoff: per-row
+        # commits gave ~2/s, ONE executemany per 250 rows kept pace with 12.5/s.
+        # The work was never the problem; holding the lock during it was.
+        #
+        # So: COMPUTE EVERY KEY FIRST (reads only, no txn open), then apply
+        # once. The lock is held for milliseconds instead of minutes, and the
+        # keying logic below is untouched.
+        updates, tally = [], {}
         for did, det in batch:
             try:
                 d = json.loads(det)
@@ -173,20 +191,9 @@ def sweep():
                     # NO parcels, NO references - genuinely rd-unkeyable:
                     # saved for the second pass, the pdf url keys it
                     kb, key = "pdf-pass", ""
-            # ⚠ NEVER DIE ON A LOCK (measured twice: an index build and a
-            # bulk UPDATE each held an exclusive txn long enough to kill the
-            # keyer mid-sweep). Retry, then skip the row - a later sweep
-            # re-finds it, because the table is the work list.
-            for _try in range(120):
-                try:
-                    con.execute("UPDATE navigation SET keyed_by=?, key=?"
-                                " WHERE id=?", (kb, key, did))
-                    break
-                except sqlite3.OperationalError:
-                    time.sleep(5)
-            else:
-                continue
-            n[kb] += 1
+            # NO WRITE HERE - collect it. The transaction opens once, below.
+            updates.append((kb, key, did))
+            tally[kb] = tally.get(kb, 0) + 1
             if a.show:
                 ev = (f"parcels panel -> {key}" if kb == "parcel" else
                       f"references {d.get('references')} -> {key}"
@@ -195,12 +202,33 @@ def sweep():
                       f" slid={d.get('slid', '-')} -> saved for pdf pass")
                 print(f"  {did}  {d.get('type', '?'):<10} {kb:<9} {ev}",
                       flush=True)
-        for _try in range(120):      # same guard on the batch commit
+        # ⚠ ONE TRANSACTION, ONE SEAT ACQUISITION. All the thinking is done;
+        # this is a batch of bare UPDATEs and nothing else. NEVER DIE ON A
+        # LOCK (measured twice: an index build and a bulk UPDATE each held an
+        # exclusive txn long enough to kill the keyer mid-sweep) - retry, and
+        # if it still will not go, write NOTHING and let a later sweep re-find
+        # the rows. The table is the work list.
+        wrote = False
+        for _try in range(120):
             try:
+                if updates:
+                    con.executemany("UPDATE navigation SET keyed_by=?, key=?"
+                                    " WHERE id=?", updates)
                 con.commit()
+                wrote = True
                 break
             except sqlite3.OperationalError:
                 time.sleep(5)
+        if wrote:
+            # ⚠ COUNT ONLY WHAT COMMITTED. Incrementing during the compute
+            # loop would report keys that were never written if the batch
+            # failed - a count of our own optimism, not of rows.
+            for k, v in tally.items():
+                n[k] += v
+        else:
+            print("  ⚠ batch did not commit after 120 tries - 0 keys written,"
+                  " rows left for a later sweep", flush=True)
+            continue
         # persist AFTER the commit, never before: a cursor ahead of the
         # committed keys would silently skip rows on the next start
         try:

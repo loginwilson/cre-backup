@@ -537,3 +537,69 @@ by that measure."* It applies to BOTH tiers and is the only rule that does.
 **TIER ONE IS NOW FULLY AUTOMATABLE.** Not automated - backfill still has to
 finish and the monitor still has to be built - but every phase in it is code
 that can be scheduled. That was not true this morning.
+
+
+# ORG UNBLOCKED — the writer-seat law applied to the keyer (2026-08-23 ~00:05)
+
+Task 1 of the overnight list. **`nav_key.py` now runs alongside the writing
+lanes.** It was parked behind a busy-guard since 2026-08-21 because "a live
+keyer blocked every walker."
+
+## WHAT WAS ACTUALLY WRONG
+
+The sweep selects a batch of up to **5,000 rows**, then for each row: parses
+json, and — when there are no parcels — resolves references via `ref_bbls()`,
+which runs **two queries** (one on `navigation`, one on the spec db).
+
+The old code called `con.execute(UPDATE ...)` **inside that loop**. Python's
+sqlite3 opens a write transaction on the first DML and holds it until commit,
+so the EXCLUSIVE WRITE LOCK was held across up to 5,000 rows of json parsing
+and thousands of reference lookups. Every walker queued behind it.
+
+**It was never "the keyer writes too much." It was "the keyer thinks while
+holding the lock."** Exactly the shape rc_pdf_land.py warned about — its rule
+is the last line of its comment, "converted OUTSIDE the transaction" — and
+exactly what rc_pdf_pull.py measured hours earlier: per-row commits gave ~2/s,
+one executemany per 250 rows kept pace with 12.5/s.
+
+## THE FIX
+
+Two phases instead of one:
+
+    PHASE A   compute every (kb, key, did) into a list.  READS ONLY.
+              No transaction is open. All the json parsing, all the
+              reference resolution, all the spec-db lookups happen here.
+    PHASE B   one executemany + one commit.  Bare UPDATEs, nothing else.
+              ONE seat acquisition instead of 5,000.
+
+Keying logic is untouched — the same three-route ladder, the same
+ref-pending `continue`, the same pdf-pass verdict.
+
+⚠ COUNTERS MOVED TOO. They used to increment during the compute loop, which
+would report keys that were never written if the batch failed to commit —
+a count of our own optimism. They now increment only after `wrote = True`.
+
+## MEASURED — the whole point
+
+    rd acris BEFORE the keyer           68.97/s
+    rd acris DURING the keying pass     61-66/s, dipping to 41/s
+    keying throughput                   2,000 rows in 19.1s  (~105/s)
+    org acris landed                    3,243,479 -> 3,450,824
+
+**A 10-40% dip, against the old shape's 90% collapse** (measured then:
+17 -> 1.5 docs/s, and 99 -> 16 docs/s). The keyer is no longer a lane-killer.
+It is now merely expensive, which is a scheduling question rather than a
+prohibition.
+
+⚠ TUNING LEFT ON THE TABLE: the executemany batch inherits the SELECT batch
+of up to 5,000. rc_pdf_pull measured its sweet spot at 250. A 5,000-row
+executemany holds the lock longer than it needs to, and the 41/s dip is
+probably that. Try 500-1,000 before running the keyer continuously.
+
+## CONSEQUENCE FOR THE PIPELINE
+
+`routine_organization.py`'s busy-guard ("RUNS AS A PASS ON A QUIET TABLE -
+never alongside writing lanes") was correct for the OLD keyer and is now
+over-strict. Org route 1 (parcel, inline with rd) already ran during backfill;
+routes 2-3 can now run too. **Org no longer has to wait for backfill to end**,
+which was the single biggest reason the chain could not flow.
