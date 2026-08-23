@@ -188,6 +188,35 @@ that does not consult the source about its own completeness — disagreed.
 
 ---
 
+## 2c · `rc_sync_fast.py` — the O(delta) path the monitor fires  (2026-08-23)
+
+Richmond had no fast sync, so `phase_monitor --gate` had nothing to fire for it
+but `routine_synchronization.py` — whose STEP 1 counts 24.1M rows (**464 s at
+best, 27 min under contention**) before it even looks at the source. On a
+one-minute cadence that IS the pile-up.
+
+    routine_synchronization.py   proves levelness   minutes   periodic
+    rc_sync_fast.py              lands the delta    seconds   every minute
+
+⚠ **RICHMOND NEEDS NO GALLOP.** ACRIS's `sync_fast.py` walks the CRFN counter
+upward because its edge is a *boundary to be found*. Richmond's date-range window
+**returns the documents themselves**, so the delta is just "which of these do we
+not hold" — one primary-key lookup per row, no scan anywhere.
+
+    measured 2026-08-23:  3-day window · 103 documents · 7 pages · 22 s
+                          density 103/103 missing 0 · held 103 · NEW 0
+
+⚠ **EVERY WORK COLUMN IS `''`, NEVER NULL.** `nav_append.py:216` states the
+invariant: *"rd_walk sees recorded_details='', image_walk sees pdf='', nav_key
+sees keyed_by=''"*. Those lanes select on `= ''` and **NULL is not `''`**, so a
+row inserted with NULLs is invisible to every downstream lane forever — while
+looking perfectly healthy (id present, count right, url audit passing). It would
+also fall outside `ix_nav_pdf_todo`, so `board_truth` would count it as **LANDED:
+a document with no pdf, reported as acquired.** `sync_fast.py` had exactly this
+bug; verified against a scratch table that all three lanes now see the row.
+
+---
+
 ## 3 · ACQUISITION — BROWSER-ASSISTED, not direct-endpoint
 
 > ⚠⚠ **SUPERSEDED 2026-08-22 — SEE §3d. THE PDF LANE NEEDS NO BROWSER.**

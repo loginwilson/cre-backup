@@ -975,3 +975,74 @@ did not know the vocabulary. A design never wired up.
 
 Every one produced a confident, healthy-looking, wrong answer. **Make the
 negative branch loud, or verify against something outside the check.**
+
+
+# ✅ THE GATE FIRED — monitor -> sync proven live (2026-08-23 01:05)
+
+`phase_monitor.py --gate --every 60` is running as a service. The gate had never
+fired, and waiting for Monday to find out whether it works is not a test — so it
+was tested deliberately: drop the known edge by 5, watch the whole chain react.
+
+    01:05:08  acris edge ...860 · control ok · probed +1..+8 (2 req) · NEW at ...861
+    01:05:10  --> firing sync_fast.py for acris
+              our top CRFN ...860 · control resolves - probe OK
+              walked +13 (14 requests) · found 5 new
+                ...861  2026081800762002  ASSIGNMENT OF LEASES AND REN  8/21 7:56:33 PM
+                ...862  2026081800762003  INITIAL UCC1                  8/21 7:56:34 PM
+                ...863  2026081800762004  MORTGAGE                      8/21 7:56:35 PM
+                ...864  2026081800762005  ASSIGNMENT OF LEASES AND REN  8/21 7:56:36 PM
+                ...865  2026081800762006  INITIAL UCC1                  8/21 7:56:37 PM
+              landed 0 ids into navigation
+              edge advanced ...860 -> ...865  (after the commit, never before)
+    01:07:39  acris edge ...865 · quiet
+
+**Everything it claimed, it did.** It resolved five real documents, INSERT OR
+IGNORE correctly no-opped because we already hold them, the watermark advanced
+only after the commit, and the next tick went quiet. **The edge restored itself
+to the true value** — the backup was never needed.
+
+⚠ **NOTE THE COST ASYMMETRY, WHICH IS THE DESIGN.** A QUIET minute costs 9
+requests (probe the whole span, find nothing). A BUSY minute cost **2** — it
+stops at the first hit and hands the rest to sync. The monitor gets cheaper
+exactly when there is more to do.
+
+## AND RICHMOND NOW HAS THE SAME PATH — `rc_sync_fast.py`
+
+It had none, so the gate had nothing to fire but the full routine (STEP 1 alone
+counts 24.1M rows). ⚠ **Richmond needs no gallop**: ACRIS walks the CRFN counter
+because its edge is a boundary to be FOUND; Richmond's window RETURNS THE
+DOCUMENTS, so the delta is one PK lookup per row.
+
+    measured: 3-day window · 103 documents · 7 pages · 22 s · held 103 · NEW 0
+
+# ⚠ I BROKE THE RATE BY FIXING THE COUNT (same night, caught same night)
+
+Anchoring `landed` to `board_truth` made the LEVEL right and the DERIVATIVE
+nonsense. Both rates are computed by differencing `landed` over a window — so
+differencing a counter that re-measures every 30 MINUTES measures **the anchor's
+step, not the lane**:
+
+    acris pdf     board 1.37/s     lanes actually 11.06/s     eta 175.48 days
+    richmond pdf  board 1.91/s     lane log says  10.81/s     eta  14.16 days
+    rate_now      0.0 on both      - which reads as STALLED
+
+`1600 / (20*60) = 1.33`. That is the anchor's step divided by the window, and it
+is exactly what the board printed. **The most misleading cell on the board is a
+zero rate next to a healthy lane.**
+
+⚠ This is the SAME ALIASING DISEASE as the morning of 2026-08-22 (60-second
+samples of 60-second lumps reading 0.0, then 175.4/s, then 13.3/s) arriving by a
+new route — **and I introduced it by making the number more accurate.** An
+improvement to a level is not automatically an improvement to what is derived
+from it.
+
+**THE RULE, ALREADY WRITTEN IN THIS FILE AND NOT APPLIED TO THE NEW CASE:**
+*a lane already measured its own rate — READ IT, do not re-derive it.*
+Anchored rows now take the lane's published figure outright, and richmond's pdf
+lane got the LANE_RATE entry it never had.
+
+    AFTER:  acris pdf    11.06/s   eta 21.71 days   (was 175.48)
+            richmond pdf 10.71/s   eta  2.53 days
+
+⚠ **AN ANCHORED COUNTER IS AUTHORITATIVE ABOUT THE LEVEL AND USELESS AS A
+DERIVATIVE.** Never difference one to get a rate.

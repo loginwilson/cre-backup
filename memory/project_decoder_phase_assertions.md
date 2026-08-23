@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-20T18:29:36.124Z
+  modified: 2026-08-23T05:03:05.052Z
 ---
 
 Each phase makes exactly ONE claim, and its gate exists to prove that claim. Stated
@@ -27,12 +27,24 @@ Enforced in `routine_4am.py`: `sync_table.py`'s exit code IS the gate, and
 navigation prints `HELD` rather than building against a specification known to be
 short (`--authorize-nav` overrides).
 
-⚠ **THE ACQUISITION GATE DOES NOT EXIST YET** and it is the next one needed. Nav's
-`pdf` column is a *computed path*, not evidence a file is there — `str(CP.STORE /
-f"{did}.tif")` is written for all 24,039,303 rows whether or not anything was ever
-fetched. So 100% of rows "have a pdf" by construction. The gate must count files
-that actually exist, with `imageless` documents excluded from the denominator by
-name (174,142 of them must never be fetched).
+✅ **THE ACQUISITION GATE EXISTS NOW** (`routine_acquisition.py`, 2026-08-22) and
+the `pdf` column is EVIDENCE, not a computed path — three states: `''` unlanded ·
+`'imageless'` resolved-no-image · a real path = landed. `board_truth.py` counts it.
+
+✅ **AND THE CHAIN RUNS END TO END** — `phase_chain.py`, first full run
+2026-08-23: monitor LEVEL · sync LEVEL · nav/acq/org DECLINED (busy-guards).
+⚠ **2 of 5 phases PROVEN.** The other three audit by FULL TABLE SCAN (~2.2h) and
+the fleet never stops, so they can essentially never run. Fix identified, not
+done (needs a quiet window + login's call, it is a schema change): give each
+phase's claim a **partial "todo" index** like `ix_nav_pdf_todo`. Measured
+same-minute: partial index 23.1M rows in **30s** vs table scan 200k in **64.8s**.
+The index is fast *because the lanes keep it hot* — the audit rides the fleet's
+working set instead of fighting it. See [[project-decoder-updates-board]].
+
+⚠ **MONITOR IS PHASE 00 AND GATES SYNC** — `phase_monitor.py --gate` fires the
+**O(delta)** paths (`sync_fast.py`, `rc_sync_fast.py`), never the full routine
+(whose STEP 1 alone is 24.1M rows / 464s-27min). Firing the full routine on a
+one-minute cadence IS the pile-up.
 
 ⚠ **A GATE READING ZERO PROVES NOTHING UNTIL YOU CHECK ITS DENOMINATOR.** Nav's
 `UNKEYED 0` was true while it was still an open question whether every document was

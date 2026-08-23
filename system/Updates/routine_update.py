@@ -90,6 +90,11 @@ MIN_SPAN = 3 * 60
 # filled by rows(): the rate each lane REPORTS about itself, per (phase,
 # source). Preferred over any rate the board differences for itself.
 LANE_RATE = {}
+# ⚠ Rows whose `landed` came from board_truth.py this pass. Their counter is
+# re-measured on a 30-minute cadence, so it is authoritative about the LEVEL and
+# meaningless as a derivative - differencing it yields the anchor's step, not
+# throughput. These rows take their rate from the lane's own published figure.
+ANCHORED = set()
 # filled by rows(): keys won by the BACKFILL SWEEPER only, per source -
 # the sole component that closes organization's gap. Trigger keys arrive
 # with new rd work and never touch the backlog, so they must not date it.
@@ -292,6 +297,24 @@ def gather():
             r += d / (mins * 60) if mins else 0.0
     if r:
         LANE_RATE[("acquisition pdf", "acris")] = r
+    # ⚠ RICHMOND'S PDF LANE HAD NO RATE ENTRY AT ALL, so its row fell through to
+    # differencing `landed` - and once `landed` came from the 30-minute truth
+    # anchor, that difference measured THE ANCHOR'S STEP, not the lane. It read
+    # 1.91/s while rc_pdf_pull's own log said 10.81/s.
+    # rc_pdf_pull prints its rate over its own full run, e.g.
+    #   +132   total 54510   10.81/s  19069.9 MB  db 54480  q0  err 13
+    # Read it. Do not re-derive what the lane already measured.
+    for pp in (W / "rc_pull.log", DECODER / "rc_pull.log"):
+        if not pp.exists() or not fresh(pp):
+            continue
+        lines = [ln for ln in pp.read_text(encoding="utf-8",
+                                           errors="replace").splitlines()
+                 if "total " in ln and "/s" in ln]
+        if lines:
+            m = re.search(r"total \d+\s+([\d.]+)/s", lines[-1])
+            if m:
+                LANE_RATE[("acquisition pdf", "richmond")] = float(m.group(1))
+        break
     a_rd = base.get("acris_rd", 0) + sum(
         num(last_progress(p.stem), r"\+([\d,]+) this run") for p in rd_logs)
     # pdf lanes: same glob-newer-than-baseline rule as rd (the bridge
@@ -362,9 +385,14 @@ def gather():
                 truth = {k: v["landed"] for k, v in tj["sources"].items()}
         except Exception:
             truth = {}
+    ANCHORED.clear()
     if truth:
-        a_pdf = truth.get("acris", a_pdf)
-        rc_pdf = truth.get("richmond", rc_pdf)
+        if "acris" in truth:
+            a_pdf = truth["acris"]
+            ANCHORED.add(("acquisition pdf", "acris"))
+        if "richmond" in truth:
+            rc_pdf = truth["richmond"]
+            ANCHORED.add(("acquisition pdf", "richmond"))
 
     out[("acquisition rd", "acris")] = (a_rd, need_a)
     out[("acquisition pdf", "acris")] = (a_pdf, need_a)
@@ -505,6 +533,21 @@ def main(loop):
             # lifetime averages memorialize the past.
             rate = d / span if span >= MIN_SPAN \
                 else LANE_RATE.get((phase, src), 0.0)
+            # ⚠ NEVER DIFFERENCE AN ANCHORED COUNTER TO GET A RATE.
+            # `landed` for the pdf rows now comes from board_truth.py, which
+            # re-measures every 30 MINUTES. Differencing it over a 20-minute
+            # window measures THE ANCHOR'S STEP, not the lane: acris pdf read
+            # 1.37/s against a measured fleet of 11.06/s, and richmond read
+            # 1.91/s against rc_pdf_pull's own 10.81/s. Same aliasing disease
+            # as the 60s-sampling-60s-lumps morning, arriving by a new route -
+            # I introduced it by making `landed` more accurate.
+            #
+            # An anchored counter is RIGHT about the LEVEL and USELESS as a
+            # derivative. So for anchored rows the lane's own published rate
+            # wins outright - it is measured over the lane's real elapsed time
+            # and cannot alias against the anchor's cadence.
+            if (phase, src) in ANCHORED and LANE_RATE.get((phase, src)):
+                rate = LANE_RATE[(phase, src)]
             # TWO RATES, ON PURPOSE (login 2026-08-22, asked three times:
             # "why wont update track it" while watching files pour in).
             # `rate` is the 20-min window - stable, lump-proof, what ETA
@@ -516,6 +559,13 @@ def main(loop):
             rspan = (now - recent[0][0]) if len(recent) > 1 else 0
             rate_now = ((landed - recent[0][1]) / rspan) \
                 if rspan >= MIN_SPAN else rate
+            # ⚠ SAME FOR rate_now, and MORE so - its window is only a few
+            # minutes, so an anchor that steps every 30 reads 0.0 nearly always
+            # (measured: 0.0 on both pdf rows while the lanes ran ~11/s each).
+            # A zero here reads as "stalled" and is the single most misleading
+            # cell on the board.
+            if (phase, src) in ANCHORED and LANE_RATE.get((phase, src)):
+                rate_now = LANE_RATE[(phase, src)]
             # FOUR STATES (login 2026-08-21): complete · active · pending ·
             # stalled. ACTIVE means a process IS PULLING on this row - not
             # "an increase happened to land inside this tick" (batch commits
