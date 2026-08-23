@@ -6145,3 +6145,33 @@ the lots. A better copy could settle it; nothing else can.
 - Attest line left BLANK beneath the corporate seal — execution anatomy
   (R36 family: parties are not signatories, and forms are not always
   fully filled).
+
+
+## R38 GRADE (login-prompted, cold; ledger read first) — A−
+
+1. KEEP-THE-NOUN, 2nd OCCURRENCE, SAME SUBSTITUTION. Summary said the
+   grantor was "putting up houses"; the recital says BUILDINGS. Run 34
+   turned "residential units" into "houses" — the same default word,
+   twice. Pattern named: WHEN A DOCUMENT USES A BROAD NOUN, THE DEFAULT
+   SUBSTITUTION IS "HOUSES", AND IT IS ALWAYS A NARROWING. It matters
+   here because an easement across garden apartments and one across
+   single-family lots are different footprints. Confined to the prose —
+   the table kept "buildings" (better than R36, where both carried it).
+2. MINOR: Exhibit A's LEGEND is readable even though its content is not
+   ("○ = LOT NO.", "SCALE 1\"=60'"). That is exactly the metadata a
+   future reader of a BETTER SCAN needs, and it belonged in the claims
+   beside the unread-by-source note. Rule: when an artifact is
+   unreadable, BANK WHATEVER IS READABLE ABOUT HOW TO READ IT.
+
+HELD — first real test of the PRE-BANK PASS (Card #12), and it worked:
+two of its four crops CHANGED THE ENTRY (tax stamp → R38-1's witnessed
+zero and dated RETT lower bound; exhibit → R38-4's tested
+unread-by-source). Principal name verified at 450dpi and notary held at
+moderate — the precise rule that failed at R37. qty_role labelled
+(consideration / stamped tax), parcel ✓ earned with witness named,
+canonical vocabulary, no length drift, era claim BOUNDED rather than
+asserted.
+
+SIGNIFICANCE: this is the first evidence for THE FIRING LAW's
+three-mechanism split — the checklist caught what a word-scan
+structurally cannot (a skipped action), on its first outing.
