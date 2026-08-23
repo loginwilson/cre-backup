@@ -903,3 +903,75 @@ made it visible.
 
 **`--dry` is a promise about WRITES. It can never be a promise about COST.**
 Only `--anyway` overrides now.
+
+
+# ✅ THE CHAIN RAN END TO END — first time (2026-08-23 01:00)
+
+Task 5. `phase_chain.py --dry`, all five phases, one command:
+
+    PHASE     VERDICT              SECONDS
+    monitor   LEVEL                     56
+    sync      LEVEL                    464     acris delta 0 · richmond delta 0
+    nav       DECLINED (tail ok)       182     last 200,000 rows · 0 missing urls
+    acq       DECLINED                   1     busy-guard, correctly
+    org       DECLINED                   1     busy-guard, correctly
+
+    CHAIN CLEAN · 2 of 5 phases PROVEN (monitor, sync) · 3 unproven
+
+⚠ **THE HEADLINE CARRIES ITS DENOMINATOR NOW.** The first version printed a bare
+`CHAIN LEVEL` with three of five phases declined — the exact conflation this
+file's own docstring warns against, committed by the file itself. **A phase that
+could not be checked is not a phase that passed.** Nothing here is a rate
+without a denominator.
+
+⚠ Sync ran **464 s, not the 28 minutes** of the earlier attempt. Same scan, same
+data — the difference was that three other processes had stopped scanning the
+same index. **Contention, not throughput.**
+
+## WHAT RUNNING IT ACTUALLY BOUGHT — four defects nothing else would have found
+
+Running the chain is what surfaced these. None was visible from reading code.
+
+1. **`routine_acquisition`'s busy-guard exempted `--dry`.** `if alive and not
+   (a.dry or a.anyway)`, with its own message advising *"run --dry for a safe
+   read"*. But `--dry` skips the WRITE, and the write was never the cost —
+   steps 1-2 scan 16.5 GB either way. The chain's dry run walked straight past
+   the guard and started exactly the scan the file exists to prevent.
+   **`--dry` is a promise about WRITES, never about COST.**
+
+2. **The grader did not speak the monitor's language** — scored a healthy run as
+   NO VERDICT because the monitor says `quiet`, never `LEVEL`.
+
+3. **`sync_fast.py` inserted rows the lanes can never see.** It wrote only
+   `(id, rd_url, pdf_url)`, leaving `recorded_details`, `pdf` and `keyed_by`
+   NULL — while `nav_append.py:216` states the invariant outright: *"rd_walk
+   sees recorded_details='', image_walk sees pdf='', nav_key sees
+   keyed_by=''"*. **NULL is not ''**, so every document landed by the fast path
+   would have been skipped by every downstream lane FOREVER, while looking
+   perfectly healthy — id present, count right, url audit passing. It would
+   also sit outside `ix_nav_pdf_todo`, so board_truth would report it as
+   **LANDED: a document with no pdf, counted as acquired.**
+   ⚠ Verified not yet triggered: **0 NULLs in the last 400,000 rows** — the
+   delta has been 0 all weekend. It would have bitten on the first busy morning,
+   in the path login most wants to rely on (*"i want live not a batch"*).
+
+4. **The monitor's gate fired the WRONG sync.** `fire_sync` called
+   `routine_synchronization.py`, whose STEP 1 counts 24.1M rows (~27 min) before
+   it looks at the source at all — fired on a ONE-MINUTE cadence. `sync_fast.py`
+   exists precisely for this and its docstring already drew the line:
+
+       routine_synchronization.py   proves levelness   minutes   periodic
+       sync_fast.py                 lands the delta    seconds   every minute
+
+   **Nothing was wired to it.** The design was written and never connected —
+   the same "rule that does not fire" shape as the other three.
+
+## ⚠ THE PATTERN ACROSS ALL OF TONIGHT
+
+Seven defects, one shape: **a check that ran, found nothing, and could not tell
+"nothing" from "clean."** A dead regex. A page-1 edge. A path that did not
+exist. A guard with an exemption. A NULL that is not ''. A verdict function that
+did not know the vocabulary. A design never wired up.
+
+Every one produced a confident, healthy-looking, wrong answer. **Make the
+negative branch loud, or verify against something outside the check.**

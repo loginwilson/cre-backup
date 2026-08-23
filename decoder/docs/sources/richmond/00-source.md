@@ -161,6 +161,25 @@ Weekends are genuinely empty (two measured, weekday density perfect either side)
 `phase_monitor` **walks back up to 5 days** to the last day that actually recorded
 something. Five empty days in a row is reported as a **broken read**, not a quiet week.
 
+### ✅ THE BACKWARD RE-CHECK — did the dead parser lose anything?
+
+Standing rule: *when a new trap is found, re-run it over every earlier entry —
+prior work was judged by rules that predate the lesson.* So the fixed window was
+run wide and checked against what we actually hold:
+
+    window 08/01 .. 08/21 (21 days)     1,824 documents · 108 pages · 194 s
+    density                             1,824 slots · 1,824 docs · missing 0
+    against navigation                  HELD 1,824 · ABSENT 0
+
+**Nothing was lost.** The corpus stayed complete because the BLOCK LEDGER path
+(`rc_feed` / the coded rd walk) was covering Richmond the whole time — the
+date-range search is the *delta* path, and its silence never subtracted anything
+already held. The defect was in what we could SEE, not in what we HAD.
+
+⚠ That is luck of architecture, not a reason to relax: had we been relying on the
+delta path alone — which is exactly the plan for daily freshness — the silence
+would have been a permanent, invisible hole.
+
 **THE LESSON, WHICH IS NOT ABOUT RICHMOND:** every claim in this file has a date on it
 because *a source can change without telling you, and the failure it hands you is a
 plausible number, not an error.* The regex, the page count and the edge each produced a

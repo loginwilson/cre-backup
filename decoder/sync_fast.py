@@ -136,9 +136,27 @@ if not a.apply:
 # WRITES, never the work. The fetching above is already done. ───────────────
 con = sqlite3.connect(CP.NAV_DB, timeout=600)
 con.execute("PRAGMA busy_timeout=300000")
-rows = [(did, *urls(did)) for _, did, _, _ in found]
-con.executemany("INSERT OR IGNORE INTO navigation (id, rd_url, pdf_url)"
-                " VALUES (?,?,?)", rows)
+# ⚠ EVERY WORK COLUMN MUST BE '' , NOT NULL — OR THE LANES NEVER SEE THE ROW.
+# This inserted only (id, rd_url, pdf_url), leaving recorded_details, pdf and
+# keyed_by NULL. nav_append.py:216 states the invariant plainly: "rd_walk sees
+# recorded_details='', image_walk sees pdf='', nav_key sees keyed_by=''".
+# Those lanes select on `= ''`, and NULL is not '' — so a row landed by THIS
+# path would have been skipped by every downstream lane FOREVER, while looking
+# perfectly healthy: the id is present, the count is right, and navigation's
+# url audit passes because the urls really were minted.
+#
+# ⚠ It also sits outside `ix_nav_pdf_todo` (partial, WHERE pdf=''), so
+# board_truth's `landed = total - todo` would have counted it as LANDED - a
+# document with no pdf, reported as acquired.
+#
+# It has not bitten yet only because the delta has been 0 all weekend. This is
+# the path login wants to make primary ("i want live not a batch for the day"),
+# so it would have bitten on the first busy morning.
+rows = [(did, "", urls(did)[0], "", urls(did)[1], "", "") for _, did, _, _ in found]
+con.executemany(
+    "INSERT OR IGNORE INTO navigation"
+    " (id, recorded_details, rd_url, pdf, pdf_url, keyed_by, key)"
+    " VALUES (?,?,?,?,?,?,?)", rows)
 con.commit()
 landed = con.total_changes
 con.close()

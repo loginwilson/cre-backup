@@ -125,9 +125,33 @@ def fire_sync(src):
         say("  lock held - NOT firing")
         return
     try:
-        say("  --> firing sync for %s" % src)
-        subprocess.run([PY, "-u", str(HERE / "routine_synchronization.py"),
-                        "--source", src], cwd=str(HERE), timeout=7200)
+        # ⚠ FIRE THE O(DELTA) PATH, NOT THE FULL ROUTINE. This called
+        # routine_synchronization.py, which PROVES LEVELNESS: its STEP 1 counts
+        # our own rows across 24.1M (measured ~27 minutes) before it looks at
+        # the source at all. Firing that on a one-minute monitor cadence is the
+        # pile-up login asked us to prevent - *"sync must move quick from top of
+        # our count to the edge of theirs and find those ids quick to send to
+        # nav. since it can pile up."*
+        #
+        # sync_fast.py's own docstring already drew the line and nothing was
+        # wired to it:
+        #     routine_synchronization.py   proves levelness   minutes   periodic
+        #     sync_fast.py                 lands the delta    seconds   every minute
+        #
+        # ⚠ THE FULL ROUTINE IS STILL REQUIRED, just not here. A forward-only
+        # walk "inherits every gap it already has and reports clean forever."
+        # It runs on its own slower schedule; this path only ever moves forward.
+        fast = {"acris": ["sync_fast.py", "--apply"],
+                "richmond": ["rc_sync_fast.py", "--apply"]}.get(src)
+        if not fast:
+            # ⚠ NO FAST PATH FOR THIS SOURCE - say so rather than silently
+            # firing the 27-minute routine at monitor cadence.
+            say("  no O(delta) path for %s - NOT firing (the full routine "
+                "would take minutes and the monitor ticks in seconds)" % src)
+            return
+        say("  --> firing %s for %s" % (fast[0], src))
+        subprocess.run([PY, "-u", str(HERE / fast[0])] + fast[1:],
+                       cwd=str(HERE), timeout=1800)
         say("  sync returned for %s" % src)
     except Exception as e:
         say("  sync FAILED for %s: %s" % (src, type(e).__name__))

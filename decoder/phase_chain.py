@@ -155,8 +155,22 @@ for name, v, el, log in results:
     print("%-9s %-16s %8.0f   %s" % (name, v, el, log.name))
 bad = [n for n, v, _, _ in results
        if v.startswith(("NOT LEVEL", "ERROR", "TIMEOUT", "NO VERDICT"))]
-dec = [n for n, v, _, _ in results if v == "DECLINED"]
+# ⚠ startswith, not ==. "DECLINED (tail ok)" is still a decline, and the first
+# version dropped nav from this list because it compared for equality.
+dec = [n for n, v, _, _ in results if v.startswith("DECLINED")]
+proven = [n for n, v, _, _ in results if v == "LEVEL"]
 print("=" * 78)
 if dec:
-    print("DECLINED (not a failure): %s" % ", ".join(dec))
-print("CHAIN LEVEL" if not bad else "CHAIN NOT LEVEL - %s" % ", ".join(bad))
+    print("DECLINED (not a failure, but NOT a pass): %s" % ", ".join(dec))
+# ⚠ DO NOT CALL IT LEVEL WHEN MOST OF IT WAS NEVER CHECKED. The first version
+# printed a bare "CHAIN LEVEL" with three of five phases declined - exactly the
+# conflation this file's own docstring warns against, committed by the file
+# itself. A phase that could not be checked is not a phase that passed, so the
+# headline carries the denominator. Nothing here is a rate without one.
+if bad:
+    print("CHAIN NOT LEVEL - %s" % ", ".join(bad))
+else:
+    print("CHAIN CLEAN · %d of %d phases PROVEN (%s)%s"
+          % (len(proven), len(results), ", ".join(proven) or "none",
+             "" if not dec else
+             " · %d unproven: %s" % (len(dec), ", ".join(dec))))
