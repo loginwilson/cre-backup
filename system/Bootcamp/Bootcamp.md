@@ -5636,3 +5636,60 @@ NARRATIVE layer has, three times (R10 "couldn't write", R33 "heirs",
 R35 "how the majors did business"). Recurrence across 25 runs despite
 two prior corrections is why the fix moved from RULE to TRIGGER —
 a rule that did not fire twice will not fire the third time.
+
+# THE CONTEXT LINE — factual context vs unbacked assumption (login 2026-08-22)
+
+Login: "we want to use fact to inform narrative. However it's a fine
+line between an unbacked assumption and a factual context... how it
+requires packaging via never passing into an unproven assumption, yet
+provided factual context."
+
+## THE CUT: CLASS vs INSTANCE
+
+Imported outside knowledge is SAFE when it lands on a CLASS and
+DANGEROUS when it lands on the INSTANCE. Same act, opposite risk:
+
+  SAFE (class)      "a CEMA glues an old mortgage and new money into one
+                     lien" · "a co-op owner holds shares + a proprietary
+                     lease, not real estate" · "a computor pump computes
+                     gallons x price" — definitional, checkable, adds
+                     nothing about THESE people or THIS deal.
+  FATAL (instance)  "she couldn't write" (R10) · "her three heirs" (R33)
+                     · "how the oil majors did business" (R35) — claims
+                     about these persons / this deal's purpose.
+
+## THE SHARPER CUT: EFFECT IS DERIVABLE, INTENT NEVER IS
+
+"Mortgage tax was $331.54 instead of ~$11,000" = arithmetic on the page.
+"They did it TO avoid the tax" = motive, unsupported — AND UNNEEDED: the
+product wants the number, not the intention. "The escape clause is
+struck, therefore the 15 years is firm" = legal consequence of a visible
+deletion. "Texaco wanted control of the site" = speculation adding
+nothing.
+
+## THE THREE TIERS (and where narrative actually lives)
+
+  1 READ     the document says it
+  2 DERIVED  follows necessarily — arithmetic · calendar (1915 sunset →
+             extinct today) · legal consequence (struck clause → firm
+             term) · definitional decode of instrument classes and terms
+             of art
+  3 INFERRED purpose · relationship · characterization · industry or era
+             practice
+
+TIER 2 CARRIES ESSENTIALLY ALL NARRATIVE VALUE AND IS FULLY SAFE. This
+reframes every narrative failure recorded here: they were not cases
+needing tier 3 and getting it wrong — they were reaches for tier 3 while
+tier 2 already held everything. IF A STORY ONLY LANDS WHEN MOTIVE IS
+SUPPLIED, either the story is wrong or the facts are not finished.
+
+## STRUCTURAL ENFORCEMENT (the VLM rule, not a behavioural one)
+
+Every sentence of a generated summary must be SOURCED to exactly one of:
+  (a) a row or claim,
+  (b) a computation over rows,
+  (c) a lexicon entry (class-level definition).
+A sentence that cannot name its source DOES NOT EMIT. This makes motive
+claims UNREPRESENTABLE rather than discouraged (P-2), and composes with
+the length law's "summary generated FROM the rows" — the rows have no
+slot for intent, so a row-sourced summary cannot contain one.

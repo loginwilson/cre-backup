@@ -36,3 +36,4 @@ run 34 · RC_1032054 · 2026-08-22 · 5/5 pages · 0 new columns · streak 31 ·
 law · THE LENGTH LAW recorded (verdict vs record; claim gate a/b/c; summary generated from rows as completeness check; budget=signal)
 run 35 · RC_1050386 · 2026-08-22 · 6/6 pages · 0 new columns · streak 32 · grade B→B− on redo (crop found MISSED struck termination clause; term is FIRM 15yr) · gas-station lease: rent stated (memo contrast) + sublease-back + blank-price option · reader: fable-5 direct-pdf
 redo 35 · REDO PRACTICE established: bank before/after pairs as the loop's highest-value artifact
+law · THE CONTEXT LINE recorded (class-vs-instance; effect-derivable-intent-never; 3 tiers; 3-source sentence rule)
