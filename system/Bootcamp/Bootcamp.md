@@ -5604,3 +5604,35 @@ Redo protocol: (1) re-render the regions the grade flagged, at 400dpi;
 correct the row grammar to canonical vocabulary; (4) bank BOTH versions
 with the grade between them; (5) if the redo finds a NEW substantive
 miss (as R35-4 did), the original grade was generous — say so.
+
+## LENGTH DRIFT — the law broken by its own author, same hour
+
+Login: "the fix was much less concise and much longer." Correct, and it
+is a defect in its own right. A CORRECTION SHOULD SHORTEN A VERDICT —
+deleting unanchored sentences deletes words. The R35 redo instead GREW,
+because a meta "what changed" section was written into the deliverable.
+That section belongs in the RUN LOG and this file, never in the verdict.
+
+RULES:
+- Verdict length is capped by the same budget as the record it teaches:
+  the summary is 3-6 sentences, the table is the table, claims are a
+  gated list. If a verdict is longer than its predecessor on a similar
+  document, that is DRIFT — check for scaffolding leaking into product.
+- REDO DELIVERABLE = the corrected verdict ALONE. The diff (what
+  changed and why) goes to the log. The pair is banked; only the fixed
+  version is delivered.
+- Measured drift 2026-08-22: run 12 verdict ~450 words → run 35 redo
+  ~1,100 on a comparable 5-6 page instrument. Roughly 2.4x growth
+  across one day with no gain in information. Watch this number.
+
+## SEVERITY CALIBRATION (same conversation)
+
+Stated honestly for the record: R35's table contained NO invented
+values — every number and name was on the page. The failures were
+OMISSION (the struck term qualifier) and UNANCHORED FRAMING (prose).
+That is a different failure mode from fabrication, and the distinction
+should be kept: the extraction layer has not yet fabricated; the
+NARRATIVE layer has, three times (R10 "couldn't write", R33 "heirs",
+R35 "how the majors did business"). Recurrence across 25 runs despite
+two prior corrections is why the fix moved from RULE to TRIGGER —
+a rule that did not fire twice will not fire the third time.
