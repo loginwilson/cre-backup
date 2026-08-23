@@ -1359,3 +1359,67 @@ trade this whole night argues against.
 
 Every correction tonight moved this number the wrong way for the schedule and the
 right way for the truth. **The 35.4 is the one to plan against.**
+
+
+# CLOSE-OUT — 2026-08-23 01:55, everything running
+
+    PHASE     VERDICT              SECONDS
+    monitor   LEVEL                     63
+    sync      LEVEL                    172     (was 464 s - contention, not throughput)
+    nav       DECLINED (tail ok)        78     last 200,000 rows · 0 missing urls
+    acq       DECLINED                   1     busy-guard, correctly
+    org       DECLINED                   1     busy-guard, correctly
+
+    CHAIN CLEAN · 2 of 5 phases PROVEN (monitor, sync) · 3 unproven
+
+    acquisition rd   acris     9,804,311 / 21,615,745   45.4%   48/s    2.6 d
+    acquisition rd   richmond  2,501,589 / 2,501,589    100%    COMPLETE
+    acquisition pdf  acris       908,752 / 21,615,745    4.2%   6.77/s  35.4 d
+    acquisition pdf  richmond    203,917 /  2,501,589    8.2%   7.86/s   3.4 d
+    organization     acris     3,895,113 /  9,804,311   39.7%
+
+Running unattended: 4 rd_walk · 3 image_walk · rc_pdf_pull · rc_pdf_land ·
+rc_feed · org_backfill_arm · phase_monitor --gate · board_truth --loop ·
+routine_update --loop · board_bridge.
+
+## ⚠ THE NIGHT'S ONE LESSON, STATED ONCE
+
+Ten defects, one shape: **a check that ran, found nothing, and could not tell
+"nothing" from "clean."**
+
+    a regex whose markup changed          -> 0 rows a day, forever, looking healthy
+    a window read at page 1 of 10         -> 10% of a day, density said missing 127
+    a log path that did not exist         -> 45,986 pdfs omitted, board 35% low
+    a guard exempting --dry               -> the scan it existed to prevent
+    NULL where the lanes select ''        -> rows invisible to every lane, forever
+    a verdict function lacking vocabulary -> a healthy phase scored NO VERDICT
+    a design written and never wired      -> the gate firing a 27-minute sync
+    a delta row read as a total           -> landed -20,721,031, PUBLISHED
+    a span measured write-to-count        -> every rate inflated 2.26x
+    a backup printing "pushed" on failure -> the commit was local only
+
+Not one raised an error. Every one produced a confident, plausible, wrong
+answer — and the plausible ones (the rate, the backup) are the dangerous class,
+because only the absurd ones announce themselves.
+
+**WHAT ACTUALLY CAUGHT THEM, IN EVERY CASE, WAS A SECOND INDEPENDENT
+MEASUREMENT OF THE SAME QUANTITY** — the density arithmetic against the row
+count, the `pdf` column against the logs, a direct 448-second count against the
+anchor's rate, the remote's sha against the script's own success line.
+
+**Never let a check consult only the thing it is checking.** Our own arithmetic
+can only ever tell us we are consistent with ourselves.
+
+## WHAT NEEDS LOGIN, NOT ME
+
+**1 · The audit indexes** (`migrate_audit_indexes.py`, prepared, NOT run). Three
+phases can never prove their claim because their audits are full table scans
+(~2.2 h) and the fleet never pauses. Partial "todo" indexes fix it — the same
+trick that took board_truth from 28-minutes-unfinished to 131 s. ⚠ CREATE INDEX
+takes the writer seat for the whole build: it needs a deliberate pause.
+
+**2 · rd is at half its ceiling** — ~48-84/s against a measured ~138/s, all
+night, including with the keyer stopped. Settling it needs controlled A/B, which
+means stopping lanes, which contradicts "keep everything running". Flagged, not
+guessed at. ⚠ And the standing warning applies: *a single-lane bump reads linear
+by borrowing the controls' headroom; only the full-fleet reading settles it.*
