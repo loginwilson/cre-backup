@@ -373,7 +373,7 @@ def gather():
     # than the logs (it cannot see the last hour of landings), so it is ignored
     # and the row says so. Never silently prefer an old truth to a live estimate.
     TRUTH_FRESH = 2 * 3600
-    truth, truth_age = {}, None
+    truth, truth_age, tj = {}, None, {}
     tf = HERE / "_board_truth.json"
     if tf.exists():
         try:
@@ -393,6 +393,16 @@ def gather():
         if "richmond" in truth:
             rc_pdf = truth["richmond"]
             ANCHORED.add(("acquisition pdf", "richmond"))
+        # ⚠ PREFER THE ANCHOR'S OWN RATE - it is the only figure here measured
+        # from the TABLE. The lane alternative is `total_docs / total_minutes`,
+        # a LIFETIME average, and this system already paid to learn that
+        # "lifetime averages memorialize the past" (19 hours of history printed
+        # 89.9/s while the fleet ran 122.7/s). Cross-checked by counting the
+        # column twice 448 s apart: acris 9.56/s true vs 11.06/s lifetime.
+        # The anchor's span IS its own interval, so it cannot alias.
+        for k, v in (tj.get("sources") or {}).items():
+            if v.get("rate") is not None:
+                LANE_RATE[("acquisition pdf", k)] = v["rate"]
 
     out[("acquisition rd", "acris")] = (a_rd, need_a)
     out[("acquisition pdf", "acris")] = (a_pdf, need_a)

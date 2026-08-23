@@ -1112,3 +1112,69 @@ means stopping lanes — against the standing instruction to keep everything
 running. And the prior lesson applies: *a single-lane bump reads linear by
 borrowing the controls' headroom; only the full-fleet reading settles it.*
 Flagged for a waking decision rather than guessed at overnight.
+
+
+# ⚠ THE LEDGER HOLDS TWO KINDS OF ROW AND THEY LOOK IDENTICAL (2026-08-23 01:20)
+
+**My own gate test broke the board twenty minutes later, and I only caught it
+because the wrong answer happened to be absurd.**
+
+`board_truth.py` takes its denominator from the sync ledger — the right instinct,
+because it is the one figure that comes from OUTSIDE our own database. It read
+"the latest row for this source". But `synchronization` holds **two different
+kinds of row**, written by different files, with the same columns:
+
+    routine_synchronization  TOTAL row  system_total 21,615,745 · delta 0
+    sync_fast / rc_sync_fast DELTA row  system_total 0 · source_total 0 · delta 5
+
+The gate test fired `sync_fast`, which correctly logged its 5 found ids as a
+DELTA row. Minutes later the anchor read that row as a total:
+
+    01:20:39  acris  total 5 · todo 20,721,036 · LANDED -20,721,031  (-414420620.00%)
+
+and **it published.** `routine_update` only checks the anchor's AGE and its
+`warning` key, so the board showed `acquisition pdf acris -20,721,031 / -95.87%`.
+
+Fixed by requiring `system_total > 0` — only a row that actually carries a total
+qualifies as one.
+
+## ⚠ TWO LESSONS, AND THE SECOND IS THE BIGGER ONE
+
+**1 · "The latest row" is not a query, it is an assumption.** A table whose rows
+mean different things needs the KIND in the WHERE clause. Nothing in the schema
+distinguished them; the difference lived only in which script wrote it.
+
+**2 · THERE WAS NO SANITY GATE, AND THAT IS THE REAL DEFECT.** A wrong
+denominator produced `landed = -20,721,031` and the file wrote it to disk
+without hesitating. `0 <= landed <= total` is not a formatting nicety — it is
+the only thing standing between a bad denominator and a published figure. Added:
+the anchor now REFUSES to publish a source whose numbers are impossible, and
+says which source and why.
+
+⚠ **AND IT IS NOT CLAMPED.** Clamping the negative to 0 would have hidden the
+bug while still reporting a false level. *Never repair a number to make a check
+pass* — the number was not the problem, the denominator was.
+
+⚠ **I GOT LUCKY.** The bad denominator was 5, so the error was enormous and
+obvious. Had the stray row carried `system_total = 21,000,000`, the board would
+have shown a plausible 4.3% and nothing would have caught it. **The gate exists
+for the version of this bug that looks reasonable.**
+
+# THE RATE, MEASURED FROM THE COLUMN INSTEAD OF THE LANE
+
+Counting the pdf column twice, 448 s apart, while the fleet ran:
+
+    acris pdf     +4,285 docs  ->   9.56/s     (lane lifetime average said 11.06)
+    richmond pdf  +5,826 docs  ->  13.00/s     (lane lifetime average said 10.71)
+
+The lane figure is `total_docs / total_minutes` — a LIFETIME average, and this
+system already paid to learn that *"lifetime averages memorialize the past"*
+(19 hours of history printed 89.9/s while the fleet ran 122.7/s). So
+`board_truth` now publishes its OWN rate, differenced between consecutive
+anchors, and the board prefers it.
+
+⚠ **Differencing the anchor is legitimate HERE and was wrong an hour ago**, and
+the distinction is the whole point: aliasing comes from a window SHORTER than the
+update it observes. A 60-second tick sampling a 30-minute step reads 0.0. The
+anchor's own interval IS the update, so it cannot alias. **Same arithmetic,
+opposite verdict, decided by the span.**

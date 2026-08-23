@@ -92,11 +92,29 @@ def ledger_totals():
     table can only ever tell us we are consistent with ourselves."""
     con = sqlite3.connect("file:%s?mode=ro" % SYNC_DB, uri=True, timeout=120)
     try:
+        # ⚠ THE LEDGER HOLDS TWO KINDS OF ROW AND THEY LOOK ALIKE.
+        # routine_synchronization writes a TOTAL row (system_total = our full
+        # count, delta = what the source has beyond it). sync_fast / rc_sync_fast
+        # write a DELTA row: system_total 0, source_total 0, delta = how many ids
+        # it just landed. Both are "the latest row for this source".
+        #
+        # Reading the latest row blindly took `system_total + delta` from a
+        # DELTA row and got **5** for acris - so `landed = total - todo` came out
+        # at **-20,721,031** and the board printed -414420620%. Measured live at
+        # 01:20:39, minutes after the gate test wrote exactly such a row.
+        #
+        # ⚠ A NEGATIVE LANDED IS NOT A NUMBER TO CLAMP. It is the shape of a
+        # wrong denominator, and clamping it to 0 would have hidden the bug
+        # while still reporting a false level. Never repair a number to make a
+        # check pass - fix the source of the number.
+        #
+        # Only a row that actually carries a total qualifies.
         out, when = {}, "-"
         for src in ("acris", "richmond"):
             r = con.execute(
                 "SELECT system_total + delta, run_at FROM synchronization"
-                " WHERE source=? ORDER BY rowid DESC LIMIT 1", (src,)).fetchone()
+                " WHERE source=? AND system_total > 0"
+                " ORDER BY rowid DESC LIMIT 1", (src,)).fetchone()
             if r:
                 out[src], when = r[0] or 0, r[1]
         return out, when
@@ -161,9 +179,15 @@ def counts(con):
     # nothing (CLAUDE.md rule 4: "a counter sitting at zero is a claim to
     # verify, not a result"). A NULL `pdf` means a row was inserted without
     # being minted, so it would appear where sync INSERTS - at the tail.
+    #
+    # ⚠ AND KEEP IT SMALL. At 200,000 rows this ONE check was 217 s of a 220 s
+    # pass - it is the only query here that touches the table rather than an
+    # index. New rows arrive only from sync (~1,550/business day), so 50,000
+    # rows of tail already covers WEEKS of inserts. A safety check that
+    # dominates the run it protects will be the first thing someone deletes.
     mx = q("SELECT max(rowid) FROM navigation").fetchone()[0] or 0
     nulls, t5 = one("nullprobe", "SELECT count(*) FROM navigation "
-                    "WHERE pdf IS NULL AND rowid>?", mx - 200000)
+                    "WHERE pdf IS NULL AND rowid>?", mx - 50000)
     say("  counted in %.0fs total" % (t1 + t2 + t3 + t4 + t5))
     return {
         "acris": (a_total, a_todo),
@@ -174,6 +198,17 @@ def counts(con):
 
 
 def measure():
+    # the previous anchor, so this pass can publish a table-derived rate
+    prev, age_s = None, 0.0
+    if OUT.exists():
+        try:
+            import datetime as _dt
+            prev = json.loads(OUT.read_text(encoding="utf-8"))
+            age_s = (_dt.datetime.now()
+                     - _dt.datetime.fromisoformat(prev["at"])).total_seconds()
+        except Exception:
+            prev = None
+
     con = sqlite3.connect("file:%s?mode=ro" % CP.NAV_DB, uri=True, timeout=600)
     try:
         c = counts(con)
@@ -185,13 +220,53 @@ def measure():
            "depends_on": "navigation LEVEL (rows == ledger)",
            "ledger_run": c.get("ledger_run"),
            "null_probe_first_200k": c["null_probe"], "sources": {}}
+    # ⚠ AN IMPOSSIBLE NUMBER MUST REFUSE TO PUBLISH. There was no sanity gate
+    # here, so a bad denominator sailed straight through to a written anchor:
+    # `acris total 5 · LANDED -20,721,031 (-414420620.00%)`. routine_update
+    # only checks the anchor's AGE and its `warning` key - it would have put a
+    # negative landed on the board.
+    #
+    # `0 <= landed <= total` is not a formatting nicety, it is the only thing
+    # standing between a wrong denominator and a published figure.
     for src in ("acris", "richmond"):
         total, todo = c[src]
-        out["sources"][src] = {"total": total, "todo": todo,
-                               "landed": total - todo}
+        landed = total - todo
+        if total <= 0 or landed < 0 or landed > total:
+            say("⚠ %-9s REFUSING TO PUBLISH: total %s · todo %s · landed %s "
+                "is impossible. The denominator is wrong (a ledger DELTA row "
+                "read as a TOTAL row does this). Reporting nothing for this "
+                "source rather than a number."
+                % (src, f"{total:,}", f"{todo:,}", f"{landed:,}"))
+            out["warning"] = "impossible landed for %s; anchor not usable" % src
+            continue
+        out["sources"][src] = {"total": total, "todo": todo, "landed": landed}
+        # ⚠ THE ANCHOR SHOULD PUBLISH ITS OWN RATE, because it is the only
+        # rate here derived from the TABLE rather than from a lane's printer.
+        #
+        # The board was using each lane's `total_docs / total_minutes` - a
+        # LIFETIME average, which this system already learned to distrust:
+        # "19 hours of history including every dip printed 89.9/s while the
+        # fleet measurably ran 122.7/s." A direct column measurement over 448 s
+        # gave acris 9.56/s against the lifetime figure's 11.06/s.
+        #
+        # Differencing two anchors is legitimate here precisely because the SPAN
+        # is the anchor interval (~30 min), not a 60-second tick sampling a
+        # 30-minute step. Aliasing comes from a window shorter than the update
+        # it observes; this window IS the update.
+        if prev:
+            p = (prev.get("sources") or {}).get(src)
+            span = age_s
+            if p and span and span > 60 and p.get("landed") is not None:
+                d = landed - p["landed"]
+                if d >= 0:                 # a lane restart can never un-land
+                    out["sources"][src]["rate"] = round(d / span, 2)
+                    out["sources"][src]["rate_span_s"] = round(span)
+                    say("          measured %+d docs over %.0fs -> %.2f/s "
+                        "(from the column, not a lane printer)"
+                        % (d, span, d / span))
         say("%-9s total %13s · todo %13s · LANDED %13s  (%.2f%%)"
-            % (src, f"{total:,}", f"{todo:,}", f"{total-todo:,}",
-               100.0 * (total - todo) / total if total else 0.0))
+            % (src, f"{total:,}", f"{todo:,}", f"{landed:,}",
+               100.0 * landed / total))
     if c["null_probe"]:
         # ⚠ Never repair a number to make a check pass - report it.
         say("⚠ %d NULL pdf rows in the first 200k - the landed figures above "

@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-23T04:43:25.504Z
+  modified: 2026-08-23T05:28:33.546Z
 ---
 
 **The Updates board is login's one way of seeing how routines perform**
@@ -42,6 +42,29 @@ never a bespoke dashboard again.
   ledger (validated against sync's own independent scan, exact match), so
   a pass is **131s**. `landed = total − todo` borrows navigation's
   assertion, so the anchor records `depends_on` rather than hiding it.
+- ⚠ **THE SYNC LEDGER HOLDS TWO ROW KINDS THAT LOOK IDENTICAL.**
+  `routine_synchronization` writes a TOTAL row (`system_total` = full
+  count, delta 0); `sync_fast`/`rc_sync_fast` write a DELTA row
+  (`system_total` 0, delta = ids just landed). Nothing in the schema
+  distinguishes them. Reading "the latest row for this source" took
+  `system_total + delta` from a delta row → acris total **5** →
+  `landed = -20,721,031` **published to the board**. Always filter
+  `system_total > 0` when you want a total.
+- ⚠ **SANITY-GATE ANY PUBLISHED FIGURE**: `0 <= landed <= total`. The
+  anchor had no gate, so an impossible number reached the board
+  unchallenged. Refuse to publish and say why — never clamp (clamping
+  hides the bug and still reports a false level). I got lucky the bad
+  denominator was 5; at 21,000,000 it would have shown a plausible 4.3%
+  and nothing would have caught it.
+- ⚠ **NEVER DIFFERENCE AN ANCHORED COUNTER FOR A RATE — unless the window
+  IS the anchor interval.** Anchoring `landed` to a 30-min re-measure made
+  the level right and the derivative nonsense (1.37/s shown vs 11/s real,
+  `rate_now` 0.0 = reads as stalled). Aliasing comes from a window SHORTER
+  than the update it observes. `board_truth` now publishes its own rate
+  differenced between consecutive anchors — same arithmetic, opposite
+  verdict, decided by the span. ⚠ Lane `total_docs/total_minutes` is a
+  LIFETIME average and drifts high; measured from the column, acris pdf
+  was 9.56/s vs the lane's 11.06/s.
 - ⚠ Positional `INSERT INTO update_board VALUES (...)` broke
   `routine_navigation` and `routine_organization` — 10 values into 12
   columns, rejected outright, so **neither phase ever wrote its own row**
