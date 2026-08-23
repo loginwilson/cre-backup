@@ -4329,8 +4329,13 @@ $3,000,000 Consolidated Restated Mortgage Note. Absolute assignment
 with revocable license back; attorney-in-fact; RPL §291-f; conflict →
 mortgage prevails; terminates on satisfaction. Ack Rockland County
 (notary Thomas Scuderi = record-and-return attorney Thomas M. Scuderi,
-Esq., Connell Foley LLP — the notary-is-counsel pattern, third
-sighting). Run 20 banked "expect the formal AL&R as its own
+Esq., Connell Foley LLP — notary and return-to attorney SHARE A NAME.
+⚠ CORRECTED 2026-08-22: this was banked as "the notary-is-counsel
+pattern, THIRD sighting" — a FABRICATED COUNT. No first or second
+sighting was ever recorded; the series began at "third". Same name is
+also NOT same person unless the document says so. What is READ: the
+notary is "Thomas Scuderi" and the return-to is "Thomas M. Scuderi,
+Esq." — an unexplained name coincidence, one instance, no series.) Run 20 banked "expect the formal AL&R as its own
 instrument"; the very next draw IS one — the instrument class closed
 itself.
 
@@ -4478,7 +4483,10 @@ MAP CASE 628 — an 1892 filed map cited by CASE number (new member of
 the map-citation namespace: Map No. vs Map Case). SANTA SIGNED WITH
 HER MARK (X) — second X-mark in the corpus (G-026 applied: the mark is
 the fact, cause unasserted). Notary Isaac H. Beck = return-to (492
-Richmond Avenue) — notary-is-counsel, fourth sighting. Section 3,
+Richmond Avenue) — notary and return-to SHARE A NAME. ⚠ CORRECTED
+2026-08-22: banked as "fourth sighting" of a series whose count was
+fabricated (see R21 correction). One instance; same name is not same
+person on this record.) Section 3,
 block 1101, lot blank on backer.
 
 ## R23-1 — THE SECOND NO-WITNESS WINDOW (Jan-Jul 1968)
@@ -6192,9 +6200,13 @@ structurally cannot (a skipped action), on its first outing.
 # RUN 39 — RC_1029519 · DECLARATION OF COVENANTS (private sewer) · 1984
 
 5 pages, REEL 28 pp.5495-5499. Made and acknowledged 1984-06-25
-(notary WILLIAM W. MIZRAHI, Richmond, comm. exp. 1986-03-30 — who is
-also the return-to attorney, William W. Mizrahi, P.C., 36 Richmond
-Terrace: the notary-is-counsel pattern, 5th sighting), recorded
+(notary WILLIAM W. MIZRAHI, Richmond, comm. exp. 1986-03-30; the
+return-to is "WILLIAM W. MIZRAHI, P.C., 36 Richmond Terrace" — a PERSON
+and a PROFESSIONAL CORPORATION bearing the same name. ⚠ The document
+does NOT state they are the same person, and a P.C. is not a person;
+banked as a name coincidence, not an identity. [Originally banked as
+"the notary-is-counsel pattern, 5th sighting" — BOTH the identity claim
+AND the count were fabricated; corrected 2026-08-22]), recorded
 1984-06-26 (Mario J. Esposito, County Clerk; fee $41.90[?]). RICHARD
 FUSCHINO and CATHERINE FUSCHINO, of 36 Signs Road, declare covenants on
 94 Charleston Avenue (block 7048 lot 9, per the backer's tax-map note),
@@ -6222,8 +6234,12 @@ recorded. This is now a class to detect, not a curiosity.
               mortgages on three express conditions, no stated default
               interest.
   R39 (1984): FLAT rates — $150.00/yr per one-family dwelling,
-              $300.00/yr per two-family — 9.5% annual default interest
-              cumulated monthly, remedies including DISCONNECTION of
+              $300.00/yr per two-family — default charges "based upon
+              A MINIMUM OF annual interest rate of 9 1/2% CUMULATED
+              MONTHLY" (verbatim: 9.5% is a FLOOR, not the rate, and
+              "cumulated" is the document's word — NOT "compounding",
+              which was delivered and is a different mechanism),
+              remedies including DISCONNECTION of
               the sewer connection plus costs, and NO subordination
               clause. Charge is adjustable both ways BY GOVERNMENTAL
               BODIES HAVING JURISDICTION (reduction mandatory,
@@ -6264,7 +6280,9 @@ family gains its seventh member and its second custodian-collision.
 - amount $0.00 while $150 / $300 / 9.5% sit on page 2 — amount-blind
   index holds (R20-3), fifth era.
 - QTY_ROLE labelled: $150.00 and $300.00 are per-dwelling ANNUAL
-  CHARGES (not consideration, not face); the $1.00 IS the consideration.
+  CHARGES (not consideration, not face); the $1.00 IS the consideration;
+  9.5% is a MINIMUM RATE (a floor), cumulated monthly — three roles,
+  three different kinds of number.
 - Closing-package instrument: declarants are acquiring the premises
   "simultaneously herewith" — chain expectation, a DEED to Fuschino at
   or near reel 28 the same day.
