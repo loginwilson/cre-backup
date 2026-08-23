@@ -15,8 +15,33 @@ git add -A
 $staged = git diff --cached --name-only
 if ($staged) {
   git -c user.email="loginwilson88@gmail.com" -c user.name="Login Wilson" commit -q -m "backup refresh $(Get-Date -Format yyyy-MM-dd_HHmm)"
-  git push -q origin main
-  "refreshed + pushed: $(($staged | Measure-Object).Count) file(s) changed"
+  $n = ($staged | Measure-Object).Count
+  # ⚠ THIS SAID "pushed" WHETHER OR NOT IT PUSHED. Caught 2026-08-23 01:38:
+  # `Could not resolve host: github.com` went to stderr, the script carried on
+  # and printed "refreshed + pushed: 3 file(s) changed". The commit was local
+  # only, and the one line anybody reads said it was banked.
+  #
+  # That is the same shape as every other defect found tonight - a failure that
+  # renders as success because nothing checked the negative branch. It matters
+  # more here than anywhere else: this script IS the thing that stops work being
+  # lost, and login's instruction was explicit - "even the back up repo. I dont
+  # want to lose the code."
+  #
+  # One retry, because the observed failure was transient DNS, then TELL THE
+  # TRUTH either way and exit non-zero so a caller can see it.
+  git push -q origin main 2>&1 | Out-Null
+  if ($LASTEXITCODE -ne 0) {
+    Start-Sleep -Seconds 5
+    git push -q origin main 2>&1 | Out-Null
+  }
+  if ($LASTEXITCODE -ne 0) {
+    $behind = (git log origin/main..HEAD --oneline | Measure-Object).Count
+    "COMMITTED LOCALLY BUT **PUSH FAILED**: $n file(s) changed, $behind commit(s) unpushed."
+    "  The work is committed at $(git rev-parse --short HEAD) and is NOT on the remote."
+    "  Re-run this script, or: git -C C:\dev\cre-backup push origin main"
+    exit 1
+  }
+  "refreshed + pushed: $n file(s) changed  (remote $(git rev-parse --short origin/main))"
 } else {
   "refreshed: no changes since last bank"
 }
