@@ -201,3 +201,140 @@ full 1850->today window census, identity held + missed + void = range.
 A zero is only believed after a known-nonzero control; an unreachable
 source is a report, not a crash; never repair a number to make a check
 pass.
+
+
+# THE PIPELINE — sync to extraction, all python (2026-08-22)
+
+Login: *"we need to create the pipeline and see if sync can go live"* and
+*"if its all python, then shouldnt it be able to consolidate?"*
+
+## WHAT CHANGED TODAY
+
+**The last non-python link in the system was removed.** The richmond pdf lane
+ran as a DevTools snippet pasted into an Edge tab by a human, and it died
+under its own download-manager growth. It is now `rc_pdf_pull.py`. See
+`docs/sources/richmond/00-source.md` §3d for the measurement.
+
+Consequence: **every phase from sync to organization is now python**, which
+is what makes a pipeline possible at all. A phase with a person in it cannot
+be scheduled.
+
+| phase | routine | lanes | status |
+|---|---|---|---|
+| 00 sync | `routine_synchronization.py` | `map_delta.py` · `rc_sync.py` | ✅ |
+| 01 nav | `routine_navigation.py` | mints rd_url + pdf_url | ✅ 100% both |
+| 02 acq | **`routine_acquisition.py`** ← NEW | `rd_walk` · `image_walk` · `rc_rd_walk` · `rc_pdf_pull` | ✅ |
+| 03 org | `routine_organization.py` | `nav_key.py` | ✅ |
+| 04 extraction | — | — | not built |
+
+## THE TWO CLOCKS — and why they must not be one loop
+
+    LIVE      ~1,650 docs/day  =  0.019 docs/s   (ACRIS ~1,550 + richmond ~102)
+    BACKFILL  24.1M docs                          10-75 docs/s to finish in days
+
+**These are ~500x apart and they are different machines, different code paths
+and different pacing.** Every argument for consolidation is an argument about
+CONTROL (one command, one status) and never about EXECUTION (one serial lane).
+Serialising them would throw away three measured results: rd and pdf are
+separate server pools (A/B settled 2026-08-21), the phases pipeline rather
+than barrier, and each host has its own tolerance.
+
+## MEASURED RATES — 2026-08-22, and every one against the 0.019/s live inflow
+
+| stage | rate | headroom vs live |
+|---|---|---|
+| acq rd · acris | 75-77/s | 4,000x |
+| acq pdf · richmond (fetch) | 11-19/s | 1,000x |
+| acq pdf · acris | 11-12/s | 660x |
+| **acq pdf · richmond (LANDED IN STORE)** | **~1.8/s** | 95x |
+| extraction (this box) | 0.002 docs/s | ⚠ **50x SHORT** |
+
+⚠ **THE FETCH RATE IS NOT THE PIPELINE RATE.** `rc_pdf_pull` reported 11.6/s
+while the board reported 1.83/s, and THE BOARD WAS RIGHT — it counts files
+that reached the STORE; the puller counts files it pulled into `_incoming`.
+Measured backlog at 23:08: **20,731 files, 7.0 GB, 30 minutes deep.**
+Always end the chain at the store, never at your own stage.
+
+## ⚠ THE REAL CEILING DURING BACKFILL IS THE SQLITE WRITER SEAT
+
+Not any single stage. Eight processes write the same `navigation` table —
+4x rd_walk, 3x image_walk, and the lander — and SQLite has ONE writer.
+Two measurements bound it, both already in the code:
+
+  - `rc_pdf_land.py`: batching commits held the write lock across CPU-heavy
+    conversions and **collapsed acris rd from 99 to 16 docs/s**. It now
+    commits per file deliberately, taking a small share so it starves nobody.
+  - `routine_organization.py`: **a live keyer blocked every walker.** Org
+    runs as a PASS on a QUIET TABLE and its busy-guard refuses otherwise.
+  - `routine_navigation.py`: an unguarded scan dropped rd 17 -> 1.5 docs/s.
+
+**Therefore: three of the four routines require a quiet table, and the lanes
+never stop during backfill. The chain cannot run AS A CHAIN until backfill
+closes.** During backfill the routines are audits you run at a pause. After
+backfill the table is quiet almost all the time and the constraint vanishes.
+
+## LIVE SYNC — the design, and what actually bounds it
+
+⚠ **NEITHER SOURCE HAS A PUSH CHANNEL.** "Live" means tight polling, not a
+subscription. The good news: a ceiling check is ~1 request ("has max CRFN
+moved?"), not the 25-request gallop-and-bisect `routine_4am` uses to CLOSE a
+gap. Polling every few minutes is genuinely cheap.
+
+⚠ **SYNC WRITES A QUEUE, IT NEVER FIRES A TRIGGER.** Sync appends new doc ids;
+nav drains them on its own cadence. A synchronous hand-off is the pattern
+that blocked every walker, and the busy-guard would refuse it anyway.
+
+**What bounds latency is the SOURCE, not us:**
+
+    ACRIS     400/400 imaged same-day    -> minutes-live, end to end
+    RICHMOND  overnight step at ~24h     -> index in minutes, document tomorrow
+              (0/15 imaged at age 0; 11/11 at age 1 day)
+
+Richmond's lag is not a defect and must not be treated as one: record at the
+event as `pending`, recheck the next morning, terminal at 7 days ->
+`imageless`. Only AGE separates pending from structurally imageless — the
+page prints the same words for both.
+
+## THE GATE — what lets a phase say "I am done"
+
+⚠ **`pdf` IS EVIDENCE; `pdf_url` IS NOT.** Measured 2026-08-22 by bounded
+windows: `rd_url`/`pdf_url` are populated for all 24.1M rows (minted at nav
+time, pure functions of the id). `pdf` is populated ONLY where a file landed
+(rowid 5k -> 2001/2001; rowid 2M/12M/20M -> 0/2001). So the acquisition gate
+counts FILES, not our own optimism:
+
+    landed + imageless + unlanded == total        per source, per product
+
+Report a mismatch; NEVER repair a number to make it pass. routine_4am:
+*"a count computed from our own output is not evidence; every failure today
+looked like success by that measure."*
+
+## THE SHAPE THAT BEATS DOC INTAKE
+
+Post-backfill, every stage has 600-4,000x headroom over the 0.019 docs/s
+inflow, so **throughput stops being the design variable and latency becomes
+it.** The steady-state daily cost of the entire system:
+
+    rd            ~1,650 docs @ 77/s     =   21 s
+    acris pdf     ~1,550 docs @ 12.6/s   =    2 min
+    richmond pdf    ~102 docs @ 19/s     =    5 s
+                                            --------
+                                            under 3 minutes/day
+
+**Extraction is the only phase that does not clear inflow.** At 9.7 pages/doc
+(measured, n=4,001; median 4, p90 24, p99 41) and 30-60 s/page, this box does
+~0.002 docs/s against 0.019 needed — **~10x short.** That is the GPU, and it
+is the only hardware the live system requires. Storage is NOT a purchase:
+richmond 261 KB/doc + acris 499 KB/doc projects to **11.7 TB against 19.18 TB
+free**.
+
+## OPEN — do not lose these
+
+1. ⚠ `routine_navigation.py:133` inserts **10 values into the 12-column**
+   `update_board`. That write raises; nav's board row cannot be landing.
+   Deliberate fix needed, not a silent patch.
+2. The acq routine's full audit **timed out mid-scan** against a busy table —
+   it proves its own warning. It needs a quiet window like nav and org.
+3. `_incoming` backlog is unbounded by design. Nothing is lost, but the
+   lander only drains when the lanes quiet.
+4. Extraction has no routine and no gate.

@@ -94,6 +94,15 @@ Daily job is `rc_daily.py` (3-day lookback, dedupes against what is held).
 
 ## 3 · ACQUISITION — BROWSER-ASSISTED, not direct-endpoint
 
+> ⚠⚠ **SUPERSEDED 2026-08-22 — SEE §3d. THE PDF LANE NEEDS NO BROWSER.**
+> Everything below about Richmond's *viewer route* still holds, and the
+> ethics table (#1/#2/#3) stands unchanged and was not bent to get here.
+> What was wrong is the CONCLUSION: the pdf bytes do not come from
+> richmondcountyclerk.com at all. They come from a second host, and an
+> honest HTTP client sending THIS PROJECT'S OWN UA is served instantly.
+> Measured 12.77 pdf/s against the browser's 1.31/s. Read §3d before
+> acting on anything in this section.
+
 ### ACCESS MODE: **browser-native**
 
     SOURCE                Richmond County Clerk
@@ -460,3 +469,121 @@ can differ**, or the test cannot fail.
 | `rc_detail_pull.py` | Target A campaign, priority-ordered (deeds first) |
 | `rc_imagelag.py` | the lag study (`--recent`, `--era`) |
 | `rc_verify.py` | counts + a real parcel read |
+
+
+## 3d · THE PDF LANE IS PURE PYTHON — measured 2026-08-22, supersedes §3
+
+**12.77 pdf/s, 16 workers, zero errors** against the browser loop's **1.31/s**.
+No browser anywhere in the lane. `rc_pdf_pull.py`.
+
+### WHAT §3 GOT WRONG (and it was one inference, not the measurements)
+
+§3's measurements were right: an honest HTTP client DOES get 403 /
+Cloudflare-challenged at `richmondcountyclerk.com`, and real Chrome DOES
+render the document. The error was concluding that therefore **the whole
+lane** is browser-native. Two things were never checked:
+
+**1 · THE PDF BYTES ARE ON A DIFFERENT HOST.** `rc_feed.py` asks Richmond for
+`/ViewVscmsDocument/ViewContent?p_endorsementId=` with redirects DISABLED and
+keeps the `Location` header. That Location points at
+
+    iapps.courts.state.ny.us/vscms_public/viewer?token=v2....
+
+the NY State Unified Court System, and the token is SELF-AUTHENTICATING.
+Richmond only ever issues the 302 — and it issues it to Python, today, in
+production, because that is exactly what the feed's miners already do. **The
+part of Richmond that refuses Python is not the part the pdf comes from.**
+
+**2 · THE USER-AGENT IS LOAD-BEARING ON THE COURTS HOST.** Alternating
+requests, one variable, everything else identical:
+
+| User-Agent | result |
+|---|---|
+| `python-requests/2.34.2` (library default) | **ReadTimeout at 45s, 2/2** |
+| `acris-decoder/1.0 (public land records...)` (ours) | **200 + full pdf, 1.5s, 2/2** |
+
+⚠ It **HANGS** the default rather than refusing it. No status code, no error,
+no challenge page — just silence until the client gives up.
+
+⚠ **§3's line "it does not gate on User-Agent at all" is FALSE for
+iapps.courts.state.ny.us.** It may still hold for richmond itself.
+
+### THIS IS NOT APPROACH #3, AND THE TEST IS THE UA ITSELF
+
+§3's table has rows for real-Chrome-by-hand (#1), real-Chrome-automated (#2),
+and backend-client-dressed-as-Chrome (#3 — do not). It has no row for what
+actually works, so add it:
+
+| # | approach | what it is | here |
+|---|---|---|---|
+| 4 | **honest HTTP client sending THIS PROJECT'S OWN self-identifying UA** — `acris-decoder/1.0 (public land records indexing; contact via repo owner)` | not impersonating anything; it says what it is and who to contact | **works, 12.77/s** |
+
+The distinction is sharp and worth keeping sharp: **#3 lies about who is
+calling; #4 tells the truth about who is calling.** The host serves us
+*because* we identify honestly, not despite it — the anonymous library
+default is what it stalls. No TLS mimicry, no forged fingerprint, no replayed
+`cf_clearance`, no stealth plugin, no cookie theft. Swapping in a Chrome UA
+would move this to #3 AND was already measured to buy nothing.
+
+### WHY THE BROWSER HAD TO GO ANYWAY
+
+It was not merely slower — it was **designed to die**. Every pdf became a
+permanent record in Edge's download manager inside the tab's own process, so
+memory grew monotonically with throughput on a 16 GB box already at 88% used.
+Edge's own verdict, on 2026-08-22, after ~84,000 records:
+
+    RC_1076793.pdf   Couldn't download - Browser crashed
+    RC_1076574.pdf   Couldn't download - Browser crashed
+
+The harder it worked, the sooner it crashed. Clearing the list resets the
+clock; it does not remove the mechanism. `rc_pdf_pull.py` accumulates nothing.
+
+### MEASURED SCALING — and where the ceiling actually is
+
+| workers | rate | errors |
+|---|---|---|
+| browser loop | 1.31/s | crashes |
+| 4 | 3.46/s | 0 |
+| 8 | 7.01/s | 0 |
+| 16 | **12.77/s** | 0 |
+
+⚠ **THE DOWNLOAD SIDE IS NOT SATURATED AT 16. THE FEED IS NOW THE
+BOTTLENECK.** Measured under the 16-worker run: minting ran ~9.5/s against
+~13/s consumption, `ready` drained 476 → 23, and `empty-polls` began
+appearing. Two self-imposed gates now bind, and BOTH were written for the
+browser:
+
+  `rc_feed.py  MAX_IN_FLIGHT = 15`  counts .crdownload/.tmp in _incoming.
+      Written to stop the browser putting 708 files in flight. Python bounds
+      concurrency with its own worker count, so this now caps us at ~15.
+  `rc_feed.py  --ahead 300`  parks the miners whenever ready >= 300, which is
+      why minting reads +128 · +0 · +39 · +0 · +208 — a sawtooth, not a limit.
+
+**Raise both before measuring the courts host's real ceiling** — everything
+above 15 concurrent is currently measuring our own gate, not the source.
+
+### THE METHOD LESSON (this one cost an hour)
+
+The missing UA produced **silence**, and silence was read as a rate limit that
+does not exist. Concurrency was blamed, an 8-worker burst was blamed, cooldowns
+were served, and a connection-pool story was built on top — all around a
+missing header in our own client. Two rules from CLAUDE.md would have caught it
+in one step and neither was applied:
+
+- **one variable at a time** — the burst changed workers, batch size and
+  headers simultaneously
+- **a timeout is not a refusal** — a refusal names itself; a hang names nothing,
+  so it gets whatever cause the reader already believes
+
+⚠ And the first two "python works!" results were `r.raw.read(6)` — **six bytes
+of a header, reported as a working download.** Testing a proxy for the thing
+and reporting it as the thing. Full-body reads are the only proof that counts.
+
+### FILES
+
+    rc_pdf_pull.py   the lane. --workers N --batch N --pace S.
+                     Stops the lane on 401/403/429 - no retry, no rotation.
+    rc_watch.py      stall detector; classifies frozen-tab vs blocked-download
+                     vs dry-feed. Written for the browser era; still useful
+                     for watching the feed side.
+    rc_browser_loop.js  SUPERSEDED. Keep for reference only.

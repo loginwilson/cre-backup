@@ -50,6 +50,11 @@ alone; add it when a document teaches it.**
 | **attorney-in-fact** | An entity or person authorized to sign in another's name; the actual human signer is typically a designated employee of the attorney-in-fact, two delegations from the principal | R37 |
 | **foreign certified copy (re-recording)** | An instrument recorded in one jurisdiction, certified a true copy by that clerk, then recorded again elsewhere; the local document number is not the original's cite | R37 |
 | **agent for co-lenders** | A named lender acting for undisclosed participants; the co-lenders are not in the record at all | R25 |
+| **RP-5217 (NYC)** | State real-property transfer report filed WITH a deed and imaged as a supporting document behind the main instrument. Carries the FULL SALE PRICE, contract date, use category, assessed value and both signers — none of which the deed itself states. It is a separate document with its own cover page, so it falls OUTSIDE the main document's page count | R40 |
+| **party wall** | A wall standing on the boundary and serving both adjoining buildings; metes descriptions run "part of the distance through a party wall," which locates the line INSIDE the wall rather than at its face | R40 |
+| **dominant / servient estate** | An easement's benefited parcel (dominant) and burdened parcel (servient). Each side is recited in its own parcel's description; both recitals must be read to place the burden | R40 |
+| **BEING clause** | A deed's closing recital naming the instrument by which the grantor took title ("being the same premises conveyed to the party of the first part by deed dated X recorded Y in Reel R Page P"). It is the chain-back edge, and it cites in the REEL/PAGE namespace, not CRFN or document id | R40 |
+| **two-thirds shareholder consent recital** | A corporate grantor's recital that holders of at least two-thirds of outstanding voting shares consented at a duly called meeting; it is the authority element for the conveyance, appearing in the deed rather than as a separate instrument | R40 |
 
 ## WHAT THIS TABLE IS NOT
 

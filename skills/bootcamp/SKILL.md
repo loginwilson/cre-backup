@@ -68,14 +68,43 @@ a BOUNDED rowid window (`WHERE rowid BETWEEN r AND r+500`) at a random
 offset — that is a range read, not a scan. **Barred: full-table scans
 (they walk millions of rows) and any write (that seat is the lanes').**
 
-The rd row IS the draw sheet — it carries `doc_type`, `pages`, the
-recorded date, and everything needed to open the pdf. **Derive the path
-from the recorded date** (`By Document\<YYYY>\<MM Mon>\<DD>\<id>.pdf`);
-NEVER `rglob` the By Document tree — a full-tree glob hangs for minutes
-and was killed twice.
+**THE DRAW QUERY** (login 2026-08-22 — "shouldn't it be as easy as
+reading doc id rows with their rd and pdf columns filled"). The rd row
+IS the draw sheet and the `pdf` column IS the path. One query yields
+type, pages, borough AND the file:
 
-To restock the board with unseen types, sample ids from disk directory
-walks and type them with ONE batched indexed lookup (100 ids per query).
+```sql
+SELECT id, recorded_details, pdf
+  FROM navigation
+ WHERE rowid BETWEEN ? AND ?          -- bounded window, indexed
+   AND pdf IS NOT NULL AND pdf != ''
+```
+
+NEVER `rglob` the By Document tree — a full-tree glob hangs for minutes
+and was killed twice. Never derive the path from the date; read it.
+
+⚠ **The landed PDFs are a CONTIGUOUS PREFIX**, rowid 1 .. ~210,000 of
+24,117,334 — acquisition fills in order. A uniform random window over
+the whole table returns ZERO rows and reads as "no pdfs exist." Draw
+inside the landed band. ⚠ `pdf` may hold the sentinel `"imageless"`.
+
+The band is already four-borough and type-rich (QUEENS 548 · BROOKLYN
+474 · MANHATTAN 423 · BRONX 157; MORTGAGE 503 · DEED 169 ·
+ASSIGNMENT-MORTGAGE 155 · AGREEMENT 149 · SATISFACTION 147 · INITIAL
+COOP UCC1 123 · POWER OF ATTORNEY 86 · DEED-OTHER 61), so **type, page
+count and borough are all selectable at draw** — that is the point of
+the method. Runs 1–39 skewed Richmond/old only because the disk-walk
+method sampled whatever was on disk.
+
+⚠ **SEALED FIELDS AT DRAW TIME** (Compose Card #14). Read ONLY
+`type`, `pages`, `borough` and `pdf` from the drawn row. `parties`,
+`amount`, `doc_date`, `parcels` and `remarks` STAY SEALED until §3 —
+rd is the VERIFIER, never the prior (R4-4). Print only the four
+unsealed fields; do not dump the row at draw.
+
+⚠ `pages` is the MAIN-document count (cover + instrument) and is NOT
+the pdf's page count — supporting documents are appended beyond it.
+**Render and read the whole file, never `pages` pages** (R40-1).
 
 ## 2 · READ COLD — every page, no rd fields in view
 

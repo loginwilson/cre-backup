@@ -114,6 +114,15 @@ Before writing the entry, run these three:
           Recall is not a source.
   SLOTS   every row: function canonical? amount carries a role? term
           shape named (date / event / perpetual)? ✓ marks earned?
+  COLUMN  every money value: was its COLUMN HEADING read in the SAME
+          crop? A figure inherits its meaning from the heading above
+          it, and headings are the first thing a 130dpi skim loses.
+          (R40-3: a $0.00 total sitting under **Mortgage** was nearly
+          reported as "NYC collected zero transfer tax on a $2.86M
+          commercial sale" — an anomaly that did not exist.)
+  BLANKS  an unchecked box / empty field records `null`, NEVER `false`.
+          Absence of an assertion is not a negative assertion. (R40-4:
+          RP-5217 item 14 had all ten boxes empty INCLUDING "None".)
 
 
 ## 13 · NO COUNT WITHOUT A GREP
@@ -139,3 +148,50 @@ Draw from `navigation` (rowid window + pdf column), printing ONLY
 type · pages · borough · path. Parties, amount, dates, parcels and
 remarks stay SEALED until reconciliation. rd is verifier, never prior
 (R4-4). The easy query is also the easy way to destroy the cold read.
+
+
+## 15 · THE DELIVERY PASS (run against the DELIVERED text, after #12)
+
+Card #12 guards the RECORD. This guards what login actually reads.
+Three runs were correct in the record and wrong in the delivery — R36
+(caveat), R38 ("houses"), R40 (the buyer's signer). That is the 3+
+threshold: structure, not another rule.
+
+  CAST     each side named, AND the human who signed for it. An entity
+           is not a person. If the document carries no human on a side,
+           SAY SO — "no individual signs for the grantee" is a
+           deliverable; silence is a miss. ⚠ The signer may live in a
+           SUPPORTING document past the main page count (R40: the only
+           human on the buying side was on p7 of a 5-page document).
+
+  DOWNWARD every proper noun / number / noun-of-art in the anybody test
+           appears in the table or Claims. If it is not in section 2 it
+           may not be in section 1.
+
+  UPWARD   every ROW appears in the anybody test. A row the prose drops
+           is a delivery miss.
+
+  CAVEATS  every ⚠ in the record survives into the delivery (Card #11).
+
+Compose order is 2 → 1. Build rows, then write prose FROM the rows —
+never from memory of the pages.
+
+
+## 16 · A CHALLENGE IS A TEST ORDER, NOT A VERDICT
+
+When login challenges a claim, the first move is to TEST it — never to
+concede and never to defend. "Let me measure that" is the whole reply.
+
+R40: challenged on the page-count finding, the answer opened "You're
+right and I should not have built a finding on that" before measuring.
+700 documents later the original finding was correct.
+
+⚠ Watch the shape that caused it: a TRUE premise with an INFERRED
+conclusion attached ("rd says 5, I checked" — true; "the extra 2 are the
+covers" — inferred). Conceding the true half licenses the inferred half.
+**A correct premise does not carry its conclusion.**
+
+If it cannot be tested, split the claim into READ and INFERRED parts and
+leave the disagreement OPEN. An open disagreement is a deliverable;
+manufactured agreement is not. Folding on demand destroys the meaning of
+every ✓, every grade and every confirmation in the file.

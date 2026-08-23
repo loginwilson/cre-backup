@@ -6470,3 +6470,564 @@ every agreement it later reports is contaminated. The convenience of
 the new method is exactly what makes this guard necessary: the same
 query that makes drawing trivial would, printed in full, quietly end
 the discipline that makes reconciliation mean anything.
+
+
+# RUN 40 — 2003012800054001 · DEED, OTHER · QUEENS · 2002/03
+
+7 rendered pages (rd `pages` = 5 — see R40-1). FIRST DRAW BY THE
+CORRECTED METHOD: selected from the landed band on type + borough +
+page count, fields sealed to type/pages/borough/pdf. "Bargain and Sale
+with Covenant against Grantor's Acts" — printed form, day filled in by
+hand — made 5 December 2002, acknowledged the same day in **Nassau**
+County (handwritten venue) before FANNY E. ROSAS, notary, qualified in
+Queens County, 01RO4818780. Recorded 2003-03-13 12:15 by the City Register,
+CRFN 2003000045925; recording fee $58.00, NYC RPTT filing fee $25.00,
+NYS Real Estate Transfer Tax $11,440.00. Presented by FIDELITY NATIONAL
+TITLE INSURANCE COMPANY (title no. 02-3706-6330/31-Q); return to
+KRONISH, LIEB, WEINER & HELLMAN, LLP, attn. ANDREW M. PETTERSEN, ESQ.
+MARIA 2ND REALTY CORP., a New York corporation of 12-14 Utopia Parkway,
+Whitestone (MARIA SHINAS, President), conveys to YORKSHIRE REALTY, LLC,
+a New York limited liability company, c/o Venture, 1156 Madison Avenue
+(RP-5217 certified by JOSEPH SHEENA, member) the fee in Queens block
+3346 lots 18, 19 and 20 — BBL 4033460018/19/20, each ENTIRE LOT,
+"1-3 FAMILY WITH STORE / OFFICE" — described in Schedule A as two
+parcels: Parcel I, 20 × 120 ft (lot 18, 117-12 Queens Boulevard) and
+Parcel II, 80 × 120 ft on the corner of 78th Avenue (lots 19 & 20,
+117-14/16/18 & 20). The deed recites "Ten Dollars and other valuable
+consideration"; the RP-5217 states the full sale price as **$2,860,000**
+(R40-2). Lien Law §13 trust-fund covenant present. Cross Reference Data
+block EMPTY.
+
+
+## R40-1 ⚠ THREE PAGE-COUNT NAMESPACES — AND THE SMALLEST HIDES THE PRICE
+
+The eighth member of the namespace family, and the first with a
+PAGE-RANGE consequence:
+
+| namespace | value | what it counts |
+|---|---|---|
+| cover "Document Page Count" | **3** | the instrument only (deed, ack+backer, Schedule A) |
+| rd `pages` | **5** | 2 cover pages + the 3 instrument pages |
+| rendered pdf | **7** | the above + supporting-doc cover + **RP-5217** |
+
+All three are correct in their own namespace. The danger is arithmetic:
+the deed recites **$10**; the RP-5217 carries **$2,860,000**; and the
+RP-5217 is **page 7**. **An extractor scoped to `pages` stops at 5 and
+never reaches the price.** This is DOCUMENTS-over-application-details in
+a new costume — a cap on how much of the file gets read silently drops
+the highest-value field in it.
+
+**RULE: render and read the WHOLE pdf. `pages` selects documents; it
+never bounds a read.**
+
+## R40-2 THE $10 RECITAL DEFEATED TWICE, WITH THE RATIO AS THE CHECK
+
+Two independent witnesses on two different pages, agreeing to the dollar:
+
+- NYS Real Estate Transfer Tax **$11,440.00** (p1 cover, FEES AND TAXES)
+- Full Sale Price **$2,860,000** (p7, RP-5217 item 12)
+- 11,440 / 2,860,000 = **0.004000 exactly** — both numbers READ, the
+  ratio DERIVED. Neither the rate nor the price was recalled.
+- rd `amount` = $2,860,000.00 — a third agreement, at reconcile.
+
+This strengthens the standing doc-type rule. It is not only "price
+comes from the cover-page stamps" — **the stamp and the RP-5217
+CROSS-CHECK each other, and their ratio is the check.** Where both
+exist, a price claim can be VERIFIED rather than asserted.
+
+## R40-3 ⚠ NEAR-MISS: A FABRICATED ANOMALY, CAUGHT BY THE CROP
+
+**New miss class: COLUMN MIS-ASSIGNMENT — a value read without its
+heading.**
+
+Mid-run I read the cover's tax ladder (County Basic / City Additional /
+Spec Additional / TASF / MTA / NYCTA / **TOTAL $0.00**) as the NYC
+transfer tax, and stated in-turn that I would report "$0.00 NYC with a
+$25 filing fee is a real anomaly worth noting as an open question."
+
+The crop shows that ladder sits under the **Mortgage** heading. It is
+the mortgage-recording-tax breakdown, zero because **there is no
+mortgage in this document**. The cover prints no NYC RPTT amount at
+all — only the $25 filing fee. There was no anomaly.
+
+Distinct from qty_role (a number missing its role): here the number had
+a role, and I attached it to the **wrong parent**. Nothing anchors a
+figure to its column but the column heading, and headings are exactly
+what a 130dpi skim loses.
+
+Two things limited the damage and neither is a defense: it was framed
+as an open question rather than a finding, and the pre-bank pass ran.
+**An open question about a non-existent anomaly is still corpus noise.**
+
+**RULE: a money value is not read until its COLUMN HEADING is read in
+the same crop.** Added to the pre-bank pass (Compose Card #12).
+
+## R40-4 A BLANK CHECKBOX IS NOT A "NO"
+
+RP-5217 item 14 offers ten conditions, A ("Sale Between Relatives or
+Former Relatives") through J ("None"). **All ten are empty**, J
+included.
+
+The tempting reading — "the filer certified this was not a
+related-party sale" — is false. Nothing was certified. Had the filer
+meant it, box J was there and unused. A blank box is the ABSENCE OF AN
+ASSERTION, never a negative assertion.
+
+**RULE: an unchecked box records `null`, never `false`.** The
+distinction is load-bearing at scale: `false` is a fact that will be
+counted, and counting non-assertions manufactures a population.
+
+## R40-5 TWO SURNAMES THAT LOOK ALIKE, HELD APART
+
+Grantor signs **MARIA SHINAS**, President of *Maria 2nd Realty Corp.*
+Grantee's RP-5217 is certified by **JOSEPH SHEENA**, member of
+*Yorkshire Realty, LLC*. Different spellings (SHINAS / SHEENA), read at
+8× on both.
+
+**No relationship is asserted, in either direction.** Item 14A is
+blank, which per R40-4 proves nothing either way. The corporation
+"Maria 2nd Realty" echoing its president's given name is an observation
+confined to the seller side and is not an identity claim.
+
+This is the R33 "her three heirs" trap in better camouflage: the
+inference is *available*, *plausible*, and *unanchored*.
+
+## R40-6 STREET ADDRESSES OUTNUMBER TAX LOTS
+
+| source | addresses carried |
+|---|---|
+| rd `parcels` / tax roll | 117-12, 117-14, 117-16 (three) |
+| deed backer + Schedule A | 117-12, and 117-14 / 16 / 18 / 20 (five) |
+
+Lots 19 & 20 together carry FOUR street numbers. **An address search
+for "117-18" or "117-20 Queens Boulevard" finds nothing in the rd
+row** — the tax roll does not carry those numbers.
+
+Consequence for assemblage work: address-keyed lookup silently misses
+parcels whose deed carries addresses the roll does not. Key on BBL.
+
+## R40-7 THE FORM MISCOUNTS ITS OWN PARCELS — IN A THIRD NAMESPACE
+
+RP-5217 item 4, "the number of **Assessment Roll** parcels transferred
+on the deed": the filer wrote **2** (confirmed at 4×). There are THREE
+roll parcels (lots 18, 19, 20) and TWO *schedule* parcels (Parcel I,
+Parcel II). The filer answered in the schedule's namespace.
+
+Item 17 on the same form lists "Lots 18, 19 and 20" correctly. **The
+form contradicts itself and the correct count is recoverable from the
+other field** — so the resolution is to read both, not to trust either.
+Item 5 likewise says "IRREGULAR" while Schedule A gives two clean
+rectangles (20×120, 80×120).
+
+## R40-8 CHAIN-BACK CITES ARRIVE IN THE REEL/PAGE NAMESPACE
+
+Both BEING clauses name their predecessors:
+
+- Parcel I (lot 18): deed dated **3/29/01**, recorded **3/29/02**,
+  **Reel 5831 Page 408**
+- Parcel II (lots 19 & 20): deed dated **5/12/97**, recorded
+  **5/14/97**, **Reel 4589 Page 1259**
+
+⚠ Parcel I's dates read one year apart to the same month and day.
+Possible transcription error in the schedule, possible year-late
+recording. **NOT repaired, not smoothed — flagged unresolved.**
+
+These are REEL/PAGE cites — neither CRFN nor document id. Any walk that
+follows chains must carry a **reel-page → document-id resolver**; the
+BEING clause is the edge, and it speaks a namespace the id column does
+not.
+
+## R40-9 THE COVER PAGE'S OWN TYPO PROPAGATES
+
+The rd grantee city reads `NEW YOR K`. That split is **on the City
+Register's cover page itself** (p1), faithfully transcribed by the rd.
+The defect is 2003 data entry, not our acquisition. Party/address
+normalization must expect intra-word spaces from the source.
+
+## R40-10 WHY EXTRACTION READS ISOLATED, NOT BBL-ORDERED
+
+Login asked (2026-08-22) whether extraction could run BBL-ordered,
+oldest to newest, to piece chains together — or isolated then reordered.
+
+**Isolated, then reordered.** This document is the argument:
+
+1. A document's BBL SET is not known until it is read. This one carries
+   three, and lot 18's roll address does not cover the deed's addresses
+   (R40-6). Ordering by BBL needs the answer before the work.
+2. Documents attach to MANY parcels. A BBL-ordered queue reads this
+   deed three times or needs dedup — per-document extraction is
+   naturally once-each.
+3. The chain edges are REEL/PAGE (R40-8), not BBL. Resolution needs a
+   cite resolver no matter what order the reads happen in.
+4. BBL order SERIALIZES what the fleet must parallelize.
+5. ⚠ The real reason: **reading in chronological order invites the
+   defect this whole bootcamp exists to kill.** Having just read the
+   1997 deed, a reader carries its facts into the 2002 read as prior —
+   and every rule here says rd, siblings and neighbours are VERIFIERS,
+   never priors (R4-4). Isolation keeps each claim anchored to its own
+   pages. **Order-independence is a correctness property, not just an
+   engineering convenience.**
+
+Reordering is cheap and belongs to resolution: a sort over extracted
+event rows, re-runnable by BBL, party, function or instrument chain
+without re-reading anything. What extraction owes resolution is that
+the CITES are captured as first-class fields — reel/page, CRFN,
+document id, prior-deed dates — so the edges exist to sort on.
+
+## CONFIRMATIONS
+
+- rd: DEED, OTHER ✓ · doc_date 12/5/2002 ✓ (matches indenture AND
+  acknowledgment AND RP-5217 item 11) · CRFN 2003000045925 ✓ ·
+  recorded 3/13/2003 12:15:30 ✓ · borough QUEENS ✓ · parties 2/2 ✓
+  (full list printed before any claim, R7-4) · parcels 3/3 ✓ with BBLs
+  and ENTIRE LOT ✓ · **amount $2,860,000.00 ✓ EARNED** — it agrees with
+  a document-side figure (RP-5217 item 12) and with the RETT ratio, not
+  merely with itself.
+- ⚠ rd `pages` = 5 vs 7 rendered — NOT a disagreement. Two namespaces,
+  both correct (R40-1). Recorded as a finding rather than reconciled
+  away.
+- PRE-BANK PASS run before banking (Card #12): RP-5217 sale block, item
+  4 parcel count, item 14 checkbox column, and the buyer's signature
+  cropped at 3-8×; cover FEES AND TAXES re-cropped at 2.4×; p3 margin
+  mark cropped at 3×. **Three of the six crops changed the entry** —
+  the fees crop killed a false anomaly (R40-3), the checkbox crop
+  produced R40-4, and the margin crop dissolved a misremembered
+  "$11,440 handwritten in the margin" into a plain circled page number
+  "(1)". Second outing of the checklist, second time it changed the
+  result.
+- Corporate authority READ, not inferred: the deed recites consent of
+  holders of "at least two thirds of the outstanding shares" of the
+  grantor, obtained at a meeting duly called — an authority element on
+  the TITLE row, not an event of its own.
+- ASBUILT read from the metes, not from a description of buildings:
+  both parcels run "part of the distance through a party wall" on the
+  lot-18/lot-19 line, which places the boundary INSIDE the wall.
+- NYC HPD Affidavit in Lieu of Registration Statement noted on the
+  cover — an OCCUPANCY-adjacent signal, unelaborated in this document.
+- ⚠ NO mortgage appears here. This is NOT evidence the purchase was
+  unfinanced — a mortgage is its own instrument with its own record.
+  Absence in one document is absence in one document.
+- ⚠ NO relationship asserted between MARIA SHINAS (grantor's president)
+  and JOSEPH SHEENA (grantee's member). Different spellings, read at 8×
+  on both. RP-5217 item 14A is blank, which per R40-4 proves nothing in
+  either direction (R40-5).
+- Streak: 37 (no new columns — TITLE·transfers, VALUE·creates and a
+  carried ENCUMBRANCE all sat in the existing eleven).
+
+
+# THE VERDICT FORMAT — the delivered shape, specified (login 2026-08-22)
+
+Login, after a compact destroyed a format stable for 38 runs: *"what one
+is best? or is there a better middle ground we can record?"*
+
+⚠ **WHY THIS SECTION EXISTS.** The delivered-verdict format lived ONLY as
+examples in chat scrollback. SKILL.md §4a named the three tests but
+showed no shape — no table columns, no why-pair, no closing line. So a
+context compact wiped it and the next three deliveries drifted: an essay
+(tests dissolved, nothing gradeable), then the raw eleven columns (the
+DB schema printed into an artifact that is explicitly NOT the DB
+record), then a near-correct rebuild. **Same failure class as every
+other entry in the ledger — not forgotten, UNADDRESSABLE.** A format
+carried only in examples is one compact from extinction.
+
+## WHAT EACH SECTION IS FOR (login, verbatim, 2026-08-22)
+
+⚠ **READ THIS BEFORE THE SHAPE.** The first version of this spec gave
+each section a FORM but not a JOB — which is precisely how R40 filled
+them with the wrong content. A section whose purpose is unstated gets
+filled with whatever the reader found interesting.
+
+    1 · ANYBODY   "explaining what happened so anybody could understand"
+    2 · DATA      "needed to support more metric driven conclusions"
+    3 · EVENT     "set to ensure we dont miss any of the 11 event
+                  functions or UNCOVER NEW ONES that need to be included"
+    4 · WHY       "simply to explain why this doc matters and each reason
+                  just gets a simple one sentence explaining"
+
+⚠ **THE EVENT TEST IS THE FUNCTION MODEL'S ONLY FALSIFICATION POINT.**
+It had been run as bookkeeping — "did I ask all eleven of every page" —
+which is a checklist against the reader. Its real job is a standing test
+of the MODEL: a document that will not fit the eleven is the signal to
+add a twelfth. That makes it the most consequential section, not the
+most clerical. Close it by naming what is NOT an event and why, and say
+explicitly whether anything strained the eleven.
+
+⚠ **WHY IS ONE SIMPLE SENTENCE PER REASON.** Not an essay, not a
+paragraph. The pair form (technical line + `=` plain line) is kept, but
+BOTH lines are one sentence and the `=` line must be plain enough to
+act on without the first.
+
+## PROPORTIONALITY — a finding's size matches its consequence
+
+R40 promoted a one-line rule ("read the whole file, not `pages` pages")
+into the run's centrepiece with measurement tables and a why-pair,
+because finding it felt like a discovery. Login, twice: *"it telling you
+if its 1,10,30,100 pages really doesnt change anything about the doc...
+aside from that its irrelevant really."*
+
+**The excitement of finding something is not evidence of its
+consequence.** Before promoting a finding, name what DECISION it
+changes. `pages` changes one: read the whole file. The type-locked
+measurement's real home is an ACQUISITION completeness check (a deed
+whose pdf == `pages` is a short land), not an extraction headline.
+
+## THE LOOP — record comes AFTER the grade
+
+    1  deliver the four sections
+    2  login reads all of it
+    3  login prompts the GRADE
+    4  the grade names the miss CLASS
+    5  login prompts FIX AND RECORD — and only now do the files change
+
+⚠ R40 banked at step 1, then again mid-conversation, twice more. **Fixes
+that land before the grade are fixes chosen by the reader who made the
+mistakes, not by the grade that found them.** Hold the four-file close
+until step 5. (Overnight batches self-close; that is the exception, not
+the pattern.)
+
+## THE SHAPE
+
+    # Run <n> — <id> · <Readable Type> · <borough if it matters> · <year>
+
+    **1 · The anybody test**
+    Flowing prose, one or two paragraphs. Real names bold on first use.
+    Terms taught in place ("a *party wall*, which means..."). No lists,
+    no ⚠, NO META-COMMENTARY about the reading process. State a
+    limitation as a fact about the document ("cannot be recovered from
+    this copy"), never as a note about the reader.
+
+    **2 · The data test**
+    | # | subject | function | who → whom | what | quantity | term | anchors |
+    One row per EVENT. Then two labelled streams (see below).
+
+    **3 · The event test**
+    2-4 sentences. All eleven asked of N pages, M events. Then the
+    interesting part: WHAT IS NOT AN EVENT and why (a tax stamp is a
+    COST claim on the row; a schedule is description; a sibling
+    instrument is a chain expectation). "Ledger closed empty."
+
+    **Reconciliation** — one short paragraph. Name what rd agrees on;
+    mark any ✓ that was EARNED and say by which document-side witness.
+
+    ---
+    **WHY-PASS** — see below.
+
+    Closing line: streak · four-file close · grade pending · then any
+    process note (pre-bank pass results, board observations, defects in
+    the run's own conduct).
+
+## AMENDMENT 1 — `what` IS ONE CLAUSE, NOT AN INVENTORY
+
+R38's single row forced a horizontal scrollbar because `what` held a
+60-word enumeration of every right granted. At four events that is
+unreadable. **The table carries the SPINE; enumerations go to Claims.**
+
+## AMENDMENT 2 — CLAIMS SPLITS IN TWO
+
+    Claims: <settled facts, `·` separated, dense>
+    ⚠ Unresolved: <open items, `·` separated>
+
+R39 buried "TRIPLE E #23 — unexplained" mid-run-on; R40 buried a
+contradictory 3/29/01 → 3/29/02 date the same way. **Open questions are
+the highest-value items for the next reader and a single undifferentiated
+stream lets them be smoothed into a list of settled facts.** Two named
+streams make that unrepresentable rather than merely discouraged —
+structure, not another rule (THE FIRING LAW, mechanism 3).
+
+Anything unread-by-source, contradictory, unexplained, or deliberately
+NOT repaired belongs in the second stream. If it is empty, say so.
+
+## AMENDMENT 3 — THE CAST COMES FIRST (login 2026-08-22)
+
+Login on the R40 delivery: *"no indication on name of buyer just
+company? also, the phrasing makes the anybody test hard to know who is
+who honestly."*
+
+**The anybody test opens by naming the cast: each side, and the HUMAN
+who signed for it.** Only then geometry, money, dates, encumbrances.
+
+R40 failed this. The buyer's human — JOSEPH SHEENA, member, signing the
+RP-5217 — was on the page and read at 8×, but appeared only in a
+closing clause about his surname resembling the seller's. A reader
+finished the paragraph knowing two company names and one human, unable
+to say who bought the property.
+
+⚠ **AN ENTITY IS NOT A PERSON, AND EVERY ENTITY THAT ACTS HAS SOMEONE
+WHO SIGNED.** The person/entity distinction (Card #5) has always been
+enforced NEGATIVELY — do not conflate them. This is its positive duty:
+**find the human on each side and name them, or say plainly that the
+document does not carry one.** "Signed by an officer whose name is
+illegible" is a deliverable; silence is not.
+
+This matters beyond readability. The signer is the reach ladder's
+actual rung — an LLC cannot take a call. A verdict that names only
+entities has dropped the field the product is built on.
+
+## THE WHY-PAIR — the format's best invention, now specified
+
+    **WHY <the thing> (R<n>-<x>)** — terminates at <phase>: <ONE sentence
+    of system reasoning>.
+    = <ONE plain sentence a non-specialist can act on>
+
+Four entries is the observed norm (R38: 4, R39: 4). `=` is plain, not
+bold. **"Terminates at" names the PHASE the lesson changes** — price
+pipeline, parcel spine, stakeholder graph, extraction policy,
+verification, parcel keying, resolution, five-state discipline. A why
+that terminates nowhere is a curiosity and should be cut.
+
+⚠ **THE WHY-PASS CARRIES WHAT THE DOCUMENT TEACHES THE SYSTEM.** Lessons
+about the reader's own conduct — a missed crop, a mis-assigned column, a
+skipped checklist — go in the CLOSING LINE. R40 violated this, mixing
+two kinds of knowledge and inflating the pass to six entries. The tell:
+if the lesson would not exist had a different reader read the same
+document, it is not a why.
+
+## WHAT THE VERDICT IS NOT
+
+Not the DB record (THE LENGTH LAW). Do NOT print event_id, mode,
+subject_type, qty_state or the raw eleven columns — the corpus stores
+those; the verdict PROVES the read happened and teaches what changed.
+Roles and states still appear, but in prose inside the quantity cell
+("full sale price $2,860,000, unallocated across the three lots").
+
+
+## AMENDMENT 4 — THE DELIVERY PASS (3 occurrences = missing structure)
+
+Login on the R40 delivery: *"you can't miss something like that. that is
+really bad if the name is on the deed and you just miss it."*
+
+He is right, and the precise version is worse than the loose one.
+
+**What happened.** JOSEPH SHEENA, member, signing for the buyer, was
+read at 8×, cropped, and banked — in the entry, in CONFIRMATIONS, and in
+the delivered Claims line. He was dropped from THE ANYBODY TEST, the one
+section a human reads to learn what happened. The record was right. The
+delivery was wrong.
+
+⚠ **PRECISION THAT MAKES IT WORSE.** His name is NOT on the deed. The
+deed (p3) names only YORKSHIRE REALTY, LLC as grantee — **no human on
+the buyer's side anywhere in the instrument.** He appears only on the
+RP-5217 at **page 7**, the page `pages` = 5 would have excluded. So
+R40-1's truncation trap does not merely hide the price:
+
+  **AN EXTRACTOR SCOPED TO `pages` RETURNS NO REACHABLE HUMAN ON THE
+  BUYING SIDE OF THIS TRANSACTION AT ALL.**
+
+An LLC cannot take a call. For a product built on the reach ladder, that
+is the field the whole thing rests on, and it lives past the page count.
+
+## THE COUNT (grepped, per Card #13 — three occurrences, not a feeling)
+
+| run | record | delivery |
+|---|---|---|
+| R36 | qty_role caveat present | **caveat lost between record and delivery** → Card #11 |
+| R38 | table kept "buildings" | **prose narrowed to "houses"** — confined to the prose |
+| R40 | signer banked in rows + claims | **signer absent from the anybody test** |
+
+Three. The ledger's own rule: **a class at 3+ is a MISSING STRUCTURE, not
+a discipline problem.** And the structure that is missing is plain once
+named — **the PRE-BANK PASS (Card #12) guards the RECORD. Nothing
+guards the DELIVERY.** Every existing mechanism fires before banking;
+the delivered verdict, which is what login actually reads and grades,
+passes through no gate at all.
+
+## THE CURE — DERIVATION BINDING, both directions
+
+This is the cure THE GRADE LEDGER has been pointing at for runs
+("summary GENERATED FROM row values", queued twice for the extraction
+spec and never built). It costs nothing to apply to the verdict now:
+
+  **DOWNWARD**  every proper noun, number, and noun-of-art in the
+                anybody test MUST appear in the table or Claims.
+                Not in section 2 → may not appear in section 1.
+
+  **UPWARD**    every ROW must be represented in the anybody test.
+                A row the prose silently drops is a delivery miss —
+                this is the direction that catches R40.
+
+Downward kills keep-the-noun (the row carries the instrument's noun),
+qty_role (the row carries the role), narrative/motive (there is no row
+for intent, so a motive sentence has no source) and the FABRICATED
+SERIES (no row, no claim). Upward kills the dropped principal. **Five
+recorded defect classes, one check, both directions.**
+
+## AMENDMENT 5 — COMPOSE ORDER IS NOT DELIVERY ORDER
+
+Delivery order stays 1-2-3: the reader wants the story first.
+**Compose order is 2 → 1**: build the rows, then write the prose FROM
+them. Writing the summary first and the table afterwards is what makes
+the two diverge — the prose gets composed from memory of the pages
+rather than from the extracted rows, and memory is exactly where
+narrative, dropped names and softened nouns come from.
+
+
+## R40-1 MEASURED — the page gap is SUPPORTING DOCUMENTS, and it is type-locked
+
+R40-1 was written from one document and an inferred decomposition.
+Login challenged it (*"the pdf is 7 pages cause of the 2 covers... aside
+from that its irrelevant really"*). **Measured across 700 landed ACRIS
+documents, 25 types**, comparing rd `pages` to the actual pdf page count:
+
+**FINDING 1 — rd `pages` INCLUDES the ACRIS cover pages.** The zero-gap
+types prove it: POWER OF ATTORNEY 61/61 exact · INITIAL COOP UCC1 74/74 ·
+RELEASE 14/14 · UCC3 TERMINATION 4/4 · SATISFACTION 42/43 · MORTGAGE
+211/225. If `pages` excluded two covers, every one of these would read
++2. They read +0.
+
+**FINDING 2 — the gap is SUPPORTING DOCUMENTS, and it is TYPE-LOCKED.**
+
+| type | n | share with content past `pages` | gap shape |
+|---|---|---|---|
+| **DEED** | 87 | **100.0%** | +3:79 +4:5 +2:2 +6:1 |
+| **DEED, OTHER** | 39 | **100.0%** | +2:28 +3:8 +5:2 +4:1 |
+| **ASSIGNMENT OF LEASES AND RENTS** | 16 | **100.0%** | +2 … +9 |
+| **AGREEMENT** | 63 | **92.1%** | +3:30 +2:16 +5:9 +6:3 |
+| MORTGAGE | 225 | 6.2% | +0:211 |
+| ASSIGNMENT, MORTGAGE | 47 | 4.3% | +0:45 |
+| POWER OF ATTORNEY | 61 | 0.0% | +0:61 |
+| INITIAL COOP UCC1 | 74 | 0.0% | +0:74 |
+| SATISFACTION OF MORTGAGE | 43 | 0.0% | +0:42, ⚠ −1:1 |
+| RELEASE | 14 | 0.0% | +0:14 |
+
+**126 of 126 deeds across both deed types carry content past `pages`.**
+Not an unlucky document — a property of the type. And the deed is
+precisely where the transaction facts live: price, the buyer's signing
+human, contract date, use category, assessed value. An extractor scoped
+to `pages` misses them on EVERY DEED IN THE CORPUS.
+
+**CONSEQUENCE, now actionable rather than cautionary.** The gap is
+PREDICTABLE from the type. DEED · DEED, OTHER · AL&R · AGREEMENT expect
+supporting documents; POA · UCC1 · SATISFACTION · RELEASE · UCC3
+TERMINATION never carry them. That is a checkable expectation at
+acquisition: a deed whose pdf equals its `pages` is a SHORT LAND, not a
+complete one.
+
+⚠ **ONE COUNTER-CASE, UNEXPLAINED:** a SATISFACTION whose pdf has ONE
+FEWER page than rd claims (−1). Not repaired, not theorised. Flagged.
+
+⚠ Login's practical point is untouched and correct: as a DRAW SELECTOR
+for testing documents of different sizes, `pages` is exactly right and
+the gap does not matter.
+
+## R40-11 ⚠ DEFERENCE WITHOUT VERIFICATION (new class, my own conduct)
+
+Challenged on R40-1, the reply opened *"You're right and I should not
+have built a finding on that"* — **written before measuring anything.**
+The measurement then showed the original decomposition was correct.
+
+**This is the same defect as asserting without checking, wearing the
+opposite costume**, and in this system it is worse. The bootcamp's whole
+value is that reports, confirmations and grades mean something. A reader
+who folds on challenge produces agreement, not verification — and
+agreement is exactly what the ✓ marks are supposed to be protected
+against (Card #7, earned reconciliation).
+
+Note the shape: login stated a TRUE fact (rd says 5, he checked it) and
+attached an inference to it (the extra two are the covers). Conceding
+the true half licensed the inferred half. **A correct premise does not
+carry its conclusion.**
+
+**RULE (Card #16): when a claim of mine is challenged, the ONLY
+first move is to test it.** Not concede, not defend. If it cannot be
+tested, say which part is READ and which was INFERRED and leave the
+disagreement open. "Let me measure that" is the whole response.

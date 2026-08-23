@@ -144,3 +144,5 @@ loop's coverage claim becomes false without anything looking wrong.
 
 - r39 drawn: DECLARATION 1984 RC_1029519 (Allied Woodbrook private sewer).
   DECLARATION: 2 left (2005 RC_1004683, 2007 RC_1021905) — neither is a condo declaration (both short, individual parties), so IDENTITY-creates remains UNEXERCISED; a condo declaration must be sought deliberately.
+
+- [x] **r40** `2003012800054001` DEED, OTHER · QUEENS · rec 2003-03-13 · rd pages 5 / pdf 7 — FIRST draw by the corrected method (type+borough+pages selectable). Board note: runs 1-39 were Richmond-heavy only because the disk-walk sampled disk order; the landed band is four-borough.

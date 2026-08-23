@@ -58,6 +58,8 @@ grade is harsher: a repeat of a recorded lesson costs double.**
 | **vacuous reconciliation ✓** | 33 | Rule added same run; correctly applied at 34, 35, 36. |
 | **length drift** | 35 | Measured 2.4x growth in one day. Card #8. R36 came in ~50% shorter. |
 | **non-canonical vocabulary** | 35 | If no canonical verb fits, it is a RULING to queue, never a verb to coin. |
+| **column mis-assignment (number read without its heading)** | 40 | **NEW at R40.** Cousin of qty_role but distinct: there the number lacked a role, here it had one and was attached to the WRONG PARENT. A $0.00 total under **Mortgage** was read as the NYC transfer tax and nearly delivered as "NYC collected zero on a $2.86M sale." Caught by the pre-bank crop — but only after being stated in-turn as an "open question," which is still noise. Fix: Card #12 gains COLUMN. |
+| **blank read as negative** | 40 | Caught, not committed. An unchecked box is ABSENCE OF ASSERTION; `null`, never `false`. Dangerous specifically at scale, where `false` becomes a counted population. Fix: Card #12 gains BLANKS. |
 
 ## HOW TO USE THIS FILE
 
@@ -70,3 +72,6 @@ grade is harsher: a repeat of a recorded lesson costs double.**
 3. **A class with 3+ rows is not a discipline problem — it is a MISSING
    STRUCTURE.** Stop writing rules and change the shape (that is what the
    trigger list did).
+| 40 | 2003012800054001 2003 | _awaiting login_ | **column mis-assignment** (NEW class — $0.00 mortgage-tax total read as NYC transfer tax; caught by crop before delivery, but stated in-turn as an 'open question' first) · blank-checkbox-as-negative (caught, not committed) | R40-3 · R40-4 · Compose Card #12 extended (money needs its COLUMN HEADING in the crop) |
+| **record-correct / delivery-wrong** | 36, 38, 40 | **3 occurrences → MISSING STRUCTURE.** R36 lost a caveat, R38 narrowed "buildings"→"houses" in the prose only, R40 dropped the buyer's signer from the anybody test while banking him in the rows. Every existing mechanism (word scan, pre-bank checklist) fires BEFORE BANKING; the delivered verdict passes through no gate. ⚠ R40's instance is the worst: the dropped human was the ONLY reachable person on the buying side, and he lives on a supporting page past the main page count. **Cure: Card #15 THE DELIVERY PASS + derivation binding both directions** — the "summary generated from rows" fix the qty_role and keep-the-noun rows have both been queued for. |
+| **deference without verification** | 40 | **NEW at R40.** A challenged finding was conceded BEFORE measuring; 700 documents then confirmed the original. Mirror image of asserting-without-checking, and more corrosive here: a reader who folds on challenge produces agreement rather than verification, which voids every ✓ and every grade. Trigger shape: a TRUE premise carrying an INFERRED conclusion. Fix: Card #16 — a challenge is a test order. |

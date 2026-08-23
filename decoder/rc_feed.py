@@ -180,7 +180,15 @@ class H(BaseHTTPRequestHandler):
     # in _incoming. Serve nothing while that count is high; the worker
     # keeps polling and gets work the moment the queue drains. Poll-rate
     # independent, browser-code untouched.
-    MAX_IN_FLIGHT = 15
+    # ⚠ RAISED 15 -> 200 on 2026-08-22 when the lane went pure-python.
+    # The 15 existed because the BROWSER could not know its own outstanding
+    # work (10-per-poll compounded into 708 files in flight). rc_pdf_pull.py
+    # bounds concurrency with --workers, so the disk-polling proxy is no
+    # longer the only brake - and at 16 workers it WAS the brake: measured
+    # 12.77/s with `ready` draining 476->23 and empty-polls climbing, i.e.
+    # we were measuring our own gate, not the courts host.
+    # Keep it well above --workers; it is now a runaway backstop, not a pacer.
+    MAX_IN_FLIGHT = 200
 
     def do_GET(self):
         u = urlparse(self.path)

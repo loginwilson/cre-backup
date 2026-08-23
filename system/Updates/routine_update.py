@@ -151,7 +151,14 @@ PROC_SIG = {
     ("navigation", "richmond"): ("nav_append.py",),
     ("acquisition rd", "acris"): ("rd_walk.py",),
     ("acquisition pdf", "acris"): ("image_walk.py",),
-    ("acquisition pdf", "richmond"): ("rc_feed.py", "rc_pdf_land.py"),
+    # ⚠ rc_pdf_pull.py ADDED 2026-08-22 - it IS the richmond pdf lane now.
+    # The browser loop was replaced that night and this map was not updated,
+    # so the board could not attribute the work to this row: it reported
+    # 0.20/s while the lane fetched 13/s (login: "still dont think update is
+    # reading the richmond pdf acq right since its sub 1 but we expect over
+    # 10"). A lane map that names dead processes reports a live lane as idle.
+    ("acquisition pdf", "richmond"): ("rc_feed.py", "rc_pdf_land.py",
+                                      "rc_pdf_pull.py"),
     ("organization", "acris"): ("nav_key.py --src acris",),
     ("organization", "richmond"): ("nav_key.py --src rc",),
 }
@@ -298,6 +305,19 @@ def gather():
         rc_pdf += sum(int(x) for x in re.findall(
             r"landed (\d+) pdfs",
             lp.read_text(encoding="utf-8", errors="replace")))
+    # ⚠ rc_pdf_pull.py LANDS STRAIGHT INTO THE STORE and never passes through
+    # _incoming, so rc_pdf_land.log cannot see it. Until this was added the
+    # board reported 0.20/s while the lane ran at 13/s - it was counting only
+    # the lander draining the old backlog. NO DOUBLE COUNT: a file the puller
+    # wrote to the store is never in _incoming, so the lander never counts it.
+    # ⚠ Its log holds ONE run (opened with '>'), and `total N` is cumulative
+    # for that run - take the LAST, never the sum of the lines.
+    pp = W / "rc_pull.log"
+    if pp.exists():
+        tots = re.findall(
+            r"total (\d+)", pp.read_text(encoding="utf-8", errors="replace"))
+        if tots:
+            rc_pdf += int(tots[-1])
     need_a = (sy.get("acris") or (0, 0, 21_612_715))[2] or 21_612_715
     need_r = (sy.get("richmond") or (0, 0, 2_426_588))[2] or 2_426_588
     out[("acquisition rd", "acris")] = (a_rd, need_a)
