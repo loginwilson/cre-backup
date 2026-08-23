@@ -59,6 +59,15 @@ con = sqlite3.connect(f"file:{CP.NAV_DB}", uri=True, timeout=600)
 # killed the rc keyer mid-sweep (2026-08-20) - the follower must outwait
 # any one writer's transaction, never die to it
 con.execute("PRAGMA busy_timeout=300000")
+
+# ⚠ BATCH SIZE IS A LANE-IMPACT DIAL, MEASURED 2026-08-23. The sweep's SELECT
+# size is also the executemany size, so it decides how long the write lock is
+# held per acquisition. At 5,000 the keyer ran happily (~105 rows/s) but rd
+# acris slid 69 -> 41 -> 35/s while it worked. rc_pdf_pull measured its own
+# sweet spot at 250 for the same reason. Smaller = more seat acquisitions but
+# each one brief; larger = fewer but longer, and the walkers wait behind each.
+# Raise it only while watching `acquisition rd` on the board.
+BATCH = 500
 # second connection, read-only - the proven pattern every script here uses
 # (ATTACH chokes on this path's spaces/colon across encodings; two
 # connections do the same job with zero URI ceremony)
@@ -123,7 +132,7 @@ def sweep():
             "SELECT id, recorded_details FROM navigation"
             " WHERE recorded_details != '' AND (keyed_by IS NULL OR keyed_by='')"
             " AND id > ? AND id < ?" + SRC_FILTER + " ORDER BY ID LIMIT ?",
-            (sweep.cursor, a.hi, min(room, 5000))).fetchall()
+            (sweep.cursor, a.hi, min(room, BATCH))).fetchall()
         if not batch:
             # ⚠ WRAP, DO NOT PARK. Reaching the end means "nothing left ahead
             # of me", NOT "nothing left". There are two rd lanes filling two

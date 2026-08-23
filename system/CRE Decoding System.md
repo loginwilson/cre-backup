@@ -603,3 +603,28 @@ never alongside writing lanes") was correct for the OLD keyer and is now
 over-strict. Org route 1 (parcel, inline with rd) already ran during backfill;
 routes 2-3 can now run too. **Org no longer has to wait for backfill to end**,
 which was the single biggest reason the chain could not flow.
+
+
+## BATCH SIZE MEASURED — the keyer is now FREE (2026-08-23 00:07)
+
+The two-phase fix removed the collapse; the BATCH dial removed the rest.
+Same code, same lanes, one variable:
+
+| BATCH | rd acris during the keying pass | cost vs ~69-73/s baseline |
+|---|---|---|
+| 5,000 | 35 - 41/s | **~45%** |
+| **500** | **68.7 - 74.5/s** | **none measurable** |
+
+⚠ AND A CORRECTION MADE IN FLIGHT. When rd first slid to 35/s I attributed it
+to the keyer and said so. Then rd stayed at 35/s for a full minute AFTER the
+keyer was stopped — so the attribution was unproven at the moment it was made.
+Sampling with the keyer off showed a genuine recovery (35 -> 41 -> 48.7 ->
+72.8), which is what actually established the keyer as the cause. **A number
+moving while X runs is not evidence that X moved it; the control is the run
+without X.** Same defect class as every other one today, caught this time
+before it was banked.
+
+**CONSEQUENCE: `routine_organization.py`'s busy-guard is now obsolete.** It
+refuses to run while lanes write, which was right for the old keyer and is now
+strictly worse than running. Org can key continuously during backfill at
+BATCH=500. That removes the last reason the chain could not flow.
