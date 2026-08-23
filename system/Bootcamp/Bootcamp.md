@@ -6020,3 +6020,49 @@ DIAGNOSIS: the Compose Card's trigger scan is PHRASE-shaped, so it
 cannot catch (a) unanchored claims that use ordinary words, or (b)
 missed workflow steps. Both need a different mechanism — a PRE-BANK
 CHECKLIST, not a word scan. Added as Card #12.
+
+# THE FIRING LAW — rules fail when they would fire, not when written
+
+Measured across runs 10-37 (2026-08-22). **The dominant failure mode of
+this system is not missing rules. It is rules that exist and do not
+fire.** Three measured instances in one day:
+
+- The motive/narrative ban existed from R10 and failed at R33, R34, R35.
+- The TRIGGER-WORD LIST (minted at R35 to fix it) worked at R36 and was
+  BLIND at R37, where the same defect used ordinary words — "Freddie Mac
+  owns millions of home loans" contains no trigger word.
+- The name-integrity rule was written at midday (after the R21 backward
+  re-check found "Leader" for LEIDER) and DID NOT FIRE hours later the
+  same day at R37, because a SKIPPED ACTION has no phrase to match.
+
+## THE LAW: ENFORCEMENT SHAPE MUST MATCH DEFECT SHAPE
+
+Three distinct mechanisms, and choosing the wrong one guarantees
+recurrence no matter how well the rule is written:
+
+  1 WORD SCAN        — for defects with a linguistic signature
+                       (motive, relationship, era, scale phrasing).
+                       Compose Card #4.
+  2 PRE-BANK CHECKLIST — for WORKFLOW steps. A skipped action is
+                       invisible to any scan of the text produced.
+                       Compose Card #12 (names · sources · slots).
+  3 STRUCTURE        — when a class reaches 3+ occurrences, stop
+                       writing rules and make the bad state
+                       UNREPRESENTABLE (the amount slot REQUIRES a
+                       qty_role; the summary is GENERATED from rows so
+                       it has no slot for intent). P-2 family.
+
+## WHY THIS MATTERS BEYOND THE BOOTCAMP
+
+The VLM will inherit whichever mechanism is chosen. A prompt full of
+prohibitions is mechanism 1 and will fail the same way at scale — on
+every defect whose words look ordinary. Mechanism 3 is the only one that
+survives a model swap, because it lives in the SCHEMA rather than in
+anyone's attention. Where a check cannot be structural, it must be a
+CHECKLIST STEP WITH AN ARTIFACT (a crop taken, an entry cited) — an
+action that either happened or did not, and can be audited afterwards.
+
+**Corollary for this file:** a lesson recorded only in an assistant's
+memory is not recorded. Memory is context-scoped, model-specific, and
+outside the backup. THIS FILE is what informs whoever reads the corpus
+next. Every durable law lands here first; memory holds pointers only.
