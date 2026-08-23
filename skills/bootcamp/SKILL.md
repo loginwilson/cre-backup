@@ -6,10 +6,19 @@ description: Run extraction-bootcamp iterations per the P-5 loop — draw a rand
 # THE BOOTCAMP LOOP — iterations of P-5
 
 **The law is `D:\CRE Decoding System\Bootcamp\Bootcamp.md`. Read it in full
-before the first iteration of a session** (three Read calls, ~2,900 lines) —
-"a rule not loaded at the right moment does not exist." The three tests, the
-four process laws (P-1..P-4), the loop itself (P-5), and every G/R/M entry
-are the constitution; this skill is only the trigger.
+before the first iteration of a session** (~5,400 lines) — "a rule not
+loaded at the right moment does not exist." The three tests, the process
+laws (P-1..P-5), and every G/R/M entry are the constitution; this skill is
+only the trigger.
+
+⚠ **AND READ `D:\CRE Decoding System\Bootcamp\Compose Card.md` AGAIN AT
+EVERY COMPOSE STEP — every run, not once per session.** It is short by
+design because the authority file is too long to consult per sentence.
+The measured failure mode of this whole system is rules that exist but
+are UNADDRESSABLE when they would fire: the length law was broken by its
+own author within the hour, and the motive-claim ban failed on its third
+run after two recorded corrections. The card is the fix; loading it is
+not optional.
 
 ## Modes (from the argument)
 
@@ -108,7 +117,17 @@ rd can settle a faint reading but never upgrades unread → read (mark
 "accepted, rd sole witness"). If something cannot be done, say so as
 the result.
 
-## 4 · VERDICTS — grade the three tests honestly
+## 4 · VERDICTS — **RE-READ THE COMPOSE CARD FIRST**
+
+`D:\CRE Decoding System\Bootcamp\Compose Card.md` — nine checks, read
+before writing the first sentence of any verdict. Tier every sentence
+(READ / DERIVED / INFERRED); apply the class-vs-instance test to any
+imported knowledge; state EFFECT, never intent; scan for trigger words;
+keep entities distinct from officers; keep the instrument's own nouns;
+earn every ✓; respect the length budget; say plainly what could not be
+done.
+
+## 4a · VERDICTS — the three tests honestly
 
 Deliver to the user in this exact shape: **1 · The anybody test** (the
 summary — real names exact, real terms taught in place, no felt
