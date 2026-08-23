@@ -92,10 +92,21 @@ if not a.dry:
     st = ("COMPLETE" if keyed == total2 else
           "ACTIVE" if keyed > rows.get("unkeyed", 0) else "PENDING")
     win = time.strftime("%B %d, %Y %I:%M").replace(" 0", " ")
-    b.execute("INSERT OR REPLACE INTO update_board VALUES"
-              " (?,?,?,?,?,?,?,?,?,?)",
-              ("organization", "legal instruments", 0.0, 0, 0.0,
-               keyed, total2, round(100 * keyed / total2, 2), st, win))
+    # ⚠ SAME DEFECT AS routine_navigation.py - TEN values into TWELVE columns,
+    # so sqlite rejected it and the organization row never reached the board.
+    # Two phases were invisible for the same reason, which is what makes this a
+    # SHAPE and not a typo: positional INSERT breaks every writer the moment the
+    # table grows a column, and update_board has already grown three.
+    b.execute(
+        "INSERT OR REPLACE INTO update_board"
+        " (phase, source, rate_now, rate, increase, pct_increase,"
+        "  landed, needed, pct_of_total, eta, status, as_of)"
+        " VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+        ("organization", "legal instruments",
+         0.0, 0.0, 0, 0.0,
+         keyed, total2,
+         round(100 * keyed / total2, 2) if total2 else 0.0,
+         "-", st, win))
     b.commit()
     b.close()
 print("ORGANIZATION " + ("LEVEL" if keyed == total2 else

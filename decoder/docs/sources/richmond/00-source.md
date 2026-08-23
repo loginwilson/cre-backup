@@ -73,7 +73,7 @@ that is all there is. Their absence is a property of the source, not a gap in th
 
 | measured | value |
 |---|---|
-| 1 day | 102 documents, 1 request, no paging |
+| 1 day | 102 documents, 1 request, ~~no paging~~ ⚠ **IT PAGES NOW — see §2b** |
 | 30 days | 2,982 documents · 2.03 MB · 2.8 s |
 | 60 / 90 / 365 days | **0 documents, 8 KB** |
 | reach back | 1998, 2019, 2024 all return normally |
@@ -89,6 +89,83 @@ proves ITSELF complete by `max - min + 1 == count`, independent of both access p
 (2005 -> instrument 7,795; 2006 -> 98,786). Never extend the proof corpus-wide.
 
 Daily job is `rc_daily.py` (3-day lookback, dedupes against what is held).
+
+---
+
+## 2b · THE SOURCE CHANGED UNDER US — two defects, both silent  (2026-08-23)
+
+Found while wiring the monitor's Richmond half. **Both would have reported success
+forever.** Neither was detected by any check that existed; the *density proof* caught
+both, and it is the only thing that did.
+
+### DEFECT 1 — the row regex died. Every window parsed 0 rows.
+
+Every date-range window, 2019 and 2026 alike, returned **0 rows** while the server sent
+a real **30 KB results page**. Not the over-cap trap above (that page is ~8 KB); the
+results were there and the pattern no longer matched them.
+
+    OLD  <button name="ViewDetailsButton" value="2825706">1016821</button>
+    NEW  <a href="/Search/ViewDocumentInfo/2825706"><span>1016821</span>
+
+Same two values — `internal_id` and `instrument` — moved from a button into an anchor
+plus a span. The results table also went 7 columns → 5 (BOOK, PAGE, RECORDED, TYPE,
+DOCUMENT No.).
+
+⚠ **THIS IS THE WORST FAILURE SHAPE IN THE SYSTEM.** `rc_daily`/`rc_sync` would have
+reported *"0 new documents"* every day, forever, and looked healthy doing it — the
+disease `LIVE_SYNC.md` warns about for `recorded_datetime`, arriving by another route.
+**A parser that can only return "nothing" cannot tell you it is broken.** Both patterns
+are kept in `_ROW`: the old costs nothing and the corpus was built with it.
+
+### DEFECT 2 — the window paginates at 17 rows. We were reading 10% of a day.
+
+With the regex fixed, **every** window returned exactly 17 rows — the tell. The footer
+says `Page 1 of 10`. Pagination is a plain **GET**, easier than the POST that opens the
+window, and ⚠ **its dates are ISO, not the form's MM/DD/YYYY**:
+
+    /Search/DateRangeSearch?StartSearchDate=2019-06-03&EndSearchDate=2019-06-03
+                           &SelectedDocumentIdentifier=0&pageNumber=N
+
+`Window.rows()` now follows every page, and **raises rather than returning a short list**
+if a page fails — a partial window that looks whole is how this defect got in.
+
+### THE DENSITY PROOF IS WHAT CAUGHT BOTH
+
+| 2019-06-03 | slots | docs | missing |
+|---|---|---|---|
+| page 1 only | 144 | 17 | **127** |
+| all 10 pages | 159 | 159 | **0** |
+
+`max - min + 1 == count`. It needs nothing from the server and cannot be satisfied by a
+confident wrong answer. **Re-verified across a full week — every weekday missing 0:**
+
+    Mon 08/17  102 docs  max 1,016,820      (⚠ 102 - the ORIGINAL documented figure;
+    Tue 08/18  131 docs  max 1,016,951       the 2026-08-18 measurement was RIGHT,
+    Wed 08/19  184 docs  max 1,017,135       the site changed after it)
+    Thu 08/20  112 docs  max 1,017,247
+    Fri 08/21  103 docs  max 1,017,350
+    Sat/Sun    0 docs   — both weekends, genuinely closed
+
+### ⚠ THE EDGE IS NOT ON PAGE 1
+
+08/21: page 1 topped out at **1,017,264**; the day's true max was **1,017,350**. Rows
+ascend, so late filings land on late pages. A monitor watching page 1 would stare at a
+**frozen** number all day and call every tick "quiet" while ~86 documents landed behind
+it. `Window.edge()` reads the **last** page: **2 requests, ~5 s** vs 10 requests /
+19–28 s, verified 3/3 against the full-window max. That is what makes a one-minute
+cadence affordable.
+
+### ⚠ AN EMPTY DAY IS NOT AN EDGE
+
+Weekends are genuinely empty (two measured, weekday density perfect either side), so
+`phase_monitor` **walks back up to 5 days** to the last day that actually recorded
+something. Five empty days in a row is reported as a **broken read**, not a quiet week.
+
+**THE LESSON, WHICH IS NOT ABOUT RICHMOND:** every claim in this file has a date on it
+because *a source can change without telling you, and the failure it hands you is a
+plausible number, not an error.* The regex, the page count and the edge each produced a
+clean, healthy-looking answer that was wrong. Only the arithmetic proof — the one check
+that does not consult the source about its own completeness — disagreed.
 
 ---
 

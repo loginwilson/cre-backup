@@ -52,7 +52,40 @@ import rc_route as RR
 OUT = pathlib.Path("D:/acris/01-specification/index/rc_delta.jsonl")
 WM = HERE / "_rc_sync_watermark.json"
 MAX_SPAN = 30                       # measured cap is between 30 and 60 days
-_ROW = re.compile(r'name="ViewDetailsButton" value="(\d+)"[^>]*>\s*(\d{4,9})\s*</button>')
+# ⚠ THE SOURCE'S MARKUP CHANGED AND THIS SILENTLY RETURNED ZERO ROWS.
+# Found 2026-08-23: every date-range window - 2019 and 2026 alike - parsed 0
+# rows while the server returned a REAL 30 KB results page. Not the documented
+# over-cap trap (that returns ~8 KB); the results were there and the regex no
+# longer matched them.
+#
+#   OLD  <button name="ViewDetailsButton" value="2825706">1016821</button>
+#   NEW  <a href="/Search/ViewDocumentInfo/2825706"><span>1016821</span>
+#
+# Same two values - internal_id and instrument - moved from a button into an
+# anchor plus a span. The results table also went from 7 columns to 5 (BOOK,
+# PAGE, RECORDED, TYPE, DOCUMENT No.).
+#
+# ⚠ THIS IS THE WORST FAILURE SHAPE IN THE SYSTEM: rc_daily/rc_sync would
+# report "0 new documents" every single day, forever, and look perfectly
+# healthy doing it - the same disease LIVE_SYNC.md warns about for
+# recorded_datetime, arriving by a different route. A parser that can only
+# return "nothing" cannot tell you it is broken.
+#
+# BOTH patterns are kept: the old one costs nothing and the corpus was built
+# with it, so a page served in either shape still parses.
+_ROW = re.compile(
+    r'name="ViewDetailsButton" value="(\d+)"[^>]*>\s*(\d{4,9})\s*</button>'
+    r'|href="/Search/ViewDocumentInfo/(\d+)"[^>]*>\s*<span[^>]*>\s*(\d{4,9})\s*</span>')
+
+# "&nbsp;&nbsp;Page <span class="fw-bold">1</span> of 10&nbsp;&nbsp;"
+_PAGES = re.compile(r'Page\s*<span[^>]*>\s*(\d+)\s*</span>\s*of\s*(\d+)')
+
+
+def _iso(mdy):
+    """MM/DD/YYYY -> YYYY-MM-DD. ⚠ The POST form takes the first, the
+    pagination GET takes the second. They are not interchangeable."""
+    m, d, y = mdy.split("/")
+    return "%s-%s-%s" % (y, m, d)
 
 
 class Window:
@@ -75,9 +108,78 @@ class Window:
         d.update(extra)
         return d
 
+    @staticmethod
+    def _parse(html):
+        # _ROW carries two alternations (old button markup, new anchor markup);
+        # whichever matched, the pair is (internal_id, instrument).
+        out = []
+        for m in _ROW.finditer(html):
+            iid = m.group(1) or m.group(3)
+            ins = m.group(2) or m.group(4)
+            if iid and ins:
+                out.append({"internal_id": iid, "instrument": ins})
+        return out
+
     def rows(self):
-        return [{"internal_id": m.group(1), "instrument": m.group(2)}
-                for m in _ROW.finditer(self.html)]
+        """⚠ THE WINDOW IS PAGINATED NOW — 17 ROWS A PAGE. Found 2026-08-23.
+
+        The source doc records "1 day = 102 documents, 1 request, NO PAGING",
+        and that is no longer true. Every window returned exactly 17 rows, and
+        `density()` is what exposed it: a 2019 day reported slots=144, docs=17,
+        missing=127. The page footer says "Page 1 of 10".
+
+        Returning page 1 and calling it the day is the same silent-zero family
+        as the dead regex above — a confident, wrong, complete-looking answer.
+        So this follows every page before returning.
+
+        Pagination is a plain GET (easier than the POST that opened the
+        window), and ⚠ its dates are ISO, not the form's MM/DD/YYYY."""
+        out = self._parse(self.html)
+        m = _PAGES.search(self.html)
+        if not m:
+            return out
+        total = int(m.group(2))
+        for p in range(2, total + 1):
+            try:
+                h = self.s.get(
+                    "/Search/DateRangeSearch"
+                    f"?StartSearchDate={_iso(self.a)}"
+                    f"&EndSearchDate={_iso(self.b)}"
+                    f"&SelectedDocumentIdentifier=0&pageNumber={p}")
+            except Exception:
+                # ⚠ Partial is not whole. Say so rather than returning a
+                # short list that looks complete.
+                raise RuntimeError(
+                    f"page {p} of {total} failed for {self.a}..{self.b} - "
+                    f"refusing to return a partial window")
+            out.extend(self._parse(h))
+        return out
+
+    def page(self, p):
+        """One page of an already-open window. Plain GET, ISO dates."""
+        return self._parse(self.s.get(
+            "/Search/DateRangeSearch"
+            f"?StartSearchDate={_iso(self.a)}&EndSearchDate={_iso(self.b)}"
+            f"&SelectedDocumentIdentifier=0&pageNumber={p}"))
+
+    def pages(self):
+        m = _PAGES.search(self.html)
+        return int(m.group(2)) if m else 1
+
+    def edge(self):
+        """Highest instrument number in the window, WITHOUT reading every page.
+
+        ⚠ THE EDGE IS NOT ON PAGE 1. Measured 2026-08-23 on 08/21: page 1
+        topped out at 1,017,264 while the day's true max was 1,017,350. A
+        monitor reading page 1 would watch a FROZEN number all day and call
+        every tick "quiet" while ~86 documents landed behind it.
+
+        Rows ascend, so the last page carries the max — 2 requests instead of
+        10, which is what lets this run on a one-minute cadence."""
+        n = self.pages()
+        rows = self.page(n) if n > 1 else self._parse(self.html)
+        nums = [int(r["instrument"]) for r in rows if r["instrument"].isdigit()]
+        return (max(nums) if nums else None), n
 
     def detail(self, internal_id):
         _, h = RR.post(self.s, "/Search/DateRangeSearch",

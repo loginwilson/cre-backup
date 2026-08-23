@@ -188,28 +188,55 @@ def probe_richmond():
     Cloudflare-protected route - that is /ViewVscmsDocument/ViewContent, the
     DOCUMENT route. rc_feed and rc_sync hit the search endpoints from python
     continuously. Two routes on one host, different protection."""
-    import rc_source as RS
-    today = time.strftime("%m/%d/%Y")
-    try:
-        w = RS.Window(today, today)
-        rows = getattr(w, "rows", None)
-        n = len(rows) if rows is not None else None
-    except Exception as e:
-        say("richmond window FAILED (%s) - reporting nothing rather than a "
-            "zero we did not measure" % type(e).__name__)
+    # ⚠ TWO BUGS FIXED 2026-08-23. Window lives in rc_sync, NOT rc_source, and
+    # `rows` is a METHOD, not an attribute - the first version did
+    # getattr(w,"rows") and len()'d a bound method. It reported the failure
+    # honestly rather than a zero, which is the only reason it was harmless.
+    import datetime as _dt
+    import rc_sync as RCS
+
+    # ⚠ TRACK THE EDGE, NOT THE COUNT. `instrument` is richmond's dense
+    # monotonic counter (its CRFN). A max is strictly better than a row count:
+    # two windows can hold the same NUMBER of documents while holding
+    # different ones, and a count would call that quiet.
+    #
+    # ⚠ AND TAKE THE EDGE OFF THE LAST PAGE - see Window.edge(). The window
+    # paginates at 17 rows and page 1's max is NOT the day's max.
+    #
+    # ⚠ WEEKENDS ARE GENUINELY EMPTY - measured 08/15-16 and 08/22-23, both
+    # zero, with weekday density perfect on either side. So an empty today is
+    # not a fault, but it is also not an EDGE. Walk back to the last day that
+    # actually recorded something; otherwise every weekend the monitor would
+    # either cry failure or forget where the source had got to.
+    day, tried, edge, npages = _dt.date.today(), [], None, 0
+    for _ in range(5):
+        d = day.strftime("%m/%d/%Y")
+        try:
+            edge, npages = RCS.Window(d, d).edge()
+        except Exception as e:
+            say("richmond %s window FAILED (%s) - reporting NOTHING, not a "
+                "zero we did not measure" % (d, type(e).__name__))
+            return None
+        if edge:
+            break
+        tried.append(day.strftime("%a"))
+        day -= _dt.timedelta(days=1)
+    if not edge:
+        say("richmond no rows in the last 5 days (%s) - that is NOT a quiet "
+            "week, it is a broken read. Reporting NOTHING." % ",".join(tried))
         return None
-    if n is None:
-        say("richmond window returned no row list - NOT reporting a count")
-        return None
+
     st = seen()
-    prev = st.get("richmond_today")
-    st["richmond_today"] = n
-    st["richmond_date"] = today
+    prev = st.get("richmond_edge")
+    st["richmond_edge"] = edge
+    st["richmond_date"] = day.strftime("%m/%d/%Y")
     remember(st)
-    new = prev is not None and n > prev
-    say("richmond today %s · %s docs%s"
-        % (today, n, "" if prev is None else " (was %s)%s"
-           % (prev, "  NEW" if new else "")))
+    new = prev is not None and edge > prev
+    say("richmond %s · edge %s · %d pages%s%s"
+        % (day.strftime("%m/%d/%Y"), f"{edge:,}", npages,
+           (" (walked back past %s)" % ",".join(tried)) if tried else "",
+           "" if prev is None else
+           ("  NEW (was %s)" % f"{prev:,}" if new else "  quiet")))
     return new
 
 

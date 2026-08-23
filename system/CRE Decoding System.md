@@ -628,3 +628,79 @@ before it was banked.
 refuses to run while lanes write, which was right for the old keyer and is now
 strictly worse than running. Org can key continuously during backfill at
 BATCH=500. That removes the last reason the chain could not flow.
+
+
+# THE BOARD WAS MEASURING ITSELF — tasks 3 & 4 (2026-08-23 ~00:35)
+
+Two separate defects, one consequence: **no phase's own measurement was reaching
+the board.** The board was reporting numbers it had derived from log lines, and
+the phases that could have contradicted it were failing silently.
+
+## DEFECT A — the phase routines could not write a row at all
+
+`routine_navigation.py:133` and `routine_organization.py:95` both did
+
+    INSERT OR REPLACE INTO update_board VALUES (?,?,?,?,?,?,?,?,?,?)
+
+**TEN values into a TWELVE column table.** sqlite rejects it outright —
+*"table update_board has 12 columns but 10 values were supplied"* (reproduced,
+not assumed). So both routines raised at the end of their run, after printing a
+clean CHECK, and neither ever wrote its row.
+
+⚠ **AND THE BOARD LOOKED FINE ANYWAY**, which is why this survived: those rows
+were being filled by `routine_update.py`, which has its own correct 12-value
+writer. The board showed `navigation acris 100.0% COMPLETE` from log arithmetic
+while the phase that actually verifies that claim was crashing.
+
+Had sqlite accepted the short row it would have been worse than a crash: every
+value lands one column early, so `landed` receives `needed`, and `pct_of_total`
+— a REAL column — receives the **status string**. A row that reads as data and
+is noise.
+
+**THE DEFECT IS POSITIONAL INSERT, NOT THE MISCOUNT.** `update_board` has
+already grown three columns (`rate_now`, `pct_increase`, `eta`), and every
+growth silently breaks every positional writer. Both are now written with
+NAMED COLUMNS, which cannot shift. Two files broke the same way for the same
+reason — that makes it a shape, and shapes get structure, not a note.
+
+## DEFECT B — `landed` came from logs, and logs are not evidence
+
+The acquisition rows were `baseline + delta scraped from lane logs`. That is
+**counter arithmetic**, and counter arithmetic only ever drifts one way: a lane
+restart double-counts, a consumed baseline under-counts, and the row sails past
+100% looking healthy. It already happened once (richmond rd pinned at 100.17%,
+2026-08-21) and the standing rule from that day is *">100% board = counter
+arithmetic, re-baseline from true count."*
+
+**`board_truth.py` IS that true count.** A row is landed because there is a path
+in the `pdf` column — not because a log line said so.
+
+    pdf = ''            unlanded
+    pdf = 'imageless'   resolved, no image — COUNTS AS DONE, nothing to fetch
+    pdf = '<path>'      landed          e.g. By Document\2003\01 Jan\06\....pdf
+    pdf IS NULL         never minted — the assumption-breaker, counted separately
+
+### ⚠ IT ANCHORS THE TICK, IT DOES NOT REPLACE IT
+
+Counting `pdf != ''` directly is a **16.5 GB table scan** — measured **64.8 s per
+200,000 rows under lane load, ~2.2 hours a pass**, all of it competing with the
+walkers for the same disk. The board refreshes every 60 s. So truth re-anchors on
+a slow cadence and the fast tick carries only the delta since the anchor. The
+logs stop being the authority and become what they always were: an estimate.
+
+### THE COUNTS ARE INDEX-ONLY — no table reads
+
+    ix_nav_pdf_todo  ON navigation(id) WHERE pdf = ''    partial — the todo set
+    PK autoindex     ON navigation(id)                   totals
+
+and ⚠ **the source split is a PREFIX**: richmond ids are `RC_2113781`, acris ids
+are `2026081700306001`. `'R' > '9'`, so the two sources are CONTIGUOUS RANGES in
+the id index and both counts become range scans on an index that already exists
+— never a `LIKE` over 16.5 GB.
+
+    landed = total - todo         per source, both index-only
+
+⚠ **THE SUBTRACTION HAS ONE ASSUMPTION: every row is either todo or done.**
+`pdf IS NULL` is in neither set and would silently inflate `landed`. It is
+counted separately and reported, never absorbed. *Never repair a number to make
+a check pass.*

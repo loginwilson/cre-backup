@@ -130,11 +130,32 @@ for src, w in SRC.items():
         b = sqlite3.connect(BOARD, timeout=120)
         st = "COMPLETE" if level else ("ACTIVE" if fixed else "STALLED")
         win = time.strftime("%B %d, %Y %I:%M").replace(" 0", " ")
-        b.execute("INSERT OR REPLACE INTO update_board VALUES"
-                  " (?,?,?,?,?,?,?,?,?,?)",
-                  ("navigation", src, 0.0, fixed, 0.0,
-                   total - (miss or 0), total,
-                   round(100 * (total - (miss or 0)) / total, 2), st, win))
+        # ⚠ NAME THE COLUMNS. This was a positional `VALUES (?,?,?,?,?,?,?,?,?,?)`
+        # - TEN values into a TWELVE column table - so sqlite rejected it and
+        # **the navigation row was never written**: the phase whose whole job is
+        # to assert "every document is tabled" was itself absent from the board.
+        # Had sqlite accepted it, it would have been worse than absent: every
+        # value lands one slot early, so `landed` would have received `needed`,
+        # `pct_of_total` (REAL) would have received the STATUS STRING, and
+        # status/as_of would be NULL - a row that reads as data and is noise.
+        #
+        # Positional INSERT is the defect shape here, not this particular
+        # miscount: update_board has already grown columns once (rate_now,
+        # pct_increase, eta), and every future column silently breaks every
+        # positional writer. Named columns cannot shift.
+        landed = total - (miss or 0)
+        b.execute(
+            "INSERT OR REPLACE INTO update_board"
+            " (phase, source, rate_now, rate, increase, pct_increase,"
+            "  landed, needed, pct_of_total, eta, status, as_of)"
+            " VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+            ("navigation", src,
+             0.0, 0.0,              # nav mints in bursts; a rate would be noise
+             fixed, 0.0,            # `fixed` is an INCREASE - urls minted now
+             landed, total,
+             round(100 * landed / total, 2) if total else 0.0,
+             "-" if level else "",  # no eta for a phase that is not a walk
+             st, win))
         b.commit()
         b.close()
 print("NAVIGATION LEVEL" if ok else "NOT LEVEL - see above")
