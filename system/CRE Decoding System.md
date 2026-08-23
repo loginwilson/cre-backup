@@ -1485,3 +1485,51 @@ this."** The signature is now the acquirer alone, and the row reads STALLED.
 `richmond measured +0 docs over 654s -> 0.00/s`. The number was honest; the
 STATUS lied. Worth noting which layer failed — a rate of zero beside a green
 status is a contradiction the board should never have been able to display.
+
+
+# FINAL STATE — 2026-08-23 03:52
+
+    PHASE            SOURCE     now/s          LANDED        NEEDED     PCT   ETA
+    acquisition pdf  acris      10.21         988,517    21,615,745   4.57%  23.4 d
+    acquisition pdf  richmond    0.00         203,917     2,501,589   8.15%  STALLED
+    acquisition rd   acris      71.95      10,279,354    21,615,745  47.55%   1.9 d
+    acquisition rd   richmond    0.00       2,501,589     2,501,589    100%  COMPLETE
+    organization     acris          -       4,370,156    10,279,354  42.51%
+    navigation       both           -                                  100%  COMPLETE
+    synchronization  both           -                                  100%  COMPLETE
+
+Running: 4 rd_walk · 3 image_walk · rc_pdf_land · rc_feed · org_backfill_arm ·
+phase_monitor --gate · board_truth --loop · routine_update --loop ·
+board_bridge. ⛔ rc_pdf_pull STOPPED on a refusal, deliberately not restarted.
+
+## ⚠ AN UNPLANNED MEASUREMENT OF THE CONTENTION QUESTION
+
+    rd acris   47.65/s   with rc_pdf_pull running
+    rd acris   71.95/s   after it stopped        +51%
+
+The refusal did the A/B I had declined to run, because running it would have
+meant stopping a lane against the standing instruction to keep everything going.
+**Richmond pdf was costing acris rd roughly 24 docs/s.**
+
+⚠ **THIS IS ONE READING AND IT IS NOT THE CEILING QUESTION SETTLED.** It is a
+single before/after across a boundary that also changed other things (the errors
+ramping before the 403 were themselves consuming the machine). The standing
+warning still applies: *only the full-fleet reading settles it.* But it does
+establish that the two lanes are NOT the independent pools the earlier A/B
+suggested — at this fleet size they compete, and the earlier "rd 135/s under pdf
+load" was measured against a lighter pdf load than three image_walk lanes plus a
+richmond puller.
+
+**What it means practically:** rd's ETA improved from 2.66 to 1.93 days while it
+had the machine more to itself. When richmond pdf resumes, expect rd to give
+that back. The scheduling question — which lane deserves the headroom — is
+genuinely open, and pdf acris (23.4 days) is the long pole, not rd (1.9 days).
+
+## THE ANCHOR IS CHEAP NOW
+
+    pass 220 s -> 55 s   after the nullprobe dropped from 200,000 to 50,000 rows
+
+The probe was 217 s of a 220 s pass — the only query touching the table rather
+than an index. ⚠ It reads the TAIL (where sync inserts), which is the hot region,
+so it costs ~4x per row what the cold head does. 50,000 rows still covers WEEKS
+of inserts at ~1,550/business day.
