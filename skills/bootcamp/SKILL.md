@@ -147,7 +147,27 @@ verdict is free; length in the spec costs cluster wall-clock.
 Ask "why does it matter" of everything kept — as a FILTER it selects
 claims; as an ANSWER it may only produce LABELED HYPOTHESES.
 
-## 6 · ADJUST — write the entries
+## 6 · ADJUST — **THE FOUR-FILE CLOSE** (a run is not done until all four)
+
+  1 `Bootcamp.md`     run entry + any new law
+  2 `Run Log.md`      one-line stamp (id · pages · streak · grade)
+  3 `Grade Ledger.md` the graded miss BY CLASS + where the fix landed
+  4 `Draw Board.md`   mark the drawn document off — IN THE SAME COMMIT
+                      (an unmarked board silently re-offers drawn docs
+                      and the coverage claim goes false unnoticed)
+
+Plus `Lexicon.md` when a document teaches a CLASS-LEVEL term (the
+Context Line's tier-2 lookup — never add from memory, only from a
+document). Plus `Compose Card.md` when the fix is compose-time
+behaviour.
+
+⚠ **At grading, READ `Grade Ledger.md` first.** Name the miss CLASS, not
+the instance; if the class already has rows, say so and grade harder — a
+repeat of a recorded lesson costs double. A class reaching 3+ rows is a
+MISSING STRUCTURE, not a discipline problem: change the shape instead of
+writing another rule.
+
+## 6a · ADJUST — the entries themselves
 
 Append the run to Bootcamp.md (`# RANDOM-DOCUMENT RUN <n> — <id> ...`,
 R<n>-x findings with teaching anchors, CONFIRMATIONS block) and stamp
