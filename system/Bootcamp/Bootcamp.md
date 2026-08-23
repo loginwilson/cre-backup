@@ -6279,3 +6279,53 @@ family gains its seventh member and its second custodian-collision.
 - PRE-BANK PASS run: declarant surname cropped at 450dpi (produced
   R39-2); notary, clerk and company names legible at 140dpi; slots
   checked (ENCUMBRANCE·creates, charge role, event-bounded term).
+
+
+## R39 GRADE (login-prompted, cold; ledger read first) — B
+
+1. ⚠ THE WATCHED WORD FAILED ONE RUN AFTER BEING WATCHED. Delivered
+   "buying a HOUSE" and "a lien on the HOUSE". The document says
+   PREMISES, and its unit of charge is a DWELLING ("$150.00 per year
+   for each one-family dwelling"); Schedule A describes a 40x100 PLOT
+   OF LAND. Worse than narrowing: whether a dwelling stood there on
+   1984-06-25 is NOT ESTABLISHED — the recital says the premises are
+   serviced by the plant, but the charge triggers "with each sewer
+   connection request", which reads the same for a lot awaiting
+   construction. The sentence may be FALSE, not merely imprecise.
+   THIRD OCCURRENCE of keep-the-noun → 3+ = MISSING STRUCTURE by the
+   ledger's own rule.
+   DIAGNOSIS (precise and uncomfortable): "houses" was added to the
+   Compose Card's scan AFTER R38, and the card WAS NOT RE-READ before
+   composing R39. The card's own instruction is to load it at every
+   compose step. THE FIRING LAW DESCRIBING ITSELF — the rule existed,
+   was written for this exact word, and did not fire because the
+   LOADING step was skipped. A mechanism that depends on being loaded
+   inherits the loading step's reliability.
+2. NARRATIVE FAMILY, 6th (mildest form): "in an AREA with no city
+   sewer" generalizes from the parcel to the area. The document
+   supports only "this parcel has no gravity connection". Same shape as
+   R34's "parts of Staten Island had no city sewer" — which was flagged
+   at the time.
+
+HELD: qty_role labelled throughout ($150/$300 annual charges, $1.00
+consideration, 9.5% default interest); pre-bank name crop RAN and
+produced R39-2, the run's best finding; parcel ✓ earned with the backer
+cited AND its map series named; canonical vocabulary; no length drift.
+
+## THE CONVERGENCE — two classes, one structural fix
+
+QTY_ROLE (R11, R33, R36) and KEEP-THE-NOUN (R34, R38, R39) have both
+reached three occurrences, and BOTH DISSOLVE UNDER THE SAME STRUCTURE:
+**a summary GENERATED FROM ROW VALUES cannot misstate a role (the slot
+carries it) and cannot substitute a noun (it prints the row's own
+word).** Two independent failure classes converging on one architecture
+is the strongest evidence yet that the generated-summary path (THE
+LENGTH LAW) should be built EARLIER than planned — it is not merely a
+length control, it is the structural cure for the two most persistent
+defect classes in the corpus.
+
+⚠ AND A LIMIT ON MECHANISM 1: a word scan only works if the list is
+LOADED at compose time. Its reliability is the loading step's
+reliability, never better. Structure (mechanism 3) has no loading step,
+which is why it outranks both scan and checklist wherever it is
+available.
