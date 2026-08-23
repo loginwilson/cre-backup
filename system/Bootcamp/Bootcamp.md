@@ -4395,9 +4395,11 @@ doubles its parties.
 - Balance snapshot: $2,800,000 outstanding at assignment (R16-3's
   lease-package balance disclosure, Richmond edition) — plus reps that
   rents are not prepaid beyond one month and leases unmodified.
-- Leader unmasked TWICE: signs as Member and Manager AND appears as
-  personal co-mortgagor on chain items (c)+(d) — the SPE's human is in
-  the debt, not just behind it.
+- LEIDER unmasked TWICE [name corrected on backward re-check
+  2026-08-22 — banked as "Leader"; the instrument reads ANDREW B.
+  LEIDER]: signs as Member and Manager AND appears as personal
+  co-mortgagor on chain items (c)+(d) — the SPE's human is in the debt,
+  not just behind it.
 - Sibling expectations banked: Assignment of Mortgage (W Financial →
   GHB), the $200,000 gap mortgage, and the Assumption-CEMA — all
   "simultaneously herewith", land doc serials likely adjacent to
@@ -4622,11 +4624,15 @@ chase.
 
 ## R25-3 — ONE DOCUMENT DATES BOTH ENDPOINTS OF A LOAN
 
-Origination recited (2016-10-25, $260,000, LD 627636) + death dated
-(2018-01-02) = a ~14-month loan life readable WITHOUT opening the
-mortgage: the profile of PRIVATE BRIDGE MONEY (SPE borrower named for
-the address, NJ private-money agent, agent-for-co-lenders syndicate,
-14-month hold). For the debt-maturity product: satisfactions both
+Origination recited (2016-10-25, FACE $260,000, LD 627636) + death
+dated (2018-01-02) = a ~14-month loan life readable WITHOUT opening the
+mortgage. ⚠ INFERRED CLASSIFICATION [marked on backward re-check
+2026-08-22]: the READ facts are an SPE borrower named for its address,
+a New Jersey agent-for-co-lenders as payee, and a 14-month life; that
+this loan IS "private bridge money" is a CLASS LABEL APPLIED TO AN
+INSTANCE — a reasonable inference from those facts, not a reading. The
+lexicon may define the class; only the document can place an instance
+in it, and this one does not say so. For the debt-maturity product: satisfactions both
 CLOSE rows and date-stamp full lifecycles; a parcel's satisfaction
 history is its refinance cadence.
 
@@ -5091,7 +5097,10 @@ COURT, file no. faint), for One Dollar "and to distribute the estate,"
 assigns to SYLVIA HOROWITZ (275 E. Walnut St., Long Beach), LEE
 GREENBERG (64 E. Market St., Long Beach), and GEORGE ARONS himself the
 decedent's interest in a mortgage made by BEACH STREET REALTY CORP. to
-FANNIE ARONOWITZ and ISIDOR BERMAN, $10,000, dated 1961-05-01,
+FANNIE ARONOWITZ and ISIDOR BERMAN, FACE $10,000 ["given to secure
+payment of the sum of ten thousand ($10,000.00) dollars" — origination
+face; balance at assignment NOT STATED; role label added on backward
+re-check 2026-08-22 per Card #10], dated 1961-05-01,
 recorded 1961-05-05 in QUEENS Liber 7847 of Mortgages p.600, covering
 158 Beach 64th Street, Far Rockaway (75x100). Executed Sept 1966, ack
 Nassau (notary Maurice Weiner[?]), recorded 1966-09-23.
@@ -5820,3 +5829,54 @@ name the miss CLASS and check whether it already has rows. A class with
 3+ rows is not a discipline problem, it is a MISSING STRUCTURE — stop
 writing rules and change the shape. (That is what produced the trigger
 list after the third motive claim.)
+
+# BACKWARD RE-CHECK #2 — runs 12-32 against the rules written after them
+
+Login 2026-08-22: "spot-check those earlier runs against the new rules.
+The point of the bootcamp is for these lessons to inform each run."
+Swept the banked entries for every rule minted after run 32 — motive
+triggers, qty_role, vacuous ✓, name integrity, class-vs-instance.
+
+## FOUND AND CORRECTED IN PLACE (3)
+
+1. **R21 NAME ERROR: "Leader" for ANDREW B. LEIDER.** The worst class of
+   defect for this corpus: the product IS the stakeholder graph, and a
+   misspelled principal breaks every join silently — the row still
+   looks complete. G-024/G-036 family. Corrected with its provenance
+   note. ⚠ New standing check: PRINCIPAL NAMES GET A SECOND LOOK
+   BEFORE BANKING, and any name appearing in a finding (not just a
+   party list) is re-read against the page.
+2. **R33 UNLABELED MONEY: "$10,000"** — the page says "given to secure
+   payment of the sum of ten thousand ($10,000.00) dollars" = the
+   origination FACE; the balance at assignment is not stated. Labeled
+   per Card #10. (Same class as R36 and R11 — now THREE occurrences,
+   which by the Grade Ledger's own rule makes it a MISSING STRUCTURE,
+   not a discipline lapse. Structural fix: the row's amount slot must
+   REQUIRE a qty_role value — an amount without a role should be
+   unrepresentable, not merely discouraged.)
+3. **R25 CLASS LABEL APPLIED TO AN INSTANCE: "the profile of PRIVATE
+   BRIDGE MONEY."** The underlying facts are READ; the classification
+   is an inference. Marked. The Context Line refined: the lexicon may
+   DEFINE a class, but only the document can place an INSTANCE in it —
+   otherwise a definition becomes a diagnosis.
+
+## CLEAN ON SWEEP
+
+- No motive/purpose triggers in any run entry 12-32 (all hits were in
+  framework sections).
+- Reconciliation ✓ marks: earned in every case checked — R18 (rd
+  settled a held-moderate reading, stated as such), R22 (rd corrected a
+  misread, stated), R27 and R30 (document-side witness cited: backer,
+  handwritten fill).
+- qty_role labelled correctly where it mattered most: R13 (face vs
+  unpaid vs consolidated), R16 (odd cents = balances, explicitly), R15
+  (release price ≠ principal reduction, explicitly).
+
+## THE LESSON ABOUT THE LESSON
+
+The memory rule held exactly as written: prior work "looks cleanest
+where it's most likely wrong." Runs 12-32 read as clean because they
+were graded under rules that did not yet exist — the sweep found three
+defects in entries that had all been graded A or A−. Backward re-check
+is not optional maintenance; it is how a rule reaches the runs that
+predate it. EVERY new rule gets swept backward on the day it is minted.

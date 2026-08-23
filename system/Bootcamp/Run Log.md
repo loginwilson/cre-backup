@@ -39,3 +39,4 @@ redo 35 · REDO PRACTICE established: bank before/after pairs as the loop's high
 law · THE CONTEXT LINE recorded (class-vs-instance; effect-derivable-intent-never; 3 tiers; 3-source sentence rule)
 run 36 · BK_6730058000213 · 2026-08-22 · 4/4 frames · 0 new columns · streak 33 · grade A− (qty_role face-vs-balance; caveat lost in delivery) · subordination as SUNDRY: remarks rescue type + yielding party signs alone + capped yield confirmed · reader: fable-5 direct-pdf
 audit · FOUR-FILE CLOSE established · Grade Ledger.md + Lexicon.md created · Draw Board marked through r36
+audit · BACKWARD RE-CHECK #2 (runs 12-32 vs post-32 rules): 3 defects corrected in place — R21 name error, R33 unlabeled face, R25 instance-classification; qty_role now 3 occurrences = MISSING STRUCTURE
