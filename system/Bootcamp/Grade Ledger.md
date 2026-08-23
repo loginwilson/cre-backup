@@ -5,7 +5,7 @@ so each bootcamp is improved upon."
 
 A grade buried in prose inside a 5,400-line file cannot improve the next
 run. THIS FILE IS THE INDEX. One row per run; miss CLASSES are named so
-RECURRENCE IS VISIBLE — the motive-claim defect reached its THIRD
+RECURRENCE IS VISIBLE — the motive-claim defect reached its FIFTH
 occurrence precisely because nothing here existed to show it was a
 pattern.
 
@@ -45,7 +45,7 @@ grade is harsher: a repeat of a recorded lesson costs double.**
 
 | class | runs | status |
 |---|---|---|
-| **narrative: motive / relationship / era / SCALE asserted as fact** | 10, 33, 34, 35, 37 | **4 occurrences.** Rule existed from R10; failed twice more. Fixed structurally at R35 with the Compose Card TRIGGER LIST, not another rule. CLEAN at R36; FAILED AGAIN at R37 — but differently: the claim used ORDINARY WORDS, so the phrase-scan could not see it. The trigger list works for its shape and is blind to others. Card #4 extended; the general fix is the PRE-BANK PASS (#12). |
+| **narrative: motive / relationship / era / SCALE asserted as fact** | 10, 33, 34, 35, 37 | **5 occurrences.** Rule existed from R10; failed twice more. Fixed structurally at R35 with the Compose Card TRIGGER LIST, not another rule. CLEAN at R36; FAILED AGAIN at R37 — but differently: the claim used ORDINARY WORDS, so the phrase-scan could not see it. The trigger list works for its shape and is blind to others. Card #4 extended; the general fix is the PRE-BANK PASS (#12). |
 | **single-look value on degraded film** | 22, 33, 35 | Crop law written at R19, violated at R33 and R35. R35's violation HID AN EVENT-SHAPING DELETION. Card #9 now names term lines and identity strings explicitly. CLEAN at R36 (crop run before composing). |
 | **qty_role: face vs unpaid vs consideration** | 11, 33, 36 | **3 occurrences → MISSING STRUCTURE, not discipline.** Card #10 is not enough: the row schema must REQUIRE a qty_role value so a bare amount is UNREPRESENTABLE. Queued as a schema change for the extraction spec. |
 | **name integrity (principal misspelled / unverified)** | 21, 37 | Found on backward re-check, not at grading. Worst class for a stakeholder product: the join breaks silently while the row looks complete. Principal names get a second look before banking — **written after R21 and did NOT fire at R37 the same day**, because it is a WORKFLOW step and the card only scanned phrases. Now Card #12. |
