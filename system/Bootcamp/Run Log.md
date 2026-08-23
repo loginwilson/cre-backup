@@ -46,3 +46,4 @@ run 38 · RC_1003223 · 2026-08-22 · 5/5 pages · 0 new columns · streak 35 ·
 fix · r38 defects repaired: Exhibit A legend banked (R38-4a rule minted) + 'houses' narrowing noted in entry + WATCHED WORD added to Card #6 + recovery-instructions rule added to Card #9
 run 39 · RC_1029519 · 2026-08-22 · 5/5 pages · 0 new columns · streak 36 · grade B→D on re-grade (FABRICATED COUNT "5th sighting" with no series behind it; identity from shared name; person-vs-P.C.; "minimum 9½% cumulated" delivered as "9.5% compounding") · reader: fable-5 direct-pdf
 law · THE FABRICATED SERIES recorded — worst class found so far (manufactures corroboration); Card #13 = no count without a grep; R21\/R23\/R39 corrected in place
+method · DRAW CORRECTED: query navigation (rowid window + pdf column) — no disk walk; landed band measured = contiguous prefix rowid 1..~210k of 24.1M, four-borough and type-rich; SEALED-FIELDS rule added (draw sees type/pages/borough/path only)

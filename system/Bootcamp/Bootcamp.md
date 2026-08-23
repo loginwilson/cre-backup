@@ -6409,3 +6409,64 @@ artifact.
   CUMULATED MONTHLY". A floor was delivered as a rate, and "cumulated"
   (the document's word) was delivered as "compounding" (a different
   mechanism). Both corrected; the 9.5% now carries its qty_role.
+
+
+# THE DRAW METHOD — CORRECTED (login 2026-08-22)
+
+Login: "shouldn't it be as easy as reading doc id rows with their rd and
+pdf columns filled and the rd gives you the answer?... I really thought
+this was the approach the whole time since rd gives
+verification/background context for the read."
+
+Correct, and the disk-walking draw used through run 39 was simply wrong.
+**`navigation` already carries everything the draw needs**, including a
+`pdf` column holding the store-relative path. A row with BOTH
+`recorded_details` and `pdf` populated IS a bootcamp-ready document.
+
+    SELECT id, recorded_details, pdf
+      FROM navigation
+     WHERE rowid BETWEEN ? AND ?        -- bounded window, indexed
+       AND pdf IS NOT NULL AND pdf != ''
+
+No filesystem walk (which hung twice and had to be killed), no path
+derivation from the recorded date, no guessing at boroughs.
+
+## ⚠ THE LANDED REGION IS A CONTIGUOUS PREFIX, NOT A SPREAD
+
+MEASURED 2026-08-22 by density probe (2,000-row windows):
+
+    rowid      2,411 → 2000/2000 filled
+    rowid     30,000 → 1998/2000
+    rowid    120,000 → 1998/2000
+    rowid    200,000 → 2000/2000
+    rowid    220,000 →    0/2000   <-- edge
+    rowid 1,205,866+ →    0/2000   (all higher probes zero)
+
+The pdf lanes work FORWARD from the start of the table, so landed rows
+form a band roughly rowid 1 .. ~210,000 out of 24,117,334. A uniform
+random window over the whole table returns ZERO bootcamp-ready rows
+(measured: 0 in 6 windows of 800). **Draw inside the landed band and
+re-probe the edge as the lanes advance** — the band grows.
+
+Composition of the band (sample of ~1,600 rows): QUEENS 548 · BROOKLYN
+474 · MANHATTAN 423 · BRONX 157. Types: MORTGAGE 503 · DEED 169 ·
+ASSIGNMENT-MORTGAGE 155 · AGREEMENT 149 · SATISFACTION 147 · INITIAL
+COOP UCC1 123 · POWER OF ATTORNEY 86 · DEED-OTHER 61. So the band is
+ALREADY four-borough and type-rich — the Richmond-heavy run history
+(1-39) was an artifact of the disk-walk method, not of the corpus.
+
+## ⚠ THE SEALED-FIELDS RULE (this is the part that can break the loop)
+
+rd serves TWO moments and they must not merge:
+
+  AT DRAW      read ONLY: type · pages · borough · pdf path.
+               These select a document.
+  AT RECONCILE read everything else: parties · amount · dates · parcels
+               · remarks. These VERIFY a completed cold read.
+
+R4-4 stands unchanged — **rd is verifier, never prior**. If parties and
+amount are printed at draw time, the "cold" read is no longer cold and
+every agreement it later reports is contaminated. The convenience of
+the new method is exactly what makes this guard necessary: the same
+query that makes drawing trivial would, printed in full, quietly end
+the discipline that makes reconciliation mean anything.

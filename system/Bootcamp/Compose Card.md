@@ -131,3 +131,11 @@ incremented twice (R21/R23/R39, all corrected 2026-08-22).
 
 Counts belong in `Grade Ledger.md`, which lists its members and can be
 checked.
+
+
+## 14 · SEALED FIELDS AT DRAW TIME
+
+Draw from `navigation` (rowid window + pdf column), printing ONLY
+type · pages · borough · path. Parties, amount, dates, parcels and
+remarks stay SEALED until reconciliation. rd is verifier, never prior
+(R4-4). The easy query is also the easy way to destroy the cold read.
