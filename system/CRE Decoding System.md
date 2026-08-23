@@ -1575,3 +1575,59 @@ whether it still refuses us, is the retry the rule forbids.
 Never once did a network failure become a "0 documents today". That distinction
 is the whole reason the richmond delta path can be trusted, and it is the same
 distinction the dead regex silently destroyed for weeks.
+
+
+# A REAL 2-MINUTE NETWORK OUTAGE — and how to tell it from a ban (05:02-05:05)
+
+    05:02:51  acris     PROBE UNPROVEN (URLError) - reporting NOTHING, not 'quiet'
+    05:03:12  richmond  window FAILED (URLError)  - reporting NOTHING, not a zero
+    05:03:33  acris     PROBE UNPROVEN (URLError)
+    05:03:46  richmond  window FAILED (URLError)
+    05:05:07  acris     control ok · probed +1..+8 (9 req) · quiet      RECOVERED
+    05:05:21  richmond  edge 1,017,350 · 7 pages · quiet                RECOVERED
+
+## ⚠ THE DIAGNOSTIC THAT SETTLED IT IN ONE CALL
+
+Hours after a genuine 403 on the richmond document route, two sources failing at
+once is exactly the thing to misread as "they have both banned us." The
+CONTROL-FIRST rule applies at the NETWORK layer too — **test a neutral third
+host you have no relationship with**:
+
+    Resolve-DnsName github.com  ->  timeout        DURING
+    Resolve-DnsName github.com  ->  140.82.114.4   AFTER
+
+**DNS itself was down.** Not ACRIS, not Richmond, not us being blocked. One
+query against an uninvolved host separated "our machine is offline" from "two
+custodians refused us simultaneously" — and the second reading would have been
+alarming and completely wrong.
+
+## THE SHAPE THAT DISTINGUISHES THEM
+
+    LOCAL OUTAGE   two+ unrelated hosts fail TOGETHER · same error class ·
+                   DNS control also fails · recovers on its own, no action
+    A REFUSAL      ONE host · ONE route · an HTTP status that NAMES itself ·
+                   other routes on the SAME host keep working · does not recover
+
+Tonight produced one of each, three hours apart, and they look nothing alike
+once the control is run. ⚠ The richmond DOCUMENT route stayed refused right
+through this outage and after it — the route split held the whole time.
+
+## WHAT I DID NOT DO
+
+**I did not probe the refused richmond document route to "check if it was
+back."** A network blip is not permission to retry a refusal. The only host
+touched deliberately was the neutral control.
+
+## THE GUARDS HELD, FOUR FOR FOUR
+
+    "PROBE UNPROVEN - reporting NOTHING, not 'quiet'"
+    "window FAILED - reporting NOTHING, not a zero we did not measure"
+
+Not one network failure became "quiet" or "0 documents". **A malformed or failed
+request looks exactly like an empty one, and for two minutes tonight there were
+four chances to record a false zero into the delta path.** None was taken.
+
+⚠ RUNNING TALLY of transient failures (~200 ticks, 5.5 h): 3 URLError windows ·
+1 TimeoutError window · 2 UNPROVEN probes · 1 git DNS failure. **This box has
+flaky DNS. That is the baseline** — and the lanes and anchor were unaffected
+(anchor measured acris 13.50/s at 05:00, 1,038,527 landed).
