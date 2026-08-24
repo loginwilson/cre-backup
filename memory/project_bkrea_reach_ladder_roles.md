@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: b81cdba8-aef2-4c37-a0d9-9daa59a3b947
-  modified: 2026-08-03T02:56:19.661Z
+  modified: 2026-08-24T11:57:35.628Z
 ---
 
 Settled 2026-08-02, `lib/reachLadder.ts` + `scripts/reachWalk.ts`. Getting from an ACRIS ENTITY to a
@@ -34,3 +34,15 @@ deterministic partyId.
 **How to apply:** never point a role at another role's instrument; bump `REV` on any gate change;
 state coverage as a measured number, not an impression. See [[feedback_bkrea_notes_derivation]] and
 [[project_bkrea_debt_throughline]].
+
+**PRODUCT CONCEPT (login 2026-08-24): PARTY BEHAVIORAL SHEETS.** Because
+resolution holds party as an attribute of the event and keys both ways
+(bbl→events→parties, party→events→bbls), a db product can generate
+territory-specific contact sheets where a contact is not name+company but
+BEHAVIOR: every BBL they touch, their lifetime as a stakeholder, and their
+exact role per function (developer · lender · architect · seller …) —
+"how that party behaves in the context of a function." Prerequisite is
+entity resolution: SPE unmasking (notices block), lexicon.canon() name
+normalization, and the guards above (MERS is a nominee; role↔instrument
+discipline) — a behavioral profile built on a mis-assigned role inverts
+the story it tells.

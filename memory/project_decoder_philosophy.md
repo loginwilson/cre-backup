@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 7c5a3ccb-a88e-40cd-a587-cc575cf7a400
-  modified: 2026-08-14T16:17:07.767Z
+  modified: 2026-08-24T12:04:43.981Z
 ---
 
 Login, 2026-08-14: *"this data decoder is its own massive project and I want to
@@ -16,6 +16,43 @@ usage since the data used in current apps is highly lagged, wrong, and varying."
 **The decoder is the foundation, not a feature.** Applications are built on top of
 its derivations; the derivations are not shaped for one application. See
 [[feedback_phase_organization]] — that is why derivation is its own phase.
+
+## THE FULL LOOP (login, settled 2026-08-24)
+
+**Sync mirrors the live source state into our db → decode (extraction:
+per-document, immutable, bbl+chrono is a SORT · resolution: chain the BBL's
+events by the 11 functions, party is an event attribute · derivation: what
+matters today) → productize.** The living/frozen split: extraction never
+changes once graded; resolution and derivation are ALWAYS adjusting because
+each new doc through sync amends chains and can amend what-matters-today —
+the inflow of new docs through sync+extraction is exactly what makes
+resolution/derivation dynamic and products alterable.
+
+## THE ENDGAME — two paths, one asset (login, 2026-08-24)
+
+Once decoded, **either sell the decoded database to the incumbents or
+build a product fleet targeting any stakeholder** — not a fork but a
+sequence with an option, since a licensed feed is just another read-only
+view. The competitive frame: PropertyShark / PropertyScout / Marketproof
+all PACKAGE public rows; a row is a record of a document, not a fact, and
+the raw rows systematically misrepresent reality ($10 recitals, role
+polarity, SPE veils, billing-lot traps) — so incumbents inherit those
+errors, while the decoded db converts records into events/chains/derived
+state with provenance. The moat COMPOUNDS: living chains widen the gap
+daily and any replicator starts a 24M-document decode behind a moving
+target. Keeping derivations general (no single screen) is what holds both
+doors open. login also notes an execution edge: **access to ~$2M worth of
+NYU compute to expedite backfills/decoding** — capacity competitors don't
+have.
+
+**Products sit wherever they like on the time axis** — resolution = the
+past (precedence: e.g. visualize a BBL's changes over time), derivation =
+today (e.g. current market air rights reads derived +/- on today's
+envelopes), and both together = the future (historical patterns × current
+context → likely outcomes for cost/value models). **The invariant: as long
+as sync + decoding outpace live source inflow, a product's intelligence
+tracks the exact available public state.** That is the freshness edge made
+operational.
 
 ## What this changes about what "done" means
 

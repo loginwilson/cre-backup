@@ -5,8 +5,21 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 7c5a3ccb-a88e-40cd-a587-cc575cf7a400
-  modified: 2026-08-14T01:29:01.393Z
+  modified: 2026-08-24T11:53:48.907Z
 ---
+
+**REFINED 2026-08-24 (login): PARTY IS AN ATTRIBUTE OF THE EVENT, not a
+traversal of its own** — "each event typically has party"; the earlier idea
+of a party-based decode dissolves into the event's role fields (which were
+already first-class below). Chronology is likewise not resolution work: it
+is DETERMINABLE UNDER KEYING (a sort over keyed rows). So resolution's one
+job = take all extracted documents in a BBL and CHAIN THE EVENTS BY THE 11
+FUNCTIONS. And the living/frozen split that drives the whole system:
+**extraction is immutable per document** (a doc's breakdown is independent
+of every other doc — why bootcamp can grade and freeze it), while
+**resolution and derivation are LIVING** — every new doc through sync
+amends chains and can amend what-matters-today. A new doc re-chains only
+its own BBL, so staying current is cheap by construction.
 
 Login's design for the RESOLUTION stage, settled 2026-08-12. Resolution is the final
 sanitization step: canonical text → claims → events → functions/entities/references → graph.

@@ -5,8 +5,14 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-24T10:55:03.384Z
+  modified: 2026-08-24T11:25:42.467Z
 ---
+
+**SUPERSEDED BY `fleet.py` (2026-08-24, in the decoder dir, backed up at
+remote 132fbe9): `python fleet.py status|start <lane>|stop <lane>` — lanes
+sync · rd · rcpdf · apdf(parked) · board. THE roster is fleet.py's LANES
+dict; the listing below is history.** Restore = `python fleet.py start all`
+(skips parked apdf), then verify with `fleet.py status` + the board.
 
 **FLEET PAUSED 2026-08-24 ~06:45 for One Touch (D:) ejection — relaunch in
 this order when login says the drive is back** (all Start-Process detached,

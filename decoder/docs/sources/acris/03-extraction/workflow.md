@@ -320,3 +320,66 @@ FT_4070002230107 names Reel 1518/442, Reel 1629/1737, two indentures, and a cont
 successor transfer. **Lineage is the walk's OUTPUT, not its prerequisite** — every legal
 description is the parcel's geometry at a moment (proved to 0.002% on Block 1206), and every
 recital is a pointer. Do not block the parcel walk on a lineage table that the walk builds.
+
+## CAMPAIGN DECISIONS — 2026-08-24 (login, settled in conversation)
+
+### The extraction-ready gate (defined; enforcement to build)
+
+A document is extraction-ready when it has **passed synchronization**: doc id
++ both urls + recorded_details + pdf + keyed bbl — a pure column test, no
+scans. Two edges are part of the definition:
+
+- **`imageless` is a VERDICT, not a gap** — those documents (FT_ era heavy)
+  are extraction-ready FROM RD ALONE.
+- **`pdf-pass` documents enter extraction UNKEYED by design** — extraction is
+  what produces their key (pass 3 closes behind extraction). The gate is
+  therefore: keyed via pass 1 or 2, OR carrying the pdf-pass verdict.
+
+### Reader design: single VLM + escalation ladder (the OCR channel is retired)
+
+Modern vision LLMs carry OCR internally; the problem is hallucination, not
+reading. Anti-hallucination is structural, not a second weak reader:
+
+- the evidence rule above all: **extract evidence and fact, never infer or
+  assume** — inference is hallucination; context-with-proof only
+- multi-read bands (vary size and crop, never prompt-priming with candidates)
+- **escalation ladder**: a base model reads everything; uncertainty triggers
+  (self-disagreement across bands, anchor-region failure, self-validation
+  arithmetic failure, cross-grader disagreement) escalate the page to a much
+  larger model. ⚠ The model is DELIBERATELY not pinned — chosen when compute
+  resources are in hand. Near-term: test distilled/quantized ~4B builds of
+  27B-class models in the open harness on the laptop.
+
+### Extraction's three deliverables, in order
+
+1. functional read-through — every page read under the eleven functions
+2. events → the clean data table
+3. the anybody summary — GENERATED FROM the table (a completeness check,
+   never a second author)
+
+Then: grade + why it matters → fixes + record in the Bootcamp → next run.
+
+### Mode: constitution settled, case law accretes through runs
+
+The three modes (transacts / observes / signals) are settled at clause level,
+assigned per event never per document — mode is NOT the instrument form and
+cannot be derived from doc-type codes (filings fail to capture it; one
+document carries many). The open work is `observes` (weak — reliably RECITAL,
+not proven observation): the recital-laundering risk. Mode matures one
+bootcamp miss at a time; no separate mode project exists.
+
+### Grading: cross-grading replaces bakeoff
+
+bakeoff/extract.py is retired as over-engineering. Its protection moves into
+the bootcamp: an open model in a local harness extracts alongside Claude,
+each grades the other; disagreement doubles as an escalation trigger (two
+models rarely share a hallucination). The draw is self-directed — the model
+queues its own clusters (borough/type/era/pages) by where its ledger shows
+the least proven coverage.
+
+### Scale context (why the campaign waits on hardware)
+
+Acquisition ≈ 20 days on this machine (network-paced; the source sets the
+ceiling). Decoding ≈ 100+ years on this laptop vs WEEKS on serious compute
+(~750M pages) — the compute investment is the moat between a decoded
+database and everyone who merely packages public rows.
