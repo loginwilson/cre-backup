@@ -55,6 +55,9 @@ ap.add_argument("--batch", type=int, default=3, help="urls asked per poll")
 ap.add_argument("--pace", type=float, default=0.0)
 ap.add_argument("--incoming", action="store_true",
                 help="legacy staging path; leaves work for rc_pdf_land.py")
+ap.add_argument("--cooldown", type=int, default=600,
+                help="seconds to hold all workers after a 4xx before the"
+                     " one-probe verdict (lane refused vs doc restricted)")
 a = ap.parse_args()
 
 STORE = pathlib.Path(r"D:\CRE Decoding System\02 Acquisitions"
@@ -78,7 +81,64 @@ HDRS = {"User-Agent": UA,
 lock = threading.Lock()
 stat = {"got": 0, "bytes": 0, "err": 0, "empty": 0, "wrote": 0}
 STOP = threading.Event()
+HOLD = threading.Event()                  # 4xx arbitration in progress
 DBQ = queue.Queue(maxsize=10000)          # (did, relpath) -> the one writer
+
+# ⚠ A LONE 4xx IS AMBIGUOUS (2026-08-24: RC_1873622, an EXHIBIT filed to the
+# City, 403'd once inside a 190,594-doc clean run and the any-4xx-stops-all
+# rule silenced the whole lane for ~55 min - login: "richmond should never
+# have stalled"). Sealed/restricted records 403 at ANY request rate; that is
+# a VERDICT about one document, not a refusal of us. Quarantined ids are
+# skipped on sight; their column stays '' (honest todo) pending adjudication.
+RESTRICTED_F = HERE / "rc_restricted.jsonl"
+RESTRICTED = set()
+if RESTRICTED_F.exists():
+    for _ln in RESTRICTED_F.read_text(encoding="utf-8").splitlines():
+        try:
+            RESTRICTED.add(json.loads(_ln)["id"])
+        except Exception:
+            pass
+
+
+def refusal_verdict(did, code):
+    """Hold everything, cool down, then ONE probe of a DIFFERENT doc decides:
+    probe also 4xx -> the LANE is refused -> STOP for good (no retry, no
+    rotation; resume is login's call). Probe fine -> the original doc is
+    RESTRICTED -> quarantine with evidence, lane resumes itself. The refused
+    doc itself is NEVER re-requested."""
+    if HOLD.is_set() or STOP.is_set():
+        return                             # one arbiter at a time
+    HOLD.set()
+    print("\n!! %s on %s - HOLDING ALL WORKERS %ds; one probe of a DIFFERENT"
+          " doc will decide: lane refused vs doc restricted"
+          % (code, did, a.cooldown), flush=True)
+    try:
+        time.sleep(a.cooldown)
+        probe = feed_batch(1)
+        if probe:
+            pdid, ploc = probe[0]
+            pr = requests.get(ploc, headers=HDRS, timeout=(10, 90))
+            if pr.status_code in (401, 403, 429):
+                print("!! probe %s ALSO refused (%s) - THE LANE IS REFUSED."
+                      " STOPPING; no retry, no rotation; resume is login's"
+                      " call." % (pdid, pr.status_code), flush=True)
+                STOP.set()
+                return
+            print("   probe %s -> %s: %s is DOC-RESTRICTED - quarantined"
+                  " with evidence, lane resumes"
+                  % (pdid, pr.status_code, did), flush=True)
+        else:
+            print("   no probe work available - quarantining %s and resuming"
+                  " cautiously (a blanket refusal will re-arbitrate on the"
+                  " next 4xx)" % did, flush=True)
+        RESTRICTED.add(did)
+        with RESTRICTED_F.open("a", encoding="utf-8") as fh:
+            fh.write(json.dumps({"id": did, "code": code,
+                                 "at": time.strftime("%Y-%m-%dT%H:%M:%S")})
+                     + "\n")
+    finally:
+        if not STOP.is_set():
+            HOLD.clear()
 
 
 def feed_batch(n):
@@ -153,14 +213,17 @@ def worker():
         for did, loc in work:
             if STOP.is_set():
                 return
+            while HOLD.is_set() and not STOP.is_set():
+                time.sleep(5)
+            if did in RESTRICTED:
+                continue
             try:
                 r = s.get(loc, timeout=(10, 90), stream=True)
                 if r.status_code in (401, 403, 429):
-                    print("\n!! REFUSED %s on %s - STOPPING THE LANE. "
-                          "No retry, no rotation." % (r.status_code, did),
-                          flush=True)
-                    STOP.set()
-                    return
+                    refusal_verdict(did, r.status_code)
+                    if STOP.is_set():
+                        return
+                    continue
                 if r.status_code != 200:
                     with lock:
                         stat["err"] += 1

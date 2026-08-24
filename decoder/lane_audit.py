@@ -51,19 +51,23 @@ random.seed()
 fails_total = 0
 
 
-def sample_rows(where, n=SAMPLE, bands=("2003", "2026")):
-    """Point-probe sampling on the PK — no filtered scans."""
+def sample_rows(pred, n=SAMPLE, bands=("2003", "2026")):
+    """Point-probe sampling on the PK — the predicate runs in PYTHON.
+    ⚠ Putting it in SQL turned each probe into an unbounded range scan
+    wherever the predicate is sparse (a filtered `id >= probe LIMIT 1`
+    walks rows until one matches — measured: the first audit run hung for
+    2h+ on exactly this). An unfiltered probe is one index lookup; a probe
+    that lands on a non-matching row is simply resampled."""
     out, seen = [], set()
-    for _ in range(n * 6):
+    for _ in range(n * 20):
         if len(out) >= n:
             break
         band = random.choice(bands)
         probe = band + "%012d" % random.randrange(0, 10 ** 12)
         r = con.execute(
             "SELECT id, recorded_details, pdf, keyed_by FROM navigation"
-            " WHERE id >= ? AND id NOT LIKE 'RC_%%' AND (%s)"
-            " ORDER BY id LIMIT 1" % where, (probe,)).fetchone()
-        if r and r[0] not in seen:
+            " WHERE id >= ? ORDER BY id LIMIT 1", (probe,)).fetchone()
+        if r and r[0] not in seen and not r[0].startswith("RC_") and pred(r):
             seen.add(r[0])
             out.append(r)
     return out
@@ -85,7 +89,7 @@ def verdict(name, checked, bad):
 
 
 # 1+2 — landed pdfs: file exists, page count == rd's own claim
-rows = sample_rows("pdf != '' AND pdf != 'imageless'")
+rows = sample_rows(lambda r: r[2] not in ("", "imageless"))
 bad_count, bad_file, n_counted = [], [], 0
 for did, rd, rel, _k in rows:
     p = STORE / rel
@@ -99,8 +103,15 @@ for did, rd, rel, _k in rows:
     if want > 0:
         n_counted += 1
         got = pdf_pages(p)
-        if got != want:
-            bad_count.append("%s(%d!=%d)" % (did, got, want))
+        # ⚠ MORE pages than rd claims is CORRECT, not a defect (verified by
+        # eye 2026-08-24 on 2003040100001001: the extras are the City
+        # Register's own RECORDING AND ENDORSEMENT COVER PAGE — "this page
+        # is part of the instrument", it carries the RPTT/RETT stamps our
+        # price rule reads — plus party-continuation and endorsement pages).
+        # The defect direction is only FEWER: pages the source claims that
+        # we failed to hold.
+        if got < want:
+            bad_count.append("%s(%d<%d)" % (did, got, want))
 verdict("file-exists", len(rows), bad_file)
 verdict("source-count", n_counted, bad_count)
 
@@ -136,7 +147,7 @@ print("                   (of failed ids: %d still todo · %d healed by retry)"
       % (todo, healed))
 
 # 4 — key lockstep on trigger-era rd landings
-rows = sample_rows("recorded_details != ''")
+rows = sample_rows(lambda r: (r[1] or "") != "")
 bad, n = [], 0
 for did, rd, _p, kb in rows:
     try:
@@ -150,7 +161,7 @@ for did, rd, _p, kb in rows:
 verdict("key-lockstep", n, bad)
 
 # 5 — orphan files on todo rows
-rows = sample_rows("pdf = '' AND recorded_details != ''")
+rows = sample_rows(lambda r: r[2] == "" and (r[1] or "") != "")
 bad = []
 for did, rd, _p, _k in rows:
     try:
