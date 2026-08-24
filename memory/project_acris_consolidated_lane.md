@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-24T18:05:15.620Z
+  modified: 2026-08-24T18:11:35.929Z
 ---
 
 **THE TWO ACCESS RULES (login's naming, 2026-08-24):** every source gets an
@@ -36,9 +36,15 @@ service resumed at HALF SPEED (rd 12.8/s vs 25-30 at unchanged width, both
 endpoints, zero errors, CPU idle) — that IS the tripped state still live,
 and running traffic through it keeps the flag warm; every relaunch (even
 ramped) re-knocks a flagged IP with fresh handshakes and re-aggravates.
-Result: notice #4 against width-8 traffic. Flag signature MEASURED (14:04): per-worker rd locked at 0.53 docs/s/worker,
-UNMOVED by freeing 2MB/s of pipe (richmond-pause discriminating test) —
-half-service is server-side, exact, and stable. **RESUME PROTOCOL: notice →
+Result: notice #4 against width-8 traffic. ⚠ CORRECTED 14:10 (login was right: "they only block and serve"): the
+"half-service flag" was DISPROVEN — the real cause was the CONNECTION'S
+LATENCY at 228ms (vs ~20 normal; measured Cloudflare ping + speedtest,
+identical on two wifi networks, bandwidth healthy at 50Mbps parallel).
+At 228ms RTT, 28 rd workers arithmetically = 12.8/s — no throttle
+involved. ACRIS has exactly two states: SERVE and BLOCK (Bandwidth
+Notice). Diagnostic law: measure PING before theorizing server behavior —
+single-stream speed & per-worker rates are latency-priced, and width
+FIGHTS latency (more in-flight covers travel time). **RESUME PROTOCOL: notice →
 FULL SILENCE (kill the lane, probe included, hours not minutes) → single
 probe → if clean, tiny test pool 10 min reading PER-WORKER rd rate (~1.0
 doc/s/worker = clear · ~0.5 = still flagged → silence again, longer) →
