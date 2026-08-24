@@ -44,12 +44,15 @@ LANES = {
         # ⚠ NEVER COLD-LAUNCH (login 13:03, trip #3): the lane self-ramps
         # from width 8 - that is load-bearing, not a slow start. Restarts
         # are themselves a load event; minimize them.
-        # ⚠ pdf width is tuned against the SERVER's signal: 20 workers at
-        # 10:14 business hours clustered Short failures (pages stop arriving
-        # = load-shedding); 12 ran clean. Creep up off-hours, back off when
-        # Shorts rise - never push through them.
+        # ⚠ PIANO CONFIG (login 14:45, after trip #5): --max-inflight 1 means
+        # rd, pdf AND THE SYNC WALKER can never be on the wire together -
+        # "its not the number of requests, its the overlap when they
+        # converge that tells them to block." All three organs take turns
+        # down ONE kept-alive connection. Worker counts are SHARE OF THE
+        # WIRE, not pressure. Do not raise --max-inflight without login.
         ("acris_lane", "acris_lane.py",
-         ["--apply", "--workers", "28", "--pdf-workers", "12"],
+         ["--apply", "--workers", "8", "--pdf-workers", "12",
+          "--max-inflight", "1", "--max-rps", "20"],
          HERE, W / "acris_lane.log"),
         ("rc_live", "rc_live.py",
          ["--apply", "--every", "10"], HERE, HERE / "rc_live.log"),

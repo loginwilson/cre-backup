@@ -79,6 +79,13 @@ STOPWORDS = {
     "WHEREAS", "NOW", "THEREFORE", "RESOLVED", "WITNESSETH", "IN", "WITNESS",
     "ACTOR", "CLAIMS", "Section", "Article", "Paragraph", "Jr", "Sr", "Esq",
     "LLC", "LLP", "Inc", "Corp", "LP", "Ltd", "Co",
+    # uppercase forms of the function words above (emphasis styling)
+    "THE", "THIS", "THAT", "AND", "OR", "OF", "TO", "FROM", "BY", "WITH",
+    "AT", "ON", "FOR", "AS", "IS", "IT", "ITS", "NOT", "NO", "ONE", "TWO",
+    "ALL", "EACH", "EVERY", "READ", "DERIVED", "INFERRED", "VALUE", "COST",
+    "TITLE", "IDENTITY", "OCCUPANCY", "ENCUMBRANCE", "ENVELOPE",
+    "ENTITLEMENT", "PERMIT", "ASBUILT", "CAPITAL", "PAGE", "ARITHMETIC",
+    "EXECUTION", "SEQUENCE", "First", "Second", "Third", "Borough",
 }
 
 # Sentence-level noise: findings whose display form is only punctuation-
@@ -109,9 +116,19 @@ def proper_nouns(body):
     found = {}
     for m in re.finditer(r"\b([A-Z][\w&.'’-]*(?:\s+[A-Z][\w&.'’-]*)*)", body):
         raw = m.group(1).strip()
+        # ALL-CAPS runs longer than four words are the writer's own emphasis
+        # (section labels, shouted findings), not names. Names are short.
+        words = raw.split()
+        if len(words) > 4 and all(w.isupper() for w in words if w.isalpha()):
+            continue
         for piece in SPLIT_ON.split(raw):
-            parts = [p for p in piece.split()
-                     if p.strip(".,;:") not in STOPWORDS]
+            parts = piece.split()
+            # trim stopwords at the EDGES only — stripping interior ones
+            # ("BOOK OF PATENTS" -> "BOOK PATENTS") breaks the match
+            while parts and parts[0].strip(".,;:") in STOPWORDS:
+                parts.pop(0)
+            while parts and parts[-1].strip(".,;:") in STOPWORDS:
+                parts.pop()
             if not parts:
                 continue
             tok = " ".join(parts).strip(".,;: ")

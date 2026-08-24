@@ -93,15 +93,33 @@ def page_count(did, timeout=90):
     return int(m.group(1)) if m else 0
 
 
-def fetch_pdf(did, rec_date="", timeout=90):
+def fetch_pdf(did, rec_date="", timeout=90, turn=None):
     """Returns (state, value):  ('imageless','imageless') | ('pdf', relpath).
 
     Raises AccessDenied on a refusal and Short when the document came back
-    incomplete. Requests = 1 (the map) + TotalPages."""
-    total = page_count(did, timeout=timeout)
-    if total <= 0:
-        return "imageless", "imageless"
+    incomplete. Requests = 1 (the map) + TotalPages.
 
+    ⚠ `turn` (acris_lane's contiguity lock) is held across THE NETWORK BURST
+    ONLY - the map and every page, so nothing interleaves between a
+    document's pages - and released before conversion, which is seconds of
+    CPU that must never idle the wire for the rest of the crew."""
+    with (turn() if turn is not None else contextlib.nullcontext()):
+        total = page_count(did, timeout=timeout)
+        if total <= 0:
+            return "imageless", "imageless"
+        frames, stop_why = _frames(did, total, timeout)
+
+    if len(frames) != total:
+        raise Short("short: %d/%d pages for %s · %s"
+                    % (len(frames), total, did, stop_why))
+    d = CP.doc_store_dir(did, rec_date)
+    d.mkdir(parents=True, exist_ok=True)
+    pdf = d / ("%s.pdf" % did)
+    pdf.write_bytes(img2pdf.convert(frames))
+    return "pdf", str(pdf.relative_to(STORE))
+
+
+def _frames(did, total, timeout):
     frames, stop_why = [], ""
     for p in range(1, total + 1):
         data, ct = _get("%s?doc_id=%s&page=%d" % (fetch_pages.BASE, did, p),
@@ -124,16 +142,7 @@ def fetch_pdf(did, rec_date="", timeout=90):
                         % (p, ct, len(data), data[:16].hex()))
             break
         frames.append(data)
-
-    if len(frames) != total:
-        raise Short("short: %d/%d pages for %s · %s"
-                    % (len(frames), total, did, stop_why))
-
-    d = CP.doc_store_dir(did, rec_date)
-    d.mkdir(parents=True, exist_ok=True)
-    pdf = d / ("%s.pdf" % did)
-    pdf.write_bytes(img2pdf.convert(frames))
-    return "pdf", str(pdf.relative_to(STORE))
+    return frames, stop_why
 
 
 if __name__ == "__main__":

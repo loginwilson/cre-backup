@@ -104,6 +104,22 @@ ap.add_argument("--pdf-workers", type=int, default=12)   # STARTING width
 ap.add_argument("--pdf-max", type=int, default=48)       # governor's ceiling
 ap.add_argument("--ramp-step", type=int, default=2)
 ap.add_argument("--ramp-every", type=int, default=60)
+ap.add_argument("--phase", default="row",
+                choices=("row", "auto", "rd", "pdf", "both"),
+                help="WHICH BACKFILL ORGAN OWNS THE WIRE (login 2026-08-24)."
+                     " Interleaving rd and pdf only ever paid because they"
+                     " are SEPARATE SERVER POOLS (measured 08-21: rd held"
+                     " 135/s under pdf load) - under one wire that benefit"
+                     " is gone, so running them together adds convergence"
+                     " risk for zero throughput. auto = drain rd first (5.4M"
+                     " requests, ~2.4% of the work, and it keys the whole"
+                     " corpus), then open pdf. The WALK always interleaves -"
+                     " it is time-based and costs 0.1 req/s."
+                     " ⚠ row (DEFAULT, login: 'I would like start to finish"
+                     " by row') = THE ASSEMBLY LINE: one worker carries one"
+                     " document all the way to READY - rd, key (trigger),"
+                     " image - then takes the next. One pass over the"
+                     " corpus, every row it touches is finished.")
 ap.add_argument("--max-inflight", type=int, default=1,
                 help="how many acris requests may be OPEN AT ONCE, process"
                      "-wide. 1 = pure piano: the code cannot collide two"
@@ -236,6 +252,26 @@ def slot():
         yield
 
 
+# ⚠⚠ THE TURN (login 2026-08-24: "the issue is when you are running the walk
+# and it breaks the sequencing"). slot() stops requests OVERLAPPING; this
+# stops them INTERLEAVING. A document's requests - its map and all its pages
+# - are one contiguous burst down the wire, and the walk waits for a row
+# boundary instead of cutting in between page 5 and page 6. That is what a
+# browser reading a document looks like.
+#
+# ⚠ HELD ONLY ACROSS NETWORK WORK, NEVER ACROSS CONVERSION. img2pdf takes
+# seconds on a long document; holding the turn through it would idle the
+# wire for every other worker - the whole point of having a crew. fetch_pdf
+# releases before it converts.
+_turn = threading.Lock()
+
+
+@contextlib.contextmanager
+def turn():
+    with _turn:
+        yield
+
+
 
 # ⚠⚠ THE SINGLE VOICE (login 2026-08-24, the settled diagnosis): "acris
 # trips when multiple requests come in simultaneously so it needs to
@@ -365,21 +401,27 @@ def edge_tick():
         _last_deep[0] = time.time()
     found, blanks, n = [], 0, edge
     try:
-        while blanks < limit and (n - edge) < a.max:
-            n += 1
-            with slot():
+        # ⚠ THE WHOLE WALK IS ONE TURN: it waits for a row boundary rather
+        # than cutting into a document's page sequence, and its own 1-8
+        # requests stay contiguous. Pure network, no local work - safe to
+        # hold. Costs at most one long document's burst of latency, against
+        # a 10s cadence and filings that post in clerk-batches.
+        with turn():
+            while blanks < limit and (n - edge) < a.max:
+                n += 1
                 state, did, html = AE.fetch(n)
-            if state != "live":
-                blanks += 1
-                continue
-            blanks = 0
-            try:
-                rec = json.dumps(RD.parse_acris(html), separators=(",", ":"))
-            except Exception as e:
-                say("  ⚠ rd parse failed for %s (%s) - landing rd='' for"
-                    " the backfill to retry" % (did, type(e).__name__))
-                rec = ""
-            found.append((n, did, rec))
+                if state != "live":
+                    blanks += 1
+                    continue
+                blanks = 0
+                try:
+                    rec = json.dumps(RD.parse_acris(html),
+                                     separators=(",", ":"))
+                except Exception as e:
+                    say("  ⚠ rd parse failed for %s (%s) - landing rd='' for"
+                        " the backfill to retry" % (did, type(e).__name__))
+                    rec = ""
+                found.append((n, did, rec))
     except REFUSALS as e:
         say("  PROBE REFUSED: %.90s - nothing written" % e)
         return False, 0, True
@@ -417,13 +459,12 @@ def edge_tick():
     # hot-list: a fresh filing's pdf is fetched NOW, not when the backfill
     # reaches it. Only rows whose rd parsed - pdf must follow rd, and a row
     # landed rd='' would break `ready = needed - pdf_todo` if pdf'd first.
-    if a.pdf_workers > 0:
-        for _c, did, rec in found:
-            if rec:
-                try:
-                    pdf_hot.put((did, json.loads(rec).get("recorded", "")))
-                except Exception:
-                    pass
+    # ⚠ carries the rd JSON, not a bare date: the assembly line reads it to
+    # know the row already has its recorded details (skip stage 1) AND to
+    # get the recorded date for the store path. _rec_date() accepts either.
+    for _c, did, rec in found:
+        if rec:
+            pdf_hot.put((did, rec))
     say("  SYNC landed %d · rd in the SAME request · edge %d -> %d"
         % (len(found), edge, found[-1][0]))
     return True, len(found), False
@@ -604,6 +645,18 @@ def pdf_feeder():
             pdf_q.put((did, rec_date or ""))
 
 
+def _rec_date(v):
+    """Accept either the rd JSON or a bare recorded-date string."""
+    if not v:
+        return ""
+    if v.lstrip().startswith("{"):
+        try:
+            return json.loads(v).get("recorded", "") or ""
+        except Exception:
+            return ""
+    return v
+
+
 def _fresh(rec_date):
     """Recorded within --fresh-days. On these, TotalPages<=0 means 'scan not
     uploaded yet' (the lag distribution), never an imageless verdict."""
@@ -641,7 +694,7 @@ def pdf_worker(idx):
                                (did,)).fetchone()
             if row is None or row[0]:
                 continue           # landed already (hot/wrap overlap)
-            st, val = AP.fetch_pdf(did, rec_date)
+            st, val = AP.fetch_pdf(did, rec_date, turn=turn)
             if st == "imageless" and _fresh(rec_date):
                 with lock:
                     stats["deferred"] += 1
@@ -790,32 +843,181 @@ def governor():
 # width 52) and is a dial, not a constant.
 RAMP_START, RAMP_STEP, RAMP_EVERY = 8, a.ramp_step, a.ramp_every
 _target = min(a.pdf_workers, a.pdf_max)
-pdf_width[0] = min(RAMP_START, _target)
+# PHASE GATE: in rd/auto the pdf pool holds a token width (2) so the sync
+# HOT LIST still images new filings the moment they record - today's
+# documents stay fully ready - while the pdf BACKFILL waits its turn.
+HOT_ONLY = 2
+pdf_backfill = threading.Event()
+pdf_width[0] = (min(RAMP_START, _target) if a.phase in ("pdf", "both")
+                else min(HOT_ONLY, _target))
+if a.phase in ("pdf", "both"):
+    pdf_backfill.set()
 
 
 def warmup_ramp():
+    if a.phase == "rd":
+        say("  PHASE rd - pdf backfill parked, %d workers held for the sync"
+            " hot list (new filings still get images at once)" % HOT_ONLY)
+        return
+    if a.phase == "auto" and not rd_all_fed.is_set():
+        say("  PHASE rd first - pdf backfill opens when the rd gap drains"
+            " (rd is ~2.4%% of remaining requests and keys the corpus);"
+            " %d pdf workers held for the sync hot list" % HOT_ONLY)
+        while not rd_all_fed.is_set() and not stop_workers.is_set():
+            time.sleep(30)
+        if stop_workers.is_set():
+            return
+        say("  PHASE rd drained -> opening the pdf backfill")
+        pdf_width[0] = min(RAMP_START, _target)
+    pdf_backfill.set()
     while pdf_width[0] < _target and not stop_workers.is_set():
         time.sleep(RAMP_EVERY)
         pdf_width[0] = min(pdf_width[0] + RAMP_STEP, _target)
     if not stop_workers.is_set():
         say("  RAMP complete - width %d, governor owns it" % pdf_width[0])
-say("acris_lane up · %s · %d rd + pdf width %d (max %d) · %.1f req/s cap ·"
-    " edge every %ds · apply=%s · quarantined %d rd / %d pdf"
-    % ("PIANO: one request on the wire at a time, one connection, all three"
-       " organs take turns" if a.max_inflight <= 1
+
+# ── THE ASSEMBLY LINE (--phase row) — one worker, one row, start to finish ──
+
+def row_feeder():
+    """Every INCOMPLETE row, in id order, from ix_nav_pdf_todo.
+
+    ⚠ ONE INDEX COVERS BOTH GAPS: a row missing rd necessarily has pdf=''
+    too (nothing ever lands an image before its rd - image_walk and the pdf
+    pool both require recorded_details!=''), so `pdf=''` IS the not-ready
+    set. `pdf='imageless'` is ready-by-verdict and correctly excluded.
+    Wraps on exhaustion so error rows and deferred-fresh rows get retried."""
+    read = sqlite3.connect(f"file:{CP.NAV_DB}?mode=ro", uri=True,
+                           check_same_thread=False)
+    read.execute("PRAGMA busy_timeout=60000")
+    cursor = ""
+    while not stop_workers.is_set():
+        rows = read.execute(
+            "SELECT id, recorded_details FROM navigation WHERE pdf = ''"
+            " AND id > ? AND id NOT LIKE 'RC_%'"
+            " ORDER BY id LIMIT 5000", (cursor,)).fetchall()
+        if not rows:
+            rd_all_fed.set()
+            time.sleep(600)
+            cursor = ""
+            continue
+        cursor = rows[-1][0]
+        for did, rd in rows:
+            if stop_workers.is_set():
+                return
+            q.put((did, rd or ""))
+
+
+def row_worker(idx):
+    """Carry ONE document to READY: rd (if missing) -> key by trigger ->
+    image -> next. Every request goes down the single voice; the local work
+    (parse, img2pdf, db) overlaps with other workers' turns on the wire."""
+    time.sleep(idx * 0.5)
+    read = sqlite3.connect(f"file:{CP.NAV_DB}?mode=ro", uri=True,
+                           check_same_thread=False)
+    read.execute("PRAGMA busy_timeout=60000")
+    while not stop_workers.is_set():
+        # crew size is governed: the reconnect rule collapses it to a
+        # handful after a mass-failure event, then it climbs back
+        if idx >= pdf_width[0]:
+            time.sleep(5)
+            continue
+        try:
+            item = pdf_hot.get_nowait()          # new filings jump the line
+        except queue.Empty:
+            try:
+                item = q.get(timeout=5)
+            except queue.Empty:
+                continue
+        did, rd_json = item
+        if did in QUAR_RD or did in QUAR_PDF:
+            continue
+        try:
+            # ── stage 1: recorded details (skipped when already held) ──
+            if not rd_json:
+                with turn():
+                    body, _ct = one_at_a_time(
+                        LD.BASE + "/DS/DocumentSearch/DocumentDetail?doc_id="
+                        + did, LD.BASE + "/DS/DocumentSearch/")
+                html = RD.clean_html(body.decode("utf-8", "replace"))
+                LD.check_refused(html)
+                flat = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html))
+                if not re.search(r"DOCUMENT ID:\s*" + re.escape(did), flat):
+                    raise ValueError("page does not echo id")
+                rec = RD.parse_acris(html)
+                rec["at"] = time.strftime("%Y-%m-%dT%H:%M:%S")
+                rd_json = json.dumps(rec, separators=(",", ":"))
+                with pend_lock:
+                    pend.append((rd_json, did))
+                    n = len(pend)
+                if n >= BATCH:
+                    flush()                      # trigger keys each landing
+                with lock:
+                    stats["done"] += 1
+            # ── stage 2: the image, same row, same turn-taking wire ──
+            rec_date = _rec_date(rd_json)
+            st, val = AP.fetch_pdf(did, rec_date, turn=turn)
+            if st == "imageless" and _fresh(rec_date):
+                with lock:
+                    stats["deferred"] += 1       # scan lag, not a verdict
+                continue
+            with ppend_lock:
+                ppend.append((val, did))
+                m = len(ppend)
+            with lock:
+                stats["pdfs" if st == "pdf" else "imageless"] += 1
+            if m >= PDF_BATCH:
+                pdf_flush()
+        except REFUSALS as e:
+            if not stop_workers.is_set():
+                stop_workers.set()
+                say("  REFUSED at %s - ALL WORKERS STOPPED: %.90s" % (did, e))
+        except Exception as e:
+            kind = type(e).__name__
+            with lock:
+                stats["pdf_fail"] += 1
+                msg = str(e)
+                if (kind in ("Short", "TimeoutError", "RemoteDisconnected",
+                             "IncompleteRead")
+                        or "timed out" in msg or "10054" in msg
+                        or "10060" in msg or "UNEXPECTED_EOF" in msg
+                        or "forcibly closed" in msg):
+                    stats["shed"] += 1
+            with PDF_FAILS.open("a", encoding="utf-8") as fh:
+                fh.write(json.dumps({"id": did, "err": kind,
+                                     "msg": str(e)[:120]}) + "\n")
+
+
+say("acris_lane up · %s · %s · %.1f req/s cap · edge every %ds · apply=%s"
+    " · quarantined %d rd / %d pdf"
+    % ("PIANO: one request on the wire, one connection, contiguous per row"
+       if a.max_inflight <= 1
        else "CHORDS: up to %d requests at once" % a.max_inflight,
-       a.workers, pdf_width[0], a.pdf_max, a.max_rps, a.every, a.apply,
-       len(QUAR_RD), len(QUAR_PDF)))
-threads = [threading.Thread(target=edge_thread, daemon=True),
-           threading.Thread(target=feeder, daemon=True)]
-threads += [threading.Thread(target=worker, args=(i,), daemon=True)
-            for i in range(a.workers)]
-if a.apply and a.pdf_workers > 0:
-    threads.append(threading.Thread(target=pdf_feeder, daemon=True))
+       ("ASSEMBLY LINE: %d workers, each carries a row rd->key->image->READY"
+        % a.workers) if a.phase == "row"
+       else "phase=%s · %d rd + pdf width %d (max %d)"
+       % (a.phase, a.workers, pdf_width[0], a.pdf_max),
+       a.max_rps, a.every, a.apply, len(QUAR_RD), len(QUAR_PDF)))
+threads = [threading.Thread(target=edge_thread, daemon=True)]
+if a.phase == "row":
+    # THE ASSEMBLY LINE: one pool, each worker carries a row to READY.
+    # `--workers` is the crew size - enough to keep the single wire busy
+    # while others parse and convert, never a pressure setting.
+    pdf_width[0] = a.workers          # gate is the wire, not the width
+    threads.append(threading.Thread(target=row_feeder, daemon=True))
+    threads += [threading.Thread(target=row_worker, args=(i,), daemon=True)
+                for i in range(a.workers)]
+else:
+    threads.append(threading.Thread(target=feeder, daemon=True))
+    threads += [threading.Thread(target=worker, args=(i,), daemon=True)
+                for i in range(a.workers)]
+    if a.apply and a.pdf_workers > 0:
+        threads.append(threading.Thread(target=pdf_feeder, daemon=True))
+        threads.append(threading.Thread(target=warmup_ramp, daemon=True))
+        threads += [threading.Thread(target=pdf_worker, args=(i,),
+                                     daemon=True)
+                    for i in range(a.pdf_max)]
+if a.apply:
     threads.append(threading.Thread(target=governor, daemon=True))
-    threads.append(threading.Thread(target=warmup_ramp, daemon=True))
-    threads += [threading.Thread(target=pdf_worker, args=(i,), daemon=True)
-                for i in range(a.pdf_max)]
 t0 = time.time()
 for t in threads:
     t.start()
