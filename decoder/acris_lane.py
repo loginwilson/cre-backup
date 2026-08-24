@@ -85,7 +85,8 @@ BATCH = 200
 ap = argparse.ArgumentParser()
 ap.add_argument("--apply", action="store_true")
 ap.add_argument("--workers", type=int, default=28)
-ap.add_argument("--pdf-workers", type=int, default=10)
+ap.add_argument("--pdf-workers", type=int, default=12)   # STARTING width
+ap.add_argument("--pdf-max", type=int, default=48)       # governor's ceiling
 ap.add_argument("--fresh-days", type=int, default=30)
 ap.add_argument("--every", type=int, default=10)
 ap.add_argument("--control-every", type=int, default=60)
@@ -102,7 +103,10 @@ q: queue.Queue = queue.Queue(maxsize=20_000)
 pdf_q: queue.Queue = queue.Queue(maxsize=20_000)
 pdf_hot: queue.Queue = queue.Queue()   # sync landings jump the pdf queue
 stats = {"done": 0, "fail": 0,
-         "pdfs": 0, "imageless": 0, "deferred": 0, "pdf_fail": 0}
+         "pdfs": 0, "imageless": 0, "deferred": 0, "pdf_fail": 0,
+         "shed": 0}          # Short/timeout = the server's load signal
+pdf_width = [0]              # live width, governed; workers idle above it
+rd_all_fed = threading.Event()   # rd feeder exhausted the todo set
 ua = {"User-Agent": fetch_pages.UA}
 PDF_FAILS = CP.NAV_WORK / "acris_lane_pdf_fails.jsonl"
 PDF_BATCH = 25
@@ -300,6 +304,7 @@ def feeder():
             " AND id > ? AND id NOT LIKE 'RC_%'"
             " ORDER BY id LIMIT 10000", (cursor,)).fetchall()
         if not rows:
+            rd_all_fed.set()     # the governor reallocates rd's budget to pdf
             break
         cursor = rows[-1][0]
         for (did,) in rows:
@@ -440,11 +445,14 @@ def _fresh(rec_date):
     return (time.time() - t) < a.fresh_days * 86400
 
 
-def pdf_worker():
+def pdf_worker(idx):
     read = sqlite3.connect(f"file:{CP.NAV_DB}?mode=ro", uri=True,
                            check_same_thread=False)
     read.execute("PRAGMA busy_timeout=60000")
     while not stop_workers.is_set():
+        if idx >= pdf_width[0]:      # governed: idle above the live width
+            time.sleep(5)
+            continue
         try:
             item = pdf_hot.get_nowait()
         except queue.Empty:
@@ -476,24 +484,81 @@ def pdf_worker():
                 say("  PDF REFUSED at %s - ALL WORKERS STOPPED: %.90s"
                     % (did, e))
         except Exception as e:
+            kind = type(e).__name__
             with lock:
                 stats["pdf_fail"] += 1
+                # Short / timeout = the image backend shedding load - the
+                # governor's back-off signal, distinct from ordinary fails
+                if kind in ("Short", "TimeoutError") or "timed out" in str(e):
+                    stats["shed"] += 1
             with PDF_FAILS.open("a", encoding="utf-8") as fh:
-                fh.write(json.dumps({"id": did, "err": type(e).__name__,
+                fh.write(json.dumps({"id": did, "err": kind,
                                      "msg": str(e)[:120]}) + "\n")
 
 
-say("acris_lane up · ONE access point · %d rd + %d pdf workers + edge"
-    " every %ds · apply=%s"
-    % (a.workers, a.pdf_workers, a.every, a.apply))
+def governor():
+    """THE RAMP THAT KEEPS THE PHILOSOPHY (login 2026-08-24: "figure out
+    where ramp up can happen without killing the philosophy... the
+    intelligence needs to know once rd backfill finishes that it can
+    allocate more resources to the pdf and live sync").
+
+    One rule set, applied every minute:
+      - the server's shed signal (Short/timeout) is OBEYED, never pushed
+        through: a shedding minute steps width DOWN 25% and holds 10 min
+      - 5 consecutive clean minutes EARN +2 width, up to --pdf-max
+      - rd backfill draining hands its budget over: +8 width immediately
+        (the reallocation login asked for - same server, freed tonnage)
+      - a refusal is above this governor's pay grade: stop_workers stills
+        everything and only the probe continues (unchanged)."""
+    streak, hold, last = 0, 0, {"shed": 0, "pdfs": 0, "imageless": 0}
+    rd_handed = False
+    while not stop_workers.is_set():
+        time.sleep(60)
+        with lock:
+            s = dict(stats)
+        shed = s["shed"] - last["shed"]
+        landed = (s["pdfs"] + s["imageless"]
+                  - last["pdfs"] - last["imageless"])
+        last = s
+        w = pdf_width[0]
+        if rd_all_fed.is_set() and not rd_handed:
+            rd_handed = True
+            pdf_width[0] = min(w + 8, a.pdf_max)
+            say("  GOVERNOR rd backfill drained - budget reallocated,"
+                " pdf width %d -> %d" % (w, pdf_width[0]))
+            streak = 0
+            continue
+        if shed >= 3:
+            pdf_width[0] = max(w * 3 // 4, 4)
+            hold, streak = 10, 0
+            say("  GOVERNOR server shedding (%d short/timeout) - width"
+                " %d -> %d, hold 10 min" % (shed, w, pdf_width[0]))
+        elif hold > 0:
+            hold -= 1
+        elif shed == 0 and landed > 0:
+            streak += 1
+            if streak >= 5 and w < a.pdf_max:
+                pdf_width[0] = min(w + 2, a.pdf_max)
+                streak = 0
+                say("  GOVERNOR 5 clean minutes - width %d -> %d"
+                    % (w, pdf_width[0]))
+        else:
+            streak = 0
+
+
+pdf_width[0] = min(a.pdf_workers, a.pdf_max)
+say("acris_lane up · ONE access point · %d rd + pdf width %d (governed,"
+    " max %d) + edge every %ds · apply=%s"
+    % (a.workers, pdf_width[0], a.pdf_max, a.every, a.apply))
 threads = [threading.Thread(target=edge_thread, daemon=True),
            threading.Thread(target=feeder, daemon=True)]
 threads += [threading.Thread(target=worker, daemon=True)
             for _ in range(a.workers)]
 if a.apply and a.pdf_workers > 0:
     threads.append(threading.Thread(target=pdf_feeder, daemon=True))
-    threads += [threading.Thread(target=pdf_worker, daemon=True)
-                for _ in range(a.pdf_workers)]
+    threads.append(threading.Thread(target=governor, daemon=True))
+    threads += [threading.Thread(target=pdf_worker, args=(i,), daemon=True)
+                for i in range(a.pdf_max)]
 t0 = time.time()
 for t in threads:
     t.start()
@@ -512,9 +577,10 @@ try:
                else ""))
         if a.pdf_workers > 0:
             say("  PDF PROGRESS %s pdfs · %s imageless · %d deferred ·"
-                " %d fail" % ("{:,}".format(s["pdfs"]),
-                              "{:,}".format(s["imageless"]),
-                              s["deferred"], s["pdf_fail"]))
+                " %d fail · width %d" % ("{:,}".format(s["pdfs"]),
+                                         "{:,}".format(s["imageless"]),
+                                         s["deferred"], s["pdf_fail"],
+                                         pdf_width[0]))
 except KeyboardInterrupt:
     stop_workers.set()
     flush()

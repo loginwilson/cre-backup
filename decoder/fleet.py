@@ -41,8 +41,12 @@ LANES = {
     "sync": [
         # THE CONSOLIDATED ACRIS LANE - sync + rd backfill + pdf pool, one
         # access point. Log goes to NAV_WORK (the board reads it there).
+        # ⚠ pdf width is tuned against the SERVER's signal: 20 workers at
+        # 10:14 business hours clustered Short failures (pages stop arriving
+        # = load-shedding); 12 ran clean. Creep up off-hours, back off when
+        # Shorts rise - never push through them.
         ("acris_lane", "acris_lane.py",
-         ["--apply", "--workers", "28", "--pdf-workers", "20"],
+         ["--apply", "--workers", "28", "--pdf-workers", "12"],
          HERE, W / "acris_lane.log"),
         ("rc_live", "rc_live.py",
          ["--apply", "--every", "10"], HERE, HERE / "rc_live.log"),

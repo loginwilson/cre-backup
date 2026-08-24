@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-24T14:15:19.000Z
+  modified: 2026-08-24T14:28:01.345Z
 ---
 
 **THE CONSOLIDATED ACRIS LANE (cut over 2026-08-24 ~10:12).** `acris_lane.py`
@@ -31,10 +31,26 @@ one subtraction for rate+increase). rd detail = "N total" line + hidden acq rd
 row. ONE refusal tripwire stills BOTH pools; probe continues as resume
 detector; resume = login's call.
 
+**THE GOVERNOR (built 10:26):** pdf width is SELF-TUNED against the server's
+shed signal (Short/timeout = load-shedding, distinct from blocks): shedding
+minute (≥3) → width ×0.75, hold 10 min; 5 clean minutes → +2 up to
+--pdf-max 48; rd feeder draining → +8 immediately (rd's budget reallocated —
+login: "the intelligence needs to know once rd finishes it can allocate more
+to pdf and live sync"). Workers idle above pdf_width[0]; refusal still
+stills everything. Per-worker rate ≈ fleet parity (0.15/s); 6-8/s needs
+~40-55 workers — governor finds what the server bears, day vs night.
+
+**LANDED=READY VERIFIED BY SAMPLE (10:29):** 314/314 pdf-done rows carry
+their pass-1 key (covered 2003 band + hot band) — 0% unkeyed, and by
+construction new rows key before pdf (trigger fires on rd, pdf follows rd).
+FT_ film band: 0 pdfs yet — film completes ~3.6x docs/page (tilt lever,
+front-loads doc-count without moving the page-bound 100% date).
+
 **<30-day target** (login): ~19.9M pdfs left needs ≥7.7 ready/s sustained;
 measured image-backend ceiling ~6-8/s aggregate (worker-independent). Plan:
-scale pool (CPU was 46% of one core), inherit rd's threads when rd closes
-(~2 days), ProcessPool-offload img2pdf/md5 if GIL pins first. Next: rc_lane
-for richmond (rd closed → edge+pdf only) → pure 2-row board. See
+governor climbs (CPU was 43% of one core), rd closes (~2 days) → +budget,
+ProcessPool-offload img2pdf/md5 if GIL pins first. Next: rc_lane for
+richmond AFTER its pdf trio levels (~1.5 days; login 10:28 — no urgency,
+richmond never tripped) → pure 2-row board. See
 [[project-decoder-updates-board]], [[project-decoder-fleet-restore]],
 [[project-acris-refusal-20260824]].
