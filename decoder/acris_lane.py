@@ -111,6 +111,28 @@ ua = {"User-Agent": fetch_pages.UA}
 PDF_FAILS = CP.NAV_WORK / "acris_lane_pdf_fails.jsonl"
 PDF_BATCH = 25
 
+
+def _quarantine(path, n=3):
+    """ids that failed >=n times = server-side defects (login: "any defect
+    should be cleaned up for maximal performance"). Skipped on sight so they
+    stop costing fetches - but their columns STAY EMPTY (todo state) for a
+    later adjudication pass. Never a fake verdict to make a row look done."""
+    try:
+        c = {}
+        for ln in path.read_text(encoding="utf-8").splitlines():
+            try:
+                i = json.loads(ln)["id"]
+            except Exception:
+                continue
+            c[i] = c.get(i, 0) + 1
+        return {i for i, k in c.items() if k >= n}
+    except OSError:
+        return set()
+
+
+QUAR_RD = _quarantine(FAILS)
+QUAR_PDF = _quarantine(PDF_FAILS)
+
 con = sqlite3.connect(CP.NAV_DB, timeout=600, check_same_thread=False)
 con.execute("PRAGMA journal_mode=WAL")
 con.execute("PRAGMA busy_timeout=300000")
@@ -304,8 +326,16 @@ def feeder():
             " AND id > ? AND id NOT LIKE 'RC_%'"
             " ORDER BY id LIMIT 10000", (cursor,)).fetchall()
         if not rows:
-            rd_all_fed.set()     # the governor reallocates rd's budget to pdf
-            break
+            # drained: the governor reallocates rd's budget to pdf, and the
+            # feeder WRAPS after a rest instead of exiting - error rows
+            # (HTTPError voids, URLError blips) landed nothing, so the todo
+            # index still owes them and each sweep re-attempts. Nothing is
+            # ever missed, only delayed; the column is the ledger, not the
+            # error log.
+            rd_all_fed.set()
+            time.sleep(600)
+            cursor = ""
+            continue
         cursor = rows[-1][0]
         for (did,) in rows:
             if stop_workers.is_set():
@@ -349,6 +379,8 @@ def worker():
         if did is None:
             q.put(None)
             return
+        if did in QUAR_RD:
+            continue
         try:
             req = urllib.request.Request(
                 LD.BASE + "/DS/DocumentSearch/DocumentDetail?doc_id=" + did,
@@ -461,6 +493,8 @@ def pdf_worker(idx):
             except queue.Empty:
                 continue
         did, rec_date = item
+        if did in QUAR_PDF:
+            continue
         try:
             row = read.execute("SELECT pdf FROM navigation WHERE id=?",
                                (did,)).fetchone()
@@ -548,8 +582,9 @@ def governor():
 
 pdf_width[0] = min(a.pdf_workers, a.pdf_max)
 say("acris_lane up · ONE access point · %d rd + pdf width %d (governed,"
-    " max %d) + edge every %ds · apply=%s"
-    % (a.workers, pdf_width[0], a.pdf_max, a.every, a.apply))
+    " max %d) + edge every %ds · apply=%s · quarantined %d rd / %d pdf"
+    % (a.workers, pdf_width[0], a.pdf_max, a.every, a.apply,
+       len(QUAR_RD), len(QUAR_PDF)))
 threads = [threading.Thread(target=edge_thread, daemon=True),
            threading.Thread(target=feeder, daemon=True)]
 threads += [threading.Thread(target=worker, daemon=True)

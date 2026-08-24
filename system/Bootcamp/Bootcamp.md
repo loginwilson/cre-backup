@@ -7392,3 +7392,144 @@ HELD: the negative draw result reported plainly; type-shelf finding
 banked unsmoothed; RP-5217 blanks as null; party ruling applied on
 its first outing; deed-vs-tax-map flagged; qty roles physical-spec;
 streak grepped.
+
+# RUN 43 — 2003031700843002 · DECLARATION OF MERGER (shelf) · Queens 10686/1+6 · 2002/03
+
+14 pdf pages (rd `pages` 11 + supporting cover + declared RP-5217 +
+ONE UNDECLARED FOREIGN PAGE), read cold, reconciled with the intake
+sibling pulled. **Zero new columns, zero new vocabulary — streak: 39.**
+One ruling queued (P-3). Grade B+ (four render-layer misses, fixes
+applied here). Second DECLARATION OF MERGER draw; second miss on the
+IDENTITY cell — and the second finding that the shelf does not hold
+lot mergers.
+
+    Instrument: DECLARATION OF MERGER made 2002-07-31 by JEAN
+    PIERRE-LOUIS and CARIDAD JEAN-GILLES (both of 220-21 99th Avenue,
+    Queens Village — SHARED ADDRESS, read; the package's RP-5217
+    checks "Sale Between Relatives"; relationship otherwise unstated)
+    · ack Queens 2002-07-31 (notary DOLORES L. DeBUONO, 01DE5019626 —
+    DE prefix corroborates — Nassau, exp 2003-10-25) · recorded
+    2003-07-24 11:41:17 (358-day lag, cause unstated), CRFN
+    2003000254798 · 217-09 + 217-19 Hillside Avenue, block 10686
+    lots 1 & 6, two apartment buildings
+
+## THE EVENT (one observes event; ruling queued)
+
+    row 1  observes · ENCUMBRANCE (+OCCUPANCY) · releases ·
+           Queens 10686/1+6 · the two 1948 LEASES (Morty Wolosoff
+           and Others → Hollis Park #4 Inc., liber 5580/215 [Lot 1]
+           and 5580/275 [Lot 6], each modified at liber 5797/155 and
+           /151) EXTINGUISHED BY MERGER OF ESTATES on 1984-04-06,
+           when DYNAMION REALTY CORP came to hold both the tenants'
+           interests and the fee — "such leases do not encumber
+           either Lot 1 or Lot 6" · qty n/a · term: ended 1984-04-06
+           · SOLE WITNESS: this declaration, recorded 19 years later
+           · `ruling: pending` (below)
+    ACTOR-CLAIMS: declarants JEAN PIERRE-LOUIS + CARIDAD JEAN-GILLES
+    (crops banked, 400dpi; successors to Dynamion per their own
+    declaration ¶1). No counterparty exists; the register's form put
+    the same two humans on both panels (4 rd rows / 2 people).
+
+## RULING QUEUED (P-3) — THE DECLARED-HISTORICAL MODE
+
+A merger of estates operates BY LAW and records NOTHING (R27's
+off-record family: like death, like lapse). When a later declaratory
+instrument is the event's ONLY witness: do its rows enter as
+`observes` (L-3: recitals never re-do — as written this run), or as
+a `transacts` row DATED at the historical date so the termination
+exists in chronology as an event? The choice decides whether
+1984-04-06 is an event or only a claim. OPEN — first instance
+2003031700843002.
+
+## R43-1 — THE MERGER SHELF IS 0-FOR-2 ON LOT MERGERS
+
+r42: shared-drainage declaration. r43: merger of ESTATES (lease into
+fee). Neither merges land; both lots here stay separate (rd keys
+4106860001;4106860006, multi-parcel key ✓). A type-trusting pipeline
+would fabricate lot-merger IDENTITY events from this shelf. The
+IDENTITY·modifies cell remains unexercised and this type name is not
+the route to it.
+
+## R43-2 — ⚠ A FOREIGN PAGE INSIDE THE RECORDED FILE (new defect class)
+
+Page 13 is an RP-5217 for 94-24 114th STREET, BLOCK 9399 LOT 17,
+parties SINGH KABUL / KAUR SARBJIT — a different property and people,
+bound between the supporting cover (declared page count: 1) and the
+correct RP-5217. The intake sibling ...001 is the SAME property, so
+the stray is not the sibling's; origin unknown, cause unstated.
+CAUGHT BY COUNT ARITHMETIC: 11 (register) + 1 (supp cover) + 1
+(declared) = 13 ≠ 14 rendered. HARNESS RULE: supporting pages pass an
+IDENTITY JOIN (block/lot/party against the instrument) before any
+field banks; a failed join = foreign-page defect claim, never data.
+
+## R43-3 — THE PACKAGE IS TITLE-CURE (R8-2's shape, declaratory edition)
+
+Sibling ...001 = CORRECTION DEED dated 2000-08-21 (matching the
+RP-5217's "date of sale"), same parties, same lots, recorded the
+same second (CRFN ...254797). Correction deed + merger declaration
+recorded together = the title-cure cluster. ⚠ HYPOTHESIS, labeled:
+cleanup clusters typically precede a sale or refinance; the record
+here does not say.
+
+## R43-4 — RECITED CHAINS, DOUBLE-BARRELED (R21-1 at full depth)
+
+Exhibit C: both lease chains verbatim with cites — Lot 1: 5580/215 →
+Ringler [⚠ exhibit prints "dated 11/12/56 recorded 11/7/52", an
+impossible pair; Lot 6's coherent 1952 dates suggest transcription —
+banked, not repaired] → Hollis Park Co (6470/373) → Crishill Realty
+(dated 3/31/53, RECORDED 1/14/84 — a 31-YEAR lease-assignment
+recording gap) → Dynamion (reel 1668/1539). Lot 6: 5580/275 → 6433/1
+→ 6470/381 → Berhill Estates (6713/367) → Resrak Realty (6773/371) →
+Dynamion (1668/1543). Exhibit D: both deed chains 1945→1984 (Wigmore
+Land Co 5104/604 → Wolosoff/Wolosoff/Ringler → Woler Inc in-and-out
+recorded the same day 10/2/57 → the partners d/b/a Lewis Hillside
+Company → Vincent Esposito 565/180 → PHYLLIS ESPOSITO, sole legatee
+and executor, SURROGATE No. 218512/82, NASSAU → Dynamion, ONE deed
+reel 1668/1527 conveying BOTH lots). Death moves title WITH the
+Surrogate file number cited — R27's missing custodian, this time
+with its address.
+
+## CONFIRMATIONS
+
+- In-document two-witness resolution: the recital's crowded "page
+  275(" settled by Exhibit C's typed 275 (crop artifact banked).
+- Both metes CLOSE exactly (Lot 1: −117.07+18+99.07=0, 76+24−100=0;
+  Lot 6 likewise) — P-4 ✓. Both cite TOPOGRAPHICAL ALTERATION MAP
+  No. 3049 — new filed-map namespace member. Exhibit B's opening
+  course says "westerly side of 217th Street," its closing course
+  "easterly" — geometry makes easterly coherent; self-contradiction
+  banked (R39-2 family), not smoothed.
+- Correct RP-5217: relatives-sale checked, $0, assessed 155,790 /
+  156,960 (VALUE observes claims), class C, "Queens Block 10686
+  Lots 1+6", fax header Dec 4 2002.
+- Reconciliation ✓ EARNED: type-as-shelved · doc date (three
+  witnesses) · CRFN · recorded-to-the-second · borough · both
+  parcels · all four party rows printed and matched (R7-4).
+  amount $0.00 correct.
+- Title no. 597Q2777 handwritten (Mark Abstract) — number-namespace
+  family.
+
+## R43 GRADE — B+ (self, cold; fixes applied in this entry)
+
+1. "GROUND leases" — class label on the instance (R25 class), and it
+   reached the DATA TABLE, not just prose. The document says "lease";
+   36-year duration is derivable, "ground" is not. FIXED: "leases"
+   throughout this entry.
+2. "Couple-addressed pair" — a coinage implying a relationship while
+   dodging the assertion, when the honest options were on the page
+   (shared address = READ; the RP-5217's relatives checkbox = READ).
+   FIXED: shared address stated, checkbox cited.
+3. Merger-of-estates gloss with NO LEXICON ENTRY — lexicon-recall
+   class 3rd member (37, 41, 43) = MISSING STRUCTURE. FIXED: entry
+   added (this document teaches the mechanism operationally);
+   STRUCTURE: Card #12 SOURCES now sweeps the DELIVERED text's
+   terms-of-art, not only banked claims.
+4. "Bound in by mistake" — cause attributed to a process defect
+   (narrative family, mild). FIXED: presence stated, cause unstated.
+
+HELD: mode discipline under the run's hardest call (observes rows +
+ruling queued, not decided silently); crop pass proactive with
+artifacts (first run under the new Card #12 structure, and one crop
+settled a cite); foreign page caught by arithmetic and identity-
+checked before hypothesizing; second consecutive honest negative on
+the drawn cell; blanks null; counts grounded.

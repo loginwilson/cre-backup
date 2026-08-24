@@ -85,6 +85,14 @@ artifacts mandatory, Card #12).
 ⚠ count-class members: 21, 23, 39, 42 — four; 42's variant is UNVERIFIED
 rather than fabricated (the grep would have confirmed it; it wasn't run).
 The grep is the license, not the truth of the number.
+
+| 43 | 2003031700843002 2003 | **B+** (self, login-prompted) | **class-on-instance ("ground leases") — reached the DATA TABLE** (R25 class) · relationship-implying coinage ("couple-addressed") while the documented basis (shared address READ + relatives checkbox) went unused · **lexicon-recall 3rd (37, 41, 43) = MISSING STRUCTURE** — merger-of-estates glossed with no entry · "by mistake" cause-claim on a process defect (narrative, mild) | fixes in the R43 entry · Lexicon: merger of estates added · **Card #12 SOURCES sweep now runs over the DELIVERED text** · ruling queued: declared-historical mode |
+
+⚠ lexicon-recall members: 37, 41, 43 — three → structure changed (the
+SOURCES sweep covers the verdict's own prose, Card #12).
+⚠ HELD-pattern worth keeping: r43 ran the crop pass proactively under
+the new artifact rule and it settled a cite; the foreign-page defect
+was caught by COUNT ARITHMETIC (11+1+1≠14) — arithmetic as tripwire.
 The trigger list + Card #4 catch its phrase-shaped and scale-shaped
 forms; R41's form was a CHARACTERIZATION OF THE DRAFTING ("their
 community") — ordinary words again. Watch the shape: any sentence that

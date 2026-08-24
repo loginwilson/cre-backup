@@ -90,18 +90,32 @@ def fetch_pdf(did, rec_date="", timeout=90):
     if total <= 0:
         return "imageless", "imageless"
 
-    frames = []
+    frames, stop_why = [], ""
     for p in range(1, total + 1):
         data, ct = _get("%s?doc_id=%s&page=%d" % (fetch_pages.BASE, did, p),
                         VIEW + "?doc_id=" + did, timeout=timeout)
         fetch_pages._check_denied(data, ct)
-        if data[:2] not in (b"II", b"MM") or \
-                hashlib.md5(data).hexdigest() == fetch_pages.PLACEHOLDER:
+        # ⚠ DIAGNOSE THE BREAK (login 2026-08-24: "are they imageless is the
+        # question? or is there a fault in our code?"). The old fleet's 191
+        # Short docs (BK_/FT_/2003) never landed across ~4 attempts each -
+        # persistent, but WHY was never captured. Record what the breaking
+        # page actually was: placeholder = the server truly ends the doc
+        # early (its defect); non-TIFF bytes = maybe an error page (load) or
+        # maybe a FORMAT our II/MM assumption wrongly rejects (our defect -
+        # e.g. film classes barely exercised). The fails log now carries the
+        # verdict evidence at zero extra requests.
+        if hashlib.md5(data).hexdigest() == fetch_pages.PLACEHOLDER:
+            stop_why = "placeholder(end-marker) at page %d" % p
+            break
+        if data[:2] not in (b"II", b"MM"):
+            stop_why = ("non-TIFF at page %d: ct=%s len=%d first16=%s"
+                        % (p, ct, len(data), data[:16].hex()))
             break
         frames.append(data)
 
     if len(frames) != total:
-        raise Short("short: %d/%d pages for %s" % (len(frames), total, did))
+        raise Short("short: %d/%d pages for %s · %s"
+                    % (len(frames), total, did, stop_why))
 
     d = CP.doc_store_dir(did, rec_date)
     d.mkdir(parents=True, exist_ok=True)

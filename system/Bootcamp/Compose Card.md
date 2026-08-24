@@ -115,6 +115,11 @@ Before writing the entry, run these three:
   SOURCES every class-level statement names its Lexicon entry. No
           entry = add one from the document, or delete the sentence.
           Recall is not a source.
+          ⚠ THE SWEEP RUNS OVER THE DELIVERED TEXT TOO — every
+          term-of-art or doctrine gloss in the verdict's own prose
+          needs its entry, not only the banked claims (R41 flagged-
+          then-used; R43 merger-of-estates = 3rd member; this line
+          is the structural fix).
   SLOTS   every row: function canonical? amount carries a role? term
           shape named (date / event / perpetual)? ✓ marks earned?
   COLUMN  every money value: was its COLUMN HEADING read in the SAME
