@@ -9165,3 +9165,294 @@ already flags "first time" / "first appearance" / "never seen". The
 standing answer to any such flag is now TWO greps, not one: grep
 Bootcamp.md AND grep Lexicon.md. A class-level term that has an
 entry is not new, however new it feels.
+
+# RUN 52 — 2003041501459002 · shelved CERTIFIED COPY OF WILL, actually an AFFIDAVIT CONCERNING REAL ESTATE · BROOKLYN block 8686 lot 58 · 2003
+
+7/7 pages (2 cover + 5 instrument = the cover's stated Document Page
+Count of 5; rd `pages` 7; pdf 7 — R40-1's three namespaces reconcile
+EXACTLY, with no supporting series, the exhibits being annexed inside
+the instrument). CRFN 2003000433156, executed 2003-02-14, prepared
+2003-04-15, recorded 2003-10-24. **Zero new columns, zero new
+vocabulary — streak: 48.** Grade C+.
+
+    AFFIDAVIT CONCERNING REAL ESTATE (Florida form, Broward County) ·
+    ROBIN KLEIN and PAMELA KENNEYBROOK, deponents → the land record
+    itself · BROOKLYN Block 8686 Lot 58, entire lot, 312 BRIGHTON
+    BEACH AVENUE · presented by and returned to BRIAN A. GILLIS /
+    BANK OF AMERICA, N.A., Jacksonville FL
+
+## THE EVENTS (one event_id)
+
+    row 1  TITLE·transfers · OBSERVES · William Stein → the surviving
+           co-owners · his interest passing by right of survivorship
+           at death 2001-11-25; no instrument recorded the passage
+           ⚠ [GRADE FIX] the delivered cell asserted a destination the
+           run's own ⚠ Unresolved stream calls UNSETTLED. Corrected
+           reading: → NATALIE STEIN ALONE (if the Steins held their
+           half between themselves and the halves were tenancy-in-
+           common with Klein/Kenneybrook) OR → ALL THREE SURVIVORS
+           (if the four were true joint tenants). THE BRANCH IS THE
+           FACT; the destination is not.
+    row 2  TITLE·transfers · OBSERVES · Natalie Stein → Robin Klein ·
+           Pamela Kenneybrook · at death 2002-07-25
+           ⚠ [GRADE FIX] same defect, worse consequence: under the
+           tenancy-in-common reading her half passes THROUGH HER
+           ESTATE and never reaches the deponents at all.
+    row 3  IDENTITY · observes · Exhibit A metes and bounds: begins
+           81.395 ft east of BRIGHTON 3RD STREET on the southerly side
+           of BRIGHTON BEACH AVENUE; front 19.715 · east 98.60 · rear
+           19.50 · west 95.69; both side lines run "part of the
+           distance THROUGH A PARTY WALL" (monument, not grant — R49
+           and the R40/R49 Lexicon entries) · register's use code
+           1-3 FAMILY WITH STORE / OFFICE
+           ✅ SELF-VALIDATES TWO WAYS: both side lines are parallel to
+           Brighton 3rd Street and the rear is at right angles to it,
+           so the figure is a RIGHT TRAPEZOID (DERIVED from three
+           course bearings, not stated). Side lines differ 2.91 ft
+           over a 19.50 ft rear ⇒ frontage √(19.50² + 2.91²) =
+           19.716 ft against 19.715 STATED — agreement to 0.001 ft.
+           Area = ½(98.60 + 95.69)(19.50) = 1,894.3 SF DERIVED; the
+           record states no area.
+    row 4  COST · transacts · $62.00 recording fee; EVERY transfer-
+           and mortgage-tax line 0.00 — EARNED: nothing is conveyed,
+           and a survivorship vesting is not a conveyance.
+
+    ACTOR-CLAIMS: ROBIN KLEIN and PAMELA KENNEYBROOK swore the
+    affidavit 2003-02-14, each acknowledged SEPARATELY before ELLEN R.
+    WONG, Notary Public, Florida commission DD071778 exp 2005-11-14;
+    two subscribing witnesses signed and ⚠ NEITHER WITNESS NAME IS
+    PRINTED. The first witness signature closely resembles the
+    notary's; with no printed names this is UNVERIFIABLE and was NOT
+    claimed (R39's lesson holding). WILLIAM STEIN d. 2001-11-25,
+    Hospice By The Sea, Boca Raton, certified by attending physician
+    STEVEN GRABELSKY, M.D.; NATALIE STEIN d. 2002-07-25, Jackson
+    Memorial Hospital, Miami, ⚠ certified by the MEDICAL EXAMINER
+    (ARLENE J. HERZBERG, M.D.) with the attending-physician block
+    BLANK. PAMELA S. KENNEYBROOK is the INFORMANT of record on BOTH
+    certificates — the person who reported both deaths is the person
+    who later swears she inherited by them. ⚠ THE REGISTER'S PARTY
+    INDEX holds exactly two names, STEIN WILLIAM and STEIN NATALIE,
+    with NO panel 2: EARNED two ways (cover page + rd row agree).
+
+## R52-1 — THE TYPE NAMES THE ONE MECHANISM THAT DID NOT HAPPEN
+## [and its absence from every test layer is this run's second miss]
+
+Shelved CERTIFIED COPY OF WILL. **There is no will in the file, and
+there was never going to be one.** Joint tenancy with right of
+survivorship is precisely the route by which real property moves
+WITHOUT a will: the share never enters the decedent's estate, so
+probate never touches it. The register's label therefore names the
+exact mechanism the instrument exists to prove did not apply.
+
+FIFTH TRUE TYPE-SHELF MISMATCH under R51-3's definition — r42, r48,
+r50, r51, r52 (grep-verified at grading; r43 and r46 remain NOT
+mismatches). And the sharpest of the five: the others shelve the wrong
+instrument, this one shelves the wrong LEGAL THEORY.
+
+⚠ THE MISS: all of the above was announced in the run's HEADLINE and
+appeared in NO TEST — not the event test, not a row, not the anybody
+test. r51 carried a `row 0 ⚠ TYPE vs CAPTION`; r52 dropped it and put
+the finding in the title instead. LAYER-CONSISTENCY CLASS, 3rd member
+(47 skipped people, 48 skipped statutes, 52 skipped its own headline)
+— and 3+ is a MISSING STRUCTURE, built this run (R52-3).
+
+## R52-2 — THE ⚠ UNRESOLVED STREAM MUST CITE ITS ROWS
+## (the structural cure for this run's worst miss)
+
+Amendment 2 split Claims from ⚠ Unresolved so open questions could not
+be smoothed into settled ones. r52 proves the split is necessary and
+NOT SUFFICIENT: the tenancy inconsistency sat in the Unresolved stream
+while rows 1 and 2 went on asserting the very branch it calls open.
+The two streams were both honest and never spoke to each other.
+
+    THE RULE: every item in ⚠ Unresolved NAMES THE ROW(S) IT BEARS ON,
+    or says explicitly that it bears on none. An unresolved item that
+    cites no row is ORPHANED — it floats free of the evidence and
+    disciplines no cell.
+
+This is the exact mirror of Card #15's WHY-BIND (enacted r47: every
+WHY point walks back to a row or dies), applied to the other stream.
+Both directions now bind: nothing may assert without a row, and
+nothing may doubt without a row.
+
+⚠ MECHANISED THE SAME RUN: precheck gains **UNRESOLVED-ROW BINDING**.
+Fed the r52 delivery as given, it flagged TEN orphaned items, the
+tenancy inconsistency FIRST.
+
+## R52-3 — THE HEADLINE IS A PROSE LAYER, AND IT WAS UNGATED
+
+Card #15 DOWNWARD covers "any prose layer"; precheck implemented it
+for the event test and the anybody test only. The run's H1 title line
+— the first thing login reads — passed through no gate at all, which
+is how the best finding in the document could live there and nowhere
+else. precheck gains **HEADLINE BINDING**: every distinctive token in
+the title line must appear in at least one of the three tests. Fed the
+r52 delivery as given it flagged "CERTIFIED COPY OF WILL" and
+"AFFIDAVIT CONCERNING REAL ESTATE" — the miss, exactly.
+
+## R52-4 — DECLARED-HISTORICAL, SECOND INSTANCE (P-3 ruling still queued)
+
+Grep-verified: the first was 2003031700843002 (r43 — two 1948 leases
+that died into the fee by operation of law in 1984, declared in 2003).
+r52 is the second: title moved twice by operation of law (2001-11-25,
+2002-07-25) with no instrument, witnessed only by this 2003 affidavit.
+Held as `observes` rows as the queued ruling directs. **Two instances
+in ten runs is not a curiosity — the class recurs, and the ruling
+decides whether such events enter chronology at all.**
+
+⚠ AND A MODE STRAIN, QUEUED NOT IMPROVISED (R47's lesson holding):
+`observes` covers state "measured or recited"; `signals` covers intent
+asserted by an interested party. An affidavit of survivorship is a
+third thing — a present-tense assertion of FACT by the two people who
+benefit from it being true. A recital by a disinterested custodian and
+a claim by the taker carry different evidential weight, and the
+vocabulary has no slot for SELF-INTERESTED ATTESTATION. Joins the
+r37/r47 certification-mode question.
+
+## R52-5 — WHAT THE INDEX LOST (2nd member of the R48-1 class)
+
+Grep-verified: the prior member is R48-1 (Governors Island — State and
+City signed and are absent from the register's party fields). Here the
+failure inverts: the register indexed the two DECEDENTS and omitted
+the two LIVING CLAIMANTS the instrument exists to name. A name search
+for either current owner returns nothing. Compounding it, the cover's
+CROSS REFERENCE DATA panel is BLANK although the affidavit names its
+prior deed (Deed Book 4098 p. 2063) on its own face — so the link
+exists in the text and not in the index, recoverable only by reading
+the page. **For a product built on the reach ladder this is the
+failure mode that matters: the document that says who to call is
+filed under the names of two people who cannot answer.**
+
+## R52 GRADE — C+ (self, cold; fixes applied in this entry)
+
+1. ⚠ THE TENANCY BRANCH ASSERTED AS FACT IN THE DELIVERED TABLE
+   (rows 1 and 2 `who → whom`, and row 1's "the Steins' recited
+   one-half is the pool") while the ⚠ Unresolved stream calls it
+   unsettled. The `observes` marker separates RECITED from CHANGED;
+   it does not separate RECITED-AND-TRUE from RECITED-AND-POSSIBLY-
+   WRONG, and it was leaned on to do work it does not do.
+   CLAIM-INCOHERENCE ACROSS LAYERS, 2nd member (49, 52) — r49's was
+   prose-vs-table, this one is table-vs-Unresolved INSIDE one section.
+2. ⚠ THE TYPE-SHELF MISMATCH LIVED ONLY IN THE HEADLINE (R52-1).
+   LAYER-CONSISTENCY, 3rd member (47, 48, 52) = MISSING STRUCTURE.
+3. PROPORTIONALITY: entombment place, funeral home and both
+   decedents' occupations banked though they change no decision —
+   in the same delivery that flagged the record's over-carriage of
+   personal data. (Samuel Goldman EARNS his place: second witness
+   for the maiden name, an identity join.) 2nd member with r40's
+   promoted page-count finding. Minor: "a right trapezoid" is a
+   derivation from three course bearings, delivered flat while the
+   area beside it carried its DERIVED mark.
+
+STRUCTURE ENACTED THIS RUN (the hole-is-the-finding rule): precheck
+gains **UNRESOLVED-ROW BINDING** and **HEADLINE BINDING**, both
+validated against the r52 delivery as given — the first flagged the
+tenancy item first of ten orphans, the second flagged both halves of
+the type mismatch.
+
+HELD: the instrument identified against its shelf; TITLE correctly
+held as observes and correctly recognised as the second declared-
+historical instance, GREP-VERIFIED rather than felt; the mode strain
+QUEUED not improvised; geometry self-validated to 0.001 ft with the
+derivation shown and an area produced that the record never states;
+page count reconciled exactly across all three R40-1 namespaces; the
+death order and the maiden name each EARNED two independent ways with
+no unearned ✓; the register's party defect earned from two witnesses
+rather than read off one; the witness/notary signature resemblance
+seen, stated UNVERIFIABLE, and not claimed.
+
+# ⚠ THE TABLE IS NOT GRADED, IT IS BANKED (login ruling 2026-08-24, run 52)
+
+Login, on the C+: *"we wont be able to decode if we are decoding at a
+C+. we need to get decoding perfect on these documents. the functions
+are how we look at them, but the data tables and summary is super
+important to get spot on."*
+
+He is right, and the rubric minted at r50 does not answer him. THE
+RUBRIC GRADES DAMAGE AFTER THE FACT; IT SETS NO FLOOR. A letter is a
+report card on a delivery. The data table is not a delivery — **it is
+the thing the corpus is built out of.** Every downstream product reads
+rows, not letters. A wrong row does not cost a grade; it poisons a
+parcel's chain and nothing downstream can tell.
+
+## THE FLOOR — a table defect BLOCKS THE BANK, it does not lower a letter
+
+    A row enters the record only when EVERY CELL IS IN ONE OF THREE
+    STATES. There is no fourth state and there is no blank.
+
+The Two Weird Slots section (quantity, term) has enforced exactly this
+discipline since the beginning and it has never produced a defect of
+this class. r52 proves the rule was UNDER-SCOPED — the defect landed in
+`who → whom`, a cell with no state discipline at all. Extended now to
+EVERY CELL:
+
+    SETTLED    one value, and the document's own words COMPEL it.
+    BRANCHED   the document supports more than one reading. The cell
+               carries BOTH, joined by "or", and names the document
+               that would decide. A branch is a finished cell, not an
+               unfinished one.
+    UNREAD     the source for this cell was not read, or is not in the
+               file. Says so.
+
+⚠ **A BARE VALUE IN A CELL IS A CLAIM THAT THE CELL IS SETTLED.** That
+is the sentence r52 needed. Row 2 read "Natalie Stein → Robin Klein ·
+Pamela Kenneybrook" — a bare value, therefore a claim of settled —
+while the same section's ⚠ Unresolved stream said the branch was open
+and that one fork sends her half through her estate instead. The table
+was not wrong for lack of knowledge. **It hid a branch it had already
+found.** That is the failure mode to kill, and it is killable, because
+a branch is always writable.
+
+## WHY THIS IS ACHIEVABLE, AND WHY "PERFECT" IS NOT A FANTASY
+
+"Spot on" cannot mean "the reader knows everything the document does
+not say". It CAN mean, and from here it does mean:
+
+    every cell is compelled by the page, or is written as the branch
+    the page leaves open, or says it was not read
+
+Under that definition r52's table was reachable. Nothing was missing
+from the read — the tenancy inconsistency was FOUND, written down, and
+then not carried back into the two cells it governs. The gap was
+between the read and the render, and that gap closes with structure.
+
+## R52-6 — COMPOSE ORDER INVERTED: THE DOUBTS ARE WRITTEN FIRST
+
+Compose order has been 2 → 1 (rows, then prose from the rows). A step
+was missing in front of both. Rows written BEFORE the doubts are known
+cannot inherit them, and nothing ever goes back to amend a row once the
+doubt surfaces three paragraphs later. That is mechanically what
+happened at r52.
+
+    NEW ORDER:  ⚠ UNRESOLVED  →  ROWS  →  PROSE
+
+Write the open questions first, straight off the read. Then build every
+row already knowing which cells a doubt governs — those cells are
+BRANCHED at birth rather than settled and later contradicted. Then
+write the prose from the rows as before.
+
+## R52-7 — THE BINDING NOW CLOSES IN BOTH DIRECTIONS
+
+    WHY-BIND        (r47) nothing may ASSERT without a row
+    UNRESOLVED-ROW  (r52) nothing may DOUBT without a row
+    CITED-ROW HEDGE (r52) a row a doubt names must CARRY the doubt
+
+The third is the converse of the second and it is what makes the class
+unrepresentable rather than merely discouraged (THE FIRING LAW,
+mechanism 3). All three are in precheck. Validated as a CHAIN against
+r52's own delivery: as delivered, no unresolved item cited a row, so
+UNRESOLVED-ROW flagged ten orphans; bind the tenancy item to rows 1-2
+and leave the rows bare, and CITED-ROW flags both rows; branch the two
+cells and both checks go clean.
+
+## AND THE SUMMARY INHERITS IT (Card #15 UPWARD, extended)
+
+Login named the summary in the same breath as the table, and the rule
+follows from the same place: **a BRANCHED row is delivered as a branch
+in the anybody test.** r52's summary half-obeyed by accident — it told
+a reader to check the tenancy wording, then also said flatly that a
+dead owner's "share passes automatically to the others". One layer
+carried the branch and the other carried one fork of it. Both must
+carry it, in the plainest words available: *"the paperwork says X, but
+the way it is worded leaves room for Y, and the document that settles
+it is not here."*

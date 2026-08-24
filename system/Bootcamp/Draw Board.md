@@ -169,6 +169,18 @@ loop's coverage claim becomes false without anything looking wrong.
 
 - [x] **r51** `2003042801017001` STREET PROCEDURE (actually a WAIVER OF LEGAL GRADE) · QUEENS block 12200, five lots · rec 2003-04-28 · rd pages 4 / pdf 6 — from the type tail. ⚠ Performs no street procedure: a builder buys the Transportation Commissioner's CONSENT to a Certificate of Occupancy — avoiding a Board of Standards and Appeals appeal — by waiving claims and covenanting PERPETUALLY, running with the land, to build the sidewalk to the City Map's lines and grades whenever directed. **PERMIT-bearing second sighting** (first was r46, grep-verified); **ASBUILT refused** on the page's own alternative phrasing. **Chain expectations:** the Certificate of Occupancy itself and any DOT sidewalk direction — both DOB/DOT records, not ACRIS.
 
+- [x] **r52** `2003041501459002` CERTIFIED COPY OF WILL (actually an AFFIDAVIT CONCERNING REAL ESTATE) · BROOKLYN block 8686 lot 58 · rec 2003-10-24 · rd pages 7 / pdf 7 — from the type tail. ⚠ **THE SHELF NAMES THE ONE MECHANISM THAT DID NOT HAPPEN**: no will, and none was ever needed — joint tenancy with right of survivorship moves title outside the estate, so probate never touches it. FIFTH true type-shelf mismatch (r42, r48, r50, r51, r52 — grep-verified). Two deaths (2001-11-25, 2002-07-25) moved title with NO instrument; a Florida-form affidavit sworn in Broward County 15 months later is the only witness. **CERTIFIED COPY OF WILL shelf now 0-for-1 on wills** — ONE member left, `2003042301213001` QUEENS 10pp: verify before trusting the shelf, and TITLE-BY-DEVISE (the will/Surrogate route) remains UNEXERCISED. **Chain expectation:** the deed dated 1997-12-18, recorded 1998-01-09, Deed Book 4098 p. 2063 Kings County — it holds the granting language that decides whether the deponents took 100% or 50%, and it is the only document that can settle this filing.
+
+### ⚠ TITLE-BY-DEVISE IS STILL UNEXERCISED (measured r52)
+
+The obvious route to a decedent's estate — a will, Letters Testamentary,
+a Surrogate's decree — was drawn for and NOT obtained: the CERTIFIED
+COPY OF WILL shelf's first member contains no will. Routes still open:
+the shelf's second member (QUEENS 10pp), the CERTIFIED COPY OF WILL
+type in other bands, or an EXECUTOR'S DEED. R33's Letters of
+Administration entry is the corpus's only estate-authority vocabulary
+so far, and it came from an assignment, not from a title event.
+
 ### ⚠ PERMIT and ASBUILT NEED THE DOB SOURCE, NOT ANOTHER ACRIS DRAW (measured r51)
 
 A remarks-first hunt over the landed band for CERTIFICATE OF OCCUPANCY ·

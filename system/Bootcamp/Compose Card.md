@@ -236,9 +236,41 @@ threshold: structure, not another rule.
            record. Neighborhood names, actor biography ("landlord",
            "family firm") and era color are banned tokens there.
 
-Compose order is 2 → 1. Build rows, then write prose FROM the rows —
-never from memory of the pages.
+  BRANCH   ⚠ ENACTED R52 (login: "the data tables and summary is super
+           important to get spot on"). A BRANCHED row is delivered as a
+           BRANCH in the anybody test — in plain words, not as a hedge
+           the reader must decode: "the paperwork says X, but the way it
+           is worded leaves room for Y, and the document that settles it
+           is not here." One layer carrying the branch while another
+           carries one fork of it is a delivery miss.
 
+Compose order is ⚠ UNRESOLVED → ROWS → PROSE (⚠ RE-RULED R52; it was
+2 → 1). Write the open questions FIRST, straight off the read; then
+build rows already knowing which cells a doubt governs, so those cells
+are BRANCHED at birth instead of settled and contradicted later; then
+write prose FROM the rows — never from memory of the pages.
+
+
+## 15a · ⚠ EVERY CELL IS SETTLED, BRANCHED, OR UNREAD — NO FOURTH STATE
+
+The table is not graded, it is BANKED (login ruling R52). A row enters
+the record only when every cell is in one of three states:
+
+    SETTLED   one value, COMPELLED by the document's own words
+    BRANCHED  two readings the document supports — BOTH in the cell,
+              joined by "or", naming the document that would decide
+    UNREAD    the source was not read or is not in the file; says so
+
+⚠ **A BARE VALUE IS A CLAIM THAT THE CELL IS SETTLED.** R52 delivered
+"Natalie Stein → Robin Klein · Pamela Kenneybrook" as a bare value while
+its own ⚠ Unresolved stream said one fork sends her half through her
+estate instead. The read was complete; the render hid a branch it had
+already found. A branch is always writable, so this class is killable.
+
+BINDING, both directions, all three in precheck:
+    nothing may ASSERT without a row      (WHY-BIND, r47)
+    nothing may DOUBT without a row       (UNRESOLVED-ROW, r52)
+    a row a doubt names CARRIES the doubt (CITED-ROW HEDGE, r52)
 
 ## 16 · A CHALLENGE IS A TEST ORDER, NOT A VERDICT
 

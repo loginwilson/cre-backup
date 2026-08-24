@@ -267,3 +267,55 @@ doc costs 1 request, a 20-page deed costs 21). The controlled variable is
 requests; rows are an output. Ratio ready-per-req/s runs ~0.085-0.113,
 i.e. **~9-12 requests per completed row**, so the 80 req/s ceiling lands
 near **8-9 ready/s = the <30-day target**.
+
+**THE FAILURE TAXONOMY — CLOSED WITH EVIDENCE (2026-08-24).** login: "we
+really do want fails to get solved for and never pile up since it assures
+perfection of the system."
+
+    HTTPError 400   PAGE-level server hiccup. ⚠ CAPTURED: url =
+                    GetImage?doc_id=...&page=23, body = a plain IIS "Bad
+                    Request" page - NOT a Bandwidth Notice, NOT bot
+                    detection. 36 of 43 such docs later downloaded COMPLETE.
+    ConnectionError / RemoteDisconnected / SSLError / URLError
+                    transport. 49/50 SSL, 34/36 URL healed on a later try.
+    Short           frames < the map's claim. NEVER written as a pdf ("a
+                    1-of-8 read looks exactly like success"). 18/19 healed.
+
+**92% OF ALL FAILURES SELF-HEAL** (146 of 159 docs had landed by the time we
+checked). Nothing is ever lost: a failure leaves `pdf=''`, which IS the todo
+state the feeder selects on.
+
+⚠ **login's IMAGELESS THEORY WAS REFUTED, AND THE REFUTATION MATTERED.**
+"the image lookup on an imageless doc would prob return the error" - plausible,
+and wrong twice over: (1) `page_count` returns TotalPages and we stop at <=0,
+so an imageless doc NEVER issues a page request; (2) the captured url proves
+the 400 came from `page=23`, not the map. Mapping 400 -> imageless would have
+written **36 false permanent verdicts**. Same family as the refusal->imageless
+bug fixed that morning. ⚠ NEVER TURN AN ERROR CLASS INTO A VERDICT - capture
+the url and body and let the evidence say.
+
+**FOUR MECHANISMS NOW KEEP THE PILE AT ZERO:**
+1. `str(HTTPError)` DROPS THE URL - it is only "HTTP Error 400: Bad Request".
+   one_at_a_time now attaches `err.acris_body` and the logger records
+   `e.url`, so a 400 is diagnosable instead of guessable.
+2. IN-RUN RETRY (MAX_ATTEMPTS 3, same pacer). Without it healing waited for
+   the feeder's cursor to WRAP THE WHOLE 19.8M-ROW SET.
+3. ADJUDICATION, DEFAULT ON: quarantined docs (>=3 fails) are skipped on
+   sight, so nothing ever re-examined them. One attempt each at startup
+   writes the cause the original failures never recorded.
+4. DIAGNOSED = terminal. Once a failure carries a stop_why
+   ("placeholder(end-marker) at page N" / "non-TIFF at page N") it is not
+   re-asked - otherwise a permanently broken doc burns requests every
+   restart. Columns still stay EMPTY; diagnosed is not a verdict.
+
+**FIRST ADJUDICATION RESULT:** `2003030501723001` = "short: 1/3 pages ·
+placeholder(end-marker) at page 2" - ACRIS's own end-of-document marker at
+page 2 while its own map claims 3. A SOURCE-side contradiction, stable across
+7 attempts. ⚠ Do NOT "fix" it by accepting the 1 page: that writes a valid,
+openable, TRUNCATED document.
+
+**⚠ THE REAL CEILING IS THE LINK, NOT ACRIS.** One doc = 6.18 pages x 60 KB =
+**2.90 Mb**. Against the measured 43.3 Mb/s: 8 docs/s = 54%, 11.5 = 77% (20
+days), **14.9 docs/s = 100% = 15.4 days is the physical floor on this
+connection**. Richmond's pdf lane shares the same link. Going below ~15 days
+needs more bandwidth, not better code.

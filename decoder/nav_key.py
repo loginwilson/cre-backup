@@ -8,11 +8,24 @@ the conclusion per the evidence ladder:
 
   parcel     details.parcels carry BBL(s)      key = all of them (";"-joined;
              multi-parcel = the involved lots, login)
-  reference  a referenced doc RESOLVES to a parcel - via this table's own
-             keyed rows or the spec's parcel_document (one hop, v1; hop
-             depth extends only after being measured)
-  pdf-pass   neither - SAVED FOR PHASE 2: the pdf url keys it (document
-             rung / federal-lien residence / terminal party)
+  reference  the doc's evidence is a REFERENCE to another document. The key
+             is filled when that target already resolves (via this table's
+             own keyed rows or the spec's parcel_document - one hop, v1);
+             it is left EMPTY when the target has not been pulled yet, and
+             an empty key IS the pass-2 worklist. ⚠ Same type either way -
+             the TYPE is the evidence class, the KEY is the answer.
+  pdf-pass   neither parcels nor references - the pdf url keys it (document
+             rung / federal-lien residence / terminal party). This is the
+             PASS 3 worklist. ⚠ Stored as "pdf-pass" for continuity with
+             rows already written; it IS login's "pdf" type.
+
+⚠ THE THREE PASSES READ THESE STATES (login 2026-08-24):
+    pass 1  keyed_by='parcel'                     -> BBL straight from the rd
+    pass 2  keyed_by='reference' AND key=''       -> cross the crfn/doc id
+            once the pull is complete and every target exists
+    pass 3  keyed_by='pdf-pass'                   -> the pdf is all that is left
+⚠ Pass 2 must select on THAT predicate, not on the unkeyed one
+(`keyed_by IS NULL OR keyed_by=''`) - a marked row will never match it.
 
 --loop makes it a daemon that trails the walker; one sweep otherwise.
 Keys are written ONLY from custodian-asserted evidence - same bulletproof
@@ -193,9 +206,49 @@ def sweep():
                 elif d.get("references"):
                     # refs exist but don't resolve YET (a CRFN whose doc
                     # lands later; the map completes when the pull does -
-                    # login 2026-08-20). Leave unkeyed; a later sweep
-                    # retries. NEVER a premature pdf-pass verdict.
-                    continue
+                    # login 2026-08-20). NEVER a premature pdf-pass verdict.
+                    #
+                    # ⚠⚠ MARK IT, DON'T SKIP IT (login 2026-08-24: "if its
+                    # pass2 shouldnt it be marked pending for that... that
+                    # would make pass2 and 3 much easier and shouldnt cost a
+                    # ton given that only a small amount are going to be
+                    # pass2 and 3"). Leaving the row unkeyed made
+                    # PENDING and NEVER-LOOKED-AT the same state, so the only
+                    # way to find this population later was --rescan, which
+                    # WALKS ALL 24M ROWS. Naming the state turns pass 2 into
+                    # a lookup over its own small worklist.
+                    #
+                    # ⚠ THIS TAKES THE ROW OUT OF THE NORMAL SWEEP - the
+                    # sweep selects `keyed_by IS NULL OR keyed_by=''`, so a
+                    # marked row is no longer retried automatically. That is
+                    # correct and deliberate: an unresolved reference is a
+                    # CRFN whose document has not been pulled yet, so it
+                    # CANNOT resolve until the pull completes. It is pass-2
+                    # work by definition. ⚠ But it does mean pass 2 must
+                    # actually run - org_backfill_arm releases it at sync
+                    # 99.95%, and pass 2 must select keyed_by='ref-pending'
+                    # (NOT the unkeyed predicate, which will never match).
+                    #
+                    # ⚠ THE TYPE IS THE EVIDENCE CLASS; THE KEY IS THE ANSWER
+                    # (login 2026-08-24: "in the type it would be parcel,
+                    # reference, pdf. pass 1 can give every bbl. pass 2 once
+                    # everything is done can do bbl through the reference
+                    # since it can cross crfn or doc id in the rd. Then, pdf
+                    # is the final way of keying when its all thats left").
+                    #
+                    # So there is no separate "pending" TYPE. A doc whose
+                    # evidence is a reference is `reference` whether or not it
+                    # resolves yet - what differs is the KEY:
+                    #     reference + key  -> resolved (its target was already
+                    #                         pulled; keyed at pass 1)
+                    #     reference + ''   -> PASS 2 WORKLIST
+                    # An earlier draft invented a fourth state for this and it
+                    # was wrong: it split one population across two names for
+                    # a difference that the key column already expresses.
+                    #
+                    # key stays EMPTY: a pending row has no parcel yet, and
+                    # writing anything there would be a fabricated verdict.
+                    kb, key = "reference", ""
                 else:
                     # NO parcels, NO references - genuinely rd-unkeyable:
                     # saved for the second pass, the pdf url keys it

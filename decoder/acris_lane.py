@@ -146,6 +146,29 @@ ap.add_argument("--rps-max", type=float, default=80.0,
 # quarantine set is 1 doc today, a handful of requests - so there is no
 # reason to make remembering a flag the thing that stands between us and a
 # complete corpus. --no-adjudicate exists for a deliberate skip.
+# ⚠ THE STEP IS SEARCH RESOLUTION, NOT A SAFETY MARGIN (2026-08-24).
+# +2 was never protection against a block - the PACER is what keeps the
+# arrival pattern safe, and it is identical at any rate (83 ms apart at
+# 12/s, 6.7 ms at 150/s, burst capacity 1 either way). The step only sets
+# how precisely we locate the ceiling, and overshoot is SELF-CORRECTING:
+# shed >= 3 trims the tempo 25% and holds 10 minutes. Paying 42 rungs x 3
+# min to crawl from 47 to 130 buys resolution nobody needs.
+ap.add_argument("--rung-step", type=float, default=2.0,
+                help="req/s added per clean window (default 2.0; 4-6 is"
+                     " reasonable - overshoot self-corrects)")
+# ⚠ WARM FRACTION IS EVIDENCE-BASED, NOT A GUESS. 0.6 was the cautious
+# first value; 2026-08-24 then measured a warm start at 28.8 req/s
+# delivering 28.8 in its FIRST window with zero sheds, after an hour
+# clean at 48. Raising it re-earns fewer rungs. ⚠ It is still a margin:
+# a restart follows some event, and resuming at 100% of a peak assumes
+# the peak is still safe - which only the SERVER gets to confirm.
+ap.add_argument("--warm-fraction", type=float, default=0.6,
+                help="fraction of the banked peak tempo to resume at")
+ap.add_argument("--no-reconcile", dest="reconcile",
+                action="store_false",
+                help="skip the startup re-feed of unresolved failures"
+                     " (reconcile is ON by default)")
+ap.set_defaults(reconcile=True)
 ap.add_argument("--cold-start", dest="resume_warm", action="store_false",
                 help="ignore the saved tempo and ramp from --max-rps"
                      " (warm resume is ON by default)")
@@ -349,7 +372,7 @@ class Tempo:
 #     departure identically at any rate - so a warm start is not a
 #     stampede, which is the thing the ramp law actually guards against.
 TEMPO_FILE = CP.NAV_WORK / "lane_tempo.json"
-WARM_FRACTION = 0.6
+WARM_FRACTION = a.warm_fraction
 WARM_MAX_AGE = 6 * 3600        # older than this and the world has moved on
 
 
@@ -1034,7 +1057,14 @@ def pdf_worker(idx):
                         or "forcibly closed" in msg):
                     stats["shed"] += 1
             with PDF_FAILS.open("a", encoding="utf-8") as fh:
-                rec_f = {"id": did, "err": kind, "msg": str(e)[:120]}
+                # ⚠ STAMP IT. Without a time these rows cannot be tied to
+                # a RUN, and on 2026-08-24 that cost a wrong diagnosis: I
+                # read pre-patch rows, concluded the new url/body evidence
+                # "did not fire", and reported that - it had fired, on the
+                # only 400 the new code had actually seen. An append-only
+                # log without a clock cannot answer "since when".
+                rec_f = {"at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                         "id": did, "err": kind, "msg": str(e)[:120]}
                 if getattr(e, "url", None):
                     rec_f["url"] = str(e.url)[:160]
                 if getattr(e, "acris_body", None):
@@ -1057,7 +1087,8 @@ def governor():
         (the reallocation login asked for - same server, freed tonnage)
       - a refusal is above this governor's pay grade: stop_workers stills
         everything and only the probe continues (unchanged)."""
-    streak, hold, last = 0, 0, {"shed": 0, "pdfs": 0, "imageless": 0}
+    streak, hold, last = 0, 0, {"shed": 0, "pdfs": 0, "imageless": 0,
+                               "verified": 0}
     rd_handed = False
     # per-width measurement: settled average over the width's WHOLE window,
     # announced at every transition - the ceiling shows as this number
@@ -1076,8 +1107,22 @@ def governor():
         with lock:
             s = dict(stats)
         shed = s["shed"] - last["shed"]
-        landed = (s["pdfs"] + s["imageless"]
-                  - last["pdfs"] - last["imageless"])
+        # ⚠⚠ PROGRESS FOR THE CLIMB INCLUDES VERIFIED ROWS; THE RATE DOES NOT
+        # (the 15:37 freeze, 2026-08-24). The climb test below is `shed == 0
+        # and landed > 0` - "is the lane doing work". Re-confirmed imageless
+        # rows book to their own `verified` counter so they cannot inflate
+        # the READY rate, which was right; but they were left out of THIS sum
+        # too, so a verify sweep made landed 0 EVERY minute, reset the clean
+        # streak every minute, and the tempo could never step. Symptom: 2,645
+        # verified / 52 pdfs / 0.1 ready/s, pinned at the launch cap with
+        # ZERO sheds - a governor blind to its own progress.
+        #
+        # So the two questions get two different sums: work happening (this,
+        # includes verified) vs rows completed (settle(), excludes it). An
+        # honest counter a control loop does not read is a control loop that
+        # cannot see itself.
+        landed = (s["pdfs"] + s["imageless"] + s["verified"]
+                  - last["pdfs"] - last["imageless"] - last["verified"])
         last = s
         w = pdf_width[0]
         if rd_all_fed.is_set() and not rd_handed:
@@ -1174,7 +1219,21 @@ def governor():
                 " hold 10 min (%s)" % (shed, rps, tempo.rps, verdict))
         elif hold > 0:
             hold -= 1
-        elif shed == 0 and landed > 0:
+        elif shed < 3 and landed > 0:
+            # ⚠⚠ AN ISOLATED SHED MUST NOT ZERO THE CLIMB (measured 17:30,
+            # 2026-08-24). This read `shed == 0`, so ONE RemoteDisconnected or
+            # one timeout in a minute sent the branch to `else: streak = 0`
+            # and the 3-minute clean streak restarted from scratch. Observed:
+            # 12 failures across 29 minutes cost ~20% of the rungs - 17:23
+            # settled "over 6.0 min" and 17:29 never fired - with ZERO shed
+            # events in the log, because 1-2 sheds never print anything.
+            #
+            # The thresholds now agree with each other. `shed >= 3` is what
+            # this governor treats as the server actually pushing back; below
+            # that is ordinary transport noise, and the code already declines
+            # to back off for it. Declining to back off while also refusing to
+            # advance is the worst of both - on a link with any packet loss it
+            # silently caps the rate at whatever rung the first hiccup found.
             streak += 1
             # ⚠ UNDER PIANO (--max-inflight 1) WIDTH IS NOT PRESSURE, IT IS
             # SHARE. The gate decides what reaches the wire, so widening
@@ -1186,7 +1245,7 @@ def governor():
             if streak >= a.step_minutes and rps < ceiling:
                 verdict, win_c0 = settle(w)
                 win_t0 = time.time()
-                tempo.rps = min(rps + 2.0, ceiling)
+                tempo.rps = min(rps + a.rung_step, ceiling)
                 save_tempo(tempo.rps, clean=True)   # bank the rung
                 streak = 0
                 say("  GOVERNOR %d clean minutes - TEMPO %.1f -> %.1f/s (%s)"
@@ -1290,6 +1349,53 @@ def row_feeder():
                 while q.qsize() > 500 and not stop_workers.is_set():
                     time.sleep(2)
 
+    # ⚠⚠ THE RECONCILE SWEEP - DRIVE THE RESIDUE TO ZERO, DON'T WAIT FOR IT
+    # (login 2026-08-24: "Can we make sure all errors resolve to 0 errors so
+    # that we are clean"). A failed doc keeps its column empty, which IS the
+    # todo state, so the feeder does re-attempt it - but only when the cursor
+    # WRAPS THE WHOLE CORPUS, which is the end of the sync. "It heals
+    # eventually" is not the same claim as "the residue is zero."
+    #
+    # The fails logs are tiny (255 docs against 21.6M), so re-feeding every
+    # unresolved one at startup costs almost nothing and makes the residue
+    # converge continuously instead of asymptotically. DIAGNOSED docs are
+    # excluded - their answer is already on record; re-asking burns requests
+    # for a question that has been answered.
+    #
+    # ⚠ GRADED PER STAGE, like lane_reconcile.py: an rd failure is resolved
+    # when recorded_details arrives, a pdf failure when pdf does. Grading
+    # either by the other reports normal pending work as an error - measured,
+    # and it manufactured a 37% "outstanding" figure that was really 5.9%.
+    if a.reconcile:
+        want = {}
+        for _p, _st in ((FAILS, "rd"), (PDF_FAILS, "pdf")):
+            try:
+                for _ln in _p.read_text(encoding="utf-8").splitlines():
+                    try:
+                        _i = json.loads(_ln)["id"]
+                    except Exception:
+                        continue
+                    if _i and _i not in DIAGNOSED:
+                        want[_i] = "pdf" if want.get(_i) == "pdf" or                             _st == "pdf" else "rd"
+            except OSError:
+                pass
+        fed = 0
+        for _i in sorted(want):
+            _r = read.execute("SELECT pdf, recorded_details FROM navigation"
+                              " WHERE id = ?", (_i,)).fetchone()
+            if not _r:
+                continue
+            _done = bool(_r[0]) if want[_i] == "pdf" else bool(_r[1])
+            if not _done:
+                q.put((_i, _r[1] or "", ""))
+                fed += 1
+        if fed:
+            say("  RECONCILE: re-feeding %d unresolved failure(s) of %d on"
+                " record - the residue closes now, not at the cursor wrap"
+                % (fed, len(want)))
+        else:
+            say("  RECONCILE: 0 unresolved failures - every one on record"
+                " ended as a landing or a recorded verdict")
     stuck = []          # ⚠ defined unconditionally: the guard below reads it
     if a.adjudicate and (QUAR_PDF or QUAR_RD):
         # ⚠ A DIAGNOSED DOC IS DONE BEING ASKED. Adjudication runs at every
@@ -1433,7 +1539,14 @@ def row_worker(idx):
                         or "forcibly closed" in msg):
                     stats["shed"] += 1
             with PDF_FAILS.open("a", encoding="utf-8") as fh:
-                rec_f = {"id": did, "err": kind, "msg": str(e)[:120]}
+                # ⚠ STAMP IT. Without a time these rows cannot be tied to
+                # a RUN, and on 2026-08-24 that cost a wrong diagnosis: I
+                # read pre-patch rows, concluded the new url/body evidence
+                # "did not fire", and reported that - it had fired, on the
+                # only 400 the new code had actually seen. An append-only
+                # log without a clock cannot answer "since when".
+                rec_f = {"at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+                         "id": did, "err": kind, "msg": str(e)[:120]}
                 if getattr(e, "url", None):
                     rec_f["url"] = str(e.url)[:160]
                 if getattr(e, "acris_body", None):

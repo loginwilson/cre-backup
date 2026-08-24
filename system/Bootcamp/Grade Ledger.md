@@ -244,6 +244,26 @@ but the defects landed in the EVIDENCE rather than the prose, so the
 letter fell two steps. That is the instrument working as designed —
 severity, not volume.
 
+
+| 52 | 2003041501459002 2003 | **C+** (self, login-prompted) | **THE TENANCY BRANCH ASSERTED AS FACT IN THE DELIVERED TABLE**: rows 1-2 `who → whom` route title to named survivors while the run's own ⚠ Unresolved stream says the recital is internally inconsistent and the branch decides whether the deponents took 100% or 50% — under the tenancy-in-common reading row 2's destination is simply WRONG. **CLAIM-INCOHERENCE ACROSS LAYERS, 2nd member (49, 52)**; r49's was prose-vs-table, this one is table-vs-Unresolved inside ONE section · **THE TYPE-SHELF MISMATCH LIVED ONLY IN THE HEADLINE** — no row 0 (r51 had one), no event-test line, and its meaning (survivorship is the one route that bypasses a will, so the register's label names the mechanism that did NOT happen) stated in no layer: **LAYER-CONSISTENCY 3rd member (47, 48, 52) = MISSING STRUCTURE** · proportionality: entombment/funeral home/occupations banked though they change no decision, in the same delivery that flagged the record's over-carriage of personal data (2nd with r40) | fixes in the R52 entry · **R52-2 THE ⚠ UNRESOLVED STREAM MUST CITE ITS ROWS** (the mirror of Card #15 WHY-BIND) · **R52-3 the HEADLINE is a prose layer** · **precheck gains UNRESOLVED-ROW BINDING + HEADLINE BINDING**, both validated against this run's delivery as given · Lexicon: four tenancy entries added |
+
+⚠ TWO STREAMS THAT NEVER SPOKE TO EACH OTHER. Amendment 2 split Claims
+from ⚠ Unresolved so open questions could not be smoothed into settled
+ones. r52 shows the split is necessary and NOT SUFFICIENT: both streams
+were honest, and the rows still asserted what the doubts denied. The
+cure is BINDING, not another separation — every unresolved item names
+the row it bears on. Nothing may assert without a row (WHY-BIND, r47);
+nothing may doubt without a row (UNRESOLVED-ROW, r52).
+⚠ LAYER-CONSISTENCY REACHED THREE (47, 48, 52) and each member skipped
+a DIFFERENT layer: people, statutes, the headline. The pattern is not
+"forgets a kind of fact" — it is "the sweep runs over whatever the last
+sweep was written for". Only a mechanical enumeration of the layers can
+close it; the HEADLINE check is the third layer added.
+⚠ CLAIM-INCOHERENCE (49, 52) is now the class to watch. Both members
+were INVISIBLE to token-presence checking — every word was in the table.
+r52's cure attacks the mechanism (an orphaned doubt) rather than the
+meaning, which is the only part a script can see.
+
 ⚠ MISATTRIBUTED QUANTITY (47, 49) is the class to watch next — both
 members were CORRECT computations bound to the WRONG SUBJECT, which
 no token check can catch. If it reaches three, the structural cure

@@ -44,6 +44,24 @@ WHAT IT CHECKS
   LENGTH      anybody-test words against table rows. (r51 login ruling:
               the template is the SEQUENCE and the RULES, never the SIZE
               — measured drift 297/311/281 words for 7/13/6-page docs.)
+  HEADLINE    the run's H1 title line is a PROSE LAYER and was ungated
+              until r52: every distinctive token in it must appear in at
+              least one of the three tests. (r52: the headline named the
+              type-shelf mismatch — the run's best finding — and no test
+              mentioned it anywhere.)
+  UNRES-ROW   every item in the ⚠ Unresolved stream must NAME THE ROW it
+              bears on, or say it bears on none. An unresolved item that
+              cites no row is orphaned: it floats free of the evidence and
+              disciplines no cell. (r52: the tenancy inconsistency bore on
+              rows 1-2, said so nowhere, and both rows went on asserting
+              the branch the item calls unsettled — the mirror of Card
+              #15's WHY-BIND, applied to the other stream.)
+  CITED-ROW   the converse of UNRES-ROW: a row that an unresolved item
+              NAMES must carry the doubt IN THE ROW (a branch written
+              "A or B", or a warning mark). Together the two make a cell
+              that asserts what the Unresolved stream denies structurally
+              unrepresentable. (r52: rows 1-2 routed title to named
+              survivors while the stream called the branch open.)
   HEDGES      warning marks in the record must survive into delivery.
 """
 
@@ -247,6 +265,64 @@ def main():
                        "counted number or delete (R50: a couple was three)",
                        sorted({v.strip() for v in VAGUE_QUANTIFIERS
                                if v in low}))
+
+    # r52 · THE HEADLINE IS A PROSE LAYER TOO. Everything before the first
+    # section marker (the run's H1) must be carried by some test.
+    head = text[: text.index("## ") if "## " in text else 0]
+    tests_norm = re.sub(r"[^a-z0-9]", "",
+                        (sec["EVENT TEST"] + sec["DATA TEST"]
+                         + sec["ANYBODY TEST"]).lower())
+    orphan_head = sorted(d for d, n in proper_nouns(head).items()
+                         if n and n not in tests_norm)
+    problems += report("HEADLINE · tokens in the run's title line that NO test "
+                       "carries — the headline is a prose layer (r52: the "
+                       "type-shelf mismatch was announced there and nowhere "
+                       "else)", orphan_head)
+
+    # r52 · every ⚠ Unresolved item names the row it bears on, or says none.
+    um = re.search(r"⚠\s*Unresolved:?\**(.*?)(?=\n\s*\*\*|\Z)", table,
+                   re.S | re.I)
+    orphan_items = []
+    if um:
+        for seg in um.group(1).split("·"):
+            seg = " ".join(seg.split())
+            if len(seg) < 25:
+                continue
+            if not re.search(r"\brows?\s*\d|\bno row\b|\bnot a row\b"
+                             r"|\bactor-claims?\b|\bbears on none\b",
+                             seg, re.I):
+                orphan_items.append(seg[:110])
+    problems += report("UNRESOLVED-ROW BINDING · each item must NAME the "
+                       "row(s) it bears on, or say it bears on none — an "
+                       "orphaned item disciplines no cell (r52)",
+                       orphan_items)
+
+    # r52 · CONVERSE OF THE ABOVE: a row an unresolved item names must
+    # carry the doubt itself. A bare value in a cell IS a claim of settled.
+    cited = set()
+    if um:
+        for m in re.finditer(r"\brows?\s*(\d+)(?:\s*[-\u2013,]|\s+and\s+)\s*(\d+)?",
+                             um.group(1), re.I):
+            lo = int(m.group(1))
+            hi = int(m.group(2)) if m.group(2) else lo
+            cited.update(range(lo, hi + 1))
+        for m in re.finditer(r"\brows?\s*(\d+)", um.group(1), re.I):
+            cited.add(int(m.group(1)))
+    HEDGE = re.compile(r"\u26a0|\bor\b|unsettled|unresolved|unread|"
+                       r"not stated|either", re.I)
+    unhedged = []
+    for ln in table.splitlines():
+        if not ln.strip().startswith("|") or "---" in ln:
+            continue
+        cells = [c.strip() for c in ln.strip().strip("|").split("|")]
+        if not cells or not cells[0].isdigit():
+            continue
+        if int(cells[0]) in cited and not HEDGE.search(ln):
+            unhedged.append("row %s carries no doubt though an unresolved "
+                            "item cites it" % cells[0])
+    problems += report("CITED-ROW HEDGE · a row named by an unresolved item "
+                       "must carry the doubt IN THE ROW — a bare value is a "
+                       "claim that the cell is SETTLED (r52)", unhedged)
 
     cards = sorted({m.group(0) for m in re.finditer(
         r"\b(" + "|".join(CARDINAL_WORDS) + r")\b", low)})
