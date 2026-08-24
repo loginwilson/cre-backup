@@ -7197,12 +7197,39 @@ to the grading follow-up in simple points. Compose order is UNCHANGED
 Single-run loop confirmed: report → login prompts grade → grade + why →
 login prompts fix-and-record → four-file close → next draw.
 
-## PARTY ATTRIBUTION RULING (login 2026-08-24, recorded with run 41)
+## PARTY ATTRIBUTION RULING (login 2026-08-24, recorded with run 41;
+## sharpened same day)
 
 Every event carries its parties: in **from/to** when the function
 crosses two ends (lender/borrower, encumbrancer/beneficiary, grantor/
 grantee), and as **anchored ACTOR-CLAIMS on the same event id** when
-from/to is n/a (IDENTITY re-cuts, unilateral declarations). The humans
-who sign for entities ride claims on the event (the stakeholder graph's
-rungs). A row whose parties cannot be recovered from the row + its
-claims is not resolvable and fails the data test.
+from/to is n/a (IDENTITY re-cuts, unilateral declarations). A row whose
+parties cannot be recovered from the row + its claims is not resolvable
+and fails the data test.
+
+**A PARTY IS NOT JUST THE ENTITY — IT IS THE ENTITY *AND* EVERY HUMAN
+NAME THE DOCUMENT PAIRS WITH IT** (login, verbatim intent: "parties
+isn't just an entity, it can be the names too... connecting the entity
+to names when available... when we bring in work permits later that can
+connect those names to the actual contact information").
+
+- The ENTITY↔NAME PAIRING is itself the captured fact: officer + title
+  (Mayer Schlafrig, President, CONPLEX ENTERPRISES INC), member,
+  managing member, trustee, attorney-in-fact, signer — each pairing an
+  anchored claim on the event, never lost to "the entity acted."
+- WHY, stated as pipeline law: the entity name is often a dead end (the
+  SPE is a shell; run 41's sponsor is not even in the index). The HUMAN
+  is the cross-source join key — a future DOB work-permit source names
+  the same people (owner rep, applicant, GC) WITH contact information,
+  and that join runs PERSON-to-PERSON, not entity-to-entity. Dropping
+  the name at extraction forecloses the join forever; the reach ladder
+  climbs on names.
+- Where the document pairs no human with an entity, SAY SO on the event
+  ("no individual signs for the grantee" — Card #15 CAST): the absence
+  is itself a captured fact, and it points at which OTHER instrument
+  (rider, permit, notices block, acknowledgment) will carry the person.
+- Existing case law this unifies: D-4 (notices block unmasks the SPE),
+  C-001 (the acknowledgment is where the human appears), R20-4 (riders
+  name the person the deed never will), M-004 (addresses cluster what
+  names cannot), R23-2 (a person is not a name — addresses ride the
+  party claim).

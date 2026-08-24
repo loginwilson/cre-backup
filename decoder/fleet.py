@@ -73,6 +73,12 @@ LANES = {
          HERE, W / "image_walk_i3.log"),
     ],
     "board": [
+        # pass-2 arm: polls the board, releases the reference keyer at
+        # acris rd >= 99.95% - part of the standing fleet (caught missing
+        # 2026-08-24 after the lock-hunt kill; login asked "is pass 2
+        # armed" and it was not running)
+        ("org_backfill_arm", "org_backfill_arm.py",
+         ["--poll", "600"], HERE, HERE / "org_backfill_arm.log"),
         ("routine_update", str(UPD / "routine_update.py"),
          ["--loop"], UPD, UPD / "routine_update.log"),
         # ⚠ board_truth.py lives in Updates\, NOT the decoder dir - a launch
