@@ -72,6 +72,7 @@ import sqlite3
 import sys
 import threading
 import time
+import urllib.error
 import urllib.request
 
 import requests
@@ -255,13 +256,26 @@ SESSION.mount("https://", requests.adapters.HTTPAdapter(
 
 
 def one_at_a_time(url, referer, timeout=90):
-    """Every acris request in this process, single file, one connection."""
+    """Every acris request in this process, single file, one connection.
+
+    ⚠ RAISES urllib.error.HTTPError ON 4xx/5xx — DO NOT "SIMPLIFY" THIS AWAY.
+    urllib raises on 4xx; `requests` returns it as an ordinary response. Every
+    refusal detector in this repo catches urllib.error.HTTPError (acris_edge's
+    401/403/429 branch, fetch_pages' callers, rd_walk's), so a 403 arriving as
+    a normal response would be parsed as a blank page and the workers would
+    keep hammering a server that just refused us. Same family as the 09:00
+    lesson: a detector that fires into the wrong except clause does not
+    exist."""
     with slot():
         r = SESSION.get(url, headers={"Referer": referer}, timeout=timeout)
-        return r.content, r.headers.get("Content-Type", "")
+    if r.status_code >= 400:
+        raise urllib.error.HTTPError(url, r.status_code, r.reason,
+                                     r.headers, None)
+    return r.content, r.headers.get("Content-Type", "")
 
 
 AP.FETCH = one_at_a_time    # pdf maps + pages join the same single voice
+AE.FETCH = one_at_a_time    # and the walk too - ZERO exceptions on the wire
 
 
 def urls(did):
@@ -739,6 +753,20 @@ def governor():
             hold -= 1
         elif shed == 0 and landed > 0:
             streak += 1
+            # ⚠ UNDER PIANO (--max-inflight 1) WIDTH IS NOT PRESSURE, IT IS
+            # SHARE. The gate decides what reaches the wire, so widening
+            # cannot provoke anything - it only changes how the single wire
+            # is DIVIDED between rd and pdf (waiters per organ = that
+            # organ's share) and keeps the wire busy while workers do local
+            # work. So the governor stops hunting a width ceiling; the
+            # ceiling now lives in --max-rps and the round trip.
+            if a.max_inflight <= 1:
+                if streak == a.step_minutes:
+                    say("  GOVERNOR piano mode - width is share, not"
+                        " pressure; holding %d rd / %d pdf (%s)"
+                        % (rd_width[0] if rd_width[0] < 9999 else a.workers,
+                           w, settle(w)[0]))
+                continue
             if streak >= a.step_minutes and w < a.pdf_max:
                 verdict, win_c0 = settle(w)
                 win_t0 = time.time()
@@ -771,9 +799,12 @@ def warmup_ramp():
         pdf_width[0] = min(pdf_width[0] + RAMP_STEP, _target)
     if not stop_workers.is_set():
         say("  RAMP complete - width %d, governor owns it" % pdf_width[0])
-say("acris_lane up · ONE access point · %d rd + pdf width %d (governed,"
-    " max %d) + edge every %ds · apply=%s · quarantined %d rd / %d pdf"
-    % (a.workers, pdf_width[0], a.pdf_max, a.every, a.apply,
+say("acris_lane up · %s · %d rd + pdf width %d (max %d) · %.1f req/s cap ·"
+    " edge every %ds · apply=%s · quarantined %d rd / %d pdf"
+    % ("PIANO: one request on the wire at a time, one connection, all three"
+       " organs take turns" if a.max_inflight <= 1
+       else "CHORDS: up to %d requests at once" % a.max_inflight,
+       a.workers, pdf_width[0], a.pdf_max, a.max_rps, a.every, a.apply,
        len(QUAR_RD), len(QUAR_PDF)))
 threads = [threading.Thread(target=edge_thread, daemon=True),
            threading.Thread(target=feeder, daemon=True)]

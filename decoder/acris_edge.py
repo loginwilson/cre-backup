@@ -77,6 +77,24 @@ HDRS = {"User-Agent": UA, "Accept": "text/html"}
 # response "live".
 _MIN_DETAIL = 20_000
 
+# ⚠ THE LANE'S SINGLE VOICE, INJECTED (login 2026-08-24: the walk must never
+# converge with the rd or pdf pools). acris_lane sets FETCH to its
+# one-at-a-time getter so the probe shares the same connection and the same
+# turn-taking gate as every other organ. Left None for standalone callers
+# (crfn_monitor, routine_synchronization), which keep plain urllib.
+FETCH = None
+
+
+def _body(crfn, timeout):
+    """One GET of the probe URL — through the lane's voice when injected."""
+    url = URL % int(crfn)
+    if FETCH is not None:
+        data, _ct = FETCH(url, HDRS.get("Referer", ""), timeout)
+        return data.decode("utf-8", "replace")
+    req = urllib.request.Request(url, headers=HDRS)
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read().decode("utf-8", "replace")
+
 
 def fetch(crfn, timeout=45, tries=3):
     """ONE GET. Returns (state, doc_id, html) - the html is the PAYLOAD.
@@ -97,9 +115,7 @@ def fetch(crfn, timeout=45, tries=3):
     last = None
     for attempt in range(tries):
         try:
-            req = urllib.request.Request(URL % int(crfn), headers=HDRS)
-            with urllib.request.urlopen(req, timeout=timeout) as r:
-                body = r.read().decode("utf-8", "replace")
+            body = _body(crfn, timeout)
             LD.check_refused(body)        # a refusal is HTTP 200 - check first
             d = LC.parse_detail(body)
             if d is None:
@@ -136,9 +152,7 @@ def quick_crfn(crfn, timeout=45, tries=3):
     last = None
     for attempt in range(tries):
         try:
-            req = urllib.request.Request(URL % int(crfn), headers=HDRS)
-            with urllib.request.urlopen(req, timeout=timeout) as r:
-                body = r.read().decode("utf-8", "replace")
+            body = _body(crfn, timeout)
             LD.check_refused(body)        # a refusal is HTTP 200 - check first
             d = LC.parse_detail(body)
             if d is None:
