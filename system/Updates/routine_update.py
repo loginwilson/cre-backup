@@ -80,25 +80,83 @@ RATE_WINDOW = 5 * 60
 _HEARTBEAT = {
     ("acquisition rd", "acris"): "rd_walk_a[1-4].log",
     ("acquisition pdf", "acris"): "image_walk_i[1-3].log",
-    ("acquisition pdf", "richmond"): "rc_pdf_land.log",
+    # ⚠ rc_pdf_land.log only hears the RAW-incoming lander; the db writer is
+    # rc_pdf_pull, which logs into its own cwd (the decoder dir). Watching the
+    # lander's log kept a 6-hour wedge invisible until 2026-08-23 20:00.
+    ("acquisition pdf", "richmond"): str(DECODER / "rc_pull.log"),
 }
 _STALE_S = 180
 
 
 def _lane_log_stale(phase, src, now):
-    """True when EVERY heartbeat log for this lane is >3 min old. One fresh
-    file = the lane breathes (multi-arm lanes stay healthy while one arm is
-    mid-wade). No matching files = no verdict (False) - absence of a log is
-    a setup problem, not evidence of a hang."""
-    import pathlib as _pl
+    """True when EVERY heartbeat log for this lane is >_STALE_S old.
+
+    Mtime only - zero queries. No heartbeat spec, or no matching files,
+    means no alarm (we cannot call unknown silence a stall)."""
     pat = _HEARTBEAT.get((phase, src))
     if not pat:
         return False
-    root = W if "/" not in pat else _pl.Path(".")
-    hits = list(root.glob(pat))
-    if not hits:
-        return False
-    return all(now - p.stat().st_mtime > _STALE_S for p in hits)
+    base = pathlib.Path(pat)
+    files = [base] if base.is_absolute() else list(W.glob(pat))
+    mt = [p.stat().st_mtime for p in files if p.exists()]
+    return bool(mt) and (now - max(mt)) > _STALE_S
+
+
+# ── THE LANES' OWN CUMULATIVE COUNTERS (login 2026-08-23: "it needs to be
+# tied with the result the python is coding into the db"). Every PROGRESS
+# line's counter IS a count of db rows that lane landed this run - rd prints
+# "X total", image prints "N pdfs" (+ imageless verdicts, which also fill the
+# pdf column). Differencing THESE over our own 60s/300s samples is exact and
+# costs a file-tail read - no anchors, no baselines, no log-sum pipelines.
+_CUM_SPEC = {
+    ("acquisition rd", "acris"):
+        (("rd_walk_a1.log", "rd_walk_a2.log", "rd_walk_a3.log",
+          "rd_walk_a4.log"), r"([\d,]+) total"),
+    ("acquisition pdf", "acris"):
+        (("image_walk_i1.log", "image_walk_i2.log", "image_walk_i3.log"),
+         r"([\d,]+) pdfs.*?([\d,]+) imageless"),
+    # rc_pdf_pull's "db N" IS rows written to the pdf column this run -
+    # the exact "result the python is coding into the db" (login). Absolute
+    # path: the puller logs into its own cwd, not NAV_WORK.
+    ("acquisition pdf", "richmond"):
+        ((str(DECODER / "rc_pull.log"),), r"db ([\d,]+)"),
+}
+
+
+def _lane_cum(phase, src, st):
+    """Sum of the arms' cumulative counters, PER-FILE STATEFUL.
+
+    ⚠ THE 9.02/+0 BUG (login's screenshot, 7:48 PM): summing only what parsed
+    THIS pass meant one arm's missed parse (mid-write tail, unflushed line)
+    dropped the sum, tripped the reset, and for two passes rate_now showed a
+    stale anchor while increase_now read 0 - a rate with no increase, which
+    is arithmetically impossible and reads as exactly the nonsense it is.
+    Counters are MONOTONIC within a run, so the correct treatment of a
+    missed parse is CARRY THE FILE'S LAST VALUE; a genuine restart shows as
+    that file's value DROPPING, which resets that file alone."""
+    spec = _CUM_SPEC.get((phase, src))
+    if not spec:
+        return None
+    files, pat = spec
+    mem = st.setdefault("cumf", {}).setdefault("%s|%s" % (phase, src), {})
+    for name in files:
+        p = pathlib.Path(name)
+        if not p.is_absolute():
+            p = W / name
+        try:
+            tail = p.read_text(encoding="utf-8", errors="replace")[-4000:]
+        except OSError:
+            continue
+        hits = re.findall(pat, tail)
+        if not hits:
+            continue                     # carry last value
+        last = hits[-1]
+        v = (sum(int(x.replace(",", "")) for x in last)
+             if isinstance(last, tuple) else int(last.replace(",", "")))
+        mem[name] = v                    # a drop is just the new (reset) value
+    return sum(mem.values()) if mem else None
+
+
 # ⚠ NOW_WINDOW MUST EXCEED MIN_SPAN OR `rate_now` CAN NEVER FIRE. They were
 # both 180 s, so the recent slice could never span MORE than the minimum it
 # had to clear - with samples 60 s apart the oldest one inside the window sits
@@ -432,6 +490,27 @@ def gather():
     need_a = (sy.get("acris") or (0, 0, 21_612_715))[2] or 21_612_715
     need_r = (sy.get("richmond") or (0, 0, 2_426_588))[2] or 2_426_588
 
+    # ⚠ EXACT RD LANDED FROM ix_nav_rd_todo (2026-08-24). The counter path
+    # above zeroes on every lane relaunch ("+0 this run" against a stale
+    # baseline published 12.9M while the table held 15.2M — login caught
+    # it). The partial index makes the rd todo set countable in seconds;
+    # total − todo cannot drift, reset, or double-count. Richmond rd is
+    # complete, so every blank row in the index is acris by construction.
+    # Guarded on the index existing — without it this COUNT would be the
+    # 24M-row blob scan this file bans; fall back to the counter figure.
+    try:
+        _nc = sqlite3.connect("file:%s?mode=ro" % CP.NAV_DB, uri=True,
+                              timeout=15)
+        _nc.execute("PRAGMA busy_timeout=15000")
+        if _nc.execute("SELECT 1 FROM sqlite_master"
+                       " WHERE name='ix_nav_rd_todo'").fetchone():
+            a_rd = need_a - _nc.execute(
+                "SELECT COUNT(*) FROM navigation"
+                " WHERE recorded_details = ''").fetchone()[0]
+        _nc.close()
+    except Exception:
+        pass
+
     # ⚠ THE `pdf` COLUMN OUTRANKS THE LOGS. Everything above this line is
     # counter arithmetic - baseline plus deltas scraped out of lane logs - and
     # counter arithmetic drifts one way only. Measured 2026-08-23 against the
@@ -634,7 +713,7 @@ def main(loop):
             # derivative. So for anchored rows the lane's own published rate
             # wins outright - it is measured over the lane's real elapsed time
             # and cannot alias against the anchor's cadence.
-            if (phase, src) in ANCHORED and LANE_RATE.get((phase, src)):
+            if (phase, src) in ANCHORED and (phase, src) not in _CUM_SPEC and LANE_RATE.get((phase, src)):
                 rate = LANE_RATE[(phase, src)]
             # TWO RATES, ON PURPOSE (login 2026-08-22, asked three times:
             # "why wont update track it" while watching files pour in).
@@ -652,7 +731,7 @@ def main(loop):
             # (measured: 0.0 on both pdf rows while the lanes ran ~11/s each).
             # A zero here reads as "stalled" and is the single most misleading
             # cell on the board.
-            if (phase, src) in ANCHORED and LANE_RATE.get((phase, src)):
+            if (phase, src) in ANCHORED and (phase, src) not in _CUM_SPEC and LANE_RATE.get((phase, src)):
                 rate_now = LANE_RATE[(phase, src)]
             # FOUR STATES (login 2026-08-21): complete · active · pending ·
             # stalled. ACTIVE means a process IS PULLING on this row - not
@@ -749,16 +828,65 @@ def main(loop):
             # keys close it, so only their rate may date it. Same family as
             # the pct_increase trap above - a rate against the wrong
             # denominator is not a slow answer, it is a false one.
+            # ⚠ RATES FROM THE LANES' OWN COUNTERS wherever they publish
+            # them (login: "numbers seem all over the place... tied with the
+            # result the python is coding into the db"). One sample per pass,
+            # 60s and 300s deltas over OUR OWN timestamps; a counter DROP is
+            # a lane restart -> start the history over, never negative work.
+            cum = _lane_cum(phase, src, st)
+            if cum is not None:
+                ck = "cum|" + key
+                ch = [x for x in st["hist"].get(ck, []) if now - x[0] <= 420]
+                if ch and cum < ch[-1][1]:
+                    ch = []
+                ch.append([now, cum])
+                st["hist"][ck] = ch
+                s60 = [x for x in ch if now - x[0] >= 55]
+                s300 = [x for x in ch if now - x[0] >= 290]
+                if s60:
+                    t0, c0 = s60[-1]
+                    d_now = cum - c0
+                    # counters land in ~60s lumps; an unlucky alignment gives
+                    # a genuine 0-delta minute -> 0.0/s with +0, CONSISTENT
+                    rate_now = d_now / (now - t0)
+                    pct_n = d_now / needed * 100 if needed else 0.0
+                else:
+                    rate_now, d_now, pct_n = 0.0, 0, 0.0
+                if s300:
+                    t0, c0 = s300[-1]
+                    d = cum - c0
+                    rate = d / (now - t0)
+                    pct_i = d / needed * 100 if needed else 0.0
+                elif len(ch) > 1 and not s60:
+                    # young history: show the real span we have, both kits
+                    t0, c0 = ch[0]
+                    if now - t0 >= MIN_SPAN:
+                        d_now = d = cum - c0
+                        rate_now = rate = d / (now - t0)
+                        pct_n = pct_i = d / needed * 100 if needed else 0.0
             eta = eta_of(landed, needed, rate)
             eta_now = eta_of(landed, needed, rate_now)
-            # increase_now mirrors rate_now's own span; same fallback rule
-            d_now = (landed - recent[0][1]) if len(recent) > 1 else d
-            pct_n = d_now / needed * 100 if needed else 0.0
+            # ⚠ COUNTER LANES KEEP THE COUNTER'S OWN PAIR. This line used to
+            # run unconditionally and OVERWROTE d_now with the anchored-landed
+            # difference - near-zero between anchor re-measures - while
+            # rate_now kept the counter value: 5.42/s with +0 on the board
+            # (login, 8:07 PM). Rate and increase must come from the SAME
+            # subtraction or they can contradict each other.
+            if cum is None:
+                # increase_now mirrors rate_now's own span; same fallback rule
+                d_now = (landed - recent[0][1]) if len(recent) > 1 else d
+                pct_n = d_now / needed * 100 if needed else 0.0
             # FOUR STATUSES ONLY (login 2026-08-23): COMPLETE - ACTIVE -
             # PENDING (deliberately waiting: parked lanes, gated passes) -
             # STALLED (an unexpected break). Parked wins over everything
             # but COMPLETE: a paused lane is a decision, not a defect.
-            if phase in c.get("parked", []) and status != "COMPLETE":
+            # parked accepts "phase" (all sources) or "phase|source" (one
+            # lane) - added 2026-08-24 when acris pdf was deliberately
+            # paused for the rd sprint while richmond pdf ran on: phase-
+            # level parking would have wrongly marked richmond PENDING.
+            _parked = c.get("parked", [])
+            if ((phase in _parked or "%s|%s" % (phase, src) in _parked)
+                    and status != "COMPLETE"):
                 status = "PENDING"
                 eta = eta_now = "paused"
                 # and the rates read 0.0: the anchored lane-rate is a span
@@ -793,6 +921,8 @@ def main(loop):
             "SELECT SUM(rate_now), SUM(increase_now), SUM(rate),"
             " SUM(increase), SUM(landed), SUM(needed)"
             " FROM update_board WHERE phase='acquisition rd'").fetchone()
+        kstats = [r[0] for r in con.execute(
+            "SELECT status FROM update_board WHERE phase='acquisition rd'")]
         if k and k[5]:
             krn, kdn, kr, kd, kl, kn = (x or 0 for x in k)
             con.execute(
@@ -804,7 +934,14 @@ def main(loop):
                  round(kr, 2), kd, round(kd / kn * 100, 3),
                  eta_of(kl, kn, kr),
                  kl, kn, round(kl / kn * 100, 2),
-                 "ACTIVE" if kl < kn else "COMPLETE", win))
+                 # ⚠ NEVER HARDCODED (login 2026-08-23: "make sure you arent
+                 # hardcoding") - pass 1 RIDES rd, so its status IS rd's:
+                 # any rd source ACTIVE -> keys are landing -> ACTIVE;
+                 # rd stalled -> keys stalled; rd all complete -> COMPLETE;
+                 # rd deliberately paused -> the keys wait too -> PENDING.
+                 ("COMPLETE" if kl >= kn else
+                  ("ACTIVE" if "ACTIVE" in kstats else
+                   ("STALLED" if "STALLED" in kstats else "PENDING"))), win))
         # ⚠ PASSES 2/3 AWAIT THEIR GATES (pass 2 = rd 100%, pass 3 = pdf
         # 100%). `needed` is the pdf-pass pool ANCHORED by the 2026-08-23
         # verify scan - an accounted figure; the pass itself re-measures.

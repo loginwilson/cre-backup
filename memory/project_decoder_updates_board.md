@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-23T05:28:33.546Z
+  modified: 2026-08-24T00:19:06.637Z
 ---
 
 **⚠ BOARD REDESIGNED 2026-08-23 (login's final spec) — NINE ROWS, THREE
@@ -29,6 +29,19 @@ HOURS under pdf load — pause pdf lanes to let rd feeders reach frontier).
 FUTURE SOURCE PRINCIPLE (login): built sync-first from day one, a new source
 never needs acq/backfill lanes at all — "just run sync up to the decode";
 the acq rows exist only because this corpus predates the live lanes.
+
+**⚠ RATE AND INCREASE MUST COME FROM THE SAME SUBTRACTION (2026-08-23
+evening).** Counter lanes (_CUM_SPEC) difference the lanes' own cumulative
+log counters per-file-stateful (missed parse carries; a drop = that file's
+restart); a leftover line then OVERWROTE d_now with the anchored-landed
+diff → "5.42/s with +0" on the board. Now gated `if cum is None`. Richmond
+pdf's counter+heartbeat = rc_pdf_pull's OWN stdout log (`db N` field, the
+rows actually written) at the decoder dir — watching rc_pdf_land.log kept a
+6-hour wedge invisible. rc_feed/rc_pdf_pull print to STDOUT: relaunches
+must redirect to the canonical rc_feed.log/rc_pull.log names or the board
+goes blind. **WARM-UP BASELINES (login): rd 100/s · acris pdf 10/s ·
+richmond pdf 10/s minimum, preference 100+/12/12** — the board's recovery
+is judged against these, and richmond pdf has exceeded 12/s post-restart.
 
 **The Updates board is login's one way of seeing how routines perform**
 (2026-08-21). Every routine built from now on ships with its row here —

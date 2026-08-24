@@ -64,3 +64,6 @@ CREATE INDEX ix_nav_key ON navigation(key);
 
 -- index: ix_nav_pdf_todo
 CREATE INDEX ix_nav_pdf_todo ON navigation(id) WHERE pdf = '';
+
+-- index: ix_nav_rd_todo
+CREATE INDEX ix_nav_rd_todo ON navigation(id) WHERE recorded_details = '';
