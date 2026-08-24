@@ -2,40 +2,49 @@
 THE PRE-DELIVERY PASS — mechanical enforcement of the delivery rules.
 
 WHY THIS EXISTS (measured, Grade Ledger 2026-08-24):
-  Rule classes whose cure produced an ARTIFACT died (crop-files: clean
-  3 straight runs; count-in-action: clean 2). Rule classes whose cure
-  required VIGILANCE did not (narrative import: TEN members; layer-
-  consistency: fired half at r48). This script converts the vigilance
-  rules into a mechanical pass that either prints findings or prints
-  CLEAN. Running it produces an artifact; remembering it does not.
+  Defect classes whose cure produced an ARTIFACT died (crop-files: clean
+  5 straight runs; count-in-action: clean 2). Classes whose cure required
+  VIGILANCE did not (narrative import reached TEN members). This script
+  converts the vigilance rules into a mechanical pass that either prints
+  findings or prints CLEAN. Running it produces an artifact; remembering
+  it does not.
 
 USAGE
-  1. Write the drafted delivery to a file BEFORE delivering it, with
-     the three sections marked by these exact lines:
+  1. Write the drafted delivery to a file BEFORE delivering it, with the
+     three sections marked by these exact lines:
          ## EVENT TEST
          ## DATA TEST
          ## ANYBODY TEST
   2. python precheck.py <draft.md>
-  3. Resolve every finding: either ADD THE ROW to the data test, or
-     DELETE the claim from the prose. Then deliver.
+  3. Resolve every finding: ADD THE ROW to the data test, or DELETE the
+     claim from the prose. Then deliver.
 
 WHAT IT CHECKS
-  DOWNWARD   every proper noun and every number in the EVENT TEST and
-             ANYBODY TEST must also appear in the DATA TEST. (r47: the
-             officers lived only in prose; r48: Proclamation 7402, the
-             Antiquities Act, the National Trust charter and the
-             Rockefeller clause lived only in prose.)
-  TRIGGERS   Compose Card #4 word list — motive, era-practice, scale
-             and relationship words. (r47: "wanted to".)
-  OPENING    the anybody test's FIRST sentence may locate the deal only
-             with tokens that appear in the data test. (r42
-             "Williamsburg", r46 "Prospect Heights", r48 "New York
-             Harbor" / "old forts" — all in the same slot.)
-  CARDINALS  every spelled-out or digit cardinal in prose is listed so
-             each one can be licensed by a count run in-action.
-             (Count class: 21, 23, 39, 42, 45, 46.)
-  HEDGES     ⚠ / moderate / unresolved markers present in the record
-             must survive into the delivery (Card #11).
+  DOWNWARD    every proper noun and number in the EVENT TEST and ANYBODY
+              TEST must also appear in the DATA TEST. (r47: the officers
+              lived only in prose; r48: Proclamation 7402 and three other
+              authorities lived only in prose.)
+  TRIGGERS    Compose Card #4 word list — motive, era-practice, scale and
+              relationship words. (r47: "wanted to".)
+  OPENING     the anybody test's FIRST sentence may locate the deal only
+              with tokens the table carries. (r42 "Williamsburg", r46
+              "Prospect Heights", r48 "New York Harbor", r49 "Harlem" —
+              all the same slot; r49 was caught here before delivery.)
+  CARDINALS   every digit or spelled-out cardinal, listed for licensing
+              by a count run in-action.
+  VAGUE       "a couple", "several", "mostly" — cardinals in disguise.
+              (r50: "a couple of vacant lots" was three.)
+  CORPUS      claims about THIS FILE ("first in this corpus", "Nth
+              sighting") need a grep in the same action. (r51: two such
+              claims were FALSE and reached the evidence table.)
+  EARNED-tick every check mark asserts two independent readings agreed
+              (Card #7). (r50: a tick claimed on ids never compared.)
+  SUPERLATIVE absolute claims, where prose over-generalises and where two
+              layers end up disagreeing. (r49: "the root".)
+  LENGTH      anybody-test words against table rows. (r51 login ruling:
+              the template is the SEQUENCE and the RULES, never the SIZE
+              — measured drift 297/311/281 words for 7/13/6-page docs.)
+  HEDGES      warning marks in the record must survive into delivery.
 """
 
 import re
@@ -62,9 +71,16 @@ SUPERLATIVES = [
     "sits under", "unique", "unprecedented", "invariably", "must be",
 ]
 
+# R51: claims ABOUT THIS CORPUS made from memory instead of from a query.
+# Both of r51's C+ misses were this shape, and both reached the table.
+CORPUS_CLAIMS = [
+    "in this corpus", "first ever", "first time", "never seen",
+    "never before", "sighting", "the only instance", "first in the file",
+    "first appearance", "has never", "no prior", "unprecedented in",
+]
+
 # R50: vague quantifiers are cardinals in disguise. "a couple of vacant
-# lots" shipped a wrong number past a check that only looked for digits
-# and spelled-out numerals.
+# lots" shipped a wrong number past a check that only sought numerals.
 VAGUE_QUANTIFIERS = [
     "a couple", "a handful", "a few", "several", "most ", "mostly",
     "many ", "numerous", "a number of", "the bulk of", "the majority",
@@ -87,11 +103,12 @@ STOPWORDS = {
     "Here", "There", "Then", "Now", "Read", "Derived", "Inferred",
     "Claims", "Unresolved", "Reconciliation", "Exhibit", "Tract", "Row",
     "Event", "Data", "Anybody", "Mode", "What", "Why", "Note", "None",
+    "Without", "Upon", "Whereas", "Four", "Five", "Six",
     "January", "February", "March", "April", "May", "June", "July",
     "August", "September", "October", "November", "December",
     "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",
     "Sunday",
-    # instrument-structure words: they are grammar, not facts
+    # instrument-structure words: grammar, not facts
     "WHEREAS", "NOW", "THEREFORE", "RESOLVED", "WITNESSETH", "IN", "WITNESS",
     "ACTOR", "CLAIMS", "Section", "Article", "Paragraph", "Jr", "Sr", "Esq",
     "LLC", "LLP", "Inc", "Corp", "LP", "Ltd", "Co",
@@ -101,11 +118,11 @@ STOPWORDS = {
     "ALL", "EACH", "EVERY", "READ", "DERIVED", "INFERRED", "VALUE", "COST",
     "TITLE", "IDENTITY", "OCCUPANCY", "ENCUMBRANCE", "ENVELOPE",
     "ENTITLEMENT", "PERMIT", "ASBUILT", "CAPITAL", "PAGE", "ARITHMETIC",
-    "EXECUTION", "SEQUENCE", "First", "Second", "Third", "Borough",
+    "EXECUTION", "SEQUENCE", "MECHANISM", "RECITES", "STATED", "DRAWN",
+    "EVENT", "First", "Second", "Third", "Borough",
 }
 
-# Sentence-level noise: findings whose display form is only punctuation-
-# joined fragments of a stopword (e.g. "Jr. National Trust") are re-split.
+# Punctuation-joined fragments of a stopword ("Jr. National Trust") re-split.
 SPLIT_ON = re.compile(r"(?:^|\s)(?:Jr\.|Sr\.|Esq\.|Inc\.|Corp\.|LLC|LLP)\s*")
 
 SECTION_RE = re.compile(r"^##\s*(EVENT TEST|DATA TEST|ANYBODY TEST)", re.I | re.M)
@@ -113,7 +130,8 @@ SECTION_RE = re.compile(r"^##\s*(EVENT TEST|DATA TEST|ANYBODY TEST)", re.I | re.
 
 def split_sections(text):
     """Return {section_name: body} using the three marker headings."""
-    marks = [(m.group(1).upper(), m.start(), m.end()) for m in SECTION_RE.finditer(text)]
+    marks = [(m.group(1).upper(), m.start(), m.end())
+             for m in SECTION_RE.finditer(text)]
     if len(marks) < 3:
         sys.exit(
             "PRECHECK ABORTED: the draft must contain the three marker lines\n"
@@ -166,21 +184,22 @@ def first_sentence(body):
 
 
 def report(title, items):
-    print(f"\n--- {title} ({len(items)}) ---")
+    print("\n--- " + title + " (" + str(len(items)) + ") ---")
     if not items:
         print("  CLEAN")
     for it in items:
-        print(f"  {it}")
+        print("  " + str(it))
     return len(items)
 
 
 def main():
     # Windows consoles default to cp1252 and cannot print the marks this
-    # file is built around (checkmark, warning sign). Force UTF-8 output.
+    # file is built around (check mark, warning sign). Force UTF-8 output.
     try:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     except Exception:
         pass
+
     if len(sys.argv) < 2:
         sys.exit("usage: python precheck.py <draft.md>")
     path = pathlib.Path(sys.argv[1])
@@ -195,19 +214,23 @@ def main():
         body = sec[layer]
         missing = sorted(d for d, n in proper_nouns(body).items()
                          if n and n not in table_norm)
-        problems += report(f"DOWNWARD · proper nouns in {layer} with NO table row", missing)
+        problems += report(
+            "DOWNWARD · proper nouns in " + layer + " with NO table row",
+            missing)
 
         nums = sorted(d for d, n in numbers(body).items()
                       if n and n not in table_nums)
-        problems += report(f"DOWNWARD · numbers in {layer} not in the table", nums)
+        problems += report(
+            "DOWNWARD · numbers in " + layer + " not in the table", nums)
 
     prose = sec["EVENT TEST"] + sec["ANYBODY TEST"]
     low = prose.lower()
+
     problems += report("TRIGGERS · Compose Card #4",
                        sorted({t for t in TRIGGERS if t in low}))
     problems += report("RELATIONSHIP WORDS · anchor or delete",
                        sorted({w for w in RELATIONSHIP
-                               if re.search(rf"\b{w}\b", low)}))
+                               if re.search(r"\b" + w + r"\b", low)}))
 
     opener = first_sentence(sec["ANYBODY TEST"])
     bad_open = sorted(d for d, n in proper_nouns(opener).items()
@@ -215,32 +238,48 @@ def main():
     problems += report("OPENING · locating tokens in the anybody test's first "
                        "sentence that are NOT in the table", bad_open)
 
+    problems += report("CORPUS CLAIMS · each asserts a fact about THIS FILE — "
+                       "answer with a grep run in the same action, or delete "
+                       "(R51: two were false and reached the table)",
+                       sorted({c for c in CORPUS_CLAIMS if c in low}))
+
+    problems += report("VAGUE QUANTIFIERS · these ARE counts — replace with a "
+                       "counted number or delete (R50: a couple was three)",
+                       sorted({v.strip() for v in VAGUE_QUANTIFIERS
+                               if v in low}))
+
     cards = sorted({m.group(0) for m in re.finditer(
         r"\b(" + "|".join(CARDINAL_WORDS) + r")\b", low)})
-    report("CARDINALS · license each with a count run in-action (advisory)", cards)
+    report("CARDINALS · license each with a count run in-action (advisory)",
+           cards)
 
-    vagues = sorted({v.strip() for v in VAGUE_QUANTIFIERS if v in low})
-    problems += report("VAGUE QUANTIFIERS · these ARE counts — replace with a "
-                       "counted number or delete (R50: \"a couple\" was three)",
-                       vagues)
-
-    # R50: a check mark asserts two independent readings agreed (Card #7).
     ticks = [ln.strip()[:110] for ln in text.splitlines() if "✓" in ln]
-    report("EARNED-✓ · name the two witnesses for each, or downgrade to "
-           "\"accepted — single witness\" (advisory)", ticks)
+    report("EARNED-tick · name the two witnesses for each, or downgrade to "
+           "accepted-single-witness (advisory)", ticks)
 
-    # R49: absolute / uniqueness claims are where prose over-generalises and
-    # where two layers end up asserting different things about one subject.
-    # The pass cannot judge coherence — it can only surface the candidates.
-    sups = sorted({s for s in SUPERLATIVES if s in low})
-    report("SUPERLATIVES · absolute claims — is each true of THIS instrument, "
-           "and does every layer say the same thing about it? (advisory)", sups)
+    report("SUPERLATIVES · is each true of THIS instrument, and does every "
+           "layer say the same thing about it? (advisory)",
+           sorted({s for s in SUPERLATIVES if s in low}))
 
-    hedged = bool(re.search(r"⚠|moderate|unresolved|could not|too faint", prose))
-    print(f"\n--- HEDGES survive into delivery --- \n  {'PRESENT' if hedged else 'ABSENT — verify the record carries none'}")
+    # R51: the anybody test's length must track the document, not the template.
+    rows = [ln for ln in table.splitlines()
+            if ln.strip().startswith("|") and "---" not in ln]
+    rows = rows[1:] if rows else []
+    aw = len(sec["ANYBODY TEST"].split())
+    ratio = aw / max(len(rows), 1)
+    print("\n--- LENGTH · anybody test %d words over %d table rows = %.0f "
+          "words/row (advisory) ---" % (aw, len(rows), ratio))
+    print("  R51 drift baseline: 297/311/281 words for 7/13/6-page documents.")
+    print("  Ask: does THIS document need this many words, fewer, or more?")
+
+    hedged = bool(re.search(r"⚠|moderate|unresolved|could not|too faint",
+                            prose))
+    print("\n--- HEDGES survive into delivery ---")
+    print("  " + ("PRESENT" if hedged else
+                  "ABSENT — verify the record carries none"))
 
     print("\n" + "=" * 62)
-    print(f"PRECHECK: {problems} finding(s) to resolve before delivery."
+    print("PRECHECK: %d finding(s) to resolve before delivery." % problems
           if problems else "PRECHECK: CLEAN — deliverable.")
     print("=" * 62)
     return 1 if problems else 0

@@ -8937,3 +8937,231 @@ reach the delivered text? the delivered evidence?) instead of by
 volume of findings. Under it, an A is reachable and means something:
 no claim-changing defect, every mechanical gate clean BEFORE
 delivery, and at least one finding that changes the system.
+
+# RUN 51 — 2003042801017001 · shelved STREET PROCEDURE, actually a WAIVER OF LEGAL GRADE · QUEENS block 12200, five lots · 2003
+
+6/6 pages (2 cover + 4 instrument = the cover's stated page count of
+4; PAGE 1 OF 6). CRFN 2003000108732, recorded 2003-04-28 — same day
+as execution and both acknowledgments. **Zero new columns, zero new
+vocabulary — streak: 47.** Grade C+ — the FIRST GRADE UNDER THE NEW
+RUBRIC, and it bit: two false corpus-claims reached the DELIVERED
+EVIDENCE TABLE. Under the old habit this would have been called B+.
+
+    WAIVER OF LEGAL GRADE, City form MP-53A Rev. 6/92 (backing
+    MP-53; A-169-B on the second page) · HAMEDAN HOMES, INC.,
+    163-06 Hillside Avenue, Jamaica NY 11432 → the CITY OF NEW YORK
+    · QUEENS Block 12200, Lots 28, 27, 25, 23, 22 = 115-03, 115-05,
+    115-09, 115-15, 115-19 BEDELL STREET, Jamaica NY 11433
+
+## THE EVENTS
+
+    row 0  ⚠ TYPE vs CAPTION · register's type STREET PROCEDURE;
+           the instrument's own caption is WAIVER OF LEGAL GRADE.
+           It performs no street procedure.
+    row 1  ENCUMBRANCE·creates · transacts · owner → City, RUNNING
+           WITH THE LAND · covenant to conform to §2904 NYC Charter;
+           to install and pave sidewalks in front of or abutting the
+           buildings, INCLUDING THE INTERSECTION QUADRANT FOR CORNER
+           PROPERTY, at the owner's own cost and expense, in the
+           manner and materials and per DEPARTMENT OF TRANSPORTATION
+           specifications, and to the legally established lines and
+           grades AS APPROVED AND ADOPTED ON THE CITY MAP, AT ANY
+           TIME HEREAFTER AS THE COMMISSIONER MAY DIRECT; and to
+           furnish the Department satisfactory SECURITY · ¶3: "a
+           covenant running with the land", binding heirs,
+           executors, administrators, successors and assigns, to be
+           "duly filed and indexed in the appropriate office of the
+           City Register or County Clerk"
+    row 2  ENCUMBRANCE·releases (claims) · transacts · owner waives
+           any and all claims and causes of action of whatsoever
+           kind or nature against the CITY for damages arising out
+           of the Commissioner's consent to construction at other
+           than the legally established lines and grades, or out of
+           the determination that a sidewalk is not required
+    row 3  PERMIT-bearing (observes) — ⚠ [GRADE FIX] the delivery
+           labelled this "FIRST IN THIS CORPUS". THAT IS FALSE:
+           grep run at grading shows PERMIT-bearing was first banked
+           at RUN 46 (the ZLDA's §3.2 — separate DOB filings,
+           separate NB/Alt numbers). r51 is the SECOND sighting, and
+           the first in which permit machinery is the instrument's
+           OWN SUBJECT MATTER rather than a covenant term ·
+           recitals: owner has constructed OR IS ABOUT TO construct,
+           and has applied OR IS ABOUT TO apply to the COMMISSIONER
+           OF BUILDINGS for a CERTIFICATE OF OCCUPANCY; owner
+           applied to the COMMISSIONER OF TRANSPORTATION for
+           permission to install and pave at other than the legal
+           lines and/or grades, and/or that Commissioner determined
+           a sidewalk is NOT REQUIRED and so certified under §27-204
+           of the ADMINISTRATIVE CODE
+    row 4  ENTITLEMENT-bearing (observes) · the COMMISSIONER OF
+           TRANSPORTATION HAS REFUSED to certify to the Commissioner
+           of Buildings under §2904 of the Charter and §36 of the
+           GENERAL CITY LAW that the sidewalk, curbs and roadway
+           conform to Department specification — a refusal which
+           "would require the undersigned to take an appeal
+           therefore to the BOARD OF STANDARDS AND APPEALS" · the
+           instrument is given "in consideration of the consent of
+           the Commissioner of Transportation for the issuance of a
+           Certificate of Occupancy by the Commissioner of
+           Buildings"
+    row 5  IDENTITY (observes) · five lots, COUNTED TWO WAYS in
+           action (cover rows 2 + 3; the instrument's own lot line
+           28/27/25/23/22) · all typed DWELLING ONLY - 2 FAMILY on
+           the cover · ⚠ the lot numbers SKIP 24 AND 26 and the
+           house numbers skip 115-07, 115-11, 115-13, 115-17;
+           whether those lots exist and who holds them is NOT STATED
+    row 6  COST · recording fee $69.00; every tax line 0.00 —
+           EARNED: nothing conveyed, no debt secured
+
+    ACTOR-CLAIMS: HAMEDAN HOMES, INC. warrants and represents to
+    the City that it is the FEE OWNER of all five parcels ↔ DAVID
+    FARHANGIAN, PRESIDENT, executed 2003-04-28 over an impressed
+    CORPORATE SEAL with "L.S." beside the signature. TWO
+    ACKNOWLEDGMENTS OF ONE SIGNATURE, same day: a corporate
+    acknowledgment (he resides at 163-06 Hillside Avenue; he is
+    President; he knows the seal; it was affixed by order of the
+    directors) and a statutory short-form acknowledgment. Both
+    taken by MASOUD FARHANGIAN, Notary Public No. 01FA5017595,
+    qualified in QUEENS COUNTY, commission expiring September 07,
+    ⚠ YEAR NOT SETTLED at 150 dpi. ⚠ THE NOTARY AND THE SIGNER
+    SHARE A SURNAME; THE DOCUMENT STATES NO RELATIONSHIP AND NONE
+    IS CLAIMED (R39's lesson holding). PRESENTER and RETURN-TO are
+    both DAVID FARHANGIAN at 163-06 Hillside Avenue — the same name
+    and address as the corporation's principal office: the
+    principal filed the instrument himself. Cover names PARTY 1
+    only, with NO PARTY 2 — correct for a one-sided covenant; the
+    City takes the benefit and signs nothing.
+
+## R51-1 — THE MECHANISM (the finding)
+
+A refusal by one commissioner would have forced a BSA appeal and
+stalled the Certificate of Occupancy. The recorded waiver BUYS THE
+CONSENT instead, and the price is a perpetual obligation on the land
+to build the sidewalk correctly whenever the City later demands it.
+The permit obstacle is resolved by a recorded covenant rather than
+an appeal — and the covenant, not the permit, is what a future owner
+inherits.
+
+## R51-2 — ⚠ ASBUILT REFUSED, ON THE PAGE'S OWN WORDS
+
+"has constructed OR IS ABOUT TO construct" · "has applied OR IS
+ABOUT TO apply". The form is drafted in the alternative so one page
+serves a finished building or an unbuilt one. It therefore certifies
+NOTHING about physical reality. ASBUILT does not fire. This is the
+sharpest demonstration yet of the IDENTITY/ASBUILT boundary (r44
+ruling): a recital in the alternative cannot be an as-built fact.
+
+## R51-3 — TYPE-SHELF MISMATCH vs A CELL THAT DIDN'T MATERIALISE
+## [GRADE FIX — the delivery conflated these]
+
+The delivery's table claimed "fifth type-shelf mismatch (R42, R43,
+R46, R48, R50)". Grep run at grading; the list is WRONG. The
+distinction that was missing:
+
+    A TYPE-SHELF MISMATCH is the type MISDESCRIBING THE INSTRUMENT.
+    It is NOT the type being accurate while the DRAWN CELL failed
+    to materialise — that is the reader's expectation missing, not
+    the register's label.
+
+    TRUE MISMATCHES  r42 (DECLARATION OF MERGER holding a drainage
+                     easement declaration — nothing merges) ·
+                     r48 (LANDMARK DESIGNATION holding a four-party
+                     Waiver and Consent Agreement) ·
+                     r50 (IN REM DEED holding a judgment, no deed) ·
+                     r51 (STREET PROCEDURE holding a Waiver of
+                     Legal Grade) = FOUR, r51 the fourth
+    NOT MISMATCHES   r43 (DECLARATION OF MERGER holding a
+                     declaration of a merger OF ESTATES — the type
+                     was accurate; the lot-merger expectation was
+                     mine) · r46 (DEVELOPMENT RIGHTS holding a true
+                     ZLDA package — accurate)
+
+## R51-4 — THE ANYBODY TEST'S LENGTH MUST TRACK THE DOCUMENT
+## (login ruling 2026-08-24, measured the same turn)
+
+Login: "the anybody test tends to follow the exact same length and
+sometimes it can feel bloated if it doesn't need to be, or vice
+versa when it needs more explaining ... the template is just the
+sequential with the rules you've learned."
+
+MEASURED, in-action, over the three drafts on disk:
+
+    run   pages   anybody words   sentences   content
+    49      7          297            11      one sovereign grant
+    50     13          311             9      judgment, 38 parcels,
+                                             withheld title, 8-month
+                                             clock, 2 missing exhibits
+    51      6          281             8      one covenant + one waiver
+
+A 30-word spread — under 10% — across documents differing by more
+than 2x in length and far more in density. THE LENGTH WAS COMING
+FROM THE TEMPLATE, NOT THE DOCUMENT.
+
+THE RULE: the template is the SEQUENCE (event → data → anybody) and
+the RULES (cast first, terms taught in place, recitals attributed,
+nothing in prose that is not in the table). IT WAS NEVER THE SIZE.
+Length is a function of what the document contains — how many
+events, how many parties, and how much a reader must understand to
+act on it. r51's single covenant could have been told in four
+sentences; r50's judgment deserved more room than it got. A verdict
+whose anybody test is the same length as the last one, on a document
+that is not like the last one, is drifting.
+
+## R51 GRADE — C+ (self, cold; fixes applied in this entry)
+
+1. ⚠ FALSE "FIRST IN THIS CORPUS" IN THE DELIVERED EVIDENCE TABLE
+   (E51-3): PERMIT-bearing was banked at r46. Unlicensed under Card
+   #13 AND false. COUNT CLASS, 8th member.
+2. ⚠ FALSE MEMBER LIST IN THE DELIVERED EVIDENCE TABLE (E51-0):
+   "fifth type-shelf mismatch (R42, R43, R46, R48, R50)" — r43 and
+   r46 were accurate types; the true list is r42, r48, r50, r51.
+   COUNT CLASS, 9th member. SAME SHAPE AS MISS 1: a claim about the
+   corpus made FROM MEMORY instead of FROM A QUERY.
+3. ANYBODY-TEST LENGTH DECOUPLED FROM THE DOCUMENT (login-caught,
+   measured above) — R51-4 is the rule.
+
+STRUCTURE ENACTED THIS RUN (the hole-is-the-finding rule): precheck
+gains a CORPUS-CLAIMS check — any phrase asserting a fact about this
+corpus ("first in this corpus", "first ever", "never seen", "Nth
+sighting", "the only", "second sighting") is flagged and must be
+answered by a grep run in the same action — and a LENGTH advisory
+reporting anybody-test words against data-table row count.
+
+HELD: the type-vs-caption discovery and the mechanism behind it
+(R51-1); ASBUILT correctly REFUSED on the page's own alternative
+phrasing (R51-2); the five-lot count earned two independent ways;
+the shared notary surname held as READ with no relationship claimed;
+and a recital miscount ("four" where the page holds three WHEREAS
+clauses plus the consideration clause) caught by my own pre-delivery
+review rather than after.
+
+## ⚠ R51 CORRECTION — A FIFTH MISS, FOUND WHILE RECORDING
+
+Adding the Lexicon entry revealed the class was ALREADY THERE:
+
+    | **sidewalk waiver (NYC)** | ... given to obtain the Highways
+      Commissioner's consent to a Certificate of Occupancy | R29 |
+
+So run 51 read a class the file had already earned at RUN 29 and
+glossed it as though new. Card #12's SOURCES sweep exists precisely
+to catch this — "every class-level statement names its Lexicon
+entry; recall is not a source" — and it did not run. LEXICON-RECALL
+CLASS, 4th member (37, 41, 43, 51), after six clean runs.
+
+It also makes miss 1 worse than graded: the delivery's "PERMIT
+reaches the table for the FIRST TIME" was wrong twice over — r46
+banked PERMIT-bearing covenants, and r29 had already read a sidewalk
+waiver, which is the same C-of-O machinery.
+
+FIXED BY MERGE, not by a second entry: the R29 row now carries R51's
+statutory machinery (Charter §2904, General City Law §36, §27-204,
+the BSA alternative, the corner-quadrant reach, the security
+requirement) and cites R29, R51. A second entry for one class would
+have split the lookup the Lexicon exists to make single.
+
+⚠ MECHANICAL CURE, enacted: precheck cannot see a missing lookup,
+but it CAN see the claim that hides it. The CORPUS CLAIMS check
+already flags "first time" / "first appearance" / "never seen". The
+standing answer to any such flag is now TWO greps, not one: grep
+Bootcamp.md AND grep Lexicon.md. A class-level term that has an
+entry is not new, however new it feels.

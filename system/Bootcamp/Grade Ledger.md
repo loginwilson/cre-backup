@@ -231,6 +231,19 @@ the miss is not just a defect — the GAP IN THE MACHINE is the finding,
 and it gets closed in the same run. r50 closed two (vague quantifiers;
 unlicensed ✓ marks).
 
+
+| 51 | 2003042801017001 2003 | **C+** (self — FIRST GRADE UNDER THE NEW RUBRIC, and it bit; the old habit would have said B+) | **TWO FALSE CORPUS-CLAIMS REACHED THE DELIVERED EVIDENCE TABLE**, both the same shape — a claim about this file made from MEMORY not from a QUERY: (1) "PERMIT-bearing, first in this corpus" — grep at grading shows r46 banked it first (count class 8th); (2) "fifth type-shelf mismatch (R42,R43,R46,R48,R50)" — r43 and r46 were ACCURATE types; true list is r42, r48, r50, r51 (count class 9th) · **anybody-test length decoupled from the document** (login-caught, then measured: 297/311/281 words for 7/13/6-page docs) | fixes in the R51 entry · **R51-3 defines type-shelf mismatch** (the type misdescribing the instrument — NOT the type being accurate while a drawn cell failed to materialise) · **R51-4 length rule** · **precheck gains CORPUS CLAIMS + LENGTH checks**, the corpus check validated against this run's own false claim |
+
+⚠ COUNT CLASS AT NINE (21, 23, 39, 42, 45, 46, 50, 51x2) and it has now
+moved UP a layer: r50's miss reached the delivered TEXT, r51's two
+reached the delivered TABLE. The enumeration-default cure works on
+counts OF THE DOCUMENT; it never covered counts ABOUT THE CORPUS. That
+sub-class now has its own mechanical check (CORPUS CLAIMS).
+⚠ THE RUBRIC'S FIRST LIVE TEST: same defect count as several B+ runs,
+but the defects landed in the EVIDENCE rather than the prose, so the
+letter fell two steps. That is the instrument working as designed —
+severity, not volume.
+
 ⚠ MISATTRIBUTED QUANTITY (47, 49) is the class to watch next — both
 members were CORRECT computations bound to the WRONG SUBJECT, which
 no token check can catch. If it reaches three, the structural cure

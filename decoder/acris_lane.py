@@ -112,7 +112,7 @@ ap.add_argument("--phase", default="row",
                      " 135/s under pdf load) - under one wire that benefit"
                      " is gone, so running them together adds convergence"
                      " risk for zero throughput. auto = drain rd first (5.4M"
-                     " requests, ~2.4% of the work, and it keys the whole"
+                     " requests, ~2.4%% of the work, and it keys the whole"
                      " corpus), then open pdf. The WALK always interleaves -"
                      " it is time-based and costs 0.1 req/s."
                      " ⚠ row (DEFAULT, login: 'I would like start to finish"
@@ -139,6 +139,24 @@ ap.add_argument("--rps-max", type=float, default=80.0,
                      " evenly-metered arrivals are what the VPN was"
                      " accidentally providing all morning (~77 req/s, no"
                      " blocks). The bucket makes that spacing deliberate.")
+# ⚠ ON BY DEFAULT (login 2026-08-24: "we really do want fails to get solved
+# for and never pile up since it assures perfection of the system"). A
+# quarantined doc is skipped ON SIGHT, so without this it is stuck FOREVER
+# and the pile only grows. Adjudication is also nearly free - the whole
+# quarantine set is 1 doc today, a handful of requests - so there is no
+# reason to make remembering a flag the thing that stands between us and a
+# complete corpus. --no-adjudicate exists for a deliberate skip.
+ap.add_argument("--cold-start", dest="resume_warm", action="store_false",
+                help="ignore the saved tempo and ramp from --max-rps"
+                     " (warm resume is ON by default)")
+ap.set_defaults(resume_warm=True)
+ap.add_argument("--no-adjudicate", dest="adjudicate", action="store_false",
+                help="skip the startup re-attempt of quarantined docs"
+                     " (adjudication is ON by default)")
+ap.set_defaults(adjudicate=True)
+ap.add_argument("--stall-after", type=int, default=120,
+                help="seconds with ZERO successful requests before the"
+                     " transport is presumed dead and recycled")
 ap.add_argument("--contiguous", action="store_true",
                 help="hold ONE document's whole network burst uninterrupted."
                      " ⚠ COSTS ~64x THROUGHPUT - it serializes the entire"
@@ -187,6 +205,21 @@ rd_width = [9999]            # rd gate - collapsed by the governor after a
 rd_all_fed = threading.Event()   # rd feeder exhausted the todo set
 ua = {"User-Agent": fetch_pages.UA}
 PDF_FAILS = CP.NAV_WORK / "acris_lane_pdf_fails.jsonl"
+# the governor re-reads this EVERY MINUTE; absent or blank = use --rps-max
+CEILING_FILE = CP.NAV_WORK / "lane_ceiling.txt"
+# ⚠ IN-RUN RETRY LEDGER. Without it a failed doc keeps pdf='' and is only
+# retried when the feeder's cursor WRAPS THE WHOLE 19.8M-ROW SET - correct
+# (nothing lost, nothing faked) but the healing lands at the END of the sync
+# instead of seconds later. MEASURED 2026-08-24: 146 of 159 failed docs healed
+# on a later attempt - 92%, across EVERY class (SSLError 49/50, HTTP 400 36/43,
+# Short 18/19). Transport noise, not document defects.
+_attempts = {}
+_att_lk = threading.Lock()
+MAX_ATTEMPTS = 3
+# ⚠ an absolute stop no file may cross. The old sharded fleet measured
+# ~140 req/s aggregate as acris's served ceiling; 150 keeps that as the
+# outer bound so a fat-fingered file can never launch a stampede.
+HARD_CEILING = 150.0
 PDF_BATCH = 25
 VERIFY_CURSOR = CP.NAV_WORK / "_verify_cursor.txt"
 
@@ -209,8 +242,32 @@ def _quarantine(path, n=3):
         return set()
 
 
+def _diagnosed(*paths):
+    """ids whose failure already carries a CAUSE - stop re-asking them.
+
+    _frames() appends its stop_why to the Short message ("placeholder(end-
+    marker) at page N" = the server truly ends the doc early, its defect;
+    "non-TIFF at page N" = possibly a FORMAT our II/MM test wrongly rejects,
+    ours). Either way the question has an answer on record."""
+    out = set()
+    for path in paths:
+        try:
+            for ln in path.read_text(encoding="utf-8").splitlines():
+                try:
+                    r = json.loads(ln)
+                except Exception:
+                    continue
+                m = str(r.get("msg", ""))
+                if "placeholder(" in m or "non-TIFF at page" in m:
+                    out.add(r.get("id"))
+        except OSError:
+            pass
+    return out - {None}
+
+
 QUAR_RD = _quarantine(FAILS)
 QUAR_PDF = _quarantine(PDF_FAILS)
+DIAGNOSED = _diagnosed(FAILS, PDF_FAILS)
 
 con = sqlite3.connect(CP.NAV_DB, timeout=600, check_same_thread=False)
 con.execute("PRAGMA journal_mode=WAL")
@@ -271,7 +328,85 @@ class Tempo:
             time.sleep(delay)
 
 
-tempo = Tempo(a.max_rps)
+# ⚠⚠ THE EARNED TEMPO SURVIVES A RESTART (login 2026-08-24: "a loss in
+# connection would kill a ton of progress on ramp up speed. if we have to
+# wait multiple hours to ever hit optimal speed, it isnt ideal").
+#
+# Climbing +2/s every 3 clean minutes means ~35 minutes to reach 36/s and
+# over two hours to reach the ceiling. Throwing that away on every restart
+# made the ramp the single most expensive thing in the system - and it is
+# what made "just restart it" an unaffordable answer to any problem.
+#
+# So the governor records what it earned, and a restart RESUMES WARM at a
+# fraction of it. Two guards keep that honest:
+#   - the save is stamped CLEAN or DIRTY. A refusal, or a mass failure the
+#     probe could not vouch for, writes DIRTY and the next start ignores
+#     the saved value entirely - we never resume hot into a server that
+#     just pushed back.
+#   - the resume is a FRACTION (60%) and never above the ceiling, so it
+#     re-earns the top rungs rather than assuming them. Even warm, that is
+#     a rate acris served us minutes ago, and the pacer spaces every
+#     departure identically at any rate - so a warm start is not a
+#     stampede, which is the thing the ramp law actually guards against.
+TEMPO_FILE = CP.NAV_WORK / "lane_tempo.json"
+WARM_FRACTION = 0.6
+WARM_MAX_AGE = 6 * 3600        # older than this and the world has moved on
+
+
+# ⚠⚠ BANK THE HIGH-WATER MARK, NOT THE CURRENT TEMPO (login 2026-08-24:
+# "what if we earn a higher tempo, does it track that and start there not
+# cold?"). Saving the CURRENT value ratchets DOWNWARD across restarts: warm
+# resume starts at 60% of the save, the very next rung overwrites the save
+# with that lower number, and each restart compounds it - 48 -> 28.8 -> 17.3.
+# The saved number has to be the best tempo the lane has actually HELD
+# cleanly, so every resume measures from the peak rather than from wherever
+# the climb happened to be when it was interrupted.
+#
+# ⚠ AND THE PEAK IS TRIMMED BY THE SERVER, NEVER ONLY BY US. On a shed the
+# high-water resets DOWN to the post-backoff tempo: a rate acris pushed back
+# on stops being evidence that the rate is safe, so it must not survive as a
+# resume target. The mark means "highest rate recently sustained with no
+# pushback" - which is exactly the claim a warm start needs to make.
+_best = [0.0]
+
+
+def save_tempo(rps, clean, trim=False):
+    rps = float(rps)
+    if trim:
+        _best[0] = rps          # the server spoke: the old peak is void
+    else:
+        _best[0] = max(_best[0], rps)
+    try:
+        TEMPO_FILE.write_text(json.dumps(
+            {"rps": round(rps, 1), "best": round(_best[0], 1),
+             "clean": bool(clean), "at": time.time()}), encoding="utf-8")
+    except OSError:
+        pass
+
+
+def _warm_start(cold):
+    if not a.resume_warm:
+        return cold, ""
+    try:
+        d = json.loads(TEMPO_FILE.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return cold, ""
+    if not d.get("clean"):
+        return cold, " (saved tempo was DIRTY - starting cold, by design)"
+    if time.time() - d.get("at", 0) > WARM_MAX_AGE:
+        return cold, " (saved tempo too old - starting cold)"
+    peak = float(d.get("best", d.get("rps", cold)))
+    _best[0] = peak                      # carry the mark across the restart
+    warm = max(cold, min(peak * WARM_FRACTION, a.rps_max))
+    if warm <= cold:
+        return cold, ""
+    return warm, ("WARM RESUME · peak clean tempo %.1f/s -> starting at"
+                  " %.1f/s instead of %.1f - the climb is not thrown away"
+                  % (peak, warm, cold))
+
+
+_start_rps, _warm_note = _warm_start(float(a.max_rps))
+tempo = Tempo(_start_rps)
 
 # ⚠⚠ THE NO-COLLISION GATE (login 2026-08-24, trip #5): "we are drumming
 # when we need to play piano. the code can never collide the requests."
@@ -349,8 +484,47 @@ def turn():
 # stampede trips. Workers remain parallel for LOCAL work (parsing, img2pdf,
 # db writes); only the network is single file. Richmond is exempt - the
 # drumroll rule holds there (proven 160 concurrent connections).
-SESSION = requests.Session()
-SESSION.headers.update({"User-Agent": fetch_pages.UA})
+def _new_session():
+    sess = requests.Session()
+    sess.headers.update({"User-Agent": fetch_pages.UA})
+    sess.mount("https://", requests.adapters.HTTPAdapter(
+        pool_connections=1, pool_maxsize=a.max_inflight, max_retries=0,
+        pool_block=True))
+    return sess
+
+
+# ⚠⚠ THE TRANSPORT RESTARTS ITSELF - A NETWORK CHANGE IS NOT A HUMAN'S JOB
+# (login 2026-08-24: "how to restart it since changing networks will require
+# the restart every time"). Every pooled socket is bound to the old route;
+# after a VPN hop, a wifi switch or an ip re-lease they are all dead, and
+# urllib3 only discovers that ONE REQUEST AT A TIME - each worker burns a
+# full timeout rediscovering the same fact, which is what made a network
+# change look like a hang that only a process restart could clear.
+#
+# So the session lives in a BOX and gets swapped wholesale: one recycle
+# closes every stale socket and the next request builds a clean pool on the
+# new route. That is the restart, minus the process, minus the human, and
+# minus losing the climb.
+_SESSION_BOX = [None]
+last_ok = [time.time()]
+_sess_lk = threading.Lock()
+_recycles = [0]
+
+
+def recycle_session(why):
+    """Swap in a clean pool. Safe to call from any thread, any time."""
+    with _sess_lk:
+        old, _SESSION_BOX[0] = _SESSION_BOX[0], _new_session()
+        _recycles[0] += 1
+        n = _recycles[0]
+    if old is not None:
+        try:
+            old.close()          # closes every pooled socket
+        except Exception:
+            pass
+    say("  ⟳ TRANSPORT RECYCLED (#%d) - fresh connection pool: %s" % (n, why))
+
+
 # ⚠⚠ THE POOL MUST BE AS WIDE AS --max-inflight, OR CONCURRENCY BECOMES A
 # COLD-HANDSHAKE GENERATOR (measured 2026-08-24). urllib3's `block` defaults
 # to False: with pool_maxsize=1 and 16 requests in flight, ONE takes the
@@ -367,9 +541,7 @@ SESSION.headers.update({"User-Agent": fetch_pages.UA})
 # first handshakes are 83 ms apart), so the ramp warms the pool instead of
 # stampeding it. Concurrency is now a warm-connection count, not a
 # handshake rate — which is what makes raising it safe.
-SESSION.mount("https://", requests.adapters.HTTPAdapter(
-    pool_connections=1, pool_maxsize=a.max_inflight, max_retries=0,
-    pool_block=True))
+_SESSION_BOX[0] = _new_session()      # the live pool (swappable, see above)
 
 
 def one_at_a_time(url, referer, timeout=90):
@@ -384,10 +556,20 @@ def one_at_a_time(url, referer, timeout=90):
     lesson: a detector that fires into the wrong except clause does not
     exist."""
     with slot():
-        r = SESSION.get(url, headers={"Referer": referer}, timeout=timeout)
+        sess = _SESSION_BOX[0]
+        r = sess.get(url, headers={"Referer": referer}, timeout=timeout)
+    last_ok[0] = time.time()      # the wire is proven alive, this instant
     if r.status_code >= 400:
-        raise urllib.error.HTTPError(url, r.status_code, r.reason,
+        # ⚠ CARRY THE EVIDENCE. str(HTTPError) is only "HTTP Error 400:
+        # Bad Request" - it drops the url, so the fails log could not say
+        # whether the MAP or a PAGE 400d, and we nearly reasoned a verdict
+        # out of that gap. MEASURED 2026-08-24: 36 of the 43 docs that threw
+        # 400 later downloaded a COMPLETE pdf - so 400 is transient noise,
+        # NOT "this document has no image". Never map it to a verdict.
+        err = urllib.error.HTTPError(url, r.status_code, r.reason,
                                      r.headers, None)
+        err.acris_body = r.content[:180]
+        raise err
     return r.content, r.headers.get("Content-Type", "")
 
 
@@ -555,6 +737,31 @@ def edge_tick():
 probe_ok_at = [0.0]
 
 
+def watchdog():
+    """⚠ THE SILENT NETWORK CHANGE (login: "changing networks will require
+    the restart every time"). A burst of failures is the LOUD case and the
+    governor handles it. The quiet case is worse: a route dies while every
+    worker sits inside a 90 s socket timeout, so nothing fails, nothing
+    lands, no counter moves, and the lane looks busy while doing nothing.
+    Only a human noticing a flat board ever caught that.
+
+    So: if NOTHING has succeeded for --stall-after seconds, the transport is
+    presumed dead and gets recycled. Cheap (the probe alone re-proves the
+    route in one request) and self-limiting - a healthy lane refreshes
+    last_ok several times a second, so this can never fire under load."""
+    while True:
+        time.sleep(15)
+        quiet = time.time() - last_ok[0]
+        if quiet >= a.stall_after and not stop_workers.is_set():
+            recycle_session("nothing has succeeded for %.0fs - presuming the"
+                            " route changed under us" % quiet)
+            last_ok[0] = time.time()      # give the new pool a fair window
+            pdf_width[0] = min(pdf_width[0], 8)
+            tempo.rps = max(4.0, tempo.rps * 0.5)
+            say("  ⟳ re-ramping after the stall: tempo %.1f/s, width %d"
+                % (tempo.rps, pdf_width[0]))
+
+
 def edge_thread():
     """The reservation: one probe per --every seconds forever, exponential
     backoff while unproven/refused. Outlives a worker stop - this is the
@@ -569,6 +776,9 @@ def edge_thread():
             probe_ok_at[0] = time.time()
         if refused and not stop_workers.is_set():
             stop_workers.set()
+            # ⚠ a refusal marks the saved tempo DIRTY: the next start
+            # must ramp COLD, never resume into a server that refused.
+            save_tempo(tempo.rps, clean=False)
             say("  ⚠ REFUSED - BACKFILL WORKERS STOPPED (probe continues on"
                 " backoff; restart the lane to resume backfill: login's call)")
         if ok:
@@ -675,6 +885,9 @@ def worker(idx=0):
         except REFUSALS as e:
             if not stop_workers.is_set():
                 stop_workers.set()
+                # ⚠ a refusal marks the saved tempo DIRTY: the next start
+                # must ramp COLD, never resume into a server that refused.
+                save_tempo(tempo.rps, clean=False)
                 say("  REFUSED at %s - BACKFILL WORKERS STOPPED: %.90s"
                     % (did, e))
         except Exception as e:
@@ -799,6 +1012,9 @@ def pdf_worker(idx):
         except REFUSALS as e:
             if not stop_workers.is_set():
                 stop_workers.set()
+                # ⚠ a refusal marks the saved tempo DIRTY: the next start
+                # must ramp COLD, never resume into a server that refused.
+                save_tempo(tempo.rps, clean=False)
                 say("  PDF REFUSED at %s - ALL WORKERS STOPPED: %.90s"
                     % (did, e))
         except Exception as e:
@@ -818,8 +1034,13 @@ def pdf_worker(idx):
                         or "forcibly closed" in msg):
                     stats["shed"] += 1
             with PDF_FAILS.open("a", encoding="utf-8") as fh:
-                fh.write(json.dumps({"id": did, "err": kind,
-                                     "msg": str(e)[:120]}) + "\n")
+                rec_f = {"id": did, "err": kind, "msg": str(e)[:120]}
+                if getattr(e, "url", None):
+                    rec_f["url"] = str(e.url)[:160]
+                if getattr(e, "acris_body", None):
+                    rec_f["body"] = e.acris_body.decode(
+                        "utf-8", "replace")[:180]
+                fh.write(json.dumps(rec_f) + "\n")
 
 
 def governor():
@@ -876,6 +1097,28 @@ def governor():
         # ACRIS experiences. Climb it the way the governor climbed width:
         # +2/s per clean window, back off hard on the server's own signal.
         rps = tempo.rps
+        # ⚠⚠ THE CEILING IS LIVE-TUNABLE (login 2026-08-24: "if we do see
+        # that theres room and we get there without blocking then we should
+        # push that ceiling as we step"). --rps-max was NEVER a measured
+        # acris limit - it is OUR number. The only measurement of what acris
+        # tolerates is the old sharded fleet at ~140 req/s aggregate,
+        # sustained for hours. Raising it used to mean a RESTART, which threw
+        # away the entire earned climb (back to 12/s, hours to return) - so
+        # the ceiling is re-read from a FILE every minute. Echo a number into
+        # lane_ceiling.txt and the governor picks it up on its next tick.
+        # It is a BRAKE as well: a lower number trims the tempo immediately.
+        ceiling = a.rps_max
+        try:
+            _txt = CEILING_FILE.read_text(encoding="utf-8").strip()
+            if _txt:
+                ceiling = max(4.0, min(float(_txt), HARD_CEILING))
+        except (OSError, ValueError):
+            pass
+        if ceiling < tempo.rps:
+            tempo.rps = ceiling
+            say("  GOVERNOR ceiling now %.1f/s - tempo trimmed to match"
+                % ceiling)
+            rps = tempo.rps
         if shed >= 10:
             # MASS failure in one minute = a reconnect event (network change,
             # sleep/wake, IP re-lease), not ordinary shedding: every keep-
@@ -900,10 +1143,14 @@ def governor():
             #                   but KEEP the earned tempo and hold only 2 min.
             # Probe silent   -> treat as the server: full collapse, 10 min.
             served = time.time() - probe_ok_at[0] < 90
+            # every pooled socket just died together - throw the pool away
+            # rather than let each worker rediscover that on its own timeout
+            recycle_session("mass failure (%d/min)" % shed)
             pdf_width[0] = 8
             rd_width[0] = 4
             if served:
                 hold, streak = 2, 0
+                save_tempo(tempo.rps, clean=True)   # local blip, not acris
                 say("  GOVERNOR mass failure (%d/min) but THE PROBE IS STILL"
                     " SERVED (%.0fs ago) - local transport event, not acris:"
                     " tempo HELD at %.1f/s, pdf %d -> 8, rd -> 4, hold 2 min"
@@ -912,6 +1159,7 @@ def governor():
             else:
                 tempo.rps = max(4.0, rps * 0.4)
                 hold, streak = 10, 0
+                save_tempo(tempo.rps, clean=False, trim=True)  # probe silent = server
                 say("  GOVERNOR mass failure (%d/min), PROBE SILENT TOO -"
                     " treating as the server, FULL RE-RAMP: tempo %.1f ->"
                     " %.1f/s, pdf %d -> 8, rd -> 4, hold 10 min (%s)"
@@ -920,6 +1168,7 @@ def governor():
             verdict, win_c0 = settle(w)
             win_t0 = time.time()
             tempo.rps = max(4.0, rps * 0.75)
+            save_tempo(tempo.rps, clean=True, trim=True)   # peak was refuted
             hold, streak = 10, 0
             say("  GOVERNOR server shedding (%d) - TEMPO %.1f -> %.1f/s,"
                 " hold 10 min (%s)" % (shed, rps, tempo.rps, verdict))
@@ -934,10 +1183,11 @@ def governor():
             # organ's share) and keeps the wire busy while workers do local
             # work. So the governor stops hunting a width ceiling; the
             # ceiling now lives in --max-rps and the round trip.
-            if streak >= a.step_minutes and rps < a.rps_max:
+            if streak >= a.step_minutes and rps < ceiling:
                 verdict, win_c0 = settle(w)
                 win_t0 = time.time()
-                tempo.rps = min(rps + 2.0, a.rps_max)
+                tempo.rps = min(rps + 2.0, ceiling)
+                save_tempo(tempo.rps, clean=True)   # bank the rung
                 streak = 0
                 say("  GOVERNOR %d clean minutes - TEMPO %.1f -> %.1f/s (%s)"
                     % (a.step_minutes, rps, tempo.rps, verdict))
@@ -1033,13 +1283,37 @@ def row_feeder():
                 for did, rd in rows:
                     if stop_workers.is_set():
                         return
-                    q.put((did, rd or "", True))     # verify: not progress
+                    q.put((did, rd or "", "verify"))     # verify: not progress
                     n += 1
                 cur = rows[-1][0]
                 VERIFY_CURSOR.write_text(cur)     # resumable across restarts
                 while q.qsize() > 500 and not stop_workers.is_set():
                     time.sleep(2)
 
+    stuck = []          # ⚠ defined unconditionally: the guard below reads it
+    if a.adjudicate and (QUAR_PDF or QUAR_RD):
+        # ⚠ A DIAGNOSED DOC IS DONE BEING ASKED. Adjudication runs at every
+        # start, so without this a permanently-broken document burns a fresh
+        # handful of requests on every restart and grows the fails log
+        # forever - the pile login asked us never to let build. Once a
+        # failure carries a CAUSE (_frames' stop_why: "placeholder(end-marker)
+        # at page N" or "non-TIFF at page N"), re-asking adds nothing: the
+        # answer is recorded and it is the SOURCE's defect, not a transport
+        # flake. Its columns still stay EMPTY - diagnosed is not a verdict,
+        # and a later policy pass can still adjudicate the class.
+        stuck = sorted((QUAR_PDF | QUAR_RD) - DIAGNOSED)
+        if DIAGNOSED:
+            say("  %d quarantined doc(s) already carry a recorded cause -"
+                " not re-asking (see acris_lane_pdf_fails.jsonl)"
+                % len(DIAGNOSED))
+    if a.adjudicate and (QUAR_PDF or QUAR_RD) and stuck:
+        say("  ADJUDICATING %d quarantined doc(s) - one attempt each, with"
+            " the diagnosis the original failures never recorded"
+            % len(stuck))
+        for _d in stuck:
+            _r = read.execute("SELECT recorded_details FROM navigation"
+                              " WHERE id = ?", (_d,)).fetchone()
+            q.put((_d, (_r[0] if _r else "") or "", "adjudicate"))
     cursor = ""
     while not stop_workers.is_set():
         rows = read.execute(
@@ -1055,7 +1329,7 @@ def row_feeder():
         for did, rd in rows:
             if stop_workers.is_set():
                 return
-            q.put((did, rd or "", False))
+            q.put((did, rd or "", ""))
 
 
 def row_worker(idx):
@@ -1079,9 +1353,19 @@ def row_worker(idx):
                 item = q.get(timeout=5)
             except queue.Empty:
                 continue
-        did, rd_json, is_verify = (item if len(item) == 3
-                                   else (item[0], item[1], False))
-        if did in QUAR_RD or did in QUAR_PDF:
+        did, rd_json, mode = (item if len(item) == 3
+                              else (item[0], item[1], ""))
+        is_verify = (mode == "verify")
+        # ⚠ ADJUDICATION BYPASSES QUARANTINE ON PURPOSE. Quarantine is an
+        # honest holding state - the row keeps EMPTY columns, never a fake
+        # verdict - but nothing ever re-examined it, so a doc that failed 3
+        # times was stuck forever. Worse, the quarantined Short docs failed
+        # BEFORE _frames() recorded WHY it stopped, so their logs read
+        # "short: 1/3 pages" with no cause. One attempt writes the real
+        # diagnosis: placeholder(end-marker) = the server truly ends the doc
+        # early (its defect); non-TIFF = maybe a FORMAT our II/MM test wrongly
+        # rejects (ours). The verdict becomes EVIDENCE, not a guess.
+        if mode != "adjudicate" and (did in QUAR_RD or did in QUAR_PDF):
             continue
         try:
             # ── stage 1: recorded details (skipped when already held) ──
@@ -1133,6 +1417,9 @@ def row_worker(idx):
         except REFUSALS as e:
             if not stop_workers.is_set():
                 stop_workers.set()
+                # ⚠ a refusal marks the saved tempo DIRTY: the next start
+                # must ramp COLD, never resume into a server that refused.
+                save_tempo(tempo.rps, clean=False)
                 say("  REFUSED at %s - ALL WORKERS STOPPED: %.90s" % (did, e))
         except Exception as e:
             kind = type(e).__name__
@@ -1146,8 +1433,22 @@ def row_worker(idx):
                         or "forcibly closed" in msg):
                     stats["shed"] += 1
             with PDF_FAILS.open("a", encoding="utf-8") as fh:
-                fh.write(json.dumps({"id": did, "err": kind,
-                                     "msg": str(e)[:120]}) + "\n")
+                rec_f = {"id": did, "err": kind, "msg": str(e)[:120]}
+                if getattr(e, "url", None):
+                    rec_f["url"] = str(e.url)[:160]
+                if getattr(e, "acris_body", None):
+                    rec_f["body"] = e.acris_body.decode(
+                        "utf-8", "replace")[:180]
+                fh.write(json.dumps(rec_f) + "\n")
+            # ⚠ HEAL IT NOW, NOT AT THE WRAP - bounded, and never for a
+            # refusal (caught above; that stills the whole lane). The retry
+            # re-enters through the SAME pacer, so it changes nothing about
+            # what acris sees - only WHEN we ask again.
+            with _att_lk:
+                _attempts[did] = _attempts.get(did, 0) + 1
+                again = _attempts[did] < MAX_ATTEMPTS
+            if again and not stop_workers.is_set():
+                q.put((did, rd_json, mode))
 
 
 say("acris_lane up · %s · %s · %.1f req/s cap · edge every %ds · apply=%s"
@@ -1159,8 +1460,11 @@ say("acris_lane up · %s · %s · %.1f req/s cap · edge every %ds · apply=%s"
         % a.workers) if a.phase == "row"
        else "phase=%s · %d rd + pdf width %d (max %d)"
        % (a.phase, a.workers, pdf_width[0], a.pdf_max),
-       a.max_rps, a.every, a.apply, len(QUAR_RD), len(QUAR_PDF)))
-threads = [threading.Thread(target=edge_thread, daemon=True)]
+       tempo.rps, a.every, a.apply, len(QUAR_RD), len(QUAR_PDF)))
+if _warm_note:
+    say(" " + _warm_note.lstrip(" ·"))
+threads = [threading.Thread(target=edge_thread, daemon=True),
+           threading.Thread(target=watchdog, daemon=True)]
 if a.phase == "row":
     # THE ASSEMBLY LINE: one pool, each worker carries a row to READY.
     # `--workers` is the crew size - enough to keep the single wire busy
@@ -1208,6 +1512,10 @@ try:
                    "{:,}".format(s["verified"]), pdf_width[0]))
 except KeyboardInterrupt:
     stop_workers.set()
+    # ⚠ AN OPERATOR STOP IS CLEAN, NOT A REFUSAL. Marking it dirty would
+    # make every deliberate restart ramp from scratch - which is precisely
+    # the cost this whole mechanism exists to remove.
+    save_tempo(tempo.rps, clean=True)
     flush()
     pdf_flush()
     say("stopped · %s landed" % "{:,}".format(stats["done"]))

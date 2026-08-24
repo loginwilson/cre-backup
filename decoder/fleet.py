@@ -45,18 +45,39 @@ LANES = {
     "sync": [
         # THE CONSOLIDATED ACRIS LANE - sync + rd backfill + pdf pool, one
         # access point. Log goes to NAV_WORK (the board reads it there).
-        # ⚠ NEVER COLD-LAUNCH (login 13:03, trip #3): the lane self-ramps
-        # from width 8 - that is load-bearing, not a slow start. Restarts
-        # are themselves a load event; minimize them.
-        # ⚠ PIANO CONFIG (login 14:45, after trip #5): --max-inflight 1 means
-        # rd, pdf AND THE SYNC WALKER can never be on the wire together -
-        # "its not the number of requests, its the overlap when they
-        # converge that tells them to block." All three organs take turns
-        # down ONE kept-alive connection. Worker counts are SHARE OF THE
-        # WIRE, not pressure. Do not raise --max-inflight without login.
+        # ⚠ NEVER COLD-LAUNCH (login 13:03, trip #3): the lane starts at a
+        # low --max-rps and the governor earns every +2 step with clean
+        # minutes. With the pacer, connections are also BORN evenly spaced
+        # (83 ms apart at 12/s), so the pool warms instead of stampeding -
+        # the ramp law now holds by construction, not by a warmup thread.
+        # Restarts are themselves a load event; minimize them.
+        #
+        # ⚠ A NETWORK CHANGE NO LONGER NEEDS A RESTART (login: "changing
+        # networks will require the restart every time"). The lane keeps its
+        # session in a swappable box: the governor recycles the pool on any
+        # mass failure, and a watchdog recycles it after --stall-after
+        # seconds with zero successes (the SILENT case - every worker parked
+        # inside a 90 s timeout while the board sits flat).
+        # ⚠ PIANO AT DRUM PACE (login 16:00, after the 15:56 diagnosis):
+        # "so fast that it feels seamless yet it technically is spaced not
+        # to overlap... acris doesnt want to see one ip accessing it in
+        # lumps." The anti-lump guarantee is THE PACER (Tempo reserves each
+        # departure slot, burst capacity exactly 1), NOT --max-inflight 1
+        # and NOT the contiguity lock - both of those merely made the lane
+        # single-file, which cost ~64x throughput and protected nothing the
+        # pacer does not already guarantee.
+        #
+        # ⚠ CONCURRENCY IS SIZED TO rate x RTT, NEVER MAXIMIZED. Little's
+        # Law at the 80 req/s ceiling: 2.2 connections at 28 ms RTT, 20 at
+        # a pessimistic 250 ms. 24 covers the ceiling with headroom; 64 only
+        # bought self-contention (RTT stretched to ~4 s) and a 50-request
+        # blast radius when one transport blip hit. Raising --max-inflight
+        # does NOT raise throughput - the pacer owns the rate. Raise
+        # --rps-max instead, and only on evidence.
         ("acris_lane", "acris_lane.py",
-         ["--apply", "--workers", "8", "--pdf-workers", "12",
-          "--max-inflight", "1", "--max-rps", "20"],
+         ["--apply", "--phase", "row", "--workers", "32",
+          "--max-inflight", "24", "--max-rps", "12", "--rps-max", "80",
+          "--step-minutes", "3"],
          HERE, W / "acris_lane.log"),
         ("rc_live", "rc_live.py",
          ["--apply", "--every", "10"], HERE, HERE / "rc_live.log"),

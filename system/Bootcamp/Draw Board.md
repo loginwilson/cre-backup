@@ -167,6 +167,18 @@ loop's coverage claim becomes false without anything looking wrong.
 
 - [x] **r50** `2003060600730001` IN REM DEED · BRONX, 38 indexed parcels · rec 2003-06-06 · rd pages 7 / pdf 13 — ✅ **THE TAX-FORECLOSURE CLASS OPENED** from the type tail. ⚠ Contains **no deed**: a certified copy of a Judgment of Foreclosure (Action No. 46, Index 40000/01), typed IN REM DEED from a **handwritten margin note** on the Law Department transmittal. Title expressly withheld until the Commissioner of Finance executes a deed; **8-month statutory window** from entry 2003-02-20. **Chain expectations:** the deed(s) that either issued by ~2003-10-20 or did not (if not, the judgment was vacated as to those parcels) — a dated, binary, findable next document; also Exhibits B and C, absent here. Still unexercised as drawn events: **PERMIT · ASBUILT**.
 
+- [x] **r51** `2003042801017001` STREET PROCEDURE (actually a WAIVER OF LEGAL GRADE) · QUEENS block 12200, five lots · rec 2003-04-28 · rd pages 4 / pdf 6 — from the type tail. ⚠ Performs no street procedure: a builder buys the Transportation Commissioner's CONSENT to a Certificate of Occupancy — avoiding a Board of Standards and Appeals appeal — by waiving claims and covenanting PERPETUALLY, running with the land, to build the sidewalk to the City Map's lines and grades whenever directed. **PERMIT-bearing second sighting** (first was r46, grep-verified); **ASBUILT refused** on the page's own alternative phrasing. **Chain expectations:** the Certificate of Occupancy itself and any DOT sidewalk direction — both DOB/DOT records, not ACRIS.
+
+### ⚠ PERMIT and ASBUILT NEED THE DOB SOURCE, NOT ANOTHER ACRIS DRAW (measured r51)
+
+A remarks-first hunt over the landed band for CERTIFICATE OF OCCUPANCY ·
+ALTERATION · COMPLETION · NEW BUILDING · DEMOLITION returned **two**
+image-bearing hits in ~380k rows, one of which was this run's draw. The
+band does not carry permit or as-built subject matter at any density.
+ACRIS documents DO carry permit-bearing FACTS (r46's NB/Alt covenants,
+r51's C of O recitals) exactly as R42-3a says — but PERMIT and ASBUILT
+as DRAWN EVENTS require the DOB source. Stop hunting them here.
+
 ### THE TYPE TAIL — the new draw seam (inventoried 2026-08-24, r48)
 
 Public-law and rare event classes still unopened, each with a band

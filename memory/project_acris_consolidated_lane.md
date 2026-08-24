@@ -241,3 +241,29 @@ req/row model (12/8.2 = 1.46 before rd overhead). Linear to the 66-80 req/s
 ceiling = **8-9.8 ready/s**, i.e. the <30-day target is reachable on this
 architecture. Bandwidth is not the wall either: 60 KB/page x 6.18 pages x 8
 docs/s = **23.1 Mb/s against a measured 43.3 Mb/s link**.
+
+**✅ THE CLIMB THAT HELD (2026-08-24 16:05 onward, after all four fixes).**
+Config: `--phase row --workers 32 --max-inflight 24 --max-rps 12 --rps-max 80
+--step-minutes 3`. Twelve rungs in 36 minutes, +2 req/s each, every one
+earned with 3 clean minutes:
+
+    tempo  12   14   16   18   20   22   24   26   28   30   32   34   36
+    ready 0.80 1.31 1.23 1.45 1.81 1.88 2.31 2.93 2.06 2.51 3.22 3.31
+
+49,248 requests · **5 failures (0.010%)** · ZERO sheds · ZERO refusals.
+(Contrast: the pre-fix design put 50 failures on the board in ONE minute.)
+
+⚠ **THE PROOF THE ARCHITECTURE IS SOUND: delivered rate == commanded rate,
+window after window** — 28.0, 28.1, 28.0, 30.4, 30.0, 30.2, 32.1 against
+commanded 28,28,28,30,30,30,32. Nothing binds but the governor itself. Not
+the network, not concurrency, not CPU (**26.7% of ONE core**, GIL ceiling
+100%), not memory (106 MB). So the pacer is in full control of what ACRIS
+sees, which is exactly the property the whole redesign was for.
+
+⚠ **READY/s WOBBLES; req/s DOES NOT — DO NOT DIAGNOSE OFF READY/s.** The
+2.93 -> 2.06 -> 2.51 dip looked like degradation and was pure SEGMENT
+COMPOSITION (pages per doc varies as the cursor walks a year; an imageless
+doc costs 1 request, a 20-page deed costs 21). The controlled variable is
+requests; rows are an output. Ratio ready-per-req/s runs ~0.085-0.113,
+i.e. **~9-12 requests per completed row**, so the 80 req/s ceiling lands
+near **8-9 ready/s = the <30-day target**.
