@@ -7233,3 +7233,137 @@ connect those names to the actual contact information").
   name the person the deed never will), M-004 (addresses cluster what
   names cannot), R23-2 (a person is not a name — addresses ride the
   party claim).
+
+# RUN 42 — 2003030301266001 · "DECLARATION OF MERGER" (shelf) · Brooklyn 2292/21 · 2003
+
+9 pdf pages (rd `pages` 7 + supporting series: cover + RP-5217), read
+cold, reconciled after. **Zero new columns, zero new vocabulary —
+streak: 38.** Grade B− (login-prompted self-grade; four misses, two
+repeat classes at double cost; fixes applied below IN this entry).
+Draw targeted the unexercised IDENTITY·modifies cell via the type
+name — **and the cell did not materialize: the honest result is the
+finding.**
+
+    Instrument's OWN title: DECLARATION OF EASEMENT, MAINTENANCE &
+    RESTRICTIONS · made 2003-02-10 (dateline filled) · ack Kings
+    2003-02-27 · recorded 2003-04-22 14:50, CRFN 2003000101128 ·
+    2 ROEBLING ST. CORP. (111 North 11th St 5th Fl, Brooklyn;
+    ANTHONY M. FERNICOLA, President — crop artifact banked) ·
+    2 Roebling St & 4 f/k/a 6 Roebling St, block 2292 lot 21, two
+    5-story brick apartment buildings (per survey), one tax lot
+
+## R42-1 — THE TYPE SHELF SAYS MERGER; NOTHING MERGES (G-008/R14-4 family)
+
+DECLARATION OF MERGER shelves an instrument that merges no lots: lot
+21 enters one lot and leaves one lot. What "merges" is DRAINAGE — two
+buildings on one lot sharing a 6" combination sanitary/storm sewer +
+4" water line. A pipeline trusting the type code would mint a phantom
+lot-merger event. One instance; whether the register uses this shelf
+for shared-infrastructure declarations generally is UNMEASURED. The
+IDENTITY·modifies cell remains unexercised — a true lot
+apportionment/merger must be sought under other types.
+
+## R42-2 — THE CO-PIPELINE FAMILY GROWS (R29's shape, DEP edition)
+
+The declaration exists because (RECITAL — declarant-authored, single
+witness) DOB and DEP "require, as a condition precedent to the
+issuance of the aforesaid permit, a firm commitment" establishing the
+easement + maintenance. Permit-pipeline machinery depositing perpetual
+encumbrances in the deed room, again. THE EVENTS:
+
+    row 1  ENCUMBRANCE·creates · easement area (lot 21 minus both
+           building footprints) → OPEN beneficiary set (occupants,
+           future owners, any future HOA/condo; City = indemnitee) ·
+           utility easement + maintenance covenant (build/maintain
+           the lines per the DOB/DEP drainage plan, keep drainage
+           clear, DEP approval to modify, access, indemnify City) ·
+           qty: line specs 6"/4" physical; money n/a ·
+           term: runs with the land in perpetuity UNTIL an approved
+           HOA/condo owns or maintains the facilities (event sunset,
+           R34-2 family)
+    row 2  ENCUMBRANCE·creates · lot 21 entire · NO SUBDIVISION +
+           SINGLE OWNERSHIP until a prospectus/no-action letter is
+           filed with the NYS Dept of Law and condo/HOA declarations
+           recorded — an encumbrance whose subject matter is the
+           IDENTITY dimension itself (tested as a function candidate;
+           dissolved into ENCUMBRANCE, G-020) · same term
+    ACTOR-CLAIMS (party ruling, first outing): 2 ROEBLING ST. CORP ↔
+    ANTHONY M. FERNICOLA, President (pairing banked, crop artifact) ·
+    presenter PHILIP BROADMAN at the DECLARANT'S OWN ADDRESS (M-004
+    cluster; relationship unstated) · return-to and notary carry a
+    full three-part name match, ROBERT GEORGE BOMBARA (Esq. /
+    Notary 41-4518815 Queens) — name-match claim ONLY, no identity
+    asserted, no series, no count.
+
+## R42-3 — DOB JOB NUMBERS IN THE REGISTER: THE FUTURE EVENT STREAM FOR
+## THE UNDEFINED FUNCTIONS (login 2026-08-24)
+
+Recitals carry NB 301223389 [2 Roebling] + NB 301049568 [4 f/k/a 6
+Roebling] — second recorded member of the DOB-number-inside-ACRIS
+pattern (GREP-VERIFIED this time: ZLDA p11 is the only prior member;
+Card #13 satisfied by the action). Login's directive, recorded as a
+standing pointer: **when DOB filings are populated as a source, these
+cross-references are how PERMIT, ASBUILT, and even OCCUPANCY get
+their event streams** — the three functions the lexicon lists as
+undefined/no-detector get their documents from exactly these joins
+(NB job → permits → CO chain → who occupies on what terms), and the
+names on those filings carry the contact information the party ruling
+exists for. The ACRIS-side claim (the NB reference, anchored) is the
+join key; bank it every time it appears.
+
+## R42-4 — THE BLANK RP-5217 WITH ITS OWN EXPLANATION
+
+Supporting doc: an RP-5217 with buyer/seller/price/dates BLANK (null,
+never false — R40-4), use box F Apartment checked, condition J None
+checked, and handwritten beside it: "Recording Easement." A transfer
+form filed with no transfer, the filer explaining why in the margin.
+The seller line carries an ink blot — unrecoverable at any dpi
+(unread-by-source, R22-2).
+
+## CONFIRMATIONS
+
+- Reconciliation ✓ EARNED: type-as-shelved · doc date (dateline +
+  cover) · CRFN · recorded 4/22/2003 14:50 · borough · key 3022920021
+  (instrument WHEREAS + RP-5217 item 17). rd pages 7 vs 9 rendered =
+  supporting series (+2), declaration family again. amount $0.00
+  correct — no consideration exists.
+- Cover anomalies: lot 21 listed TWICE (once per street address) — a
+  parcel count off the cover reads 2 for 1; both party panels carry
+  the SAME entity (unilateral instrument forced into a two-party
+  form).
+- Survey (Boro Land Surveying, Vincent J. Dicce L.S., 2002-08-10)
+  certified to declarant + THE DIME SAVINGS BANK OF WILLIAMSBURGH +
+  First American Title + Vintage Abstract Corp — a lender in orbit
+  with no mortgage in this instrument (chain expectation) · survey
+  draws water/sewer, access, handicap-ramp, light-and-air, cellar-
+  breezeway easements · frontage 122'-8" DEED vs 125'-1 5/8" TAX MAP
+  (R21-2 family, banked not repaired).
+- Address rename: 4 f/k/a 6 Roebling — house-number rename on one lot
+  (street-rename family, number edition); IDENTITY claims carry both.
+- Mode watch held in the ENTRY (recitals stayed observes); the
+  DELIVERY flattened two of them — charged in the grade, fixed below.
+
+## R42 GRADE — B− (self, cold; fixes applied)
+
+1. UNVERIFIED COUNT (Card #13 class — members 21/23/39): "second
+   sighting" delivered WITHOUT the grep. The count proved correct —
+   irrelevant; the grep is the license. FIXED: grep run, count earned.
+2. NARRATIVE 8th: "Williamsburg" — neighborhood imported onto the
+   instance, one run after deleting "Boro Park" for the same offense.
+   FIXED: the banked text says Brooklyn, corner of Roebling & N 11th.
+3. RECITALS DELIVERED AS FACT (mode-watch, THE SESSION'S OWN
+   ASSIGNMENT; delivery-wrong class): "for rental" and "the City
+   would not issue the permit until..." — both WHEREAS recitals,
+   correctly held in the entry, flattened in the prose. FIXED: banked
+   text attributes ("the declaration recites...").
+4. PRE-BANK CROP SKIPPED (name-integrity 3rd member: 21/37/42 =
+   MISSING STRUCTURE): Fernicola's ink crosses his typed name and no
+   crop ran before delivery. FIXED by doing it (artifacts banked);
+   STRUCTURE CHANGED: Card #12 NAMES now requires the crop FILES to
+   exist before banking — an auditable artifact, not a remembered
+   action.
+
+HELD: the negative draw result reported plainly; type-shelf finding
+banked unsmoothed; RP-5217 blanks as null; party ruling applied on
+its first outing; deed-vs-tax-map flagged; qty roles physical-spec;
+streak grepped.

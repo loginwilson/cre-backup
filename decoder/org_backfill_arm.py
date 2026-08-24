@@ -65,7 +65,10 @@ def rd_pct():
         con = sqlite3.connect(f"file:{BOARD}?mode=ro", uri=True, timeout=30)
         row = con.execute(
             "SELECT landed, needed, status FROM update_board"
-            " WHERE phase='acquisition rd' AND source='acris'").fetchone()
+            " WHERE phase IN ('synchronization', 'acquisition rd')"
+            " AND source='acris' AND needed > 0"
+            " ORDER BY CASE phase WHEN 'synchronization' THEN 0 ELSE 1 END"
+            " LIMIT 1").fetchone()
         con.close()
     except sqlite3.Error:
         return None

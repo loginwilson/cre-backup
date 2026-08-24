@@ -109,6 +109,9 @@ Before writing the entry, run these three:
   NAMES   every principal, signer and officer re-read at high dpi.
           Signature ink crossing a printed name = flag it, always.
           (R21 "Leader"/LEIDER; R37 "Branden" under ink.)
+          ⚠ THE CHECK IS NOT DONE UNTIL THE CROP FILES EXIST —
+          an artifact on disk, not a remembered action (R42: the
+          pass was skipped whole; third member of the class).
   SOURCES every class-level statement names its Lexicon entry. No
           entry = add one from the document, or delete the sentence.
           Recall is not a source.
@@ -172,6 +175,12 @@ threshold: structure, not another rule.
            is a delivery miss.
 
   CAVEATS  every ⚠ in the record survives into the delivery (Card #11).
+
+  MODES    a RECITAL keeps its attribution in the delivery — "the
+           declaration recites..." — a WHEREAS delivered as bare fact
+           is a delivery miss even when the entry held it as observes
+           (R42: "for rental" and the permit-condition recital, both
+           flattened in prose while the record was honest).
 
 Compose order is 2 → 1. Build rows, then write prose FROM the rows —
 never from memory of the pages.

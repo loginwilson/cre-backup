@@ -78,7 +78,10 @@ RATE_WINDOW = 5 * 60
 # lane heartbeat logs per (phase, source) - the stall alarm reads MTIME only.
 # rd/image lanes print PROGRESS ~1/min into these; richmond pdf logs its pulls.
 _HEARTBEAT = {
-    ("acquisition rd", "acris"): "rd_walk_a[1-4].log",
+    # the consolidated lane (acris_lane.py, 2026-08-24) OR the old walker
+    # fleet - whichever wrote most recently proves the pulse
+    ("acquisition rd", "acris"): ["acris_lane.log", "rd_walk_a[1-4].log"],
+    ("synchronization", "acris"): ["acris_lane.log"],
     ("acquisition pdf", "acris"): "image_walk_i[1-3].log",
     # ⚠ rc_pdf_land.log only hears the RAW-incoming lander; the db writer is
     # rc_pdf_pull, which logs into its own cwd (the decoder dir). Watching the
@@ -93,11 +96,15 @@ def _lane_log_stale(phase, src, now):
 
     Mtime only - zero queries. No heartbeat spec, or no matching files,
     means no alarm (we cannot call unknown silence a stall)."""
-    pat = _HEARTBEAT.get((phase, src))
-    if not pat:
+    pats = _HEARTBEAT.get((phase, src))
+    if not pats:
         return False
-    base = pathlib.Path(pat)
-    files = [base] if base.is_absolute() else list(W.glob(pat))
+    if isinstance(pats, str):
+        pats = [pats]
+    files = []
+    for pat in pats:
+        base = pathlib.Path(pat)
+        files += [base] if base.is_absolute() else list(W.glob(pat))
     mt = [p.stat().st_mtime for p in files if p.exists()]
     return bool(mt) and (now - max(mt)) > _STALE_S
 
@@ -110,8 +117,11 @@ def _lane_log_stale(phase, src, now):
 # costs a file-tail read - no anchors, no baselines, no log-sum pipelines.
 _CUM_SPEC = {
     ("acquisition rd", "acris"):
-        (("rd_walk_a1.log", "rd_walk_a2.log", "rd_walk_a3.log",
-          "rd_walk_a4.log"), r"([\d,]+) total"),
+        (("acris_lane.log", "rd_walk_a1.log", "rd_walk_a2.log",
+          "rd_walk_a3.log", "rd_walk_a4.log"), r"([\d,]+) total"),
+    # the consolidated sync row: same counter - the lane's total IS both
+    ("synchronization", "acris"):
+        (("acris_lane.log",), r"([\d,]+) total"),
     ("acquisition pdf", "acris"):
         (("image_walk_i1.log", "image_walk_i2.log", "image_walk_i3.log"),
          r"([\d,]+) pdfs.*?([\d,]+) imageless"),
@@ -244,14 +254,15 @@ def eta_of(landed, needed, rate):
 # which running process proves a row is being WORKED (status PENDING vs
 # STALLED); matched against the live python command lines
 PROC_SIG = {
-    ("synchronization", "acris"): ("live_gap.py", "crfn_monitor.py",
+    ("synchronization", "acris"): ("acris_lane.py", "acris_live.py",
+                                   "live_gap.py", "crfn_monitor.py",
                                    "routine_synchronization.py",
                                    "routine_4am.py"),
     ("synchronization", "richmond"): ("routine_synchronization.py",
                                       "rc_daily.py"),
     ("navigation", "acris"): ("nav_append.py",),
     ("navigation", "richmond"): ("nav_append.py",),
-    ("acquisition rd", "acris"): ("rd_walk.py",),
+    ("acquisition rd", "acris"): ("rd_walk.py", "acris_lane.py"),
     ("acquisition pdf", "acris"): ("image_walk.py",),
     # ⚠ rc_pdf_pull.py ADDED 2026-08-22 - it IS the richmond pdf lane now.
     # The browser loop was replaced that night and this map was not updated,
@@ -558,6 +569,14 @@ def gather():
                 LANE_RATE[("acquisition pdf", k)] = v["rate"]
 
     out[("acquisition rd", "acris")] = (a_rd, need_a)
+    # ⚠ THE CONSOLIDATED LANE VIEW (login 2026-08-24: "the updates need to
+    # show just this one synchronization acris row"). acris_lane.py IS sync
+    # AND backfill in one process, so the synchronization row carries the
+    # whole picture: landed = rd-filled truth (total − todo), needed = the
+    # ledger total that moves with every filing. At 100% it reads COMPLETE
+    # and stays level - the acq rd row is hidden via `show` (its data still
+    # computed above for anything that reads it).
+    out[("synchronization", "acris")] = (a_rd, need_a)
     out[("acquisition pdf", "acris")] = (a_pdf, need_a)
     out[("acquisition pdf", "richmond")] = (rc_pdf, need_r)
     # organization: NOT computed here - routine_organization writes its own
@@ -923,7 +942,9 @@ def main(loop):
             " FROM update_board WHERE phase='acquisition rd'").fetchone()
         kstats = [r[0] for r in con.execute(
             "SELECT status FROM update_board WHERE phase='acquisition rd'")]
-        if k and k[5]:
+        # login 2026-08-24: keying is BUILT INTO sync (the trigger) - the
+        # pass rows render only if config still lists them in `show`
+        if "keying pass 1" in show and k and k[5]:
             krn, kdn, kr, kd, kl, kn = (x or 0 for x in k)
             con.execute(
                 "INSERT OR REPLACE INTO update_board VALUES"
@@ -947,6 +968,8 @@ def main(loop):
         # verify scan - an accounted figure; the pass itself re-measures.
         for kphase, gate in (("keying pass 2", "at rd 100%"),
                              ("keying pass 3", "at pdf 100%")):
+            if kphase not in show:
+                continue
             con.execute("INSERT OR REPLACE INTO update_board VALUES"
                         " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                         (kphase, "all", 0.0, 0, 0.0, gate,

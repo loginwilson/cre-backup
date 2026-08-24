@@ -77,7 +77,14 @@ grade is harsher: a repeat of a recorded lesson costs double.**
 | **deference without verification** | 40 | **NEW at R40.** A challenged finding was conceded BEFORE measuring; 700 documents then confirmed the original. Mirror image of asserting-without-checking, and more corrosive here: a reader who folds on challenge produces agreement rather than verification, which voids every ✓ and every grade. Trigger shape: a TRUE premise carrying an INFERRED conclusion. Fix: Card #16 — a challenge is a test order. |
 | 41 | 2003021100046001 2003 | **B+** (self, login-prompted) | **narrative (7th)** — "the by-laws carry their community in the drafting": instance characterization, unanchored, mildest form yet but a repeat of the most-recorded class · **class-gloss-without-entry (2nd**, R37 class**)** — flagged the heter iska lexicon gap at delivery, then used the gloss anyway; flagging ≠ license · over-absolute cast ("the only person who signs" vs only party to execute the declaration) · limited-common status dropped from rows (restricted-use SF could read as fee SF) | fixes applied in the R41 entry · Lexicon: heter iska added · party-attribution ruling recorded |
 
-⚠ narrative class members updated: 10, 33, 34, 35, 37, 39, 41 — seven.
+| 42 | 2003030301266001 2003 | **B−** (self, login-prompted) | **unverified count** (Card #13 class, members 21/23/39 — "second sighting" without the grep; count proved right, which is irrelevant) · **narrative (8th)** — "Williamsburg" imported onto the instance one run after "Boro Park" was deleted for the same move · **recitals flattened in delivery** (mode-watch, the session's own assignment; delivery-wrong class) · **pre-bank crop skipped** (name-integrity 3rd: 21/37/42 = MISSING STRUCTURE) | grep run + count earned · banked text fixed · Card #15 gains MODES line · **Card #12 NAMES now requires crop FILES on disk** |
+
+⚠ narrative class members updated: 10, 33, 34, 35, 37, 39, 41, 42 — eight.
+⚠ name-integrity members: 21, 37, 42 — three → structure changed (crop
+artifacts mandatory, Card #12).
+⚠ count-class members: 21, 23, 39, 42 — four; 42's variant is UNVERIFIED
+rather than fabricated (the grep would have confirmed it; it wasn't run).
+The grep is the license, not the truth of the number.
 The trigger list + Card #4 catch its phrase-shaped and scale-shaped
 forms; R41's form was a CHARACTERIZATION OF THE DRAFTING ("their
 community") — ordinary words again. Watch the shape: any sentence that

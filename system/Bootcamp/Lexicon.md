@@ -60,6 +60,8 @@ alone; add it when a document teaches it.**
 | **limited / restricted common element** | A common-element area (yard, balcony, storage) irrevocably restricted in USE to one unit — restricted use, never fee; its SF is not part of the unit's fee SF | R41 |
 | **offering plan acceptance (CPS letter)** | NY Attorney General letter accepting a sponsor's offering literature for filing (GBL Art 23-A); states the offering AMOUNT (asking for all units), effective 12 months unless extended; an act about the OFFERING, not the parcel | R41 |
 | **heter iska** | (Document usage: "interest at the highest legal rate al pi heter iska," qualifying what a condo board may collect on arrears.) The document uses but does not define the term; imported class gloss, marked as such: a rabbinic-law structure governing interest-bearing obligations. The verbatim phrase is the banked fact; this gloss is context only | R41 |
+| **drainage/shared-infrastructure declaration** | A declaration of easement, maintenance and restrictions that DOB/DEP require as a condition precedent to a sewer/water permit where buildings share infrastructure on one lot: grants the utility easement, binds owner and successors to maintain the lines per the filed drainage plan, indemnifies the City; runs with the land, typically sunsetting when an approved HOA/condominium takes the facilities over. May be shelved under unrelated type codes ("DECLARATION OF MERGER") | R42 |
+| **single-ownership covenant** | A recorded covenant that the premises may not be subdivided and must be held in single ownership until named condo/HOA papers are approved and recorded — a gate on the lot's own future identity, living in the encumbrance layer | R42 |
 
 ## WHAT THIS TABLE IS NOT
 
