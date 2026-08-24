@@ -8463,3 +8463,181 @@ missed, and running it leaves an artifact.
 ⚠ THE PASS IS NOT A SUGGESTION. A delivery made without a precheck
 run is itself a defect, gradeable as such — the same standing the
 crop-files rule has held since r42.
+
+# RUN 49 — 2003010900111001 · LETTERS PATENT · MANHATTAN block 1720, lots 21 & p/o 14 · 2002/03
+
+7/7 pages (rd 5 main = 1 cover + 4 instrument; + 2 supporting =
+supporting cover + RP-5217). CRFN 2003000132288, city-recorded
+2003-05-16. **Zero new columns, zero new vocabulary — streak: 45.**
+✅ THE SOVEREIGN GRANT CLASS OPENED — a LETTERS PATENT, the
+instrument by which the State itself conveys land. Drawn from the
+type tail (one member in ~380k landed rows). First appearance in
+Bootcamp.md, licensed by grep run in-action (zero prior hits for
+letters patent / book of patents / appropriation map — the grep was
+scoped to Bootcamp.md and said so; Draw Board.md already named the
+id at r48's close). ⚠ FIRST DELIVERY GATED BY precheck.py — the
+pass caught "Harlem" in the anybody test's opening sentence
+(narrative-import class, 10 members, its exact predicted slot)
+BEFORE delivery, and forced six computed figures into the evidence
+table. Grade B+ (four misses; fixes applied here).
+
+    LETTERS PATENT executed 2002-04-05 · THE PEOPLE OF THE STATE OF
+    NEW YORK (41st Floor, Empire State Plaza, Albany) → NEW YORK
+    STATE URBAN DEVELOPMENT CORPORATION d/b/a EMPIRE STATE
+    DEVELOPMENT CORPORATION (public benefit corporation, 633 Third
+    Avenue) · $165,000.00 · W 121st St & Mount Morris Park West
+
+## THE EVENTS (one event_id)
+
+    row 1  TITLE·transfers · transacts · People → NYS UDC d/b/a
+           ESDC · all the right, title and interest of the People,
+           TOGETHER WITH rights, hereditaments and appurtenances,
+           TO HAVE AND TO HOLD forever · $165,000.00 "lawful money
+           of the United States" — WITNESSED TWICE INSIDE THE
+           INSTRUMENT: typed recital + the State Comptroller's
+           handwritten figure beside voucher X002261 (crop on disk)
+    row 1a ENCUMBRANCE-bearing feature, MONUMENT ONLY — CREATES
+           NOTHING · observes · the 1999 parcel's NE corner lies
+           "at a point within a party wall" and course 1 runs
+           "through a party wall, 90 feet" · the patent uses the
+           wall to LOCATE THE LINE; it grants no party-wall rights
+           (r48's mode error not repeated — the lesson held)
+    row 1b governance/approvals · transacts · executed 2002-04-05
+           (Commissioner) → Great Seal affixed 2002-04-08 →
+           approved as to form 2002-06-26 (AG) → State Comptroller
+           approved 2002-07-29, voucher X002261 · THE SEAL PRECEDES
+           BOTH APPROVALS (noted, not judged)
+    row 2  IDENTITY (parcel by description) · transacts · L-shaped
+           parcel, 2,252 SF / 0.05 acre; Section 6, Block 1720, Lot
+           21 with handwritten addition "and P/O 14"; RP-5217 gives
+           deed size 20 x 100 · GEOMETRY SELF-VALIDATED TWO WAYS,
+           both run in-action: courses close (20 ft 11 in + 16 ft =
+           36 ft 11 in; 90 ft + 10 ft = 100 ft) and area recomputes
+           ((90 x 20.917) + (10 x 36.917) = 2,251.7 vs 2,252
+           stated; equivalently 100 x 36.917 minus (90 x 16))
+    row 3  ENTITLEMENT (authority recited) · observes · Section
+           13-a of the New York State Urban Development Corporation
+           Act + Findings of the Commissioner of General Services
+           dated 2002-04-05 — the statutory power to dispose,
+           recited as the grant's own warrant
+    row 4  TITLE (observes — PRIOR PATENT) · People → THE SAME
+           GRANTEE, 1999-01-29, recorded Book 102 of Patents at
+           page 5 · ⚠ [GRADE FIX] the excluded region measures
+           90 x 16 = 1,440 SF (DERIVED); THE 1999 PARCEL'S OWN AREA
+           IS NOT STATED IN THIS DOCUMENT — the three traced
+           courses run only along the portion that adjoins.
+           Delivery had banked 1,440 SF as the prior patent's size:
+           a correct computation attached to a subject the document
+           never measures.
+    row 5  IDENTITY (observes — root SHOWN BY THIS DOCUMENT) ·
+           APPROPRIATION MAP filed in the City Register's Office,
+           New York County 1966-09-15, entitled "New York State
+           Department of Mental Hygiene Description and Map for the
+           Acquisition of Property, Department of Mental Hygiene,
+           NARCOTIC ADDICTION CONTROL COMMISSION, MT. MORRIS PARK
+           HOSPITAL, Borough of Manhattan, New York County, Map No.
+           1, Parcel No. 1"
+    row 6  custody (observes) · TWO CUSTODIANS, ONE INSTRUMENT ·
+           recorded by the STATE in Book of Patents No. 105 at page
+           44 on 2002-08-12 (Department of State) — the instrument
+           pages carry that book's ink pagination 44-47 — then
+           recorded AGAIN by the City Register 2003-05-16, nine
+           months later, in a different namespace
+    row 7  ⚠ VALUE CONTRADICTION INSIDE ONE RECORDING · the
+           annexed RP-5217 states FULL SALE PRICE 0 and personal
+           property 0 against the patent's $165,000 recited twice
+    row 8  COST · recording fee $60.00 · NYC RPTT filing fee
+           $25.00 · NYS RETT $0.00
+    row 9  VALUE (assessment, observes) · RP-5217: total assessed
+           value 115,200; building class I1 (code READ, NOT
+           decoded); use checked Commercial; condition checked
+           "Buyer or Seller is Government Agency or Lending
+           Institution"
+
+    ACTOR-CLAIMS (crop-before-utter, third straight clean run;
+    crops on disk): GRANTOR ↔ KENNETH J. RINGLER, JR.,
+    COMMISSIONER OF GENERAL SERVICES (typed under signature) ·
+    Great Seal certified by the DEPUTY SECRETARY OF STATE —
+    ⚠ SIGNATURE ILLEGIBLE AT 500 DPI, NAME NOT READ · State
+    Comptroller approval, signature illegible, voucher X002261 ·
+    ELIOT SPITZER, ATTORNEY GENERAL (typed), by an ASSISTANT
+    ATTORNEY GENERAL of the REAL PROPERTY BUREAU, given name reads
+    HENRY A., ⚠ SURNAME NOT SETTLED at 500 dpi · backing: RANDY A.
+    DANIELS, SECRETARY OF STATE (typed) — SECOND SIGHTING in
+    Bootcamp.md, licensed by grep run in-action, prior instance
+    r48 (Governors Island) — by MONA L. ORCIUOLI, MISCELLANEOUS
+    RECORDS. GRANTEE ↔ NO INDIVIDUAL SIGNS FOR THE GRANTEE ON THE
+    PATENT; the RP-5217 carries an illegible buyer signature dated
+    04/05/2002 and an illegible seller signature dated 01-14-2003
+    (a nine-month gap inside the tax form's own signatures).
+    Presenter PRECISE/CERES ABSTRACT CORP, Ardsley (PC21721);
+    return to LAWRENCE GERSON, ESQ. at ESDC.
+
+## R49-1 — THE ROOT HIERARCHY, STATED PROPERLY [GRADE FIX]
+
+The delivery called the patent "the sovereign root ... the class
+that sits underneath every deed chain" while the table called the
+1966 appropriation the root of title — two layers naming different
+bottoms. Corrected hierarchy, as this document actually shows it:
+
+    the patent (2002)      = root of the GRANTEE'S chain
+    the appropriation map  = root SHOWN BY THIS DOCUMENT (1966)
+    pre-1966               = NOT IN THIS RECORD, unknown
+
+A letters patent is A root, not THE root; in Manhattan most chains
+root in colonial grants, not modern state patents. The class claim
+("the form a government uses when it is the one handing land over")
+is safe; "the root every later deed grows from" is not.
+
+## R49-2 — UNREAD COVER FIELD [GRADE FIX, first instance]
+
+The recording cover carries the line "NYC HPD Affidavit in Lieu of
+Registration Statement" at the foot of the FEES AND TAXES box. The
+delivery reconciled the tax lines and party fields around it and
+never mentioned it — neither its content nor the fact that its
+marked/unmarked state was not resolved at 150 dpi. Card #9 makes
+"not read" a deliverable. BANKED AS UNREAD, state unresolved.
+
+## R49-3 — THE PRE-DELIVERY PASS, AND ITS LIMIT
+
+First live gating. It changed the delivery: caught "Harlem" in the
+opening sentence pre-delivery (the narrative class's tenth member,
+in the slot the r46 OPENING rule predicted) and forced six computed
+figures into the table. The anybody test came back CLEAN on every
+mechanical check — first time since that layer began failing at
+r42.
+
+⚠ ITS LIMIT, MEASURED THE SAME RUN: precheck verifies TOKEN
+PRESENCE, not CLAIM COHERENCE. R49-1's contradiction — two layers
+naming different roots — passed the pass, because every token in
+the prose did exist in the table. A mechanical check kills the
+class it can see; it cannot see whether two sentences about the
+same subject agree. Grading gains step (6): the CLAIM-COHERENCE
+walk — for each subject named in more than one layer, do the layers
+assert the same thing? And precheck gains a SUPERLATIVES check,
+listing absolute/uniqueness words for licensing, since those are
+the claims most likely to over-generalize.
+
+## R49 GRADE — B+ (self, cold; fixes applied in this entry)
+
+1. MISATTRIBUTED QUANTITY, 2nd member (47, 49): 1,440 SF banked as
+   the prior patent's size when it is the excluded region's size.
+   Correct arithmetic, wrong subject — r47's authorized-vs-issued
+   shape. FIXED (row 4).
+2. CLAIM INCOHERENCE ACROSS LAYERS (R49-1) — invisible to the new
+   pass; grading step (6) added.
+3. UNREAD COVER FIELD (R49-2) — silence where Card #9 requires a
+   stated unread state. FIXED.
+4. Mild: "assembling the same corner" (purpose-ish); "the root
+   every later deed grows from" (over-general, see R49-1).
+
+HELD: the pass GATED the delivery and changed it; the anybody test
+clean on every mechanical check for the first time since r42;
+crop-before-utter clean for the third straight run WITH two names
+left explicitly NOT READ rather than guessed; both count-style
+claims (second sighting; first appearance) licensed by grep run
+in-action AND scoped to the file searched; geometry self-validated
+two independent ways; the party wall held as MONUMENT not grant
+(r48's exact error, not repeated); the 5-vs-7 page gap resolved
+exactly against R40-1; grantor and grantee both correctly indexed,
+a contrast with r48's indexing failure.

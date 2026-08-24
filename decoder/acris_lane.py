@@ -139,6 +139,16 @@ ap.add_argument("--step-minutes", type=int, default=10,
                      " degrade or recover stronger' - 5 was too thin to"
                      " separate a ceiling bend from a heavy-doc patch)")
 ap.add_argument("--fresh-days", type=int, default=30)
+ap.add_argument("--verify-imageless", action="store_true",
+                help="ONE-TIME SWEEP of every pdf='imageless' row before the"
+                     " normal backfill (login 2026-08-24: 'do a real pass on"
+                     " them to assure theres no pdf'). A refusal is HTTP 200"
+                     " with no TotalPages, so blocked requests were recorded"
+                     " as imageless - a permanent verdict from a temporary"
+                     " refusal. Re-asking costs 1 request when the verdict"
+                     " holds, and when it does NOT the same worker fetches"
+                     " and lands the pdf on the spot: verify and repair in"
+                     " one motion. Resumable via _verify_cursor.txt.")
 ap.add_argument("--every", type=int, default=10)
 ap.add_argument("--control-every", type=int, default=60)
 ap.add_argument("--deep-every", type=int, default=300)
@@ -166,6 +176,7 @@ rd_all_fed = threading.Event()   # rd feeder exhausted the todo set
 ua = {"User-Agent": fetch_pages.UA}
 PDF_FAILS = CP.NAV_WORK / "acris_lane_pdf_fails.jsonl"
 PDF_BATCH = 25
+VERIFY_CURSOR = CP.NAV_WORK / "_verify_cursor.txt"
 
 
 def _quarantine(path, n=3):
@@ -889,6 +900,35 @@ def row_feeder():
     read = sqlite3.connect(f"file:{CP.NAV_DB}?mode=ro", uri=True,
                            check_same_thread=False)
     read.execute("PRAGMA busy_timeout=60000")
+
+    # ── the one-time imageless sweep, ahead of the normal backfill ──
+    if a.verify_imageless:
+        cur = VERIFY_CURSOR.read_text().strip() if VERIFY_CURSOR.exists() else ""
+        if cur != "DONE":
+            say("  VERIFY IMAGELESS: sweeping every imageless row from %r -"
+                " a held verdict costs 1 request, a false one is repaired on"
+                " the spot" % cur)
+            n = 0
+            while not stop_workers.is_set():
+                rows = read.execute(
+                    "SELECT id, recorded_details FROM navigation"
+                    " WHERE pdf = 'imageless' AND id > ? AND id NOT LIKE 'RC_%'"
+                    " ORDER BY id LIMIT 2000", (cur,)).fetchall()
+                if not rows:
+                    VERIFY_CURSOR.write_text("DONE")
+                    say("  VERIFY IMAGELESS COMPLETE - %s rows re-asked"
+                        % "{:,}".format(n))
+                    break
+                for did, rd in rows:
+                    if stop_workers.is_set():
+                        return
+                    q.put((did, rd or ""))
+                    n += 1
+                cur = rows[-1][0]
+                VERIFY_CURSOR.write_text(cur)     # resumable across restarts
+                while q.qsize() > 500 and not stop_workers.is_set():
+                    time.sleep(2)
+
     cursor = ""
     while not stop_workers.is_set():
         rows = read.execute(

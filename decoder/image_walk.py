@@ -139,6 +139,15 @@ def worker():
                            LD.BASE + "/DS/DocumentSearch/DocumentDetail"
                            "?doc_id=" + did)
             mhtml = body.decode("utf-8", "ignore")
+            # ⚠⚠ A REFUSAL IS HTTP 200 WITH NO TotalPages, so the Bandwidth
+            # Notice reads as "this document has no image" and this lane
+            # would write pdf='imageless' - a PERMANENT verdict from a
+            # TEMPORARY refusal - for EVERY doc, for as long as the block
+            # lasts, because nothing else here inspects the map response.
+            # Caught 2026-08-24 via acris_lane recording imageless while
+            # fully blocked. Check before believing the absence.
+            LD.check_refused(mhtml)
+            fetch_pages._check_denied(body, ct)
             mm = re.search(r"TotalPages%22%3A(-?\d+)", mhtml)
             total = int(mm.group(1)) if mm else 0
             if total <= 0:
@@ -176,7 +185,7 @@ def worker():
                 stats["pdfs"] += 1
             if n >= BATCH:
                 flush()
-        except fetch_pages.AccessDenied as e:
+        except (fetch_pages.AccessDenied, LD.Refused) as e:
             stop.set()
             print(f"  REFUSED at {did} - STOPPING ALL: {e}", flush=True)
         except Exception as e:

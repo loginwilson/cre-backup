@@ -86,10 +86,24 @@ def _get(url, referer, timeout=90):
 
 
 def page_count(did, timeout=90):
-    """One request. Returns TotalPages (<=0 means imageless)."""
-    body, _ct = _get(VIEW + "?doc_id=" + did, DETAIL + "?doc_id=" + did,
-                     timeout=timeout)
-    m = _TOTAL.search(body.decode("utf-8", "ignore"))
+    """One request. Returns TotalPages (<=0 means imageless).
+
+    ⚠⚠ A REFUSAL IS HTTP 200 WITH NO TotalPages. Read naively, the
+    Bandwidth Notice therefore looks exactly like "this document has no
+    image", and the caller writes pdf='imageless' - A PERMANENT VERDICT
+    MANUFACTURED OUT OF A TEMPORARY REFUSAL. Caught 2026-08-24 15:19: the
+    lane was fully blocked and still recorded 2 imageless. Same family as
+    the freshness clause (never verdict a doc whose scan simply is not up
+    yet) and as "never repair a number to make a check pass".
+
+    So the body is checked for the notice and for a denial BEFORE the
+    absence of a page count is believed. Both raise; neither returns."""
+    body, ct = _get(VIEW + "?doc_id=" + did, DETAIL + "?doc_id=" + did,
+                    timeout=timeout)
+    text = body.decode("utf-8", "ignore")
+    LD.check_refused(text)                 # Refused - HTTP 200 notice page
+    fetch_pages._check_denied(body, ct)    # AccessDenied - blocked payload
+    m = _TOTAL.search(text)
     return int(m.group(1)) if m else 0
 
 

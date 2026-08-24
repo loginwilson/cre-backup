@@ -163,6 +163,8 @@ loop's coverage claim becomes false without anything looking wrong.
 
 - [x] **r48** `2003020300771001` LANDMARK DESIGNATION (actually a WAIVER AND CONSENT AGREEMENT) · MANHATTAN block 1 lot 10 · rec 2003-02-06 · rd pages 24 / pdf 26 — ✅ **ENTITLEMENT REACHED AS A DRAWN EVENT** — the board's oldest open cell, unexercised since run 1. Drawn from the band's **TYPE TAIL** (new method: inventory all 90 distinct types, take a `<60`-member type — this one had exactly ONE member in ~380k rows). GOVERNORS ISLAND: four-sovereign consent (USA/GSA · State · City · GIPEC). First run under **OPUS 5** — portability provision validated. ⚠ Type-shelf mismatch again (r42/r43 family). Ruling queued: statutory preemptive rights = ENTITLEMENT or ENCUMBRANCE.
 
+- [x] **r49** `2003010900111001` LETTERS PATENT · MANHATTAN block 1720 lots 21 & p/o 14 · rec 2003-05-16 · rd pages 5 / pdf 7 — ✅ **SOVEREIGN GRANT CLASS OPENED** from the type tail (1 member in the band). People of the State of NY → NYS Urban Development Corp d/b/a ESDC, $165,000; 2,252 SF L-shaped parcel; boundary runs THROUGH A PARTY WALL (held as monument, not grant). ⚠ **TWO CUSTODIANS** — recorded in the State's *Book of Patents* 105/44 nine months before the City Register saw it: a namespace ACRIS does not index, and the first evidence that instruments may exist ONLY in state books. **Chain expectations:** the 1999 prior patent (Book 102 of Patents p. 5) and the 1966 appropriation map (City Register, NY County, 1966-09-15) — both pre-digital, both findable by their own citations. First delivery gated by precheck.py.
+
 ### THE TYPE TAIL — the new draw seam (inventoried 2026-08-24, r48)
 
 Public-law and rare event classes still unopened, each with a band

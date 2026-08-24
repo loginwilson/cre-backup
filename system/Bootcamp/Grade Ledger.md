@@ -198,6 +198,29 @@ CONCLUSION TO ACT ON: stop writing vigilance rules. A rule survives
 only if (a) it produces an artifact on disk, (b) the format makes
 the defect unrepresentable, or (c) a MECHANICAL PASS runs it. The
 next cure must be mechanical — see the PRE-DELIVERY PASS below.
+
+| 49 | 2003010900111001 2002/03 | **B+** (self, login-prompted) | **MISATTRIBUTED QUANTITY, 2nd member (47, 49)** — 1,440 SF banked as the prior patent's size when it is the EXCLUDED REGION's size: right arithmetic, wrong subject (r47's authorized-vs-issued shape) · **CLAIM INCOHERENCE ACROSS LAYERS** — prose called the patent "the root", the table called the 1966 appropriation root of title; ⚠ INVISIBLE TO precheck, which checks token presence not claim coherence · **UNREAD COVER FIELD** (first instance) — "NYC HPD Affidavit in Lieu of Registration Statement" never mentioned, Card #9 requires a stated unread state · mild over-generalisation | fixes in the R49 entry (row 4 corrected; R49-1 root hierarchy; R49-2 unread state banked) · **grading step (6) CLAIM-COHERENCE WALK** · **precheck gains SUPERLATIVES check**, validated against this run |
+
+✅ THE FIRST MEASURED WIN FOR MECHANISM (r49): precheck.py GATED the
+delivery and CHANGED it — caught "Harlem" in the anybody test's
+opening sentence before delivery (narrative-import class, 10th
+member, in the exact slot the r46 OPENING rule predicted) and forced
+six computed figures into the evidence table. The anybody test came
+back CLEAN on every mechanical check — first time since that layer
+began failing at r42. Narrative import: 10 members through r48, ZERO
+delivered at r49 because the machine caught it first.
+⚠ AND THE FIRST MEASURED LIMIT, same run: the pass verifies TOKEN
+PRESENCE, not CLAIM COHERENCE. Two layers named different roots and
+the pass passed them. Rule for the next cure: a mechanical check
+kills the class it can SEE; classes defined by meaning (coherence,
+attribution of a quantity to a subject) still need a walk. Step (6)
+is that walk; the SUPERLATIVES check surfaces its candidates.
+⚠ MISATTRIBUTED QUANTITY (47, 49) is the class to watch next — both
+members were CORRECT computations bound to the WRONG SUBJECT, which
+no token check can catch. If it reaches three, the structural cure
+is a quantity-binding line in the table: every derived number names
+the subject it measures AND the subject's own stated value (or
+"not stated").
 The trigger list + Card #4 catch its phrase-shaped and scale-shaped
 forms; R41's form was a CHARACTERIZATION OF THE DRAFTING ("their
 community") — ordinary words again. Watch the shape: any sentence that

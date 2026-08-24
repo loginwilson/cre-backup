@@ -55,6 +55,13 @@ RELATIONSHIP = [
     "heir", "heirs", "partner of", "related to", "father", "mother",
 ]
 
+SUPERLATIVES = [
+    "the root", "the only", "the first", "the last", "the biggest",
+    "the largest", "the smallest", "the oldest", "the newest", "never",
+    "always", "every", "all of", "none of", "underneath every",
+    "sits under", "unique", "unprecedented", "invariably", "must be",
+]
+
 CARDINAL_WORDS = [
     "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
     "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "twenty",
@@ -196,6 +203,13 @@ def main():
     cards = sorted({m.group(0) for m in re.finditer(
         r"\b(" + "|".join(CARDINAL_WORDS) + r")\b", low)})
     report("CARDINALS · license each with a count run in-action (advisory)", cards)
+
+    # R49: absolute / uniqueness claims are where prose over-generalises and
+    # where two layers end up asserting different things about one subject.
+    # The pass cannot judge coherence — it can only surface the candidates.
+    sups = sorted({s for s in SUPERLATIVES if s in low})
+    report("SUPERLATIVES · absolute claims — is each true of THIS instrument, "
+           "and does every layer say the same thing about it? (advisory)", sups)
 
     hedged = bool(re.search(r"⚠|moderate|unresolved|could not|too faint", prose))
     print(f"\n--- HEDGES survive into delivery --- \n  {'PRESENT' if hedged else 'ABSENT — verify the record carries none'}")

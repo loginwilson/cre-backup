@@ -30,6 +30,10 @@ import sys
 import time
 
 PY = sys.executable
+
+# scripts that may only ever have ONE instance, whatever their args
+SINGLETON = {"acris_lane.py", "rc_live.py", "routine_update.py",
+             "board_truth.py", "rc_feed.py", "rc_pdf_pull.py"}
 HERE = pathlib.Path(__file__).parent
 W = pathlib.Path(r"D:\CRE Decoding System\01 Navigations"
                  r"\Legal Instruments Navigation\_working")
@@ -99,8 +103,16 @@ def _running():
 
 
 def _match(cmd, script, args):
+    """⚠ MATCH ON THE SCRIPT FOR SINGLE-INSTANCE LANES (2026-08-24 15:33).
+    fleet start launched a SECOND acris_lane because the running one had a
+    different tempo config than the roster's, so the arg-token check failed
+    and it looked "not running" - two acris presences at once, which is the
+    exact convergence the piano rule exists to prevent. Any lane that must
+    be a singleton matches on script name alone."""
     if pathlib.Path(script).name not in cmd:
         return False
+    if pathlib.Path(script).name in SINGLETON:
+        return True
     # the --lo VALUE uniquely identifies a walker arm (a4's --hi is a
     # 1-char sentinel and its --lo equals a3's --hi, so hi tokens and
     # bare substring checks mis-bind arms - match the --lo binding)
