@@ -7311,6 +7311,31 @@ names on those filings carry the contact information the party ruling
 exists for. The ACRIS-side claim (the NB reference, anchored) is the
 join key; bank it every time it appears.
 
+### R42-3a — FUNCTIONS ARE NOT SOURCE-OWNED (login refinement, same day)
+
+"Me saying DOB gives this doesn't mean ACRIS can't." Correct and
+recorded as law: **no function belongs to a source.** PERMIT, ASBUILT
+and OCCUPANCY facts arrive from WHEREVER the words are — run 41's
+Schedule B is the worked example: unit SF (1,743 / 1,019 / 1,033),
+floor locations (cellar+first / second / third), rooms/baths, and
+restricted areas (yard 523, balconies 28/63, storage 87/86) are
+ASBUILT-BEARING WITNESSES recorded in an ACRIS condo declaration —
+no DOB required. Run 35's lease enumerated the station's improvements;
+run 42's recitals describe two 5-story buildings. The DOB join
+(R42-3) ENRICHES and VERIFIES; it is not the birthplace of those
+functions.
+
+The operational rule is the extraction filter's own, now stated
+cross-source: every claim BEARING ON a function names that function
+when banked (Schedule B's SF = witnesses for ASBUILT; the residential-
+occupancy covenant = OCCUPANCY-bearing), so that chaining can
+assemble one function's story from many sources — ACRIS asserting,
+DOB certifying, each anchored to its own document. And the document's
+cross-references (NB numbers here) may NOT appear in the rd's
+reference fields at all (the document out-cites its index row — the
+M-002/R11-1 family) — the join key must be read from the pages, never
+assumed present in the index.
+
 ## R42-4 — THE BLANK RP-5217 WITH ITS OWN EXPLANATION
 
 Supporting doc: an RP-5217 with buyer/seller/price/dates BLANK (null,

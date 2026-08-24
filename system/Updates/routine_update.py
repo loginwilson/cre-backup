@@ -119,11 +119,18 @@ _CUM_SPEC = {
     ("acquisition rd", "acris"):
         (("acris_lane.log", "rd_walk_a1.log", "rd_walk_a2.log",
           "rd_walk_a3.log", "rd_walk_a4.log"), r"([\d,]+) total"),
-    # the consolidated sync row: same counter - the lane's total IS both
+    # ⚠ THE CONSOLIDATED ROW COUNTS READY-TO-DECODE DOCS (login 2026-08-24:
+    # "one eta one code that eventually results in the level ready to
+    # decode"). The lane's pdf pool is the LAST gate - pdf only ever follows
+    # rd, so every "pdfs + imageless" landing is one doc that became fully
+    # ready (rd + image-or-verdict + key). The rd counter ("N total") still
+    # prints in the same log and still feeds the hidden acq rd row; it is
+    # deliberately NOT this row's rate - rd alone is not ready.
     ("synchronization", "acris"):
-        (("acris_lane.log",), r"([\d,]+) total"),
+        (("acris_lane.log",), r"([\d,]+) pdfs.*?([\d,]+) imageless"),
     ("acquisition pdf", "acris"):
-        (("image_walk_i1.log", "image_walk_i2.log", "image_walk_i3.log"),
+        (("acris_lane.log", "image_walk_i1.log", "image_walk_i2.log",
+          "image_walk_i3.log"),
          r"([\d,]+) pdfs.*?([\d,]+) imageless"),
     # rc_pdf_pull's "db N" IS rows written to the pdf column this run -
     # the exact "result the python is coding into the db" (login). Absolute
@@ -569,14 +576,17 @@ def gather():
                 LANE_RATE[("acquisition pdf", k)] = v["rate"]
 
     out[("acquisition rd", "acris")] = (a_rd, need_a)
-    # ⚠ THE CONSOLIDATED LANE VIEW (login 2026-08-24: "the updates need to
-    # show just this one synchronization acris row"). acris_lane.py IS sync
-    # AND backfill in one process, so the synchronization row carries the
-    # whole picture: landed = rd-filled truth (total − todo), needed = the
-    # ledger total that moves with every filing. At 100% it reads COMPLETE
-    # and stays level - the acq rd row is hidden via `show` (its data still
-    # computed above for anything that reads it).
-    out[("synchronization", "acris")] = (a_rd, need_a)
+    # ⚠ THE CONSOLIDATED LANE VIEW, v2 (login 2026-08-24: "one lane one rate
+    # can show me how fast we are catching up to being completely
+    # synchronized to the live source as a database"). acris_lane.py is now
+    # sync + rd + pdf in one process, so this row measures READY TO DECODE:
+    # landed = docs whose LAST gate is full (pdf path or imageless verdict;
+    # pdf only ever follows rd, so ready = needed - pdf_todo exactly - that
+    # is a_pdf, board_truth's index-only count). needed = the ledger total
+    # that moves with every filing. The rd detail lives on in the hidden
+    # acq rd row and the lane log; the headline is distance to a fully
+    # synchronized, decode-ready mirror.
+    out[("synchronization", "acris")] = (a_pdf, need_a)
     out[("acquisition pdf", "acris")] = (a_pdf, need_a)
     out[("acquisition pdf", "richmond")] = (rc_pdf, need_r)
     # organization: NOT computed here - routine_organization writes its own
@@ -681,6 +691,11 @@ def main(loop):
         for (phase, src), (landed, needed) in sorted(rows.items(),
                                                      key=phase_rank):
             if show and phase not in show:
+                continue
+            # hidden accepts "phase|source" - a lane whose work is carried by
+            # a consolidated row (acq pdf acris folded into the sync lane
+            # 2026-08-24); its data is still computed for anything reading it
+            if "%s|%s" % (phase, src) in c.get("hidden", []):
                 continue
             key = f"{phase}|{src}"
             # LIVE: every row, every pass. rate AND increase share the

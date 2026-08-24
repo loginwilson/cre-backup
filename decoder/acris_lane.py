@@ -28,6 +28,26 @@ lane), never automatic - "resume another day" is the notice's own text.
 
 Board: PROGRESS lines print "N total" like rd_walk's, so routine_update's
 counter/heartbeat read this log (NAV_WORK\\acris_lane.log via redirect).
+
+THE PDF POOL (login 2026-08-24: "build pdf into it too... one eta one code
+that eventually results in the level ready to decode"): a third organ in the
+same process - workers drain `pdf='' AND recorded_details!=''` through
+acris_pdf.fetch_pdf (image_walk's body with every trap intact), and every
+sync landing jumps the queue via the hot list so a new filing is fully
+ready minutes after recording. Same access point, same refusal tripwire:
+a notice on EITHER endpoint stops ALL workers, rd and pdf alike.
+
+⚠ THE FRESHNESS CLAUSE (login: "a new doc id from the edge walk may very
+well miss its image... the lag distribution"): TotalPages<=0 on a doc
+recorded within --fresh-days is NOT an imageless verdict - the scan may
+simply not be uploaded yet. Those are DEFERRED (pdf stays '', retried when
+the feeder wraps), and only aged docs earn `pdf='imageless'`. A permanent
+verdict must never be written on a temporary state.
+
+READY TO DECODE = rd + (pdf|imageless) + key. Because pdf only ever follows
+rd, ready = needed - pdf_todo exactly (ix_nav_pdf_todo, index-only), and
+the board's synchronization row measures distance to a fully synchronized,
+decode-ready mirror. That is the one rate and the one eta.
 """
 from __future__ import annotations
 
@@ -47,6 +67,7 @@ sys.path.insert(0, str(HERE))
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 import acris_edge as AE                                        # noqa: E402
+import acris_pdf as AP                                         # noqa: E402
 import corpus_paths as CP                                      # noqa: E402
 import fetch_pages                                             # noqa: E402
 import live_delta as LD                                        # noqa: E402
@@ -64,6 +85,8 @@ BATCH = 200
 ap = argparse.ArgumentParser()
 ap.add_argument("--apply", action="store_true")
 ap.add_argument("--workers", type=int, default=28)
+ap.add_argument("--pdf-workers", type=int, default=10)
+ap.add_argument("--fresh-days", type=int, default=30)
 ap.add_argument("--every", type=int, default=10)
 ap.add_argument("--control-every", type=int, default=60)
 ap.add_argument("--deep-every", type=int, default=300)
@@ -76,8 +99,13 @@ REFUSALS = (fetch_pages.AccessDenied, LD.Refused)
 stop_workers = threading.Event()     # refusal or shutdown: backfill halts
 lock = threading.Lock()
 q: queue.Queue = queue.Queue(maxsize=20_000)
-stats = {"done": 0, "fail": 0}
+pdf_q: queue.Queue = queue.Queue(maxsize=20_000)
+pdf_hot: queue.Queue = queue.Queue()   # sync landings jump the pdf queue
+stats = {"done": 0, "fail": 0,
+         "pdfs": 0, "imageless": 0, "deferred": 0, "pdf_fail": 0}
 ua = {"User-Agent": fetch_pages.UA}
+PDF_FAILS = CP.NAV_WORK / "acris_lane_pdf_fails.jsonl"
+PDF_BATCH = 25
 
 con = sqlite3.connect(CP.NAV_DB, timeout=600, check_same_thread=False)
 con.execute("PRAGMA journal_mode=WAL")
@@ -222,6 +250,16 @@ def edge_tick():
     write_ledger(len(found), [d for _c, d, _r in found])
     with lock:
         stats["done"] += len(found)
+    # hot-list: a fresh filing's pdf is fetched NOW, not when the backfill
+    # reaches it. Only rows whose rd parsed - pdf must follow rd, and a row
+    # landed rd='' would break `ready = needed - pdf_todo` if pdf'd first.
+    if a.pdf_workers > 0:
+        for _c, did, rec in found:
+            if rec:
+                try:
+                    pdf_hot.put((did, json.loads(rec).get("recorded", "")))
+                except Exception:
+                    pass
     say("  SYNC landed %d · rd in the SAME request · edge %d -> %d"
         % (len(found), edge, found[-1][0]))
     return True, len(found), False
@@ -338,12 +376,124 @@ def worker():
                                      "err": type(e).__name__}) + "\n")
 
 
-say("acris_lane up · ONE access point · %d workers + edge every %ds ·"
-    " apply=%s" % (a.workers, a.every, a.apply))
+# ── PDF POOL (the image half) — acris_pdf's recipe on the pdf todo set ──
+
+ppend, ppend_lock = [], threading.Lock()
+
+
+def pdf_flush():
+    with ppend_lock:
+        batch, ppend[:] = ppend[:], []
+    if not batch:
+        return
+    for _try in range(120):
+        try:
+            with lock:
+                con.executemany(
+                    "UPDATE navigation SET pdf=? WHERE id=? AND pdf=''",
+                    batch)
+                con.commit()
+            return
+        except sqlite3.OperationalError:
+            time.sleep(5)
+    with ppend_lock:
+        ppend[:0] = batch
+
+
+def pdf_feeder():
+    """image_walk's trailing feeder: pdf follows rd through the same id
+    order. When it runs dry it WRAPS to '' after a rest - that sweep is what
+    retries deferred fresh docs and Short failures left behind the cursor."""
+    read = sqlite3.connect(f"file:{CP.NAV_DB}?mode=ro", uri=True,
+                           check_same_thread=False)
+    read.execute("PRAGMA busy_timeout=60000")
+    cursor = ""
+    while not stop_workers.is_set():
+        rows = read.execute(
+            "SELECT id, json_extract(recorded_details, '$.recorded')"
+            " FROM navigation WHERE pdf = ''"
+            " AND recorded_details != ''"
+            " AND id > ? AND id NOT LIKE 'RC_%'"
+            " ORDER BY id LIMIT 5000", (cursor,)).fetchall()
+        if not rows:
+            time.sleep(600)
+            cursor = ""
+            continue
+        cursor = rows[-1][0]
+        for did, rec_date in rows:
+            if stop_workers.is_set():
+                return
+            pdf_q.put((did, rec_date or ""))
+
+
+def _fresh(rec_date):
+    """Recorded within --fresh-days. On these, TotalPages<=0 means 'scan not
+    uploaded yet' (the lag distribution), never an imageless verdict."""
+    m = re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", rec_date or "")
+    if not m:
+        return False
+    try:
+        t = time.mktime((int(m.group(3)), int(m.group(1)), int(m.group(2)),
+                         0, 0, 0, 0, 0, -1))
+    except (ValueError, OverflowError):
+        return False
+    return (time.time() - t) < a.fresh_days * 86400
+
+
+def pdf_worker():
+    read = sqlite3.connect(f"file:{CP.NAV_DB}?mode=ro", uri=True,
+                           check_same_thread=False)
+    read.execute("PRAGMA busy_timeout=60000")
+    while not stop_workers.is_set():
+        try:
+            item = pdf_hot.get_nowait()
+        except queue.Empty:
+            try:
+                item = pdf_q.get(timeout=5)
+            except queue.Empty:
+                continue
+        did, rec_date = item
+        try:
+            row = read.execute("SELECT pdf FROM navigation WHERE id=?",
+                               (did,)).fetchone()
+            if row is None or row[0]:
+                continue           # landed already (hot/wrap overlap)
+            st, val = AP.fetch_pdf(did, rec_date)
+            if st == "imageless" and _fresh(rec_date):
+                with lock:
+                    stats["deferred"] += 1
+                continue           # scan lag, not a verdict - wrap retries
+            with ppend_lock:
+                ppend.append((val, did))
+                n = len(ppend)
+            with lock:
+                stats["pdfs" if st == "pdf" else "imageless"] += 1
+            if n >= PDF_BATCH:
+                pdf_flush()
+        except REFUSALS as e:
+            if not stop_workers.is_set():
+                stop_workers.set()
+                say("  PDF REFUSED at %s - ALL WORKERS STOPPED: %.90s"
+                    % (did, e))
+        except Exception as e:
+            with lock:
+                stats["pdf_fail"] += 1
+            with PDF_FAILS.open("a", encoding="utf-8") as fh:
+                fh.write(json.dumps({"id": did, "err": type(e).__name__,
+                                     "msg": str(e)[:120]}) + "\n")
+
+
+say("acris_lane up · ONE access point · %d rd + %d pdf workers + edge"
+    " every %ds · apply=%s"
+    % (a.workers, a.pdf_workers, a.every, a.apply))
 threads = [threading.Thread(target=edge_thread, daemon=True),
            threading.Thread(target=feeder, daemon=True)]
 threads += [threading.Thread(target=worker, daemon=True)
             for _ in range(a.workers)]
+if a.apply and a.pdf_workers > 0:
+    threads.append(threading.Thread(target=pdf_feeder, daemon=True))
+    threads += [threading.Thread(target=pdf_worker, daemon=True)
+                for _ in range(a.pdf_workers)]
 t0 = time.time()
 for t in threads:
     t.start()
@@ -351,14 +501,22 @@ try:
     while True:
         time.sleep(60)
         flush()
+        pdf_flush()
         el = (time.time() - t0) / 60
         with lock:
-            d, f = stats["done"], stats["fail"]
+            s = dict(stats)
         say("  PROGRESS %s total · %.1f docs/s · %d fail · %.0f min%s"
-            % ("{:,}".format(d), d / (el * 60) if el else 0.0, f, el,
+            % ("{:,}".format(s["done"]),
+               s["done"] / (el * 60) if el else 0.0, s["fail"], el,
                " · WORKERS STOPPED (refusal)" if stop_workers.is_set()
                else ""))
+        if a.pdf_workers > 0:
+            say("  PDF PROGRESS %s pdfs · %s imageless · %d deferred ·"
+                " %d fail" % ("{:,}".format(s["pdfs"]),
+                              "{:,}".format(s["imageless"]),
+                              s["deferred"], s["pdf_fail"]))
 except KeyboardInterrupt:
     stop_workers.set()
     flush()
+    pdf_flush()
     say("stopped · %s landed" % "{:,}".format(stats["done"]))
