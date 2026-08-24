@@ -62,6 +62,15 @@ SUPERLATIVES = [
     "sits under", "unique", "unprecedented", "invariably", "must be",
 ]
 
+# R50: vague quantifiers are cardinals in disguise. "a couple of vacant
+# lots" shipped a wrong number past a check that only looked for digits
+# and spelled-out numerals.
+VAGUE_QUANTIFIERS = [
+    "a couple", "a handful", "a few", "several", "most ", "mostly",
+    "many ", "numerous", "a number of", "the bulk of", "the majority",
+    "almost all", "nearly all", "a dozen", "dozens", "some of the",
+]
+
 CARDINAL_WORDS = [
     "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
     "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "twenty",
@@ -166,6 +175,12 @@ def report(title, items):
 
 
 def main():
+    # Windows consoles default to cp1252 and cannot print the marks this
+    # file is built around (checkmark, warning sign). Force UTF-8 output.
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
     if len(sys.argv) < 2:
         sys.exit("usage: python precheck.py <draft.md>")
     path = pathlib.Path(sys.argv[1])
@@ -203,6 +218,16 @@ def main():
     cards = sorted({m.group(0) for m in re.finditer(
         r"\b(" + "|".join(CARDINAL_WORDS) + r")\b", low)})
     report("CARDINALS · license each with a count run in-action (advisory)", cards)
+
+    vagues = sorted({v.strip() for v in VAGUE_QUANTIFIERS if v in low})
+    problems += report("VAGUE QUANTIFIERS · these ARE counts — replace with a "
+                       "counted number or delete (R50: \"a couple\" was three)",
+                       vagues)
+
+    # R50: a check mark asserts two independent readings agreed (Card #7).
+    ticks = [ln.strip()[:110] for ln in text.splitlines() if "✓" in ln]
+    report("EARNED-✓ · name the two witnesses for each, or downgrade to "
+           "\"accepted — single witness\" (advisory)", ticks)
 
     # R49: absolute / uniqueness claims are where prose over-generalises and
     # where two layers end up asserting different things about one subject.

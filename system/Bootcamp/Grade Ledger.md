@@ -215,6 +215,22 @@ the pass passed them. Rule for the next cure: a mechanical check
 kills the class it can SEE; classes defined by meaning (coherence,
 attribution of a quantity to a subject) still need a walk. Step (6)
 is that walk; the SUPERLATIVES check surfaces its candidates.
+
+| 50 | 2003060600730001 2003 | **B** (self, login-prompted) | **COUNT CLASS 7th member (21,23,39,42,45,46,50) — REACHED THE DELIVERED TEXT**: "a couple of vacant lots" (three) and "mostly", neither counted — a REGRESSION after r47/r48 clean · **the cure had a HOLE**: precheck's CARDINALS list held digits and spelled-out numerals but not VAGUE QUANTIFIERS · **UNEARNED ✓** (Card #7) on parcel-id matching — the rotated dot-matrix ids were only partly legible and no systematic comparison ran · "months before any deed" temporal overstatement (r44 class) | fixes in the R50 entry (counted tally validates 38 two ways) · **precheck gains VAGUE QUANTIFIERS + EARNED-✓ checks**, both validated against this run's delivered text · **THE GRADE RUBRIC minted** |
+
+⚠ THE RUBRIC EXISTS NOW (Bootcamp.md). Fifty runs of letters with no
+defined scale meant the grade counted MISSES FOUND, not DAMAGE DONE —
+so sharper self-audit pushed the letter DOWN while the defects got
+smaller. Grades from here are by damage: A = no claim-changing defect,
+all gates clean, plus a system-changing finding; B = a defect reached
+the delivered TEXT; C+ = a defect reached the delivered EVIDENCE.
+Retrospective correction: r49 (misattributed 1,440 SF, which reached
+the TABLE) was graded B+ and should have been C+.
+⚠ THE HOLE-IS-THE-FINDING RULE (r50): when a mechanical cure misses,
+the miss is not just a defect — the GAP IN THE MACHINE is the finding,
+and it gets closed in the same run. r50 closed two (vague quantifiers;
+unlicensed ✓ marks).
+
 ⚠ MISATTRIBUTED QUANTITY (47, 49) is the class to watch next — both
 members were CORRECT computations bound to the WRONG SUBJECT, which
 no token check can catch. If it reaches three, the structural cure

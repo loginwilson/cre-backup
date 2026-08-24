@@ -8641,3 +8641,253 @@ two independent ways; the party wall held as MONUMENT not grant
 (r48's exact error, not repeated); the 5-vs-7 page gap resolved
 exactly against R40-1; grantor and grantee both correctly indexed,
 a contrast with r48's indexing failure.
+
+# RUN 50 — 2003060600730001 · shelved IN REM DEED · BRONX, 38 indexed parcels · 2003
+
+13/13 pages (4 cover + 7 instrument = the cover's stated 11; + 2
+undeclared: the judgment's backing sheet and the Law Department
+transmittal, with NO supporting-document cover page — contrast r49,
+where the supporting cover stated its own count). CRFN
+2003000159460, recorded 2003-06-06. **Zero new columns, zero new
+vocabulary — streak: 46.** Grade B (four misses; fixes applied
+here).
+
+## ⚠ R50-1 — THERE IS NO DEED IN THIS "IN REM DEED"
+
+What was recorded is a CERTIFIED COPY OF A JUDGMENT OF FORECLOSURE.
+The Law Department's transmittal (2003-05-05) asks the Register to
+record "the enclosed certified copy of a Judgment of Foreclosure and
+Decision"; someone wrote "(IN REM DEED)" BY HAND in that letter's
+margin, and the register typed the whole package under the
+annotation. THE DOCUMENT TYPE ORIGINATES IN A HANDWRITTEN MARGIN
+NOTE ON A COVER LETTER. The register then invented a GRANTOR (City
+of New York) and a GRANTEE (City of New York) to fill a deed schema
+the instrument never fits — the judgment names no grantor and no
+grantee at all. Type-shelf family at its sharpest yet (r42, r43,
+r46, r48 were mismatches; this one asserts a CONVEYANCE THAT THE
+INSTRUMENT EXPRESSLY WITHHOLDS).
+
+## THE EVENTS (one event_id)
+
+    row 0  IDENTITY of the action (observes) · IN REM TAX
+           FORECLOSURE ACTION NO. 46, Borough of Bronx, Tax Map
+           Sections 9, 10, 11, 12, 14, 15 and 18, Tax Classes 1 and
+           2, Index No. 40000/01, Supreme Court Bronx County · DOF
+           report F6X0052, borough code 002 BRONX, action number
+           046, filing date 12/07/2001, case status FILED
+    row 1  ENTITLEMENT·creates (authority to convey) · transacts ·
+           Supreme Court → COMMISSIONER OF FINANCE · final judgment
+           granted to the City; City adjudged owner and holder of
+           the unpaid tax liens; SALE DISPENSED WITH; Commissioner
+           authorized to prepare and execute a deed or deeds TO THE
+           CITY **OR** to a third party deemed qualified and
+           designated by the Commissioner of HPD, any third-party
+           conveyance to be FOR AN EXISTING USE · STATUTORY EIGHT
+           MONTH WINDOW (Admin. Code 11-421.1) from entry
+           2003-02-20, so to ~2003-10-20 (DERIVED); if unused, the
+           Commissioner directs Corporation Counsel to DISCONTINUE
+           the proceeding and VACATE the judgment as to those
+           parcels
+    row 2  ⚠ TITLE — EXPRESSLY NOT TRANSFERRED · transacts (a
+           WITHHOLDING) · "unless and until the Commissioner of
+           Finance executes a deed," owners "shall continue to have
+           all of the rights, liabilities, responsibilities, duties
+           and obligations of an owner, including ... maintaining
+           such lands in compliance with the housing maintenance,
+           building and fire codes"; the barring of every right,
+           title, interest, claim, lien and equity of redemption
+           likewise operates only "upon the execution of said deed"
+    row 3  OCCUPANCY-bearing access · transacts · owners → HPD or
+           its authorized agent · access for conducting inspections,
+           effective UPON ENTRY of judgment — before any deed, and
+           regardless of whether one ever issues [GRADE FIX:
+           delivery said "months before any deed", which the record
+           does not support — a deed could issue the next day]
+    row 4  ENCUMBRANCE (adjudged) · the City is owner and holder of
+           the unpaid tax liens affecting the Exhibit A parcels, in
+           the amounts with interest shown in the List of Delinquent
+           Taxes · ⚠ AMOUNTS NOT STATED IN THIS RECORD
+    row 5  procedure (observes) · List of Delinquent Taxes verified
+           and filed with the Clerk of Bronx County 2001-12-07
+           (11-405) · Notice of Foreclosure published once a week
+           for six weeks (11-406) in the CITY RECORD, NEW YORK LAW
+           JOURNAL and NEW YORK POST · mailed to owners, mortgagees,
+           lienors and claimants filing registration cards (11-416,
+           11-417) or appearing on the City's title report, else to
+           the name and address in the latest annual record of
+           assessed valuations
+    row 6  severance · transacts · parcels REDEEMED under 11-407
+           severed (Exhibit B); parcels with litigation, timely
+           answers or installment agreements pending under 11-409
+           severed WITHOUT PREJUDICE (Exhibit C), enforceable
+           instead by tax lien sale under Title 11 Chapter 3
+    row 6a ⚠ FORM REUSED FROM ANOTHER COUNTY (observes) · printed
+           "County of Manhattan" and "New York County" each STRUCK
+           with "Bronx" written by hand; caption "At an Ex Parte and
+           Urgent Motion Part" struck, "a Special Trial Part"
+           written by hand — three hand corrections
+    row 7  ⚠ COUNT DISCREPANCY · the DOF report STATES "TOTAL
+           PARCELS FILED : 39"; the cover's indexed property rows
+           COUNTED IN-ACTION total 38 (2 + 14 + 14 + 8 across four
+           cover pages), and a SECOND INDEPENDENT ROUTE confirms 38:
+           the property-type tally, counted row by row, gives
+           APARTMENT BUILDING 27 + 4-6 FAMILY WITH STORE/OFFICE 6 +
+           VACANT LAND 3 + DWELLING ONLY-2 FAMILY 2 = 38 [GRADE FIX:
+           delivery said "a couple of vacant lots" — there are
+           THREE, and neither that nor "mostly" was counted] ·
+           the one-row difference is NOT explained in this document
+           and CANNOT be checked — Exhibits B and C are absent ·
+           BANKED AS UNRESOLVED
+    row 8  COST · RECORDING FEE EXEMPT (Admin. Code 7-102, cited in
+           the transmittal — the Corporation Counsel is exempt);
+           every tax line 0.00
+    row 9  IDENTITY (indexed parcels, observes) · 38 Bronx parcels,
+           blocks 2285 through 4174; type tally as row 7; the DOF
+           report carries building class and tax class per parcel,
+           tax classes 1 and 2
+
+    ACTOR-CLAIMS. THE COURT: HON. BERTRAM KATZ, Justice, at a
+    Special Trial Part, County Court House, 851 Grand Concourse,
+    Bronx, 12th day of September 2002 (month handwritten); ENTER
+    line signed over the typed name. THE CLERK: HECTOR L. DIAZ,
+    County Clerk and Clerk of the Supreme Court, Bronx County —
+    certification stamp + handwritten signature, FEB 20 2003,
+    No. 363767, plus a separate FILED-RECORDED stamp. THE CITY'S
+    LAWYERS: MICHAEL A. CARDOZO, Corporation Counsel (on whose
+    motion judgment issued); JENNIFER GOYKHMAN, Assistant
+    Corporation Counsel, NYCLIS No. 01RM000210, affirmation of
+    regularity dated 2002-08-20 identifying parcels to be severed;
+    MELANIE WILSON, IN REM SECTION, NEW YORK CITY LAW DEPARTMENT,
+    100 Church Street — signed the transmittal, and is the cover's
+    return-to name. THE AFFIANTS: MARTHA STARK, Commissioner of
+    Finance, affidavit of regularity sworn 2002-07-31 (parcels
+    redeemed under 11-407; parcels paid, cancelled, liquidated,
+    under a bankruptcy order, condemned or included in error and
+    withdrawn under 11-413); JERILYN PERINE, Commissioner of
+    Housing Preservation and Development, affidavit 2002-07-29.
+    ⚠ NO INDIVIDUAL OWNER IS NAMED ANYWHERE IN THE RECORDED COPY —
+    the proceeding is IN REM, against the parcels themselves, and
+    owners appear only as a class to whom notice was mailed. The
+    negative claim is EARNED: all 13 pages read (R7-4).
+
+## R50-2 — THE DATED SPINE (all READ from stamps or recitals)
+
+List filed 2001-12-07 → HPD affidavit 2002-07-29 → Finance
+affidavit 2002-07-31 → Corporation Counsel affirmation 2002-08-20 →
+papers stamped by Bronx Supreme Court 2002-09-04 → decision SEP 12
+2002 → judgment ENTERED AND FILED by the County Clerk FEB 20 2003 →
+transmittal 2003-05-05 → City-recorded 2003-06-06. Cover document
+date 02-20-2003 matches the ENTRY date, not the decision date.
+
+## R50-3 — WHAT THE RECORD PROVES ABOUT ITS OWN INCOMPLETENESS
+
+The judgment turns on three schedules. PHYSICAL INDEX TABS for
+Exhibit A, Exhibit B and Exhibit C appear at the foot of the
+judgment pages; only ONE exhibit page is present in the recorded
+copy (the DOF activity report). The record therefore demonstrates
+its own gap: which parcels were redeemed, and which severed for
+pending litigation, are unknowable from it. Extraction rule: index
+tabs, marginal annotations and transmittal letters are EVIDENCE
+ABOUT THE PACKAGE, not decoration — read them.
+
+## R50 GRADE — B (self, cold; fixes applied in this entry)
+
+1. COUNT CLASS, 7th member (21, 23, 39, 42, 45, 46, 50) — and it
+   REACHED THE DELIVERED TEXT: "a couple of vacant lots" (there are
+   THREE) and "mostly apartment buildings", neither counted. A
+   REGRESSION: the class had gone clean at r47 and r48 after the
+   enumeration-default cure. FIXED (row 7, with a full counted
+   tally that independently validates the 38).
+2. ⚠ THE CURE'S MECHANICAL FORM HAS A HOLE, found by this miss:
+   precheck's CARDINALS check lists digits and spelled-out numbers,
+   so it licensed "six/eight/four" — but VAGUE QUANTIFIERS ("a
+   couple", "a handful", "several", "most", "mostly", "a few",
+   "many", "numerous") are cardinals in disguise and were invisible
+   to it. ADDED to precheck this run.
+3. UNEARNED ✓ (Card #7): "property rows ✓ matching the DOF report's
+   parcel ids where compared" — no systematic comparison was run;
+   the rotated dot-matrix ids were only PARTLY LEGIBLE. Honest form
+   banked: borough code, action number and filing date cross-check
+   EXACTLY (three witnesses); the per-parcel ids were NOT
+   systematically compared. ⚠ NEW MECHANICAL CHECK ADDED: precheck
+   now lists every ✓ in the draft for licensing, the same way it
+   lists cardinals.
+4. Temporal overstatement, mild (r44's class): "months before any
+   deed" — the statute permits up to eight months; nothing requires
+   months to pass. FIXED (row 3).
+
+HELD: the central finding (a type asserting a conveyance the
+instrument withholds, built from a handwritten margin note) is the
+class of discovery this loop exists for; mode discipline held —
+decretal paragraphs transacts, "upon reading and filing" recitals
+observes with named affiants, and the withheld title banked AS A
+WITHHOLDING rather than upgraded to a transfer; the absent exhibits
+caught by their own surviving tabs; the negative owner claim earned
+by reading all 13 pages; three cross-validations run in-action; the
+pre-delivery pass again changed the delivery (forcing the Manhattan
+form-reuse and the action identifiers into the table, clearing a
+trigger word); and both the mechanical layer-consistency walk and
+the new hand claim-coherence walk came back clean.
+
+## THE GRADE RUBRIC (minted 2026-08-24 after run 50, login question:
+## "we are not really getting into A territory so we are struggling to
+## learn and do better?")
+
+⚠ THE SCALE WAS NEVER DEFINED. Fifty runs of letters with no rubric
+means the letter tracked HOW MANY MISSES I FOUND, not how much damage
+was done — so getting better at self-audit LOWERED the grade. That is a
+broken instrument, and it hid real movement. Defined now, by DAMAGE:
+
+    A   No defect that would change a downstream claim. Every
+        mechanical gate CLEAN before delivery. AND the run produced at
+        least one finding that changed the system (a rule, a class, a
+        measurement, a new draw seam). Advisory items may exist.
+    A-  No substantive defect; only stylistic or advisory items.
+    B+  ONE substantive defect, caught and fixed BEFORE the bank.
+    B   A defect reached the DELIVERED TEXT (prose the login reads).
+    B-  Two or more reached the delivered text, or a fixed instance
+        recurred identically.
+    C+  A defect reached the DELIVERED EVIDENCE (the data table or the
+        banked record) — the layer the corpus is built from.
+    C   A structural rule broke (a mechanical gate skipped, a required
+        artifact never produced).
+
+Severity, not volume. Finding four small things is a BETTER run than
+missing one large one, and the letter must say so.
+
+⚠ RETROSPECTIVE NOTE, applied honestly: under this scale r49's
+misattributed 1,440 SF reached the TABLE and should have been C+, not
+B+. The old scale was LENIENT ON TABLE DEFECTS and harsh on prose
+nitpicks — exactly backwards, since the table is what the corpus keeps.
+
+## WHAT THE FIFTY-RUN RECORD ACTUALLY SHOWS (measured, not asserted)
+
+Defect CLASSES that received an ARTIFACT or MECHANICAL cure are dead
+or dying; the mix of what still fails has moved from gross to fine:
+
+    class                 members            state after cure
+    name-integrity/crop   21,37,42,45        CLEAN r46-r50 (5 runs)
+    narrative import      10..48 (10 mem.)   CLEAN r49, r50 — the
+                                             machine caught "Harlem"
+                                             pre-delivery at r49
+    lexicon-recall        37,41,43           CLEAN since r44
+    MODES-flattening      42,44,46           CLEAN r47-r50
+    layer-consistency     47,48              CLEAN r49, r50
+    count                 21,23,39,42,45,
+                          46,50              STILL LIVE — 7th member
+                                             at r50 after 2 clean runs
+    misattributed qty     47,49              live, 2 members
+    unearned ✓            r50                new, 1 member
+
+EARLY misses: imported a neighbourhood name; flattened a recital;
+skipped the crop pass entirely; banked an unverified "third sighting".
+LATE misses: said "a couple" where three; claimed a ✓ that was only
+partly earned; wrote "months" where the statute says up to eight.
+THE DEFECTS GOT SMALLER. The letter did not, because the letter was
+counting findings instead of weighing damage. Both facts are true and
+the rubric above separates them.
+
+RULE GOING FORWARD: a class that survives its cure gets a MECHANICAL
+cure, not another rule — and when the mechanical cure misses (r50: the
+cardinals check never looked for "a couple"), the HOLE is the finding
+and gets closed the same run.

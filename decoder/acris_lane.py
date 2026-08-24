@@ -133,6 +133,17 @@ ap.add_argument("--max-rps", type=float, default=20.0,
                      " by concurrency. ~1.3M requests were spent on 2026-08-24"
                      " and the trips accelerated (5h/4h/47m/49m apart) - the"
                      " signature of a depleting budget, not a worker limit.")
+ap.add_argument("--rps-max", type=float, default=80.0,
+                help="ceiling for the governor's TEMPO climb. The dial that"
+                     " matters is now requests/second, not worker count:"
+                     " evenly-metered arrivals are what the VPN was"
+                     " accidentally providing all morning (~77 req/s, no"
+                     " blocks). The bucket makes that spacing deliberate.")
+ap.add_argument("--contiguous", action="store_true",
+                help="hold ONE document's whole network burst uninterrupted."
+                     " ⚠ COSTS ~64x THROUGHPUT - it serializes the entire"
+                     " lane to one request at a time. Off by default; the"
+                     " pacer provides the anti-lump guarantee instead.")
 ap.add_argument("--step-minutes", type=int, default=10,
                 help="clean minutes a width must hold before +2 (login"
                      " 2026-08-24: 10-min windows 'to truly see if things"
@@ -165,6 +176,7 @@ pdf_q: queue.Queue = queue.Queue(maxsize=20_000)
 pdf_hot: queue.Queue = queue.Queue()   # sync landings jump the pdf queue
 stats = {"done": 0, "fail": 0,
          "pdfs": 0, "imageless": 0, "deferred": 0, "pdf_fail": 0,
+         "verified": 0,   # imageless RE-confirmed: not new readiness
          "shed": 0}          # Short/timeout = the server's load signal
 pdf_width = [0]              # live width, governed; workers idle above it
 rd_width = [9999]            # rd gate - collapsed by the governor after a
@@ -222,24 +234,41 @@ class Tempo:
 
     def __init__(self, rps):
         self.rps = float(rps)
-        self.tokens = float(rps)
-        self.t = time.time()
+        self.next_at = time.time()
         self.lk = threading.Lock()
         self.spent = 0
 
     def take(self):
-        while True:
-            with self.lk:
-                now = time.time()
-                self.tokens = min(self.rps,
-                                  self.tokens + (now - self.t) * self.rps)
-                self.t = now
-                if self.tokens >= 1.0:
-                    self.tokens -= 1.0
-                    self.spent += 1
-                    return
-                wait = (1.0 - self.tokens) / self.rps
-            time.sleep(min(wait, 0.25))
+        """Reserve THE NEXT DEPARTURE SLOT, then sleep until it.
+
+        ⚠⚠ THIS IS A PACER, NOT A BUCKET — AND THAT IS THE WHOLE POINT
+        (2026-08-24). It used to bank tokens up to a FULL SECOND's worth
+        (`tokens = min(self.rps, ...)`), so after any idle stretch — img2pdf
+        converting a long document, a batch of db writes — the saved-up
+        beats were all playable at once and N workers fired back-to-back
+        with ZERO spacing. Average rate looked perfect; arrivals were
+        chords. That is drumming, measured at the same req/s that read as
+        clean.
+
+        It also explains why piano "worked a long time and then broke": the
+        228 ms VPN kept the wire permanently busy, so tokens never had a
+        chance to bank. When latency dropped, workers finished fast, went
+        idle during local work, banked a second of tokens, and released
+        them in a burst — identical settings, identical rate, newly bursty
+        arrivals.
+
+        Reserving a slot makes spacing a PROPERTY OF THE SCHEDULE rather
+        than a side effect of how busy the wire happened to be. Burst
+        capacity is exactly 1, at any latency, after any idle. A governor
+        change to .rps takes effect on the next reservation."""
+        with self.lk:
+            now = time.time()
+            due = self.next_at if self.next_at > now else now
+            self.next_at = due + 1.0 / self.rps
+            self.spent += 1
+        delay = due - time.time()
+        if delay > 0:
+            time.sleep(delay)
 
 
 tempo = Tempo(a.max_rps)
@@ -279,7 +308,31 @@ _turn = threading.Lock()
 
 @contextlib.contextmanager
 def turn():
-    with _turn:
+    """⚠⚠ OFF BY DEFAULT, AND THE MEASUREMENT SAYS WHY (2026-08-24).
+
+    This is ONE GLOBAL LOCK held across a document's whole network burst
+    (map + every page). With it on, the lane's real concurrency is 1 - the
+    64-connection pool and the pacer are both inert, because nothing may
+    START until the previous document FINISHES. Measured: 491 reqs in 120 s
+    = 4.1 req/s = exactly 1/(244 ms RTT). Serialized, the <30-day target's
+    66 req/s would need a 15 ms round trip. Not slow - arithmetically
+    impossible.
+
+    ⚠ CONTIGUITY WAS NEVER THE PROTECTION; SPACING IS. login's model:
+    "acris doesnt want to see one ip accessing it in lumps." A lump is
+    SIMULTANEOUS ARRIVAL, which the pacer now makes impossible by
+    construction - no two requests depart within 1/rps of each other, at
+    any latency, after any idle. Interleaving two documents is not a lump;
+    it is what a browser with two tabs does. Contiguity is a DIFFERENT
+    property, it costs ~64x, and it buys nothing the pacer does not
+    already guarantee.
+
+    Kept as a dial, not deleted: --contiguous restores it if evidence ever
+    says arrival ORDER (not spacing) mattered after all."""
+    if a.contiguous:
+        with _turn:
+            yield
+    else:
         yield
 
 
@@ -298,8 +351,25 @@ def turn():
 # drumroll rule holds there (proven 160 concurrent connections).
 SESSION = requests.Session()
 SESSION.headers.update({"User-Agent": fetch_pages.UA})
+# ⚠⚠ THE POOL MUST BE AS WIDE AS --max-inflight, OR CONCURRENCY BECOMES A
+# COLD-HANDSHAKE GENERATOR (measured 2026-08-24). urllib3's `block` defaults
+# to False: with pool_maxsize=1 and 16 requests in flight, ONE takes the
+# pooled connection and the other FIFTEEN call _new_conn() — a fresh TLS
+# handshake each — then get discarded on release because the pool is full.
+# Continuously. The "single kept-alive connection, what a browser looks
+# like" claim above is only true at --max-inflight 1; at 16 we were minting
+# and burning ~15 cold connections per cycle, which is the very stampede
+# signature that trips this server ("160 cold TLS opens in one instant").
+#
+# So the pool is sized to the gate, and pool_block=True makes it a HARD
+# ceiling — nothing can open a connection outside it, ever. Combined with
+# the pacer above, connections are also born EVENLY SPACED (at 12/s the
+# first handshakes are 83 ms apart), so the ramp warms the pool instead of
+# stampeding it. Concurrency is now a warm-connection count, not a
+# handshake rate — which is what makes raising it safe.
 SESSION.mount("https://", requests.adapters.HTTPAdapter(
-    pool_connections=1, pool_maxsize=1, max_retries=0))
+    pool_connections=1, pool_maxsize=a.max_inflight, max_retries=0,
+    pool_block=True))
 
 
 def one_at_a_time(url, referer, timeout=90):
@@ -475,10 +545,14 @@ def edge_tick():
     # get the recorded date for the store path. _rec_date() accepts either.
     for _c, did, rec in found:
         if rec:
-            pdf_hot.put((did, rec))
+            pdf_hot.put((did, rec, False))
     say("  SYNC landed %d · rd in the SAME request · edge %d -> %d"
         % (len(found), edge, found[-1][0]))
     return True, len(found), False
+
+
+# ⚠ LAST MOMENT ACRIS WAS PROVEN TO BE SERVING US (set by the probe).
+probe_ok_at = [0.0]
 
 
 def edge_thread():
@@ -488,6 +562,11 @@ def edge_thread():
     fails = 0
     while True:
         ok, _landed, refused = edge_tick()
+        if ok:
+            # ⚠ THE ORACLE. A successful probe is PROOF the server is still
+            # serving THIS ip on THIS session - the governor reads it to tell
+            # a local transport blip from an actual shedding server.
+            probe_ok_at[0] = time.time()
         if refused and not stop_workers.is_set():
             stop_workers.set()
             say("  ⚠ REFUSED - BACKFILL WORKERS STOPPED (probe continues on"
@@ -791,6 +870,12 @@ def governor():
             continue
         if rd_width[0] < a.workers and shed == 0:
             rd_width[0] = min(rd_width[0] + 6, a.workers)   # gentle recovery
+        # ── THE TEMPO IS THE DIAL NOW (login 2026-08-24: "get the rate up to
+        # a legitimately good figure sustained"). Width stopped meaning
+        # anything once the bucket paced the wire; requests/second is what
+        # ACRIS experiences. Climb it the way the governor climbed width:
+        # +2/s per clean window, back off hard on the server's own signal.
+        rps = tempo.rps
         if shed >= 10:
             # MASS failure in one minute = a reconnect event (network change,
             # sleep/wake, IP re-lease), not ordinary shedding: every keep-
@@ -800,19 +885,44 @@ def governor():
             # gently - never a trim.
             verdict, win_c0 = settle(w)
             win_t0 = time.time()
+            # ⚠⚠ ASK THE ORACLE BEFORE THROWING AWAY THE CLIMB (2026-08-24).
+            # 15:56: 50 SSLErrors in ONE minute, then ZERO for the next four
+            # while pdfs kept landing - a single transport event (every open
+            # connection dying at once), not a server refusing us. The probe
+            # never missed a beat through it, which is PROOF acris was still
+            # serving this ip. The old code could not tell that from a real
+            # shed, so it paid the full 10-minute collapse for local network
+            # noise - and on a flaky link that is a permanent ceiling, because
+            # the climb needs uninterrupted clean minutes to step at all.
+            #
+            # Probe healthy  -> LOCAL blip: the dead connections are already
+            #                   gone, so drop width (the pool must re-warm)
+            #                   but KEEP the earned tempo and hold only 2 min.
+            # Probe silent   -> treat as the server: full collapse, 10 min.
+            served = time.time() - probe_ok_at[0] < 90
             pdf_width[0] = 8
             rd_width[0] = 4
-            hold, streak = 10, 0
-            say("  GOVERNOR mass failure (%d/min) - reconnect event, FULL"
-                " RE-RAMP: pdf %d -> 8, rd -> 4, hold 10 min (%s)"
-                % (shed, w, verdict))
+            if served:
+                hold, streak = 2, 0
+                say("  GOVERNOR mass failure (%d/min) but THE PROBE IS STILL"
+                    " SERVED (%.0fs ago) - local transport event, not acris:"
+                    " tempo HELD at %.1f/s, pdf %d -> 8, rd -> 4, hold 2 min"
+                    " (%s)" % (shed, time.time() - probe_ok_at[0], tempo.rps,
+                               w, verdict))
+            else:
+                tempo.rps = max(4.0, rps * 0.4)
+                hold, streak = 10, 0
+                say("  GOVERNOR mass failure (%d/min), PROBE SILENT TOO -"
+                    " treating as the server, FULL RE-RAMP: tempo %.1f ->"
+                    " %.1f/s, pdf %d -> 8, rd -> 4, hold 10 min (%s)"
+                    % (shed, rps, tempo.rps, w, verdict))
         elif shed >= 3:
             verdict, win_c0 = settle(w)
             win_t0 = time.time()
-            pdf_width[0] = max(w * 3 // 4, 4)
+            tempo.rps = max(4.0, rps * 0.75)
             hold, streak = 10, 0
-            say("  GOVERNOR server shedding (%d) - width %d -> %d,"
-                " hold 10 min (%s)" % (shed, w, pdf_width[0], verdict))
+            say("  GOVERNOR server shedding (%d) - TEMPO %.1f -> %.1f/s,"
+                " hold 10 min (%s)" % (shed, rps, tempo.rps, verdict))
         elif hold > 0:
             hold -= 1
         elif shed == 0 and landed > 0:
@@ -824,14 +934,15 @@ def governor():
             # organ's share) and keeps the wire busy while workers do local
             # work. So the governor stops hunting a width ceiling; the
             # ceiling now lives in --max-rps and the round trip.
-            if a.max_inflight <= 1:
-                if streak == a.step_minutes:
-                    say("  GOVERNOR piano mode - width is share, not"
-                        " pressure; holding %d rd / %d pdf (%s)"
-                        % (rd_width[0] if rd_width[0] < 9999 else a.workers,
-                           w, settle(w)[0]))
+            if streak >= a.step_minutes and rps < a.rps_max:
+                verdict, win_c0 = settle(w)
+                win_t0 = time.time()
+                tempo.rps = min(rps + 2.0, a.rps_max)
+                streak = 0
+                say("  GOVERNOR %d clean minutes - TEMPO %.1f -> %.1f/s (%s)"
+                    % (a.step_minutes, rps, tempo.rps, verdict))
                 continue
-            if streak >= a.step_minutes and w < a.pdf_max:
+            if False and streak >= a.step_minutes and w < a.pdf_max:
                 verdict, win_c0 = settle(w)
                 win_t0 = time.time()
                 pdf_width[0] = min(w + 2, a.pdf_max)
@@ -922,7 +1033,7 @@ def row_feeder():
                 for did, rd in rows:
                     if stop_workers.is_set():
                         return
-                    q.put((did, rd or ""))
+                    q.put((did, rd or "", True))     # verify: not progress
                     n += 1
                 cur = rows[-1][0]
                 VERIFY_CURSOR.write_text(cur)     # resumable across restarts
@@ -944,7 +1055,7 @@ def row_feeder():
         for did, rd in rows:
             if stop_workers.is_set():
                 return
-            q.put((did, rd or ""))
+            q.put((did, rd or "", False))
 
 
 def row_worker(idx):
@@ -968,7 +1079,8 @@ def row_worker(idx):
                 item = q.get(timeout=5)
             except queue.Empty:
                 continue
-        did, rd_json = item
+        did, rd_json, is_verify = (item if len(item) == 3
+                                   else (item[0], item[1], False))
         if did in QUAR_RD or did in QUAR_PDF:
             continue
         try:
@@ -999,6 +1111,17 @@ def row_worker(idx):
             if st == "imageless" and _fresh(rec_date):
                 with lock:
                     stats["deferred"] += 1       # scan lag, not a verdict
+                continue
+            # ⚠ A RE-CONFIRMED imageless IS NOT NEW READINESS (login
+            # 2026-08-24: "is the rate actually representative of row
+            # completion or bs?" - it was not). The board reads
+            # pdfs+imageless as the ready delta, so counting verification
+            # sweeps there inflates the rate against work already done.
+            # Books to its own counter instead; a verdict OVERTURNED (the
+            # source now reports pages) lands as a real pdf and DOES count.
+            if is_verify and st == "imageless":
+                with lock:
+                    stats["verified"] += 1
                 continue
             with ppend_lock:
                 ppend.append((val, did))
@@ -1079,10 +1202,10 @@ try:
                else ""))
         if a.pdf_workers > 0:
             say("  PDF PROGRESS %s pdfs · %s imageless · %d deferred ·"
-                " %d fail · width %d" % ("{:,}".format(s["pdfs"]),
-                                         "{:,}".format(s["imageless"]),
-                                         s["deferred"], s["pdf_fail"],
-                                         pdf_width[0]))
+                " %d fail · %s verified · width %d"
+                % ("{:,}".format(s["pdfs"]), "{:,}".format(s["imageless"]),
+                   s["deferred"], s["pdf_fail"],
+                   "{:,}".format(s["verified"]), pdf_width[0]))
 except KeyboardInterrupt:
     stop_workers.set()
     flush()

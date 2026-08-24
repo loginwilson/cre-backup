@@ -119,3 +119,81 @@ richmond AFTER its pdf trio levels (~1.5 days; login 10:28 — no urgency,
 richmond never tripped) → pure 2-row board. See
 [[project-decoder-updates-board]], [[project-decoder-fleet-restore]],
 [[project-acris-refusal-20260824]].
+
+**THE PASS MODEL — SYNC CARRIES ACRIS THROUGH PASS 2 (login 2026-08-24):**
+"doc id, urls, rd, pass 1, pdf, repeat until 100%, pass 2, reach 100%, now
+extraction" · "acris synchronization takes care of everything from sync all
+the way up through pass 2 basically" · "the percentage now is based on
+achieving pass 1."
+
+    pass 1  the parcel key an rd row assigns BY ITSELF (key_on_rd trigger,
+            free, inside rd's transaction). ⚠ THE SYNC PERCENTAGE COUNTS
+            THIS — READY = id + urls + rd + pass-1 key + pdf|imageless.
+    pass 2  the docs pass 1 could NOT give a BBL, keyed from REFERENCES
+            that tie a bbl to a doc. Local work off rd data, zero ACRIS
+            requests — but gated on sync 100%, because a reference into a
+            doc that has not landed yet resolves to nothing.
+    pass 3  extraction.
+
+⚠ **DO NOT RE-GATE PASS 2 ON rd ALONE.** 2026-08-24 the arm read "acris rd
+8.10%" against ~75% actual rd and I started patching it to measure rd
+directly — reasoning that reference keying needs no images so it shouldn't
+wait on them. Sound reasoning, wrong premise: **pass 2 waits on ROW
+COMPLETION, not on its own input being available.** org_backfill_arm.py now
+gates on the board's `synchronization|acris` row and says so in its
+docstring.
+
+**⚠ THE VERIFY SWEEP FREEZES THE GOVERNOR (measured 15:37–15:45).** The
+governor climbs on `shed == 0 and landed > 0`, where landed = pdfs +
+imageless. Re-confirmations book to a separate `verified` counter (added so
+the ready rate stays honest) — so a verify-only workload makes landed 0
+EVERY minute, the clean-minute streak resets every minute, and the tempo can
+never step. Symptom: 2,645 verified / 52 pdfs / 0.1 ready/s, pinned at the
+12/s launch cap with zero sheds. The sweep is resumable (`_verify_cursor.txt`),
+so it yields the wire and resumes later. **An honest counter that a control
+loop does not read is a control loop that cannot see its own progress.**
+
+**REQUESTS PER READY ROW = ~8.2, MEASURED.** 6.18 pages/doc (400 pdfs sampled
+across 80 year-dirs) + 1 map + 1 rd. So the <30-day target's 8 ready/s needs
+**~66 req/s sustained** — under the 80 rps ceiling, and well under the old
+sharded fleet's measured ~140/s aggregate, but ~8x the 8.5/s the piano lane
+was holding. That is the number the ceiling hunt is hunting.
+
+**⚠⚠ WHAT ACTUALLY BROKE PIANO (found 2026-08-24, two defects, both fixed).**
+login: "I thought the piano approach fixed it and it had worked a very long
+time and then something happened that broke it." It did work — and then two
+things silently turned the piano back into a drum:
+
+**1 · Tempo was a BUCKET, not a pacer.** `tokens = min(self.rps, ...)` banked
+a FULL SECOND of beats. After any idle stretch (img2pdf on a long doc, a
+batch of db writes) every worker's saved-up token was playable at once.
+MEASURED, no network: after 1.2 s idle at 20/s, the old bucket let **16 of 16
+threads fire instantly with zero spacing**; the pacer holds every gap at
+48.6–50.6 ms against a 50 ms target, 0 bursts. Average rate identical — the
+rate is what we were watching, and the rate looked clean.
+⚠ THIS IS ALSO WHY IT WORKED FOR SO LONG: the 228 ms VPN kept the wire
+permanently busy so tokens never banked. Faster line → workers idle during
+local work → tokens bank → chords. Same settings, same req/s, new failure.
+FIX: reserve the next departure slot (`next_at = due + 1/rps`) and sleep to
+it. Burst capacity is exactly 1 at any latency, after any idle.
+
+**2 · `pool_maxsize=1` + `--max-inflight 16` = A COLD-HANDSHAKE GENERATOR.**
+urllib3's `block` defaults to **False**: one request takes the pooled
+connection, the other 15 call `_new_conn()` (fresh TLS each) and are
+DISCARDED on release because the pool is full. Continuously. The lane's own
+docstring claim — "one kept-alive connection, what a browser looks like" —
+was only true at `--max-inflight 1`; every metered config since was minting
+and burning ~15 cold connections per cycle, which is precisely the stampede
+signature that trips this server ("160 cold TLS opens in one instant").
+FIX: `pool_maxsize=a.max_inflight, pool_block=True` — the pool is a HARD
+ceiling and concurrency becomes a WARM-CONNECTION COUNT, not a handshake
+rate. Combined with the pacer, connections are also born evenly spaced
+(83 ms apart at 12/s), so the pool warms instead of stampeding — which is
+the ramp law satisfied by construction, not by a warmup thread.
+
+**⚠ THE GENERAL LAW:** the dial we watch (req/s) cannot see the property that
+trips the server (arrival spacing), and the config that names our intent
+(`pool_maxsize=1`, "one connection") is not the same as the behavior the
+library delivers. **Verify the mechanism, not the setting.** Both defects
+were invisible in every rate reading and both were provable in seconds
+offline.
