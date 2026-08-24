@@ -438,3 +438,84 @@ queue dropped those docs, and the DB never learned — invisible in every row co
 age 1 on the 08:17 run — the "step at ~24 h" was measured later in the day, so the
 attach evidently happens during business hours, not by 4 AM. If age-2 docs are
 still pending at a 4 AM run, re-measure the step; TERMINAL_DAYS=7 holds either way.
+
+## THE CONSOLIDATED LANE — design (login, 2026-08-24, drafted during the Phase A/B trip experiment)
+
+**Why.** Two refusals in 12 hours, and the working theory (login's): ACRIS
+tolerates ONE access point per IP — one client identity doing one kind of
+thing — but within that point the workers can be maximized. The evidence
+fits: 112 walker connections ran 8h clean Saturday (workers within a
+pattern are fine), while both trips came when the edge-prober and the
+doc-walker ran as SEPARATE python processes — two behaviors under one IP.
+Richmond, by contrast, is "just an access point" — it has never objected.
+Consolidation also IS the endgame architecture (sync absorbs acq when
+backfill closes); the trip theory just pulls it forward.
+
+**Shape: one process per source = one access point.**
+
+    acris_lane.py     ONE process owning ALL acris traffic
+      ├─ rd worker pool (N threads, one UA, shared discipline)
+      ├─ pdf worker pool (separate server pool, same process/identity)
+      └─ the ROTATION (login's spec): workers drain the backfill queue
+         continuously; every ~10s ONE request slot is SUBBED IN as the
+         edge probe (edge+1 is just another doc fetch — the probe stops
+         being a distinguishable second behavior). Control checks ride
+         the same slot cadence.
+
+**The queue: new filings jump to the FRONT (settled).** Freshness is the
+product; a filing queued behind 5.8M backfill rows is days stale. On an
+edge hit the new ids go to the head and walk detect → rd → key(trigger)
+→ pdf serialized per doc (the `_pdf_hot` pattern generalized). Backfill
+drains from the tail. Front-loading costs milliseconds/minute; per-doc
+completeness = keyed at the end of its chain. Same rules for richmond
+and for the pdf endpoint: hot first, backlog after.
+
+**Worker count** within the lane: start at the proven shape (rd 28, pdf
+14–28); Phase B (rd-alone, sync paused) settles whether width was ever
+the problem — login's theory predicts it wasn't. Ladder only on
+full-fleet readings.
+
+**Refusal discipline baked in:** every fetch path catches BOTH
+fetch_pages.AccessDenied and live_delta.Refused (the 09:00 lesson: a
+detector firing into the wrong except clause does not exist) → all
+workers stop; the edge probe alone continues on exponential backoff as
+the resume detector, inside the same process.
+
+**Reporting:** the lane feeds the same board rows (sync + acq per
+source) — ledger write on every landing (goalposts move with inflow),
+landed from the todo partial indexes, rates from the lane's own db-write
+counters. Nothing about the board changes.
+
+**Cutover:** build as `acris_lane.py` alongside the current fleet; prove
+it in a dedicated window (it must hold the edge AND drain backfill
+without a notice); then retire rd_walk×4 + image_walk×3 + the separate
+acris_live, and mirror the pattern for richmond (rc_lane absorbing
+rc_live + rc trio) for symmetry rather than necessity. fleet.py lanes
+collapse to one row per source.
+
+**REFINEMENT (login, same day): the front-vs-queue question DISSOLVES for
+acris rd.** The edge probe RETURNS the rd in the same request — detection
+and fetch are one act — so a new filing never enters the queue at all: by
+the time the lane knows it exists, the rd is in hand and landing it is a
+local write (trigger keys it in the same transaction). "It slots into the
+backfilling workflow at the moment of sync — one workflow, not two
+overlapping codes." Queueing only exists where a SECOND request is needed:
+the doc's PDF (hot-first, the _pdf_hot pattern) and richmond's detail
+fetch after its listing-page detection (front of queue, trivial volume).
+Phase A evidence (2026-08-24 morning): sync-only ran clean while landing
++34 filings solo — consistent with one-access-point tolerance.
+
+**BURST SEMANTICS (login's question: 2-3-4+ filings in one 10s window).**
+The edge slot is a TIME RESERVATION, not a queue position — every ~10s the
+next request belongs to the probe regardless of backfill pressure. On a
+hit the slot enters WALK MODE: probe edge+1, +2, +3... (each hit lands
+that doc's rd in the same request, trigger keys it), continuing until
+consecutive blanks + a passing control re-prove level; then it releases
+back to cadence. k filings cost k requests + blank-proofs (proven live:
+"landed 9 · rd filled 3/3 in the SAME request"). Backfill workers keep
+draining in their own slots throughout; in a freak burst the walk expands
+to consume slots and backfill throttles — the correct inversion, freshness
+first. Even a 1,000-doc recording dump ≈ 20s of full-lane attention. The
+periodic DEEP walk (~300s, several past the edge) remains the net against
+sparse crfn sequences. Levelness is proven (blanks + control), never
+assumed.

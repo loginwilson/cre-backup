@@ -7031,3 +7031,178 @@ carry its conclusion.**
 first move is to test it.** Not concede, not defend. If it cannot be
 tested, say which part is READ and which was INFERRED and leave the
 disagreement open. "Let me measure that" is the whole response.
+
+# RUN 41 — 2003021100046001 · CONDO DECLARATION · Brooklyn 5448/63 · 2002/03
+
+39 pdf pages (rd `pages` 37 + supporting series), read cold, reconciled
+after. **Zero new columns, zero new vocabulary — streak: 37** (run 40
+void, excluded). FIRST condo declaration — the IDENTITY·creates cell the
+Draw Board had flagged as never exercised. First draw self-directed from
+the least-proven cluster (session rule 2026-08-24) and first delivered
+in the re-ruled order (see VERDICT FORMAT amendment below). Grade B+
+(login-prompted self-grade; four misses, ledger charged).
+
+    DECLARATION establishing 49TH STREET CONDOMINIUM I under RPL Art
+    9-B · sponsor CONPLEX ENTERPRISES INC (1746 45th Street, Brooklyn;
+    MAYER SCHLAFRIG, President — the only party to EXECUTE the
+    declaration; notary [Theo?]dore Miele, moderate, license prefix
+    01MI- corroborates surname; the annexed AG letter carries its own
+    signer) · dated 12-12-2002 (dateline day blank; ack Kings
+    12-12-2002) · recorded 2003-02-25 13:56:42, CRFN 2003000026852 ·
+    1669 49th Street, block 5448 lot F/K/A 63, N/K/A 1401-1403
+
+## THE EVENTS (parties ON the rows; actor-claims where from/to is n/a)
+
+    row 1  IDENTITY·creates · Bklyn 5448/63 · from/to n/a (nothing
+           crosses) · one tax lot re-cut into unit lots 1401/1402/1403
+           + common elements · 3 Homes: 1,743 / 1,019 / 1,033 SF
+           (residential 3,795; land 2,003.5) · common interest 45.93 /
+           26.85 / 27.22% · term: until amended/withdrawn (80% owners +
+           first mortgagees) — condition
+           ACTOR-CLAIMS on the event id: declarant CONPLEX ENTERPRISES
+           INC; signer MAYER SCHLAFRIG, President. (Login ruling
+           2026-08-24: party attribution is REQUIRED on every event —
+           in from/to when the function crosses ends, as anchored
+           actor-claims when it does not. Resolution must never guess
+           the lender / encumbrancer / titleholder.)
+    row 2  ENCUMBRANCE·creates · unit lots 1401-1403 → 49TH STREET
+           CONDOMINIUM I (all owners mutually) · covenant regime runs
+           with the land: use restrictions, board consent, common-charge
+           lien SENIOR to all but tax liens + first mortgage · charges
+           n/a (set annually by Board); late fee <= $15/mo; 5-day grace
+    row 3  ENCUMBRANCE·creates · common elements: unit lots → CONPLEX
+           ENTERPRISES INC (in gross) · reserved easement to complete
+           construction, market/sell, install utilities · term: until
+           construction and sale complete (condition, undated);
+           unamendable without sponsor consent
+    row 4  VALUE·creates, mode SIGNALS · the 3 units · CONPLEX
+           (assertor) → n/a · AG offering plan CD020123 accepted
+           2002-11-19 · $900,000 offering amount (ASKING, never
+           consideration; ≈$237/SF derived on 3,795 SF) · effective 12
+           months unless extended
+
+Limited common areas (yard 523 SF to unit 1; balconies 28/63; cellar
+storage 87/86) are IRREVOCABLY RESTRICTED COMMON ELEMENTS — restricted
+USE, not fee. [Grade fix #4: first delivery let the yard read as part
+of the unit's fee; the SF class rides the quantity.]
+
+## R41-1 — THE INDEX PARTY IS THE ENTITY THE DOCUMENT CREATES
+
+rd parties: ONE row — "49TH STREET CONDOMINIUM I". The declarant/
+sponsor CONPLEX ENTERPRISES INC is ABSENT from the index. New member of
+the index-party family (L-4/R10-3): a condo declaration is indexed
+under its CREATION, not its creator — a party search for the developer
+misses its own declaration, corpus-wide. The sponsor's name is
+extraction-only.
+
+## R41-2 — THE BIRTH CERTIFICATE IS KEYED TO THE DYING LOT
+
+rd keys 3054480063 (old lot 63, "Partial Lot", unit panel "1" — one of
+three units) and the unit lots 1401-1403 born by the instrument are NOT
+keyed. A chain walk keyed on a unit lot's BBL never finds the document
+that created it. The condo lineage edge (63 → 1401/02/03) exists only
+in extraction — and the register's own supporting document (p38-39,
+"TO BE KNOWN AS LOT NUMBERS AND UNIT NUMBERS", remarks "F/K/A 63,
+N/K/A 1401 THROUGH 1403") is the machine-readable witness for it.
+R40-1 extended: CONDO DECLARATION carries a +2 supporting series and
+the supporting document IS the lot-assignment payload.
+
+## R41-3 — COMMON INTEREST: "FAIR VALUE" COMPUTES AS PURE SF PRO-RATA
+
+Declaration EIGHTH bases the percentages on "approximate proportion of
+fair value"; the numbers are each unit's share of 3,795 residential SF
+to two decimals (1,743/3,795 = 45.93 · 1,019/3,795 = 26.85 · 1,033/
+3,795 = 27.22; sum 100.00 exact). Two routes, one number (P-4) — and a
+checkable pattern for every condo declaration: an allocation that does
+NOT equal the SF shares is saying something (view premium, floor
+premium) and should be surfaced.
+
+## R41-4 — THE REGIME IS A RECURRING LIEN GENERATOR, CONDO EDITION
+
+R34's shape at scale: the charge lien arises by covenant + calendar,
+senior to everything but taxes and the first mortgage, foreclosable,
+with no instrument recorded when it fires. Every condo unit lot in the
+corpus carries one. Derivation: "no lien of record" is never "no lien"
+on a condo unit.
+
+## R41-5 — INTERNAL CONTRADICTIONS ARE THE DOCUMENT'S OWN (R39-2 family)
+
+- Sponsor control: By-laws II§9 = voting control until 5th anniversary
+  of recording OR 75% of Homes SOLD; III§1 = sponsor designates all
+  three board seats until 5th anniversary OR 90% CLOSED. Two triggers,
+  one instrument. Unresolved, banked, never smoothed.
+- Exhibit labels: TOC promises Exhibits A/B, Article NINTH says
+  Exhibit "C", the attachments are labeled Schedules A/B, and the
+  title pages carry offering-plan letters Schedule G/H. "Exhibit A"
+  references resolve only to Schedule B.
+
+## CONFIRMATIONS
+
+- Reconciliation ✓ EARNED: type · doc date (cover + title page + ack) ·
+  CRFN · recorded-to-the-second · borough · block/lot (title page +
+  both schedules). amount $0.00 consistent — the $900,000 offering is
+  INDEX-DARK (R13-4 family): the only dollar figure at these units'
+  birth lives inside the pdf.
+- Mode watch (session assignment): the observes-shaped recitals
+  ("is constructing or intends to construct", plans-filed-
+  simultaneously, the AG letter's recitations) all stayed observes/
+  claims; none promoted to load-bearing fact.
+- Two new-function candidates dissolved (G-020): entity-birth = a
+  SUBJECT (party graph), AG plan acceptance = an act about the
+  OFFERING, not the parcel (claims witnessing the VALUE signal). The
+  eleven held on the first condo declaration.
+- Schedule B verified against its own p39 duplicate — two renderings
+  agree; verifies the READ (same underlying typeset page, so not
+  document-level independence).
+- No BEING clause: the declaration cites no deed into Conplex — chain
+  expectation: lot 63's deed history. Also expected: unit deeds out of
+  1401-1403; floor plans filed with the Kings County Clerk; handwritten
+  "CONDO. 995" (two pages) plausibly the Kings condo-plan number —
+  UNSTATED, unresolved.
+- Verbatim banked: arbitration by "a duly constituted rabbinical court"
+  or the AAA; interest "at the highest legal rate al pi heter iska"
+  (Lexicon entry added — the words are the fact class).
+
+## R41 GRADE — B+ (self, cold; four misses, fixes applied in this entry)
+
+1. NARRATIVE, 7th (repeat = double): "the by-laws carry their community
+   in the drafting" — a characterization of WHOSE document this is,
+   unanchored. Fixed: the verbatim clauses stand with no gloss about
+   who wrote them that way.
+2. CLASS GLOSS WITHOUT AN ENTRY, 2nd (R37 class): flagged the heter
+   iska lexicon gap at delivery, then USED the gloss anyway. Flagging a
+   violation does not license it. Fixed: Lexicon entry added; entry
+   marks what is document-earned vs imported.
+3. OVER-ABSOLUTE CAST: "the only person who signs" — Schlafrig is the
+   only party to execute the DECLARATION; the notary signs the ack and
+   the annexed AG letter carries its own signer. Precise version was
+   shorter.
+4. LIMITED-COMMON STATUS DROPPED (mild): yard/balcony/storage delivered
+   without their restricted-use class — load-bearing for $/SF.
+
+HELD: watched word avoided (Homes/units/apartment building); qty_role
+on every figure; ✓s earned with named witnesses; sealed fields at draw;
+names passed at 400dpi, notary held at moderate; streak grepped; P-4
+run on every table; mode-watch ran clean.
+
+## VERDICT FORMAT — DELIVERY ORDER RE-RULED (login 2026-08-24)
+
+Delivery order is now **EVENT TEST → DATA TEST → ANYBODY TEST**: the
+functional read through the eleven-function lens (rd + pdf, naming
+which functions fire, which do not, and any candidate twelfth) comes
+FIRST as the analysis; the data table follows as the EVIDENCE; the
+anybody summary closes as what a reader takes away. The why-pass moves
+to the grading follow-up in simple points. Compose order is UNCHANGED
+(rows first, prose from rows — Amendment 5); only delivery order moved.
+Single-run loop confirmed: report → login prompts grade → grade + why →
+login prompts fix-and-record → four-file close → next draw.
+
+## PARTY ATTRIBUTION RULING (login 2026-08-24, recorded with run 41)
+
+Every event carries its parties: in **from/to** when the function
+crosses two ends (lender/borrower, encumbrancer/beneficiary, grantor/
+grantee), and as **anchored ACTOR-CLAIMS on the same event id** when
+from/to is n/a (IDENTITY re-cuts, unilateral declarations). The humans
+who sign for entities ride claims on the event (the stakeholder graph's
+rungs). A row whose parties cannot be recovered from the row + its
+claims is not resolvable and fails the data test.

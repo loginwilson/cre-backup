@@ -284,6 +284,35 @@ def tick():
 
     landed = land(found)
     write_edge(found[-1][0])             # after the commit, never before
+    # ⚠ THE LEDGER MOVES THE GOALPOSTS (login 2026-08-24: "if files are
+    # coming in the needed would move with the landed"). rc_live has written
+    # its landings to the synchronization ledger since day one; acris never
+    # did, so the board's `needed` sat at Friday's total while Monday's
+    # inflow landed - both needed AND landed lagged by exactly the inflow.
+    # Accounted, not measured - previous total + what we landed;
+    # routine_synchronization re-anchors it. A ledger failure never stops
+    # sync: the rows ARE landed.
+    try:
+        _lg = sqlite3.connect(r"D:\CRE Decoding System\00 Synchronizations"
+                              r"\Legal Instruments Synchronization"
+                              r"\Legal Instruments Synchronization.db",
+                              timeout=60)
+        try:
+            _prev = _lg.execute(
+                "SELECT system_total FROM synchronization"
+                " WHERE source='acris' AND system_total > 0"
+                " ORDER BY run_at DESC LIMIT 1").fetchone()
+            _sys = (_prev[0] if _prev else 0) + len(found)
+            _lg.execute("INSERT OR REPLACE INTO synchronization"
+                        " (run_at, source, system_total, source_total,"
+                        " delta, doc_ids) VALUES (?,?,?,?,?,?)",
+                        (time.strftime("%Y-%m-%d %H:%M"), "acris", _sys,
+                         _sys, 0, ";".join(d for _c, d, _r in found)))
+            _lg.commit()
+        finally:
+            _lg.close()
+    except Exception as e:
+        say("  ⚠ ledger write failed (%s) - rows ARE landed" % type(e).__name__)
     # ⚠ HAND THE NEW IDS TO THE PDF STEP DIRECTLY. This is the only thing that
     # makes a fresh document's pdf arrive in seconds instead of behind the
     # backlog - see the note in pdf_step about the submission-date ordering.

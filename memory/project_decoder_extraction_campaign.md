@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-24T12:39:14.504Z
+  modified: 2026-08-24T13:19:39.241Z
 ---
 
 **Login's five extraction-campaign decisions, 2026-08-24:**
@@ -49,6 +49,13 @@ metadata:
 5. **Cluster harness = acquisition discipline applied to reading** (gates,
    denominators, zero-byte/resume traps) — engineering later; the draw
    board already selects docs by borough/type/era/pages.
+
+**SEQUENCING (login 2026-08-24): rd 100% → pass 2 auto-fires
+(org_backfill_arm armed) → pdf lane resumes with the ~830k pdf-pass docs
+HOT-LISTED ahead of the pdf backlog → extraction OPENS ON PDF-PASS
+(closes pass 3, completes the key space before resolution chains
+anything) → then the rest of the corpus.** Front-of-queue is the standing
+principle: new filings jump backfill, pdf-pass jumps the pdf queue.
 
 Sequence while pdfs pull: bootcamp molds spec → mode vocabulary → test
 distilled 27B-config + wire cross-grading → bakeoff as regression floor.

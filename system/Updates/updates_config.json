@@ -16,7 +16,7 @@
     "keying pass 2": 60,
     "keying pass 3": 60
   },
-  "parked": ["acquisition pdf|acris"],
+  "parked": ["acquisition pdf|acris", "acquisition rd|acris"],
   "_retired": {
     "navigation": "db trigger mint_urls - 100% by construction, never informative",
     "organization": "db trigger key_on_rd fills `parcel` keys free at sync time; `pdf-pass` is extraction's inbox and `reference` is resolution's. The 6.0M pre-trigger backfill is held by org_backfill_arm until acris rd hits 99.95% - re-add a row when it releases."

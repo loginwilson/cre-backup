@@ -75,3 +75,15 @@ grade is harsher: a repeat of a recorded lesson costs double.**
 | 40 | 2003012800054001 2003 | _awaiting login_ | **column mis-assignment** (NEW class — $0.00 mortgage-tax total read as NYC transfer tax; caught by crop before delivery, but stated in-turn as an 'open question' first) · blank-checkbox-as-negative (caught, not committed) | R40-3 · R40-4 · Compose Card #12 extended (money needs its COLUMN HEADING in the crop) |
 | **record-correct / delivery-wrong** | 36, 38, 40 | **3 occurrences → MISSING STRUCTURE.** R36 lost a caveat, R38 narrowed "buildings"→"houses" in the prose only, R40 dropped the buyer's signer from the anybody test while banking him in the rows. Every existing mechanism (word scan, pre-bank checklist) fires BEFORE BANKING; the delivered verdict passes through no gate. ⚠ R40's instance is the worst: the dropped human was the ONLY reachable person on the buying side, and he lives on a supporting page past the main page count. **Cure: Card #15 THE DELIVERY PASS + derivation binding both directions** — the "summary generated from rows" fix the qty_role and keep-the-noun rows have both been queued for. |
 | **deference without verification** | 40 | **NEW at R40.** A challenged finding was conceded BEFORE measuring; 700 documents then confirmed the original. Mirror image of asserting-without-checking, and more corrosive here: a reader who folds on challenge produces agreement rather than verification, which voids every ✓ and every grade. Trigger shape: a TRUE premise carrying an INFERRED conclusion. Fix: Card #16 — a challenge is a test order. |
+| 41 | 2003021100046001 2003 | **B+** (self, login-prompted) | **narrative (7th)** — "the by-laws carry their community in the drafting": instance characterization, unanchored, mildest form yet but a repeat of the most-recorded class · **class-gloss-without-entry (2nd**, R37 class**)** — flagged the heter iska lexicon gap at delivery, then used the gloss anyway; flagging ≠ license · over-absolute cast ("the only person who signs" vs only party to execute the declaration) · limited-common status dropped from rows (restricted-use SF could read as fee SF) | fixes applied in the R41 entry · Lexicon: heter iska added · party-attribution ruling recorded |
+
+⚠ narrative class members updated: 10, 33, 34, 35, 37, 39, 41 — seven.
+The trigger list + Card #4 catch its phrase-shaped and scale-shaped
+forms; R41's form was a CHARACTERIZATION OF THE DRAFTING ("their
+community") — ordinary words again. Watch the shape: any sentence that
+says what kind of people/party produced the document, rather than what
+the document says. Structural cure remains the generated summary.
+⚠ lexicon-recall class members: 37, 41 — two. Second shape differs:
+R37 recalled with no entry; R41 flagged the gap and used the gloss
+anyway. The pre-bank SOURCES check must fire on the DELIVERY too
+(Card #15 pass), not only the record.

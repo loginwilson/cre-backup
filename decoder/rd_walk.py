@@ -152,7 +152,12 @@ def worker():
                 flush()
             with lock:
                 stats["done"] += 1
-        except fetch_pages.AccessDenied as e:
+        except (fetch_pages.AccessDenied, LD.Refused) as e:
+            # ⚠ BOTH refusal types, 2026-08-24: check_refused() raises
+            # LD.Refused, but this catch only knew fetch_pages.AccessDenied -
+            # so on the 09:00 re-refusal every worker logged "Refused" to the
+            # fails file and KEPT REQUESTING. A detector that fires into the
+            # wrong except clause is a detector that does not exist.
             stop.set()
             print(f"  REFUSED at {did} - STOPPING ALL: {e}", flush=True)
         except Exception as e:
