@@ -156,15 +156,27 @@ keep entities distinct from officers; keep the instrument's own nouns;
 earn every ✓; respect the length budget; say plainly what could not be
 done.
 
-## 4a · VERDICTS — the three tests honestly
+## 4a · VERDICTS — the three tests, in the RE-RULED delivery order
+## (login 2026-08-24, run 41; full spec: Bootcamp.md THE SHAPE)
 
-Deliver to the user in this exact shape: **1 · The anybody test** (the
-summary — real names exact, real terms taught in place, no felt
-complexity) · **2 · The data test** (the event table, eleven columns,
-anchored, five-state honest, plus claims) · **3 · The event test** (all
-eleven functions asked of every page; ledger closed empty or honestly).
-Then a candid GRADE with the miss ledger — an unflagged miss found later
-costs double.
+Deliver in this exact order: **1 · The event test** FIRST — the eleven
+functions asked of pdf AND rd, which fire (mode + effect), which do
+not, any candidate twelfth dissolved (G-020) or queued; mode-watch
+notes; what is NOT an event; "ledger closed empty." **2 · The data
+test** — the event table as the evidence: one row per event, parties
+in from/to or as ACTOR-CLAIMS on the event id (the party ruling:
+entity AND its paired human names, always), then Claims ·
+⚠ Unresolved · Reconciliation. **3 · The anybody test** LAST — the
+summary anybody understands: CAST first, real names exact, real terms
+taught in place, recitals attributed, no felt complexity.
+
+**Single-run loop:** deliver 1-2-3 → STOP (no self-grade, no why) →
+login prompts "grade and why" → grade against the Ledger + why-pass
+in simple points → login prompts "fix and record" → fixes BY ACTION
+(grep the count, take the crop, correct the banked text) → four-file
+close → next draw. Batch/auto mode self-grades per the rotation.
+Pre-bank passes produce ARTIFACTS (crop files on disk, greps run in
+the same action) — Card #12/#13; a remembered action is not a check.
 
 ⚠ **The verdict is a TEACHING artifact, never the DB record** (THE
 LENGTH LAW, Bootcamp.md). The corpus stores rows + gated claims +

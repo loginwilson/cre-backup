@@ -6785,26 +6785,40 @@ mistakes, not by the grade that found them.** Hold the four-file close
 until step 5. (Overnight batches self-close; that is the exception, not
 the pattern.)
 
-## THE SHAPE
+## THE SHAPE — ⚠ ORDER RE-RULED 2026-08-24 (login, run 41): delivery is
+## EVENT TEST → DATA TEST → ANYBODY TEST. The blocks below are current;
+## the original 1-anybody/2-data/3-event order is SUPERSEDED.
 
     # Run <n> — <id> · <Readable Type> · <borough if it matters> · <year>
 
-    **1 · The anybody test**
-    Flowing prose, one or two paragraphs. Real names bold on first use.
-    Terms taught in place ("a *party wall*, which means..."). No lists,
-    no ⚠, NO META-COMMENTARY about the reading process. State a
-    limitation as a fact about the document ("cannot be recovered from
-    this copy"), never as a note about the reader.
+    **1 · The event test** (FIRST — the analysis)
+    The eleven functions asked of the pdf AND the rd row: which FIRE
+    (with mode and effect), which do not and why, any candidate
+    twelfth named and dissolved (G-020) or queued. This is the
+    function model's falsification point, delivered as the lens the
+    document was read through. Mode-watch notes live here. Then WHAT
+    IS NOT AN EVENT and why. "Ledger closed empty."
 
-    **2 · The data test**
+    **2 · The data test** (SECOND — the evidence and proof)
     | # | subject | function | who → whom | what | quantity | term | anchors |
-    One row per EVENT. Then two labelled streams (see below).
+    One row per EVENT; parties in from/to, or ACTOR-CLAIMS on the
+    event id where from/to is n/a (the party attribution ruling —
+    entity AND its paired human names, always). Then the two labelled
+    streams (Claims · ⚠ Unresolved), then Reconciliation.
 
-    **3 · The event test**
-    2-4 sentences. All eleven asked of N pages, M events. Then the
-    interesting part: WHAT IS NOT AN EVENT and why (a tax stamp is a
-    COST claim on the row; a schedule is description; a sibling
-    instrument is a chain expectation). "Ledger closed empty."
+    **3 · The anybody test** (LAST — the summary anybody understands)
+    Flowing prose, one or two paragraphs, CAST FIRST. Real names bold
+    on first use. Terms taught in place ("a *party wall*, which
+    means..."). No lists, no ⚠, NO META-COMMENTARY about the reading
+    process. Recitals keep their attribution (Card #15 MODES). State
+    a limitation as a fact about the document, never as a note about
+    the reader.
+
+    THE WHY-PASS is NOT delivered with the verdict — it moves to the
+    grading follow-up (login prompts "grade and why"), as simple
+    points. The single-run loop: deliver 1-2-3 → STOP → login prompts
+    grade → grade + why → login prompts fix-and-record → four-file
+    close → next draw.
 
     **Reconciliation** — one short paragraph. Name what rd agrees on;
     mark any ✓ that was EARNED and say by which document-side witness.
