@@ -98,6 +98,8 @@ ap.add_argument("--apply", action="store_true")
 ap.add_argument("--workers", type=int, default=28)
 ap.add_argument("--pdf-workers", type=int, default=12)   # STARTING width
 ap.add_argument("--pdf-max", type=int, default=48)       # governor's ceiling
+ap.add_argument("--ramp-step", type=int, default=2)
+ap.add_argument("--ramp-every", type=int, default=60)
 ap.add_argument("--step-minutes", type=int, default=10,
                 help="clean minutes a width must hold before +2 (login"
                      " 2026-08-24: 10-min windows 'to truly see if things"
@@ -655,7 +657,10 @@ def governor():
 # sess() stagger ("160 cold TLS opens in one instant = SSLError across the
 # board"). So a launch RAMPS: width starts small and a warmup thread raises
 # it +4 every 30s until the requested width, then the governor owns it.
-RAMP_START, RAMP_STEP, RAMP_EVERY = 8, 4, 30
+# login 2026-08-24 (post trip #4): "warm up going too fast can be just as
+# bad as cold starting" - the ramp defaults GENTLE now (+2/60s; ~25 min to
+# width 52) and is a dial, not a constant.
+RAMP_START, RAMP_STEP, RAMP_EVERY = 8, a.ramp_step, a.ramp_every
 _target = min(a.pdf_workers, a.pdf_max)
 pdf_width[0] = min(RAMP_START, _target)
 

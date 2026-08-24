@@ -8030,3 +8030,168 @@ held moderate everywhere); three record defects caught by reading;
 Chera footer READ/INFERRED separation held where made; RETT and
 page arithmetic ran clean; the sealed two-source draw landed the
 never-exercised ENVELOPE cell first try.
+
+# RUN 47 — 2003020600526003 · CERTIFICATE (corporate authority package) · BRONX 5785/268 · 2002/03
+
+13/13 pages (rd 11 + cover pair; arithmetic closes). CRFN
+2003000347075, recorded 2003-09-11, ten-month paper-to-record lag
+(computed 2002-11-13 → 2003-09-11). **Zero new columns, zero new
+vocabulary — streak: 43.** First BRONX graded run; first CERTIFICATE
+shelf draw — the shelf materialized as the AUTHORITY LAYER: two
+corporate certificates + the corporation's entire 1982 charter,
+recorded to prove 3299 CAMBRIDGE APT. CORP. could mortgage 3299
+Cambridge Avenue (apartment building, block 5785 lot 268) to THE
+DIME SAVINGS BANK OF WILLIAMSBURGH. Every cover tax field $0.00 —
+earned: the instrument conveys and secures NOTHING; it is the
+recorded inducement (its own stated purpose: to induce the Lender
+and any title insurer) for package siblings that do. R46-3 proven
+again: a "CERTIFICATE" carrying TITLE/OCCUPANCY/CAPITAL/
+ENCUMBRANCE-bearing facts while transacting none of them. Grade B−
+(five misses, one user-caught post-grade; fixes applied here).
+
+## THE EVENTS (one event_id)
+
+    row 1  CERTIFICATION (mode: RULING QUEUED — see below) ·
+           corp (by Treasurer JACK LANDOVITZ, cert executed + ack'd
+           2002-11-13; by Secretary TERRI KORNICKI, cert executed
+           2002-11-13) → named audience (Lender + title insurer) ·
+           certifies board resolutions of meeting 2002-10-07:
+           authorize $200,000 revolving-credit mortgage; take the
+           Loans secured by FIRST MORTGAGE LIEN; officers empowered;
+           SHELDON BASCH elected Assistant Secretary for the
+           closing · INCUMBENCY TABLE with genuine specimen
+           signatures for all four officers — the recorded human
+           roster: Nancy Katsudas (President) · Jack Landovitz
+           (Treasurer) · Terri Kornicki (Secretary) · Sheldon Basch
+           (Asst Secretary) — future DOB-contact join keys, per the
+           party ruling
+    row 2  IDENTITY-of-entity + OCCUPANCY-bearing (observes,
+           charter text) · CERTIFICATE OF INCORPORATION annexed
+           whole (BCL §402, filed DOS 1982-08-31, subscribed
+           1982-08-26 by incorporator SANDER SRULOWITZ c/o
+           Sonnenschein, Sherman & Deutsch — also process agent) ·
+           purpose clause READ: "to furnish residences for its
+           shareholders, who shall be entitled solely by reason of
+           stock ownership, to proprietary leases for the occupancy
+           of apartments" — the co-op machinery in founding words ·
+           ⚠ AUTHORITY TO ISSUE 15,000 shares, $1.00 par — the
+           AUTHORIZED CEILING, not the issued count; issued shares
+           live elsewhere (offering plan / stock records) and
+           per-share math must wait for them [USER-CAUGHT: delivery
+           had said "divides into 15,000 shares"] · Bronx office ·
+           cumulative voting · no distributions except from
+           earnings or on liquidation
+    row 3  standing (observes, DOS-certified TWICE) · two separate
+           good-standing certificates dated 2002-10-07 (serial
+           200210080232; biennial statements enumerated: 1993-10-08
+           · 1996-08-07 · 1998-08-11 · 2000-07-25 · 2002-07-25;
+           "no other documents") and 2002-10-08 (serial
+           200210090185), + certified-copy attestation 2002-10-18 ·
+           arrived via two fax machines: headers VINTAGE ABSTRACT
+           (the presenter) and KANEMILLER CORP (⚠ name appears
+           nowhere else; role UNRESOLVED, banked as header text)
+    row 4  CAPITAL (observes — recital of agreement) · "Lender has
+           agreed": $2,300,000 loan (CMEA consolidating the then
+           existing mortgages at that aggregate) + $200,000 line of
+           credit · the lending events live in unpulled package
+           siblings (chain expectations: CMEA · LOC mortgage · AL&R
+           agreement, per the resolutions' own list) · the record
+           does NOT say Dime held the existing mortgages [grade
+           fix: "its bank" removed]
+
+    Notary on row 1's directors' certificate: SHELDON BASCH —
+    the same person elected Assistant Secretary at the certified
+    meeting (both witnesses inside this document: p3 stamp 02BA0182480
+    Westchester-qualified + p4 resolution). Notary-is-insider
+    family (members per Compose Card #13's recorded list:
+    R21/R23/R39). CAST note: NO individual signs for the lender
+    anywhere in this document. Presenter Vintage Abstract Corp
+    (Brooklyn); return Conway Farrell, 63 Wall St. p3 carries
+    handwritten address interlineations initialed before ack.
+
+## R47-1 — THE CERTIFICATE SHELF IS THE CHEAP OFFICER-ROSTER SOURCE
+
+A thin document, and the thinness IS the finding: certificates
+certify rather than transact, so a 13-page read yields no lien and
+no transfer — but hands over what deeds and mortgages hide: the
+complete human cast behind the entity, with notarized specimen
+signatures, plus the corporate constitution and a 20-year DOS life
+trail (1982 incorporation → 2002 biennials) inside one ACRIS
+recording. For stakeholder-graph joins (and the future DOB contact
+bridge), this shelf is disproportionately valuable per page.
+
+## RULING QUEUED (P-3) — MODE OF CERTIFICATION/AUTHORITY INSTRUMENTS
+
+What mode does a certification's own act take? The certificate is
+executed and delivered (act-like) but every substantive fact inside
+is observes-with-certifier. r47 improvised a hybrid label in the
+mode column instead of queueing — the improvisation is the defect;
+the question is real. First instances: r37 (limited POA), r47
+(directors'/secretary's certificates). Decide once, apply to the
+authority layer as a class.
+
+## R47 GRADE — B− (self + one user-caught; fixes applied here)
+
+1. Card-listed TRIGGER WORD survived to delivery: anybody test
+   opened "wanted to refinance" — "wanted to" is verbatim on
+   Compose Card #4; record supports "agreed to". Motive delivered
+   where effect was free.
+2. DERIVATION BINDING failed ONE RUN after enactment, small-scale:
+   "its bank" — possessive asserting a relationship the record
+   never states (Dime agrees to consolidate existing mortgages;
+   holder unstated). FIXED (row 4).
+3. Improvised mode notation instead of queueing (P-3): hybrid label
+   coined in the mode column. Ruling now queued.
+4. "Permission slip" teaching metaphor (twice) — grounded in the
+   stated inducement purpose but my noun, not the record's. Noted.
+5. USER-CAUGHT post-grade: "15,000 shares" delivered flat and
+   "divides into 15,000 shares" in the why — the charter grants
+   AUTHORITY TO ISSUE 15,000 (ceiling ≠ issued). The sharper tier
+   existed only in follow-up chat until the login asked; the record
+   nearly banked the overstatement. Third tier-failure of the run;
+   B → B−. FIXED (row 2 carries the distinction).
+
+HELD: no imports (the neighborhood this address invites never
+appeared; no biography); counts enumerated or READ throughout;
+Basch double-role caught with two in-document witnesses; Kanemiller
+left unresolved rather than guessed; explicit no-human-for-lender
+CAST line; all-zero taxes earned; lag computed; two coverage cells
+opened (Bronx; CERTIFICATE shelf) on a clean 13/13.
+
+## ⚠ R47 CORRECTION — GRADE AMENDED B− → C+ (login-caught, same day, loud)
+
+The login's verdict on the delivery: a really bad extraction —
+details acknowledged in the WHY were absent from the event test,
+the data test, the anybody test, AND the grading. Measured against
+the delivered text (Card #16), CONFIRMED:
+
+6. THE DELIVERED DATA TABLE CARRIED NO ACTOR-CLAIMS — the four
+   officers, the incorporator, the specimen-signature fact, and the
+   notary-insider evidence lived in event-test prose and the WHY,
+   never in the evidence table. THE PARTY RULING VIOLATED AT THE
+   TABLE: parties must ride events in the from/to or as
+   ACTOR-CLAIMS rows of the DATA TEST — prose mention is not
+   banking. (This corrected entry's row 1 carries the roster; the
+   DELIVERY did not.)
+7. THE WHY ASSERTED CLAIMS THE TABLE NEVER BANKED — "human join
+   keys," "names-to-contacts bridge for DOB," "denominator for
+   per-share calculation" (itself wrong-tier), "twenty-year life
+   record": significance claims sourced to NOTHING in the data
+   test. The WHY is a delivery layer; it may only cite what the
+   evidence banked.
+8. THE GRADE MISSED BOTH — the self-grade audited words (triggers,
+   tiers) and never audited STRUCTURE (are the layers consistent?
+   does every WHY point source to a row?).
+
+STRUCTURE ENACTED (the fix must match the defect shape): Card #15
+gains a WHY-BINDING check — before delivering the why-pass, walk
+each WHY point back to its table row or claim id; a WHY point with
+no row is either (a) evidence that belongs in the table (add it,
+then say it) or (b) an unbanked assertion (delete it). And the
+DOWNWARD check now covers ALL prose layers: event test, anybody
+test, AND the why-pass — every proper noun, number, and
+significance claim in any prose layer must exist in the data test.
+The data test is the extraction; everything else is commentary on it.
+
+Final R47 grade: C+ — clean read, defective delivery: the evidence
+table was the weakest layer when it must be the strongest.

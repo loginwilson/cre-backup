@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-24T17:07:59.925Z
+  modified: 2026-08-24T18:05:15.620Z
 ---
 
 **THE TWO ACCESS RULES (login's naming, 2026-08-24):** every source gets an
@@ -29,6 +29,24 @@ Launch: `python fleet.py start sync` or
 `python acris_lane.py --apply --workers 28 --pdf-workers 20`, stdout →
 NAV_WORK\acris_lane.log. Retired: acris_live, rd_walk×4, image_walk×3 —
 starting any beside the lane recreates the tripping condition.
+
+**⚠⚠ THE FLAG LESSON (trips #3-#4, 13:03-13:50 — login's read, correct):**
+a notice CLEARING is not the flag clearing. After 13:03's cold-start notice,
+service resumed at HALF SPEED (rd 12.8/s vs 25-30 at unchanged width, both
+endpoints, zero errors, CPU idle) — that IS the tripped state still live,
+and running traffic through it keeps the flag warm; every relaunch (even
+ramped) re-knocks a flagged IP with fresh handshakes and re-aggravates.
+Result: notice #4 against width-8 traffic. Flag signature MEASURED (14:04): per-worker rd locked at 0.53 docs/s/worker,
+UNMOVED by freeing 2MB/s of pipe (richmond-pause discriminating test) —
+half-service is server-side, exact, and stable. **RESUME PROTOCOL: notice →
+FULL SILENCE (kill the lane, probe included, hours not minutes) → single
+probe → if clean, tiny test pool 10 min reading PER-WORKER rd rate (~1.0
+doc/s/worker = clear · ~0.5 = still flagged → silence again, longer) →
+only then the ramp.** Never run half-speed traffic thinking it's warm-up,
+and never diagnose "slow" without a neutral-host pipe test first — 13:49's
+1.2MB/s pipe turned out to be OneDrive.Sync churning on the decoder folder
+(Downloads IS synced; rc logs write there constantly — move logs off
+synced paths; same lesson as bkrea's C:\dev move).
 
 **⚠⚠ THE RAMP LAW (trip #3, 13:03):** NEVER cold-launch — a restart firing
 ~80 workers at once = 80 cold TLS opens in one second = Bandwidth Notice

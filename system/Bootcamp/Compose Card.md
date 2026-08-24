@@ -172,12 +172,27 @@ threshold: structure, not another rule.
            SUPPORTING document past the main page count (R40: the only
            human on the buying side was on p7 of a 5-page document).
 
-  DOWNWARD every proper noun / number / noun-of-art in the anybody test
-           appears in the table or Claims. If it is not in section 2 it
-           may not be in section 1.
+  DOWNWARD every proper noun / number / noun-of-art in ANY prose layer
+           — event test, anybody test, AND the why-pass — appears in
+           the table or Claims. If it is not in the data test it may
+           not be anywhere. (R47: the officers, the incorporator, the
+           specimen-signature fact and the notary-insider evidence
+           lived in prose and the WHY while the table held nothing —
+           the party ruling violated AT THE TABLE, caught by login.)
 
   UPWARD   every ROW appears in the anybody test. A row the prose drops
            is a delivery miss.
+
+  WHY-BIND ⚠ ENACTED R47 (login: "details in the why completely
+           skipped in the tests"): before delivering the why-pass,
+           walk EACH WHY point back to its table row or claim id.
+           No row → either it is evidence (ADD THE ROW, then say it)
+           or it is an unbanked assertion (DELETE IT). The data test
+           is the extraction; every other layer is commentary on it
+           — the table must be the STRONGEST layer, never the
+           weakest. ACTOR-CLAIMS are table content, not prose color:
+           a human named in any layer without a table row is a
+           party-ruling violation.
 
   CAVEATS  every ⚠ in the record survives into the delivery (Card #11).
 

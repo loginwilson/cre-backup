@@ -154,6 +154,28 @@ handwritten value/name uttered pre-crop); three record defects
 caught (blank ack, Worth/North, wrong-county recital); the sealed
 two-source draw exercised ENVELOPE-as-drawn-event on the first try;
 RETT and page arithmetic run and exact.
+
+| 47 | 2003020600526003 2002/03 | **C+** (self B → B− user-caught → C+ LOGIN-AMENDED same day) | **DELIVERED DATA TABLE HELD NO ACTOR-CLAIMS — party ruling violated at the table** (officers/incorporator/specimen-signatures lived only in prose + WHY; login: "details in the why completely skipped in the tests") · **WHY asserted claims the table never banked** (join keys, DOB bridge, denominator — the last also wrong-tier) · **self-grade audited words, never layer-consistency** · "wanted to" card-listed trigger in anybody opening · "its bank" relationship flat — derivation-binding lapse one run after enactment · hybrid mode label improvised instead of queued (P-3; ruling now queued: mode of certification instruments, r37+r47) · USER-CAUGHT "divides into 15,000 shares" for an authorized-ceiling fact | corrected entry carries roster in row 1 + authorized-vs-issued tier · **STRUCTURE: Card #15 WHY-BINDING enacted + DOWNWARD extended to ALL prose layers** |
+
+⚠ NEW CLASS OPENED at 47: LAYER-CONSISTENCY (the delivery layers
+disagree about what the extraction contains). Distinct from
+MODES-flattening (a tier dropped) — here whole FACTS existed in
+commentary layers while the evidence layer was empty. The enacted
+cure is mechanical (WHY-BIND walk-back); watch whether it fires.
+⚠ Tier-failure cluster in ONE run: "its bank" · "wanted to" ·
+"divides into 15,000" — three small-word failures, all in plain
+prose. The pattern across 42/44/45/46/47: precision dies at the
+LAST-WRITTEN, PLAINEST layer. Every enacted sweep now runs on the
+anybody test + WHY LAST, after they are drafted, not before.
+⚠ GRADE-PROCESS note: the self-grade has now been amended upward in
+severity twice by the login in two runs (r46 format, r47 substance).
+The checklist audits sentences; the login audits the DELIVERABLE.
+Add to the grading checklist: (5) layer-consistency walk (table ⊇
+prose ⊇ WHY), run BEFORE grading the words.
+HELD at 47: the reading itself was clean (13/13, no imports, counts
+enumerated, Basch double-role caught, Kanemiller unresolved, no-human-
+for-lender stated, taxes-zero earned); first Bronx run; CERTIFICATE
+shelf opened and decoded as the authority layer.
 The trigger list + Card #4 catch its phrase-shaped and scale-shaped
 forms; R41's form was a CHARACTERIZATION OF THE DRAFTING ("their
 community") — ordinary words again. Watch the shape: any sentence that
