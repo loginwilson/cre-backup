@@ -63,6 +63,7 @@ decode-ready mirror. That is the one rate and the one eta.
 from __future__ import annotations
 
 import argparse
+import contextlib
 import json
 import pathlib
 import queue
@@ -100,6 +101,19 @@ ap.add_argument("--pdf-workers", type=int, default=12)   # STARTING width
 ap.add_argument("--pdf-max", type=int, default=48)       # governor's ceiling
 ap.add_argument("--ramp-step", type=int, default=2)
 ap.add_argument("--ramp-every", type=int, default=60)
+ap.add_argument("--max-inflight", type=int, default=1,
+                help="how many acris requests may be OPEN AT ONCE, process"
+                     "-wide. 1 = pure piano: the code cannot collide two"
+                     " requests. Higher = chords.")
+ap.add_argument("--max-rps", type=float, default=20.0,
+                help="TOTAL acris requests/second across rd + pdf pages +"
+                     " probe. ⚠ THE TEMPO (login 2026-08-24, trip #5): at"
+                     " 8ms latency worker count STOPPED controlling rate -"
+                     " the same 28 rd workers did 13/s on a 228ms line and"
+                     " 38/s on a fast one. Pace must be STATED, not implied"
+                     " by concurrency. ~1.3M requests were spent on 2026-08-24"
+                     " and the trips accelerated (5h/4h/47m/49m apart) - the"
+                     " signature of a depleting budget, not a worker limit.")
 ap.add_argument("--step-minutes", type=int, default=10,
                 help="clean minutes a width must hold before +2 (login"
                      " 2026-08-24: 10-min windows 'to truly see if things"
@@ -163,6 +177,63 @@ con.execute("PRAGMA busy_timeout=300000")
 
 def say(m):
     print("%s  %s" % (time.strftime("%H:%M:%S"), m), flush=True)
+
+
+class Tempo:
+    """THE LANE'S METRONOME — one token per acris request, shared by every
+    organ (rd fetch, pdf map, pdf page, edge probe). This is the piano rule
+    made literal: a chosen tempo, not "as fast as the fingers move."
+
+    ⚠ WHY THIS EXISTS (trip #5, 2026-08-24 14:39): concurrency was never the
+    tripper - the morning ran 28 rd + 52 pdf workers clean for four hours.
+    What tripped was VOLUME, and volume = concurrency x (1/latency), so a
+    faster line silently tripled our request rate at identical settings.
+    Workers now bound simultaneity; THIS bounds pace."""
+
+    def __init__(self, rps):
+        self.rps = float(rps)
+        self.tokens = float(rps)
+        self.t = time.time()
+        self.lk = threading.Lock()
+        self.spent = 0
+
+    def take(self):
+        while True:
+            with self.lk:
+                now = time.time()
+                self.tokens = min(self.rps,
+                                  self.tokens + (now - self.t) * self.rps)
+                self.t = now
+                if self.tokens >= 1.0:
+                    self.tokens -= 1.0
+                    self.spent += 1
+                    return
+                wait = (1.0 - self.tokens) / self.rps
+            time.sleep(min(wait, 0.25))
+
+
+tempo = Tempo(a.max_rps)
+
+# ⚠⚠ THE NO-COLLISION GATE (login 2026-08-24, trip #5): "we are drumming
+# when we need to play piano. the code can never collide the requests."
+# --max-inflight 1 means ONE acris request is open at a time, process-wide,
+# across every organ - rd, pdf map, pdf page, edge probe. Workers still
+# exist (they overlap the LOCAL work: parsing, converting, db writes) but
+# they queue at this gate for the network. This is the piano rule enforced
+# in code rather than trusted to configuration.
+inflight = threading.Semaphore(a.max_inflight)
+
+
+@contextlib.contextmanager
+def slot():
+    """Every acris request passes through here: tempo first, then the
+    collision gate. No request path may bypass it."""
+    tempo.take()
+    with inflight:
+        yield
+
+
+AP.GATE = slot        # pdf maps + every page fetch obey the same gate
 
 
 def urls(did):
@@ -234,7 +305,8 @@ _last_deep = [0.0]
 def control_ok(edge):
     if time.time() - _last_control[0] < a.control_every:
         return True
-    state, _did = AE.quick_crfn(edge)
+    with slot():
+        state, _did = AE.quick_crfn(edge)
     if state == "live":
         _last_control[0] = time.time()
         return True
@@ -253,7 +325,8 @@ def edge_tick():
     try:
         while blanks < limit and (n - edge) < a.max:
             n += 1
-            state, did, html = AE.fetch(n)
+            with slot():
+                state, did, html = AE.fetch(n)
             if state != "live":
                 blanks += 1
                 continue
@@ -412,8 +485,9 @@ def worker(idx=0):
             req = urllib.request.Request(
                 LD.BASE + "/DS/DocumentSearch/DocumentDetail?doc_id=" + did,
                 headers={**ua, "Referer": LD.BASE + "/DS/DocumentSearch/"})
-            with urllib.request.urlopen(req, timeout=90) as r:
-                html = RD.clean_html(r.read().decode("utf-8", "replace"))
+            with slot():                      # tempo + no-collision gate
+                with urllib.request.urlopen(req, timeout=90) as r:
+                    html = RD.clean_html(r.read().decode("utf-8", "replace"))
             LD.check_refused(html)
             flat = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html))
             if not re.search(r"DOCUMENT ID:\s*" + re.escape(did), flat):
@@ -696,9 +770,12 @@ try:
         el = (time.time() - t0) / 60
         with lock:
             s = dict(stats)
-        say("  PROGRESS %s total · %.1f docs/s · %d fail · %.0f min%s"
+        say("  PROGRESS %s total · %.1f docs/s · %d fail · %.0f min ·"
+            " %s reqs @ %.1f/s%s"
             % ("{:,}".format(s["done"]),
                s["done"] / (el * 60) if el else 0.0, s["fail"], el,
+               "{:,}".format(tempo.spent),
+               tempo.spent / (el * 60) if el else 0.0,
                " · WORKERS STOPPED (refusal)" if stop_workers.is_set()
                else ""))
         if a.pdf_workers > 0:

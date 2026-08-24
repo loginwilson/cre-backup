@@ -176,6 +176,28 @@ HELD at 47: the reading itself was clean (13/13, no imports, counts
 enumerated, Basch double-role caught, Kanemiller unresolved, no-human-
 for-lender stated, taxes-zero earned); first Bronx run; CERTIFICATE
 shelf opened and decoded as the authority layer.
+
+| 48 | 2003020300771001 2003 | **B** (self, login-prompted; first run under OPUS 5) | **MODE ERROR ON THE ASSIGNED WATCH** — Exhibit B's Building 140 easement delivered as ENCUMBRANCE·creates/transacts when the agreement only DESCRIBES it (creating instrument = the National Trust Deed): an observes clause treated as a load-bearing act OF THE WRONG DOCUMENT · **layer-consistency 2nd member (47, 48)** — Proclamation 7402 / Antiquities Act / National Trust charter / Rockefeller measuring-lives clause in prose with no table row; the r47 cure covered PEOPLE and skipped STATUTES AND INSTRUMENTS · **narrative import 10th, breaking the OPENING rule minted two runs earlier** ("New York Harbor", "around the old forts") · mild metaphor | fixes in the R48 entry (rows 3, 9, 10 added/relabelled) · ruling queued: statutory preemptive right = ENTITLEMENT or ENCUMBRANCE · **DOWNWARD sweep extended to statutes, instruments and doctrines, not only people** |
+
+⚠ THE MEASUREMENT THAT MATTERS (computed from this ledger's own
+member lists, 2026-08-24): classes whose cure produces an ARTIFACT
+are DYING; classes whose cure requires VIGILANCE are not.
+  name-integrity/crop — members 21, 37, 42, 45 → cure = "crop FILES
+    must exist on disk" (r42) → r46, r47, r48 CLEAN (3 straight).
+  count — members 21, 23, 39, 42, 45, 46 → cure = "enumeration
+    default + count run in-action" (r45/r46) → r47, r48 CLEAN (2).
+  two-stream Claims/⚠Unresolved (format made the defect
+    unrepresentable) → no recurrence since minting.
+  narrative import — members 10, 33, 34, 35, 37, 39, 41, 42, 46, 48
+    → cure = word-scan + banned tokens = VIGILANCE → TEN members,
+    still recurring, and r48 broke the newest rule in its own
+    predicted slot.
+  layer-consistency — 47, 48 → cure = manual walk = VIGILANCE →
+    fired partially at 48 (people yes, statutes no).
+CONCLUSION TO ACT ON: stop writing vigilance rules. A rule survives
+only if (a) it produces an artifact on disk, (b) the format makes
+the defect unrepresentable, or (c) a MECHANICAL PASS runs it. The
+next cure must be mechanical — see the PRE-DELIVERY PASS below.
 The trigger list + Card #4 catch its phrase-shaped and scale-shaped
 forms; R41's form was a CHARACTERIZATION OF THE DRAFTING ("their
 community") — ordinary words again. Watch the shape: any sentence that

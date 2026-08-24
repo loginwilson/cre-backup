@@ -170,6 +170,18 @@ entity AND its paired human names, always), then Claims ·
 summary anybody understands: CAST first, real names exact, real terms
 taught in place, recitals attributed, no felt complexity.
 
+⚠ **BEFORE DELIVERING, RUN THE PRE-DELIVERY PASS** (minted r48):
+write the drafted verdict to a file carrying the three marker lines
+`## EVENT TEST` / `## DATA TEST` / `## ANYBODY TEST`, then
+`python "D:\CRE Decoding System\Bootcamp\precheck.py" <draft.md>`.
+It mechanically enforces DOWNWARD (every proper noun and number in
+prose must exist in the data test), the Card #4 trigger list, and the
+OPENING rule. Resolve each finding by ADDING THE ROW or DELETING THE
+CLAIM — never by waving it through. A delivery made without a
+precheck run is itself a gradeable defect. Rationale is measured, not
+asserted: artifact-producing cures killed their defect classes; rules
+requiring vigilance did not.
+
 **Single-run loop:** deliver 1-2-3 → STOP (no self-grade, no why) →
 login prompts "grade and why" → deliver THE GRADE-AND-WHY FORMAT
 (below, exactly) → login prompts "fix and record" → fixes BY ACTION

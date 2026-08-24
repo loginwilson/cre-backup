@@ -37,6 +37,7 @@ measured up to 17). CP.doc_store_dir owns that rule.
 """
 from __future__ import annotations
 
+import contextlib
 import hashlib
 import pathlib
 import re
@@ -67,10 +68,18 @@ class Short(ValueError):
     The bytes we DO have would convert to a perfectly valid short document."""
 
 
+# ⚠ THE LANE'S GATE, INJECTED (login 2026-08-24: "the code can never collide
+# the requests"). acris_lane sets GATE = its slot() context manager, so every
+# page and every map request in this module passes the tempo + no-collision
+# gate. Left None for standalone use (the __main__ probe below).
+GATE = None
+
+
 def _get(url, referer, timeout=90):
     req = urllib.request.Request(url, headers={**_UA, "Referer": referer})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read(), r.headers.get("Content-Type", "")
+    with (GATE() if GATE is not None else contextlib.nullcontext()):
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.read(), r.headers.get("Content-Type", "")
 
 
 def page_count(did, timeout=90):

@@ -161,6 +161,28 @@ loop's coverage claim becomes false without anything looking wrong.
 
 - [x] **r47** `2003020600526003` CERTIFICATE · BRONX · rec 2003-09-11 · rd pages 13 / pdf 13 — ✅ **FIRST BRONX GRADED RUN** + CERTIFICATE shelf opened: the authority layer (directors' cert + secretary's cert + entire 1982 charter, recorded as loan/title inducement). Co-op officer roster w/ specimen signatures banked; ruling queued on certification MODE (r37+r47). Package siblings 001/002/004+ = $2.3M CMEA + $200k LOC mortgage + AL&R (pre-announced by the resolutions — chain expectations). ⚠ Grade C+ (login-amended): the delivery's data table lacked actor-claims — see Ledger. Still unexercised as drawn events: ENTITLEMENT · PERMIT · ASBUILT. CERTIFICATE shelf note: 16-sibling package 2003061700417001-016 (2pp each, Bronx) still unopened — likely another authority/estoppel cluster.
 
+- [x] **r48** `2003020300771001` LANDMARK DESIGNATION (actually a WAIVER AND CONSENT AGREEMENT) · MANHATTAN block 1 lot 10 · rec 2003-02-06 · rd pages 24 / pdf 26 — ✅ **ENTITLEMENT REACHED AS A DRAWN EVENT** — the board's oldest open cell, unexercised since run 1. Drawn from the band's **TYPE TAIL** (new method: inventory all 90 distinct types, take a `<60`-member type — this one had exactly ONE member in ~380k rows). GOVERNORS ISLAND: four-sovereign consent (USA/GSA · State · City · GIPEC). First run under **OPUS 5** — portability provision validated. ⚠ Type-shelf mismatch again (r42/r43 family). Ruling queued: statutory preemptive rights = ENTITLEMENT or ENCUMBRANCE.
+
+### THE TYPE TAIL — the new draw seam (inventoried 2026-08-24, r48)
+
+Public-law and rare event classes still unopened, each with a band
+member and an image (ids are examples, gate-check before drawing):
+**LETTERS PATENT** (1 · MANH 5pp · `2003010900111001`) — original
+sovereign grant, the root of all title · **IN REM DEED** (1 · BRONX
+13pp · `2003060600730001`) — tax foreclosure vesting · **STREET
+PROCEDURE** (1 · QUEENS 6pp · `2003042801017001`) — mapping/demapping ·
+**MERGER** (1 · MANH 6pp · `2003030301829003`) · **CONDEMNATION
+PROCEEDINGS** (23 · eg QUEENS 6pp `2003011301382001`) · **COURT ORDER
+ADVERSE POSS.** (2 · `2003022000823001`) · **VACATE ORDER** (43) ·
+**TAX LIEN SALE CERTIFICATE** (9) / **ASSIGNMENT OF TAX LIEN** (8) ·
+**CERTIFICATE OF REDUCTION** (6) · **TERMINATION OF TRUST** (10) ·
+**LICENSE** (2 · MANH 4pp) · **CERTIFIED COPY OF WILL** (2 · BKLYN
+7pp) · **BOND** (2 · QUEENS 89pp) · **RESOLUTION** (4) · **COLLATERAL
+MORTGAGE** (21) · **MEMORANDUM OF CONTRACT** (23) · **SUBORDINATION OF
+LEASE** (40) · **ADDITIONAL MORTGAGE TAX** (40).
+Still unexercised as drawn events after r48: **PERMIT · ASBUILT**
+(await BSA/DOB-bearing in-record instruments or the DOB source).
+
 ## THE TWO-SOURCE DRAW (ruling 2026-08-24 — recorded in Bootcamp.md)
 
 The landed band is 95.8% recorded-2003 (measured); pure band draws

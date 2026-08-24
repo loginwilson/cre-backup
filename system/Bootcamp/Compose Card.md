@@ -158,6 +158,22 @@ remarks stay SEALED until reconciliation. rd is verifier, never prior
 (R4-4). The easy query is also the easy way to destroy the cold read.
 
 
+## 14a · ⚠ RUN THE PRE-DELIVERY PASS — IT IS A COMMAND, NOT A CHECK
+
+    python "D:\CRE Decoding System\Bootcamp\precheck.py" <draft.md>
+
+Write the drafted delivery to a file with the three marker lines
+`## EVENT TEST` / `## DATA TEST` / `## ANYBODY TEST` and run it BEFORE
+delivering. It mechanises #15's DOWNWARD, #4's triggers, and the
+OPENING rule. Resolve every finding one of two ways ONLY: ADD THE ROW
+to the data test, or DELETE the claim from the prose.
+
+Minted after r48 on measured evidence: cures that produce an ARTIFACT
+kill their defect class (crops: 3 clean runs; counts: 2), cures that
+require VIGILANCE do not (narrative import: 10 members). Reading this
+card is vigilance. Running the script is an artifact. **A delivery
+made without a precheck run is itself a gradeable defect.**
+
 ## 15 · THE DELIVERY PASS (run against the DELIVERED text, after #12)
 
 Card #12 guards the RECORD. This guards what login actually reads.

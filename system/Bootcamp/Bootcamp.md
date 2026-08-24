@@ -8195,3 +8195,271 @@ The data test is the extraction; everything else is commentary on it.
 
 Final R47 grade: C+ — clean read, defective delivery: the evidence
 table was the weakest layer when it must be the strongest.
+
+# RUN 48 — 2003020300771001 · shelved LANDMARK DESIGNATION, actually a WAIVER AND CONSENT AGREEMENT · MANHATTAN block 1 lot 10 · 2003
+
+26/26 pages (rd 24 + cover pair; arithmetic closes). CRFN
+2003000013316, recorded 2003-02-06, six days after execution.
+**Zero new columns, zero new vocabulary — streak: 44.**
+✅ **ENTITLEMENT REACHED AS A DRAWN EVENT** (the board's oldest open
+cell, unexercised since run 1) — and it arrived with a model
+question attached, queued rather than smoothed. Drawn from the
+band's TYPE TAIL: LANDMARK DESIGNATION had exactly ONE member in
+~380k landed rows (inventory run in-action). First run read under
+OPUS 5 — model handoff executed from the recorded law alone
+(delivery order, sealed draw, crop-before-utter, actor-claims-in-
+table); the portability provision worked. Grade B− → B (five
+misses; fixes applied here).
+
+    WAIVER AND CONSENT AGREEMENT dated as of 2003-01-31 among the
+    UNITED STATES OF AMERICA (GSA, Property Disposal Division,
+    Region 1, 10 Causeway St Boston) · STATE OF NEW YORK (c/o
+    Empire State Development, 633 Third Ave) · CITY OF NEW YORK
+    (c/o NYC EDC, 110 William St) · GOVERNORS ISLAND PRESERVATION
+    AND EDUCATION CORPORATION ("GIPEC", a NY business corporation
+    acting on behalf of State and City, subsidiary of NYS Urban
+    Development Corporation d/b/a Empire State Development)
+    ⚠ TYPE-SHELF MISMATCH (r42/r43 family): nothing designates a
+    landmark; the National Monument pre-existed by proclamation.
+
+## THE EVENTS (one event_id)
+
+    row 1  ENTITLEMENT·releases ⚠(MODEL QUESTION QUEUED) ·
+           transacts · STATE + CITY → USA/GSA, GIPEC joining ·
+           statutory RIGHTS OF FIRST OFFER under Balanced Budget
+           Act of 1997 (Pub. L. 105-33, 111 Stat. 670, Title IX
+           §9101(b)) SPENT: State acknowledges it EXERCISED as to
+           the Island Property and caused GIPEC to acquire it, and
+           WAIVES as to the Monument Property; City WAIVES as to
+           both · §9101(a) directs the Administrator to dispose "by
+           sale at fair market value"
+    row 2  IDENTITY·modifies (CONSENT, not the act) · transacts ·
+           State + City → future DOF act · consent to creation of
+           SEPARATE ZONING AND TAX LOTS for Monument Property and
+           Island Property (lot 10 = whole island at this date) ·
+           r46's two-layer distinction restated by a second
+           instrument, in one sentence (¶3)
+    row 3  ⚠ OBSERVES — RECITED WITHIN AN ANNEXED DESCRIPTION
+           [GRADE FIX: delivered as ENCUMBRANCE·creates/transacts,
+           which is WRONG — this agreement does not create it] ·
+           Exhibit B's Monument Property description carries "A
+           PERPETUAL AND EXCLUSIVE RIGHT AND EASEMENT" to utilize,
+           occupy, manage, reconstruct, remodel, maintain and
+           improve ~1,000 SF on the FIRST FLOOR of BUILDING 140,
+           on Tract 01-104 · OCCUPANCY-bearing, measured in
+           INTERIOR square feet · CREATING INSTRUMENT = the
+           National Trust Deed (chain expectation, unpulled)
+    row 4  ENCUMBRANCE·creates (access) · transacts · CITY and/or
+           STATE → Monument Operator · Manhattan passenger-ferry
+           DOCK access, non-exclusive, at fair market rates, with
+           reasonable access; satisfiable by a commercially
+           reasonable RFP requiring bidders to hold a contract
+           with the Monument Operator · TWO-STAGE TERM: 20 years
+           south of CHAMBERS ST, thereafter IN PERPETUITY south of
+           CANAL ST (¶8)
+    row 5  COST · transacts · State + City waive State and City
+           REAL ESTATE TRANSFER TAXES (¶5) and SALES AND USE TAXES
+           (¶6); tax-exempt status of both properties confirmed
+           unaffected (¶4); City to provide FIRE AND EMERGENCY
+           SERVICES from 1 OCTOBER 2003 at no cost to the Monument
+           Operator, Monument Property Owner or Governors Island
+           Operator (¶7)
+    row 6  ENTITLEMENT-bearing obligation · transacts · Governors
+           Island Operator + State + City shall develop and adopt
+           the MASTER PLAN per National Trust Deed ¶2.1(b);
+           Monument Operator designates liaisons participating in
+           an ADVISORY capacity (¶9)
+    row 7  TITLE (observes) · recited same-date conveyances, NONE
+           effected by this instrument: QUITCLAIM National Trust
+           Deed USA/GSA → NATIONAL TRUST FOR HISTORIC PRESERVATION
+           (chartered by Act of Congress, Pub. L. 81-408, 63 Stat.
+           927) of the Monument Property FOR ONE DOLLAR; deed
+           USA/GSA → GIPEC of the Island Property FOR ONE DOLLAR;
+           DONATION DEED National Trust → USA acting through the
+           NATIONAL PARK SERVICE (Dept of the Interior); related
+           bills of sale for equipment at no additional
+           consideration · ¶10 deems NPS both MONUMENT PROPERTY
+           OWNER (¶1.3) and MONUMENT OPERATOR (¶1.4) and
+           extinguishes all National Trust rights, obligations and
+           liabilities
+    row 8  IDENTITY (observes — root of title) · the USA's own
+           root: FINAL ORDER AND JUDGMENT dated 1958-06-24,
+           recorded 1958-06-26, LIBER 5042 OF CONVEYANCES p. 347 —
+           a condemnation vesting, and a chain edge into the
+           pre-digital liber/page namespace
+    row 9  ENTITLEMENT (observes — public-law layer) [GRADE FIX:
+           these were delivered in prose with NO TABLE ROW] ·
+           Presidential PROCLAMATION 7402 dated 2001-01-19
+           establishing the GOVERNORS ISLAND NATIONAL MONUMENT
+           under the ANTIQUITIES ACT of June 8, 1906 (16 U.S.C.
+           431 et seq.); a SECOND proclamation declaring monument
+           BOUNDARIES recited as "expected" (⚠ not evidenced) ·
+           boundary map "Governors Island National Monument,
+           Boundary Map," 2002-08-20, map no. 019/80,001A
+    row 10 governance (observes/transacts terms) [GRADE FIX: the
+           Rockefeller clause was prose-only] · binds successors
+           (¶14) · amendable only in writing signed by the party
+           charged (¶13) · governed by the U.S. Constitution, the
+           N.Y. Constitution, federal and state law (¶16) ·
+           executed in COUNTERPARTS (¶17) · PERPETUITIES SAVINGS
+           CLAUSE (¶15): any provision otherwise void under the
+           rule against perpetuities is effective only until 21
+           YEARS LESS ONE DAY after the death of the last
+           descendant of JOHN D. ROCKEFELLER, JR. surviving on the
+           date hereof — a MEASURING-LIVES device, not a party
+           relationship
+
+    ACTOR-CLAIMS (every human read at 500dpi BEFORE being named —
+    four crop files on disk; crop-before-utter's second clean run):
+    USA ↔ DENNIS R. SMITH, Regional Administrator (ack 2003-01-30
+    before BERNADETTE M. SULLIVAN, NY County, #01SU4813940) ·
+    STATE ↔ RANDY A. DANIELS, SECRETARY OF STATE (ack 2003-01-30
+    before GLEN T. BRUENING #4963519) · CITY ↔ DANIEL L.
+    DOCTOROFF, DEPUTY MAYOR (ack 2003-01-30 before PAGE WARE
+    TRAVELSTEAD, #01TR6080849) · GIPEC ↔ ANITA W. LAREMONT,
+    GENERAL COUNSEL (surname crop-read, confidence high-moderate;
+    ack 2003-01-31 before the SAME notary Travelstead — one notary
+    serving two sovereign-side parties). ¶17 COUNTERPART
+    STRUCTURE: four signature pages, EACH numbered "6", each
+    bearing exactly ONE party's signature, followed by four
+    separate acknowledgment pages (7-10). Recording agents:
+    presenter TITLEASSOCIATES (TA#02(01)975); return DAVIS POLK &
+    WARDWELL, attn THOMAS PATRICK DORE, JR., ESQ. Survey
+    authority: CLOUGH, HARBOUR & ASSOCIATES, LLP (plat referenced
+    for every Exhibit B tract).
+
+## R48-1 — THE INDEXING FAILURE (⚠ two signing sovereigns absent)
+
+The cover lists PARTY 1 = UNITED STATES OF AMERICA (GENERAL
+SERVICES ADMN.) and, on the continuation, PARTY 1 = GOVERNORS
+ISLAND PRESERVATION & EDUCATION CORP. There is NO PARTY 2, and
+neither the STATE OF NEW YORK nor the CITY OF NEW YORK is indexed
+— though both signed, both acknowledged, and both bear operative
+covenants (¶¶1-9). A party search keyed to either sovereign
+returns nothing. Extraction consequence: for multi-party
+instruments the SIGNATURE PAGES are the party list, never the
+index; the index is a lossy summary that can drop half the
+signatories.
+
+## R48-2 — THE GEOMETRY, SELF-VALIDATED THREE WAYS
+
+Whole island 204.50 acres (Exhibits A and C, identical text —
+fourteen courses, COUNTED from the page; bearings on a meridian
+2°55' W of observed true north, the 1958-era description reused
+verbatim). Monument Property fee = Tract 01-101 (21.69 ac,
+document-stated 44 courses, list ends at 44) + 01-102 (0.14 ac /
+6,084 sf, stated 8, list ends at 8) + 01-103 (0.44 ac / 19,354 sf,
+stated 13, list ends at 13) = 22.27 acres. Island Property =
+Exhibit A LESS Exhibit B ⇒ ≈182.23 acres DERIVED. Acre↔SF
+conversions self-validate three times independently
+(6,084/43,560=0.140; 19,354/43,560=0.444; 22,265/43,560=0.511) —
+each stated acre figure is its own square footage rounded. Tract
+01-104 (0.51 ac / 22,265 sf, stated 10, list ends at 10) is the
+SERVIENT parcel for the Building 140 right, NOT fee conveyed —
+it remains in the Island Property, burdened.
+
+## R48-3 — ONE DOLLAR AGAINST FAIR MARKET VALUE (⚠ left open)
+
+The same instrument recites a congressional command to dispose "by
+sale at fair market value" (§9101(a)) and conveyances at ONE
+DOLLAR apiece. The document never reconciles them. Banked as
+UNRESOLVED, not explained — and it is the file's sharpest
+demonstration that recited consideration is a STATEMENT, not a
+price (the R10/R45 $10-recital family at sovereign scale).
+
+## RULING QUEUED (P-3) — WHERE DOES A STATUTORY PREEMPTIVE RIGHT LIVE?
+
+A right of first offer created by federal statute has PUBLIC-LAW
+ORIGIN (ENTITLEMENT) and PRIVATE-LAW EFFECT (a restraint on the
+fee's transferability = ENCUMBRANCE; its release = ·releases).
+Run 48 delivered it as ENTITLEMENT·releases with the tension
+NAMED. Decide once and apply to the class: statutory preemptive
+rights, ROFRs, options held by public bodies, urban-renewal
+repurchase rights. Related open ruling: MODE OF CERTIFICATION /
+AUTHORITY INSTRUMENTS (r37, r47).
+
+## CONFIRMATIONS
+
+- rd EARNED: 26 pdf = 24 + 2 covers ✓ · MANHATTAN ✓ · block 1 lot
+  10 ENTIRE LOT ✓ (the whole island as one tax lot at this date) ·
+  property type OTHER ✓ · document date 01-31-2003 ✓ matches the
+  as-of date · recording fee $157.00 with EVERY TAX LINE $0.00 —
+  ✓ EARNED: ¶¶5-6 waive precisely those taxes, so the zeros are
+  EXPLAINED BY THE INSTRUMENT rather than assumed.
+- rd FAILED: type (shelf mismatch) and parties (R48-1).
+- Mode watch: every WHEREAS observes with attribution; ¶¶1-17
+  transacts; Exhibit B's easement OBSERVES (the grade fix).
+
+## R48 GRADE — B (self, cold; fixes applied in this entry)
+
+1. MODE ERROR ON THE ASSIGNED WATCH: Exhibit B's Building 140
+   right delivered as ENCUMBRANCE·creates/transacts when this
+   agreement only DESCRIBES it — the creating instrument is the
+   National Trust Deed. An observes clause treated as a
+   load-bearing act of the wrong document, which is exactly the
+   session's standing mode-watch assignment. FIXED (row 3).
+2. LAYER-CONSISTENCY, 2nd member (47, 48): Proclamation 7402,
+   the Antiquities Act, the National Trust's congressional
+   charter and the Rockefeller measuring-lives clause appeared in
+   prose with NO table row. The r47 cure fired where it mattered
+   most (actor-claims ARE in the table) but the DOWNWARD sweep
+   covered PEOPLE and skipped STATUTES AND INSTRUMENTS. FIXED
+   (rows 9, 10).
+3. NARRATIVE IMPORT, class at TEN, breaking the OPENING rule
+   minted two runs earlier: "New York Harbor" (not in the
+   document) and the monument acreage as "around the old forts"
+   (Exhibit B names roads and buildings — Andes/Comfort/Carder/
+   Hay/Tampa Roads, Buildings 107, 140, 513A/515 — and no fort;
+   Castle Williams appears only as a DOCK reference in the
+   island-wide perimeter). FIXED (banked text carries neither).
+4. Mild characterization ("the paper that cleared the way").
+
+HELD: crop-before-utter clean for the second straight run (four
+500dpi crops before any signer was named; Laremont carries its
+confidence mark); actor-claims in the TABLE per the r47
+correction; every count licensed (fourteen courses counted
+in-action, 44/8/13/10 verified against their own numbered lists,
+the "one member in the band" superlative from a query run this
+session); three independent acre↔SF self-validations; the
+all-zero tax lines EARNED by locating the waiving paragraphs; the
+$1-vs-FMV contradiction left open; the indexing failure caught by
+reading cover against signature pages.
+
+## THE PRE-DELIVERY PASS — precheck.py (2026-08-24, after run 48)
+
+A MECHANICAL cure, minted because the ledger's own member lists
+proved which kind of cure survives:
+
+    ARTIFACT cures DIE the class:
+      crop files on disk (r42)  → r46, r47, r48 clean (3 straight)
+      count run in-action (r45) → r47, r48 clean (2 straight)
+      two named streams Claims/⚠Unresolved → no recurrence
+    VIGILANCE cures DO NOT:
+      narrative import (word-scan + banned tokens) → TEN members,
+        and r48 broke the newest rule in its own predicted slot
+      layer-consistency (manual walk) → half-fired at r48
+        (people banked, statutes skipped)
+
+So: `D:\CRE Decoding System\Bootcamp\precheck.py`. Write the drafted
+delivery to a file with the three marker lines `## EVENT TEST` /
+`## DATA TEST` / `## ANYBODY TEST`, then:
+
+    python "D:\CRE Decoding System\Bootcamp\precheck.py" <draft.md>
+
+It runs DOWNWARD (every proper noun and number in either prose layer
+must appear in the data test), TRIGGERS (Card #4 list), OPENING (the
+anybody test's first sentence may locate only with tokens the table
+carries), CARDINALS (advisory list to license), and HEDGES. Exit 0
+prints CLEAN; any finding is resolved ONE OF TWO WAYS ONLY — add the
+row to the data test, or delete the claim from the prose.
+
+VALIDATED AGAINST ITS OWN MOTIVATING RUN: fed the r48 delivery as
+actually given, it flagged Antiquities Act · Proclamation + 7402 ·
+Pub. L. 81-408 · John D. Rockefeller (the four layer-consistency
+misses found by hand) and "New York Harbor" in the OPENING check
+(the narrative import). The pass finds what the vigilance rules
+missed, and running it leaves an artifact.
+
+⚠ THE PASS IS NOT A SUGGESTION. A delivery made without a precheck
+run is itself a defect, gradeable as such — the same standing the
+crop-files rule has held since r42.
