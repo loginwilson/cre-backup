@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-24T18:11:35.929Z
+  modified: 2026-08-24T18:50:57.584Z
 ---
 
 **THE TWO ACCESS RULES (login's naming, 2026-08-24):** every source gets an
@@ -53,6 +53,27 @@ and never diagnose "slow" without a neutral-host pipe test first — 13:49's
 1.2MB/s pipe turned out to be OneDrive.Sync churning on the decoder folder
 (Downloads IS synced; rc logs write there constantly — move logs off
 synced paths; same lesson as bkrea's C:\dev move).
+
+**⚠⚠ THE SETTLED DIAGNOSIS — CONVERGENCE, NOT VOLUME (login, after trip #5,
+2026-08-24):** "acris trips when multiple requests come in simultaneously so
+it needs to sequentially orchestrate... its not the number of requests, its
+the overlap when they converge that tells them to block." The rd pool, the
+pdf pool and the edge walk must NEVER touch the wire at the same instant.
+This resolves the day's paradox: width 52 ran clean for 4 morning hours but
+width 32 tripped in 18 min at 14:39 — because the VPN's 228ms latency had
+been SPACING our arrivals; at 8ms the same workers cycled ~3x faster and
+arrivals bunched into near-simultaneous clusters. Fewer workers, sharper
+convergence, faster trip. A "clean climb" on a slow line proves nothing
+about a fast one.
+**THE BUILD:** acris_lane holds ONE requests.Session with pool_maxsize=1 and
+a semaphore of `--max-inflight` (default 1); `one_at_a_time()` is the single
+voice and acris_pdf.FETCH is injected with it, so rd + pdf maps + pdf pages
++ probe all take strict turns down one kept-alive connection (no per-request
+TLS handshake either). Workers stay parallel for LOCAL work only (parse,
+img2pdf, db). `--max-rps` (Tempo token bucket) states pace directly since
+worker count stopped controlling rate. Richmond EXEMPT — drumroll rule.
+⚠ acris_edge's probe still uses its own connection (passes the gate, so
+never converges) — unify if zero exceptions are wanted.
 
 **⚠⚠ THE RAMP LAW (trip #3, 13:03):** NEVER cold-launch — a restart firing
 ~80 workers at once = 80 cold TLS opens in one second = Bandwidth Notice

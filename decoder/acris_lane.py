@@ -74,6 +74,8 @@ import threading
 import time
 import urllib.request
 
+import requests
+
 HERE = pathlib.Path(__file__).parent
 sys.path.insert(0, str(HERE))
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -233,7 +235,33 @@ def slot():
         yield
 
 
-AP.GATE = slot        # pdf maps + every page fetch obey the same gate
+
+# ⚠⚠ THE SINGLE VOICE (login 2026-08-24, the settled diagnosis): "acris
+# trips when multiple requests come in simultaneously so it needs to
+# sequentially orchestrate... its not the number of requests, its the
+# overlap when they converge that tells them to block."
+#
+# So the lane holds ONE http session with a pool of exactly ONE connection,
+# and slot() lets one request down it at a time. Not merely serialized -
+# serialized ON A SINGLE KEPT-ALIVE CONNECTION, which is what a browser
+# looks like and removes the repeated cold TLS handshakes that provoked the
+# stampede trips. Workers remain parallel for LOCAL work (parsing, img2pdf,
+# db writes); only the network is single file. Richmond is exempt - the
+# drumroll rule holds there (proven 160 concurrent connections).
+SESSION = requests.Session()
+SESSION.headers.update({"User-Agent": fetch_pages.UA})
+SESSION.mount("https://", requests.adapters.HTTPAdapter(
+    pool_connections=1, pool_maxsize=1, max_retries=0))
+
+
+def one_at_a_time(url, referer, timeout=90):
+    """Every acris request in this process, single file, one connection."""
+    with slot():
+        r = SESSION.get(url, headers={"Referer": referer}, timeout=timeout)
+        return r.content, r.headers.get("Content-Type", "")
+
+
+AP.FETCH = one_at_a_time    # pdf maps + pages join the same single voice
 
 
 def urls(did):
@@ -482,12 +510,10 @@ def worker(idx=0):
         if did in QUAR_RD:
             continue
         try:
-            req = urllib.request.Request(
+            body, _ct = one_at_a_time(       # the single voice
                 LD.BASE + "/DS/DocumentSearch/DocumentDetail?doc_id=" + did,
-                headers={**ua, "Referer": LD.BASE + "/DS/DocumentSearch/"})
-            with slot():                      # tempo + no-collision gate
-                with urllib.request.urlopen(req, timeout=90) as r:
-                    html = RD.clean_html(r.read().decode("utf-8", "replace"))
+                LD.BASE + "/DS/DocumentSearch/")
+            html = RD.clean_html(body.decode("utf-8", "replace"))
             LD.check_refused(html)
             flat = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html))
             if not re.search(r"DOCUMENT ID:\s*" + re.escape(did), flat):

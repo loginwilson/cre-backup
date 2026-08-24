@@ -68,18 +68,21 @@ class Short(ValueError):
     The bytes we DO have would convert to a perfectly valid short document."""
 
 
-# ⚠ THE LANE'S GATE, INJECTED (login 2026-08-24: "the code can never collide
-# the requests"). acris_lane sets GATE = its slot() context manager, so every
-# page and every map request in this module passes the tempo + no-collision
-# gate. Left None for standalone use (the __main__ probe below).
-GATE = None
+# ⚠ THE LANE'S FETCHER, INJECTED (login 2026-08-24: "acris trips when
+# multiple requests come in simultaneously... its not the number of
+# requests, its the overlap when they converge"). acris_lane sets FETCH to
+# its single-connection, one-at-a-time getter, so every map and every page
+# request in this module goes down THE SAME sequential voice as rd and the
+# probe. Left None for standalone use (the __main__ probe below).
+FETCH = None
 
 
 def _get(url, referer, timeout=90):
+    if FETCH is not None:
+        return FETCH(url, referer, timeout)
     req = urllib.request.Request(url, headers={**_UA, "Referer": referer})
-    with (GATE() if GATE is not None else contextlib.nullcontext()):
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            return r.read(), r.headers.get("Content-Type", "")
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read(), r.headers.get("Content-Type", "")
 
 
 def page_count(did, timeout=90):
