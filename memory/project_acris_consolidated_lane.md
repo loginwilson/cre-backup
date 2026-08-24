@@ -197,3 +197,47 @@ trips the server (arrival spacing), and the config that names our intent
 library delivers. **Verify the mechanism, not the setting.** Both defects
 were invisible in every rate reading and both were provable in seconds
 offline.
+
+**⚠ CONCURRENCY IS SIZED TO rate x RTT, NEVER MAXIMIZED (2026-08-24).** The
+pacer owns the rate; width only has to cover the in-flight window. Little's
+Law at our ceiling: 80 req/s needs **2.2** connections at 28 ms RTT, 12 at
+150 ms, **20 at a pessimistic 250 ms**. We were running 64. Excess width buys
+zero throughput (the pacer caps it) and three costs: it looks like a fleet,
+it enlarges the blast radius of any blip, and it SELF-CONTENDS.
+
+⚠ **THE FAILURE COUNT IS A CONCURRENCY MEASUREMENT.** 50 requests died in one
+instant, so ~50 were open at that instant; at the measured 12.5 req/s that
+means each image request was taking **~4 s** (50/12.5), not 28 ms. 64
+concurrent downloads sharing one link stretched RTT ~100x, which piled up
+MORE in flight, which stretched it further — and then one transport blip
+killed 50 at once instead of 3. Standing config: `--workers 32
+--max-inflight 24`.
+
+**⚠ NOT EVERY MASS FAILURE IS A BLOCK — ASK THE PROBE.** 15:56 burst: 50
+SSLError in one minute, then **ZERO for the next four** while pdfs kept
+landing and the edge probe never missed a beat. A refusal would have killed
+the probe first (same ip, same session, same pool) and failures would have
+CONTINUED at the reduced width. Neither happened. The governor now records
+`probe_ok_at` on every successful probe and reads it before collapsing:
+probe served within 90 s → local transport event, KEEP the earned tempo,
+drop width to re-warm the pool, hold 2 min; probe silent too → treat as the
+server, full re-ramp, hold 10 min. Without this, ordinary link noise costs a
+10-minute collapse each time, which on a flaky link is a PERMANENT ceiling —
+the climb needs uninterrupted clean minutes to step at all.
+
+**⚠ `turn()` (contiguity) IS OFF BY DEFAULT AND MUST STAY OFF.** One global
+lock across a document's whole network burst = real concurrency of 1,
+regardless of pool or pacer. Measured 491 reqs/120 s = 4.1 req/s = exactly
+1/(244 ms). Unlocking it: **4.1 -> 12.9 req/s, 0.24 -> 1.03 ready/s**, and
+the pacer (not a lock) became the binding constraint, as designed.
+CONTIGUITY WAS NEVER THE PROTECTION — SPACING IS; a lump is a simultaneous
+arrival, and interleaving two documents is what a browser with two tabs
+does. Restore with `--contiguous` only if evidence ever says arrival ORDER
+mattered.
+
+**THE SCALING CHECK THAT VALIDATES THE TARGET:** governor's own settle() read
+**width 64 averaged 1.03 ready/s at a 12 req/s cap** — matching the 8.2
+req/row model (12/8.2 = 1.46 before rd overhead). Linear to the 66-80 req/s
+ceiling = **8-9.8 ready/s**, i.e. the <30-day target is reachable on this
+architecture. Bandwidth is not the wall either: 60 KB/page x 6.18 pages x 8
+docs/s = **23.1 Mb/s against a measured 43.3 Mb/s link**.

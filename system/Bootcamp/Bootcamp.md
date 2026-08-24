@@ -8891,3 +8891,49 @@ RULE GOING FORWARD: a class that survives its cure gets a MECHANICAL
 cure, not another rule — and when the mechanical cure misses (r50: the
 cardinals check never looked for "a couple"), the HOLE is the finding
 and gets closed the same run.
+
+## THE A-ERA MEASUREMENT — why the letters fell (2026-08-24, run 50 close)
+
+Login: "we are not really getting into A territory so we are
+struggling to learn and do better?" The premise deserved a
+measurement, not an argument. Taken from this file's own Grade
+Ledger and Backward Re-check #2:
+
+    runs 12-32   almost entirely A and A-
+    runs 33-50   B+ / B / B- / C+, no A
+
+The break is at RUN 33 — the run at which the COMPOSE CARD, the
+trigger list and the Grade Ledger's defect classes were first
+minted. Before run 33 there was no rulebook, so the letter graded
+against nothing.
+
+⚠ THE PROOF THAT THE EARLY A's WERE INFLATED IS ALREADY IN THIS
+FILE: Backward Re-check #2 swept runs 12-32 against rules written
+after them and FOUND THREE DEFECTS "in entries that had all been
+graded A or A-" (a misspelled principal, an unlabelled money value,
+a class label applied to an instance). And three runs were re-graded
+downward when the standard thickened: r33 A- → B+, r35 B → B-,
+r39 B → D.
+
+So the letter was never tracking capability. It tracked HOW MANY
+MISSES THE GRADER COULD SEE, and the grader kept getting sharper.
+Evidence that the work itself improved, from the same ledger:
+
+    EARLY misses  imported a neighbourhood into a deal · flattened a
+                  recital into fact · skipped the crop pass whole ·
+                  banked a FABRICATED "third sighting" · delivered
+                  altered financial terms
+    LATE misses   "a couple" where the count was three · a ✓ only
+                  partly earned · "months" where the statute says up
+                  to eight
+
+⚠ AND THE COUNTER-EVIDENCE, recorded so it is not hidden: the
+login has overridden the self-grade DOWNWARD twice in ten runs
+(r47 B- → C+; the r49 authorised-vs-issued catch). The self-grade
+runs LENIENT, not harsh. Both facts stand.
+
+THE FIX IS THE RUBRIC ABOVE, which grades by DAMAGE (did a defect
+reach the delivered text? the delivered evidence?) instead of by
+volume of findings. Under it, an A is reachable and means something:
+no claim-changing defect, every mechanical gate clean BEFORE
+delivery, and at least one finding that changes the system.
