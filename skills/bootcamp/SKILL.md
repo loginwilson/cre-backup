@@ -171,12 +171,51 @@ summary anybody understands: CAST first, real names exact, real terms
 taught in place, recitals attributed, no felt complexity.
 
 **Single-run loop:** deliver 1-2-3 → STOP (no self-grade, no why) →
-login prompts "grade and why" → grade against the Ledger + why-pass
-in simple points → login prompts "fix and record" → fixes BY ACTION
+login prompts "grade and why" → deliver THE GRADE-AND-WHY FORMAT
+(below, exactly) → login prompts "fix and record" → fixes BY ACTION
 (grep the count, take the crop, correct the banked text) → four-file
 close → next draw. Batch/auto mode self-grades per the rotation.
 Pre-bank passes produce ARTIFACTS (crop files on disk, greps run in
 the same action) — Card #12/#13; a remembered action is not a check.
+
+## 4b · THE GRADE-AND-WHY FORMAT (login ruling 2026-08-24, run 46 —
+## re-taught twice in one session; follow it EXACTLY)
+
+The "grade and why" reply is TWO blocks, in this order:
+
+**BLOCK 1 — THE GRADE, with its reasonings.** Everything about my
+performance lives here and ONLY here:
+```
+R<n> GRADE (self, cold checklist, ledger read first) — <letter>
+<one-line framing: how many misses, which classes/structures hit>
+1. <Miss: CLASS name + member list from the Ledger; what I delivered;
+   what the page actually holds; which rule/structure it broke; the
+   honest phrasing that was free.>
+2. ...
+HELD: <single paragraph: the disciplines that worked, defects caught,
+arithmetic that ran clean, cells exercised — the credit side.>
+<if the grade needs justifying: one "Why <grade> and not <higher>" line.>
+```
+
+**BLOCK 2 — WHY, simple points.** This is about THE DOCUMENT'S EVENTS
+— never about the grade (the why-pass of P-5 §5, delivered here per
+the run-41 re-ruling). One point per data-table event or event
+cluster. Each point has the fixed shape:
+```
+WHY <the event> matters — terminates at <the product/phase it feeds>:
+<the full explanation in system terms>. = <ONE sentence in plain
+language anybody could understand — the "=" line is MANDATORY.>
+```
+The "= " restatement is the login's read; the explanation before it
+is the system's. Both are required; neither substitutes for the
+other. Close with "Ready for fix-and-record on your word."
+
+Format failures recorded 2026-08-24 (run 46 grading): (a) delivered
+the grade as essay sections with headers instead of numbered
+misses + HELD; (b) wrote the WHY about the grade instead of the
+document's events; (c) dropped the "explanation = simple restatement"
+pair shape. Each was corrected by the login in-session. The format
+IS the deliverable; a right grade in the wrong shape reads as wrong.
 
 ⚠ **The verdict is a TEACHING artifact, never the DB record** (THE
 LENGTH LAW, Bootcamp.md). The corpus stores rows + gated claims +

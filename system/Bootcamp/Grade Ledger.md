@@ -128,6 +128,32 @@ HELD at 45: value-crop pass caught the $2M misread pre-bank and settled
 it by TWO routes (crops + schedule arithmetic); lot-merger stayed
 labeled INFERRED with three named witnesses; L-3 held at chain scale
 (no phantom 1919 event in chronology); G-022 to the dollar.
+
+| 46 | 2003041400735009 2003 | **B−** (self, login-prompted) | **narrative import 9th (10,33,34,35,37,39,41,42) — EXACT r42 SHAPE REPEATED**: "Prospect Heights" + "landlord ... family firm" in the anybody test · **tier flattened at delivery — the PRE-NAMED derivation-binding case fired**: Canyon-Johnson notice-party (event test, correct) delivered as "money partner" fact (anybody test) · **count-per-se broken ONE RUN after minting, count class 6th (21,23,39,42,45)**: "six-course" for a five-course exhibit, uncounted and wrong · **validation claimed never run**: "courses close" asserted under self-validations; closure not computable from text · mild characterization residue | fixes in the R46 entry · Card #15 derivation binding ENACTED (all layers incl. anybody test) · format ruling recorded (grade-and-why two-block shape) |
+
+⚠ STRUCTURE ENACTED at 46 (the pre-named cure): Card #15 now runs a
+DERIVATION-BINDING sweep over EVERY delivery layer — each prose
+sentence that sources to an observes/INFERRED row must carry its
+attribution IN THAT SENTENCE, the anybody test explicitly included.
+The r42/r44/r46 flattenings all died at the last-written, plainest
+layer; the sweep runs there LAST, not first.
+⚠ NARRATIVE CLASS AT NINE and repeating its own FIXED instances
+(Williamsburg→Prospect Heights is the same import, same slot in the
+same sentence shape: locating the deal for the reader). Structural
+observation: the anybody test's OPENING SENTENCE is the recurring
+host — it wants geography and cast color. Cure candidate if it
+recurs: the opening sentence may name only borough + streets READ
+from the record; neighborhood names are banned tokens at compose.
+⚠ Count class at SIX — the per-se rule (r45) did not survive its
+first run. The rule fired at BANK time but the defect happened
+IN-TURN. Extension: the enumeration-not-cardinal default applies to
+in-turn speech; saying a number aloud mid-read requires the same
+license as banking it.
+HELD at 46: crop-before-utter clean first outing (four crops, no
+handwritten value/name uttered pre-crop); three record defects
+caught (blank ack, Worth/North, wrong-county recital); the sealed
+two-source draw exercised ENVELOPE-as-drawn-event on the first try;
+RETT and page arithmetic run and exact.
 The trigger list + Card #4 catch its phrase-shaped and scale-shaped
 forms; R41's form was a CHARACTERIZATION OF THE DRAFTING ("their
 community") — ordinary words again. Watch the shape: any sentence that

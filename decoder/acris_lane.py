@@ -122,6 +122,11 @@ stats = {"done": 0, "fail": 0,
          "pdfs": 0, "imageless": 0, "deferred": 0, "pdf_fail": 0,
          "shed": 0}          # Short/timeout = the server's load signal
 pdf_width = [0]              # live width, governed; workers idle above it
+rd_width = [9999]            # rd gate - collapsed by the governor after a
+                             # reconnect event so 28 workers never reopen
+                             # connections in one burst (login: "if you are
+                             # not connected, never just throw all the
+                             # connections at once")
 rd_all_fed = threading.Event()   # rd feeder exhausted the todo set
 ua = {"User-Agent": fetch_pages.UA}
 PDF_FAILS = CP.NAV_WORK / "acris_lane_pdf_fails.jsonl"
@@ -389,6 +394,9 @@ def flush():
 def worker(idx=0):
     time.sleep(idx * 0.5)        # stagger cold starts - never a stampede
     while not stop_workers.is_set():
+        if idx >= rd_width[0]:   # collapsed after a reconnect event
+            time.sleep(5)
+            continue
         try:
             did = q.get(timeout=5)
         except queue.Empty:
@@ -601,7 +609,24 @@ def governor():
                 " pdf width %d -> %d (%s)" % (w, pdf_width[0], verdict))
             streak = 0
             continue
-        if shed >= 3:
+        if rd_width[0] < a.workers and shed == 0:
+            rd_width[0] = min(rd_width[0] + 6, a.workers)   # gentle recovery
+        if shed >= 10:
+            # MASS failure in one minute = a reconnect event (network change,
+            # sleep/wake, IP re-lease), not ordinary shedding: every keep-
+            # alive died and the reconnection wave IS a stampede (login:
+            # "do network changes count as resets?" - yes; "never just throw
+            # all the connections at once"). BOTH pools collapse and re-ramp
+            # gently - never a trim.
+            verdict, win_c0 = settle(w)
+            win_t0 = time.time()
+            pdf_width[0] = 8
+            rd_width[0] = 4
+            hold, streak = 10, 0
+            say("  GOVERNOR mass failure (%d/min) - reconnect event, FULL"
+                " RE-RAMP: pdf %d -> 8, rd -> 4, hold 10 min (%s)"
+                % (shed, w, verdict))
+        elif shed >= 3:
             verdict, win_c0 = settle(w)
             win_t0 = time.time()
             pdf_width[0] = max(w * 3 // 4, 4)

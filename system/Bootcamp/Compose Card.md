@@ -187,6 +187,24 @@ threshold: structure, not another rule.
            (R42: "for rental" and the permit-condition recital, both
            flattened in prose while the record was honest).
 
+  BINDING  ⚠ DERIVATION BINDING — ENACTED at R46 (the pre-named 3+
+           cure: R42, R44, R46 all flattened at the SAME layer).
+           For EVERY sentence of EVERY delivery layer — the anybody
+           test explicitly included — ask: which row does this
+           sentence source to? If the row is observes or INFERRED,
+           the sentence carries the attribution IN ITSELF ("named
+           only in the notice pages", "the developer's own figure").
+           Run the sweep on the anybody test LAST — the flattenings
+           all died in the last-written, plainest prose (R46:
+           notice-party became "money partner" there and only there).
+
+  OPENING  the anybody test's FIRST SENTENCE is the narrative
+           class's recurring host (R42 "Williamsburg" → R46
+           "Prospect Heights", same import in the same slot). It may
+           locate the deal only with borough + streets READ from the
+           record. Neighborhood names, actor biography ("landlord",
+           "family firm") and era color are banned tokens there.
+
 Compose order is 2 → 1. Build rows, then write prose FROM the rows —
 never from memory of the pages.
 

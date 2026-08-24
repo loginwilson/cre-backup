@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-24T15:03:25.586Z
+  modified: 2026-08-24T17:20:33.595Z
 ---
 
 **THE SOURCE ONBOARDING PLAYBOOK (login, 2026-08-24 — "the move is"):**
@@ -43,7 +43,12 @@ GOVERNOR self-tunes worker width against the source's own load signals,
 one refusal tripwire, one board row whose landed = READY (needed −
 last-gate todo). The source's ACCESS RULE is discovered, not assumed:
 **piano** (one access point, sequenced — acris) vs **drumroll** (fire
-freely, just never push through a refusal — richmond). login: "the hardest
+freely, just never push through a refusal — richmond). **UNIVERSAL RAMP
+LAW regardless of rule** (login 2026-08-24, trip #3): never open
+connections all at once — every lane launches with a soft ramp, staggers
+cold starts, and treats mass simultaneous failure (network change,
+sleep/wake) as a reconnect event demanding a full re-ramp, never a
+straight reconnect at width. "The warmup is well worth a 5 minute wait." login: "the hardest
 part is mapping the inventory which gives the ids. after that it's just
 figuring out what the url mints are" — acq throughput and keying are the
 same principle every time, coming off the rd and pdfs.

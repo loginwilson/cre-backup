@@ -7833,3 +7833,200 @@ Every existing rule intact: no nav scans, no rglob of the whole
 tree, sealed fields at draw, gate before render. The Draw Board
 tracks coverage across era × borough × custodian × type × length,
 and the draw targets the least-proven cell as before.
+
+## THE GRADE-AND-WHY FORMAT (login ruling 2026-08-24, run 46 grading — re-taught twice in one session)
+
+The "grade and why" reply is TWO blocks, in this order, exactly:
+
+**BLOCK 1 — THE GRADE, with its reasonings.** Everything about
+performance lives here and only here. Shape:
+`R<n> GRADE (self, cold checklist, ledger read first) — <letter>` ·
+one framing line (how many misses, which classes/structures hit) ·
+numbered misses, each naming its CLASS with the Ledger member list,
+what was delivered, what the page holds, which rule it broke, and
+the honest phrasing that was free · a single HELD paragraph (the
+credit side) · optionally one "Why <grade> and not <higher>" line.
+No headers-and-essay form; the numbered-miss form is the format.
+
+**BLOCK 2 — WHY, simple points.** About THE DOCUMENT'S EVENTS, never
+about the grade — this is P-5 §5's why-pass, delivered at grade time
+per the run-41 re-ruling. One point per data-table event or event
+cluster, each in the fixed pair shape:
+
+    WHY <event> matters — terminates at <product/phase it feeds>:
+    <full explanation in system terms>. = <ONE plain-language
+    sentence anybody could understand.>
+
+The "=" line is MANDATORY — explanation then simple restatement,
+both required, neither substitutes. Close with "Ready for
+fix-and-record on your word."
+
+Recorded failure modes (all corrected by the login, 2026-08-24, run
+46 grading): grade delivered as essay sections; WHY written about
+the grade instead of the events; the "explanation = restatement"
+pair dropped. The format IS the deliverable — model portability
+(Opus 5 handoff) depends on this section being followable cold.
+
+# RUN 46 — 2003041400735009 · DEC OF DEVELOPMENT RIGHTS (ZLDA + §12-10(d) DECLARATION) · BROOKLYN 939 · 2003
+
+28/28 pages (rd 26 + cover pair; arithmetic closes). CRFN
+2003000164365. **Zero new columns, zero new vocabulary — streak: 42.**
+✅ ENVELOPE-as-drawn-event EXERCISED (never before) — the DEVELOPMENT
+RIGHTS shelf held a true ZLDA package: the agreement (pp3-20) WITH the
+executed §12-10(d) Declaration of Zoning Lot Restrictions annexed as
+its Exhibit B (pp21-26) — one recording, two instruments. Grade B−
+(five misses; fixes applied here).
+
+    ZONING LOT DEVELOPMENT AGREEMENT as of 2003-04-09 · rec
+    2003-06-11 · TWIN TOWER EQUITIES, LLC (Owner: lots 39/40/41/42 =
+    296-302 Flatbush Ave, buildings incl. survey-labeled church
+    structures) ⇄ PARK PLACE PARTNERS, LLC (Developer: lot 35 =
+    286-292 Flatbush a/k/a 135-149 Park Place) · Brooklyn block 939
+
+## THE EVENTS (one event_id)
+
+    row 1  ENVELOPE·transfers · Owner → Developer · Available
+           Development Rights (excess FAR of lots 39-42 into lot 35's
+           New Building) · ≥20,600 SF — DEVELOPER-DETERMINED, Owner
+           expressly no-representation (attribution is part of the
+           fact) · $10 recital; $750,000 DERIVED (NYS RETT $3,000 ÷
+           0.4%, exact) · per unrecorded Zoning Lot Merger Purchase
+           and Sale Agreement dated 2002-11-11 · Owner keeps Retained
+           Development Rights + roof rights; future upzoning of
+           Owner's land accrues 100% to Owner (§3.1E)
+    row 2  ENVELOPE·creates · both declarants · THE SINGLE ZONING
+           LOT: lots 35+39+40+41+42 declared one zoning lot by the
+           §12-10(d) Declaration; parties-in-interest recital notes
+           WAIVING parties exist (chain expectation: recorded
+           waivers) · tax lots explicitly REMAIN SEPARATE for all
+           non-zoning purposes incl. taxation (Art V); Developer
+           pays any Owner tax increase from the reallocation ·
+           breach never un-merges (§9.7; Decl ¶4)
+    row 3  ENCUMBRANCE·creates · Owner → Developer (appurtenant) ·
+           perpetual LIGHT-AND-AIR EASEMENT over Exhibit D area of
+           Owner's parcel (L-shaped area off Park Place; text
+           courses p27: 57'1" · 26'6" · 30' · 17'6" · 47'11" · 30'
+           — six segments ENUMERATED from the page; two courses bear
+           at right angles to diagonal Flatbush, so closure NOT
+           COMPUTABLE from text; visually consistent with the p28
+           survey's hatched area — that consistency is READ-level
+           only) · carve-outs: existing Owner Building Envelope;
+           roof replacements same-size-or-smaller
+    row 4  ENCUMBRANCE·creates · mutual, runs with land (§9.2) ·
+           ZLDA covenant web: no-rebuild-into-noncompliance keyed to
+           the OTHER side's CO (§3.3(b)/(c) — OCCUPANCY-bearing);
+           separate DOB filings, separate NB/Alt numbers, no
+           applications impairing the other (§3.2 — PERMIT-bearing);
+           cross-parcel violation cure ≤2 months where a Violation
+           would block the other's permits/CO (§2.4); no physical
+           rights ride the ADR (§7.2); non-recourse w/ specific
+           performance reserved (§8.2); no termination w/o mutual
+           consent (§8.1); estoppels 20 days (Art IV); mortgagee
+           notice+cure (§9.5); Lien Law §13 trust on consideration
+           (§6.1 — r45's statute family)
+    row 5  TITLE (observes) · Owner reps fee title 39-42 + NO PRIOR
+           TRANSFER of the rights; Developer reps fee title 35
+    row 6  (observes) · unrecorded Sales Agreement 2002-11-11
+           recited; CANYON-JOHNSON URBAN FUND, LP (Beverly Hills;
+           attn K. Robert Turner, Jonathan Roth) appears as a
+           DEVELOPER NOTICE-COPY PARTY — that is the READ fact;
+           any capital-partner/backer characterization is INFERRED
+           and stays unresolved [grade fix: delivery had stated
+           "money partner" as fact]
+    row 7  VALUE (signals) · $750,000 (DERIVED, stamp) over
+           ≥20,600 SF (declarant-asserted) → ≤$36.41/SF ceiling,
+           each term carrying its tier
+
+    ACTOR-CLAIMS: Owner ↔ LLOYD GOLDMAN, President of BLDG
+    Associates, Inc., GP of Partnership 2002, L.P., managing member
+    (typed + ack'd; ZLDA ack 2003-04-03 Lawrence P. Wolf; Decl ack
+    2003-03-21 Virna L. Maldonado, Kings). Developer ↔ managing
+    member signing/ack'd as TOM/THOMAS ANDERSON — handwritten only,
+    surname MODERATE, four crops on disk, no typed instance exists.
+    Notice humans: Morris Missry (Wachtel & Masyr — Owner counsel);
+    Seymour Hurwitz, Esq.; Turner/Roth (Canyon-Johnson). Survey:
+    Vincent J. Dicce LS, Boro Land Surveying P.C., surveyed
+    2001-08-27, certified to TPS Abstract Corp (title 4-747381).
+    Presenter Commonwealth/Lawyers Title; return Manatt Phelps
+    Phillips. Drafting-lineage witness: Declaration footer path
+    "G:\CLIENT DOCUMENTS\C\Chera, Stanley and Hymie\Flatbush
+    Ave\Air Rights\Declaration (2).doc" — READ as artifact text;
+    the two humans appear in NO party block; any principal claim
+    INFERRED, unresolved.
+
+## R46-1 — RECORD DEFECTS (each found by reading, banked as findings)
+
+(a) Cover types Developer address "85 NORTH ST"; instrument says 85
+WORTH Street (register transcription family, R20 kin). (b) The
+Declaration recites the ZLDA "intended to be recorded ... County of
+NEW YORK" — land and recording are KINGS (drafting slip, INFERRED).
+(c) ⚠ The Declaration's SECOND ACK BLOCK IS BLANK — the recorded
+Declaration carries an un-notarized Developer signature; the
+register accepted it. (d) Goldman's Declaration ack (03-21) predates
+the as-of date (04-09) — as-of dating, noted not judged. (e) Exhibit
+lettering skips C. (f) Exhibit A-2 carries a title-underwriter
+sentence ("Policy insures ... without any strips or gores") — the
+r44-3/r45 drafting-artifact witness class.
+
+## R46-2 — THE ZONING LOT IS A SECOND IDENTITY LAYER, BY THE RECORD'S OWN WORDS
+
+Art V + Decl ¶2: one zoning lot, five tax lots, permanently — the
+instrument itself legislates the divergence and prices its tax
+consequences. IDENTITY (tax-lot layer) unchanged; the envelope
+container lives on its own map. This is the recorded ground truth
+for why FAR can never be read off tax-lot data.
+
+## R46-3 — FUNCTIONS-NOT-TYPE-OWNED (login ruling, mid-run 46)
+
+An easement may carry air rights; encumbrances and easements occur
+inside air-rights instruments, ZLDAs, DEVRs, declarations,
+agreements. R42-3a one level down: the drawn TYPE never bounds the
+function set — every clause is read against all eleven. Run 46 is
+the proof instance: a DEVELOPMENT RIGHTS type yielding
+ENVELOPE·transfers + ENVELOPE·creates + two ENCUMBRANCE·creates +
+PERMIT/OCCUPANCY-bearing covenants + TITLE observes + VALUE signal.
+
+## CONFIRMATIONS
+
+- rd EARNED: type ✓ 28 pages ✓ (26+2 cover arithmetic) BROOKLYN ✓
+  five property rows = the Declaration's five lots exactly; cover
+  marks 39-42 "Air Rights" and 35 entire-lot matching direction ✓
+  RETT $3,000 = 0.4% × $750,000 exact ✓ RELIGIOUS STRUCTURE property
+  type corroborated by survey "(CHURCH)" labels (surveyor-attributed
+  witness bearing on ASBUILT, not a certification).
+- Digital-era package: suffix 009 of document 2003041400735 —
+  package siblings exist (unpulled, chain expectation).
+- Mode watch: operative acts transacts; ownership recitals, Sales
+  Agreement existence, and the 20,600 SF all observes WITH
+  ATTRIBUTION — held in every delivery layer for the SF figure;
+  failed for Canyon-Johnson (see grade).
+
+## R46 GRADE — B− (self, cold; fixes applied in this entry)
+
+1. NARRATIVE IMPORT, 9th member (10,33,34,35,37,39,41,42) — and the
+   EXACT r42 shape repeated: "Prospect Heights" (nowhere in 28
+   pages) + "landlord Lloyd Goldman's family firm" (record shows
+   entities and a title). A fixed instance recurring identically =
+   the fix repaired text, not the compose habit. FIXED here (no
+   neighborhood, no biography).
+2. TIER FLATTENED AT DELIVERY — the pre-named derivation-binding
+   case: event test held Canyon-Johnson as notice-party; anybody
+   test delivered "money partner" as fact. STRUCTURE ENACTED: Card
+   #15 derivation binding now covers EVERY layer incl. the anybody
+   test.
+3. COUNT-PER-SE broken ONE RUN after minting, 6th member
+   (21,23,39,42,45): "six-course perimeter" for Exhibit A-1 —
+   page holds FIVE courses; no count run. Count now run from the
+   page list; banked text carries five.
+4. VALIDATION CLAIMED, NEVER RUN: "courses close ... two independent
+   routes" — closure not computed and not computable from text
+   (courses bear off diagonal Flatbush). Banked honest: visual
+   consistency with the survey only.
+5. Residual characterization ("quietly", "than it could ever use")
+   — same genus as 1, mild.
+
+HELD: crop-before-utter's first clean outing (four crops, surname
+held moderate everywhere); three record defects caught by reading;
+Chera footer READ/INFERRED separation held where made; RETT and
+page arithmetic ran clean; the sealed two-source draw landed the
+never-exercised ENVELOPE cell first try.
