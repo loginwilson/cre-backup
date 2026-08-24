@@ -11,9 +11,9 @@ lane's shape HERE, never in a shell history.
     python fleet.py start <lane|all>    launch a lane's missing processes
     python fleet.py stop <lane|all>     stop a lane's processes
 
-Lanes: sync (acris = THE CONSOLIDATED LANE; richmond = rc_live until
-rc_lane exists) · rcpdf (richmond pdf trio) · board (routine_update +
-board_truth + pass-2 arm).
+Lanes: sync (acris_lane + rc_lane - BOTH consolidated now) · board
+(routine_update + board_truth + pass-2 arm). The "rcpdf" lane is RETIRED:
+rc_lane absorbed the trio on 2026-08-24.
 
 ⚠ THE 2026-08-24 CUTOVER: acris_lane.py absorbed acris_live, the rd_walk
 fleet (4x28) AND the image_walk fleet (3x14). ONE process is the whole
@@ -32,8 +32,8 @@ import time
 PY = sys.executable
 
 # scripts that may only ever have ONE instance, whatever their args
-SINGLETON = {"acris_lane.py", "rc_live.py", "routine_update.py",
-             "board_truth.py", "rc_feed.py", "rc_pdf_pull.py"}
+SINGLETON = {"acris_lane.py", "rc_lane.py", "routine_update.py",
+             "board_truth.py"}
 HERE = pathlib.Path(__file__).parent
 W = pathlib.Path(r"D:\CRE Decoding System\01 Navigations"
                  r"\Legal Instruments Navigation\_working")
@@ -79,16 +79,23 @@ LANES = {
           "--max-inflight", "24", "--max-rps", "12", "--rps-max", "80",
           "--step-minutes", "3"],
          HERE, W / "acris_lane.log"),
-        ("rc_live", "rc_live.py",
-         ["--apply", "--every", "10"], HERE, HERE / "rc_live.log"),
-    ],
-    "rcpdf": [
-        ("rc_feed", "rc_feed.py",
-         ["--miners", "24", "--ahead", "1200"], HERE, HERE / "rc_feed.log"),
-        ("rc_pdf_pull", "rc_pdf_pull.py",
-         ["--workers", "16", "--batch", "3"], HERE, HERE / "rc_pull.log"),
-        ("rc_pdf_land", "rc_pdf_land.py",
-         ["--loop", "--raw"], HERE, HERE / "rc_land_stdout.log"),
+        # ⚠ THE 2026-08-24 RICHMOND CUTOVER: rc_lane.py absorbed rc_live
+        # (probe), rc_feed (token minting) and rc_pdf_pull (fetch+land), and
+        # DROPPED rc_pdf_land entirely - its log was empty, because the
+        # courts host serves a real pdf and rc_pdf_pull already landed it
+        # straight into the store; the JPEG->G4 conversion belonged to the
+        # retired browser path.
+        #
+        # ⚠ NEVER run the old trio alongside it: served_ids is per-process,
+        # so two minters hand the SAME ids out twice and nothing in the table
+        # records that a token was minted.
+        #
+        # ⚠ DRUMROLL, NOT METRONOME. No pacer - latency is the governor
+        # (proven 160 concurrent connections for 26 h). Concurrency is the
+        # only dial and the safety is refusal_verdict, not pacing.
+        ("rc_lane", "rc_lane.py",
+         ["--apply", "--miners", "24", "--workers", "16"],
+         HERE, HERE / "rc_lane.log"),
     ],
     "board": [
         # pass-2 arm: polls the board, releases the reference keyer at

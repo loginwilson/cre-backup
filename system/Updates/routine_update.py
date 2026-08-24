@@ -86,7 +86,7 @@ _HEARTBEAT = {
     # ⚠ rc_pdf_land.log only hears the RAW-incoming lander; the db writer is
     # rc_pdf_pull, which logs into its own cwd (the decoder dir). Watching the
     # lander's log kept a 6-hour wedge invisible until 2026-08-23 20:00.
-    ("acquisition pdf", "richmond"): str(DECODER / "rc_pull.log"),
+    ("acquisition pdf", "richmond"): str(DECODER / "rc_lane.log"),
 }
 _STALE_S = 180
 
@@ -136,7 +136,7 @@ _CUM_SPEC = {
     # the exact "result the python is coding into the db" (login). Absolute
     # path: the puller logs into its own cwd, not NAV_WORK.
     ("acquisition pdf", "richmond"):
-        ((str(DECODER / "rc_pull.log"),), r"db ([\d,]+)"),
+        ((str(DECODER / "rc_lane.log"),), r"db ([\d,]+)"),
 }
 
 
@@ -289,7 +289,7 @@ PROC_SIG = {
     # is not pulling. Masking a stopped acquirer behind two idle helpers
     # defeats the entire STALLED state, which is the one state that says
     # "somebody needs to look at this".
-    ("acquisition pdf", "richmond"): ("rc_pdf_pull.py",),
+    ("acquisition pdf", "richmond"): ("rc_lane.py",),
     ("organization", "acris"): ("nav_key.py --src acris",),
     ("organization", "richmond"): ("nav_key.py --src rc",),
 }
@@ -454,7 +454,8 @@ def gather():
     # rc_pdf_pull prints its rate over its own full run, e.g.
     #   +132   total 54510   10.81/s  19069.9 MB  db 54480  q0  err 13
     # Read it. Do not re-derive what the lane already measured.
-    for pp in (W / "rc_pull.log", DECODER / "rc_pull.log"):
+    for pp in (DECODER / "rc_lane.log", W / "rc_pull.log",
+               DECODER / "rc_pull.log"):
         if not pp.exists() or not fresh(pp):
             continue
         lines = [ln for ln in pp.read_text(encoding="utf-8",
@@ -495,7 +496,8 @@ def gather():
     # A FIX THAT DOES NOT FIRE IS INDISTINGUISHABLE FROM THE BUG IT FIXED, and
     # this one was written the same night it failed. Both locations are checked
     # now, newest wins - a path assumption should not be able to hide a lane.
-    for pp in (W / "rc_pull.log", DECODER / "rc_pull.log"):
+    for pp in (DECODER / "rc_lane.log", W / "rc_pull.log",
+               DECODER / "rc_pull.log"):
         if not pp.exists():
             continue
         tots = re.findall(

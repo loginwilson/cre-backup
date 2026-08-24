@@ -275,6 +275,22 @@ were INVISIBLE to token-presence checking — every word was in the table.
 r52's cure attacks the mechanism (an orphaned doubt) rather than the
 meaning, which is the only part a script can see.
 
+
+| 53 | 2003042301213001 2003 | **C+ (RENDER)** (self, login-prompted; FABRICATION lightly hit) — first grade under the ACCURACY rubric | **FALSE COMPUTED INTERVAL IN THE DELIVERED CLAIMS**: "eleven years and eleven months" for 1992-04-28 → 2003-04-23, measured at grading as 4,012 days = **10y 11m**. COUNT/ARITHMETIC CLASS, **10th member** (21,23,39,42,45,46,50,51x2,53) · ⚠ and the PROSE was right ("Eleven years later") while the TABLE was wrong — the inverse of the usual layer failure and the worse direction · **INVENTED SCENE DETAIL** "in a hospital room" — the page gives a hospital and an address, the ROOM is mine (narrative-import shape, the longest-running class) · **TRUSTEE PAIRING DROPPED FROM THE TABLE** — the will names Sheldon trustee for Danielle and Stephanie for Brenda; the table said "separate trustees", rendering anonymous the reachable party for one identified half-interest · **MODE STRAIN UNNAMED** (R53-3): `signals` means an interested party's expectation and a will is an operative disposition awaiting a condition — the strain sat in the same paragraph as the AUTHORITY gap I did name · **ANYBODY TEST 396 WORDS**, longest of five runs | fixes in the R53 entry · **R53-2 AUTHORITY queued as a candidate twelfth** (3rd member: r37, r47, r53) · **precheck gains DATE ARITHMETIC + THREE BUDGETS**, both validated against this run's delivery as given · CITED-ROW hedge set tightened (it had passed row 4 on an incidental "or" inside "legatee or devisee") · **THE THREE BUDGETS length law** minted |
+
+⚠ THE ARITHMETIC SUB-CLASS. The count class has always been about counts
+NOT RUN (fabricated ordinals, uncounted "a couple"). r53 adds a count RUN
+AND WRONG, which is worse: an uncounted claim reads as an assertion, a
+miscomputed one reads as evidence. Cure is mechanical (DATE ARITHMETIC)
+because the defect is mechanical — the inputs were both on the page.
+⚠ AND THE LAYER INVERTED. Every prior layer-consistency member had the
+record right and the delivery wrong. r53 had the PROSE right and the TABLE
+wrong. The sweep must run in both directions, because the table is the
+layer the corpus keeps and the prose is the layer that gets read.
+⚠ CAPTURE AND THE ELEVEN BOTH CLEAN — the first run scored on the accuracy
+rubric where the decode itself was sound and only RENDER set the floor.
+That is the rubric doing its job: the letter names the dimension.
+
 ⚠ MISATTRIBUTED QUANTITY (47, 49) is the class to watch next — both
 members were CORRECT computations bound to the WRONG SUBJECT, which
 no token check can catch. If it reaches three, the structural cure

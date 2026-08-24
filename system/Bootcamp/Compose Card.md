@@ -69,7 +69,27 @@ Neighbours to watch the same way: "apartment", "store", "office",
 reading is too weak to confirm, write "accepted — rd sole witness".
 rd never upgrades unread → read.
 
-## 8 · LENGTH
+## 8 · LENGTH — ⚠ THREE BUDGETS, MEASURED APART (login ruling R53)
+
+    EVENT TEST    SHRINKS run over run. The falsification point, not a
+                  re-telling. Less to argue as the eleven stop surprising.
+    DATA TEST     GROWS with the number of data points. Not prose — the
+                  corpus. Richness IS coverage; cutting it banks less.
+    ANYBODY TEST  ⚠ DOES NOT GROW. **Complexity changes WHAT it says, not
+                  HOW MUCH.** Its budget is the READER's, not the
+                  document's. Measured band r49-r52: 272-311 words.
+
+R51-4 (length tracks the document) is TRUE OF THE DATA TEST ONLY; applying
+it to all three justified a 396-word summary of a ten-page will. Proof it
+was slack, not substance: the r53 summary rewritten to 304 words CARRIES
+MORE than the 396-word version did. If a summary is growing it is usually
+explaining — and explanation belongs in the event test.
+
+⚠ THE ⚠ UNRESOLVED STREAM IS A NUMBERED LIST KEYED TO ROWS, never a
+run-on paragraph (R53). Eleven bound items in one block is the same facts
+at several times the reading effort. Nothing is cut; the wading is.
+
+## 8a · LENGTH (original)
 
 Summary 3-6 sentences. Table is the table. Claims are a GATED list
 (fills a slot / chain edge / changes a decision). A verdict longer than
@@ -271,6 +291,19 @@ BINDING, both directions, all three in precheck:
     nothing may ASSERT without a row      (WHY-BIND, r47)
     nothing may DOUBT without a row       (UNRESOLVED-ROW, r52)
     a row a doubt names CARRIES the doubt (CITED-ROW HEDGE, r52)
+
+## 15b · ⚠ ARITHMETIC RUN WRONG IS WORSE THAN ARITHMETIC NOT RUN
+
+A computed figure READS as verified. Every interval, area, sum and
+difference is recomputed IN ACTION before it enters a cell — and the
+recomputation is the artifact, not the memory of having done it.
+
+R53 delivered "eleven years and eleven months" between 1992-04-28 and
+2003-04-23; measured at grading, 4,012 days = **10 years 11 months**. The
+prose said "eleven years later", which is right — so the TABLE was the
+wrong layer, the inverse of the usual failure and the worse direction,
+because the table is what the corpus keeps. precheck now runs DATE
+ARITHMETIC over every stated interval.
 
 ## 16 · A CHALLENGE IS A TEST ORDER, NOT A VERDICT
 

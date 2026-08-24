@@ -9576,3 +9576,253 @@ recorded twice (r47 and r49, both overridden downward by login). What
 changed is that the letter is now DIAGNOSTIC: "C+ (RENDER)" names the
 one dimension to fix, where a bare C+ described a run whose decode was
 in fact accurate.
+
+# RUN 53 — 2003042301213001 · CERTIFIED COPY OF WILL (the type is ACCURATE) · QUEENS block 1665 lot 64 · will executed 1992, recorded 2003
+
+10/10 pages (2 cover + 8 instrument = the cover's stated Document Page
+Count of 8; rd `pages` 10; pdf 10 — R40-1's three namespaces reconcile
+EXACTLY, no supporting series). CRFN 2003000102951, executed
+1992-04-28, recorded 2003-04-23. **Zero new columns, zero new
+vocabulary — streak: 49.** Grade C+ (RENDER), FABRICATION lightly hit.
+
+    LAST WILL AND TESTAMENT of ALFRED SEABROOK, executed at LaGuardia
+    Hospital, 102-01 66th Road, Forest Hills · certified by ALICE
+    MARIE E. RICE, Clerk of the Queens Surrogate's Court, April 2003 ·
+    presented and recorded by DEBORAH SEABROOK, 27-15 Butler Street —
+    the devised property's own address
+
+✅ **TITLE-BY-DEVISE OPENED** — the board's open cell since r33's
+Letters of Administration touched only the intestate route, and named
+explicitly at the r52 close. The shelf that was 0-for-1 delivered on
+its last member.
+
+## THE EVENTS (one event_id) — ⚠ EVERY DISPOSITIVE ROW IS `signals`
+
+    row 1  TITLE·transfers · SIGNALS · Alfred Seabrook → ⚠ BRANCHED
+           three ways: Danielle Seabrook and Brenda A. Seabrook
+           absolutely if eighteen at death (SIXTH); OR, if minors,
+           SHELDON SEABROOK as trustee for DANIELLE and STEPHANIE
+           SEABROOK as trustee for BRENDA, each holding one half until
+           that grandchild's eighteenth birthday; OR, if a grandchild
+           dies before eighteen, over to "such grandchild's then
+           living parent or guardian" — unnamed
+           ⚠ [GRADE FIX] the delivered table said only "as separate
+           trustees". THE WILL NAMES THE PAIRING and a trustee is the
+           reachable party for one identified half-interest — the
+           exact field this product is built on, rendered anonymous.
+           · each an undivided fifty percent · "to be held jointly",
+           and the words do not say whether survivorship attaches
+    row 2  IDENTITY · observes · ⚠ THE WILL NEVER DESCRIBES THE
+           PARCEL: "the real property located at 27-15 Butler Street,
+           Queens, New York" and nothing more — no metes and bounds,
+           no block and lot in eight instrument pages. Block 1665 lot
+           64, ENTIRE LOT and DWELLING ONLY - 1 FAMILY are the COVER's
+           — the register's attribution, which the instrument cannot
+           corroborate
+    row 3  OCCUPANCY·creates · signals · Alfred Seabrook → Stephanie
+           Seabrook · permission to continue residing, conditioned on
+           her paying property taxes, utility costs and ALL
+           maintenance costs "routine or otherwise" · term: until she
+           chooses to leave, OR the residence is sold, OR both
+           grandchildren turn eighteen — whichever comes first
+           ⚠ indexed nowhere
+    row 4  COST · signals · all estate, inheritance, transfer,
+           succession and other death taxes paid as an expense of
+           administration, expressly NOT apportioned to any legatee or
+           devisee — the devisees take the house without the tax
+           following it
+    row 5  COST · transacts · $77.00 recording fee; every transfer-
+           and mortgage-tax line 0.00 — EARNED: a will conveys nothing
+           on recording
+
+## R53-1 — A RECORDED WILL IS NOT A TITLE EVENT (the finding)
+
+There is no date of death, no probate decree and no letters
+testamentary anywhere in the ten pages. The Surrogate's clerk
+certifies only that the copy matches "the original Will and
+Attestation now remaining in this office" — that the will is ON FILE,
+not that it was ADMITTED. A will is revocable until death and speaks
+only from it.
+
+    SO THE RECORDING PUTS AN INTENTION INTO THE LAND RECORD, NOT A
+    TRANSFER. Every dispositive row is `signals`. What the filing
+    creates is a dated, findable CHAIN EXPECTATION — a death
+    certificate and a Surrogate's decree — and the page names the file
+    itself: **4124-93**, READ in ink at the head of page 3 (that the
+    form "####-YY" denotes a Surrogate's file with a 1993 year is
+    INFERRED from the convention, not stated).
+
+⚠ **THE PAIR WITH R52 IS THE POINT.** The two members of the CERTIFIED
+COPY OF WILL shelf hold opposite halves of the same proof and neither
+holds both: r52 was an affidavit with two certified death certificates
+and NO will; r53 is a will with NO death. Neither filing, alone,
+establishes that title moved.
+
+## R53-2 — ⚠ A CANDIDATE TWELFTH FUNCTION, NAMED AND QUEUED: "AUTHORITY"
+
+The eleven cover what the parcel IS, who owns it, who occupies it,
+what burdens it, what may be built, money against it, what it is worth
+and what was spent. **Nothing covers WHO MAY ACT FOR IT.** Three
+clauses of thirteen are about exactly that (NINTH powers, TENTH
+devolution, ELEVENTH nomination + bond waived in every jurisdiction),
+and grep-verified this is the THIRD instrument in the file whose
+entire subject is authority over property rather than property itself:
+
+    R37  limited power of attorney (Freddie Mac → Ocwen)
+    R47  corporate authority package (directors' + secretary's certs)
+    R53  executor nominated, two trustees appointed with sole and
+         absolute discretion, bond waived, powers devolving on any
+         survivor or successor
+
+Each was shelved as a MODE question and none was answered. **Three is
+this file's own threshold for missing structure.** ⚠ QUEUED, NOT
+MINTED (R47's lesson): the competing answer is that authority is a
+PARTY attribute rather than a domain of property fact, in which case
+the gap is in the party model. Deciding needs the r37/r47 mode ruling
+resolved first.
+
+## R53-3 — ⚠ AND THE MODE STRAIN SITTING NEXT TO IT, MISSED AT DELIVERY
+
+`signals` is defined as "intent or expectation asserted by an
+INTERESTED PARTY, not yet fact". A will is not that. It is a legally
+operative disposition awaiting a condition — the testator's death —
+and it binds the world once that condition occurs. The vocabulary has
+no slot for OPERATIVE-ON-A-FUTURE-CONDITION, and `signals` was used
+for want of a better one. ⚠ [GRADE FIX] The delivery asserted the
+mode confidently and named only the AUTHORITY gap; this strain was
+sitting in the same paragraph and went unstated. Joins the r37/r47/r53
+queue.
+
+## R53-4 — WHAT THE INDEX LOST (3rd member of the R48-1 class)
+
+Grep-verified prior members: R48-1 (State and City signed, absent from
+the party fields) and R52-5 (the two decedents indexed, the two living
+owners omitted). Here: Party 1 the testator, Party 2 the two devisees
+— correct as far as it goes, and then **the two trustees, the
+executor, and the daughter holding a recorded right to live in the
+house are indexed NOWHERE.** A name search finds the takers and misses
+every person who can actually act, plus the one person in possession.
+
+## R53 GRADE — C+ (RENDER), FABRICATION lightly hit
+
+    1 FABRICATION  ⚠ HIT, trivial consequence: "in a hospital room in
+                   Forest Hills" — the page gives a hospital and an
+                   address; the ROOM is mine. Narrative-import shape,
+                   the longest-running class in the ledger.
+    2 CAPTURE      CLEAN. The document's actual point (no death, no
+                   probate, so nothing may have operated) was found
+                   and delivered; the trust fork, the occupancy right,
+                   the tax-apportionment direction, the thin identity
+                   and the index gaps all caught.
+    3 THE ELEVEN   CLEAN. Four fires, seven reasoned non-fires, none
+                   wrongly fired. ⚠ Except R53-3: the mode strain was
+                   not named.
+    4 RENDER       ⚠ FAILED. (a) **FALSE COMPUTED INTERVAL IN THE
+                   DELIVERED CLAIMS** — "eleven years and eleven
+                   months" for 1992-04-28 → 2003-04-23, measured at
+                   grading as 4,012 days = **10 years 11 months**.
+                   COUNT/ARITHMETIC CLASS, 10th member (21, 23, 39,
+                   42, 45, 46, 50, 51x2, 53). Arithmetic run WRONG is
+                   worse than arithmetic not run: a computed figure
+                   READS as verified. And the anybody test said
+                   "Eleven years later", which is right — the PROSE
+                   was correct and the TABLE was wrong, the inverse of
+                   the usual failure. (b) the trustee pairing dropped
+                   (row 1 above). (c) the anybody test at 396 words,
+                   the longest of five runs.
+
+    LETTER = the FLOOR = C+ (RENDER). Why not B: a false value reached
+    the table. Why not D: fabrication is present but changes no
+    decision; D is for a fabricated fact of consequence.
+
+STRUCTURE ENACTED THIS RUN (hole-is-the-finding): precheck gains
+**DATE ARITHMETIC** (every stated interval recomputed against the
+dates present; validated against r53 as delivered, it surfaces
+"eleven years and eleven months" beside the true span of 4,012 days)
+and **THREE BUDGETS** (below). The CITED-ROW hedge set was also
+tightened — it had passed row 4 on an incidental "or" inside "legatee
+or devisee"; a branch is MARKED, not stumbled into.
+
+HELD: the eleven called correctly; the branch-at-birth compose order
+producing four branched rows instead of four settled-then-contradicted
+ones; the witness/notary identity question seen, stated and NOT
+claimed under real temptation (R21/R23/R39 holding); relationships used
+freely and correctly because a will recites them; the AUTHORITY
+candidate grep-verified to three members and QUEUED not minted; and
+the machinery catching more pre-delivery than in any prior run —
+HEADLINE caught an unsupported title claim, CARDINALS caught a real
+miscount ("four of thirteen clauses" was three).
+
+# ⚠ THE THREE BUDGETS — the length law, split per section (login 2026-08-24, run 53)
+
+Login: *"less surprised to the event test reading the doc, the data
+gets richer in nature of more data points being analyzed, and the
+summary should not grow, it should reflect complexity but remember its
+an anybody test and its whole point is to summarize the events of the
+document in a way anybody could understand."*
+
+⚠ **THIS SHARPENS R51-4, WHICH I HAD BEEN APPLYING TOO BROADLY.** R51-4
+said length is a function of what the document contains. True — of the
+DATA test. I generalised it across all three sections and used it to
+justify a 396-word summary of a ten-page will. Only one of the three
+budgets is set by the document.
+
+    EVENT TEST    SHRINKS run over run. It is the function model's
+                  falsification point, not a re-telling of the
+                  document. As the eleven stop being surprising there
+                  is less to argue. MEASURED: 947 (r51) → 509 (r52) →
+                  656 (r53). Moving correctly.
+    DATA TEST     GROWS with the number of data points. It is not
+                  prose, it is the corpus: richness IS coverage, and
+                  cutting it means banking less of the document.
+                  MEASURED: 1,066 → 1,168 → 1,594. Correct — r53 held
+                  thirteen clauses, eight named people, three
+                  witnesses and a court certificate.
+    ANYBODY TEST  ⚠ DOES NOT GROW. **Complexity changes WHAT it says,
+                  not HOW MUCH.** Its budget is set by the READER, not
+                  by the document. MEASURED band r49-r52: 272-311
+                  words. r53 delivered 396 — over budget, and the
+                  section that should have been most disciplined.
+
+## THE TEST THAT SETTLES IT
+
+The r53 summary was rewritten to the band and came out **carrying MORE
+information in FEWER words**: the corrected version adds the trustee
+pairing the 396-word version had left anonymous (Sheldon for Danielle,
+Stephanie for Brenda) and still lands inside the band. **That is the
+proof the extra words were not carrying facts.** A summary that grows
+is usually explaining, not reporting — and explanation is what the
+EVENT test is for.
+
+## THE RENDERING FIX THAT READS AS LENGTH BUT IS NOT
+
+The ⚠ Unresolved stream is delivered as one run-on paragraph — eleven
+items, every one bound to a row, jammed into a single block. Same
+facts, several times the reading effort. **It becomes a numbered list
+keyed to its rows.** Nothing is cut; the wading is.
+
+⚠ MECHANISED: precheck now reports the THREE BUDGETS separately and
+raises an over-budget anybody test as a FINDING, not an advisory. A
+single total was the thing that hid this: two of the three movements
+were right and one was wrong, and the sum said only "longer".
+
+## THE R53 SUMMARY, REWRITTEN TO BUDGET (banked as the worked example)
+
+Delivered **396**. First trim **320** — still outside the r49-r52 band of
+272-311, and under this ruling that is a fail, not a near-miss, so the trim
+continued to **304**. The venue (a hospital in Forest Hills) left the summary
+for the table: it is a real fact that changes no decision a reader would
+make, which is exactly the test for what belongs here.
+
+⚠ AND THE CORRECTED VERSION CARRIES MORE THAN THE LONG ONE: it names the
+trustee pairing (Sheldon for Danielle, Stephanie for Brenda) that the
+396-word version left anonymous. **The 92 surplus words were explanation,
+not information** — and explanation is what the EVENT test is for.
+
+**Alfred Seabrook** signed a will in April 1992 leaving the house at **27-15 Butler Street** in **Queens** to his two grand-daughters, **Danielle Seabrook** and **Brenda A. Seabrook**, half each. Three witnesses watched him sign and swore to it the same day. Eleven years later his daughter-in-law **Deborah Seabrook**, listed at that address, obtained a certified copy from the Queens Surrogate's Court and recorded it against the property for **$77.00**, with no transfer tax — recording a will moves nothing.
+
+If a grand-daughter was under eighteen when he died, her half goes first to a trustee who manages it until her eighteenth birthday: his son **Sheldon Seabrook** for Danielle, his daughter **Stephanie Seabrook** for Brenda. Stephanie may go on living in the house until she leaves, it is sold, or both girls turn eighteen — whichever comes first — provided she pays the taxes, utilities and upkeep. Death taxes come out of the estate, so the house passes to the girls clean.
+
+What the filing does not contain is the important part: **no death certificate, no probate decree, no letters appointing anyone.** The clerk certified only that this is a true copy of a will kept in her office, not that a court ever admitted it. A will can be rewritten any day until death and takes effect only then. So the record shows what Alfred Seabrook intended in 1992, not that any of it has happened. Anyone relying on it needs the death certificate and the Surrogate's file, which the page names by number.
+
+Two gaps. The will never describes the property, only its street address; the block and lot came from the City's cover sheet. And the City indexed the testator and the two grand-daughters only — the trustees, the executor and Stephanie's right to live there are invisible to a name search.

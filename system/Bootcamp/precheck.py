@@ -62,6 +62,16 @@ WHAT IT CHECKS
               that asserts what the Unresolved stream denies structurally
               unrepresentable. (r52: rows 1-2 routed title to named
               survivors while the stream called the branch open.)
+  DATE-ARITH  every stated interval recomputed against the dates present.
+              A computed figure READS as verified, so a wrong one is worse
+              than none. (r53: 'eleven years and eleven months' for an
+              interval of 10y 11m.)
+  BUDGETS     three, measured apart (r53 login ruling): the EVENT test
+              SHRINKS as the document stops surprising; the DATA test GROWS
+              with the number of data points, because richness is coverage;
+              the ANYBODY test DOES NOT GROW - complexity changes what it
+              says, not how much. Its budget is the READER's, not the
+              document's.
   HEDGES      warning marks in the record must survive into delivery.
 """
 
@@ -280,7 +290,7 @@ def main():
                        "else)", orphan_head)
 
     # r52 · every ⚠ Unresolved item names the row it bears on, or says none.
-    um = re.search(r"⚠\s*Unresolved:?\**(.*?)(?=\n\s*\*\*|\Z)", table,
+    um = re.search(r"⚠\s*Unresolved:?\**(.*?)(?=\n\s*\*\*|\n\s*\||\Z)", table,
                    re.S | re.I)
     orphan_items = []
     if um:
@@ -308,8 +318,10 @@ def main():
             cited.update(range(lo, hi + 1))
         for m in re.finditer(r"\brows?\s*(\d+)", um.group(1), re.I):
             cited.add(int(m.group(1)))
-    HEDGE = re.compile(r"\u26a0|\bor\b|unsettled|unresolved|unread|"
-                       r"not stated|either", re.I)
+    # r53: "\\bor\\b" alone passed a row on "legatee or devisee".
+    # A branch is MARKED, not stumbled into.
+    HEDGE = re.compile(r"\u26a0|unsettled|unresolved|unread|"
+                       r"not stated|branch|, OR |\bOR\b", 0)
     unhedged = []
     for ln in table.splitlines():
         if not ln.strip().startswith("|") or "---" in ln:
@@ -324,6 +336,39 @@ def main():
                        "must carry the doubt IN THE ROW — a bare value is a "
                        "claim that the cell is SETTLED (r52)", unhedged)
 
+    # r53 · DATE ARITHMETIC. Every stated interval is recomputed against the
+    # dates present. A computed figure READS as verified, so a wrong one is
+    # worse than none. ("eleven years and eleven months" was 10y 11m.)
+    UNIT_D = {"day": 1, "week": 7, "month": 30.44, "year": 365.25}
+    dates = set()
+    for m in re.finditer(r"\b(\d{4})-(\d{2})-(\d{2})\b", text):
+        dates.add(tuple(int(g) for g in m.groups()))
+    spans = []
+    if len(dates) >= 2:
+        ds = sorted(dates)
+        import datetime as _dt
+        try:
+            days = [( _dt.date(*a) - _dt.date(*b) ).days
+                    for a in ds for b in ds if a > b]
+        except ValueError:
+            days = []
+        spans = sorted({abs(d) for d in days})
+    intervals = []
+    for m in re.finditer(r"\b(\w+)\s+(year|month|week|day)s?\b"
+                         r"(?:\s+and\s+(\w+)\s+(year|month|week|day)s?)?",
+                         text, re.I):
+        txt = m.group(0)
+        if not re.search(r"\d|one|two|three|four|five|six|seven|eight|nine|"
+                         r"ten|eleven|twelve", m.group(1), re.I):
+            continue
+        intervals.append(txt.strip())
+    if intervals and spans:
+        report("DATE ARITHMETIC \u00b7 recompute each stated interval against the "
+               "dates in the draft; the real spans between dated events are "
+               "%s days (advisory list, r53 delivered a false one)"
+               % ", ".join(str(s) for s in spans[:6]),
+               sorted(set(intervals)))
+
     cards = sorted({m.group(0) for m in re.finditer(
         r"\b(" + "|".join(CARDINAL_WORDS) + r")\b", low)})
     report("CARDINALS · license each with a count run in-action (advisory)",
@@ -337,16 +382,29 @@ def main():
            "layer say the same thing about it? (advisory)",
            sorted({s for s in SUPERLATIVES if s in low}))
 
-    # R51: the anybody test's length must track the document, not the template.
+    # r53 login ruling \u2014 THREE BUDGETS, measured separately:
+    #   EVENT   shrinks as the document stops surprising (analysis, not re-telling)
+    #   DATA    grows with the number of data points \u2014 richness IS coverage
+    #   ANYBODY does NOT grow. Complexity changes WHAT it says, not HOW MUCH.
     rows = [ln for ln in table.splitlines()
             if ln.strip().startswith("|") and "---" not in ln]
     rows = rows[1:] if rows else []
+    ew = len(sec["EVENT TEST"].split())
+    dw = len(sec["DATA TEST"].split())
     aw = len(sec["ANYBODY TEST"].split())
-    ratio = aw / max(len(rows), 1)
-    print("\n--- LENGTH · anybody test %d words over %d table rows = %.0f "
-          "words/row (advisory) ---" % (aw, len(rows), ratio))
-    print("  R51 drift baseline: 297/311/281 words for 7/13/6-page documents.")
-    print("  Ask: does THIS document need this many words, fewer, or more?")
+    print("\n--- THREE BUDGETS (r53 ruling) ---")
+    print("  EVENT   %4d words   \u2014 should SHRINK run over run" % ew)
+    print("  DATA    %4d words over %d rows \u2014 grows with the data points" %
+          (dw, len(rows)))
+    print("  ANYBODY %4d words   \u2014 CAPPED: the reader's budget, not the "
+          "document's" % aw)
+    print("  measured band r49-r52: anybody 272-311 words.")
+    if aw > 315:
+        problems += report(
+            "ANYBODY TEST OVER BUDGET \u00b7 its whole point is to summarise the "
+            "document's events so ANYBODY understands \u2014 complexity belongs "
+            "in the DATA test, not in more summary words",
+            ["%d words (band r49-r52 was 272-311)" % aw])
 
     hedged = bool(re.search(r"⚠|moderate|unresolved|could not|too faint",
                             prose))

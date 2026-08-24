@@ -79,6 +79,14 @@ import corpus_paths as CP                                      # noqa: E402
 import rc_source as RC                                         # noqa: E402
 import rc_sync as RCS                                          # noqa: E402
 
+# > rc_rd_walk PARSES argv AT IMPORT - shim it away, then restore. Its
+# parse_detail() is the CORPUS SCHEMA parser (the shape the 2.4M existing rows
+# already use, NOT rc_source's), and re-deriving it would re-derive the
+# divergence between them.
+_argv, sys.argv = sys.argv, ["rc_rd_walk.py"]
+import rc_rd_walk as RW                                        # noqa: E402
+sys.argv = _argv
+
 STORE = pathlib.Path(r"D:\CRE Decoding System\02 Acquisitions"
                      r"\Legal Instruments Acquisition")
 INCOMING = STORE / "_incoming"
@@ -98,8 +106,10 @@ ap.add_argument("--workers", type=int, default=16,
                 help="pullers against the courts image host")
 ap.add_argument("--ahead", type=int, default=1200,
                 help="minted tokens kept ready ahead of the pullers")
-ap.add_argument("--batch", type=int, default=3,
-                help="tokens a puller takes per turn")
+# ⚠ NO --batch. rc_pdf_pull took tokens 3 at a time to amortise an HTTP
+# round-trip to the feed's localhost endpoint. In one process the queue is
+# in memory, so batching buys nothing and only makes a puller hold tokens it
+# is not yet working on - which matters because tokens EXPIRE (TOKEN_TTL).
 ap.add_argument("--every", type=int, default=10,
                 help="seconds between synchronization probes")
 ap.add_argument("--sweep-every", type=int, default=900,
@@ -110,6 +120,14 @@ ap.add_argument("--cooldown", type=int, default=600,
 ap.add_argument("--stall-after", type=int, default=300,
                 help="seconds with ZERO successful pulls before the transport"
                      " is presumed dead and recycled")
+ap.add_argument("--rd-every", type=int, default=900,
+                help="seconds between rd heal passes for rd-less RC rows")
+ap.add_argument("--absent-recheck", type=int, default=21600,
+                help="seconds before re-asking about a document whose"
+                     " scan was not up yet (default 6h)")
+ap.add_argument("--rd-days", type=int, default=30,
+                help="trailing window the rd heal opens (the grant rule: a"
+                     " window's own pages unlock its ids' details)")
 ap.add_argument("--day", default=None, help="probe this MM/DD/YYYY, not today")
 a = ap.parse_args()
 
@@ -131,6 +149,28 @@ HDRS = {"User-Agent": RC.UA,
         "Referer": RC.BASE + "/",
         "Accept": "application/pdf,*/*"}
 
+# >> THE HOT LIST - WHY "SYNCED" DID NOT MEAN COMPLETE (measured 2026-08-24).
+# Of 80 richmond documents the sync landed today, 80 had urls, 73 had rd, 73
+# had keys - and ZERO had pdfs. Not a failure: the miner selects
+# `... AND pdf = '' ORDER BY id`, and RC ids are sequential, so today's
+# RC_282xxxx filings sit at the END of the queue behind 1.39M older documents.
+# At 13 docs/s the backfill would not reach them for ~29 hours.
+#
+# ACRIS solved this long ago with a hot list ("new filings jump the line") so
+# today's documents are fully ready the same day. Richmond never had one. So:
+# a freshly-rd'd id goes on the hot list, miners mint it BEFORE taking any
+# backfill batch, and pullers drain the hot side first. A new filing now goes
+# id -> rd -> key -> pdf in minutes instead of a day.
+hot_ids = queue.Queue()                   # ids needing a token URGENTLY
+ready_hot = queue.Queue()                 # their minted tokens, jump the line
+WAKE_RD = threading.Event()               # the probe pokes the rd heal awake
+# >> PER-DOCUMENT COOLDOWN ON THE ABSENT RE-CHECK. Without it, a row
+# recorded inside the window whose scan NEVER appears gets re-asked every
+# --rd-every forever: ~100 new absent rows a day accumulating over 30
+# days, each re-fetched 96 times a day, is tens of thousands of pointless
+# requests at a source that has done nothing wrong. Most scans land within
+# a day or two, so checking a given document a few times a day is plenty.
+_absent_at: dict[str, float] = {}
 ready = queue.Queue()                     # (did, location, minted_at)
 DBQ = queue.Queue(maxsize=10000)          # (did, relpath) -> the ONE writer
 STOP = threading.Event()
@@ -143,7 +183,8 @@ grab_lock = threading.Lock()              # guards next_ids + served_ids as a
 tl = threading.local()
 served_ids: set[str] = set()              # never hand the same doc out twice
 stat = {"minted": 0, "skipped": 0, "got": 0, "bytes": 0, "err": 0,
-        "wrote": 0, "stale": 0, "synced": 0, "probe_req": 0}
+        "wrote": 0, "stale": 0, "synced": 0, "probe_req": 0, "rd": 0,
+        "hot": 0}
 last_ok = [time.time()]
 
 RESTRICTED = set()
@@ -253,15 +294,26 @@ def miner():
     healthy - hence the outer guard as well as the inner one."""
     while not STOP.is_set():
       try:
-        if ready.qsize() >= a.ahead or HOLD.is_set():
+        if HOLD.is_set():
             time.sleep(5)
             continue
-        with grab_lock:
-            try:
-                grab = next_ids(20)
-            except Exception:
-                grab = []
-            served_ids.update(grab)
+        # > HOT FIRST, ALWAYS - and note this is checked BEFORE the --ahead
+        # buffer test. A full backfill buffer must never delay a filing that
+        # landed minutes ago; that is the whole point of the hot list.
+        grab, is_hot = [], False
+        try:
+            grab = [hot_ids.get_nowait()]
+            is_hot = True
+        except queue.Empty:
+            if ready.qsize() >= a.ahead:
+                time.sleep(5)
+                continue
+            with grab_lock:
+                try:
+                    grab = next_ids(20)
+                except Exception:
+                    grab = []
+                served_ids.update(grab)
         if not grab:
             time.sleep(15)
             continue
@@ -294,9 +346,12 @@ def miner():
                     loc = (e.headers.get("Location")
                            if e.code in (301, 302, 303) else None)
                 if loc:
-                    ready.put((did, loc, time.time()))
+                    (ready_hot if is_hot else ready).put(
+                        (did, loc, time.time()))
                     with lock:
                         stat["minted"] += 1
+                        if is_hot:
+                            stat["hot"] += 1
                 else:
                     with lock:
                         stat["skipped"] += 1
@@ -368,10 +423,14 @@ def puller():
     while not STOP.is_set():
         while HOLD.is_set() and not STOP.is_set():
             time.sleep(5)
+        # > drain the hot side first; only then the backfill
         try:
-            did, loc, minted = ready.get(timeout=5)
+            did, loc, minted = ready_hot.get_nowait()
         except queue.Empty:
-            continue
+            try:
+                did, loc, minted = ready.get(timeout=5)
+            except queue.Empty:
+                continue
         if STOP.is_set():
             return
         if did in RESTRICTED:
@@ -597,10 +656,194 @@ def probe():
             n = land(new)
             with lock:
                 stat["synced"] += n
-            say("  SYNC landed %d new richmond id(s) · page %d/%d"
-                % (n, page, pages))
+            say("  SYNC landed %d new richmond id(s) - page %d/%d"
+                " - waking the rd heal" % (n, page, pages))
+            # > POKE THE HEAL NOW. Waiting up to --rd-every for a timer would
+            # leave a filing sitting with no rd, no key and no pdf for a
+            # quarter of an hour after we already knew about it.
+            WAKE_RD.set()
         _save_page(today, pages)
         time.sleep(a.every)
+
+
+# -- rd, and the keying that follows it for free --------------------
+
+def rd_heal():
+    """Land recorded_details for RC rows that have none - keying comes free.
+
+    > THIS IS THE ORGAN rc_live NEVER HAD, AND WITHOUT IT THE LANE IS NOT
+    WHOLE (login 2026-08-24: "make sure it is keeping up with the sync, the
+    url, rd, pdfs, and keying"). rc_live landed only id + rd_url + pdf_url;
+    rd was a separate walker, and rc_heal was a one-shot script nobody re-ran.
+    MEASURED: of 80 documents synced today, 7 still had no rd - exactly the 7
+    that failed in the manual heal at 15:07 and were never retried.
+
+    > THE GRANT RULE, MEASURED 2026-08-21: a detail unlocks only after the
+    SESSION has fetched THE LISTING PAGE the id appears on. A held id whose
+    page was never fetched returns a 4,212-byte shell; the same id right after
+    its page returns full RECORDED DETAILS. So: open a Window over the
+    trailing days -> read its pages -> then fetch details, all on the SAME
+    session. Fetching a detail cold does not fail loudly - it returns HTTP 200
+    and a lie, which is far worse.
+
+    > KEYING IS NOT DONE HERE AND MUST NOT BE. The key_on_rd trigger keys each
+    landing INSIDE rd's own transaction - free, atomic, impossible to forget.
+    Today's data proves it: every row with rd has a key, every row without has
+    none. A keyer in this loop would be a second writer racing the trigger."""
+    import datetime as dt
+    while not STOP.is_set():
+        try:
+            ro = sqlite3.connect("file:%s?mode=ro" % CP.NAV_DB, uri=True,
+                                 timeout=120)
+            ro.execute("PRAGMA busy_timeout=60000")
+            # >>> THE WINDOW IS THE WORKLIST - DO NOT SCAN THE CORPUS.
+            # First version asked the table "which RC rows are absent or
+            # pending?" with a json_extract predicate. There is no index on
+            # that expression, so it read 2.5M rows parsing JSON on every one
+            # - MEASURED: still running past 100 s, which meant rd_heal never
+            # got past its own first query and healed NOTHING. The rd-less
+            # half of the same question answers in 0.0 s because
+            # `recorded_details = ''` is a plain indexed comparison.
+            #
+            # So invert it. The date window already knows exactly which
+            # documents were recorded in the period we care about; ask the
+            # TABLE about those ids one PK lookup at a time. O(window), not
+            # O(corpus), and every lookup rides the primary key.
+            b = dt.date.today()
+            lo = b - dt.timedelta(days=a.rd_days)
+            fmt = "%m/%d/%Y"
+            w = RCS.Window(lo.strftime(fmt), b.strftime(fmt))
+            wrows = w.rows()
+            ro = sqlite3.connect("file:%s?mode=ro" % CP.NAV_DB, uri=True,
+                                 timeout=120)
+            ro.execute("PRAGMA busy_timeout=60000")
+            _now = time.time()
+            hits = []
+            for r in wrows:
+                iid = r["internal_id"]
+                if _now - _absent_at.get(iid, 0.0) < a.absent_recheck:
+                    continue
+                got = ro.execute("SELECT recorded_details FROM navigation"
+                                 " WHERE id=?", ("RC_" + iid,)).fetchone()
+                if not got:
+                    continue                      # the probe lands new ids
+                if not got[0]:
+                    hits.append(iid)              # no rd at all
+                    continue
+                try:
+                    st = str(json.loads(got[0]).get("image_state", "")).lower()
+                except ValueError:
+                    continue
+                # >>> PENDING AND RECENT-ABSENT ARE NOT VERDICTS. Re-ask.
+                if st in ("absent", "pending"):
+                    hits.append(iid)
+            ro.close()
+            say("  RD HEAL: window %s .. %s lists %d row(s); %d need work"
+                " (rd-less or scan-not-yet-up)"
+                % (lo.strftime(fmt), b.strftime(fmt), len(wrows), len(hits)))
+            if not hits:
+                WAKE_RD.wait(a.rd_every)
+                WAKE_RD.clear()
+                continue
+            wcon = sqlite3.connect(CP.NAV_DB, timeout=600) if a.apply else None
+            if wcon:
+                wcon.execute("PRAGMA busy_timeout=300000")
+            landed = failed = 0
+            for iid in hits:
+                if STOP.is_set():
+                    break
+                try:
+                    _, h = RCS.RR.post(w.s, "/Search/DateRangeSearch",
+                                       w._f(ViewDetailsButton=str(iid)))
+                    rec = RW.parse_detail(h, iid)
+                except Exception as e:
+                    msg = str(e)
+                    # > A REFUSAL STOPS THE HEAL, NOT THE LANE. The pdf side
+                    # talks to a DIFFERENT host on self-authenticating tokens;
+                    # richmond refusing the detail route says nothing about
+                    # the courts image route.
+                    if ("403" in msg or "Forbidden" in msg
+                            or "nauthorized" in msg):
+                        say("  RD HEAL REFUSED at RC_%s - stopping the heal"
+                            " (pdf lane is another host, unaffected): %.60s"
+                            % (iid, e))
+                        break
+                    failed += 1
+                    continue
+                if not a.apply:
+                    continue
+                for _try in range(60):
+                    try:
+                        # > never overwrite an rd we already hold
+                        # >> OVERWRITE ONLY TO IMPROVE. An rd-less row
+                        # takes anything; an absent/pending row is
+                        # replaced ONLY once the scan is actually
+                        # there. Never downgrade a present reading -
+                        # a transient blip must not erase a fact we
+                        # already hold.
+                        wcon.execute(
+                            "UPDATE navigation SET recorded_details=?"
+                            " WHERE id=? AND (recorded_details=''"
+                            "  OR json_extract(recorded_details,"
+                            "     '$.image_state') IN"
+                            "     ('absent','pending'))",
+                            (json.dumps(rec, separators=(",", ":")),
+                             "RC_" + iid))
+                        wcon.commit()
+                        landed += 1
+                        break
+                    except sqlite3.OperationalError:
+                        time.sleep(5)
+                # > STRAIGHT ONTO THE HOT LIST. It has rd now, so it is
+                # mintable - and it must not wait behind 1.39M older ids.
+                # image_state gates it exactly as next_ids() would.
+                # >>> PENDING IS NOT IMAGELESS, AND THE DIFFERENCE IS THE
+                # WHOLE POINT (login 2026-08-24: "the big difference between
+                # a pending image vs an imageless claim").
+                #
+                # PROVEN, not theorised: 10 of 10 documents recorded FRIDAY
+                # read "absent" in our stored rd and "present" at the source
+                # today - the scans simply arrived over the weekend. Treating
+                # that first reading as a verdict strands the document
+                # forever, because the miner requires image_state='present'
+                # and nothing ever looked again.
+                #
+                #   present                -> mint it now (the hot list)
+                #   pending                -> THE SOURCE ITSELF says it is
+                #                             coming. Never a verdict.
+                #   absent, recorded recently -> scan lag. Never a verdict.
+                #   absent, long after recording -> only THIS is a real
+                #                             "no image" fact, and the
+                #                             --rd-days window is what draws
+                #                             that line: outside it we stop
+                #                             asking, and the row keeps an
+                #                             EMPTY pdf column - honest todo,
+                #                             never a fabricated verdict.
+                #
+                # Same family as acris writing a refusal down as a permanent
+                # "imageless": a freshness-dependent reading, frozen too
+                # early. ⚠ NOTHING HERE EVER WRITES A VERDICT INTO pdf. The
+                # only states are "has a pdf" and "does not yet".
+                st_now = str(rec.get("image_state", "")).lower()
+                if st_now == "present":
+                    hot_ids.put("RC_" + iid)      # jump the backfill queue
+                    _absent_at.pop(iid, None)     # resolved - stop tracking
+                else:
+                    # pending OR absent-but-recent: both mean ASK AGAIN LATER,
+                    # and neither is recorded as a conclusion anywhere.
+                    _absent_at[iid] = time.time()
+                time.sleep(0.3)          # a healer has no reason to hurry
+            if wcon:
+                wcon.close()
+            with lock:
+                stat["rd"] += landed
+            say("  RD HEAL: landed %d - failed %d"
+                " (key_on_rd keyed each landing in the same transaction)"
+                % (landed, failed))
+        except Exception as e:
+            say("  RD HEAL error (%s: %.60s)" % (type(e).__name__, e))
+        WAKE_RD.wait(a.rd_every)
+        WAKE_RD.clear()
 
 
 # ── progress ───────────────────────────────────────────────────────────
@@ -614,11 +857,17 @@ def reporter():
             s = dict(stat)
         el = time.time() - t0
         d = s["got"] - last["got"]
-        say("PROGRESS %s pdfs · %.2f/s now · %.2f/s avg · %.1f GB · minted %s"
-            " (ready %d) · err %d · stale %d · synced %d · %d min"
-            % ("{:,}".format(s["got"]), d / 60.0, s["got"] / el if el else 0,
+        # > `db N` IS A CONTRACT, NOT DECORATION. routine_update parses the
+        # board's richmond cumulative out of this log with r"db ([\d,]+)".
+        # rc_pdf_pull printed it; dropping it would leave the board reading a
+        # dead log and reporting the lane STALE while it ran perfectly.
+        say("PROGRESS %s pdfs · db %s · %.2f/s now · %.2f/s avg · %.1f GB"
+            " · minted %s"
+            " (ready %d) · err %d · stale %d · synced %d - rd %d - hot %d · %d min"
+            % ("{:,}".format(s["got"]), "{:,}".format(s["wrote"]),
+               d / 60.0, s["got"] / el if el else 0,
                s["bytes"] / 1024 ** 3, "{:,}".format(s["minted"]),
-               ready.qsize(), s["err"], s["stale"], s["synced"], el / 60))
+               ready.qsize(), s["err"], s["stale"], s["synced"], s["rd"], s["hot"], el / 60))
         last = s
 
 
@@ -631,6 +880,7 @@ if __name__ == "__main__":
         say("  ⚠ DRY RUN - pdfs will be fetched and stored but the table is"
             " NOT updated. Use --apply for the real thing.")
     threads = [threading.Thread(target=probe, daemon=True),
+               threading.Thread(target=rd_heal, daemon=True),
                threading.Thread(target=watchdog, daemon=True),
                threading.Thread(target=writer, daemon=True),
                threading.Thread(target=reporter, daemon=True)]

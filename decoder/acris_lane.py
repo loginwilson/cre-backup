@@ -1089,6 +1089,13 @@ def governor():
         everything and only the probe continues (unchanged)."""
     streak, hold, last = 0, 0, {"shed": 0, "pdfs": 0, "imageless": 0,
                                "verified": 0}
+    # ⚠⚠ MEASURE WHAT THE WIRE ACTUALLY CARRIED, NOT WHAT WE ASKED FOR
+    # (2026-08-24, 17:57). tempo.rps is a REQUEST, not an achievement. Once
+    # the link or the inflight cap binds, the governor keeps stepping - no
+    # sheds fire, because nothing is failing, we simply are not being served
+    # that fast - and commanded marches to the ceiling while delivered sits
+    # far below. Measured: commanded 56.6, delivered 54.6/42.9/53.2.
+    last_spent = tempo.spent
     rd_handed = False
     # per-width measurement: settled average over the width's WHOLE window,
     # announced at every transition - the ceiling shows as this number
@@ -1142,6 +1149,9 @@ def governor():
         # ACRIS experiences. Climb it the way the governor climbed width:
         # +2/s per clean window, back off hard on the server's own signal.
         rps = tempo.rps
+        # requests that actually reached the wire in this window
+        delivered = (tempo.spent - last_spent) / 60.0
+        last_spent = tempo.spent
         # ⚠⚠ THE CEILING IS LIVE-TUNABLE (login 2026-08-24: "if we do see
         # that theres room and we get there without blocking then we should
         # push that ceiling as we step"). --rps-max was NEVER a measured
@@ -1242,14 +1252,39 @@ def governor():
             # organ's share) and keeps the wire busy while workers do local
             # work. So the governor stops hunting a width ceiling; the
             # ceiling now lives in --max-rps and the round trip.
+            # ⚠⚠ DO NOT CLIMB PAST WHAT IS BEING DELIVERED (2026-08-24).
+            # If the wire carries materially less than we asked for, the
+            # bottleneck is already downstream of the pacer - the link, the
+            # round trip, or --max-inflight - and raising the tempo cannot
+            # move one extra byte. No shed fires either, because nothing is
+            # FAILING; we simply are not being served that fast. So the
+            # governor would march commanded to the ceiling while delivered
+            # sat far below (measured: commanded 56.6, delivered 54.6 / 42.9
+            # / 53.2) and then BANK the commanded number as a clean peak -
+            # which warm resume multiplies on the next restart, starting the
+            # lane at a rate this link has never once carried. A fiction
+            # invented by our own governor and compounded by our own resume.
+            #
+            # Hold at the last honest rate instead. The ceiling gets found by
+            # measurement, not by assertion.
             if streak >= a.step_minutes and rps < ceiling:
+                if delivered < rps * 0.90:
+                    say("  GOVERNOR holding at %.1f/s - delivered only %.1f/s"
+                        " (%.0f%%): the wire is the limit now, not the tempo."
+                        " Climbing further would only inflate the banked peak"
+                        % (rps, delivered, 100 * delivered / rps if rps else 0))
+                    save_tempo(delivered, clean=True)   # the HONEST peak
+                    streak = 0
+                    continue
                 verdict, win_c0 = settle(w)
                 win_t0 = time.time()
                 tempo.rps = min(rps + a.rung_step, ceiling)
-                save_tempo(tempo.rps, clean=True)   # bank the rung
+                # ⚠ BANK DELIVERED, NEVER COMMANDED - see above.
+                save_tempo(delivered, clean=True)
                 streak = 0
-                say("  GOVERNOR %d clean minutes - TEMPO %.1f -> %.1f/s (%s)"
-                    % (a.step_minutes, rps, tempo.rps, verdict))
+                say("  GOVERNOR %d clean minutes - TEMPO %.1f -> %.1f/s"
+                    " (delivered %.1f/s · %s)"
+                    % (a.step_minutes, rps, tempo.rps, delivered, verdict))
                 continue
             if False and streak >= a.step_minutes and w < a.pdf_max:
                 verdict, win_c0 = settle(w)

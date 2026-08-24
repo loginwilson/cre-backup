@@ -171,6 +171,21 @@ loop's coverage claim becomes false without anything looking wrong.
 
 - [x] **r52** `2003041501459002` CERTIFIED COPY OF WILL (actually an AFFIDAVIT CONCERNING REAL ESTATE) · BROOKLYN block 8686 lot 58 · rec 2003-10-24 · rd pages 7 / pdf 7 — from the type tail. ⚠ **THE SHELF NAMES THE ONE MECHANISM THAT DID NOT HAPPEN**: no will, and none was ever needed — joint tenancy with right of survivorship moves title outside the estate, so probate never touches it. FIFTH true type-shelf mismatch (r42, r48, r50, r51, r52 — grep-verified). Two deaths (2001-11-25, 2002-07-25) moved title with NO instrument; a Florida-form affidavit sworn in Broward County 15 months later is the only witness. **CERTIFIED COPY OF WILL shelf now 0-for-1 on wills** — ONE member left, `2003042301213001` QUEENS 10pp: verify before trusting the shelf, and TITLE-BY-DEVISE (the will/Surrogate route) remains UNEXERCISED. **Chain expectation:** the deed dated 1997-12-18, recorded 1998-01-09, Deed Book 4098 p. 2063 Kings County — it holds the granting language that decides whether the deponents took 100% or 50%, and it is the only document that can settle this filing.
 
+- [x] **r53** `2003042301213001` CERTIFIED COPY OF WILL — ⚠ **THE TYPE IS ACCURATE** (first drawn document in four runs that its shelf describes correctly) · QUEENS block 1665 lot 64 · will executed 1992-04-28, rec 2003-04-23 · rd pages 10 / pdf 10 — the type tail's last CERTIFIED COPY OF WILL member. ✅ **TITLE-BY-DEVISE OPENED**: Last Will and Testament of ALFRED SEABROOK devising 27-15 Butler Street to two grand-daughters 50/50, with two separate trusts (Sheldon trustee for Danielle, Stephanie for Brenda) until each turns eighteen, plus a conditional right of residence for Stephanie. ⚠ **BUT NO TITLE EVENT**: no death date, no probate decree, no letters — every dispositive row is `signals`. **Chain expectations:** the testator's death certificate; the Surrogate's decree; **Surrogate's file 4124-93**, READ in ink on page 3. ⚠ CANDIDATE TWELFTH FUNCTION "AUTHORITY" queued (3rd member with r37, r47).
+
+### ⚠ THE SURROGATE'S COURT IS A SOURCE, AND R27 SAID SO FIRST
+
+Grep-verified: R27 (1950) already recorded that Surrogate's Court is "a
+MISSING CUSTODIAN for the multi-source roadmap" and that whether title
+passed to HEIRS or to DEVISEES could be answered only from the Surrogate's
+file. r53 is the first instrument the corpus has read FROM that custodian,
+and it proves the point in the negative — the will alone cannot say whether
+anything passed. **The pair r52/r53 is the whole argument:** r52 held two
+certified death certificates and no will; r53 holds a will and no death.
+Neither filing, alone, establishes that title moved. A DOB-style source
+onboarding for Surrogate's Court (file numbers of the form ####-YY, decrees,
+letters testamentary) is the route to closing both.
+
 ### ⚠ TITLE-BY-DEVISE IS STILL UNEXERCISED (measured r52)
 
 The obvious route to a decedent's estate — a will, Letters Testamentary,
