@@ -1,5 +1,6 @@
 # Memory Index
 
+- [⚠ THE CONSOLIDATED ACRIS LANE](project_acris_consolidated_lane.md) — acris_lane.py = ONLY acris process (edge+rd+pdf+key, piano rule); ready = needed−pdf_todo IS the board row; freshness clause (fresh doc w/o image = DEFERRED never imageless); <30-day target math; next = rc_lane → 2-row board
 - [EXTRACTION CAMPAIGN DECISIONS 2026-08-24](project_decoder_extraction_campaign.md) — extraction-ready gate = sync columns full (imageless = verdict, rd-only read); SINGLE VLM + escalation ladder, OCR retired; 3 deliverables (functions-read → tables → generated summary) + evidence-only rule; MODE is the reader's first decision; cross-grading bootcamp; model pinned only when compute arrives
 - [SOURCE ONBOARDING PLAYBOOK](project_decoder_source_onboarding.md) — map inventory → pull code → source keyer → enter sync with inflow tracking since mapped state → backfill+inflow as ONE number; five artifacts per source (id scheme · mint branch · key rule · sync probe · board row)
 - [NEVER assert a fetch can't be done](feedback_never_assert_unfetchable.md) — every "impossible" fetch later worked (richmond UA retraction); blocked = puzzle, probe the ladder; explicit refusal notices still stop work

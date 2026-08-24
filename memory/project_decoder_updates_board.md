@@ -5,8 +5,18 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-24T00:19:06.637Z
+  modified: 2026-08-24T14:15:38.760Z
 ---
+
+**⚠ RE-CONSOLIDATED 2026-08-24 (login's 2-row vision): THREE rows shown —
+synchronization acris (= THE LANE: landed = READY-TO-DECODE docs =
+needed − pdf_todo, rate from acris_lane.log's "PDF PROGRESS N pdfs · M
+imageless" line — pdfs+imageless IS the ready delta since pdf follows rd) ·
+sync richmond (COMPLETE) · acq pdf richmond. Config gained
+`"hidden": ["acquisition pdf|acris"]` (per-lane row hiding; data still
+computed); keying rows retired from show; acq rd row hidden but computed.
+See [[project-acris-consolidated-lane]]. The 2026-08-23 spec below is the
+underlying machinery and still true.**
 
 **⚠ BOARD REDESIGNED 2026-08-23 (login's final spec) — NINE ROWS, THREE
 TIMESCALES, FOUR STATUSES.** Rows: sync ×2 · acq rd ×2 · acq pdf ×2 · keying

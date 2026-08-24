@@ -11,13 +11,18 @@ lane's shape HERE, never in a shell history.
     python fleet.py start <lane|all>    launch a lane's missing processes
     python fleet.py stop <lane|all>     stop a lane's processes
 
-Lanes: sync (both custodians) · rd (acris rd backfill 4x28 + keying via
-the key_on_rd trigger, which needs no process) · rcpdf (richmond pdf
-trio) · apdf (acris pdf 3x14 - PARKED 2026-08-24, start only when login
-unparks it) · board (routine_update + board_truth).
+Lanes: sync (acris = THE CONSOLIDATED LANE; richmond = rc_live until
+rc_lane exists) · rcpdf (richmond pdf trio) · board (routine_update +
+board_truth + pass-2 arm).
 
-The acq lanes exist only to close the historical backfill; sync carries
-new filings through nav/rd/key/pdf on its own (the three-verb model).
+⚠ THE 2026-08-24 CUTOVER: acris_lane.py absorbed acris_live, the rd_walk
+fleet (4x28) AND the image_walk fleet (3x14). ONE process is the whole
+acris presence - edge probe every 10s, rd backfill workers, pdf pool with
+the sync hot-list, keying via the key_on_rd trigger (needs no process).
+The old "rd" and "apdf" lanes are RETIRED: starting them alongside the
+lane would put a second access point on ACRIS, which is the tripping
+condition the lane exists to remove. Their definitions live in git
+history if a rollback ever needs them.
 """
 import pathlib
 import subprocess
@@ -34,24 +39,13 @@ HI = "\uffff"
 # (name, script, args, cwd, stdout-log) - one row per PROCESS.
 LANES = {
     "sync": [
-        ("acris_live", "acris_live.py",
-         ["--apply", "--pdf", "--every", "10"], HERE, HERE / "acris_live.log"),
+        # THE CONSOLIDATED ACRIS LANE - sync + rd backfill + pdf pool, one
+        # access point. Log goes to NAV_WORK (the board reads it there).
+        ("acris_lane", "acris_lane.py",
+         ["--apply", "--workers", "28", "--pdf-workers", "20"],
+         HERE, W / "acris_lane.log"),
         ("rc_live", "rc_live.py",
          ["--apply", "--every", "10"], HERE, HERE / "rc_live.log"),
-    ],
-    "rd": [
-        ("rd_a1", "rd_walk.py",
-         ["--workers", "28", "--lo", "", "--hi", "2012061200165002"],
-         HERE, W / "rd_walk_a1.log"),
-        ("rd_a2", "rd_walk.py",
-         ["--workers", "28", "--lo", "2012061200165002",
-          "--hi", "2024062000194001"], HERE, W / "rd_walk_a2.log"),
-        ("rd_a3", "rd_walk.py",
-         ["--workers", "28", "--lo", "2024062000194001",
-          "--hi", "FT_2710000762071"], HERE, W / "rd_walk_a3.log"),
-        ("rd_a4", "rd_walk.py",
-         ["--workers", "28", "--lo", "FT_2710000762071", "--hi", HI],
-         HERE, W / "rd_walk_a4.log"),
     ],
     "rcpdf": [
         ("rc_feed", "rc_feed.py",
@@ -60,17 +54,6 @@ LANES = {
          ["--workers", "16", "--batch", "3"], HERE, HERE / "rc_pull.log"),
         ("rc_pdf_land", "rc_pdf_land.py",
          ["--loop", "--raw"], HERE, HERE / "rc_land_stdout.log"),
-    ],
-    "apdf": [   # PARKED - board shows PENDING via updates_config parked list
-        ("image_i1", "image_walk.py",
-         ["--workers", "14", "--lo", "0", "--hi", "3"],
-         HERE, W / "image_walk_i1.log"),
-        ("image_i2", "image_walk.py",
-         ["--workers", "14", "--lo", "3", "--hi", "FT_2"],
-         HERE, W / "image_walk_i2.log"),
-        ("image_i3", "image_walk.py",
-         ["--workers", "14", "--lo", "FT_2", "--hi", HI],
-         HERE, W / "image_walk_i3.log"),
     ],
     "board": [
         # pass-2 arm: polls the board, releases the reference keyer at

@@ -519,3 +519,52 @@ first. Even a 1,000-doc recording dump ≈ 20s of full-lane attention. The
 periodic DEEP walk (~300s, several past the edge) remains the net against
 sparse crfn sequences. Levelness is proven (blanks + control), never
 assumed.
+
+### BUILT AND CUT OVER — 2026-08-24 ~10:12, pdf pool folded in
+
+`acris_lane.py` now runs ALL FOUR organs in one process — the piano player
+(login: "very very important that it is one access at a time. almost like a
+super concise machine that is playing piano"):
+
+    edge probe    every 10s, walk-on-hit, rd arrives IN the probe request
+    rd backfill   28 workers on ix_nav_rd_todo
+    pdf pool      20 workers on `pdf='' AND recorded_details!=''` (trailing
+                  feeder, image_walk order) + a HOT LIST: every sync landing
+                  jumps the pdf queue, so a new filing is fully ready minutes
+                  after recording (proven 10:07-10:08 — edge advance filings
+                  had pdfs in the store inside a minute)
+    keying        key_on_rd trigger, no process
+
+**THE FRESHNESS CLAUSE** (login: "a new doc id from the edge walk may very
+well miss its image... the lag distribution"): TotalPages<=0 on a doc
+recorded within `--fresh-days` (30) is DEFERRED (pdf stays `''`, the feeder's
+wrap retries it), never verdicted `imageless`. Only aged docs earn the
+verdict. A permanent verdict must never be written on a temporary state.
+
+**READY TO DECODE is the board metric now** (login: "one lane one rate can
+show me how fast we are catching up to being completely synchronized to the
+live source as a database"). pdf only ever follows rd, so
+`ready = needed - pdf_todo` exactly (ix_nav_pdf_todo, index-only —
+board_truth's machinery). The synchronization acris row = (ready, ledger
+total); its rate keys off the lane's `PDF PROGRESS` counter (pdfs +
+imageless = ready-docs, one subtraction for rate AND increase). rd detail
+lives on in the lane log and the hidden acq rd row.
+
+**Sequencing is the collision control** (login: "the key is the
+sequencing"): edge holds its reservation; rd lands only behind the proven
+level; pdf follows landed rd (hot first, backfill behind); deferred re-enter
+on the wrap; ONE refusal tripwire stills every worker in both pools while
+the probe alone continues as resume detector.
+
+**Throughput target** (login: "we need to see this entire sync under 30
+days"): ~19.9M pdfs remaining needs >=7.7 ready-docs/s sustained. The
+measured image-backend ceiling was ~6-8 docs/s AGGREGATE (worker-count
+independent) — so the plan is: scale the pool while CPU headroom lasts
+(46% of one core at 10 workers), inherit rd's thread budget when rd closes
+(~2 days), and if the GIL pins before the server ceiling, offload
+img2pdf/md5 to a process pool — the network stays one access point either
+way. Board shows the one honest ETA.
+
+Retired by this cutover: acris_live.py, rd_walk x4, image_walk x3. fleet.py
+"sync" lane = acris_lane + rc_live. Next: rc_lane for richmond (rd closed —
+edge sync + pdf pool only), then the pure 2-row board.
