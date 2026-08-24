@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-24T15:01:49.666Z
+  modified: 2026-08-24T17:07:59.925Z
 ---
 
 **THE TWO ACCESS RULES (login's naming, 2026-08-24):** every source gets an
@@ -29,6 +29,16 @@ Launch: `python fleet.py start sync` or
 `python acris_lane.py --apply --workers 28 --pdf-workers 20`, stdout →
 NAV_WORK\acris_lane.log. Retired: acris_live, rd_walk×4, image_walk×3 —
 starting any beside the lane recreates the tripping condition.
+
+**⚠⚠ THE RAMP LAW (trip #3, 13:03):** NEVER cold-launch — a restart firing
+~80 workers at once = 80 cold TLS opens in one second = Bandwidth Notice
+ONE SECOND after launch, after the governor's gentle climb to 52 ran clean
+ALL DAY. The lane now self-ramps unavoidably (pdf width 8 +4/30s to
+target; rd staggered 0.5s) — never add a bypass, and RESTARTS THEMSELVES
+ARE LOAD EVENTS: minimize them (tuning belongs to the governor). Sustained
+width was never the tripper — the stampede was. Also: governor announces
+each width's settled avg at every step (--step-minutes 10 windows, login's
+call); measured that day: w48 ~5.4/s · w50 ~6.2/s (peak 7.5).
 
 **FRESHNESS CLAUSE:** TotalPages≤0 on a doc recorded within --fresh-days (30)
 = DEFERRED (pdf stays '', feeder wrap retries), never `imageless` — scan lag

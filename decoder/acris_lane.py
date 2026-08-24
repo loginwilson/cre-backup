@@ -2,6 +2,17 @@
 
     python acris_lane.py --apply --workers 28        # the real thing
 
+⚠⚠ THE RAMP LAW — NEVER COLD-LAUNCH THIS LANE (login, 2026-08-24 13:03):
+"you cant cold launch the code... it needs to ramp and not just restart at
+80 or whatever." A restart that fires every worker at once opens ~80 cold
+TLS connections in one second - ACRIS served its Bandwidth Notice ONE
+SECOND after exactly such a relaunch (trip #3), after absorbing the
+governor's gentle climb to width 52 all morning without complaint. The
+ramp is CODED AS UNAVOIDABLE below (pdf width always starts at RAMP_START
+and climbs; rd workers stagger 0.5s apart) - do not add any launch path
+that bypasses it, and treat every restart as a load event to be minimized
+(width/tuning changes belong to the governor, not to relaunches).
+
 Login's design (2026-08-24, docs/sources/acris/LIVE_SYNC.md "THE CONSOLIDATED
 LANE"): ACRIS tripped its Bandwidth Notice twice while the edge-prober
 (acris_live) and the doc-walkers (rd_walk x4) ran as SEPARATE python
@@ -87,6 +98,11 @@ ap.add_argument("--apply", action="store_true")
 ap.add_argument("--workers", type=int, default=28)
 ap.add_argument("--pdf-workers", type=int, default=12)   # STARTING width
 ap.add_argument("--pdf-max", type=int, default=48)       # governor's ceiling
+ap.add_argument("--step-minutes", type=int, default=10,
+                help="clean minutes a width must hold before +2 (login"
+                     " 2026-08-24: 10-min windows 'to truly see if things"
+                     " degrade or recover stronger' - 5 was too thin to"
+                     " separate a ceiling bend from a heavy-doc patch)")
 ap.add_argument("--fresh-days", type=int, default=30)
 ap.add_argument("--every", type=int, default=10)
 ap.add_argument("--control-every", type=int, default=60)
@@ -370,7 +386,8 @@ def flush():
         pend[:0] = batch
 
 
-def worker():
+def worker(idx=0):
+    time.sleep(idx * 0.5)        # stagger cold starts - never a stampede
     while not stop_workers.is_set():
         try:
             did = q.get(timeout=5)
@@ -554,6 +571,18 @@ def governor():
         everything and only the probe continues (unchanged)."""
     streak, hold, last = 0, 0, {"shed": 0, "pdfs": 0, "imageless": 0}
     rd_handed = False
+    # per-width measurement: settled average over the width's WHOLE window,
+    # announced at every transition - the ceiling shows as this number
+    # flattening (or falling) across steps while minutes stay clean
+    win_t0, win_c0 = time.time(), 0
+
+    def settle(w):
+        with lock:
+            c = stats["pdfs"] + stats["imageless"]
+        el = time.time() - win_t0
+        return ("width %d averaged %.2f ready/s over %.1f min"
+                % (w, (c - win_c0) / el if el else 0.0, el / 60)), c
+
     while not stop_workers.is_set():
         time.sleep(60)
         with lock:
@@ -566,40 +595,64 @@ def governor():
         if rd_all_fed.is_set() and not rd_handed:
             rd_handed = True
             pdf_width[0] = min(w + 8, a.pdf_max)
+            verdict, win_c0 = settle(w)
+            win_t0 = time.time()
             say("  GOVERNOR rd backfill drained - budget reallocated,"
-                " pdf width %d -> %d" % (w, pdf_width[0]))
+                " pdf width %d -> %d (%s)" % (w, pdf_width[0], verdict))
             streak = 0
             continue
         if shed >= 3:
+            verdict, win_c0 = settle(w)
+            win_t0 = time.time()
             pdf_width[0] = max(w * 3 // 4, 4)
             hold, streak = 10, 0
-            say("  GOVERNOR server shedding (%d short/timeout) - width"
-                " %d -> %d, hold 10 min" % (shed, w, pdf_width[0]))
+            say("  GOVERNOR server shedding (%d) - width %d -> %d,"
+                " hold 10 min (%s)" % (shed, w, pdf_width[0], verdict))
         elif hold > 0:
             hold -= 1
         elif shed == 0 and landed > 0:
             streak += 1
-            if streak >= 5 and w < a.pdf_max:
+            if streak >= a.step_minutes and w < a.pdf_max:
+                verdict, win_c0 = settle(w)
+                win_t0 = time.time()
                 pdf_width[0] = min(w + 2, a.pdf_max)
                 streak = 0
-                say("  GOVERNOR 5 clean minutes - width %d -> %d"
-                    % (w, pdf_width[0]))
+                say("  GOVERNOR %d clean minutes - width %d -> %d (%s)"
+                    % (a.step_minutes, w, pdf_width[0], verdict))
         else:
             streak = 0
 
 
-pdf_width[0] = min(a.pdf_workers, a.pdf_max)
+# ⚠ THE STAMPEDE LESSON (13:03:50, trip #3): a relaunch that opens 50+ cold
+# connections in one instant is nothing like the governor's +2 ramp - ACRIS
+# absorbed a gentle climb to 52 all day, then served the Bandwidth Notice
+# the second a restart fired everything at once. Same physics as richmond's
+# sess() stagger ("160 cold TLS opens in one instant = SSLError across the
+# board"). So a launch RAMPS: width starts small and a warmup thread raises
+# it +4 every 30s until the requested width, then the governor owns it.
+RAMP_START, RAMP_STEP, RAMP_EVERY = 8, 4, 30
+_target = min(a.pdf_workers, a.pdf_max)
+pdf_width[0] = min(RAMP_START, _target)
+
+
+def warmup_ramp():
+    while pdf_width[0] < _target and not stop_workers.is_set():
+        time.sleep(RAMP_EVERY)
+        pdf_width[0] = min(pdf_width[0] + RAMP_STEP, _target)
+    if not stop_workers.is_set():
+        say("  RAMP complete - width %d, governor owns it" % pdf_width[0])
 say("acris_lane up · ONE access point · %d rd + pdf width %d (governed,"
     " max %d) + edge every %ds · apply=%s · quarantined %d rd / %d pdf"
     % (a.workers, pdf_width[0], a.pdf_max, a.every, a.apply,
        len(QUAR_RD), len(QUAR_PDF)))
 threads = [threading.Thread(target=edge_thread, daemon=True),
            threading.Thread(target=feeder, daemon=True)]
-threads += [threading.Thread(target=worker, daemon=True)
-            for _ in range(a.workers)]
+threads += [threading.Thread(target=worker, args=(i,), daemon=True)
+            for i in range(a.workers)]
 if a.apply and a.pdf_workers > 0:
     threads.append(threading.Thread(target=pdf_feeder, daemon=True))
     threads.append(threading.Thread(target=governor, daemon=True))
+    threads.append(threading.Thread(target=warmup_ramp, daemon=True))
     threads += [threading.Thread(target=pdf_worker, args=(i,), daemon=True)
                 for i in range(a.pdf_max)]
 t0 = time.time()

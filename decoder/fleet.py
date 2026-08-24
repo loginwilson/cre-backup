@@ -41,6 +41,9 @@ LANES = {
     "sync": [
         # THE CONSOLIDATED ACRIS LANE - sync + rd backfill + pdf pool, one
         # access point. Log goes to NAV_WORK (the board reads it there).
+        # ⚠ NEVER COLD-LAUNCH (login 13:03, trip #3): the lane self-ramps
+        # from width 8 - that is load-bearing, not a slow start. Restarts
+        # are themselves a load event; minimize them.
         # ⚠ pdf width is tuned against the SERVER's signal: 20 workers at
         # 10:14 business hours clustered Short failures (pages stop arriving
         # = load-shedding); 12 ran clean. Creep up off-hours, back off when

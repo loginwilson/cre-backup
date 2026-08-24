@@ -155,6 +155,8 @@ loop's coverage claim becomes false without anything looking wrong.
 
 - [x] **r44** `2003030601377001` AMENDED CONDO DECLARATION · MANHATTAN · rec 2003-03-07 · rd pages 13 / pdf 17 — ✅ **IDENTITY·MODIFIES EXERCISED** (the amendment route worked first try): 5A split minting lot 1194 (conservation exact) + 6A/6F merged retiring lot 1147 (% exact, SF −6). Functions now exercised: IDENTITY creates+modifies · TITLE · OCCUPANCY · CAPITAL · ENCUMBRANCE · COST · VALUE-as-signals. Still unexercised: ENVELOPE-as-drawn-event (ZLDA read pre-bootcamp), ENTITLEMENT, PERMIT, ASBUILT (await DOB source or in-record instruments: BSA orders, CO-related filings).
 
+- [x] **r45** `FT_1000000284200` MORTGAGE (Building Loan Mtge VI) · MANHATTAN · rec 1989-01-04 · rd pages 65 / pdf 65 (film +0) — ✅ **FIRST TWO-SOURCE DRAW** (disk-store id from the 1989 shard, gate-checked by indexed lookup): Manhattan×film cell and the 1988/89 era both exercised for the first time; longest read yet (65pp). CAPITAL·creates+modifies at commercial scale (CEMA, $173M consolidation, G-022 to the dollar); ENVELOPE material read (air rights AS COLLATERAL, ¶32(e) lock) but still not ENVELOPE-as-drawn-EVENT — the drawn event class here is CAPITAL. CHAIN EXPECTATION banked: the lot-merger/apportionment instrument for block 1271 (lots 39/40/43/44/45 → 38, bracketed 1/1988–1/1989) — a dated target for the IDENTITY·modifies-on-GROUND-lots cell the MERGER shelf never delivered. Still unexercised: ENVELOPE-as-drawn-event · ENTITLEMENT · PERMIT · ASBUILT.
+
 ## THE TWO-SOURCE DRAW (ruling 2026-08-24 — recorded in Bootcamp.md)
 
 The landed band is 95.8% recorded-2003 (measured); pure band draws

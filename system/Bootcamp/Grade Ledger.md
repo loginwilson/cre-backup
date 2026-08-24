@@ -105,6 +105,29 @@ carry attribution) — flag it then, not another rule.
 ⚠ Numeric/derived-value precision: first prose instance at 44 (r39's
 altered terms were in the table). Watch as a class: derived intervals
 and multiples get re-computed at compose, not recalled.
+
+| 45 | FT_1000000284200 1989 | **B** (self, login-prompted) | **unverified counts ("21 entries", "six tax figures") — COUNT CLASS 5th MEMBER (21, 23, 39, 42, 45)**, both wrong; honest form was the enumeration ("A–O plus related documents") · **single-look misread, 4th member (22, 33, 35, 45)**: $165M/$175M uttered in-turn from one 120dpi look at HANDWRITTEN fills; crops + Exhibit B's own arithmetic corrected to $163M/$173M pre-bank · Anderson handwritten name banked without a crop file (against the r42 structure; crop taken at fix, name confirmed) · control-as-ownership ("owned by … the Taubman organization") + gloss past the entity name | fixes in the R45 entry · crop_anderson on disk · Card #13 extended: counts of document contents need the count run, else write the enumeration |
+
+⚠ COUNT CLASS AT FIVE (21, 23, 39, 42, 45) — Card #13 exists and did
+not fire because these counts came from a mental tally of a LIST I was
+reading, not a corpus query; the rule's word-scan shape ("N of X")
+matches, so the failure is at compose. STRUCTURE PER THE FIRING LAW:
+the honest default is now the ENUMERATION FORM — name the range or the
+members, never a cardinal, unless a run-in-action produced the number.
+A cardinal in delivered prose without a logged count command is a
+defect per se, right or wrong.
+⚠ single-look members: 22, 33, 35, 45 — the 45 form is new: HANDWRITTEN
+fills on film. Rule sharpened in the entry: handwritten dollar figures
+get the 400dpi crop BEFORE being uttered anywhere, in-turn speech
+included (R40-3: in-turn statements are deliveries).
+⚠ name-artifact (r42 structure) first REPEAT: the structure held for
+r43/r44 and lapsed on a 65-page read. Watch: long reads erode
+checklist passes — the crop pass belongs to the PAGE visit, not the
+end-of-read sweep.
+HELD at 45: value-crop pass caught the $2M misread pre-bank and settled
+it by TWO routes (crops + schedule arithmetic); lot-merger stayed
+labeled INFERRED with three named witnesses; L-3 held at chain scale
+(no phantom 1919 event in chronology); G-022 to the dollar.
 The trigger list + Card #4 catch its phrase-shaped and scale-shaped
 forms; R41's form was a CHARACTERIZATION OF THE DRAFTING ("their
 community") — ordinary words again. Watch the shape: any sentence that

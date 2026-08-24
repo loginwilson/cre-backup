@@ -7665,6 +7665,158 @@ arithmetic; the keying contrast measured across two documents; crops
 proactive with artifacts; foreign-page check run and passed; counts
 grounded; era challenge answered by measurement.
 
+# RUN 45 — FT_1000000284200 · BUILDING LOAN MORTGAGE VI (CEMA) · Manhattan 1271 · 1988/89
+
+65 film pages, 65 = rd `pages` exactly (film's +0 confirmed at scale),
+Reel 1516/485. **Zero new columns, zero new vocabulary — streak: 41.**
+First TWO-SOURCE draw: Manhattan×film cell (never sampled), 1988/89
+era (never drawn), longest read yet. Grade B (four misses, two in the
+worst repeat classes; fixes applied here).
+
+    BUILDING LOAN MORTGAGE, CONSOLIDATION AGREEMENT, SECURITY
+    AGREEMENT, ASSIGNMENT OF LEASES AND RENTS, FIXTURE FILING AND
+    FINANCING STATEMENT VI · as of 1988-01-20 · recorded 1989-01-04
+    (~350-day lag) · 712 FIFTH AVENUE ASSOCIATES (f/k/a Steadsol
+    Fifth Associates LP; c/o Solomon Equities) in favor of CITICORP
+    REAL ESTATE, INC. · 712-716 Fifth Ave + 2-8 W 56th + air rights
+    re 706-710 Fifth (the Church parcel, lot 30)
+
+## THE EVENTS (one event_id; rows per G-018/G-022/the run-8 ruling)
+
+    row 1  CAPITAL·creates · CREI → 712 FIFTH AVENUE ASSOCIATES ·
+           building-loan advance, Statement VI of the series ·
+           $10,000,000 new principal (max secured) · maturity UNREAD
+           (Note/Loan Agreement, unrecorded)
+    row 2  CAPITAL·modifies · Existing Mortgages A-O ($163,000,000,
+           CROP-VERIFIED against a first-look misread of 165) + row 1
+           = single first lien $173,000,000 (crop + the schedule's
+           own arithmetic — two routes, G-022 to the dollar)
+    row 3  ENCUMBRANCE·creates · lien on fee + LEASEHOLD (easterly
+           lot 38, Carraro ground lease) + AIR RIGHTS re lot 30 ·
+           coordinate with Building Loan Mortgages I-V, SUPERIOR to
+           the Project Loan Mortgages (Lien Law two-tier stack) ·
+           term claims: ANTI-MERGER covenant (¶50(g): fee and
+           leasehold shall not merge notwithstanding union of the
+           estates — r43's doctrine contractually FORBIDDEN, with
+           automatic lien-spread onto after-acquired fee) + ENVELOPE
+           LOCK (¶32(e): no air-rights disposition, no zoning-lot
+           declaration, no use of excess FAR without consent)
+    row 4  COLLATERAL·creates · in-document absolute AL&R (¶17,
+           RPL §291-f, license back)
+    row 5  COLLATERAL·creates · UCC security agreement + fixture
+           filing (¶36)
+    ACTOR-CLAIMS: borrower ↔ its two GP humans — DAVID S. SOLOMON
+    (GP of Solomon Partners No. 4) and ROBERT C. LARSON (GP of
+    TAUBMAN FIFTH AVENUE ASSOCIATES LP, Michigan). [Grade fix: the
+    GPs CONTROL and sign; ownership economics are NOT in the record
+    — control never delivered as ownership, and the entity keeps its
+    own name without an "organization" gloss.] Lender ↔ JOHN W.
+    ANDERSON, Vice President (handwritten ack fill; crop artifact
+    banked at fix time; residence 90[2?] Burden St, Hoboken NJ —
+    street digit moderate). Notary Felicia R. Alford (Suffolk), all
+    three acks 1988-01-20. Notices humans: James B. Cummings ·
+    Edward B. Schoen (Robinson Silverman) · Citicorp Shopping Center
+    Division · Steven R. Davidson (Sonnenschein). Drafting: Leslie J.
+    Snyder (Sonnenschein).
+
+## R45-1 — EXHIBIT B IS A LENDER-AUTHORED, TAX-NOTARIZED CHAIN (1919→1988)
+
+The schedule recites the site's WHOLE debt genealogy — mortgages A
+through O plus their related consolidations, spreaders, assignments
+and the 1988 DECONSOLIDATION [grade fix: no invented entry count —
+the letters and their related documents are the enumeration]:
+Mortgage D = MARY ARMOUR NICHOLS → Guaranty Trust, 1919-02-14,
+$85,000 (assigned 1923 → Erie County Savings 1946 → Franklin Savings
+1956); Burrows-family mortgages 1956-1983; assigned to Manhattan
+Life 1979; the stack to BANK OF NEW YORK, consolidated $110,000,000
+(1987) → assigned to CHASE → +$10M = $120,000,000 → CITICORP
+deconsolidates 1/1988 into $110M + $10M → Building Loan Statements
+II-V ($23M, $10M, $10M, $10M; running consolidations $133M → $143M →
+$153M → $163M). EVERY mortgage-tax figure checked computes at
+EXACTLY 2.25% of its principal (checked: 193,500/8.6M ·
+1,269,000/56.4M · 89,437.50/3.975M · 347,611.50/15,449,417.83 ·
+517,500/23M · 225,000/10M ×3) — the schedule arrives pre-verified by
+its own stamps (P-4 at chain scale). Chains group: recited-chain
+family (R21-1, R43-4) at its largest.
+
+## R45-2 — THE ANTI-MERGER COVENANT (r43's doctrine, forbidden by contract)
+
+¶50(g): fee and leasehold "shall not merge but shall always remain
+separate and distinct, notwithstanding the union of said estates in
+the lessor, Mortgagor, or a third party" — and any after-acquired
+fee falls under the lien automatically. The market pays counsel to
+CONTROL the event class that killed run 43's leases silently.
+Resolution: merger-of-estates is live; whether it OPERATES depends
+on recorded covenants like this one — never assume union = merger.
+
+## R45-3 — THE LOT-STRIKE + TWO-LOT KEY (⚠ merger inferred, not read)
+
+The recorded cover STRIKES lots 39/40/43/44/45 from the property
+list; the register annotates "LOC. VER. BY TAX MAP" and "1-EXTRA
+LOTS"; rd keys ONLY 1012710038 + 1012710030. Three witnesses that
+the fee assemblage merged into lot 38 between drafting (1/1988) and
+recording (1/1989) — but the merger INSTRUMENT is not in this
+document. Banked as ⚠ INFERRED with witnesses named; chain
+expectation: the apportionment/merger record for block 1271 (the
+spine's missing-merger-lineage problem, with a dated bracket).
+
+## R45-4 — THE COLLATERALIZED ENVELOPE (air rights in the mortgage)
+
+Church air rights + the ZLDA web (Reels 1052/1061/1077/1240 cites
+banked) + the Carraro ground lease (memo Reel 819/557) + the
+installment sales agreement (fee bought on contract — R10-2's shape
+at Manhattan scale) are ALL granted as security, cross-defaulted
+(¶13(k)), and locked (¶32(e)). The envelope itself is loan
+collateral with a recorded paper trail; foreclosure would reach the
+sky over the church.
+
+## CONFIRMATIONS
+
+- rd EARNED: MORTGAGE ✓ 65 pages ✓ reel 1516-485 (page stamps) ✓
+  recorded 1/4/1989 (register stamp) ✓ MANHATTAN ✓ amount
+  $10,000,000 ✓ (film index carries mortgage new money — R20-3 in
+  1989) · remarks mirrors the instrument ("BLDG/LN/CONS/AGMT AIR
+  RIGHTS W/RESP LOT 30") · party truncation "CITICORP REAL
+  ESTATEINC" (concatenation family) · NO doc_date field (dateless
+  film family — the as-of 1/20/1988 is extraction-only).
+- Recording tax $225,000 = 2.25% × $10M NEW MONEY only (R13-1 CEMA
+  machinery at commercial scale; the $163M rolled tax-free).
+- Film anatomy: the instrument's own drafting cover + index filed at
+  the TAIL (R6-1); law-firm doc stamps (01/18/88 6:40 p.m.) date the
+  artifact — the R44-3 witness class again.
+- Two-Steadsol name-change pair banked: Steadsol GP → 712-716 Fifth
+  Avenue Associates; Steadsol LP → 712 Fifth Avenue Associates.
+- Exhibit B chain = observes claims (L-3 at scale — no phantom 1919
+  origination in chronology).
+- Mode watch: recitals observes throughout; one transacts act (loan
+  + consolidation).
+
+## R45 GRADE — B (self, cold; fixes applied in this entry)
+
+1. COUNT CLASS, 5th (21/23/39/42): delivered "21 entries" and "six
+   tax figures" — estimates dressed as counts, both wrong. Card #13
+   EXTENDED: any specific count of a document's contents requires
+   the count RUN IN-ACTION; otherwise write the enumeration ("A
+   through O plus related documents"). FIXED here.
+2. SINGLE-LOOK, 4th (22/33/35): "$165M/$175M" uttered in-turn from
+   one 120dpi look at handwritten fills; crops corrected to
+   $163M/$173M before banking. In-turn statements are deliveries
+   (R40-3). Rule sharpened: on film, handwritten dollar figures get
+   the crop BEFORE being uttered, not before banking.
+3. NAME ARTIFACT MISSED at read time (the r42 structure): Anderson's
+   handwritten fill read once; crop taken at FIX time (artifact now
+   on disk, name confirmed, street digit moderate).
+4. CONTROL-AS-OWNERSHIP + name gloss: "owned by ... the Taubman
+   organization's partnerships" — GPs control, ownership unstated;
+   "organization" reached past the entity name. FIXED above.
+
+HELD: the value-crop pass caught a $2M misread on the central
+figures pre-bank, verified two routes; the lot-merger inference
+labeled and witnessed, never asserted; L-3 at scale; run-8 ruling +
+G-018 + G-022 all landed in existing vocabulary; film families
+confirmed; the two-source draw delivered its variety on the first
+outing.
+
 ## THE TWO-SOURCE DRAW (login ruling 2026-08-24 — variety is the point)
 
 Login: "I would like to train you on a variety of different eras,
