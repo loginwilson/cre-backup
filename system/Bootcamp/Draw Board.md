@@ -152,3 +152,14 @@ loop's coverage claim becomes false without anything looking wrong.
 - [x] **r42** `2003030301266001` DECLARATION OF MERGER · BROOKLYN · rec 2003-04-22 · rd pages 7 / pdf 9 — ⚠ THE CELL DID NOT MATERIALIZE: the type shelves a Declaration of Easement, Maintenance & Restrictions (shared drainage, two buildings, one lot) — NOTHING MERGES. IDENTITY·modifies remains UNEXERCISED, and the type name is not a reliable route to it: a true lot merger/apportionment must be found otherwise (candidates: the OTHER DECLARATION OF MERGER in the band sample `2003031700843002` QUEENS 11pp — verify before trusting the shelf; or hunt APPRTMENT/apportionment types; or a condo declaration AMENDMENT that re-cuts units).
 
 - [x] **r43** `2003031700843002` DECLARATION OF MERGER · QUEENS · rec 2003-07-24 · rd pages 11 / pdf 14 (one FOREIGN page inside) — ⚠ CELL MISSED AGAIN: merger of ESTATES (1948 leases died into the fee 1984-04-06), lots unchanged. **MERGER shelf now 0-for-2 on lot mergers** (drainage declaration + estates merger). IDENTITY·modifies routes to try next: DOF/DTM-era apportionment instruments, condo declaration AMENDMENTS that re-cut unit lots, or draw by PARCELS-panel shape (a document whose rd parcels show lots that no longer exist). Also banked from r43: supporting pages need an identity join before fields bank (foreign RP-5217 for block 9399 found inside this file).
+
+- [x] **r44** `2003030601377001` AMENDED CONDO DECLARATION · MANHATTAN · rec 2003-03-07 · rd pages 13 / pdf 17 — ✅ **IDENTITY·MODIFIES EXERCISED** (the amendment route worked first try): 5A split minting lot 1194 (conservation exact) + 6A/6F merged retiring lot 1147 (% exact, SF −6). Functions now exercised: IDENTITY creates+modifies · TITLE · OCCUPANCY · CAPITAL · ENCUMBRANCE · COST · VALUE-as-signals. Still unexercised: ENVELOPE-as-drawn-event (ZLDA read pre-bootcamp), ENTITLEMENT, PERMIT, ASBUILT (await DOB source or in-record instruments: BSA orders, CO-related filings).
+
+## THE TWO-SOURCE DRAW (ruling 2026-08-24 — recorded in Bootcamp.md)
+
+The landed band is 95.8% recorded-2003 (measured); pure band draws
+train one era. From r45: band draws (digital-ACRIS cells) + DISK-STORE
+ID DRAWS — enumerate ids from a bounded shard listing (one directory,
+never a tree glob), gate-check each via indexed nav lookup, sealed
+fields as ever. Era × borough × custodian × type × length coverage is
+the board's job again; target the least-proven cell.

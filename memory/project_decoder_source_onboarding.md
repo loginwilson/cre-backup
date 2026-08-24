@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-24T11:43:33.709Z
+  modified: 2026-08-24T15:03:25.586Z
 ---
 
 **THE SOURCE ONBOARDING PLAYBOOK (login, 2026-08-24 — "the move is"):**
@@ -34,6 +34,19 @@ metadata:
 Each new source is five artifacts: id scheme · mint branch · key rule ·
 sync probe · board row. The db already holds two custodians in one table
 without caring which is which — that's the proof of shape.
+
+**LANE-FIRST UPDATE (2026-08-24, after acris_lane proved out):** a new
+source never gets separate sync + backfill fleets — it gets ONE LANE from
+day zero (the acris_lane skeleton): edge probe tracks inflow at the front,
+feeders drain the mapped todo through every gate (rd → key → pdf), a
+GOVERNOR self-tunes worker width against the source's own load signals,
+one refusal tripwire, one board row whose landed = READY (needed −
+last-gate todo). The source's ACCESS RULE is discovered, not assumed:
+**piano** (one access point, sequenced — acris) vs **drumroll** (fire
+freely, just never push through a refusal — richmond). login: "the hardest
+part is mapping the inventory which gives the ids. after that it's just
+figuring out what the url mints are" — acq throughput and keying are the
+same principle every time, coming off the rd and pdfs.
 
 Related: [[project-decoder-fleet-restore]], [[project-decoder-updates-board]],
 [[project-dob-decoder-state]]

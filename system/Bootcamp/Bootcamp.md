@@ -7547,3 +7547,137 @@ artifacts (first run under the new Card #12 structure, and one crop
 settled a cite); foreign page caught by arithmetic and identity-
 checked before hypothesizing; second consecutive honest negative on
 the drawn cell; blanks null; counts grounded.
+
+# RUN 44 — 2003030601377001 · AMENDED CONDO DECLARATION · Manhattan 1232 · 2002/03
+
+17 pdf pages (rd `pages` 13 + supporting cover + 3-page schedule
+re-filing; arithmetic closes, NO foreign pages — the R43 identity
+check run and passed). **Zero new columns, zero new vocabulary —
+streak: 40.** Grade B+ (two prose-layer misses, fixes applied here).
+**THE TWICE-MISSED CELL MATERIALIZES: IDENTITY·modifies, twice in one
+instrument** — the amended-condo-declaration route worked first try.
+
+    FIRST AMENDMENT to the Declaration of 500 WEST END CONDOMINIUM
+    (original 2002-03-08, recorded 2002-03-29, Reel 3481/822 — the
+    cover's cross-reference block carries the parent edge) · made as
+    of 2002-12-18 by 500 WEST END LLC (130 E 57th St; KEVIN MALONEY,
+    Member — crop artifact banked; notary KENNETH WONG 41-4862385
+    Queens) · recorded 2003-03-07 12:04:33, CRFN 2003000039097 ·
+    500 West End Avenue, Manhattan block 1232
+
+## THE EVENT (one event_id, two rows — one instrument, one amendment act)
+
+    row 1  IDENTITY·modifies · lot 1136 (Unit 5A) · SUBDIVIDED:
+           old 5A (14 rooms, 4,738 SF, 3.54943%) → new 5A (lot 1136,
+           2,250 SF, 1.68557%) + new 5B (NEW LOT 1194, 2,488 SF,
+           1.86386%) · CONSERVATION EXACT both routes: 2,250+2,488 =
+           4,738 ✓ · 1.68557+1.86386 = 3.54943 ✓ (five decimals)
+    row 2  IDENTITY·modifies · lots 1142+1147 (Units 6A+6F) ·
+           COMBINED into one 6A (lot 1142, 2,250 SF, 1.77428%);
+           LOT 1147 RETIRED · % EXACT: 1.49272+0.28156 = 1.77428 ✓ ·
+           ⚠ SF NOT CONSERVED: 1,898+358 = 2,256 → printed 2,250
+           (−6 SF, cause unstated; DELIBERATE in the schedule — the
+           building total propagates it, 129,202 → 129,196)
+    ACTOR-CLAIMS: declarant 500 WEST END LLC ↔ KEVIN MALONEY, Member.
+    Ownership of units 5A/6A/6F at execution is the declarant's OWN
+    RECITAL (observes — its Article 10 authority basis) [grade fix
+    #2: the delivery had stated it flat].
+
+## R44-1 — THE CONSERVATION SPLIT: % IS THE LEGAL CURRENCY, SF IS A CLAIM
+
+A condo re-cut conserves COMMON-INTEREST PERCENTAGES exactly (the
+law's quantity — votes, charges, condemnation ride it) while
+SPONSOR-ASSERTED SF may shift (−6 here on a merger, unexplained).
+Checkable pattern corpus-wide: a re-cut whose percentages do NOT sum
+exactly is saying something and must surface. For valuation: % is the
+join-safe quantity; SF is an uncertified witness (see boundary note
+below).
+
+## R44-2 — LINEAGE KEYING DEPENDS ON INSTRUMENT CLASS (measured, two docs)
+
+rd keys ALL FOUR lots — dying 1147 AND newborn 1194 (key
+1012321136;1012321142;1012321147;1012321194) — where run 41's
+ORIGINAL declaration keyed only the dying lot 63 and none of the
+born unit lots. Amendments carry the full before-and-after set; an
+original condo declaration carries only the parent. The register's
+supporting doc states the lineage machine-readably: "F/K/A LOTS
+1136, 1142 AND 1147 N/K/A LOTS 1136, 1142 AND 1194." Both spine
+traps now witnessed live: post-2003 pulls keyed on 1147 return
+nothing; 1194 has no pre-2003 history.
+
+## R44-3 — THE IMPOSSIBLE ACK YEAR (the record impeaches itself)
+
+The ack reads "18 day of February, 2002" (typed year, confirmed at
+400dpi) — impossible against the as-of date 12/18/2002 AND the same
+page's law-firm footer "02/14/03 3:06pm". A pre-typed template year
+survived into the record; true ack date ⚠ INFERRED 2003-02-18. A
+chronology trusting acks would date this amendment before its own
+parent was recorded. The drafting footer is a WITNESS CLASS: law-firm
+document stamps (SSL-DOCS1 1289675v2) date the artifact when the
+formal dates lie. [Grade fix #1: the delivered prose said "months
+before" the parent's recording — the interval is ~5 weeks before
+recording, ~3 weeks before its dateline; corrected here.]
+
+## R44-4 — R41-1 SECOND INSTANCE + THE BOUNDARY NOTE
+
+- Index party = 500 WEST END CONDOMINIUM only; the DECLARANT LLC is
+  absent (R41-1 members: 41, 44). A search for the sponsor misses
+  its own amendment.
+- IDENTITY vs ASBUILT, ruled in discussion (login 2026-08-24):
+  IDENTITY is the LEGAL CONTAINER (which lots exist, boundaries,
+  common-interest shares); ASBUILT is the CERTIFIED PHYSICAL
+  CONTENTS — its test is the spec's own "was physical reality
+  CERTIFIED?" (a CO is ASBUILT; agency → parcel). Sponsor-asserted
+  schedule SF is NEITHER event: it is a WITNESS bearing on ASBUILT
+  (R42-3a), banked as a claim with its function named — and R44-1's
+  −6 SF is the measured proof of why it is not certification.
+
+## CONFIRMATIONS
+
+- Reconciliation ✓ EARNED: type · doc date = as-of (three witnesses)
+  · CRFN · recorded-to-the-second · borough · all four parcels with
+  unit labels matching the schedules · amount $0.00 correct (no
+  consideration exists in an identity re-cut).
+- Condo plan number gains an amendment suffix: handwritten
+  "CONDOMINIUM NO. 1230-A" (r41's "CONDO. 995" family).
+- Schedule 2 re-filed as the supporting document (r41 pattern);
+  duplicate copy corroborates the new values (read-verification).
+- New schedules' SF/rooms/facade columns banked as ASBUILT-bearing
+  claims (R42-3a).
+- Era question (login) answered by MEASUREMENT (Card #16): the landed
+  band is 95.8% recorded-2003 (sample n≈29.9k), intake ids 2002-12-20
+  → 2003-07-24 — the band IS the earliest digital-ACRIS months; the
+  db-draw method inherits its era until the lanes advance.
+
+## R44 GRADE — B+ (self, cold; fixes applied in this entry)
+
+1. NUMERIC OVERSTATEMENT in prose: "months before" for a ~5-week
+   interval — a derived interval misstated; same genus as an altered
+   financial term at lower stakes. FIXED above.
+2. RECITAL FLATTENED IN DELIVERY — Card #15 MODES' class, ONE RUN
+   after the line was written (repeat = double): the declarant's
+   ownership recital delivered as flat fact. FIXED above.
+   Noted, not charged: one editorial flourish ("embarrassment") —
+   color the generated-summary future has no slot for.
+
+HELD: the cell exercised; the conservation split earned by
+arithmetic; the keying contrast measured across two documents; crops
+proactive with artifacts; foreign-page check run and passed; counts
+grounded; era challenge answered by measurement.
+
+## THE TWO-SOURCE DRAW (login ruling 2026-08-24 — variety is the point)
+
+Login: "I would like to train you on a variety of different eras,
+boroughs, doc types, and lengths." MEASURED BASIS: the landed band is
+one era wide (above). RULING: from run 45 the draw is TWO-SOURCE —
+  1  THE BAND  (navigation rowid window, pdf filled) for digital-
+     ACRIS cells; grows as the lanes advance.
+  2  THE DISK STORE, BY ID: deliberate RC_ / FT_ / BK_ / early-CRFN
+     draws — ids enumerated from the store's own directory LISTINGS
+     (a bounded listing of one shard is not a tree glob), each id
+     then gate-checked via INDEXED nav lookup (sync chain full,
+     sealed fields).
+Every existing rule intact: no nav scans, no rglob of the whole
+tree, sealed fields at draw, gate before render. The Draw Board
+tracks coverage across era × borough × custodian × type × length,
+and the draw targets the least-proven cell as before.

@@ -521,9 +521,17 @@ def pdf_worker(idx):
             kind = type(e).__name__
             with lock:
                 stats["pdf_fail"] += 1
-                # Short / timeout = the image backend shedding load - the
-                # governor's back-off signal, distinct from ordinary fails
-                if kind in ("Short", "TimeoutError") or "timed out" in str(e):
+                # THE SERVER'S EVERY DIALECT OF "SLOW DOWN" counts as shed
+                # (2026-08-24 11:03: at width 22 the pushback arrived as
+                # "connection forcibly closed"/SSL EOF/RemoteDisconnected -
+                # NOT Shorts - and the governor climbed blind to it). HTTP
+                # 400 stays an ordinary per-doc fail.
+                msg = str(e)
+                if (kind in ("Short", "TimeoutError", "RemoteDisconnected",
+                             "IncompleteRead")
+                        or "timed out" in msg or "10054" in msg
+                        or "10060" in msg or "UNEXPECTED_EOF" in msg
+                        or "forcibly closed" in msg):
                     stats["shed"] += 1
             with PDF_FAILS.open("a", encoding="utf-8") as fh:
                 fh.write(json.dumps({"id": did, "err": kind,

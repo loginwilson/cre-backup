@@ -5,8 +5,18 @@ metadata:
   node_type: memory
   type: project
   originSessionId: 2812a9cb-82a0-4f82-b389-d0bead413962
-  modified: 2026-08-24T14:28:01.345Z
+  modified: 2026-08-24T15:01:49.666Z
 ---
+
+**THE TWO ACCESS RULES (login's naming, 2026-08-24):** every source gets an
+access constitution read from its measured behavior. **PIANO RULE** (acris):
+one player — a single access point carefully sequencing organs (10s edge
+reservation, pools as fingers) because the source trips on multiple
+presences. **DRUMROLL RULE** (richmond): maximum independent hits, no
+coordination needed (proven 160 concurrent connections clean) — the only
+law is don't drop the sticks (stop-on-refusal). Both still ONE LANE (one
+process, one governor, one ready row, one refusal tripwire); the rule sets
+the time signature, not the shape.
 
 **THE CONSOLIDATED ACRIS LANE (cut over 2026-08-24 ~10:12).** `acris_lane.py`
 (decoder dir) is the ONLY process allowed to touch ACRIS — login's piano rule:

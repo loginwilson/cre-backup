@@ -93,6 +93,18 @@ SOURCES sweep covers the verdict's own prose, Card #12).
 ⚠ HELD-pattern worth keeping: r43 ran the crop pass proactively under
 the new artifact rule and it settled a cite; the foreign-page defect
 was caught by COUNT ARITHMETIC (11+1+1≠14) — arithmetic as tripwire.
+
+| 44 | 2003030601377001 2003 | **B+** (self, login-prompted) | **numeric overstatement in prose** ("months" for a ~5-week derived interval — altered-value genus, low stakes) · **recital flattened in delivery, Card #15 MODES repeat ONE RUN after minting** (r42, r44 — double) | fixes in the R44 entry · two-source draw ruling · IDENTITY/ASBUILT boundary note |
+
+⚠ MODES-flattening members: 42 (×2), 44 — the delivery layer keeps
+stating declarant recitals as fact while the record holds them as
+observes. Card #15 MODES exists; it did not fire at compose. If a
+third run repeats it, the structural cure is the derivation-binding
+check (prose sentence sources to an observes row ⇒ the sentence must
+carry attribution) — flag it then, not another rule.
+⚠ Numeric/derived-value precision: first prose instance at 44 (r39's
+altered terms were in the table). Watch as a class: derived intervals
+and multiples get re-computed at compose, not recalled.
 The trigger list + Card #4 catch its phrase-shaped and scale-shaped
 forms; R41's form was a CHARACTERIZATION OF THE DRAFTING ("their
 community") — ordinary words again. Watch the shape: any sentence that

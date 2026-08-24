@@ -64,6 +64,7 @@ alone; add it when a document teaches it.**
 | **single-ownership covenant** | A recorded covenant that the premises may not be subdivided and must be held in single ownership until named condo/HOA papers are approved and recorded — a gate on the lot's own future identity, living in the encumbrance layer | R42 |
 | **merger of estates** | When one owner comes to hold both a lease (or other lesser estate) and the fee, the lesser estate is extinguished by operation of law — no instrument records the death, so the lease stays record-alive until a later declaratory filing witnesses it. (Mechanism shown operationally by R43's recitals: tenant interests + fee acquired by one corporation → interests "merged upon acquisition" → leases "terminated") | R43 |
 | **declaration of merger (register shelf)** | ⚠ A type code, not a function: measured 0-for-2 as a lot-merger source — held a shared-drainage declaration (R42) and an estates-merger declaration (R43). Read the instrument's own title line | R42, R43 |
+| **amended condo declaration (unit re-cut)** | Amendment by the declarant/unit owner under the declaration's own amendment article that subdivides or combines units — minting and retiring unit tax lots while total unit count and 100% common interest are preserved; the revised Exhibit B replaces the old wholesale, and the register keys the full before-and-after lot set. Common-interest percentages conserve exactly (the legal currency); sponsor-asserted SF may not | R44 |
 
 ## WHAT THIS TABLE IS NOT
 
