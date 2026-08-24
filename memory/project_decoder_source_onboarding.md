@@ -55,3 +55,41 @@ same principle every time, coming off the rd and pdfs.
 
 Related: [[project-decoder-fleet-restore]], [[project-decoder-updates-board]],
 [[project-dob-decoder-state]]
+
+**⚠ THE ACCESS MODEL, SETTLED 2026-08-24 — ONE CHASSIS, TWO SETTINGS.**
+login asked whether the acris lane is still "piano", and whether drumroll has
+any advantage left. It is NOT piano any more, and the honest name is the
+**METRONOME RULE**: the lane sends one request per beat (1/rps apart) and
+never two on the same beat. It does not care how many are still in flight —
+it controls only WHEN each one leaves. A governor raises the beat on quiet
+and cuts it hard on the server's own signal.
+
+⚠ **PIANO (literal one-at-a-time) IS ARITHMETICALLY DEAD.** Throughput would
+be 1/RTT — MEASURED at 4.1 req/s = ~0.3 docs/s = ~700 days for acris. Not a
+tuning problem; the shape cannot reach the target. What piano was PROTECTING
+(no lumps at arrival) is now guaranteed structurally by the pacer instead.
+The metaphor that survives: a pianist playing fast with the sustain pedal
+down — every key struck separately and evenly, many notes ringing at once.
+
+**⚠ THE ONE PLACE DRUMROLL IS GENUINELY BETTER — BACKPRESSURE.**
+    drumroll   you set WORKERS; rate = workers/RTT. When the server slows,
+               YOU SLOW WITH IT automatically. Backpressure is free.
+    metronome  you set RATE; concurrency floats to rate x RTT. When the
+               server slows, the beat is unchanged and OPEN CONNECTIONS
+               PILE UP - you push hardest exactly when it is struggling.
+⚠ `--max-inflight` IS WHAT SAVES US: the pacer releases a request but it must
+still take a slot, so when RTT stretches the slots fill and the real rate
+falls below the beat on its own. **Metronome for spacing, concurrency cap for
+backpressure — BOTH dials are load-bearing; dropping either is how it breaks.**
+
+**DEFAULT FOR A NEW SOURCE = METRONOME.** On an unknown source you want to
+control and audit exactly what you sent, and you can raise the beat until you
+find the wall. Its rate is a number you CHOSE, comparable across sources and
+convertible straight to an ETA - unlike drumroll, whose rate is an accident of
+latency. Switch to drumroll only once a source has PROVEN it does not care
+(richmond: 160 connections, 26 h).
+
+**⚠ THE UNIFICATION: drumroll is just a metronome with the beat set past the
+server's own limit**, so latency becomes the governor instead of you. Same
+lane, two settings - we never needed two architectures. See
+[[project-acris-consolidated-lane]] for the measurements behind it.

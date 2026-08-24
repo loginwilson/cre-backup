@@ -9456,3 +9456,123 @@ carried the branch and the other carried one fork of it. Both must
 carry it, in the plainest words available: *"the paperwork says X, but
 the way it is worded leaves room for Y, and the document that settles
 it is not here."*
+
+# ⚠ THE GRADE IS AN ACCURACY GRADE — RE-RULED (login 2026-08-24, after run 52)
+
+Login: *"the grade is how accurately we actually decoded the document.
+It's an accuracy grade. did we make things up, did we catch what
+mattered, did we completely miss, are we making garbage. it's the
+accuracy of the document's decode across the 11 functions and the
+quality of our data table and summary."*
+
+⚠ **THIS SUPERSEDES THE r50 RUBRIC'S AXIS.** That rubric graded WHICH
+LAYER A DEFECT REACHED — prose, evidence, gate. That is a measure of
+RENDER DISCIPLINE, and it is a real thing, but it is not what the grade
+is for. It has a hole big enough to drive a run through: **a delivery
+could be process-clean and still decode the document wrongly, and the
+r50 scale would call that an A.** The letter must answer whether the
+DECODE is true.
+
+## THE FOUR QUESTIONS, IN SEVERITY ORDER
+
+    1 FABRICATION   Was anything MADE UP? A state not on the page, a
+                    count never run, a relationship never recited, a
+                    motive, a role, a scale. This is the only kind of
+                    error that cannot be repaired downstream, because
+                    nothing marks it as suspect. It outranks everything.
+    2 CAPTURE       Did we catch WHAT MATTERED? The instrument's actual
+                    mechanism, the facts that change a decision, the
+                    chain expectations that name a findable next
+                    document. A true verdict that misses the point of
+                    the document is a failed decode.
+    3 THE ELEVEN    Was every function ASKED, and were the FIRES and the
+                    NON-FIRES both called correctly? ⚠ A WRONGLY-FIRED
+                    function is worse than a missed one — the miss
+                    leaves a hole, the wrong fire enters the corpus as
+                    a fact.
+    4 RENDER        Is the TABLE a faithful and fully-stated version of
+                    what was read (every cell SETTLED / BRANCHED /
+                    UNREAD), and does the SUMMARY lead a non-specialist
+                    to the RIGHT ACTION?
+
+Login named the table and the summary explicitly. They are not the
+report of the decode — for everything downstream, **they ARE the
+decode.** A fact read correctly and rendered wrongly was decoded
+wrongly.
+
+## ⚠ THE LETTER IS THE WORST DIMENSION, NOT THE AVERAGE
+
+This is the part that makes the grade useful. The corpus inherits the
+WORST cell, not the mean of the cells. A run with a flawless function
+read and one table cell that overstates certainty ships that overstated
+cell into the record, and no downstream reader ever sees the flawless
+part that surrounds it. So the letter is the FLOOR of the four
+dimensions — and the grade is reported WITH the dimension that set it,
+so the letter says what to fix.
+
+## THE SCALE
+
+    A   No fabrication. Every function correctly called, fires and
+        non-fires. The instrument's real mechanism identified AND
+        delivered. Table fully stated — every cell settled, branched or
+        declared unread. Summary leads a reader to the right action.
+        Something new is banked (a class, a rule, a measurement).
+    A-  All of the above; one advisory blemish that changes nothing.
+    B+  Decode correct and complete; ONE render defect that would not
+        change what a reader does.
+    B   Decode correct; a render defect that COULD lead a reader to a
+        wrong action, or a finding that mattered was found and not
+        delivered.
+    B-  A function mis-called, or a fact that mattered was in the
+        document and not caught.
+    C+  ⚠ THE TABLE STATES SOMETHING THE DOCUMENT DOES NOT SUPPORT —
+        overstated certainty, a destination the page does not compel,
+        an unmarked inference sitting in a cell.
+    C   The instrument's mechanism mis-identified, or several functions
+        mis-called.
+    D   ⚠ FABRICATION REACHED THE DELIVERY — an invented count,
+        relationship, motive or fact. Severity does not depend on
+        whether it turned out to be right (r42: the count was correct
+        and the miss was total).
+    F   The document was substantially mis-decoded; acting on the
+        verdict would mislead.
+
+## RUN 52 RE-SCORED ON THE NEW AXIS (honestly, dimension by dimension)
+
+    1 FABRICATION   CLEAN. Every count grep-verified in-action; the
+                    area and frontage COMPUTED and shown; the
+                    witness/notary signature resemblance seen and
+                    explicitly NOT claimed; no motive, role or scale
+                    claim anywhere. Bank of America's presence stated
+                    as presenter/return-to and nothing more, though the
+                    inference on offer was obvious.
+    2 CAPTURE       STRONG. The instrument's real mechanism was found
+                    (a survivorship affidavit under a shelf that names
+                    a will), along with the two by-operation-of-law
+                    title passages, the party-index failure, the blank
+                    cross-reference, the ME-vs-physician distinction,
+                    the informant identity, and the one chain
+                    expectation that can settle the file. ⚠ One capture
+                    was made and NOT DELIVERED: why the shelf error
+                    matters.
+    3 THE ELEVEN    CLEAN — and this is the dimension that was invisible
+                    under the old rubric. Three fires (TITLE x2,
+                    IDENTITY, COST) and eight non-fires, each reasoned
+                    from the page. Re-checked at re-scoring: no function
+                    was wrongly fired and none was missed. ASBUILT and
+                    OCCUPANCY both correctly REFUSED against a register
+                    use-code that invites both.
+    4 RENDER        ⚠ FAILED. Rows 1-2 stated a destination the document
+                    does not compel, while the same section's Unresolved
+                    stream called the branch open.
+
+    LETTER = the FLOOR = **C+ (RENDER)** — unchanged in letter, but the
+    letter now says WHERE. Three dimensions were A-grade; the table set
+    the floor, and the table is what the corpus keeps.
+
+⚠ **AND THE GRADE DID NOT MOVE.** A new rubric arriving is not a
+licence to re-grade upward — that is exactly the leniency this file has
+recorded twice (r47 and r49, both overridden downward by login). What
+changed is that the letter is now DIAGNOSTIC: "C+ (RENDER)" names the
+one dimension to fix, where a bare C+ described a run whose decode was
+in fact accurate.

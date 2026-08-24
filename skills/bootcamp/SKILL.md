@@ -195,10 +195,40 @@ the same action) — Card #12/#13; a remembered action is not a check.
 
 The "grade and why" reply is TWO blocks, in this order:
 
+### ⚠ WHAT THE LETTER MEASURES (login re-ruling 2026-08-24, after r52)
+
+**It is an ACCURACY grade** — how accurately the document was decoded.
+*"did we make things up, did we catch what mattered, did we completely
+miss, are we making garbage ... across the 11 functions and the quality
+of our data table and summary."* Four dimensions, severity order:
+
+    1 FABRICATION  anything MADE UP — a state not on the page, a count
+                   never run, a relationship, a motive, a role, a scale.
+                   The only error nothing downstream marks as suspect.
+    2 CAPTURE      the instrument's real MECHANISM, the decision-changing
+                   facts, the chain expectations. A true verdict that
+                   misses the point of the document is a failed decode.
+    3 THE ELEVEN   every function ASKED; fires AND non-fires called
+                   right. ⚠ A WRONGLY-FIRED function is worse than a
+                   missed one: the miss leaves a hole, the wrong fire
+                   enters the corpus as a fact.
+    4 RENDER       the TABLE fully stated (every cell SETTLED / BRANCHED
+                   / UNREAD) and the SUMMARY leading a non-specialist to
+                   the RIGHT ACTION. Downstream, the table and summary
+                   ARE the decode.
+
+⚠ **THE LETTER IS THE WORST DIMENSION, NOT THE AVERAGE** — the corpus
+inherits the worst cell, not the mean — and is reported WITH the
+dimension that set it: `C+ (RENDER)`, `B- (CAPTURE)`. Full scale
+(A / A- / B+ / B / B- / C+ / C / D / F, with **D reserved for
+fabrication reaching the delivery**) is in Bootcamp.md. A new rubric is
+never a licence to re-grade upward; the self-grade runs LENIENT and has
+been overridden downward twice.
+
 **BLOCK 1 — THE GRADE, with its reasonings.** Everything about my
 performance lives here and ONLY here:
 ```
-R<n> GRADE (self, cold checklist, ledger read first) — <letter>
+R<n> GRADE (self, cold checklist, ledger read first) — <letter> (<dimension>)
 <one-line framing: how many misses, which classes/structures hit>
 1. <Miss: CLASS name + member list from the Ledger; what I delivered;
    what the page actually holds; which rule/structure it broke; the

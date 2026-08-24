@@ -9,6 +9,17 @@ RECURRENCE IS VISIBLE — the motive-claim defect reached its FIFTH
 occurrence precisely because nothing here existed to show it was a
 pattern.
 
+⚠ **THE GRADE IS AN ACCURACY GRADE** (login re-ruling 2026-08-24, after
+r52): how accurately the document was decoded — did we make things up,
+did we catch what mattered, did we completely miss, is it garbage —
+across the eleven functions, plus the quality of the data table and the
+summary. Four dimensions: FABRICATION · CAPTURE · THE ELEVEN · RENDER.
+⚠ **The letter is the WORST dimension, not the average** — the corpus
+inherits the worst cell, not the mean — and it is reported WITH the
+dimension that set it (e.g. "C+ (RENDER)") so the letter says what to
+fix. Full scale in Bootcamp.md. The r50 damage-by-layer scale measured
+RENDER DISCIPLINE only and is folded into dimension 4.
+
 **Read this file at grading time. If a miss class already has rows, the
 grade is harsher: a repeat of a recorded lesson costs double.**
 
