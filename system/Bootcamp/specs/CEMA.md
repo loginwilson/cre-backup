@@ -10,11 +10,15 @@ purpose. Governed by LOOP.md.
 | 55 | BK_7140048401460 | 1971 | Queens film | 7pp | $1,575,000.00 |
 | b1-4 | 2003011000989002 | 2002/03 | Bronx ACRIS | 20pp | $243,600.00 |
 | b1-5 | BK_7030040000013 | 1970 | Brooklyn film | 8pp | $20,000.00 |
+| b2-6 | RC_146262 | 2019 | Richmond | 33pp | $520,000.00 |
+| b2-7 | RC_1474230 | 1983 | Richmond | 5pp | $82,700.00 |
 
-**FIVE members**, five decades, five custodians, residential through
-mega-commercial. **Status: OPEN — surprise is still high (9 and 7 on the
-batch-1 members).** See CEMA-batch-1-results.md. The class closes when two
-consecutive members add nothing new.
+**SEVEN members, 1970 to 2019**, five custodians, residential through
+mega-commercial. **Status: OPEN.** Surprise 9, 7 (batch 1) then 6, 8
+(batch 2) — the raw number did not fall and the standing prediction FAILED.
+⚠ **Graded by kind, structural surprise went 6 → 4.** See
+CEMA-batch-2-results.md and LOOP.md §VII. The class closes when two
+consecutive members add no STRUCTURAL surprise.
 
 ---
 
@@ -30,6 +34,8 @@ each time.** Five members, five type situations:
 | 55 | SUNDRY AGREEMENT | catch-all; backer reads CONSOLIDATION AND EXTENSION AGREEMENT, "Spread" added by hand |
 | b1-4 | MORTGAGE AND CONSOLIDATION | accurate — the instrument is captioned CONSOLIDATION, EXTENSION AND MODIFICATION AGREEMENT |
 | b1-5 | SUNDRY AGREEMENT | catch-all; backer reads CONSOLIDATION AND EXTENSION AGREEMENT, and the remarks name it |
+| b2-6 | CONSOLIDATION AGR | accurate |
+| b2-7 | CONSOLIDATION AGR | accurate — captioned EXTENSION/CONSOLIDATION AGREEMENT |
 
 ⚠ **Do not expect the type to name the class — but do not assume it lies
 either.** A 1%-sample measurement (240,000 rows) found 672 of 736 gated
@@ -46,9 +52,16 @@ members are exactly the ones under-counted.
 
 1. **rd remarks.** r55's read `CONS & EXT L 6203 MP 81 ETAL` and named the
    class before a page was rendered (R36-1, confirmed in the field).
-2. **The operative sentence.** Some form of *"shall hereafter constitute in
-   law but one mortgage, a single lien"* — **present in all five, across
-   1970 to 2009**. The most reliable in-document identifier there is.
+2. **The operative sentence.** Some form of *"constitute in law … a single
+   lien"* — **present in SIX of seven, across 1970 to 2019** (b2-6's Form
+   3172 §IV carries it verbatim). Still the most reliable in-document
+   identifier.
+
+   ⚠ **ONE BOUNDED EXCEPTION, AND IT IS THE FORM, NOT THE ERA.** The
+   FNMA/FHLMC **8/79 Plain Language** form (b2-7, 1983) carries only the
+   gloss — "This combining of notes and mortgages is known as a
+   'consolidation'" — and no legal formula. Form 3172 carries BOTH. **Check
+   the form family before treating absence as evidence against the class.**
 3. **A constituent list** — mortgages recited with liber/reel citations,
    either in the body (r55 four of them, b1-5 three, b1-4 two) or as an
    exhibit (r13 Exhibit A, r45 Exhibit B). Body for small, exhibit for
@@ -60,7 +73,13 @@ members are exactly the ones under-counted.
    zero from the class.
 
 **Form families** — at least three, and the form tells you where to look:
-- **Fannie/Freddie** 3172 (NY CEMA) + 3033 (consolidated mortgage) — r13
+- **Fannie/Freddie** 3172 (NY CEMA, 1/01 rev. 5/01) + 3033 (consolidated
+  mortgage) — r13, b2-6. Restated terms ride as **Exhibit C** (Consolidated
+  Note) and **Exhibit D** (Consolidated Mortgage).
+- **FNMA/FHLMC 8/79 PLAIN LANGUAGE** Extension/Consolidation Agreement —
+  b2-7. ⚠ GSE forms existed by 1979; do not assume a pre-1990s CEMA is a
+  bespoke or NYBTU form. The form prescribes its own deletion (IIA *or* IIB,
+  with printed "initial here" markers).
 - **FHA** "NY FHA Consolidation Extension and Modification Agreement 1/96"
   + "FHA Multistate Fixed Rate Note 10/95", carrying an FHA Case No. — b1-4
 - **NYBTU** printed forms, e.g. Form 8026 (9-63), pre-ACRIS, ⚠ with
@@ -102,7 +121,9 @@ assessment.
 | **estates encumbered** | ALWAYS | operative/granting clause | fee · leasehold · air rights · combinations | never absent |
 | **consideration** | USUALLY | recital | nominal ($1.00 r55) — R40-2, not a price | — |
 | **parties** | ALWAYS | opening + acknowledgments | read from acknowledgments, not signatures | — |
-| **the holder chain** | ALWAYS RELEVANT | recitals, or absent | ⚠ **THREE MECHANISMS, ALL SEEN**: recorded assignment (b1-4, Reel 1868 p.1099) · corporate succession with no assignment (r13, "N/K/A" + MERS) · **probate** (b1-5, an executor of an estate) | assume none of the three; determine which |
+| ⚠ **obligor continuity** (NEW, b2-7) | **CHECK ALWAYS** | the "take over obligations" paragraph, and the constituents' named mortgagors | ⚠ **compare the mortgagor on each constituent to the party signing.** b2-7's constituents were signed by ALLIED WOODBROOK INC. (a sponsor) and the CEMA is how DONALD B. BLANK **assumed** them — the CEMA doing double duty as an assumption. The holder never moved | same names throughout (r13, b1-4, b2-6) |
+| ⚠ **is this a FIRST link?** (NEW, b2-6) | **CHECK ALWAYS** | Exhibit A / the constituent list | **CEMAs RECURSE.** Form 3172 §II(B) carries alternate wording for constituents "already been combined by a previous agreement". Read Exhibit A to learn whether this is a first consolidation or a later one | a flat list of original mortgages |
+| **the holder chain** | ALWAYS RELEVANT | recitals, or absent | ⚠ **MECHANISMS SEEN**: recorded assignment (b1-4) · corporate succession with no assignment (r13, "N/K/A" + MERS) · **probate** (b1-5, an executor) · ⚠ **MERS-as-nominee PLUS a chain of assignments that RETURNS TO THE START** (b2-6: MERS/Envoy → RoundPoint → Envoy → MERS/Envoy, three instruments, all recorded simultaneously) | assume nothing; **count the assignment instruments — each is a chain expectation** |
 
 ⚠ **THE RESTATED-TERMS FIELD IS THE CLASS'S SHARPEST TRAP, AND THE SPEC GOT
 IT WRONG.** Built on three members, it predicted the terms would be
@@ -129,8 +150,16 @@ per document.
      (r13; b1-4: $146,943.66 + $96,656.34 = $243,600.00)
    - **B — original principals, no new money = consolidated. CLOSES
      exactly.** (b1-5: $2,000 + $9,000 + $9,000 = $20,000)
+   - Confirmed twice more at batch 2, both shape A: **b2-6** $423,100.37 +
+     $96,899.63 = **$520,000.00**; **b2-7** $69,500.00 + $13,200.00 =
+     **$82,700.00**. ⚠ b2-6 shows the modern pattern — **the new money is
+     the odd figure, chosen so the total lands round.**
    - **C — original principals, balance stated separately. DOES NOT CLOSE,
      AND SHOULD NOT.** (r55: $2,367,261.60 originated vs $1,575,000 owing)
+
+   ⚠ **A AND B CONVERGE WHEN A CONSTITUENT IS NEW.** b2-7's note was six
+   months old with nothing amortised, so "the principal amount … that has
+   not been paid" EQUALS the original. Not a fourth shape — a boundary.
 
    **A gap under shape C is not a discrepancy. A gap under A or B is.**
    r55 delivered its gap as an open question; the shape answers it.
@@ -201,6 +230,8 @@ consecutive members add nothing.
 | 45 | "consolidation" can be one clause of a six-part stacked caption · the constituent schedule can be a 69-year genealogy · anti-merger covenant, contractually forbidding what r43 treated as doctrine · a DECONSOLIDATION in the chain |
 | **b1-4** | an **FHA** form family, not just Fannie/Freddie · the holder chain can ride a **recorded assignment** · **the register indexes the ORIGINATOR, not the assignee** — a search on the real holder misses the document · the package sibling is named on the cover · tax $0.00 against a stated taxable amount, because the tax was collected on the sibling · a ZIP discrepancy inside one filing · the affidavit misnames the recording office · three page-count namespaces all differing (15/17/20) |
 | **b1-5** | **the holder is a dead man's estate** and the chain resolves by PROBATE · a printed NYBTU form with **struck-through text** (R34-3's deletion layer, on a CEMA) · **no new money at all** · the arithmetic closes on ORIGINAL principals · **the spread is PARCEL-to-PARCEL**, a third meaning of "spread" alongside r55's estate-to-estate and r45's anti-merger · a 2% prepayment premium · a 24-year-old constituent still live |
+| **b2-6** | ⚠ STRUCTURAL: **CEMAs recurse** (3172 §II(B)) · **an assignment round trip** — MERS/Envoy → RoundPoint → Envoy → MERS/Envoy, three instruments recorded simultaneously. Incidental: a date typed "04/27/208" in a sworn affidavit · Richmond files with a COUNTY CLERK, not a City Register · tax declared prospectively rather than stamped · the new money engineered to a round total |
+| **b2-7** | ⚠ STRUCTURAL: **obligor assumption — the chain moved on the BORROWER side** · **the operative sentence is absent from the 8/79 plain-language form**. Incidental: GSE forms existed by 1979 · a condo UNIT (lot 1013), first in the class · the form prescribes its own deletion, initialed · an Exhibit A named as attached and not present · a printed lender address struck and retyped · ALLIED WOODBROOK INC. signed a constituent and is not in rd's party index |
 | 55 | the shelf can be a pure catch-all and rd remarks carry the true class · the arithmetic does not close when only original principals are recited · liens can be cross-spread across leasehold and fee instead of anti-merged · tax zero provable from register marks alone · the extension terms can live in a simultaneous separate instrument |
 
 **Batch 1 scored: 16 of 20 predictions held, coverage 100% on both, surprise
@@ -209,7 +240,16 @@ b1-5; appended §255 affidavit — b1-4; residential under an accurate type —
 b1-4). The value was in the four that failed, three of which landed on the
 restated-terms field.
 
-**PREDICTED FOR MEMBERS 6 AND 7, recorded now:** surprise falls below 5 on
-each; the arithmetic fits shape A, B or C without a fourth being needed; the
-holder chain resolves by one of the three known mechanisms. **If surprise
-does not fall, the class is not converging and the method is not working.**
+**BATCH 2 SCORED. The standing prediction FAILED** — surprise was 6 and 8,
+not below 5. Recorded as a fail in CEMA-batch-2-results.md. The arithmetic
+prediction HELD (shape A twice, no fourth shape); the holder-chain
+prediction was N/A on b2-7 because the chain moved on the other side.
+
+⚠ **The diagnosis is that the METRIC was too coarse** — it counted a
+three-digit date typo equally with a missing field. Graded by kind,
+**structural surprise went 6 → 4**. LOOP.md §VII now defines the split.
+
+**PREDICTED FOR MEMBERS 8 AND 9, recorded now:** **structural surprise ≤ 2
+on each.** The two new fields (obligor continuity, first-link) will apply
+cleanly. No fourth arithmetic shape. Draw a NON-Richmond, NON-residential
+member and one 1990s member — the two thinnest cells left.

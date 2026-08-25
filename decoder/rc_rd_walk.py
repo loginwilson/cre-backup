@@ -47,6 +47,7 @@ HERE = pathlib.Path(__file__).parent
 sys.path.insert(0, str(HERE))
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 import corpus_paths as CP
+import rc_source as RC                         # noqa: E402
 import fetch_pages
 
 RC = "https://www.richmondcountyclerk.com"
@@ -98,8 +99,15 @@ def parse_detail(html, iid):
         "recorded": fld("Date Recorded"),
         "amount": fld("Consideration Amount"),
         "status": re.sub(r"\s*View Imaged Document.*$", "", fld("Status")),
-        "image_state": ("present" if "View Imaged Document" in flat
-                        else "absent"),
+        # ⚠⚠ ONE DEFINITION, IN rc_source (fixed 2026-08-25). This used to
+        # read `else "absent"`, which put THREE facts under one word: the
+        # page says No Image Available, the page says something we do not
+        # recognise, and our regex missed the link. The two readers then
+        # disagreed about the SAME document - RC_2825613 stored 'absent'
+        # while its page plainly says "No Image Available At This Time".
+        # 'absent' feeds a PERMANENT verdict, so the ambiguity was one
+        # restart away from marking scanned documents as unscanned for ever.
+        "image_state": RC.image_state(flat, fld("Date Recorded")),
         "parcels": [{"bbl": f"5{b.zfill(5)}{l.zfill(4)}"} for b, l in
                     re.findall(r"Block (\d+), Lot (\d+)", flat)],
         "parties": [],

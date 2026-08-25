@@ -41,6 +41,53 @@ BASE = "https://www.richmondcountyclerk.com"
 UA = "acris-decoder/1.0 (public land records indexing; contact via repo owner)"
 PACE = 0.5
 
+# ⚠⚠ THE IMAGE STATE IS A READING PLUS A CLOCK (login 2026-08-25: "for
+# richmond the image is present if the rd says view imaged document. if it
+# says no image available at this time then it will either be pedning or
+# absent, the lag determines the state").
+#
+# The page publishes only TWO things, and the third state is derived:
+#   "View Imaged Document" / "ViewVscms"  -> present
+#   "No Image Available At This Time"     -> pending INSIDE the lag window,
+#                                            absent OUTSIDE it
+#   neither string                        -> unknown. NEVER a conclusion -
+#                                            it means we did not recognise
+#                                            the page, so ask again.
+#
+# ⚠ PENDING AND ABSENT LOOK IDENTICAL ON ANY SINGLE READ. Only age against
+# the lag distribution separates them. MEASURED 2026-08-18: doc 1016951
+# recorded 8/18 read pending, doc 1016134 recorded 8/7 read present - and 10
+# of 10 documents recorded on a Friday read no-image then and present after
+# the weekend. That is why the window exists and why a fresh filing is never
+# called absent.
+#
+# ⚠ AND AN UNREADABLE DATE IS ALWAYS PENDING, never absent. The failure mode
+# of guessing wrong is a scanned document permanently recorded as having no
+# scan, with nothing ever looking again; staying pending costs one re-ask.
+IMAGE_LAG_DAYS = 7
+
+
+def image_state(html, recorded=""):
+    """present | pending | absent | unknown - the ONE definition, shared by
+    every reader. rc_rd_walk.py used to keep its own and returned "absent"
+    for anything not present, which collapsed no-image, unrecognised and
+    parse-failure into one word (fixed 2026-08-25)."""
+    import re as _re2
+    import time as _t2
+    if "View Imaged Document" in html or "ViewVscms" in html:
+        return "present"
+    if "No Image Available At This Time" not in html:
+        return "unknown"
+    m = _re2.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", str(recorded or "").strip())
+    if not m:
+        return "pending"
+    try:
+        t = _t2.mktime((int(m.group(3)), int(m.group(1)), int(m.group(2)),
+                        0, 0, 0, 0, 0, -1))
+    except (ValueError, OverflowError):
+        return "pending"
+    return "pending" if (_t2.time() - t) < IMAGE_LAG_DAYS * 86400 else "absent"
+
 
 class Unauthorized(RuntimeError):
     """The detail route was reached WITHOUT a live search in the same session.
@@ -219,10 +266,5 @@ def parse_detail(html):
     # look identical on any single read; only age against the measured lag
     # distribution separates them, so store the OBSERVATION plus its date and
     # decide later. Collapsing them is what creates an unbounded retry loop.
-    if "View Imaged Document" in html or "ViewVscms" in html:
-        doc["image_state"] = "present"
-    elif "No Image Available At This Time" in html:
-        doc["image_state"] = "pending"
-    else:
-        doc["image_state"] = "unknown"
+    doc["image_state"] = image_state(html, doc.get("recorded", ""))
     return doc

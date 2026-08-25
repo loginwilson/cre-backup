@@ -199,7 +199,12 @@ _absent_at: dict[str, float] = {}
 # in flight, and the hot lane fills with duplicates of itself.
 _hot_at: dict[str, float] = {}
 ready = queue.Queue()                     # (did, location, minted_at)
-DBQ = queue.Queue(maxsize=10000)          # (did, relpath) -> the ONE writer
+DBQ = queue.Queue(maxsize=10000)          # (did, relpath|'pending'|'absent')
+                                          # -> the ONE writer
+# miners need the recorded date to apply the lag; one shared read handle,
+# guarded, because sqlite connections are not thread-safe
+_RO: list = [None]
+_RO_LK = threading.Lock()
 STOP = threading.Event()
 HOLD = threading.Event()                  # 4xx arbitration in progress
 lock = threading.Lock()
@@ -306,13 +311,24 @@ def next_ids(n):
     con.execute("PRAGMA busy_timeout=60000")
     rows = con.execute(
         "SELECT id FROM navigation WHERE id > 'RC' AND id LIKE 'RC_%'"
-        " AND recorded_details != '' AND pdf = ''"
+        # ⚠⚠ 'pending' IS STILL TODO (login 2026-08-25: "pedning remains
+        # in que until 7 dyas passes"). The moment a cell holds 'pending' it
+        # stops matching pdf='' - so every todo predicate, the partial index
+        # and the board's denominator had to move in ONE change or those rows
+        # would silently leave the worklist AND be counted as landed.
+        " AND recorded_details != '' AND pdf IN ('', 'pending')"
         " AND json_extract(recorded_details, '$.image_state') = 'present'"
         " ORDER BY id LIMIT ?",
         (n + len(served_ids) + len(have_raw),)).fetchall()
     con.close()
     return [r[0] for r in rows
             if r[0] not in served_ids and r[0] not in have_raw][:n]
+
+
+def _open_ro():
+    _RO[0] = sqlite3.connect("file:%s?mode=ro" % CP.NAV_DB, uri=True,
+                             timeout=120, check_same_thread=False)
+    _RO[0].execute("PRAGMA busy_timeout=120000")
 
 
 def miner():
@@ -362,26 +378,50 @@ def miner():
                     "?p_endorsementId=%s" % iid)
                 req.add_header("Referer",
                                RC.BASE + "/Search/ViewDocumentInfo/%s" % iid)
-                loc = None
+                # ⚠⚠ THREE OUTCOMES, NEVER TWO (login 2026-08-25: "we have
+                # the url, if it doesnt show, its absent, if it shows a fetch
+                # its pdf, and if its absent but the recorded date of the doc
+                # id is in the lag period it gets pending").
+                #
+                # This used to collapse "the endpoint answered and there is
+                # no image" together with "our request never got there" into
+                # one `skipped` counter. They are opposite facts: the first
+                # is a statement ABOUT THE DOCUMENT and may be recorded; the
+                # second is a statement about US and must only be retried.
+                # login named this exactly: "any error that isnt from a
+                # deadend url should not msireport a missing url if the
+                # system is just failing the fetch".
+                loc, outcome = None, "error"
                 try:
                     with tl.op.open(req, timeout=60):
-                        pass
+                        # 200 with redirects disabled = the endpoint answered
+                        # and handed us no image location. A DEAD END.
+                        outcome = "noimage"
                 except urllib.error.HTTPError as e:
                     # ⚠ THE 302 IS THE PRODUCT. The pdf does NOT live on
                     # richmond: the Location points at the NY State courts
                     # viewer with a self-authenticating token.
-                    loc = (e.headers.get("Location")
-                           if e.code in (301, 302, 303) else None)
-                if loc:
+                    if e.code in (301, 302, 303):
+                        loc = e.headers.get("Location")
+                        outcome = "present" if loc else "noimage"
+                    elif e.code == 404:
+                        outcome = "noimage"     # the url itself is a dead end
+                    else:
+                        # 403/429/5xx say nothing about the DOCUMENT
+                        outcome = "error"
+                if outcome == "present" and loc:
                     (ready_hot if is_hot else ready).put(
                         (did, loc, time.time()))
                     with lock:
                         stat["minted"] += 1
                         if is_hot:
                             stat["hot"] += 1
+                elif outcome == "noimage":
+                    # THE LAG DECIDES WHICH KIND OF "no pdf" THIS IS.
+                    _no_image(did)
                 else:
                     with lock:
-                        stat["skipped"] += 1
+                        stat["skipped"] += 1      # ours - retry, never record
             except Exception:
                 with lock:
                     stat["skipped"] += 1
@@ -554,7 +594,12 @@ def writer():
             return
         for _try in range(120):            # never die on a lock
             try:
-                con.executemany("UPDATE navigation SET pdf=? WHERE id=?",
+                # ⚠ ONLY OVER AN UNDECIDED CELL. A landed path is never
+                # overwritten by a later 'pending'/'absent', and 'absent' is
+                # never silently reverted; 'pending' -> path is the one
+                # upgrade that must work.
+                con.executemany("UPDATE navigation SET pdf=? WHERE id=?"
+                                " AND pdf IN ('', 'pending')",
                                 [(p, d) for d, p in pend])
                 con.commit()
                 break
@@ -623,6 +668,39 @@ def _url_minted(con_, did):
     except Exception:
         return False
     return bool(r and r[0])
+
+
+def _no_image(did):
+    """The url is a dead end. Record WHICH kind, and only ever into an
+    undecided cell.
+
+    login 2026-08-25: "the pdf cell just has the path for the fetch. if no
+    pdf itll either be absent or pending. and pedning remains in que until 7
+    days passes."
+
+        pending  recorded inside --lag-days. STAYS IN THE QUEUE - the scan
+                 has not arrived yet. PROVEN necessary: 10 of 10 documents
+                 recorded on a Friday had no image then and did after the
+                 weekend.
+        absent   the lag expired. The document has no scan, and this is the
+                 determination that lets completion reach 100%.
+
+    ⚠ Written through DBQ, the ONE writer seat - miners never touch the write
+    connection. ⚠ And only over '' or 'pending': a real path is never
+    overwritten, and 'absent' never silently reverts."""
+    rec = ""
+    try:
+        with _RO_LK:
+            r = _RO[0].execute("SELECT json_extract(recorded_details,"
+                               "'$.recorded') FROM navigation WHERE id=?",
+                               (did,)).fetchone()
+        rec = (r[0] if r and r[0] else "") or ""
+    except Exception:
+        rec = ""                      # unreadable => treated as in-lag below
+    state = "pending" if _in_lag(rec) else "absent"
+    DBQ.put((did, state))
+    with lock:
+        stat[state] = stat.get(state, 0) + 1
 
 
 def _in_lag(recorded):
@@ -929,11 +1007,17 @@ def rd_heal():
                 # failing the fetch"). "no pdf" must be a fact about the
                 # DOCUMENT, never a symptom of our own transport:
                 #
-                #   1 THE SOURCE MUST HAVE SAID SO. st_now is parsed from a
-                #     detail page we just fetched SUCCESSFULLY. Every failure
-                #     path above does `failed += 1; continue` and never
-                #     reaches here, so a timeout, reset, 5xx or refusal
-                #     cannot produce a verdict - it produces a retry.
+                #   1 THE SOURCE MUST HAVE SAID SO, IN ITS OWN WORDS. The
+                #     state must be 'pending', which means the page literally
+                #     carried "No Image Available At This Time" - login's
+                #     screenshot of RC_2825613 is exactly that string. It is
+                #     NOT enough for the state to be merely not-present:
+                #     'unknown' means we did not recognise the page and must
+                #     ask again. And st_now comes from a detail page fetched
+                #     SUCCESSFULLY - every failure path above does
+                #     `failed += 1; continue` and never reaches here, so a
+                #     timeout, reset, 5xx or refusal produces a RETRY, never
+                #     a conclusion.
                 #   2 THE LAG WINDOW MUST HAVE EXPIRED (--lag-days).
                 #   3 THE URL MUST HAVE BEEN MINTED. An un-minted row is OUR
                 #     gap, not a dead end at the source, and calling it "no
@@ -945,9 +1029,7 @@ def rd_heal():
                     if a.hot_pdf:
                         hot_ids.put("RC_" + iid)  # only with --hot-pdf
                     _absent_at.pop(iid, None)     # resolved - stop tracking
-                elif (st_now == "absent"
-                      and not _in_lag(rec.get("recorded"))
-                      and _url_minted(wcon, "RC_" + iid)):
+                elif False:   # ⚠ RETIRED 2026-08-25 - see below
                     # ⚠⚠ THIS IS THE ONLY PLACE A "NO PDF" FACT IS RECORDED,
                     # and without it 100% IS UNREACHABLE (login 2026-08-25:
                     # "If you arent counting no pdf determiniation into the

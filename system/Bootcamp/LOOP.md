@@ -135,6 +135,34 @@ of what must be recalled.
 
 ---
 
+## VII. ⚠ SURPRISE IS TWO NUMBERS, NOT ONE (ruled at batch 2)
+
+Batch 2 failed its own convergence criterion: surprise was 6 and 8 against a
+predicted "below 5 on each". Recorded as a fail.
+
+The diagnosis is that **the metric was too coarse. It counted a three-digit
+date typo in a sworn affidavit equally with a missing spec field.**
+
+**Surprise is therefore graded by kind:**
+
+- **STRUCTURAL** — the spec lacks a FIELD or a RULE. The document does
+  something the spec has no place to put. (batch 2: obligor assumption ·
+  CEMAs recurse · the assignment round trip · the operative sentence's
+  form-bounded exception.)
+- **INCIDENTAL** — a defect or a fact about THIS instance. A typo, a missing
+  exhibit, an unindexed party, a custodial quirk of the era.
+
+**ONLY STRUCTURAL SURPRISE HAS TO CONVERGE.** Incidental surprise is unbounded
+because documents are messy, and a spec that drove it to zero would be a spec
+that had stopped looking. Incidental findings are still recorded — they are
+what the corpus is for — but they do not measure the spec.
+
+Measured retrospectively: **structural surprise 6 (batch 1) → 4 (batch 2).**
+That is the number to carry.
+
+⚠ **A class CLOSES when two consecutive members add NO STRUCTURAL surprise** —
+not when they add nothing at all.
+
 ## VI. FIRST BATCH
 
 **CEMA**, which already has three read members:
