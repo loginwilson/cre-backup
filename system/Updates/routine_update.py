@@ -87,6 +87,9 @@ _HEARTBEAT = {
     # rc_pdf_pull, which logs into its own cwd (the decoder dir). Watching the
     # lander's log kept a 6-hour wedge invisible until 2026-08-23 20:00.
     ("acquisition pdf", "richmond"): str(DECODER / "rc_lane.log"),
+    # the consolidated row watches the same heartbeat - without it a genuine
+    # wedge would be invisible, since a missing spec means "no alarm"
+    ("synchronization", "richmond"): str(DECODER / "rc_lane.log"),
 }
 _STALE_S = 180
 
@@ -136,6 +139,20 @@ _CUM_SPEC = {
     # the exact "result the python is coding into the db" (login). Absolute
     # path: the puller logs into its own cwd, not NAV_WORK.
     ("acquisition pdf", "richmond"):
+        ((str(DECODER / "rc_lane.log"),), r"db ([\d,]+)"),
+    # >> AND THE SAME FOR THE CONSOLIDATED ROW - the third and last piece of
+    # the richmond move. `landed` comes from _board_truth.json, which
+    # board_truth refreshes on a ~30 MINUTE anchor interval, so differencing
+    # it on a 60-second tick reads 0 on ~29 of every 30 ticks. That is why
+    # the row printed `now 0.0/s` with a 5m rate decaying 53 -> 30 -> 20 as
+    # one stale lump spread over a widening window (login: "still not seeing
+    # the update properly"). The lane's own monotonic "db N" is the honest
+    # rate at tick resolution; landed stays the measured anchor.
+    # ⚠ A CONSOLIDATION MOVES THREE THINGS OR THE ROW LIES: the process
+    # signature (else always STALLED), the heartbeat log (else a real wedge
+    # is invisible), and the rate spec (else 0.0/s forever). All three are
+    # now on rc_lane.
+    ("synchronization", "richmond"):
         ((str(DECODER / "rc_lane.log"),), r"db ([\d,]+)"),
 }
 
@@ -265,8 +282,15 @@ PROC_SIG = {
                                    "live_gap.py", "crfn_monitor.py",
                                    "routine_synchronization.py",
                                    "routine_4am.py"),
-    ("synchronization", "richmond"): ("routine_synchronization.py",
-                                      "rc_daily.py"),
+    # >> rc_lane.py IS THE RICHMOND SYNC PROCESS NOW (consolidation
+    # 2026-08-24). This still named routine_synchronization.py / rc_daily.py,
+    # both retired - so `worked` was False, the row fell past the ACTIVE
+    # branch, and the board printed STALLED while rc_lane was landing pdfs at
+    # 14/s. ⚠ A PROC_SIG naming a dead script cannot report "stalled"
+    # honestly: it reports stalled ALWAYS, which is the same as reporting
+    # nothing. Whenever a lane is consolidated, its signature, its heartbeat
+    # log and its rate source all move together or the row lies.
+    ("synchronization", "richmond"): ("rc_lane.py",),
     ("navigation", "acris"): ("nav_append.py",),
     ("navigation", "richmond"): ("nav_append.py",),
     ("acquisition rd", "acris"): ("rd_walk.py", "acris_lane.py"),
@@ -465,6 +489,12 @@ def gather():
             m = re.search(r"total \d+\s+([\d.]+)/s", lines[-1])
             if m:
                 LANE_RATE[("acquisition pdf", "richmond")] = float(m.group(1))
+            # >> THE SYNC ROW IS THE SAME LANE, SO IT TAKES THE SAME RATE.
+            # Moving richmond's headline to `synchronization` without
+            # moving its rate source left the board printing 0.0/s STALLED
+            # while rc_lane.log said 13.9/s (login: "richmond still not
+            # moving"). LANE_RATE/ANCHORED are keyed (phase, source).
+            LANE_RATE[("synchronization", "richmond")] = float(m.group(1))
         break
     a_rd = base.get("acris_rd", 0) + sum(
         num(last_progress(p.stem), r"\+([\d,]+) this run") for p in rd_logs)
@@ -566,6 +596,7 @@ def gather():
         if "richmond" in truth:
             rc_pdf = truth["richmond"]
             ANCHORED.add(("acquisition pdf", "richmond"))
+            ANCHORED.add(("synchronization", "richmond"))
         # ⚠ PREFER THE ANCHOR'S OWN RATE - it is the only figure here measured
         # from the TABLE. The lane alternative is `total_docs / total_minutes`,
         # a LIFETIME average, and this system already paid to learn that
@@ -591,6 +622,15 @@ def gather():
     out[("synchronization", "acris")] = (a_pdf, need_a)
     out[("acquisition pdf", "acris")] = (a_pdf, need_a)
     out[("acquisition pdf", "richmond")] = (rc_pdf, need_r)
+    # >> RICHMOND SYNCHRONIZATION IS THE WHOLE LANE NOW (consolidation
+    # 2026-08-24). Until today sync meant "rd landed", so the board printed
+    # `2,501,694 / 2,501,694 = 100.00% COMPLETE` while rc_lane was still
+    # pulling images at 48% - the same lane, called finished and unfinished
+    # on two adjacent rows. rc_lane.py absorbed probe + mint + rd heal +
+    # pdf, so its distance-to-done is the pdf gate exactly as it is for
+    # acris above: ready = needed - pdf_todo. The rd detail survives on the
+    # hidden `acquisition rd` row, which is where per-stage detail belongs.
+    out[("synchronization", "richmond")] = (rc_pdf, need_r)
     # organization: NOT computed here - routine_organization writes its own
     # measured row (a fresh scan beats these stale baseline counters, and a
     # 24M-row count on a 5-minute tick is the WAL trap)

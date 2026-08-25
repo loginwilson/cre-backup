@@ -32,7 +32,7 @@ open question is what verdict a SELF-CONTRADICTING SOURCE DOC should get.
 docs** that never landed across ~4 attempts each, and their WHY was never
 captured — those are now diagnosable if re-adjudicated.
 
-**3 · NO VERSION CONTROL.** ⚠ VERIFIED, not assumed: the decoder directory is
+**3 · ✅ VERSION CONTROL EXISTS (2026-08-24).** Two git repos, code-only by ALLOWLIST .gitignore (the tree is 15 GB of caches, so a blacklist fails OPEN): the decoder dir (515 files, 6 MB) and the Updates board dir. ⚠ Neither has a remote — they survive a bad edit, NOT a dead disk. ⚠ A Socrata app token is hardcoded in 7 .py files, so these repos must not be pushed public as-is. SUPERSEDED BELOW: ⚠ VERIFIED, not assumed: the decoder directory is
 **not a git repo** (`git rev-parse` fails). Every fix from 2026-08-24 — the
 pacer, the pool sizing, contiguity dial, probe-aware governor, session
 recycle, watchdog, warm resume, high-water tempo, in-run retry, adjudication,

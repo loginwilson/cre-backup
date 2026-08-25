@@ -173,6 +173,28 @@ loop's coverage claim becomes false without anything looking wrong.
 
 - [x] **r53** `2003042301213001` CERTIFIED COPY OF WILL — ⚠ **THE TYPE IS ACCURATE** (first drawn document in four runs that its shelf describes correctly) · QUEENS block 1665 lot 64 · will executed 1992-04-28, rec 2003-04-23 · rd pages 10 / pdf 10 — the type tail's last CERTIFIED COPY OF WILL member. ✅ **TITLE-BY-DEVISE OPENED**: Last Will and Testament of ALFRED SEABROOK devising 27-15 Butler Street to two grand-daughters 50/50, with two separate trusts (Sheldon trustee for Danielle, Stephanie for Brenda) until each turns eighteen, plus a conditional right of residence for Stephanie. ⚠ **BUT NO TITLE EVENT**: no death date, no probate decree, no letters — every dispositive row is `signals`. **Chain expectations:** the testator's death certificate; the Surrogate's decree; **Surrogate's file 4124-93**, READ in ink on page 3. ⚠ CANDIDATE TWELFTH FUNCTION "AUTHORITY" queued (3rd member with r37, r47).
 
+- [x] **r54** `2003031600062002` TERMINATION OF TRUST (actually a **TERMINATION AND RELEASE OF REGULATORY AGREEMENT**) · MANHATTAN blocks 392, 393, 395 · executed 2003-03-14, rec 2003-04-01 · rd pages 11 / pdf 11 — from the type tail, the largest of the shelf's 11 members. ⚠ **NO TRUST ANYWHERE — sixth true type-shelf mismatch** (r42, r48, r50, r51, r52, r54; grep-verified). NYC Housing Development Corporation releases a 1983 Regulatory Agreement (REEL 747 pp. 501-514) off SIX described parcels covering **EIGHT tax lots**, ≈30,582 SF DERIVED. ⚠ **THREE RECORD DEFECTS, ALL EARNED TWO WAYS**: two released lots (392/50, 392/51) never indexed · Parcel A3's courses run SOUTH TWICE and never north, so the description does not close · the register dropped "CITY" from the agency's name. ⚠ TWO LOT-LINEAGE STATEMENTS on the page ("Former Lot: 48"; "Lot: 59 (former Lots 59 and 60)") — no prior "former lot" wording in the file. **Chain expectations:** REEL 747 pp. 501-514 (what was actually released — absent here) and the package siblings `2003031600062001` and following.
+
+### ⚠ THE ERA DEBT — NINE STRAIGHT BAND DRAWS, CARRIED DELIBERATELY
+
+The two-source ruling (r45) says band draws ALTERNATE with disk-store id
+draws, because the landed band is 95.8% recorded-2003 and pure band draws
+train one era. Runs 46-54 are all band. **That is nine, and it is now
+recorded rather than silently continued.**
+
+MEASURED at r54, before choosing: the oldest disk shard (1911-1913) was
+enumerated — 40 documents in 1911, ~72 in 1912, 16 in 1913 — and gate-
+checked. ⚠ **It is a SINGLE RICHMOND DEED LIBER**: every member typed
+DEED, every id RC_, every one in Book 396. So the oldest era buys era
+variety at the cost of repeating BOTH the custodian runs 1-39 over-sampled
+AND a type already read three times (r22, r23, r24). The band's open shelf
+was taken instead.
+
+⚠ **STANDING: r55 IS A DISK-STORE DRAW.** Target the cells the 1911-13
+shard cannot serve — FT_ or BK_ ids, a NON-DEED type, and an era between
+1936 and 1980 where the shard listing is thick. Richmond RC_ ids do NOT
+repay this debt; the custodian is the most-read in the file.
+
 ### ⚠ THE SURROGATE'S COURT IS A SOURCE, AND R27 SAID SO FIRST
 
 Grep-verified: R27 (1950) already recorded that Surrogate's Court is "a

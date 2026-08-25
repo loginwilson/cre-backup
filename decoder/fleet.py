@@ -23,6 +23,32 @@ The old "rd" and "apdf" lanes are RETIRED: starting them alongside the
 lane would put a second access point on ACRIS, which is the tripping
 condition the lane exists to remove. Their definitions live in git
 history if a rollback ever needs them.
+
+⚠ THE SAME CUTOVER FOR RICHMOND (2026-08-24, evening): rc_lane.py absorbed
+rc_live (probe), rc_feed (token minting) and rc_pdf_pull (fetch + land),
+and DROPPED rc_pdf_land - the courts host serves a real pdf and the puller
+already landed it, so the lander only ever drained a legacy _incoming
+backlog. 4 processes -> 1. Retired scripts moved OUT of the import path to
+_archive/richmond_preconsolidation/ so they cannot be started by habit.
+
+⚠ WHY RICHMOND ALSO GAINED AN rd HEAL, AND WHY THAT MATTERS TO THE ROSTER.
+rc_live landed only id + rd_url + pdf_url. rd was a SEPARATE walker that
+had finished its backfill and was no longer watching the edge, so a new
+filing got an id and a url and then stopped - no rd, therefore no key (the
+key_on_rd trigger fires on rd), therefore no pdf. The lane looked healthy
+because it was counting ids. **A roster is only honest if each lane owns
+its whole pipeline**; a lane that owns four of five stages will report the
+four and stay silent about the fifth.
+
+⚠ THE TWO LANES HAVE OPPOSITE PACING, AND THE ROSTER MUST NOT BLUR THEM.
+acris runs a METRONOME (one request per beat, a governed climb, a banked
+peak in lane_tempo.json) because it trips under lumpy load. richmond runs
+a DRUMROLL (no pacer, latency is the only governor, proven at 160
+concurrent connections). Consequence for operations: **richmond can be
+stopped and restarted freely at full speed; acris cannot** - a restart
+costs it the climb unless the banked peak is fresh (WARM_MAX_AGE 6 h).
+Stop acris GRACEFULLY (fleet.py stop) so it saves a clean peak; a
+force-kill mid-shed can flag it dirty and cold-start the next run at 12/s.
 """
 import pathlib
 import subprocess
@@ -75,9 +101,58 @@ LANES = {
         # does NOT raise throughput - the pacer owns the rate. Raise
         # --rps-max instead, and only on evidence.
         ("acris_lane", "acris_lane.py",
-         ["--apply", "--phase", "row", "--workers", "32",
-          "--max-inflight", "24", "--max-rps", "12", "--rps-max", "80",
-          "--step-minutes", "3"],
+         # >> WORKERS ARE THE DEMAND, THE TEMPO IS ONLY A LIMIT (measured
+         # 2026-08-24 19:55). Each worker holds ONE request at a time, so the
+         # pool can generate at most workers/RTT req/s: 32 workers / 0.58 s =
+         # 55/s, which is EXACTLY the delivered figure the governor kept
+         # reporting as "the wire is the limit". It was not the wire - it was
+         # us. Commanding 69.4/s cannot conjure demand 32 workers do not make,
+         # so delivered sat at 79% and the climb gate (needs 90%) locked the
+         # lane out of its own ramp. 52 workers / 0.58 s = ~90/s, which is
+         # what 8 docs/s needs. --max-inflight must exceed the worker count or
+         # IT becomes the new cap.
+         ["--apply", "--phase", "row", "--workers", "56",
+          # >> --max-inflight WAS THE BINDING CONSTRAINT, NOT ACRIS (measured
+          # 18:59): commanded 69.4/s, delivered 61.8/s, and the governor
+          # correctly refused to climb - "the wire is the limit now, not the
+          # tempo". Little's Law: 24 in flight / 0.388 s RTT = ~62/s ceiling,
+          # exactly what we saw. Concurrency still FLOATS to rate x RTT and is
+          # never maximized; this only stops the cap from binding before the
+          # rate does. 40 / 0.388 = ~103 delivered, which at 11.2 reqs/doc is
+          # ~9 docs/s.
+          "--max-inflight", "64", "--max-rps", "12", "--rps-max", "150",
+          # >> CLIMB FAST, BECAUSE THE THING WE FEARED WAS NOT THE RATE.
+          # Every "trip" chased on 2026-08-24 turned out to be (a) acris's
+          # edge 503ing our User-Agent string and (b) our own CLOSE_WAIT pool
+          # deadlock - neither caused by pace. The gentle +2/3min ramp was
+          # insurance against a mechanism that did not exist. +8 every 2 min
+          # reaches 150 from a warm 69 in ~20 min, and the governor now
+          # actually SEES a shed (503 sets err.acris_shed) so it collapses
+          # instead of climbing through one.
+          # >> TEN-MINUTE RUNGS, TWENTY-MINUTE CONFIRM, HOT START (login's
+          # design, 2026-08-24 20:22). A 2-minute window at ~6.5 docs/s is
+          # ~780 documents and is DOMINATED BY NOISE - proven twice tonight,
+          # where the first rung after a restart measured 3.96 then 4.22
+          # ready/s because the window contained the lane's own spin-up, and
+          # the next rung then looked like a "+59% improvement" that was
+          # mostly the first number being wrong. 10 minutes is ~3,900
+          # documents.
+          #
+          # And 20 minutes of confirmation matters more than the rung length:
+          # acris dips transiently (delivery went 91% -> 87% -> 77% inside six
+          # minutes tonight), so a 6-minute confirm can sit ENTIRELY INSIDE
+          # one dip and revert on it. 20 minutes spans the dip AND the
+          # recovery - "that gives enough time for recovery to occur".
+          #
+          # ⚠ WHICH ONLY WORKS IF THE LADDER STARTS HOT ("you have to make
+          # sure the rung starts hot so it doesnt take forever to find
+          # ceiling"). At 10 min/rung a cold start from 12/s would take hours;
+          # from a banked 92.6 peak, 0.9 puts us at ~83 and the ceiling is
+          # ~5 rungs away. The banked peak is a MEASURED clean tempo, so
+          # resuming near it is evidence-backed, not optimism.
+          "--step-minutes", "10", "--rung-step", "8",
+          "--confirm-windows", "2",
+          "--warm-fraction", "0.9"],
          HERE, W / "acris_lane.log"),
         # ⚠ THE 2026-08-24 RICHMOND CUTOVER: rc_lane.py absorbed rc_live
         # (probe), rc_feed (token minting) and rc_pdf_pull (fetch+land), and
@@ -90,9 +165,18 @@ LANES = {
         # so two minters hand the SAME ids out twice and nothing in the table
         # records that a token was minted.
         #
-        # ⚠ DRUMROLL, NOT METRONOME. No pacer - latency is the governor
+        # ⚠ THE DRUM, NOT THE PIANO. No pacer - latency is the governor
         # (proven 160 concurrent connections for 26 h). Concurrency is the
         # only dial and the safety is refusal_verdict, not pacing.
+        # >> DRUMMING QUICKER (login 2026-08-25: "richmond may be able to
+        # drum quicker"). 16 -> 26 pullers, 24 -> 32 miners. ⚠ THIS IS A
+        # PROBE, NOT A SETTING: richmond averages 4.87 MB/doc (150.9 GB over
+        # 30,948 pdfs), so at 9.4 docs/s it is already pulling ~296 Mb/s -
+        # squarely in the 230-287 Mb/s band measured for it alone. If it is
+        # BANDWIDTH-bound rather than worker-bound, more pullers buy nothing
+        # and cost acris, which shares the link and is the long pole (9% vs
+        # richmond's 67%). Judge it on richmond's docs/s AND acris's ready/s
+        # together; revert to 16 if acris pays for it.
         ("rc_lane", "rc_lane.py",
          ["--apply", "--miners", "24", "--workers", "16"],
          HERE, HERE / "rc_lane.log"),

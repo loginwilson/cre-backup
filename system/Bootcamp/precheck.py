@@ -62,6 +62,11 @@ WHAT IT CHECKS
               that asserts what the Unresolved stream denies structurally
               unrepresentable. (r52: rows 1-2 routed title to named
               survivors while the stream called the branch open.)
+  CARDINALS   every number printed WITH THE NOUN IT COUNTS. A licence
+              covers one claim, not one token. (r54: 'six described
+              parcels' was licensed and 'six apartment buildings' rode in
+              on it — the cover types six LOT RECORDS, two of which share
+              one address.)
   DATE-ARITH  every stated interval recomputed against the dates present.
               A computed figure READS as verified, so a wrong one is worse
               than none. (r53: 'eleven years and eleven months' for an
@@ -369,10 +374,16 @@ def main():
                % ", ".join(str(s) for s in spans[:6]),
                sorted(set(intervals)))
 
-    cards = sorted({m.group(0) for m in re.finditer(
-        r"\b(" + "|".join(CARDINAL_WORDS) + r")\b", low)})
-    report("CARDINALS · license each with a count run in-action (advisory)",
-           cards)
+    # r54: the licence must cover a CLAIM, not a TOKEN. Print each cardinal
+    # with the words it counts — "six described parcels" and "six apartment
+    # buildings" are two claims, and one licence used to cover both.
+    CARD_RE = re.compile(r"\b(" + "|".join(CARDINAL_WORDS) + r")\b[\s,]+((?:[A-Za-z\u2019'-]+\s+){0,2}[A-Za-z\u2019'-]+)", re.I)
+    cards = sorted({" ".join(m.group(0).split())[:52]
+                    for m in CARD_RE.finditer(text)})
+    report("CARDINALS · each number WITH THE NOUN IT COUNTS — license each "
+           "by a count run in-action; two referents may not share one "
+           "licence (r54: 'six described parcels' licensed 'six apartment "
+           "buildings')", cards)
 
     ticks = [ln.strip()[:110] for ln in text.splitlines() if "✓" in ln]
     report("EARNED-tick · name the two witnesses for each, or downgrade to "

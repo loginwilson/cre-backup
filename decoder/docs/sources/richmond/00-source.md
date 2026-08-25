@@ -712,3 +712,108 @@ and reporting it as the thing. Full-body reads are the only proof that counts.
                      vs dry-feed. Written for the browser era; still useful
                      for watching the feed side.
     rc_browser_loop.js  SUPERSEDED. Keep for reference only.
+
+---
+
+## 3e · ONE LANE — the consolidation  (2026-08-24, supersedes §3d and §2c)
+
+**`rc_lane.py` IS THE ONLY RICHMOND PROCESS.** It absorbed `rc_live` (probe),
+`rc_feed` (token minting) and `rc_pdf_pull` (fetch + land), and DROPPED
+`rc_pdf_land` outright — the courts host serves a real pdf and the puller
+already landed it, so the lander only ever drained a legacy `_incoming`
+backlog. 4 processes → 1; 1,026 lines → 899. The retired scripts now live in
+`_archive/richmond_preconsolidation/` so they cannot be started by habit.
+
+⚠ **`rc_pdf_land.log` IS STILL READ BY THE BOARD AND MUST BE.** It is a
+STATIC HISTORICAL BASELINE now — the file no longer grows, but the pdfs it
+counts really did land. Deleting the branch would erase them from the board.
+
+**WHY ONE LANE, AND WHY IT NEEDS NO WARM-UP.** Richmond drums: no pacer, the
+county's latency is the only governor. Measured on restart 2026-08-24 — first
+minute 10.03/s, thirteenth minute 18.37/s, `err 0`. ACRIS cannot do this (its
+metronome must climb a rung at a time), which is exactly why richmond can be
+stopped and restarted freely and acris cannot.
+
+### ⚠ THE MISS THIS CONSOLIDATION EXISTS TO FIX
+
+login, 2026-08-24: *"youve just been counting the change, but not recording
+the url, details, pdf, or key properly."* Correct, and the cause was
+structural: **`rc_live` landed only `id` + `rd_url` + `pdf_url`.** rd was a
+separate walker that had already finished its backfill and was not watching
+the edge, and `rc_heal` was a one-shot script nobody re-ran. So a new filing
+got an id and a url and then stopped — no rd, therefore no key (the
+`key_on_rd` trigger fires on rd), therefore no pdf.
+
+`rc_lane` adds the **rd heal** organ, driven by THE GRANT RULE: a detail
+unlocks only after the session has fetched the LISTING PAGE its id appears
+on. So the heal opens a trailing `--rd-days` window, reads its pages, and
+only then fetches details — all on one session. A cold detail fetch does not
+fail loudly; it returns HTTP 200 and a 4,212-byte shell, which is worse.
+
+⚠ **THE WORKLIST IS THE WINDOW, NOT THE CORPUS.** The first version selected
+rd-less rows with `json_extract` over 2.5M rows, timed out past 100 s, and
+healed NOTHING while logging as if it worked. Inverted: enumerate the
+window's rows, then check each against the db.
+
+**MEASURED AFTER THE FIX**, today's 7-digit filings (`RC_2825450..RC_2826619`):
+
+    rd_url  400/400  100%
+    rd      400/400  100%     <- was the miss
+    key     400/400  100%     <- follows rd for free, via key_on_rd
+    pdf      79/318   25%     of image_state=present, still pulling
+    image_state: 318 present · 82 absent · 0 stuck pending
+
+Corpus-wide: **rows with rd but no key = 0**, **rows with no rd at all = 0**.
+`rd 105` in the PROGRESS line is the heal landing exactly the 105 filings
+login counted independently for the day.
+
+### ⚠ TWO ORDERING TRAPS THAT FAKED A CLEAN AUDIT (both mine, 2026-08-24)
+
+RC ids live in **two namespaces**: legacy 6-digit and current 7-digit. TEXT
+ordering puts `RC_999999` ABOVE `RC_2826619`, so:
+
+- `ORDER BY id DESC LIMIT 500` returned SIX-DIGIT rows and reported **pdf
+  0.0%** — read as "today landed no images". It had sampled the backfill.
+- `WHERE id >= 'RC_2800000' AND id < 'RC_2900000'` looks like a 7-digit range
+  and matches `RC_289643` too — same wrong answer, second time.
+
+**The predicate that is actually right:** `id >= 'RC_2' AND id < 'RC_3' AND
+LENGTH(id) = 10` — an index slice plus a length test, no `CAST(SUBSTR(...))`
+(which forces a 2.5M-row scan and times out). A 0.0% that agrees with your
+fear is the one to re-derive before reporting.
+
+### ⚠ CONCURRENCY HEADROOM TEST — 24/16 IS THE SETTING, MEASURED 2026-08-24 19:51
+
+login asked for both lanes "scaled for maximum output". Tested by raising ONLY
+richmond's concurrency (24 miners/16 pullers -> 32/28) with acris untouched,
+and measuring both lanes for 5 minutes:
+
+                        24 / 16          32 / 28
+    richmond docs/s     15.0 - 16.2      14.1      <- SLOWER, not faster
+    acris delivered     55/s (79%)       35.3/s (51%)
+    acris fails             1                4
+
+**More connections made richmond slower AND took a third of acris's share.**
+That is saturation, not headroom: the extra sockets queue instead of
+delivering. Reverted to 24/16.
+
+**THE CONSTRAINT IS THE LINK, NOT EITHER LANE'S CONFIG.** Measured combined:
+
+    richmond  16.2 docs/s x 2.53 Mb/doc = 41.0 Mb/s
+    acris      3.78 docs/s x 2.90 Mb/doc = 11.0 Mb/s
+                                          -------
+                                           51.9 Mb/s
+
+against the highest figure ever observed on this connection, >=52.7 Mb/s.
+
+⚠ **SO acris's "delivered only 79%" IS NOT A DEFECT AND MUST NOT BE TUNED.**
+The governor is reading a link that richmond is using four fifths of. Raising
+`--max-inflight` there would bank a peak the wire never carried - which is the
+exact failure `save_tempo(delivered)` exists to prevent.
+
+⚠ **AND THE TOTAL DOES NOT DEPEND ON THE SPLIT.** Fixed bytes through a fixed
+pipe: acris has ~19.8M docs x 2.90 Mb and richmond ~1.27M x 2.53 Mb left, so
+whichever order they run in, the finish is the same. richmond clears in under
+a day and acris then gets the whole link (~18 docs/s, ~13 days) - which is
+why the honest lever is BYTES PER DOC, not concurrency, and bytes/doc is the
+source's own scan resolution, not ours to compress.

@@ -15,8 +15,15 @@ from PIL import Image
 
 import fetch_budget
 
+# >> MEASURED 2026-08-24 18:40, SAME IP AND SAME SECOND, one variable changed:
+#      ...Chrome/126.0.0.0 Safari/537.36  -> HTTP 503, 4,309 bytes, 3/3 tries
+#      ...Chrome/126.0     Safari/537.36  -> HTTP 200, 118,445 bytes
+#    Referer made no difference either way, and spacing the requests 4 s apart
+#    made no difference, so this is NOT a rate limit - acris's edge
+#    discriminates on the version string itself. The lane ran ~166k requests
+#    on the long form today before it started answering 503 to it.
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
+      "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 BASE = "https://a836-acris.nyc.gov/DS/DocumentSearch/GetImage"
 PLACEHOLDER = "4081a3f2004d7244a966995c02c730d0"
 

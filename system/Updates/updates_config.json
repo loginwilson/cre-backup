@@ -1,21 +1,25 @@
 {
-  "_comment": "cadence seconds per phase, adjustable at request; 'show' is the whitelist of phases reported right now - empty list = all phases",
-  "show": [
-    "synchronization",
-    "acquisition pdf"
-  ],
-  "cadence": {
-    "synchronization": 60,
-    "acquisition rd": 60,
-    "acquisition pdf": 60,
-    "keying pass 1": 60,
-    "keying pass 2": 60,
-    "keying pass 3": 60
-  },
-  "parked": [],
-  "hidden": ["acquisition pdf|acris"],
-  "_retired": {
-    "navigation": "db trigger mint_urls - 100% by construction, never informative",
-    "organization": "db trigger key_on_rd fills `parcel` keys free at sync time; `pdf-pass` is extraction's inbox and `reference` is resolution's. The 6.0M pre-trigger backfill is held by org_backfill_arm until acris rd hits 99.95% - re-add a row when it releases."
-  }
+ "_comment": "cadence seconds per phase, adjustable at request; 'show' is the whitelist of phases reported right now - empty list = all phases",
+ "show": [
+  "synchronization",
+  "acquisition pdf"
+ ],
+ "cadence": {
+  "synchronization": 60,
+  "acquisition rd": 60,
+  "acquisition pdf": 60,
+  "keying pass 1": 60,
+  "keying pass 2": 60,
+  "keying pass 3": 60
+ },
+ "parked": [],
+ "hidden": [
+  "acquisition pdf|acris",
+  "acquisition pdf|richmond",
+  "acquisition rd|richmond"
+ ],
+ "_retired": {
+  "navigation": "db trigger mint_urls - 100% by construction, never informative",
+  "organization": "db trigger key_on_rd fills `parcel` keys free at sync time; `pdf-pass` is extraction's inbox and `reference` is resolution's. The 6.0M pre-trigger backfill is held by org_backfill_arm until acris rd hits 99.95% - re-add a row when it releases."
+ }
 }

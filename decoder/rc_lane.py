@@ -122,6 +122,11 @@ ap.add_argument("--stall-after", type=int, default=300,
                      " is presumed dead and recycled")
 ap.add_argument("--rd-every", type=int, default=900,
                 help="seconds between rd heal passes for rd-less RC rows")
+ap.add_argument("--hot-recheck", type=float, default=1800,
+                help="seconds before a recent filing may be pushed onto the"
+                     " hot list again. Its pull may still be in flight, and"
+                     " re-queueing every pass would fill the hot lane with"
+                     " duplicates of itself.")
 ap.add_argument("--absent-recheck", type=int, default=21600,
                 help="seconds before re-asking about a document whose"
                      " scan was not up yet (default 6h)")
@@ -171,6 +176,10 @@ WAKE_RD = threading.Event()               # the probe pokes the rd heal awake
 # requests at a source that has done nothing wrong. Most scans land within
 # a day or two, so checking a given document a few times a day is plenty.
 _absent_at: dict[str, float] = {}
+# >> ids already pushed onto the hot list, with when. Without this the window
+# re-queues the same recent filings every --rd-every while their pull is still
+# in flight, and the hot lane fills with duplicates of itself.
+_hot_at: dict[str, float] = {}
 ready = queue.Queue()                     # (did, location, minted_at)
 DBQ = queue.Queue(maxsize=10000)          # (did, relpath) -> the ONE writer
 STOP = threading.Event()
@@ -719,12 +728,14 @@ def rd_heal():
             ro.execute("PRAGMA busy_timeout=60000")
             _now = time.time()
             hits = []
+            hotq = 0
             for r in wrows:
                 iid = r["internal_id"]
                 if _now - _absent_at.get(iid, 0.0) < a.absent_recheck:
                     continue
-                got = ro.execute("SELECT recorded_details FROM navigation"
-                                 " WHERE id=?", ("RC_" + iid,)).fetchone()
+                got = ro.execute("SELECT recorded_details, pdf FROM"
+                                 " navigation WHERE id=?",
+                                 ("RC_" + iid,)).fetchone()
                 if not got:
                     continue                      # the probe lands new ids
                 if not got[0]:
@@ -737,10 +748,30 @@ def rd_heal():
                 # >>> PENDING AND RECENT-ABSENT ARE NOT VERDICTS. Re-ask.
                 if st in ("absent", "pending"):
                     hits.append(iid)
+                # >>> AND A RECENT FILING THAT HAS ITS IMAGE BUT NO PDF JUMPS
+                # THE QUEUE. This case did nothing until 2026-08-25, and it is
+                # the one that broke the "today's filings are ready today"
+                # promise. The hot list only ever fired for ids whose rd
+                # landed FRESH in this heal - so a document rd'd yesterday
+                # fell back to ordinary queue position, and the miner selects
+                # `ORDER BY id` on TEXT, where richmond's two id namespaces
+                # interleave: RC_1xxxxxx < RC_2xxxxxx < RC_9xxxx. MEASURED:
+                # yesterday's RC_2825450 block sat behind 60,103 older todo
+                # rows - 83 to 200 minutes away - while 239 of its 318
+                # image-present rows had no pdf.
+                # ⚠ THE WINDOW IS THE WORKLIST, exactly as for rd: this is
+                # O(window) PK lookups, never a scan of 2.5M rows.
+                elif st == "present" and not got[1]:
+                    if _now - _hot_at.get(iid, 0.0) >= a.hot_recheck:
+                        _hot_at[iid] = _now
+                        hot_ids.put("RC_" + iid)
+                        hotq += 1
             ro.close()
             say("  RD HEAL: window %s .. %s lists %d row(s); %d need work"
-                " (rd-less or scan-not-yet-up)"
-                % (lo.strftime(fmt), b.strftime(fmt), len(wrows), len(hits)))
+                " (rd-less or scan-not-yet-up); %d recent filing(s) with an"
+                " image but no pdf pushed to the HOT LIST"
+                % (lo.strftime(fmt), b.strftime(fmt), len(wrows), len(hits),
+                   hotq))
             if not hits:
                 WAKE_RD.wait(a.rd_every)
                 WAKE_RD.clear()

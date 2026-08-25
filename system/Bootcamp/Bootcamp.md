@@ -9826,3 +9826,163 @@ If a grand-daughter was under eighteen when he died, her half goes first to a tr
 What the filing does not contain is the important part: **no death certificate, no probate decree, no letters appointing anyone.** The clerk certified only that this is a true copy of a will kept in her office, not that a court ever admitted it. A will can be rewritten any day until death and takes effect only then. So the record shows what Alfred Seabrook intended in 1992, not that any of it has happened. Anyone relying on it needs the death certificate and the Surrogate's file, which the page names by number.
 
 Two gaps. The will never describes the property, only its street address; the block and lot came from the City's cover sheet. And the City indexed the testator and the two grand-daughters only — the trustees, the executor and Stephanie's right to live there are invisible to a name search.
+
+# RUN 54 — 2003031600062002 · shelved TERMINATION OF TRUST, actually a TERMINATION AND RELEASE OF REGULATORY AGREEMENT · MANHATTAN blocks 392/393/395 · 2003
+
+11/11 pages (2 cover + 9 instrument = the cover's stated Document Page
+Count of 9; rd `pages` 11; pdf 11 — R40-1's three namespaces reconcile
+EXACTLY, no supporting series). CRFN 2003000071209, executed as of
+2003-03-14, recorded 2003-04-01. **Zero new columns, zero new
+vocabulary — streak: 50.** Grade B (RENDER).
+
+    NEW YORK CITY HOUSING DEVELOPMENT CORPORATION, by CHARLES A.
+    BRASS, President → LOWER EAST SIDE II ASSOCIATES · terminating a
+    Regulatory Agreement of 1983-12-15, recorded 1983-12-21 at REEL
+    747 pages 501-514 · six described parcels, EIGHT TAX LOTS, three
+    Manhattan blocks
+
+**SIXTH TRUE TYPE-SHELF MISMATCH** under R51-3 (r42, r48, r50, r51,
+r52, r54 — grep-verified at composition). No trust appears anywhere.
+
+## THE EVENTS (one event_id)
+
+    row 1  ENCUMBRANCE·releases · transacts · HDC → Lower East Side II
+           Associates · terminates the 1983 Regulatory Agreement,
+           which in its own words "benefits HDC and encumbers the
+           premises"; HDC recites it was never assigned or terminated
+           and "consents to and directs the discharge thereof of
+           record" · consideration $10.00 nominal (R40-2, refused as
+           a price) · ⚠ the operative verb is "agrees to terminate",
+           contractual rather than "does hereby terminate and release"
+    row 2  IDENTITY · observes · six described parcels covering EIGHT
+           tax lots on blocks 392, 393, 395 · A1 392/48 25×92'3" =
+           2,306.25 SF · A2 392/51+52 50×92'3¼" = 4,613.54 · A3 392/50
+           25×92'3" = 2,306.25 · B 392/22 50×92'3¼" = 4,613.54 · C&D
+           395/1+3 93×129'¾" = 12,002.81 · E 393/59 50×94'9½" =
+           4,739.58 · TOTAL ≈ 30,582 SF, ALL DERIVED, none stated
+           ⚠ TWO LINEAGE STATEMENTS ON THE PAGE: "Former Lot: 48" and
+           "Lot: 59 (former Lots 59 and 60)" — no prior "former lot"
+           wording in Bootcamp.md or Lexicon.md (both grepped)
+    row 3  COST · transacts · $95.00 recording fee; every transfer-
+           and mortgage-tax line 0.00 — EARNED: a release conveys no
+           interest
+
+## R54-1 — THREE DEFECTS IN THE RECORD, NOT THE DEAL (the finding)
+
+    (a) ⚠ TWO DESCRIBED LOTS ARE NOT INDEXED. Exhibit A releases
+        Block 392 Lot 50 (Parcel A3) and Block 392 Lot 51 (half of
+        Parcel A2). The cover's property schedule and the rd row list
+        NEITHER. A title search on either lot never reaches this
+        release, so two parcels stay encumbered of record after the
+        encumbrance is gone.
+    (b) ⚠ PARCEL A3's COURSES DO NOT CLOSE. Computed in action:
+        southerly 92'3" · westerly 25' · southerly again 92'3" ·
+        easterly 25'. North-south net = 184.5 ft SOUTH; east-west net
+        = 0. Two southerly runs and no northerly one, starting from a
+        point already ON the northerly side of Ninth Street. The first
+        course must read NORTHERLY; the figure is otherwise a
+        25 × 92.25 ft rectangle. A geometry pipeline trusting recorded
+        courses either fails here or places the lot wrong silently.
+    (c) ⚠ THE REGISTER DROPPED "CITY" FROM THE PARTY NAME. Cover and
+        rd read NEW YORK HOUSING DEVELOPMENT CORPORATION; the
+        instrument reads NEW YORK CITY HOUSING DEVELOPMENT CORPORATION
+        in its opening, its signature block and Schedule A (read at
+        550 dpi). An exact-match search on the agency's real name
+        misses this instrument.
+
+All three EARNED two ways — the cover page and the rd row agree — which
+is what makes them findings rather than single-witness readings.
+
+⚠ **INDEXING-DEFECT CLASS, 4th member** (R48-1 sovereigns absent ·
+R52-5 living owners omitted · R53-4 trustees/executor/occupant omitted ·
+R54 two lots omitted + a name truncated), and the class has now shown
+THREE DISTINCT SHAPES: a party omitted, a parcel omitted, a name
+altered. The register's schedule is not a witness to the instrument; it
+is a separate document that happens to travel with it.
+
+## R54-2 — WHAT WAS RELEASED IS NOT IN THE FILE
+
+Schedule A names the Regulatory Agreement by date and reel-and-page and
+nothing else. Its terms, its duration, what it required of the owner:
+absent. That single fact is why SEVEN of the eight non-firing functions
+do not fire — OCCUPANCY, ENTITLEMENT and CAPITAL are exactly what a
+housing regulatory agreement would carry, and this record supports none
+of them. **CHAIN EXPECTATION: Reel 747, pages 501-514** — fourteen
+pages, cited exactly, and the cover's CROSS REFERENCE panel CARRIES IT
+(REEL 747 PG 501), which r52 and r53 both left blank. First run in
+three where the register's cross-reference is filled.
+
+## R54 GRADE — B (RENDER)
+
+    1 FABRICATION  clean on invention: no motive, no scale, no
+                   relationship, and the $10 recital refused as a
+                   price. ⚠ But see miss 2 — a class gloss with no
+                   entry is sourcing, not invention, and it is graded
+                   under RENDER.
+    2 CAPTURE      ⚠ ONE GAP. The document id ends ...062002 and the
+                   package siblings were never raised. Every run since
+                   r46 has banked the sibling convention as a chain
+                   expectation; a closing-table release travels with a
+                   deed, a mortgage and other releases. FIXED BELOW.
+    3 THE ELEVEN   CLEAN. Three fires, eight reasoned non-fires,
+                   none wrongly fired, and the eight non-fires
+                   collapsed to their ONE true cause rather than
+                   listed eight times.
+    4 RENDER       ⚠ FAILED, twice, both in the SUMMARY and neither in
+                   the table:
+                   (a) "six apartment buildings" — the cover types six
+                       LOT RECORDS as APARTMENT BUILDING. It counts no
+                       buildings, two of those lots share ONE address
+                       (392/48 and 392/52, both 621-627 E. 9th St),
+                       and two further lots are typed nowhere. COUNT
+                       CLASS, 11th member (21,23,39,42,45,46,50,51x2,
+                       53,54). CORRECTED: "eight tax lots ... six of
+                       them typed as apartment buildings".
+                   (b) "a string attached to public housing money" —
+                       Card #2-safe in FORM (it lands on the class),
+                       but the Lexicon holds NO regulatory-agreement
+                       entry, so it is recall used as a source (Card
+                       #12 SOURCES). LEXICON-RECALL CLASS, 5th member
+                       (37, 41, 43, 51, 54). Worse in context: the
+                       event test had just refused CAPITAL because
+                       "what was released is described nowhere", and
+                       the summary supplied the financing story
+                       anyway. CORRECTED to the document's own words
+                       ("benefits HDC and encumbers the premises")
+                       and an entry added to the Lexicon.
+
+    LETTER = the FLOOR = B (RENDER). Why not B+: two defects reached
+    the delivered text. Why not C+: nothing reached the table. Why not
+    D: neither is an invented fact — one is a miscounted noun, one is
+    a real class term used without its entry.
+
+STRUCTURE ENACTED (hole-is-the-finding): **precheck's CARDINALS check
+now prints each number WITH THE NOUN IT COUNTS.** It had listed bare
+tokens, so "six described parcels" was licensed and "six apartment
+buildings" rode in on the same licence — two claims sharing one word.
+Validated against r54 as delivered: the two "six" claims now appear as
+separate lines. **A LICENCE COVERS A CLAIM, NOT A TOKEN.**
+
+HELD: the mismatch carried into the tests and not left in the headline
+(the r52 lesson); the parcel arithmetic run in action, producing the
+non-closing description; all three record defects earned from two
+witnesses; the $10 recital refused; the eight non-fires collapsed to
+one cause; the three budgets landing where the R53 ruling says (event
+337 down from 656, data 1,202, anybody 269); DATE ARITHMETIC — minted
+one run earlier for exactly this — catching a rounded interval and
+forcing 19y 2m 27d and 19y 3m 11d; and OPENING catching "Manhattan's
+East Village" pre-delivery, the narrative-import class in its exact
+predicted slot for the third run running.
+
+## THE R54 SUMMARY, CORRECTED (both misses were here)
+
+Delivered 269 words; corrected 274, inside the band. The corrections
+ADD precision without adding length — the same trade r53 measured.
+
+In 1983 the **New York City Housing Development Corporation** recorded a Regulatory Agreement against eight tax lots in **Manhattan** — on **East 9th Street**, **East 10th Street** and **Avenue B** — owned by **Lower East Side II Associates**. In the document's own words the agreement "benefits HDC and encumbers the premises": it is a restriction an agency holds against land, and it stays until the agency lets it go. This document is the agency letting it go. **Charles A. Brass**, HDC's president, signed it in March 2003 for ten dollars and it was recorded that April for a **$95.00** fee. No transfer tax: nothing was sold.
+
+For a title searcher the release is the good news and the gaps are the work. The agreement itself is not attached — the page cites it only as Reel 747, pages 501 to 514 — so **what came off these buildings has to be read somewhere else.** **19 years** of conditions are described in this filing by nothing but a date and a shelf number.
+
+Then three defects, all in the record rather than the deal. The City indexed the releasing agency as "New York Housing Development Corporation", dropping the word **CITY** from its actual name. Two of the eight lots that the exhibit releases — Block 392, Lots 50 and 51 — were left off the property schedule entirely, so a search on either finds nothing. And one of the six legal descriptions runs south twice and never north, so it does not close on its own numbers.
+
+None of that changes what happened: the restriction is off. It changes how hard it is to prove.

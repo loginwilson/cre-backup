@@ -154,6 +154,60 @@ if diagnosed:
         print("  %-20s %s" % (did, msg[:96]))
     print()
 
+# ── RICHMOND ────────────────────────────────────────────────────────
+# ⚠ THIS LANE WAS UNGRADED UNTIL 2026-08-25. rc_lane has written
+# rc_lane_fails.jsonl since the consolidation, and its PROGRESS line prints a
+# rising `err` count (171 overnight) - but nothing ever asked whether those
+# documents later landed, so the number was an alarm nobody could answer.
+# login: "are you handling errors accordingly?" - the honest answer for acris
+# was yes-and-here-is-the-report, and for richmond it was "probably, but I
+# have never checked". A one-off script I run by hand is not a system; the
+# check has to live where the routine already looks.
+#
+# ⚠ ITS SCHEMA IS NOT ACRIS'S: rows are {at, id, why} - `why`, not `err`, and
+# the id has no RC_ prefix. Reading it with acris's keys yields '?' for every
+# cause and grades nothing.
+RC_FAILS = HERE / "rc_lane_fails.jsonl"
+rc = {}
+for r in rows(RC_FAILS):
+    did = str(r.get("id", ""))
+    if did:
+        rc.setdefault("RC_" + did if not did.startswith("RC_") else did,
+                      []).append(str(r.get("why", "?")))
+if rc:
+    ids_rc = list(rc)
+    con = sqlite3.connect("file:%s?mode=ro" % CP.NAV_DB, uri=True, timeout=120)
+    con.execute("PRAGMA busy_timeout=120000")
+    st_rc = {}
+    for i in range(0, len(ids_rc), 900):
+        ch = ids_rc[i:i + 900]
+        q = ("SELECT id, pdf FROM navigation WHERE id IN (%s)"
+             % ",".join("?" * len(ch)))
+        for did, pdf in con.execute(q, ch):
+            st_rc[did] = pdf
+    con.close()
+    done_rc = [d for d in ids_rc if st_rc.get(d)]
+    out_rc = [d for d in ids_rc if not st_rc.get(d)]
+    print()
+    print("RICHMOND RESIDUE - %d distinct docs have failed at least once"
+          % len(ids_rc))
+    print("  a richmond failure resolves when its pdf lands (rd is already"
+          " 100% and the key_on_rd trigger follows rd, so pdf IS the gate)")
+    print()
+    print("  RESOLVED    %5d  %5.1f%%" % (len(done_rc),
+                                          100 * len(done_rc) / len(ids_rc)))
+    print("  OUTSTANDING %5d  %5.1f%%  <- must reach 0"
+          % (len(out_rc), 100 * len(out_rc) / len(ids_rc)))
+    if out_rc:
+        by = collections.Counter(rc[d][-1] for d in out_rc)
+        print()
+        for k, v in by.most_common(6):
+            print("    %5d  %s" % (v, k[:70]))
+        print("    eg: %s" % ", ".join(out_rc[:5]))
+    else:
+        print("  ✅ every richmond failure ended as a landed pdf.")
+    print()
+
 if outstanding:
     by = collections.Counter(hist[d][-1] for d in outstanding)
     print("OUTSTANDING by last error class:")

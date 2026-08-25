@@ -291,6 +291,24 @@ layer the corpus keeps and the prose is the layer that gets read.
 rubric where the decode itself was sound and only RENDER set the floor.
 That is the rubric doing its job: the letter names the dimension.
 
+
+| 54 | 2003031600062002 2003 | **B (RENDER)** (self, login-prompted) | **"SIX APARTMENT BUILDINGS"** — the cover types six LOT RECORDS as APARTMENT BUILDING and counts no buildings; two of those lots share ONE address (392/48 + 392/52 = 621-627 E. 9th St) and two further lots are typed nowhere. **COUNT CLASS, 11th member** (21,23,39,42,45,46,50,51x2,53,54) · **"A STRING ATTACHED TO PUBLIC HOUSING MONEY"** — Card #2-safe in FORM but the Lexicon holds NO regulatory-agreement entry, so recall used as a source: **LEXICON-RECALL 5th member** (37,41,43,51,54), and it supplied the financing story the event test had just refused CAPITAL for · CAPTURE GAP: package siblings (...062002 implies ...062001+) never raised, though every run since r46 banks the convention | fixes in the R54 entry · Lexicon: regulatory agreement + 4 more · **precheck's CARDINALS now prints each number WITH THE NOUN IT COUNTS** — validated against this run, where the two "six" claims now appear as separate lines |
+
+⚠ THE CARDINALS HOLE, NAMED: the check listed bare TOKENS, so one licence
+covered two claims. "six described parcels" was counted and correct;
+"six apartment buildings" was neither, and rode in on the same word. **A
+LICENCE COVERS A CLAIM, NOT A TOKEN** — the same shape as r50's vague
+quantifiers and r51's corpus claims: the mechanical check saw the string
+and not the assertion.
+⚠ INDEXING-DEFECT CLASS AT FOUR (48, 52, 53, 54) and now in THREE SHAPES:
+a party omitted, a parcel omitted, a name altered. Every member was
+EARNED from cover + rd agreeing, which means rd is not an independent
+witness to the register — it is a copy of it. Only the INSTRUMENT can
+contradict the schedule.
+⚠ AND THE PATTERN IN THE LAST FOUR GRADES: r51 C+ (table), r52 C+ (table),
+r53 C+ (table), r54 B (text only). The table has now gone one run clean
+under the branch-at-birth compose order.
+
 ⚠ MISATTRIBUTED QUANTITY (47, 49) is the class to watch next — both
 members were CORRECT computations bound to the WRONG SUBJECT, which
 no token check can catch. If it reaches three, the structural cure

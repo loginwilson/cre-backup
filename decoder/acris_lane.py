@@ -153,6 +153,19 @@ ap.add_argument("--rps-max", type=float, default=80.0,
 # how precisely we locate the ceiling, and overshoot is SELF-CORRECTING:
 # shed >= 3 trims the tempo 25% and holds 10 minutes. Paying 42 rungs x 3
 # min to crawl from 47 to 130 buys resolution nobody needs.
+ap.add_argument("--confirm-windows", type=int, default=3,
+                help="when a rung stops improving docs/s, HOLD and re-measure"
+                     " this many more windows before believing it. login"
+                     " 2026-08-24: 'test the point of diminishing returns for"
+                     " 2 or 3 times longer to really make sure it doesnt push"
+                     " past and then revert'")
+ap.add_argument("--plateau-margin", type=float, default=0.02,
+                help="a rung must beat the best ready-rate by this fraction"
+                     " to count as an improvement (noise guard)")
+ap.add_argument("--reprobe-minutes", type=int, default=90,
+                help="after settling at the peak, try climbing again this"
+                     " many minutes later - the link changes, the ceiling is"
+                     " not a constant")
 ap.add_argument("--rung-step", type=float, default=2.0,
                 help="req/s added per clean window (default 2.0; 4-6 is"
                      " reasonable - overshoot self-corrects)")
@@ -162,8 +175,19 @@ ap.add_argument("--rung-step", type=float, default=2.0,
 # clean at 48. Raising it re-earns fewer rungs. ⚠ It is still a margin:
 # a restart follows some event, and resuming at 100% of a peak assumes
 # the peak is still safe - which only the SERVER gets to confirm.
+ap.add_argument("--dirty-fraction", type=float, default=0.4,
+                help="on a DIRTY saved tempo, resume at this fraction of the"
+                     " remembered peak instead of the --max-rps cold floor."
+                     " A dirty flag says 'do not resume AT the peak'; it was"
+                     " never evidence that 12/s is the only safe rate.")
 ap.add_argument("--warm-fraction", type=float, default=0.6,
                 help="fraction of the banked peak tempo to resume at")
+ap.add_argument("--reconcile-every", type=int, default=1800,
+                help="seconds between IN-RUN reconcile sweeps. The sweep used"
+                     " to run only at startup, so a doc that failed mid-run"
+                     " waited for a restart or for the cursor to wrap all"
+                     " 21.6M rows. The fails log is ~900 rows against 21.6M,"
+                     " so re-checking it every 30 min is free.")
 ap.add_argument("--no-reconcile", dest="reconcile",
                 action="store_false",
                 help="skip the startup re-feed of unresolved failures"
@@ -230,6 +254,7 @@ ua = {"User-Agent": fetch_pages.UA}
 PDF_FAILS = CP.NAV_WORK / "acris_lane_pdf_fails.jsonl"
 # the governor re-reads this EVERY MINUTE; absent or blank = use --rps-max
 CEILING_FILE = CP.NAV_WORK / "lane_ceiling.txt"
+STOP_RECON = threading.Event()
 # ⚠ IN-RUN RETRY LEDGER. Without it a failed doc keeps pdf='' and is only
 # retried when the feeder's cursor WRAPS THE WHOLE 19.8M-ROW SET - correct
 # (nothing lost, nothing faked) but the healing lands at the END of the sync
@@ -242,7 +267,17 @@ MAX_ATTEMPTS = 3
 # ⚠ an absolute stop no file may cross. The old sharded fleet measured
 # ~140 req/s aggregate as acris's served ceiling; 150 keeps that as the
 # outer bound so a fat-fingered file can never launch a stampede.
-HARD_CEILING = 150.0
+# >> NOT A TARGET AND NOT A STOPPING RULE - A RUNAWAY BACKSTOP ONLY.
+# login 2026-08-24: "dont pick a stop point. the point where the ceiling no
+# long is improving is where you stop." The ladder stops when READY DOCS/S
+# stops improving over a 10-minute rung, confirmed across 20 minutes - that
+# is a measured ceiling. A number typed here is not; at 150 this WAS the
+# stopping rule in waiting, and it would have been reported as "the ceiling"
+# while the curve was still rising. It is now far enough above any rate this
+# link has ever carried (delivered has never exceeded ~85/s) that the
+# plateau always binds first, and it exists solely so a bug cannot command
+# an unbounded rate.
+HARD_CEILING = 400.0
 PDF_BATCH = 25
 VERIFY_CURSOR = CP.NAV_WORK / "_verify_cursor.txt"
 
@@ -414,10 +449,46 @@ def _warm_start(cold):
         d = json.loads(TEMPO_FILE.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return cold, ""
+    # ⚠⚠ A COLD START MUST NOT ERASE THE PEAK (fixed 2026-08-25 06:40).
+    # _best starts at 0.0, so on a dirty/stale start the first save_tempo
+    # wrote best = max(0, 12) = 12 and the historical high-water was GONE.
+    # MEASURED: a 06:09 stall-restart turned a banked 107.3/s peak into
+    # {"rps": 28.0, "best": 28.0} within half an hour, and every later warm
+    # resume could then only return to 28. One dirty restart destroyed every
+    # measurement the ladder had ever made.
+    # The dirty flag means "do not RESUME there" - it does not mean the
+    # measurement never happened. So carry the mark across even when we
+    # decline to start on it; the ladder re-earns it rung by rung, and
+    # save_tempo's max() can no longer ratchet the record downward.
+    _remembered = float(d.get("best", 0.0) or 0.0)
+    if _remembered > _best[0]:
+        _best[0] = _remembered
     if not d.get("clean"):
+        # ⚠⚠ A DIRTY FLAG IS NOT A REASON TO CRAWL (fixed 2026-08-25 06:45).
+        # It used to drop straight to --max-rps (12/s), and MEASURED that
+        # morning: a LOCAL transport blip - the governor's own words, "mass
+        # failure but THE PROBE IS STILL SERVED ... local transport event,
+        # not acris" - cost an hour of climbing. 28 minutes after the restart
+        # the lane was still only at 28/s against a peak of 96.6.
+        # The flag means "do not resume AT the peak"; it was never evidence
+        # that 12/s is the only safe rate. So resume at a cautious fraction
+        # and let the ladder do the rest - the governor still collapses on a
+        # real shed, still refuses to bank a rate the wire did not carry, and
+        # still confirms a plateau over 20 minutes before settling.
+        # ⚠ If acris genuinely refused, the startup probe fails and the lane
+        # holds anyway; this only changes the FLOOR, never the safety rules.
+        half = _remembered * a.dirty_fraction
+        if half > cold:
+            return half, (" (saved tempo was DIRTY - not resuming at the"
+                          " %.1f/s peak, but starting at %.0f%% of it:"
+                          " %.1f/s instead of %.1f)"
+                          % (_remembered, a.dirty_fraction * 100, half, cold))
         return cold, " (saved tempo was DIRTY - starting cold, by design)"
     if time.time() - d.get("at", 0) > WARM_MAX_AGE:
-        return cold, " (saved tempo too old - starting cold)"
+        return cold, (" (saved tempo too old - starting cold; peak %.1f/s"
+                      " remembered, not resumed)" % _remembered
+                      if _remembered else
+                      " (saved tempo too old - starting cold)")
     peak = float(d.get("best", d.get("rps", cold)))
     _best[0] = peak                      # carry the mark across the restart
     warm = max(cold, min(peak * WARM_FRACTION, a.rps_max))
@@ -511,8 +582,8 @@ def _new_session():
     sess = requests.Session()
     sess.headers.update({"User-Agent": fetch_pages.UA})
     sess.mount("https://", requests.adapters.HTTPAdapter(
-        pool_connections=1, pool_maxsize=a.max_inflight, max_retries=0,
-        pool_block=True))
+        pool_connections=1, pool_maxsize=a.max_inflight + 8,
+        max_retries=0, pool_block=True))
     return sess
 
 
@@ -581,7 +652,27 @@ def one_at_a_time(url, referer, timeout=90):
     with slot():
         sess = _SESSION_BOX[0]
         r = sess.get(url, headers={"Referer": referer}, timeout=timeout)
-    last_ok[0] = time.time()      # the wire is proven alive, this instant
+        try:
+            return _read(r, url)
+        finally:
+            # >> THE CLOSE_WAIT DEADLOCK, MEASURED 2026-08-24 18:30. acris
+            # shed with 503s and closed its side; we raised HTTPError without
+            # ever closing the response, so each one left its socket in
+            # CLOSE_WAIT holding a pool slot. netstat showed EXACTLY 24
+            # CLOSE_WAIT against --max-inflight 24: the pool was 100% dead
+            # connections. With pool_block=True every worker then blocked
+            # FOREVER on a connection that could never be returned - request
+            # count froze at ~2/min (the probe) for 5 minutes until the
+            # watchdog recycled the transport.
+            # WARNING THE FAILURE WAS OURS, NOT ACRIS'S. login called it:
+            # "acris is fully serving... it tells me its code". The 503s were
+            # the trigger; the leak was the defect. A response must be closed
+            # on EVERY path, which is what finally: is for.
+            r.close()
+
+
+def _read(r, url):
+    """The status decision, separated so close() can wrap every exit."""
     if r.status_code >= 400:
         # ⚠ CARRY THE EVIDENCE. str(HTTPError) is only "HTTP Error 400:
         # Bad Request" - it drops the url, so the fails log could not say
@@ -589,11 +680,29 @@ def one_at_a_time(url, referer, timeout=90):
         # out of that gap. MEASURED 2026-08-24: 36 of the 43 docs that threw
         # 400 later downloaded a COMPLETE pdf - so 400 is transient noise,
         # NOT "this document has no image". Never map it to a verdict.
+        try:
+            body = r.content[:180]
+        except Exception:
+            body = b""          # a body that will not read is not a reason
         err = urllib.error.HTTPError(url, r.status_code, r.reason,
                                      r.headers, None)
-        err.acris_body = r.content[:180]
+        err.acris_body = body
+        # >> 503/429/502/504 ARE THE SERVER SAYING SLOW DOWN, and until now
+        # they were classed with HTTP 400 as an ordinary per-doc fail. That
+        # is why the governor stepped 96.6 -> 100.6/s at 18:27:09 WHILE acris
+        # was 503ing and the ready rate had already collapsed 6.57 -> 3.91/s.
+        # Flag it on the error itself rather than string-matching downstream.
+        err.acris_shed = r.status_code in (429, 500, 502, 503, 504)
         raise err
-    return r.content, r.headers.get("Content-Type", "")
+    out = r.content, r.headers.get("Content-Type", "")
+    # WARNING ONLY A REAL SUCCESS PROVES THE SERVICE ALIVE. This used to be
+    # stamped before the status check, so a stream of 503s refreshed the
+    # liveness clock exactly like success and held the watchdog off - each
+    # failing probe retry (20s, 40s, 80s) reset it, so recovery waited until
+    # the backoff itself stretched past --stall-after. A socket that answers
+    # is not a server that serves.
+    last_ok[0] = time.time()
+    return out
 
 
 AP.FETCH = one_at_a_time    # pdf maps + pages join the same single voice
@@ -713,6 +822,14 @@ def edge_tick():
         return False, 0, True
     except Exception as e:
         code = getattr(e, "code", None)
+        if _is_local_outage(e):
+            probe_local_at[0] = time.time()
+            say("  PROBE UNPROVEN (%s: %.70s) - ⚠ THIS MACHINE'S NETWORK, not"
+                " acris: the request never left the box, so it is no evidence"
+                " about the server. Tempo HELD, peak intact - nothing is"
+                " going out either way while the link is down."
+                % (type(e).__name__, e))
+            return False, 0, False
         say("  PROBE UNPROVEN (%s%s: %.90s) - nothing written"
             % (type(e).__name__, " %d" % code if code else "", e))
         return False, 0, False
@@ -758,6 +875,33 @@ def edge_tick():
 
 # ⚠ LAST MOMENT ACRIS WAS PROVEN TO BE SERVING US (set by the probe).
 probe_ok_at = [0.0]
+# ⚠⚠ THE ORACLE HAS A BLIND SIDE, AND IT IS OUR OWN NETWORK (2026-08-25).
+# The crfn walk is BOTH the sync mechanism AND the health oracle: a
+# successful edge_tick stamps probe_ok_at, and the governor reads that
+# timestamp to tell "local blip" from "acris is shedding". So when the probe
+# fails for a purely LOCAL reason the oracle goes STALE, and a stale oracle
+# reads exactly like a silent server - the governor then pays the full
+# 10-minute collapse AND trims the banked peak because our wifi dropped.
+# Observed 06:41: "PROBE UNPROVEN (URLError: getaddrinfo failed)".
+#
+# ⚠ DNS AND ROUTING FAILURES ARE NOT EVIDENCE ABOUT ACRIS. If the name will
+# not resolve or there is no route, the request never left this machine -
+# acris was never asked, so it cannot have answered no. Collapsing on that is
+# punishing ourselves for a house move, and while the link really is down
+# there is nothing to collapse TOWARD: no request is going out either way.
+# Hold the earned tempo, and be at full speed the moment the link returns.
+probe_local_at = [0.0]
+LOCAL_NET = ("getaddrinfo", "11001", "11004",       # name resolution
+             "no route", "unreachable", "10051", "10065",
+             "10050",                                # network is down
+             "temporary failure in name resolution")
+
+
+def _is_local_outage(e):
+    """True when the request never reached the wire, so it says NOTHING
+    about whether acris would have served us."""
+    return any(k in ("%s %s" % (type(e).__name__, e)).lower()
+               for k in LOCAL_NET)
 
 
 def watchdog():
@@ -1054,7 +1198,8 @@ def pdf_worker(idx):
                              "IncompleteRead")
                         or "timed out" in msg or "10054" in msg
                         or "10060" in msg or "UNEXPECTED_EOF" in msg
-                        or "forcibly closed" in msg):
+                        or "forcibly closed" in msg
+                        or getattr(e, "acris_shed", False)):
                     stats["shed"] += 1
             with PDF_FAILS.open("a", encoding="utf-8") as fh:
                 # ⚠ STAMP IT. Without a time these rows cannot be tied to
@@ -1087,6 +1232,10 @@ def governor():
         (the reallocation login asked for - same server, freed tonnage)
       - a refusal is above this governor's pay grade: stop_workers stills
         everything and only the probe continues (unchanged)."""
+    # the hill-climb's memory: the best ready-rate seen and the tempo that
+    # produced it, plus how many confirming windows a suspected plateau has
+    # survived. settled_at gates the periodic re-probe.
+    hc = {"best_ready": 0.0, "best_rps": 0.0, "confirm": 0, "settled_at": 0.0}
     streak, hold, last = 0, 0, {"shed": 0, "pdfs": 0, "imageless": 0,
                                "verified": 0}
     # ⚠⚠ MEASURE WHAT THE WIRE ACTUALLY CARRIED, NOT WHAT WE ASKED FOR
@@ -1106,8 +1255,9 @@ def governor():
         with lock:
             c = stats["pdfs"] + stats["imageless"]
         el = time.time() - win_t0
+        r = (c - win_c0) / el if el else 0.0
         return ("width %d averaged %.2f ready/s over %.1f min"
-                % (w, (c - win_c0) / el if el else 0.0, el / 60)), c
+                % (w, r, el / 60)), c, r
 
     while not stop_workers.is_set():
         time.sleep(60)
@@ -1135,7 +1285,7 @@ def governor():
         if rd_all_fed.is_set() and not rd_handed:
             rd_handed = True
             pdf_width[0] = min(w + 8, a.pdf_max)
-            verdict, win_c0 = settle(w)
+            verdict, win_c0, _rdy = settle(w)
             win_t0 = time.time()
             say("  GOVERNOR rd backfill drained - budget reallocated,"
                 " pdf width %d -> %d (%s)" % (w, pdf_width[0], verdict))
@@ -1181,7 +1331,7 @@ def governor():
             # "do network changes count as resets?" - yes; "never just throw
             # all the connections at once"). BOTH pools collapse and re-ramp
             # gently - never a trim.
-            verdict, win_c0 = settle(w)
+            verdict, win_c0, _rdy = settle(w)
             win_t0 = time.time()
             # ⚠⚠ ASK THE ORACLE BEFORE THROWING AWAY THE CLIMB (2026-08-24).
             # 15:56: 50 SSLErrors in ONE minute, then ZERO for the next four
@@ -1197,7 +1347,8 @@ def governor():
             #                   gone, so drop width (the pool must re-warm)
             #                   but KEEP the earned tempo and hold only 2 min.
             # Probe silent   -> treat as the server: full collapse, 10 min.
-            served = time.time() - probe_ok_at[0] < 90
+            served = (time.time() - probe_ok_at[0] < 90
+                      or time.time() - probe_local_at[0] < 90)
             # every pooled socket just died together - throw the pool away
             # rather than let each worker rediscover that on its own timeout
             recycle_session("mass failure (%d/min)" % shed)
@@ -1220,13 +1371,35 @@ def governor():
                     " %.1f/s, pdf %d -> 8, rd -> 4, hold 10 min (%s)"
                     % (shed, rps, tempo.rps, w, verdict))
         elif shed >= 3:
-            verdict, win_c0 = settle(w)
+            verdict, win_c0, _rdy = settle(w)
             win_t0 = time.time()
-            tempo.rps = max(4.0, rps * 0.75)
-            save_tempo(tempo.rps, clean=True, trim=True)   # peak was refuted
-            hold, streak = 10, 0
-            say("  GOVERNOR server shedding (%d) - TEMPO %.1f -> %.1f/s,"
-                " hold 10 min (%s)" % (shed, rps, tempo.rps, verdict))
+            # ⚠⚠ ASK THE ORACLE HERE TOO (fixed 2026-08-25 06:50). The probe
+            # test lived ONLY on the shed>=10 branch, and MEASURED that
+            # morning: 06:37:32 a wifi drop produced 26 failures, this
+            # governor correctly said "local transport event, not acris" and
+            # HELD the tempo - then 06:38:33 the RESIDUAL 3 failures from the
+            # very same drop fell through to here, which never asks, got
+            # blamed on acris, cut 28.0 -> 21.0/s and TRIMMED THE BANKED PEAK.
+            # A flaky link therefore ratchets the lane down permanently: the
+            # tail of every blip is always >= 3 and always arrives a minute
+            # late. Same evidence, same question, same answer as above.
+            served = (time.time() - probe_ok_at[0] < 90
+                      or time.time() - probe_local_at[0] < 90)
+            if served:
+                hold, streak = 2, 0
+                save_tempo(tempo.rps, clean=True)   # ⚠ no trim: not refuted
+                say("  GOVERNOR %d failures but THE PROBE IS STILL SERVED"
+                    " (%.0fs ago) - local transport noise, not acris: tempo"
+                    " HELD at %.1f/s, peak intact, hold 2 min (%s)"
+                    % (shed, time.time() - probe_ok_at[0], tempo.rps, verdict))
+            else:
+                tempo.rps = max(4.0, rps * 0.75)
+                save_tempo(tempo.rps, clean=True, trim=True)  # peak refuted
+                hold, streak = 10, 0
+                say("  GOVERNOR server shedding (%d) and THE PROBE IS SILENT"
+                    " (%.0fs) - TEMPO %.1f -> %.1f/s, hold 10 min (%s)"
+                    % (shed, time.time() - probe_ok_at[0], rps, tempo.rps,
+                       verdict))
         elif hold > 0:
             hold -= 1
         elif shed < 3 and landed > 0:
@@ -1267,32 +1440,127 @@ def governor():
             #
             # Hold at the last honest rate instead. The ceiling gets found by
             # measurement, not by assertion.
-            if streak >= a.step_minutes and rps < ceiling:
+            # >> A CEILING IS NOT A CONSTANT. Once settled we stop climbing,
+            # but the link that capped us at 20:00 is not the link at 23:00 -
+            # richmond finishing alone frees four fifths of the pipe. So after
+            # --reprobe-minutes, forget the best and let the ladder run again
+            # from where we sit. Without this a single congested half hour
+            # would pin the lane for the rest of the night.
+            if (hc["settled_at"]
+                    and time.time() - hc["settled_at"] >= a.reprobe_minutes * 60):
+                say("  GOVERNOR RE-PROBING - %d min at the settled peak"
+                    " (%.1f/s, %.2f ready/s); the ceiling may have moved"
+                    % (a.reprobe_minutes, hc["best_rps"], hc["best_ready"]))
+                hc["settled_at"], hc["confirm"] = 0.0, 0
+                hc["best_ready"] = 0.0        # earn the peak again, honestly
+            if streak >= a.step_minutes and rps < ceiling and not hc["settled_at"]:
+                verdict, win_c0, ready = settle(w)
+                # ⚠⚠ AN UNDER-DELIVERING RUNG IS A PLATEAU, NOT A PARKING
+                # SPACE (fixed 2026-08-24 20:16, a defect I introduced hours
+                # earlier). This branch used to `continue`, which short-
+                # circuited the whole hill-climb: the lane hit 93.4/s,
+                # delivered 87% then 77%, and printed "holding" forever -
+                # parked on the WRONG SIDE of its own measured peak, paying
+                # the extra load for output it had already proven was no
+                # better. Falling short of 90% delivery is exactly the
+                # evidence the confirm-then-revert path exists to act on, so
+                # it now feeds that path instead of bypassing it.
                 if delivered < rps * 0.90:
-                    say("  GOVERNOR holding at %.1f/s - delivered only %.1f/s"
-                        " (%.0f%%): the wire is the limit now, not the tempo."
-                        " Climbing further would only inflate the banked peak"
+                    say("  GOVERNOR under-delivering at %.1f/s - only %.1f/s"
+                        " (%.0f%%) reached the wire; treating as a plateau"
                         % (rps, delivered, 100 * delivered / rps if rps else 0))
                     save_tempo(delivered, clean=True)   # the HONEST peak
-                    streak = 0
+                    ready = 0.0        # cannot be an improvement, by definition
+                win_t0 = time.time()
+                streak = 0
+                # ⚠⚠ CLIMB ON OUTPUT, NOT ON THROUGHPUT. The 90% gate above
+                # asks "did the wire carry what we asked for" - it can answer
+                # YES while the extra requests buy NO extra documents (retries,
+                # longer docs, more overhead per row). So the ladder is judged
+                # on READY DOCS/S, the thing we actually want, and a rung that
+                # does not beat the best by --plateau-margin is not progress.
+                if ready > hc["best_ready"] * (1.0 + a.plateau_margin):
+                    hc["best_ready"], hc["best_rps"] = ready, rps
+                    hc["confirm"] = 0
+                    tempo.rps = min(rps + a.rung_step, ceiling)
+                    save_tempo(delivered, clean=True)
+                    say("  GOVERNOR %d clean minutes - TEMPO %.1f -> %.1f/s"
+                        " (delivered %.1f/s · %s · best %.2f ready/s)"
+                        % (a.step_minutes, rps, tempo.rps, delivered, verdict,
+                           hc["best_ready"]))
                     continue
-                verdict, win_c0 = settle(w)
-                win_t0 = time.time()
-                tempo.rps = min(rps + a.rung_step, ceiling)
-                # ⚠ BANK DELIVERED, NEVER COMMANDED - see above.
-                save_tempo(delivered, clean=True)
-                streak = 0
-                say("  GOVERNOR %d clean minutes - TEMPO %.1f -> %.1f/s"
-                    " (delivered %.1f/s · %s)"
-                    % (a.step_minutes, rps, tempo.rps, delivered, verdict))
+                # >> A FLAT RUNG IS A SUSPICION, NOT A VERDICT (login: "test
+                # the point of diminishing returns for 2 or 3 times longer").
+                # One 2-minute window at ~6 docs/s is ~700 docs - enough to
+                # see a trend, not enough to trust a plateau. So HOLD the
+                # tempo here and re-measure; if any confirm window beats the
+                # best, the plateau was noise and the climb resumes.
+                hc["confirm"] += 1
+                if hc["confirm"] < a.confirm_windows:
+                    # ⚠ SAY WHICH IT WAS. `ready` is forced to 0.0 on an
+                    # under-delivering rung so it cannot count as progress -
+                    # but printing "gave 0.00 ready/s" states a MEASUREMENT
+                    # the lane never took, and a fabricated number inside a
+                    # real-looking line is indistinguishable from an observed
+                    # one. Same mistake, smaller, as the simulated cell login
+                    # caught earlier ("is that peak legit or just made up").
+                    say("  GOVERNOR PLATEAU? %.1f/s %s vs best %.2f at"
+                        " %.1f/s - HOLDING to confirm (%d/%d windows)"
+                        % (rps,
+                           ("under-delivered, output not measured" if ready == 0.0
+                            else "gave %.2f ready/s" % ready),
+                           hc["best_ready"], hc["best_rps"],
+                           hc["confirm"], a.confirm_windows))
+                    continue
+                # >> CONFIRMED. Step BACK to the best rung, not "hold here" -
+                # holding leaves us on the wrong side of the wall, paying the
+                # extra load for output we measured as no better.
+                hc["settled_at"] = time.time()
+                # ⚠ NEVER REVERT TO A TEMPO WE NEVER PROVED. best_rps starts
+                # at 0.0, and a lane that under-delivers before EVER recording
+                # a best would set tempo.rps = 0 - which is a divide-by-zero
+                # in the pacer (next_at += 1.0/rps), not a slow lane.
+                if hc["best_rps"] >= 1.0 and hc["best_rps"] < rps:
+                    tempo.rps = hc["best_rps"]
+                    say("  GOVERNOR CEILING FOUND after %d confirming windows"
+                        " - REVERTING %.1f -> %.1f/s, the rung that actually"
+                        " produced the most (%.2f ready/s). Re-probing in"
+                        " %d min - a link ceiling is not a constant."
+                        % (a.confirm_windows, rps, hc["best_rps"],
+                           hc["best_ready"], a.reprobe_minutes))
+                    save_tempo(hc["best_rps"], clean=True)
+                elif hc["best_rps"] < 1.0:
+                    # never earned a best - hold where we are rather than
+                    # invent a peak, and let the re-probe try again
+                    say("  GOVERNOR settled at %.1f/s with no proven better"
+                        " rung on record - holding. Re-probing in %d min."
+                        % (rps, a.reprobe_minutes))
+                else:
+                    say("  GOVERNOR settled at %.1f/s (%.2f ready/s) - no"
+                        " lower rung did better. Re-probing in %d min."
+                        % (rps, hc["best_ready"], a.reprobe_minutes))
+                hc["confirm"] = 0
                 continue
-            if False and streak >= a.step_minutes and w < a.pdf_max:
-                verdict, win_c0 = settle(w)
-                win_t0 = time.time()
-                pdf_width[0] = min(w + 2, a.pdf_max)
-                streak = 0
-                say("  GOVERNOR %d clean minutes - width %d -> %d (%s)"
-                    % (a.step_minutes, w, pdf_width[0], verdict))
+            # ⚠⚠ WIDTH MUST COME BACK, AND FAST (fixed 2026-08-25 06:50).
+            # This branch was `if False and ...` - the CLIMB was disabled on
+            # purpose and correctly, because under the piano gate width is
+            # SHARE, not pressure, so hunting a width ceiling is meaningless.
+            # But the blip handlers still SLAM width to 8 (line ~1319), and
+            # with the only restore path dead the lane spent the rest of the
+            # night at 1/7 of its workers. MEASURED 06:37-06:44: pdf 56 -> 8,
+            # then output fell to zero and never recovered on its own.
+            # ⚠ Cutting width for a LOCAL blip is itself questionable - the
+            # dead sockets are already gone - but the pool does want to
+            # re-warm gently rather than stampede. So: restore toward the
+            # configured width promptly (+8/min, ~6 min from 8 to 56) instead
+            # of climbing hunting a ceiling. It is a RESTORE, not a climb,
+            # which is why it needs no settle() and no clean-streak rung.
+            if w < FULL_WIDTH and shed == 0:
+                pdf_width[0] = min(w + 8, FULL_WIDTH)
+                say("  GOVERNOR clean minute - pdf width RESTORING %d -> %d"
+                    " (toward the configured %d; width is share under the"
+                    " piano gate, so this is a restore, not a climb)"
+                    % (w, pdf_width[0], FULL_WIDTH))
         else:
             streak = 0
 
@@ -1309,6 +1577,12 @@ def governor():
 # width 52) and is a dial, not a constant.
 RAMP_START, RAMP_STEP, RAMP_EVERY = 8, a.ramp_step, a.ramp_every
 _target = min(a.pdf_workers, a.pdf_max)
+# ⚠ THE WIDTH THE LANE ACTUALLY RUNS AT IS NOT _target IN ROW PHASE. The
+# assembly line overrides pdf_width to a.workers ("gate is the wire, not the
+# width"), so _target - which is the ROW-phase STARTING width, default 12 -
+# is the wrong thing to restore toward after a blip. Restoring to 12 when the
+# lane was configured for 56 would have looked like a fix and cost 4x.
+FULL_WIDTH = a.workers if a.phase == "row" else _target
 # PHASE GATE: in rd/auto the pdf pool holds a token width (2) so the sync
 # HOT LIST still images new filings the moment they record - today's
 # documents stay fully ready - while the pdf BACKFILL waits its turn.
@@ -1431,6 +1705,67 @@ def row_feeder():
         else:
             say("  RECONCILE: 0 unresolved failures - every one on record"
                 " ended as a landing or a recorded verdict")
+    # >> AND RUN IT AGAIN, PERIODICALLY. The block above closes the residue
+    # AT STARTUP only, which quietly means "whenever a human restarts the
+    # lane". A lane that runs clean for days would leave a mid-run failure
+    # sitting for days - and the sweep exists precisely because "it heals
+    # eventually" is not the same claim as "the residue is zero" (login:
+    # "Can we make sure all errors resolve to 0 errors"). MEASURED
+    # 2026-08-25: four docs sat outstanding on transient HTTP 400s whose
+    # pages returned a full TIFF on the very next request; nothing would
+    # have re-asked until a restart.
+    def reconcile_loop():
+        while not stop_workers.is_set():
+            if not STOP_RECON.wait(a.reconcile_every):
+                pass
+            if stop_workers.is_set():
+                return
+            try:
+                rc = sqlite3.connect("file:%s?mode=ro" % CP.NAV_DB, uri=True,
+                                     timeout=120)
+                rc.execute("PRAGMA busy_timeout=120000")
+                # ⚠⚠ GRADE PER STAGE, exactly as the startup sweep and
+                # lane_reconcile.py do. I first wrote this loop asking "does
+                # it have a pdf?" of EVERY failure - which re-feeds an rd
+                # failure whose rd landed perfectly, because pdf='' is the
+                # ORDINARY state of 91.9% of the corpus. That is the same
+                # defect that manufactured a 37% "outstanding" figure login
+                # called out ("that makes no sense"), and here it would have
+                # re-fed the same rows every 30 minutes forever.
+                seen, fed = {}, 0
+                for _p, _st in ((FAILS, "rd"), (PDF_FAILS, "pdf")):
+                    try:
+                        for _ln in _p.read_text(encoding="utf-8").splitlines():
+                            try:
+                                _i = json.loads(_ln)["id"]
+                            except Exception:
+                                continue
+                            if _i and _i not in DIAGNOSED:
+                                seen[_i] = ("pdf" if seen.get(_i) == "pdf"
+                                            or _st == "pdf" else "rd")
+                    except OSError:
+                        pass
+                for _i in sorted(seen):
+                    _r = rc.execute("SELECT pdf, recorded_details FROM"
+                                    " navigation WHERE id = ?",
+                                    (_i,)).fetchone()
+                    if not _r:
+                        continue
+                    _done = bool(_r[0]) if seen[_i] == "pdf" else bool(_r[1])
+                    if not _done:
+                        q.put((_i, _r[1] or "", ""))
+                        fed += 1
+                rc.close()
+                if fed:
+                    say("  RECONCILE (in-run): re-fed %d unresolved failure(s)"
+                        " of %d on record" % (fed, len(seen)))
+            except Exception as e:
+                say("  reconcile sweep error (%s: %.60s)"
+                    % (type(e).__name__, e))
+
+    if a.reconcile and a.reconcile_every > 0:
+        threading.Thread(target=reconcile_loop, daemon=True).start()
+
     stuck = []          # ⚠ defined unconditionally: the guard below reads it
     if a.adjudicate and (QUAR_PDF or QUAR_RD):
         # ⚠ A DIAGNOSED DOC IS DONE BEING ASKED. Adjudication runs at every
@@ -1571,7 +1906,8 @@ def row_worker(idx):
                              "IncompleteRead")
                         or "timed out" in msg or "10054" in msg
                         or "10060" in msg or "UNEXPECTED_EOF" in msg
-                        or "forcibly closed" in msg):
+                        or "forcibly closed" in msg
+                        or getattr(e, "acris_shed", False)):
                     stats["shed"] += 1
             with PDF_FAILS.open("a", encoding="utf-8") as fh:
                 # ⚠ STAMP IT. Without a time these rows cannot be tied to
@@ -1601,9 +1937,22 @@ def row_worker(idx):
 
 say("acris_lane up · %s · %s · %.1f req/s cap · edge every %ds · apply=%s"
     " · quarantined %d rd / %d pdf"
-    % ("PIANO: one request on the wire, one connection, contiguous per row"
+    # >> THE NAME IS THE PIANO METHOD, AND IT IS NOT ABOUT COUNT (login
+    # 2026-08-25: "I still prefer calling acris piano method since it
+    # carefully sequences the requests via a metronome whereas drum just goes
+    # as fast as server allows without a worry of overlap, whereas the
+    # metronome keeps the piano rhythm to self adjust requests to never
+    # overlap"). What makes it piano is the METRONOME - departures are
+    # SEQUENCED on a pacer that self-adjusts, so requests never collide.
+    # Whether one note or a chord sounds at a time is a second question:
+    # --max-inflight 1 is single notes, 64 is chords, and BOTH are piano
+    # because both depart on the beat. richmond is the drum - no pacer at
+    # all, latency is the only governor, overlap is unmanaged by design.
+    % ("PIANO METHOD, single notes: one request on the wire, one connection,"
+       " contiguous per row"
        if a.max_inflight <= 1
-       else "CHORDS: up to %d requests at once" % a.max_inflight,
+       else "PIANO METHOD, chords: up to %d requests at once, every one"
+            " of them departing on the metronome" % a.max_inflight,
        ("ASSEMBLY LINE: %d workers, each carries a row rd->key->image->READY"
         % a.workers) if a.phase == "row"
        else "phase=%s · %d rd + pdf width %d (max %d)"

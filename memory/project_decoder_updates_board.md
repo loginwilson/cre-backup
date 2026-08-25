@@ -117,3 +117,33 @@ never a bespoke dashboard again.
   columns; the table has already grown three.
 
 Related: [[project-decoder-seven-phases]], [[feedback-bkrea-scale-failure]]
+
+---
+
+**⚠ CONSOLIDATING A LANE MOVES THREE THINGS, OR THE ROW LIES (2026-08-24).**
+Richmond's headline moved from `acquisition pdf` to `synchronization` and it
+took THREE separate fixes, each with a different false symptom, because the
+row's identity is spread across three dicts keyed `(phase, source)`:
+
+    PROC_SIG       -> missed = the row reads STALLED **always**. It still
+                      named routine_synchronization.py / rc_daily.py, both
+                      retired, so the process test was False forever. ⚠ A
+                      PROC_SIG naming a dead script cannot report a stall
+                      honestly - it reports stalled ALWAYS, which carries the
+                      same information as reporting nothing.
+    _HEARTBEAT     -> missed = a genuine wedge is INVISIBLE. `_lane_log_stale`
+                      returns False when there is no spec ("we cannot call
+                      unknown silence a stall"), so the omission fails SILENT.
+    _CUM_SPEC      -> missed = **0.0/s forever**.
+
+**⚠ AND WHY THE RATE CANNOT COME FROM `landed`.** `landed` is read from
+`_board_truth.json`, which board_truth refreshes on a **~30 MINUTE anchor
+interval**. Differencing it on a 60-second tick reads 0 on ~29 of every 30
+ticks; the one tick that catches the lump then decays across the 5m window
+(observed 53 -> 30 -> 20/s). So: **`landed` is the measured ANCHOR, the lane's
+own monotonic counter is the RATE.** Same disease as the 9.02/+0 bug and the
+lifetime-average over-correction already recorded above.
+
+Verified live after all three: `richmond ... now 15.1/s +921 ETA 0.98 days
+ACTIVE`, matching rc_lane.log's own 16.3/s. See
+[[project-acris-consolidated-lane]].
