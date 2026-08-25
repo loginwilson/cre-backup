@@ -64,9 +64,10 @@ a state that accumulates, which is the minimum requirement for learning.
 - **SURPRISE** — how many things did this document carry that the spec did not
   predict? Counted, not judged.
 
-**Surprise falling across a class IS the learning.** A class is CLOSED when
-two consecutive new members produce zero surprises. That is convergence, and
-it is the first thing in fifty-five runs that can be said to have improved.
+**Surprise falling across a class IS the learning.** — but see §VI: it is
+STRUCTURAL surprise that must fall. A class is CLOSED when two consecutive new
+members add no structural surprise. That is convergence, and it is the first
+thing in fifty-five runs that can be said to have improved.
 
 The letter grade may stay as a summary. It is not the measurement and never
 was one — it was an opinion, self-assigned, about work no one else read,
@@ -135,7 +136,7 @@ of what must be recalled.
 
 ---
 
-## VII. ⚠ SURPRISE IS TWO NUMBERS, NOT ONE (ruled at batch 2)
+## VI. ⚠ SURPRISE IS TWO NUMBERS, NOT ONE (ruled at batch 2)
 
 Batch 2 failed its own convergence criterion: surprise was 6 and 8 against a
 predicted "below 5 on each". Recorded as a fail.
@@ -163,7 +164,9 @@ That is the number to carry.
 ⚠ **A class CLOSES when two consecutive members add NO STRUCTURAL surprise** —
 not when they add nothing at all.
 
-## VI. FIRST BATCH
+---
+
+## VII. THE BATCHES SO FAR
 
 **CEMA**, which already has three read members:
 

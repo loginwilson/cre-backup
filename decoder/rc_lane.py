@@ -1029,28 +1029,14 @@ def rd_heal():
                     if a.hot_pdf:
                         hot_ids.put("RC_" + iid)  # only with --hot-pdf
                     _absent_at.pop(iid, None)     # resolved - stop tracking
-                elif False:   # ⚠ RETIRED 2026-08-25 - see below
-                    # ⚠⚠ THIS IS THE ONLY PLACE A "NO PDF" FACT IS RECORDED,
-                    # and without it 100% IS UNREACHABLE (login 2026-08-25:
-                    # "If you arent counting no pdf determiniation into the
-                    # count thats a huge failure that would never result in
-                    # 100% compeltion"). The old rule refused to write ANY
-                    # verdict, so a document that genuinely has no scan sat at
-                    # pdf='' for ever and the board counted it as outstanding
-                    # work nobody could ever do.
-                    #
-                    # The lag window is what makes the verdict safe: inside
-                    # --lag-days an absent image means the scan is not up yet
-                    # and the row stays in the queue; outside it, the source
-                    # has had its 7 days and "no image" is a fact about the
-                    # DOCUMENT, not about our timing.
-                    if wcon is not None:
-                        wcon.execute("UPDATE navigation SET pdf='no pdf'"
-                                     " WHERE id=? AND pdf=''", ("RC_" + iid,))
-                        wcon.commit()
-                    _absent_at.pop(iid, None)
-                    with lock:
-                        stat["nopdf"] = stat.get("nopdf", 0) + 1
+                # ⚠ THE rd-PARSE VERDICT WAS RETIRED 2026-08-25. It read a
+                # marker string off the detail page to decide "no image",
+                # which needed two parsers to agree about page markup and
+                # they did not. login replaced it with something simpler and
+                # stronger: "we have the url, if it doesnt show, its absent".
+                # The MINER now decides from what the url actually does - see
+                # _no_image() - so there is exactly one place that can record
+                # a no-pdf fact, and it is the place that asked the url.
                 else:
                     # pending OR absent-but-recent: both mean ASK AGAIN LATER,
                     # and neither is recorded as a conclusion anywhere.
@@ -1107,6 +1093,7 @@ if __name__ == "__main__":
                threading.Thread(target=watchdog, daemon=True),
                threading.Thread(target=writer, daemon=True),
                threading.Thread(target=reporter, daemon=True)]
+    _open_ro()          # miners read the recorded date through this
     threads += [threading.Thread(target=miner, daemon=True)
                 for _ in range(a.miners)]
     threads += [threading.Thread(target=puller, daemon=True)
