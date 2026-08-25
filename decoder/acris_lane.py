@@ -65,6 +65,7 @@ from __future__ import annotations
 import argparse
 import contextlib
 import json
+import os
 import pathlib
 import queue
 import re
@@ -175,6 +176,36 @@ ap.add_argument("--rung-step", type=float, default=2.0,
 # clean at 48. Raising it re-earns fewer rungs. ⚠ It is still a margin:
 # a restart follows some event, and resuming at 100% of a peak assumes
 # the peak is still safe - which only the SERVER gets to confirm.
+ap.add_argument("--hot-pdf", action="store_true",
+                help="let a freshly synced filing's IMAGE jump the pdf queue."
+                     " ⚠ OFF by default since 2026-08-25. login: \"the pdf"
+                     " just goes to the que instead of jumping the que so the"
+                     " process is never interrupted ... yet the rd and key"
+                     " pass 1 still occur since the walk uncovers it"
+                     " regardless.\" The walk already lands rd IN THE SAME"
+                     " REQUEST and the trigger keys it, so the valuable,"
+                     " freshness-sensitive part of a new filing is captured"
+                     " the moment it appears. Only the IMAGE waits its turn -"
+                     " and an image that waits is strictly SAFER, because the"
+                     " scan-lag problem (a fresh doc with no image yet, which"
+                     " must be DEFERRED and never called imageless) simply"
+                     " cannot arise once the row is read in id order weeks"
+                     " later.")
+ap.add_argument("--rps-ramp-step", type=float, default=8.0,
+                help="req/s added per ramp tick when resuming toward a"
+                     " remembered tempo")
+ap.add_argument("--rps-ramp-every", type=float, default=30.0,
+                help="seconds between ramp ticks. ⚠⚠ A WARM RESUME MUST BE A"
+                     " RAMP, NOT A JUMP (2026-08-25 08:10). The lane used to"
+                     " open AT 0.9x the banked peak - 96.6 req/s from a"
+                     " standing start, on every restart, and it was restarted"
+                     " repeatedly that morning. ACRIS served its Bandwidth"
+                     " Notice. Warm resume is still right (a cold 12/s throws"
+                     " away hours) but the server must SEE it arrive"
+                     " gradually: 12 -> 96.6 at 8/s per 30 s is ~5 minutes.")
+ap.add_argument("--refusal-backoff", type=float, default=0.75,
+                help="after a refusal, the ladder may never again climb above"
+                     " this fraction of the rate that WAS refused")
 ap.add_argument("--dirty-fraction", type=float, default=0.4,
                 help="on a DIRTY saved tempo, resume at this fraction of the"
                      " remembered peak instead of the --max-rps cold floor."
@@ -428,16 +459,36 @@ WARM_MAX_AGE = 6 * 3600        # older than this and the world has moved on
 _best = [0.0]
 
 
-def save_tempo(rps, clean, trim=False):
+def save_tempo(rps, clean, trim=False, refused=False):
+    """⚠⚠ NOT ALL DIRTY IS THE SAME DIRT (2026-08-25 08:10, after acris
+    served its Bandwidth Notice).
+
+    `clean=False` had ONE meaning and two very different causes:
+      - a wifi blip / local transport event   -> the peak is still valid
+      - ACRIS ACTUALLY REFUSED US             -> the peak is REFUTED
+
+    This morning I made a dirty start resume at --dirty-fraction of the
+    remembered peak, because blips were cold-starting the lane at 12/s and
+    costing an hour. That reasoning is right for a blip and WRONG for a
+    refusal: resuming at 0.4 x 107.3 = 43/s walks straight back toward the
+    rate the server just objected to. So a refusal is recorded distinctly
+    and forces a genuine cold start, --dirty-fraction notwithstanding.
+
+    ⚠ AND A REFUSAL VOIDS THE PEAK. 107.3/s was measured as a 10-minute
+    PEAK and I then treated it as a sustainable operating rate - seeding it,
+    warm-resuming to 96.6/s on every restart, and letting the ladder climb
+    on top. The server disagreed. A rate the server refused must never be
+    the number a later restart aims at."""
     rps = float(rps)
-    if trim:
+    if refused or trim:
         _best[0] = rps          # the server spoke: the old peak is void
     else:
         _best[0] = max(_best[0], rps)
     try:
         TEMPO_FILE.write_text(json.dumps(
             {"rps": round(rps, 1), "best": round(_best[0], 1),
-             "clean": bool(clean), "at": time.time()}), encoding="utf-8")
+             "clean": bool(clean), "refused": bool(refused),
+             "at": time.time()}), encoding="utf-8")
     except OSError:
         pass
 
@@ -460,6 +511,24 @@ def _warm_start(cold):
     # measurement never happened. So carry the mark across even when we
     # decline to start on it; the ladder re-earns it rung by rung, and
     # save_tempo's max() can no longer ratchet the record downward.
+    # ⚠⚠ A REFUSAL IS CHECKED *BEFORE* THE PEAK IS CARRIED FORWARD, and the
+    # ordering is the whole point. Loading the remembered peak first would
+    # leave _best = 107.3 in memory, and the very first clean save_tempo
+    # after the restart writes best = max(107.3, rps) - RESURRECTING the
+    # exact rate the server refused, as if it had never objected. The
+    # cold start would look correct and the banked target would be wrong.
+    if d.get("refused"):
+        # THE SERVER SAID NO. Ramp from the floor and EARN the rate back one
+        # clean window at a time. _best stays 0.0 so the ladder re-measures
+        # from scratch rather than aiming at a refuted number.
+        return cold, ("  ⚠⚠ THE LAST RUN ENDED IN A REFUSAL - starting COLD"
+                      " at %.1f/s and climbing from scratch, by rule. The"
+                      " peak is NOT carried over: it was refuted, not"
+                      " interrupted, and --dirty-fraction does not apply."
+                      % cold)
+    # ⚠⚠ A COLD START MUST NOT ERASE THE PEAK (fixed 2026-08-25 06:40) -
+    # see the note above; this carry is what save_tempo's max() needs so a
+    # dirty restart cannot ratchet the record downward.
     _remembered = float(d.get("best", 0.0) or 0.0)
     if _remembered > _best[0]:
         _best[0] = _remembered
@@ -500,7 +569,49 @@ def _warm_start(cold):
 
 
 _start_rps, _warm_note = _warm_start(float(a.max_rps))
-tempo = Tempo(_start_rps)
+# ⚠⚠ ALWAYS OPEN AT THE FLOOR. _warm_start decides where we are ALLOWED to
+# get back to; it does not decide where we START. Opening at 96.6 req/s from
+# a standing start - repeatedly, across four restarts in one morning - is
+# what earned acris's Bandwidth Notice at 08:10 on 2026-08-25.
+# ⚠⚠ A RATE THAT WAS REFUSED IS A CEILING FOREVER, NOT A TARGET.
+# The ladder's only feedback is ready-docs/s and explicit shed signals, so it
+# has NO concept of a sustained-volume quota - ten good minutes read as
+# permission to go faster, which is exactly how it stepped 96.6 -> 104.6/s
+# thirty-one seconds before acris refused us. So the refused rate is recorded
+# and becomes a hard cap on every future climb.
+REFUSAL_CEILING = [0.0]
+try:
+    _d = json.loads(TEMPO_FILE.read_text(encoding="utf-8"))
+    if _d.get("refused") and float(_d.get("rps", 0)) > 0:
+        REFUSAL_CEILING[0] = float(_d["rps"]) * a.refusal_backoff
+except (OSError, ValueError, KeyError):
+    pass
+
+_RESUME_TARGET = float(_start_rps)
+tempo = Tempo(float(a.max_rps))
+
+
+def rps_ramp():
+    """Walk the tempo up to the remembered rate instead of slamming into it.
+
+    ⚠ This is NOT the ladder. The ladder MEASURES an unknown ceiling in
+    10-minute rungs; this only returns to a rate already proven, and it does
+    so gradually so the server sees a ramp rather than a wall."""
+    if _RESUME_TARGET <= tempo.rps:
+        return
+    say("  RAMPING to the remembered %.1f/s from %.1f/s (+%.0f/s every %.0fs,"
+        " ~%.0f min) - a warm resume must be a ramp, not a jump"
+        % (_RESUME_TARGET, tempo.rps, a.rps_ramp_step, a.rps_ramp_every,
+           (_RESUME_TARGET - tempo.rps) / a.rps_ramp_step
+           * a.rps_ramp_every / 60.0))
+    while tempo.rps < _RESUME_TARGET and not stop_workers.is_set():
+        time.sleep(a.rps_ramp_every)
+        if stop_workers.is_set():
+            return
+        tempo.rps = min(tempo.rps + a.rps_ramp_step, _RESUME_TARGET)
+    if not stop_workers.is_set():
+        say("  ramp complete - tempo %.1f/s, the governor owns it now"
+            % tempo.rps)
 
 # ⚠⚠ THE NO-COLLISION GATE (login 2026-08-24, trip #5): "we are drumming
 # when we need to play piano. the code can never collide the requests."
@@ -865,9 +976,17 @@ def edge_tick():
     # ⚠ carries the rd JSON, not a bare date: the assembly line reads it to
     # know the row already has its recorded details (skip stage 1) AND to
     # get the recorded date for the store path. _rec_date() accepts either.
-    for _c, did, rec in found:
-        if rec:
-            pdf_hot.put((did, rec, False))
+    # ⚠⚠ THE IMAGE DOES NOT JUMP THE QUEUE (login 2026-08-25, --hot-pdf).
+    # The rd is already landed above IN THE SAME REQUEST as the walk, and
+    # the key trigger fires on it, so a new filing is fully described the
+    # moment it appears. Pushing its IMAGE to the front as well turned every
+    # inflow into a burst that interrupted the sequential run for no gain in
+    # what the sync is actually for. The row sits in the todo index and the
+    # ordinary pdf pass collects it in id order.
+    if a.hot_pdf:
+        for _c, did, rec in found:
+            if rec:
+                pdf_hot.put((did, rec, False))
     say("  SYNC landed %d · rd in the SAME request · edge %d -> %d"
         % (len(found), edge, found[-1][0]))
     return True, len(found), False
@@ -916,8 +1035,60 @@ def watchdog():
     presumed dead and gets recycled. Cheap (the probe alone re-proves the
     route in one request) and self-limiting - a healthy lane refreshes
     last_ok several times a second, so this can never fire under load."""
+    # ⚠⚠ AND last_ok IS BLIND FOR THE SAME REASON keepalive WAS (fixed
+    # 2026-08-25 08:00). The docstring above says "if NOTHING has succeeded"
+    # - but something always succeeds: the EDGE PROBE, every 10 s, through
+    # this very session. So last_ok is refreshed forever while all 56 workers
+    # are dead, and this watchdog can never fire. MEASURED TWICE this
+    # morning: 06:44 frozen at 2,925 and 07:54 frozen at 11,576, both with a
+    # perfectly healthy probe still landing sync rows through the same pool.
+    # A HEARTBEAT PROVES A THREAD IS RUNNING, NEVER THAT WORK IS HAPPENING -
+    # the only honest liveness question is "is it producing documents?"
+    frozen_at, frozen_cnt, escalated = [time.time()], [-1], [0]
     while True:
         time.sleep(15)
+        # >> THE OUTPUT COUNTER IS THE LIVENESS TEST.
+        with lock:
+            produced = stats["pdfs"] + stats["imageless"]
+        if produced != frozen_cnt[0]:
+            frozen_cnt[0], frozen_at[0], escalated[0] = produced, time.time(), 0
+        stuck = time.time() - frozen_at[0]
+        # only a lane that HAS work and IS being served can be called frozen
+        idle = pdf_q.empty() and pdf_hot.empty()
+        served = time.time() - probe_ok_at[0] < 120
+        if (not stop_workers.is_set() and not idle and served
+                and stuck >= a.stall_after):
+            if escalated[0] == 0:
+                escalated[0] = 1
+                say("  ⚠ OUTPUT FROZEN at %d for %.0fs while the probe is"
+                    " STILL SERVED and %d doc(s) wait - the workers are dead,"
+                    " not the server. Recycling the transport."
+                    % (produced, stuck, pdf_q.qsize()))
+                recycle_session("output frozen %.0fs with a healthy probe"
+                                % stuck)
+                last_ok[0] = time.time()
+                frozen_at[0] = time.time()      # one fair window to recover
+            else:
+                # ⚠⚠ A RECYCLE CANNOT FREE THREADS BLOCKED ON THE OLD POOL -
+                # that is on record from 2026-08-24 ("it recycled twice and
+                # stayed frozen") and it happened AGAIN at 07:53/07:54. When
+                # the cheap fix has already been tried and output is still
+                # frozen, the honest move is to DIE so the supervisor can
+                # restart us warm in ~60 s, instead of sitting dead for the
+                # 6 minutes keepalive needs to notice on its own.
+                # ⚠ The tempo is saved CLEAN first: a wedged local process is
+                # not evidence acris refused, and a dirty flag would throw
+                # away the climb this restart is meant to preserve.
+                save_tempo(tempo.rps, clean=True)
+                say("  ⚠⚠ STILL FROZEN at %d after a recycle (%.0fs). A"
+                    " recycle cannot free threads blocked on the OLD pool -"
+                    " only a process restart recovers. Exiting so the"
+                    " supervisor restarts this lane WARM at %.1f/s."
+                    % (produced, stuck, tempo.rps))
+                sys.stdout.flush()
+                os._exit(3)
+        # the original route-died test still stands for the case where even
+        # the probe has gone quiet
         quiet = time.time() - last_ok[0]
         if quiet >= a.stall_after and not stop_workers.is_set():
             recycle_session("nothing has succeeded for %.0fs - presuming the"
@@ -945,7 +1116,7 @@ def edge_thread():
             stop_workers.set()
             # ⚠ a refusal marks the saved tempo DIRTY: the next start
             # must ramp COLD, never resume into a server that refused.
-            save_tempo(tempo.rps, clean=False)
+            save_tempo(tempo.rps, clean=False, refused=True)
             say("  ⚠ REFUSED - BACKFILL WORKERS STOPPED (probe continues on"
                 " backoff; restart the lane to resume backfill: login's call)")
         if ok:
@@ -1054,7 +1225,7 @@ def worker(idx=0):
                 stop_workers.set()
                 # ⚠ a refusal marks the saved tempo DIRTY: the next start
                 # must ramp COLD, never resume into a server that refused.
-                save_tempo(tempo.rps, clean=False)
+                save_tempo(tempo.rps, clean=False, refused=True)
                 say("  REFUSED at %s - BACKFILL WORKERS STOPPED: %.90s"
                     % (did, e))
         except Exception as e:
@@ -1181,7 +1352,7 @@ def pdf_worker(idx):
                 stop_workers.set()
                 # ⚠ a refusal marks the saved tempo DIRTY: the next start
                 # must ramp COLD, never resume into a server that refused.
-                save_tempo(tempo.rps, clean=False)
+                save_tempo(tempo.rps, clean=False, refused=True)
                 say("  PDF REFUSED at %s - ALL WORKERS STOPPED: %.90s"
                     % (did, e))
         except Exception as e:
@@ -1313,10 +1484,16 @@ def governor():
         # lane_ceiling.txt and the governor picks it up on its next tick.
         # It is a BRAKE as well: a lower number trims the tempo immediately.
         ceiling = a.rps_max
+        # ⚠ THE REFUSAL CEILING OUTRANKS --rps-max AND lane_ceiling.txt.
+        # It is not a tuning knob; it is the server's own answer.
+        if REFUSAL_CEILING[0] > 0:
+            ceiling = min(ceiling, REFUSAL_CEILING[0])
         try:
             _txt = CEILING_FILE.read_text(encoding="utf-8").strip()
             if _txt:
                 ceiling = max(4.0, min(float(_txt), HARD_CEILING))
+                if REFUSAL_CEILING[0] > 0:
+                    ceiling = min(ceiling, REFUSAL_CEILING[0])
         except (OSError, ValueError):
             pass
         if ceiling < tempo.rps:
@@ -1402,6 +1579,20 @@ def governor():
                        verdict))
         elif hold > 0:
             hold -= 1
+        elif w < FULL_WIDTH and shed == 0 and landed == 0:
+            # ⚠⚠ A STARVED LANE CANNOT EARN ITS WIDTH BACK (2026-08-25 07:55).
+            # The restore below lives inside `landed > 0`, so a lane whose
+            # output has stopped can never widen - and a lane cut to width 8
+            # by a blip is exactly the lane most likely to be producing
+            # nothing. Circular, and MEASURED: width sat at 8 with landed 0
+            # for the whole freeze while the branch that would have fixed it
+            # was unreachable. Widening a silent lane is safe: width is SHARE
+            # under the piano gate, the pacer still decides what reaches the
+            # wire, and shed == 0 already says the server is not pushing back.
+            pdf_width[0] = min(w + 8, FULL_WIDTH)
+            say("  GOVERNOR nothing landed but nothing shed either - pdf"
+                " width %d -> %d. A lane cut to 8 by a blip must not need"
+                " output to earn output back." % (w, pdf_width[0]))
         elif shed < 3 and landed > 0:
             # ⚠⚠ AN ISOLATED SHED MUST NOT ZERO THE CLIMB (measured 17:30,
             # 2026-08-24). This read `shed == 0`, so ONE RemoteDisconnected or
@@ -1895,7 +2086,7 @@ def row_worker(idx):
                 stop_workers.set()
                 # ⚠ a refusal marks the saved tempo DIRTY: the next start
                 # must ramp COLD, never resume into a server that refused.
-                save_tempo(tempo.rps, clean=False)
+                save_tempo(tempo.rps, clean=False, refused=True)
                 say("  REFUSED at %s - ALL WORKERS STOPPED: %.90s" % (did, e))
         except Exception as e:
             kind = type(e).__name__
@@ -1961,7 +2152,8 @@ say("acris_lane up · %s · %s · %.1f req/s cap · edge every %ds · apply=%s"
 if _warm_note:
     say(" " + _warm_note.lstrip(" ·"))
 threads = [threading.Thread(target=edge_thread, daemon=True),
-           threading.Thread(target=watchdog, daemon=True)]
+           threading.Thread(target=watchdog, daemon=True),
+           threading.Thread(target=rps_ramp, daemon=True)]
 if a.phase == "row":
     # THE ASSEMBLY LINE: one pool, each worker carries a row to READY.
     # `--workers` is the crew size - enough to keep the single wire busy

@@ -9986,3 +9986,122 @@ For a title searcher the release is the good news and the gaps are the work. The
 Then three defects, all in the record rather than the deal. The City indexed the releasing agency as "New York Housing Development Corporation", dropping the word **CITY** from its actual name. Two of the eight lots that the exhibit releases — Block 392, Lots 50 and 51 — were left off the property schedule entirely, so a search on either finds nothing. And one of the six legal descriptions runs south twice and never north, so it does not close on its own numbers.
 
 None of that changes what happened: the restriction is off. It changes how hard it is to prove.
+
+# RUN 55 — BK_7140048401460 · SUNDRY AGREEMENT (actually a CONSOLIDATION, EXTENSION AND SPREADER AGREEMENT) · QUEENS 2154/1 · 1971
+
+First disk-store draw in ten runs; the era debt recorded at r54 is REPAID
+(1971, BK_ id, non-deed type, Queens — none of which the 1911-13 Richmond
+deed shard could serve).
+
+JAMAICA SAVINGS BANK consolidates FOUR mortgages it holds — 1950-06-16
+Ruskin Gardens Inc. to Irving Trust $2,098,200.00 (L 6203 p.81); 1950-12-21
+"P M and LB C Co." to Teachers Insurance and Annuity $175,500.00 (L 6318
+p.512); 1964-01-21 Queens Ruskin Corp. to JSB $45,702.25 (L 8335 p.426);
+1971-06-03 Quality Ruskin Fee Corp. + Queens Ruskin Corp. to JSB $47,859.35,
+recorded simultaneously — into "in law but one mortgage, A SINGLE LIEN" of
+$1,575,000.00. Originating sums total $2,367,261.60; the gap to the balance
+is $792,261.60 and is not explained on the page.
+
+FOUR FUNCTIONS: CAPITAL·modifies `transacts` (the consolidation and the
+spread) · TITLE `observes` (the ownership recital) · IDENTITY `observes`
+(the whole city block) · COST `transacts` (the recording, tax $0.00).
+Seven refused. NO TWELFTH.
+
+## R55-1 — THE CATCH-ALL SHELF IS A THIRD CATEGORY, NOT A MISMATCH
+
+`SUNDRY AGREEMENT` is this register's catch-all (already recorded in this
+file at lines 1949 and 2191). Under R51-3 a type-shelf MISMATCH is the type
+MISDESCRIBING the instrument. A catch-all does not misdescribe — it
+describes truly and carries no information. **That is a third category and
+it must not be counted as a mismatch** (the true mismatch list stands at
+six: r42, r48, r50, r51, r52, r54).
+
+Its cure was already written: **R36-1, THE REMARKS FIELD RESCUES A CATCH-ALL
+TYPE.** It fired exactly as designed — rd's remarks read
+`CONS & EXT L 6203 MP 81 ETAL AGREEMENT BOOK/PAGES: 51/129`, naming the
+true class before a page was rendered. R36-1 is now CONFIRMED IN THE FIELD.
+
+## R55-2 — THE SPREAD IS THE EVENT, AND IT RUNS BOTH WAYS
+
+Two estates in one block — a leasehold and the fee — held between two
+corporations with one president (HENRY MOSKOWITZ, both, from 10 Columbus
+Circle). The liens are "modified and spread over the entire premises and
+further spread so that the leasehold estate of each of said mortgages shall
+cover the leasehold and the fee estates and feehold estate in each of said
+mortgages shall cover the leasehold estate and the fee estate".
+
+⚠ The document NEVER allocates which corporation holds which estate, and
+NEVER names the lease that creates the leasehold. Both were left as branches.
+
+## R55-3 — THE INTERLINEATION ON THE OPERATIVE SUM (MISSED, FOUND AT GRADING)
+
+p2 reads, with **"Thousand" typed above the line in a different face** and a
+slash marking the insertion point:
+
+    owing the sum of One Million Five Hundred Seventy-Five/and 00/100
+    ($1,575,000.00) Dollars
+
+As originally typed the WORDS DID NOT MATCH THE FIGURES on the one number
+the instrument exists to state. p3 then recites the sum correctly and inline,
+twice — which is what RESOLVES it: a scrivener's correction, internally
+consistent, uninitialed.
+
+⚠ **THIS WAS MISSED IN DELIVERY AND FOUND ONLY BY RE-OPENING THE PAGES AT
+GRADING.** And the file had prior art: **R47 read "handwritten address
+interlineations initialed before ack"** — caught, and recorded down to
+whether they were initialed. Eight runs later the same page-feature was
+invisible.
+
+## ⚠ R55-4 — THE BOOTCAMP ONLY LEARNS FROM FAILURE, SO ITS SUCCESSES DECAY
+
+R55-3 is the cleanest instance yet of the loop's structural defect. The
+reader did this RIGHT at r47. Because it was right, no rule was written, no
+check was added, nothing carried it forward — and at r55 the same feature
+went unread on the operative sum.
+
+**The loop mints artifacts only for defects. A good read produces nothing
+that survives it.** Every clean judgment in 55 runs has decayed the same way.
+This belongs to the rethink, not to a new card: no card can fix a loop that
+has no mechanism for retaining what worked.
+
+## R55-5 — THE CLOSURE TEST DID NOT FIRE, ONE RUN AFTER MINTING
+
+r54 minted "compute closure before trusting any recorded course" and put it
+in the Lexicon. r55's document carries a metes-and-bounds and the test was
+not run in delivery. Run at grading: N 200 · W 372.03 · S 204.46 · E 413.35,
+residual **4.46 ft N-S and 41.32 ft E-W**. Here the non-closure is CORRECT —
+204.46 is arc length along a curve ("as the same curves") and the streets are
+not orthogonal. Non-closure EXPLAINED, where the delivery had non-closure
+UNDETECTED.
+
+⚠ Third recorded instance of a cure failing within one run of minting
+(r21→r37, r45→r46, r54→r55). The cure was a Lexicon entry and a Run Log
+note — a vigilance-cure with no artifact behind it.
+
+## R55-6 — L-8 FIRES IN ITS INVERSE FORM
+
+L-8 says the §255 affidavit is the missing witness for consolidations, and
+that on r13 it was IN the file, appended, unopened. Here the backer stamps
+**"AFFID. FILED"** beside the zero-tax audit line and **the affidavit is not
+among the 7 pages**. All 7 pages under the document_id were read (L-9 scope
+satisfied), so this is not a reading-scope failure — the register records
+that the exemption's witness exists without holding it. Chain expectation.
+
+Tax finding: **mortgage recording tax $0.00, EARNED from two independent
+marks** — the typed audit line `JUN-15-71 · 77058 · Tax—1st 0.00` and a
+separate rubber stamp `NO MTGS. TAX PAID`. First CEMA in the file where the
+zero is proved by the register's own marks rather than by an affidavit held
+in the file. (Third CEMA overall: r13, r45, r55 — grep-verified.)
+
+## R55-7 — R11-1 CONFIRMED: THE INDEX KEEPS ONE CITE OF THREE
+
+The instrument cites three prior libers (6203/81, 6318/512, 8335/426); rd's
+remarks keep only `L 6203 MP 81 ETAL`. The register abbreviated the rest away
+in a literal "ETAL". ⚠ SEE THE GRADE — this citation was written from R11-1's
+TITLE without opening its body.
+
+RECORD DEFECT: rd's `doc_date` reads 6/15/1971, the RECORDING date; the
+instrument is "made the 3rd day of June, 1971". The date field duplicates the
+recording date and loses the execution date. rd puts all three corporations on
+panel 1 with no panel 2 — lender not separated from owners.
+

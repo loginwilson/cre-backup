@@ -54,6 +54,37 @@ import sys
 import time
 
 HERE = pathlib.Path(__file__).parent
+
+# ⚠⚠ A DELIBERATE PAUSE IS NOT A STALL (login 2026-08-25: "acris should
+# clearly be eta saying paused since status s pending not stalled. the site
+# works, but we have paused the code to prioritize richmond").
+#
+# STALLED means "an unexpected break - wedged, errored, or died". When a
+# human parks a lane on purpose, calling it STALLED is a FALSE ALARM, and a
+# board that cries wolf about a lane you switched off yourself is a board you
+# stop reading. It also destroys the one state that is supposed to mean
+# something is wrong.
+#
+# So a paused lane says PAUSED and its ETA says paused. The marker is a plain
+# file, re-read EVERY tick so pausing and resuming need no restart:
+#     lane_paused.json  ->  ["acris"]           whole source, every phase
+#                       ->  [["synchronization","acris"]]   one phase only
+PAUSED_F = HERE / "lane_paused.json"
+
+
+def paused_lanes():
+    """(phase, src) pairs and bare src names the operator has parked."""
+    try:
+        raw = json.loads(PAUSED_F.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return set()
+    out = set()
+    for item in raw if isinstance(raw, list) else []:
+        if isinstance(item, str):
+            out.add(item)
+        elif isinstance(item, (list, tuple)) and len(item) == 2:
+            out.add((item[0], item[1]))
+    return out
 DECODER = pathlib.Path(r"C:\Users\smile\Downloads"
                        r"\Source Folder (Real Estate Data)"
                        r"\Decoder Prompt\decoder")
@@ -841,7 +872,14 @@ def main(loop):
                         f" | {landed:>10,} / {needed:>10,} = {pct_t:6.2f}%"
                         f" | ETA waiting on acq | PENDING")
                     continue
-            if landed >= needed:
+            if src in PAUSED or (phase, src) in PAUSED:
+                # ⚠ CHECKED FIRST, AND ABOVE COMPLETE ON PURPOSE. A parked
+                # lane must not be described by whatever its counters happen
+                # to look like this tick - not ACTIVE from residual increase,
+                # not STALLED for having no process. The operator's intent
+                # outranks the inference.
+                status = "PAUSED"
+            elif landed >= needed:
                 # needed == 0 is a MEASURED nothing-owed (a zero-delta sync
                 # run), not an absence - nothing owed IS complete
                 status = "COMPLETE"

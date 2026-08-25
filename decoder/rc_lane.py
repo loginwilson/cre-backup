@@ -104,6 +104,17 @@ ap.add_argument("--miners", type=int, default=24,
                 help="token minters against richmondcountyclerk.com")
 ap.add_argument("--workers", type=int, default=16,
                 help="pullers against the courts image host")
+ap.add_argument("--hot-pdf", action="store_true",
+                help="let a freshly synced filing's IMAGE jump the pdf queue."
+                     " ⚠ OFF by default since 2026-08-25, matching acris."
+                     " login: \"sync gets doc id, mints, rd, pass 1, and then"
+                     " pdf adds to the backfill.\" The sync already lands the"
+                     " id, the url, the rd and pass-1 key - everything"
+                     " freshness-sensitive - so only the IMAGE waits its turn,"
+                     " and the sequential pdf run is never interrupted by"
+                     " inflow. ⚠ The backfill reaches it IMMEDIATELY once"
+                     " level, because a new filing sorts at the END of the id"
+                     " order the pass walks.")
 ap.add_argument("--ahead", type=int, default=1200,
                 help="minted tokens kept ready ahead of the pullers")
 # ⚠ NO --batch. rc_pdf_pull took tokens 3 at a time to amortise an HTTP
@@ -427,6 +438,21 @@ def refusal_verdict(did, code):
 # ── pulling (iapps.courts.state.ny.us) ─────────────────────────────────
 
 def puller():
+    # ⚠⚠ ONE SESSION PER WORKER, LIKE THE CODE THAT MEASURED 10+ docs/s.
+    # login 2026-08-25: "however acqusition richmond pdf ran is the code that
+    # the pdf path needs to run on". The retired rc_pdf_pull.py gave EVERY
+    # worker its own requests.Session (its worker() line 201); the
+    # consolidation replaced that with one process-wide pooled session, and
+    # richmond has not seen 10 docs/s since. A shared urllib3 pool makes 64
+    # threads contend for connection checkout on one lock, and any pool
+    # churn is paid as a fresh TLS handshake per document. A per-thread
+    # session gives each worker its OWN kept-alive connection - no checkout,
+    # no churn, no shared lock. ⚠ This is not a tuning guess: it is the
+    # difference between the code that hit 11.6/s and the code that did not.
+    sess = requests.Session()
+    sess.headers.update(HDRS)
+    sess.mount("https://", requests.adapters.HTTPAdapter(
+        pool_connections=2, pool_maxsize=4, max_retries=0))
     ro = sqlite3.connect("file:%s?mode=ro" % CP.NAV_DB, uri=True, timeout=120)
     ro.execute("PRAGMA busy_timeout=60000")
     while not STOP.is_set():
@@ -453,7 +479,10 @@ def puller():
                 served_ids.discard(did)    # release it to be re-minted
             continue
         try:
-            r = _SESS[0].get(loc, timeout=(10, 90))
+            # ⚠ stream=True, as the proven puller had it: the body is read
+            # off the socket by .content below, so the READ timeout applies
+            # per chunk rather than to one whole 5 MB transfer.
+            r = sess.get(loc, timeout=(10, 90), stream=True)
             if r.status_code in (401, 403, 429):
                 refusal_verdict(did, r.status_code)
                 continue
@@ -764,7 +793,8 @@ def rd_heal():
                 elif st == "present" and not got[1]:
                     if _now - _hot_at.get(iid, 0.0) >= a.hot_recheck:
                         _hot_at[iid] = _now
-                        hot_ids.put("RC_" + iid)
+                        if a.hot_pdf:
+                            hot_ids.put("RC_" + iid)
                         hotq += 1
             ro.close()
             say("  RD HEAL: window %s .. %s lists %d row(s); %d need work"
@@ -857,7 +887,8 @@ def rd_heal():
                 # only states are "has a pdf" and "does not yet".
                 st_now = str(rec.get("image_state", "")).lower()
                 if st_now == "present":
-                    hot_ids.put("RC_" + iid)      # jump the backfill queue
+                    if a.hot_pdf:
+                        hot_ids.put("RC_" + iid)  # only with --hot-pdf
                     _absent_at.pop(iid, None)     # resolved - stop tracking
                 else:
                     # pending OR absent-but-recent: both mean ASK AGAIN LATER,

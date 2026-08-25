@@ -100,6 +100,10 @@ LANES = {
         # blast radius when one transport blip hit. Raising --max-inflight
         # does NOT raise throughput - the pacer owns the rate. Raise
         # --rps-max instead, and only on evidence.
+        # ⚠⚠ ACRIS IS PAUSED BY LOGIN (2026-08-25, after its Bandwidth
+        # Notice). It is listed here so `fleet.py status` still reports it,
+        # but PAUSED lanes are skipped by `start`. Remove the flag - or run
+        # `python fleet.py start acris_lane --force` - to bring it back.
         ("acris_lane", "acris_lane.py",
          # >> WORKERS ARE THE DEMAND, THE TEMPO IS ONLY A LIMIT (measured
          # 2026-08-24 19:55). Each worker holds ONE request at a time, so the
@@ -168,17 +172,31 @@ LANES = {
         # ⚠ THE DRUM, NOT THE PIANO. No pacer - latency is the governor
         # (proven 160 concurrent connections for 26 h). Concurrency is the
         # only dial and the safety is refusal_verdict, not pacing.
-        # >> DRUMMING QUICKER (login 2026-08-25: "richmond may be able to
-        # drum quicker"). 16 -> 26 pullers, 24 -> 32 miners. ⚠ THIS IS A
-        # PROBE, NOT A SETTING: richmond averages 4.87 MB/doc (150.9 GB over
-        # 30,948 pdfs), so at 9.4 docs/s it is already pulling ~296 Mb/s -
-        # squarely in the 230-287 Mb/s band measured for it alone. If it is
-        # BANDWIDTH-bound rather than worker-bound, more pullers buy nothing
-        # and cost acris, which shares the link and is the long pole (9% vs
-        # richmond's 67%). Judge it on richmond's docs/s AND acris's ready/s
-        # together; revert to 16 if acris pays for it.
+        # >> "RICHMOND MAY BE ABLE TO DRUM QUICKER" - ASKED AND ANSWERED
+        # (login 2026-08-25). It cannot, and the reason is worth keeping so
+        # nobody re-tries it: richmond is TOTAL-LINK-capped, not
+        # per-connection throttled, so pullers are not the dial.
+        #
+        # MEASURED at the office, single variable, acris stable throughout:
+        #     26 pullers -> 2.57, 1.97, 2.43 = 2.32 docs/s
+        #     40 pullers -> 2.12, 1.95, 2.02 = 2.03 docs/s
+        # 54% more pullers bought 0% more output (slightly worse, in noise),
+        # and bulk throughput pinned at ~80 Mb/s at BOTH widths. That is the
+        # signature of a shared pipe being full, not a server metering each
+        # connection - if it metered per connection, more would have scaled.
+        #
+        # ⚠ AND THE LOCATION IS THE VARIABLE THAT ACTUALLY MOVES THIS.
+        # Same code, same width: 5.8-9.4 docs/s at home (230-287 Mb/s,
+        # ~2.6 MB/s per connection) vs 2.3 here (~0.4 MB/s per connection).
+        # richmond pulls ~5 MB documents so it is BANDWIDTH-shaped; acris
+        # pulls many small pages so it is LATENCY-shaped and barely notices
+        # (84.8 -> 74.9 req/s across the same move). Never read one lane's
+        # rate as evidence about the other's, or about the link.
+        #
+        # So: back to the leanest width that reaches the cap. Extra sockets
+        # at a full pipe add contention and steal from acris for nothing.
         ("rc_lane", "rc_lane.py",
-         ["--apply", "--miners", "24", "--workers", "16"],
+         ["--apply", "--miners", "32", "--workers", "64"],
          HERE, HERE / "rc_lane.log"),
     ],
     "board": [

@@ -294,6 +294,29 @@ That is the rubric doing its job: the letter names the dimension.
 
 | 54 | 2003031600062002 2003 | **B (RENDER)** (self, login-prompted) | **"SIX APARTMENT BUILDINGS"** — the cover types six LOT RECORDS as APARTMENT BUILDING and counts no buildings; two of those lots share ONE address (392/48 + 392/52 = 621-627 E. 9th St) and two further lots are typed nowhere. **COUNT CLASS, 11th member** (21,23,39,42,45,46,50,51x2,53,54) · **"A STRING ATTACHED TO PUBLIC HOUSING MONEY"** — Card #2-safe in FORM but the Lexicon holds NO regulatory-agreement entry, so recall used as a source: **LEXICON-RECALL 5th member** (37,41,43,51,54), and it supplied the financing story the event test had just refused CAPITAL for · CAPTURE GAP: package siblings (...062002 implies ...062001+) never raised, though every run since r46 banks the convention | fixes in the R54 entry · Lexicon: regulatory agreement + 4 more · **precheck's CARDINALS now prints each number WITH THE NOUN IT COUNTS** — validated against this run, where the two "six" claims now appear as separate lines |
 
+| 55 | BK_7140048401460 1971 | **C+ (CAPTURE)** (self, login-prompted) | **⚠ INTERLINEATION ON THE OPERATIVE SUM UNREAD** — p2's "$1,575,000.00" is written out in words that, AS TYPED, did not match the figures; "Thousand" is inserted above the line in a different face, uninitialed, and p3's two inline recitals are what resolve it. Found only by re-opening the pages at grading. ⚠ **NOT A NEW FEATURE TO THIS FILE: R47 CAUGHT INTERLINEATIONS AND RECORDED WHETHER THEY WERE INITIALED.** Right at 47, invisible at 55, because a correct read mints no artifact (**R55-4**) · **CLOSURE TEST NOT RUN, ONE RUN AFTER MINTING** (r54) — residual computed at grading (4.46 ft N-S, 41.32 ft E-W) and correctly explained by the curved course; delivery had it undetected. Third instance of a cure failing within one run (r21→r37, r45→r46, r54→r55) · **COUNT/ARITHMETIC CLASS, 12th member** (21,23,39,42,45,46,50,51x2,53,54,55) — "Three of the four originating sums carry odd cents": it is TWO. **CARDINALS printed that exact string and the operator licensed it without counting** — the r54 cure worked and was waved through · **RECALL-AS-SOURCE, 6th member** (37,41,43,51,54,55), NEW SHAPE: a RULE cited without reading the rule — `R11-1 CONFIRMED` written from the rule's TITLE, plus R21/R23/R39 from recall. ⚠ And a FABRICATED cite, `(R36, R11)` for a "debt-as-value trap measured at 4x", was written and killed only because DOWNWARD flagged it as a stray proper noun — **precheck's CORPUS CLAIMS check reported CLEAN, because it does not treat a rule number as a corpus claim** · **CHAIN-EXPECTATION NOT RAISED, 2nd member** (54, 55): the GROUND LEASE, in a document whose whole subject is a leasehold estate (verified on the pages: no lease is recited anywhere) · point estimate labelled "BOUNDED ESTIMATE" (G-016 wants a range) | **NO NEW CARD, NO NEW CHECK — deliberately.** R55-4 records why: twelve members in the count class and thirty-four runs of cures say the next check is not the fix. Fixes recorded in the R55 entry; the loop redesign is the fix and it starts next. |
+
+⚠ **COUNT/ARITHMETIC AT TWELVE** (21,23,39,42,45,46,50,51x2,53,54,55). Card
+#13 was minted at r21. The class has since had a dedicated mechanical check
+rewritten at r50, r51, r53 and r54. IT FIRED AGAIN AT 55, on a string the
+check PRINTED. This file's own standing rule — "3+ rows is a MISSING
+STRUCTURE" — has been true of this class for thirty-four runs.
+
+⚠ **THE GRADE IS FLAT.** Runs 35-55: B, B+, D, B+, B−, B+, B+, B, B−, C+, B,
+B+, B, C+, C+, C+, B, C+. Twenty runs, no trend. Recorded here because the
+ledger is where it should have been visible, and was not.
+
+⚠ **THE CURES OVERFIT.** Every mechanical check in precheck was validated
+against the run that produced it and passed. Three are recorded failing on
+the very next document (r21→r37, r45→r46, r54→r55). A check tested on a
+sample of one, one run later, on a randomly drawn document, is not tested.
+
+⚠ **THE MACHINERY READS THE DRAFT, NEVER THE DOCUMENT.** Fifteen precheck
+checks, all of them over the delivered text. FABRICATION and RENDER improved
+because they are text-visible. CAPTURE has no machinery at all, and CAPTURE
+is now what the grade is. All three of r55's misses were invisible to every
+check in the file.
+
 ⚠ THE CARDINALS HOLE, NAMED: the check listed bare TOKENS, so one licence
 covered two claims. "six described parcels" was counted and correct;
 "six apartment buildings" was neither, and rode in on the same word. **A

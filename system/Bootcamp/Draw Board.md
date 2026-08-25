@@ -175,6 +175,24 @@ loop's coverage claim becomes false without anything looking wrong.
 
 - [x] **r54** `2003031600062002` TERMINATION OF TRUST (actually a **TERMINATION AND RELEASE OF REGULATORY AGREEMENT**) · MANHATTAN blocks 392, 393, 395 · executed 2003-03-14, rec 2003-04-01 · rd pages 11 / pdf 11 — from the type tail, the largest of the shelf's 11 members. ⚠ **NO TRUST ANYWHERE — sixth true type-shelf mismatch** (r42, r48, r50, r51, r52, r54; grep-verified). NYC Housing Development Corporation releases a 1983 Regulatory Agreement (REEL 747 pp. 501-514) off SIX described parcels covering **EIGHT tax lots**, ≈30,582 SF DERIVED. ⚠ **THREE RECORD DEFECTS, ALL EARNED TWO WAYS**: two released lots (392/50, 392/51) never indexed · Parcel A3's courses run SOUTH TWICE and never north, so the description does not close · the register dropped "CITY" from the agency's name. ⚠ TWO LOT-LINEAGE STATEMENTS on the page ("Former Lot: 48"; "Lot: 59 (former Lots 59 and 60)") — no prior "former lot" wording in the file. **Chain expectations:** REEL 747 pp. 501-514 (what was actually released — absent here) and the package siblings `2003031600062001` and following.
 
+- [x] **r55** `BK_7140048401460` SUNDRY AGREEMENT (actually a **CONSOLIDATION, EXTENSION AND SPREADER AGREEMENT**) · QUEENS 2154/1 · executed 1971-06-03, rec 1971-06-15 · 7/7 pages · **THE ERA DEBT IS REPAID** — disk-store BK_ id, non-deed type, 1971, Queens; the first non-band draw in ten runs. JAMAICA SAVINGS BANK consolidates four mortgages (1950, 1950, 1964, 1971) into one $1,575,000 lien over a WHOLE CITY BLOCK and spreads every lien across BOTH the leasehold and the fee. ⚠ **Mortgage recording tax $0.00, earned from two register marks.** ⚠ **The catch-all shelf is a THIRD category, not a mismatch** (R55-1) and R36-1 rescued it from the remarks field. **Chain expectations: the simultaneous EXTENSION AGREEMENT · the affidavit stamped "AFFID. FILED" and absent · the GROUND LEASE that creates the leasehold, named nowhere · the deed out of Ruskin Gardens Inc.**
+
+### ⚠ THE ERA DEBT — REPAID AT R55
+
+Runs 46-54 were nine straight band draws against the r45 two-source ruling.
+**r55 repaid it**: BK_ disk-store id, SUNDRY AGREEMENT (non-deed), 1971,
+Queens. The alternation is current again as of r55.
+
+⚠ **THE DRAW RULE IS ITSELF UNDER REVIEW.** The board tracks debts — era,
+type, custodian — because draws are random and single. The r55 close records
+why that is now a problem: a rule minted from one document is tested on the
+next randomly drawn document, once, and only if that document happens to
+exercise it. **The proposed replacement is a CLASS BATCH** — five documents
+of one class drawn together, whose output is an extraction spec for the class
+rather than five prose verdicts. First batch proposed: **CEMA**, which already
+has three read members (r13 modern, r45 1988/89 Manhattan $173M, r55 1971
+Queens $1.575M) and needs two more draws to close.
+
 ### ⚠ THE ERA DEBT — NINE STRAIGHT BAND DRAWS, CARRIED DELIBERATELY
 
 The two-source ruling (r45) says band draws ALTERNATE with disk-store id
