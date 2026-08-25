@@ -141,6 +141,13 @@ ap.add_argument("--hot-recheck", type=float, default=1800,
 ap.add_argument("--absent-recheck", type=int, default=21600,
                 help="seconds before re-asking about a document whose"
                      " scan was not up yet (default 6h)")
+ap.add_argument("--lag-days", type=int, default=7,
+                help="THE SCAN-LAG WINDOW. login 2026-08-25: \"if no image"
+                     " comes back from the url then it is no pdf, but there is"
+                     " a 7 day lag period given for new filings.\" Inside the"
+                     " window an absent image is SCAN LAG - the row keeps"
+                     " pdf='' and stays in the queue. Outside it, absent is a"
+                     " FACT about the document and is recorded as a verdict.")
 ap.add_argument("--rd-days", type=int, default=30,
                 help="trailing window the rd heal opens (the grant rule: a"
                      " window's own pages unlock its ids' details)")
@@ -605,6 +612,37 @@ def land(ids):
     return n
 
 
+def _url_minted(con_, did):
+    """⚠ NEVER CALL A MISSING MINT A DEAD END. If pdf_url was never written,
+    the reason there is no image is OURS, and recording "no pdf" would hide a
+    minting defect as a fact about the document - permanently, since the row
+    would leave the todo set. No mint => no verdict; the row stays todo."""
+    try:
+        r = con_.execute("SELECT COALESCE(pdf_url,'') FROM navigation"
+                         " WHERE id=?", (did,)).fetchone()
+    except Exception:
+        return False
+    return bool(r and r[0])
+
+
+def _in_lag(recorded):
+    """Is this filing still inside the --lag-days scan window?
+
+    ⚠ UNPARSEABLE DATE => TREAT AS IN-LAG. An unreadable recorded date must
+    never license a permanent "no pdf": the failure mode of guessing wrong
+    here is a document silently marked as having no scan when it has one, and
+    nothing would ever look again. Staying in the queue costs one re-ask."""
+    m = re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", str(recorded or ""))
+    if not m:
+        return True
+    try:
+        t = time.mktime((int(m.group(3)), int(m.group(1)), int(m.group(2)),
+                         0, 0, 0, 0, 0, -1))
+    except (ValueError, OverflowError):
+        return True
+    return (time.time() - t) < a.lag_days * 86400
+
+
 def fresh(rows):
     """Which of these do we not hold? One PK lookup each - no scan."""
     con = sqlite3.connect("file:%s?mode=ro" % CP.NAV_DB, uri=True, timeout=600)
@@ -883,13 +921,54 @@ def rd_heal():
                 #
                 # Same family as acris writing a refusal down as a permanent
                 # "imageless": a freshness-dependent reading, frozen too
-                # early. ⚠ NOTHING HERE EVER WRITES A VERDICT INTO pdf. The
-                # only states are "has a pdf" and "does not yet".
+                # early.
+                #
+                # ⚠⚠ A VERDICT IS NOW WRITTEN, AND ONLY UNDER THESE GUARDS
+                # (login 2026-08-25: "any error that isnt from a deadend url
+                # should not msireport a missing url if the system is just
+                # failing the fetch"). "no pdf" must be a fact about the
+                # DOCUMENT, never a symptom of our own transport:
+                #
+                #   1 THE SOURCE MUST HAVE SAID SO. st_now is parsed from a
+                #     detail page we just fetched SUCCESSFULLY. Every failure
+                #     path above does `failed += 1; continue` and never
+                #     reaches here, so a timeout, reset, 5xx or refusal
+                #     cannot produce a verdict - it produces a retry.
+                #   2 THE LAG WINDOW MUST HAVE EXPIRED (--lag-days).
+                #   3 THE URL MUST HAVE BEEN MINTED. An un-minted row is OUR
+                #     gap, not a dead end at the source, and calling it "no
+                #     pdf" would bury a minting bug as a document fact.
+                #   4 IT ONLY EVER FILLS AN EMPTY COLUMN (pdf='' in the
+                #     UPDATE), so it can never overwrite a real path.
                 st_now = str(rec.get("image_state", "")).lower()
                 if st_now == "present":
                     if a.hot_pdf:
                         hot_ids.put("RC_" + iid)  # only with --hot-pdf
                     _absent_at.pop(iid, None)     # resolved - stop tracking
+                elif (st_now == "absent"
+                      and not _in_lag(rec.get("recorded"))
+                      and _url_minted(wcon, "RC_" + iid)):
+                    # ⚠⚠ THIS IS THE ONLY PLACE A "NO PDF" FACT IS RECORDED,
+                    # and without it 100% IS UNREACHABLE (login 2026-08-25:
+                    # "If you arent counting no pdf determiniation into the
+                    # count thats a huge failure that would never result in
+                    # 100% compeltion"). The old rule refused to write ANY
+                    # verdict, so a document that genuinely has no scan sat at
+                    # pdf='' for ever and the board counted it as outstanding
+                    # work nobody could ever do.
+                    #
+                    # The lag window is what makes the verdict safe: inside
+                    # --lag-days an absent image means the scan is not up yet
+                    # and the row stays in the queue; outside it, the source
+                    # has had its 7 days and "no image" is a fact about the
+                    # DOCUMENT, not about our timing.
+                    if wcon is not None:
+                        wcon.execute("UPDATE navigation SET pdf='no pdf'"
+                                     " WHERE id=? AND pdf=''", ("RC_" + iid,))
+                        wcon.commit()
+                    _absent_at.pop(iid, None)
+                    with lock:
+                        stat["nopdf"] = stat.get("nopdf", 0) + 1
                 else:
                     # pending OR absent-but-recent: both mean ASK AGAIN LATER,
                     # and neither is recorded as a conclusion anywhere.
