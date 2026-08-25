@@ -196,7 +196,7 @@ LANES = {
         # So: back to the leanest width that reaches the cap. Extra sockets
         # at a full pipe add contention and steal from acris for nothing.
         ("rc_lane", "rc_lane.py",
-         ["--apply", "--miners", "32", "--workers", "64"],
+         ["--apply", "--miners", "24", "--workers", "16"],
          HERE, HERE / "rc_lane.log"),
     ],
     "board": [
