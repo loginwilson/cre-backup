@@ -1,6 +1,7 @@
 # CLASS SPEC — CEMA (Consolidation, Extension and Modification Agreement)
 
-Built from three banked members, no new reading. Governed by LOOP.md.
+Built from three banked members, then tested against two drawn for the
+purpose. Governed by LOOP.md.
 
 | run | doc | era | custodian | size | consolidated sum |
 |---|---|---|---|---|---|
@@ -19,14 +20,16 @@ consecutive members add nothing new.
 
 ## 1 · IDENTITY — how to recognise it
 
-**The shelf lies, and it lies differently each time.** Three members, three
-different type situations:
+**The shelf is usually right, and when it is wrong it is wrong differently
+each time.** Five members, five type situations:
 
 | run | register type | true caption |
 |---|---|---|
 | 13 | CONSOLIDATION | accurate |
 | 45 | BUILDING LOAN MORTGAGE | a STACKED caption — consolidation is one clause of six |
 | 55 | SUNDRY AGREEMENT | catch-all; backer reads CONSOLIDATION AND EXTENSION AGREEMENT, "Spread" added by hand |
+| b1-4 | MORTGAGE AND CONSOLIDATION | accurate — the instrument is captioned CONSOLIDATION, EXTENSION AND MODIFICATION AGREEMENT |
+| b1-5 | SUNDRY AGREEMENT | catch-all; backer reads CONSOLIDATION AND EXTENSION AGREEMENT, and the remarks name it |
 
 ⚠ **Do not expect the type to name the class — but do not assume it lies
 either.** A 1%-sample measurement (240,000 rows) found 672 of 736 gated
@@ -44,33 +47,44 @@ members are exactly the ones under-counted.
 1. **rd remarks.** r55's read `CONS & EXT L 6203 MP 81 ETAL` and named the
    class before a page was rendered (R36-1, confirmed in the field).
 2. **The operative sentence.** Some form of *"shall hereafter constitute in
-   law but one mortgage, a single lien"* — present in all three.
+   law but one mortgage, a single lien"* — **present in all five, across
+   1970 to 2009**. The most reliable in-document identifier there is.
 3. **A constituent list** — mortgages recited with liber/reel citations,
-   either in the body (r55, four of them) or as an exhibit (r13 Exhibit A,
-   r45 Exhibit B).
-4. **`amount $0.00` in rd against a real consolidated sum.** True on r13 and
-   r55. **The index is amount-blind exactly where the money is** (R13-4).
+   either in the body (r55 four of them, b1-5 three, b1-4 two) or as an
+   exhibit (r13 Exhibit A, r45 Exhibit B). Body for small, exhibit for
+   large.
+4. ⚠ **`amount $0.00` in rd — TRUE ON THREE OF FIVE, NOT A RULE.** r13, r55
+   and b1-5 read $0.00; **b1-4 reads the full $243,600.00.** R13-4's
+   "the index is amount-blind exactly where the money is" is a TENDENCY,
+   not a property. Never infer the class from a zero, and never infer a
+   zero from the class.
 
-**Form numbers** (modern only): Fannie/Freddie **3172** is the NY CEMA form;
-**3033** is the consolidated mortgage exhibit that rides with it (r13).
+**Form families** — at least three, and the form tells you where to look:
+- **Fannie/Freddie** 3172 (NY CEMA) + 3033 (consolidated mortgage) — r13
+- **FHA** "NY FHA Consolidation Extension and Modification Agreement 1/96"
+  + "FHA Multistate Fixed Rate Note 10/95", carrying an FHA Case No. — b1-4
+- **NYBTU** printed forms, e.g. Form 8026 (9-63), pre-ACRIS, ⚠ with
+  **struck-through printed text that is part of the instrument** — b1-5
 
 ---
 
 ## 2 · THE EVENT — the signature
 
-**CAPITAL·modifies, `transacts`.** All three. This is the class's signature
-and a deviation from it is a finding.
+**CAPITAL·modifies, `transacts`.** **All five, 1970 through 2009.** This is
+the class's signature and a deviation from it is a finding.
 
 Additional functions fire with SIZE, not with the class:
 
-- r13 (residential): CAPITAL·modifies alone.
+- r13 and b1-4 (residential): CAPITAL·modifies alone.
+- b1-5 (1970 commercial, 8pp): + IDENTITY `observes` (three parcels).
 - r55 (commercial, 7pp): + TITLE `observes`, IDENTITY `observes`, COST.
 - r45 (commercial, 65pp): + CAPITAL·**creates** (the new advance as its own
   row), ENCUMBRANCE·creates, COLLATERAL·creates ×2 (assignment of leases and
   rents; UCC fixture filing).
 
-⚠ **VALUE never fires.** The consolidated sum is what is OWED. All three
-members carry a large number that is not a price and not an assessment.
+⚠ **VALUE never fires. Five for five.** The consolidated sum is what is
+OWED. Every member carries a large number that is not a price and not an
+assessment.
 
 ---
 
