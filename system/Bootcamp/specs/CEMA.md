@@ -7,9 +7,13 @@ Built from three banked members, no new reading. Governed by LOOP.md.
 | 13 | RC_1043006 | 2009 | Richmond | 27pp | $408,600.00 |
 | 45 | FT_1000000284200 | 1988/89 | Manhattan film | 65pp | $173,000,000 |
 | 55 | BK_7140048401460 | 1971 | Queens film | 7pp | $1,575,000.00 |
+| b1-4 | 2003011000989002 | 2002/03 | Bronx ACRIS | 20pp | $243,600.00 |
+| b1-5 | BK_7030040000013 | 1970 | Brooklyn film | 8pp | $20,000.00 |
 
-Three members, four decades, three custodians, residential through
-mega-commercial. **Status: OPEN.** Two more draws to close.
+**FIVE members**, five decades, five custodians, residential through
+mega-commercial. **Status: OPEN — surprise is still high (9 and 7 on the
+batch-1 members).** See CEMA-batch-1-results.md. The class closes when two
+consecutive members add nothing new.
 
 ---
 
@@ -24,7 +28,16 @@ different type situations:
 | 45 | BUILDING LOAN MORTGAGE | a STACKED caption — consolidation is one clause of six |
 | 55 | SUNDRY AGREEMENT | catch-all; backer reads CONSOLIDATION AND EXTENSION AGREEMENT, "Spread" added by hand |
 
-⚠ **Do not expect the type to name the class.** One of three did.
+⚠ **Do not expect the type to name the class — but do not assume it lies
+either.** A 1%-sample measurement (240,000 rows) found 672 of 736 gated
+records carrying `CONSOLIDAT` sitting on an accurate CONSOLIDATION shelf —
+**91.3%**. The founding three were an unrepresentative sample.
+
+⚠ **AND THE MEASUREMENT IS BIASED IN A KNOWN DIRECTION.** The search key
+was the string `CONSOLIDAT`, so a CEMA is found only if its type or remarks
+contain it. r55's remarks read `CONS & EXT` — **this search would have
+missed it.** 91.3% is an UPPER bound on shelf accuracy; the mislabelled
+members are exactly the ones under-counted.
 
 **What actually identifies it, in order of reliability:**
 
@@ -69,16 +82,24 @@ members carry a large number that is not a price and not an assessment.
 | **constituent debts** (date · mortgagor · holder · sum · liber/reel cite) | ALWAYS | body list (r55) or exhibit (r13 A, r45 B) | each cite is a chain expectation; count them | never absent |
 | **the arithmetic** | ALWAYS present, **NOT always closing** | derived | sum constituents, compare to consolidated | see §4 |
 | **new money** | USUALLY | named as a gap mortgage (r13 $17,635.95) or a fresh advance (r45 $10,000,000) | tax is charged on THIS, not on face | r55: none identifiable; the 4th mortgage recorded simultaneously is the candidate |
-| **restated terms** (rate · payment · maturity) | **LOCATION VARIES — ALL THREE MEMBERS DIFFER** | r13 IN the document · r45 in an unrecorded Note/Loan Agreement · r55 in a separate simultaneous Extension Agreement | determine WHICH of the three before writing "not stated" | see the ⚠ below |
+| **restated terms** (rate · payment · maturity) | **ALWAYS EXIST. LOCATION VARIES — FIVE MEMBERS, FOUR LOCATIONS** | b1-5 on the face of the agreement · r13 in the agreement · **b1-4 in a Consolidated Note appended under the same document_id** · r45 in an unrecorded note · r55 in a separate simultaneous agreement | **the question is WHICH SERIES holds them, not whether they are stated**; read every page under the document_id (L-9) before writing "not stated" | see the ⚠ below |
 | **mortgage recording tax** | ALWAYS at issue | cover (modern) or backer stamps (film) | must be EARNED — r55 had a typed audit line AND a "NO MTGS. TAX PAID" stamp | never absent; a $0.00 is a finding, not a blank |
 | **§255 affidavit** | ALWAYS RELEVANT, not always present | appended (r13) or stamped-and-absent (r55, "AFFID. FILED") | L-8 both ways | see §4 |
 | **estates encumbered** | ALWAYS | operative/granting clause | fee · leasehold · air rights · combinations | never absent |
 | **consideration** | USUALLY | recital | nominal ($1.00 r55) — R40-2, not a price | — |
 | **parties** | ALWAYS | opening + acknowledgments | read from acknowledgments, not signatures | — |
+| **the holder chain** | ALWAYS RELEVANT | recitals, or absent | ⚠ **THREE MECHANISMS, ALL SEEN**: recorded assignment (b1-4, Reel 1868 p.1099) · corporate succession with no assignment (r13, "N/K/A" + MERS) · **probate** (b1-5, an executor of an estate) | assume none of the three; determine which |
 
-⚠ **THE RESTATED-TERMS FIELD IS THE CLASS'S SHARPEST TRAP.** Three members,
-three different locations, and only one had them on the page. "Maturity not
-stated" is almost always wrong — the correct answer names where the terms live.
+⚠ **THE RESTATED-TERMS FIELD IS THE CLASS'S SHARPEST TRAP, AND THE SPEC GOT
+IT WRONG.** Built on three members, it predicted the terms would be
+ELSEWHERE. **Both batch-1 members put them closer to hand than predicted**,
+in two different places (4.5 partial fail, 5.3 outright fail).
+
+b1-4 is the instructive one: its agreement says only "the terms and
+conditions set forth in the Appendix", and the full schedule — 6.250%,
+$1,499.89/mo, maturity 2033-01-01 — sits eight pages later in the appended
+Consolidated Note. **A reader who stopped at the agreement would have
+written "not stated" with the answer in the same PDF.**
 
 ---
 
@@ -87,7 +108,20 @@ stated" is almost always wrong — the correct answer names where the terms live
 Run every one of these before composing. Derived from the class, not invented
 per document.
 
-1. **SUM THE CONSTITUENTS AND COMPARE.** ⚠ It does not always close.
+1. **SUM THE CONSTITUENTS AND COMPARE — BUT READ WHICH FIGURE IS RECITED
+   FIRST.** ⚠ **THREE SHAPES, and the shape is readable before any
+   subtraction:**
+   - **A — unpaid balance + new money = consolidated. CLOSES to the penny.**
+     (r13; b1-4: $146,943.66 + $96,656.34 = $243,600.00)
+   - **B — original principals, no new money = consolidated. CLOSES
+     exactly.** (b1-5: $2,000 + $9,000 + $9,000 = $20,000)
+   - **C — original principals, balance stated separately. DOES NOT CLOSE,
+     AND SHOULD NOT.** (r55: $2,367,261.60 originated vs $1,575,000 owing)
+
+   **A gap under shape C is not a discrepancy. A gap under A or B is.**
+   r55 delivered its gap as an open question; the shape answers it.
+
+   Historic detail:
    - r13: $390,964.05 unpaid + $17,635.95 new = $408,600.00 — **to the penny**
    - r45: $163,000,000 + $10,000,000 = $173,000,000 — **exact**
    - r55: $2,367,261.60 originated vs $1,575,000.00 owing — **$792,261.60
@@ -151,8 +185,17 @@ consecutive members add nothing.
 |---|---|
 | 13 | the §255 affidavit rides IN the package · examiner marginalia carries tax facts · five document numbers on one instrument · holder chain by corporate succession, no assignment |
 | 45 | "consolidation" can be one clause of a six-part stacked caption · the constituent schedule can be a 69-year genealogy · anti-merger covenant, contractually forbidding what r43 treated as doctrine · a DECONSOLIDATION in the chain |
+| **b1-4** | an **FHA** form family, not just Fannie/Freddie · the holder chain can ride a **recorded assignment** · **the register indexes the ORIGINATOR, not the assignee** — a search on the real holder misses the document · the package sibling is named on the cover · tax $0.00 against a stated taxable amount, because the tax was collected on the sibling · a ZIP discrepancy inside one filing · the affidavit misnames the recording office · three page-count namespaces all differing (15/17/20) |
+| **b1-5** | **the holder is a dead man's estate** and the chain resolves by PROBATE · a printed NYBTU form with **struck-through text** (R34-3's deletion layer, on a CEMA) · **no new money at all** · the arithmetic closes on ORIGINAL principals · **the spread is PARCEL-to-PARCEL**, a third meaning of "spread" alongside r55's estate-to-estate and r45's anti-merger · a 2% prepayment premium · a 24-year-old constituent still live |
 | 55 | the shelf can be a pure catch-all and rd remarks carry the true class · the arithmetic does not close when only original principals are recited · liens can be cross-spread across leasehold and fee instead of anti-merged · tax zero provable from register marks alone · the extension terms can live in a simultaneous separate instrument |
 
-**Predicted for the next two draws** (recorded before drawing, so the spec can
-be scored): a member whose restated terms are on the page; a member with an
-appended §255 affidavit; a residential member indexed under an accurate type.
+**Batch 1 scored: 16 of 20 predictions held, coverage 100% on both, surprise
+9 and 7.** All three pre-draw predictions came true (terms on the page —
+b1-5; appended §255 affidavit — b1-4; residential under an accurate type —
+b1-4). The value was in the four that failed, three of which landed on the
+restated-terms field.
+
+**PREDICTED FOR MEMBERS 6 AND 7, recorded now:** surprise falls below 5 on
+each; the arithmetic fits shape A, B or C without a fourth being needed; the
+holder chain resolves by one of the three known mechanisms. **If surprise
+does not fall, the class is not converging and the method is not working.**
