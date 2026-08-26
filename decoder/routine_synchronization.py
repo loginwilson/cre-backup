@@ -233,8 +233,20 @@ def land(rows, quiet=False):
                 + [i for i in ids.split(";") if i]))
             ids = ";".join(merged)
             so = st + d
-        con.execute("INSERT OR REPLACE INTO synchronization VALUES"
-                    " (?,?,?,?,?,?)", (run_at, src, st, so, d, ids))
+        # ⚠ NAME THE COLUMNS. This was a positional 6-value INSERT against
+        # an 8-column table and it had been killing the whole nightly run
+        # since at least 2026-08-24: "table synchronization has 8 columns
+        # but 6 values were supplied". `system_edge` and `source_edge` were
+        # appended to the schema later and nothing has ever written them -
+        # but a positional VALUES cannot know that, so the ledger simply
+        # stopped updating and every board denominator quietly froze at the
+        # 2026-08-24 15:01 run while the corpus kept growing.
+        # An explicit column list cannot break the same way when a ninth
+        # column is added.
+        con.execute("INSERT OR REPLACE INTO synchronization"
+                    " (run_at, source, system_total, source_total, delta,"
+                    "  doc_ids) VALUES (?,?,?,?,?,?)",
+                    (run_at, src, st, so, d, ids))
     # ⚠ TOTAL SUMS EVERY SOURCE'S LATEST ROW, not just the sources THIS run
     # refreshed. A --source richmond run once wrote TOTAL = richmond alone
     # (2,426,588), erasing acris from the system-wide picture. The table is
@@ -255,8 +267,9 @@ def land(rows, quiet=False):
     # rowid in the table.
     con.execute("DELETE FROM synchronization WHERE source='TOTAL'"
                 " AND run_at=?", (run_at,))
-    con.execute("INSERT INTO synchronization VALUES (?,?,?,?,?,?)",
-                (run_at, *tot))
+    con.execute("INSERT INTO synchronization"
+                " (run_at, source, system_total, source_total, delta, doc_ids)"
+                " VALUES (?,?,?,?,?,?)", (run_at, *tot))
     con.commit()
     if quiet:
         con.close()

@@ -267,14 +267,32 @@ def eta_of(landed, needed, rate):
     if not rate or rate <= 0:
         return "-"
     s = left / rate
-    # ONE UNIT, ALWAYS (login 2026-08-22: "measure in days not hours.
-    # consistency is important" - overriding the hour-tier tried minutes
-    # earlier). DAYS everywhere, two decimals: comparability across rows
-    # beats per-row cleverness, the same lesson as doc/s being the one
-    # rate unit. The frozen-looking ETA is solved by PRECISION, not by
-    # switching units: 0.01 day = ~14 min, so "1.90 days" ticks all
-    # afternoon while staying the same unit as "37.40 days".
-    return f"{s/86400:.2f} days"
+    # >> COUNTDOWN, NOT ONE UNIT (login 2026-08-26, reversing his own
+    # 2026-08-22 call of "measure in days not hours. consistency is
+    # important"). That rule was right while every row was days away from
+    # done and comparability across rows was the only thing the column was
+    # for. It reads badly at the finish line: richmond closing in 100
+    # minutes printed "0.07 days", a number that is correct, stable, and
+    # tells an operator nothing.
+    #
+    # So the unit now descends as the finish approaches - days, hours,
+    # minutes, seconds - the way a countdown does. The trade is real and
+    # accepted: two rows in different units are no longer directly
+    # comparable at a glance. That cost is paid only near zero, which is
+    # exactly where the precise remaining time matters more than the
+    # cross-row comparison.
+    #
+    # ⚠ Thresholds step at the unit boundary, so a row reads "1.0 hours"
+    # rather than "0.04 days" and never both. Keep the tiers ordered
+    # largest-first; an out-of-order test silently reports seconds for a
+    # month-long ETA.
+    if s >= 86400:
+        return f"{s/86400:.2f} days"
+    if s >= 3600:
+        return f"{s/3600:.1f} hours"
+    if s >= 60:
+        return f"{s/60:.0f} min"
+    return f"{s:.0f} sec"
 
 # which running process proves a row is being WORKED (status PENDING vs
 # STALLED); matched against the live python command lines
