@@ -77,3 +77,4 @@
 - [THE UPDATES BOARD](project_decoder_updates_board.md) — 9 rows, NOW+5m kits, 4 computed statuses; rate+increase from the SAME subtraction; landed exact via todo indexes; sync ledger has two look-alike row kinds (filter system_total>0)
 - [Phase assertions + gates](project_decoder_phase_assertions.md) — each phase makes ONE claim; the ACQ gate does NOT exist yet; nav's pdf column is a computed path, not evidence
 - [⚠ INDEX vs PREDICATE DRIFT — rc_lane](project_rc_lane_cold_start.md) — ix_nav_pdf_todo was `pdf=''` while code queried `pdf IN ('','pending')`; fixing it: cold start 12min->0, 6.03->13.75 docs/s, board count 8-22s->0.01s; `ready 0` is the tell; SQLite won't prove `=''` implies the IN
+- [RICHMOND 100% + pdf state machine](project_rc_pdf_state_machine.md) — 100% = ASSIGNED not fetched; ''/pending/absent/path, NEVER null (it inflates landed); trigger assigns at rd-landing + nightly matures past lag; query the INDEXED predicate and split in python

@@ -210,9 +210,33 @@ def counts(con):
     # exactly the number of documents that are NOT done.
     # ⚠ ix_nav_pdf_todo is rebuilt on the SAME predicate; if these two ever
     # disagree the count silently uses the wrong set.
-    rc_todo, t4 = one("rc_todo", "SELECT count(*) FROM navigation "
-                      "WHERE pdf IN ('','pending') AND id>=? AND id<?",
-                      RC_LO, RC_HI)
+    # >> TODO IS NOW *UNASSIGNED*, NOT *UNFETCHED* (login 2026-08-26: "100%
+    # to me means that 100% assigned so pending and absent count"). The pdf
+    # cell answers a different question than it used to:
+    #
+    #     <path>      fetched                     ASSIGNED · done
+    #     'absent'    determined, no image        ASSIGNED · done
+    #     'pending'   no image yet, still in lag  ASSIGNED · still queued
+    #     ''          never checked               NOT ASSIGNED  <- the todo
+    #
+    # 'pending' is a real determination about a document, so it counts toward
+    # completion; it just also stays in rc_lane's worklist (the miner selects
+    # pdf IN ('','pending')) so the image is collected the moment it attaches.
+    #
+    # ⚠ STILL INDEX-ONLY. A bare `pdf=''` CANNOT use ix_nav_pdf_todo - SQLite
+    # will not prove `=''` implies the IN list, so it degrades to a 2.5M-row
+    # PK scan (measured 69 s). Instead read the INDEXED todo set - a few
+    # hundred rows - and split it in python. Cost is O(queued), not O(table).
+    t0 = time.time()
+    rc_rows = q("SELECT pdf FROM navigation WHERE pdf IN ('','pending')"
+                " AND id>=? AND id<?", (RC_LO, RC_HI)).fetchall()
+    rc_queued = len(rc_rows)
+    rc_todo = sum(1 for (p,) in rc_rows if p == "")
+    rc_pending = rc_queued - rc_todo
+    t4 = time.time() - t0
+    say("    rc_todo    %13s  %.0fs   (unassigned; %s pending awaiting an"
+        " image, counted ASSIGNED)"
+        % (f"{rc_todo:,}", t4, f"{rc_pending:,}"))
     # ⚠ SKIP THE PAUSED SOURCE - see _acris_live(). The cached value is
     # LABELLED in the output; a stale count published as fresh is worse than
     # no count at all.
@@ -273,6 +297,7 @@ def counts(con):
     return {
         "acris": (a_total, a_todo),
         "richmond": (rc_total, rc_todo),
+        "richmond_pending": rc_pending,
         "null_probe": nulls,
         "acris_cached": a_cached,
         "ledger_run": when,
