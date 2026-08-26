@@ -58,6 +58,11 @@ import time
 PY = sys.executable
 
 # scripts that may only ever have ONE instance, whatever their args
+# ⚠ THE COMMENT AT acris_lane CLAIMED "PAUSED lanes are skipped by
+# `start`" AND NO SUCH SKIP EXISTED - `fleet.py start sync` would have
+# restarted acris right after its Bandwidth Notice. A comment is not
+# enforcement. Found 2026-08-25 while restarting richmond after a crash.
+PAUSED = {"acris_lane"}          # login paused it; --force overrides
 SINGLETON = {"acris_lane.py", "rc_lane.py", "routine_update.py",
              "board_truth.py"}
 HERE = pathlib.Path(__file__).parent
@@ -195,8 +200,15 @@ LANES = {
         #
         # So: back to the leanest width that reaches the cap. Extra sockets
         # at a full pipe add contention and steal from acris for nothing.
+        # ⚠ WIDTH 8, NOT 16 - MEASURED 2026-08-25 by rc_bench.py in its own
+        # process, nothing else running, same 60 tokens at both levels:
+        #     8 pullers  -> 28.23 docs/s  84 Mb/s  0 errors
+        #    16 pullers  -> 18.76 docs/s  56 Mb/s  0 errors
+        # 16 is PAST the cap and self-contends; per-connection throughput
+        # collapses 10.54 -> 3.50 Mb/s. richmond averages ~5 MB/doc, so the
+        # pipe fills at 8 and extra sockets only steal from each other.
         ("rc_lane", "rc_lane.py",
-         ["--apply", "--miners", "24", "--workers", "16"],
+         ["--apply", "--miners", "24", "--workers", "8"],
          HERE, HERE / "rc_lane.log"),
     ],
     "board": [
@@ -211,8 +223,13 @@ LANES = {
         # ⚠ board_truth.py lives in Updates\, NOT the decoder dir - a launch
         # with the wrong cwd dies instantly with "can't open file" and a PID
         # that looked healthy (caught by fleet.py status, 2026-08-24)
+        # >> 60s, NOT 600 (login 2026-08-26: "the board should be constantly
+        # counting. theres a 60 second and 5 minute rate"). Affordable only
+        # because board_truth now counts the todo set through
+        # ix_nav_pdf_todo (0.2 s) instead of the unindexed IN form (8-22 s);
+        # the exact pending pass still runs on its own 600 s cadence inside.
         ("board_truth", str(UPD / "board_truth.py"),
-         ["--loop", "--every", "600"], UPD, UPD / "board_truth.log"),
+         ["--loop", "--every", "60"], UPD, UPD / "board_truth.log"),
     ],
 }
 
@@ -271,6 +288,9 @@ def status():
 def start(lane):
     procs = _running()
     for name, script, args, cwd, log in LANES[lane]:
+        if name in PAUSED and "--force" not in sys.argv:
+            print("  %-14s PAUSED - skipped (--force to override)" % name)
+            continue
         if any(_match(c, script, args) for c in procs.values()):
             print("  %-14s already running" % name)
             continue

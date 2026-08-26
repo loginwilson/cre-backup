@@ -1,8 +1,10 @@
-# CRE backup refresh - banks the brain: py/md/json from both roots + the db
+# CRE backup refresh - banks the brain: py/md/json/cmd from both roots + the db
+# (*.cmd added 2026-08-26: fleet_guard.cmd and run_update.cmd ARE process - a
+#  launcher that is not banked is a lane nobody can restart after a rebuild.)
 # schema/triggers, commits, pushes. Called nightly by routine_synchronization
 # (guarded there); safe to run by hand any time. Never touches stores/lanes.
-robocopy "C:\Users\smile\Downloads\Source Folder (Real Estate Data)\Decoder Prompt\decoder" "C:\dev\cre-backup\decoder" *.py *.md *.json /S /XD __pycache__ keycache .git /NFL /NDL /NJH /NP | Out-Null
-robocopy "D:\CRE Decoding System" "C:\dev\cre-backup\system" *.py *.md *.json /S /XD "By Document" "By Parcel" "By Party" "_incoming" "_archive" ".git" /NFL /NDL /NJH /NP | Out-Null
+robocopy "C:\Users\smile\Downloads\Source Folder (Real Estate Data)\Decoder Prompt\decoder" "C:\dev\cre-backup\decoder" *.py *.md *.json *.cmd /S /XD __pycache__ keycache .git /NFL /NDL /NJH /NP | Out-Null
+robocopy "D:\CRE Decoding System" "C:\dev\cre-backup\system" *.py *.md *.json *.cmd /S /XD "By Document" "By Parcel" "By Party" "_incoming" "_archive" ".git" /NFL /NDL /NJH /NP | Out-Null
 robocopy "C:\Users\smile\.claude\skills" "C:\dev\cre-backup\skills" *.md /S /NFL /NDL /NJH /NP | Out-Null
 # assistant memory: pointers + working preferences. NOT the system record
 # (that is D:\...\Bootcamp\*.md) but cheap to bank and it sits on the same

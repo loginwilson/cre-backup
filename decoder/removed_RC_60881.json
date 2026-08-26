@@ -1,0 +1,13 @@
+{
+  "removed_at": "2026-08-25T10:11:18",
+  "reason": "login 2026-08-25: no image, no real info; recorded year 1399 is corrupt so no census window can ever list it",
+  "row": {
+    "id": "RC_60881",
+    "rd_url": "https://www.richmondcountyclerk.com/search/ShowResultsDocumentNumberSearch/0?DocumentNumber=7657&SelectedDocumentIdentifier=0",
+    "pdf_url": "https://www.richmondcountyclerk.com/ViewVscmsDocument/ViewContent?p_endorsementId=60881",
+    "recorded_details": "{\"instrument\":\"7657\",\"book\":\"813\",\"page\":\"346\",\"doc_type\":\"DEED\",\"recorded\":\"4/28/1399\",\"amount\":\"$0.00\",\"status\":\"Recorded\",\"parties\":[],\"image_state\":\"pending\",\"parcels\":[{\"bbl\":\"5054410000\"}]}",
+    "pdf": "",
+    "keyed_by": "parcel",
+    "key": "5054410000"
+  }
+}

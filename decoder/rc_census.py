@@ -98,6 +98,27 @@ def run():
     from concurrent.futures import ThreadPoolExecutor
     RW.control()
     print(f"control OK - census running ({WORKERS} workers)")
+    # ⚠⚠ THE TRAILING WINDOW MUST ALWAYS BE RE-SWEPT (fixed 2026-08-25).
+    # `window` is keyed on START, and windows() clamps the last window's END
+    # to today - so the partial window covering NOW gets marked swept once
+    # and is skipped for ever after. MEASURED: the census sat at
+    # "1850-01-01 .. 2026-08-21" while returning "CENSUS SWEEP COMPLETE" on
+    # 2026-08-25, silently omitting FOUR DAYS. Re-opening it recovered 1,533
+    # documents the county had listed and the census had never seen.
+    #
+    # ⚠ This is the failure shape this file already warns about in its own
+    # header - "a parser that can only return nothing cannot tell you it is
+    # broken". A census that reports COMPLETE while frozen is the same
+    # disease: the number that proves coverage was itself stale, so it
+    # certified a corpus it had not looked at.
+    _today = dt.date.today()
+    for _s, _e in windows():
+        if _s <= _today <= _e:
+            con.execute("DELETE FROM window WHERE start=?", (_s.isoformat(),))
+            con.commit()
+            print(f"re-opening the trailing window {_s} .. {_e}"
+                  f" (it always covers NOW, so it is never 'done')")
+            break
     done = {r[0] for r in con.execute("SELECT start FROM window")}
     todo = [(s, e) for s, e in windows() if s.isoformat() not in done]
     total = len(done) + len(todo)

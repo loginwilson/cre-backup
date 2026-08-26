@@ -47,7 +47,16 @@ HERE = pathlib.Path(__file__).parent
 sys.path.insert(0, str(HERE))
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 import corpus_paths as CP
-import rc_source as RC                         # noqa: E402
+# ⚠⚠ NO ALIAS. `import rc_source as RC` sat THREE LINES above
+# `RC = "https://www.richmondcountyclerk.com"` and was silently
+# clobbered by it, so every parse_detail() raised
+# AttributeError: 'str' object has no attribute 'image_state'.
+# rd_heal swallows that as `failed += 1` with no message, so the
+# lane reported "landed 0 - failed 157" twice with no clue why.
+# Introduced 2026-08-25 by the image_state consolidation itself.
+# The module is referenced by its full name now; a collision needs
+# someone to write `rc_source = ...`, which nobody does by accident.
+import rc_source                               # noqa: E402
 import fetch_pages
 
 RC = "https://www.richmondcountyclerk.com"
@@ -107,7 +116,7 @@ def parse_detail(html, iid):
         # while its page plainly says "No Image Available At This Time".
         # 'absent' feeds a PERMANENT verdict, so the ambiguity was one
         # restart away from marking scanned documents as unscanned for ever.
-        "image_state": RC.image_state(flat, fld("Date Recorded")),
+        "image_state": rc_source.image_state(flat, fld("Date Recorded")),
         "parcels": [{"bbl": f"5{b.zfill(5)}{l.zfill(4)}"} for b, l in
                     re.findall(r"Block (\d+), Lot (\d+)", flat)],
         "parties": [],

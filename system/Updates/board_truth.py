@@ -13,7 +13,10 @@ is *">100% board = counter arithmetic, re-baseline from true count."*
 **This file IS that true count.** `pdf` is the evidence column - a row is landed
 because there is a path in it, not because a log line said so.
 
-    pdf = ''            unlanded            (todo)
+    pdf = ''            undecided           (todo)
+    pdf = 'pending'     no image yet, in lag (todo - stays in the queue)
+    pdf = 'absent'      no image, lag expired (DONE - a determination)
+    pdf = <a path>      fetched              (done)
     pdf = 'imageless'   resolved, no image  (COUNTS AS DONE - nothing to fetch)
     pdf = '<path>'      landed
     pdf IS NULL         never minted        (should be 0; reported if not)
@@ -27,7 +30,8 @@ the authority and become what they actually are: a short-term estimate.
 64.8 s per 200,000 rows under lane load, ~2.2 HOURS a pass, all of it competing
 with the walkers for the same disk. Every count here is INDEX-ONLY:
 
-    ix_nav_pdf_todo  ON navigation(id) WHERE pdf = ''   partial - the todo set
+    ix_nav_pdf_todo  ON navigation(id) WHERE pdf IN ('','pending')
+                                                   partial - the todo set
     PK autoindex     ON navigation(id)                  totals
 
 and the source split is a PREFIX (`RC_2113781` vs `2026081700306001`), so both
@@ -49,6 +53,7 @@ import argparse
 import json
 import pathlib
 import sqlite3
+import subprocess
 import sys
 import time
 
@@ -69,6 +74,32 @@ LOG = HERE / "board_truth.log"
 # is exactly why these counts are cheap. 'RC`' is the next string after 'RC_'
 # ('`' = 0x60 follows '_' = 0x5F), giving a half-open range with no LIKE.
 RC_LO, RC_HI = "RC_", "RC`"
+
+
+def _acris_live():
+    """⚠ IS ACRIS ACTUALLY PRODUCING? If it is not, its todo CANNOT have moved,
+    and rescanning 21,617,307 index entries is pure waste - waste that BLOCKS
+    THE WRITE FOR THE SOURCE THAT IS MOVING.
+
+    Measured 2026-08-25 20:42-20:52: this pass counted rc_todo in 22 s, then
+    sat on acris_todo for 10+ minutes at 0.34 s CPU per 10 s - BLOCKED, not
+    scanning, because rc_lane was writing ~33 MB/s of pdfs to the same USB
+    drive. The whole json write is gated behind that count (one write at the
+    end of measure()), so richmond's live number could never reach the board
+    while richmond was busy earning it.
+
+    ⚠ ON DOUBT, COUNT. Any failure here returns True and the real scan runs.
+    A skipped count must never be the DEFAULT - only a deliberate, observed one.
+    """
+    try:
+        txt = subprocess.run(
+            ["powershell", "-NoProfile", "-Command",
+             "Get-CimInstance Win32_Process -Filter \"Name='python.exe'\""
+             " | Select-Object CommandLine | ConvertTo-Csv -NoTypeInformation"],
+            capture_output=True, text=True, timeout=60).stdout
+        return "acris_lane.py" in txt
+    except Exception:
+        return True
 
 
 def say(m):
@@ -159,10 +190,46 @@ def counts(con):
     # these numbers are wrong - so the anchor records which sync run it leaned
     # on rather than presenting itself as self-evident. Composing assertions is
     # fine; hiding that you composed them is not.
+    # ⚠⚠ 'pending' IS TODO; 'absent' IS DONE (login 2026-08-25: "the pdf
+    # cell just has the path for the fetch. if no pdf itll either be absent
+    # or pending. and pedning remains in que until 7 dyas passes").
+    #
+    # The pdf cell now carries FOUR kinds of value and only two of them are
+    # outstanding work:
+    #     <a path>   fetched            DONE
+    #     'absent'   the url is a dead end past the 7-day lag - a real
+    #                DETERMINATION about the document          DONE
+    #     'pending'  no image yet, still inside the lag        TODO
+    #     ''         not yet decided                           TODO
+    #
+    # ⚠ WITHOUT 'absent' COUNTING AS DONE, 100% IS UNREACHABLE - login:
+    # "If you arent counting no pdf determiniation into the count thats a
+    # huge failure that would never result in 100% compeltion". And without
+    # 'pending' counting as TODO, a row would leave the worklist AND be
+    # counted landed the moment it was marked - completion would jump by
+    # exactly the number of documents that are NOT done.
+    # ⚠ ix_nav_pdf_todo is rebuilt on the SAME predicate; if these two ever
+    # disagree the count silently uses the wrong set.
     rc_todo, t4 = one("rc_todo", "SELECT count(*) FROM navigation "
-                      "WHERE pdf='' AND id>=? AND id<?", RC_LO, RC_HI)
-    a_todo, t3 = one("acris_todo", "SELECT count(*) FROM navigation "
-                     "WHERE pdf='' AND id<?", RC_LO)
+                      "WHERE pdf IN ('','pending') AND id>=? AND id<?",
+                      RC_LO, RC_HI)
+    # ⚠ SKIP THE PAUSED SOURCE - see _acris_live(). The cached value is
+    # LABELLED in the output; a stale count published as fresh is worse than
+    # no count at all.
+    a_todo, t3, a_cached = None, 0.0, False
+    if not _acris_live():
+        try:
+            _p = json.loads(OUT.read_text(encoding="utf-8"))
+            a_todo = _p.get("sources", {}).get("acris", {}).get("todo")
+        except Exception:
+            a_todo = None
+        a_cached = a_todo is not None
+    if a_cached:
+        say("    acris_todo    %13s  CACHED - acris is not running, so this "
+            "cannot have moved" % f"{a_todo:,}")
+    else:
+        a_todo, t3 = one("acris_todo", "SELECT count(*) FROM navigation "
+                         "WHERE pdf IN ('','pending') AND id<?", RC_LO)
     # ⚠ TIMESTAMP THE COUNTS, NOT THE WRITE. The rate was differenced against
     # the previous anchor's `at`, which is when the file was WRITTEN - and the
     # nullprobe runs BETWEEN the counting and the write (121-217 s of it). So
@@ -207,6 +274,7 @@ def counts(con):
         "acris": (a_total, a_todo),
         "richmond": (rc_total, rc_todo),
         "null_probe": nulls,
+        "acris_cached": a_cached,
         "ledger_run": when,
         "counted_at": counted_at,
     }
@@ -253,6 +321,9 @@ def measure():
             out["warning"] = "impossible landed for %s; anchor not usable" % src
             continue
         out["sources"][src] = {"total": total, "todo": todo, "landed": landed}
+        if src == "acris" and c.get("acris_cached"):
+            out["sources"][src]["counted"] = ("CACHED - acris paused, index "
+                                              "not rescanned this pass")
         # ⚠ THE ANCHOR SHOULD PUBLISH ITS OWN RATE, because it is the only
         # rate here derived from the TABLE rather than from a lane's printer.
         #

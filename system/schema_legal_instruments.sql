@@ -63,7 +63,7 @@ CREATE TABLE navigation(
 CREATE INDEX ix_nav_key ON navigation(key);
 
 -- index: ix_nav_pdf_todo
-CREATE INDEX ix_nav_pdf_todo ON navigation(id) WHERE pdf = '';
+CREATE INDEX ix_nav_pdf_todo ON navigation(id) WHERE pdf IN ('','pending');
 
 -- index: ix_nav_rd_todo
 CREATE INDEX ix_nav_rd_todo ON navigation(id) WHERE recorded_details = '';
