@@ -151,6 +151,15 @@ ap.add_argument("--lag-days", type=int, default=7,
 ap.add_argument("--rd-days", type=int, default=30,
                 help="trailing window the rd heal opens (the grant rule: a"
                      " window's own pages unlock its ids' details)")
+ap.add_argument("--pending-every", type=int, default=300,
+                help="seconds between PENDING RECHECK sweeps - re-ask every"
+                     " row still waiting on a scan. 0 disables. ⚠ The mint"
+                     " request IS the image test (302=up · 200/404=dead"
+                     " end), so this costs exactly ONE request per pending row"
+                     " and needs no listing page and no grant rule. MEASURED"
+                     " 2026-08-26: 203 pending rows = a 12 s sweep at the"
+                     " lane's 16 docs/s. The interval is the only throttle -"
+                     " see pending_recheck().")
 ap.add_argument("--day", default=None, help="probe this MM/DD/YYYY, not today")
 a = ap.parse_args()
 
@@ -187,6 +196,7 @@ HDRS = {"User-Agent": RC.UA,
 hot_ids = queue.Queue()                   # ids needing a token URGENTLY
 ready_hot = queue.Queue()                 # their minted tokens, jump the line
 WAKE_RD = threading.Event()               # the probe pokes the rd heal awake
+WAKE_PEND = threading.Event()             # ...and the pending recheck
 # >> PER-DOCUMENT COOLDOWN ON THE ABSENT RE-CHECK. Without it, a row
 # recorded inside the window whose scan NEVER appears gets re-asked every
 # --rd-every forever: ~100 new absent rows a day accumulating over 30
@@ -402,8 +412,39 @@ def miner():
                     # richmond: the Location points at the NY State courts
                     # viewer with a self-authenticating token.
                     if e.code in (301, 302, 303):
-                        loc = e.headers.get("Location")
-                        outcome = "present" if loc else "noimage"
+                        loc = e.headers.get("Location") or ""
+                        # ⚠⚠ A 302 IS NOT AUTOMATICALLY AN IMAGE, and
+                        # "any Location at all" was the wrong test. MEASURED
+                        # 2026-08-26, both ids minted back to back on ONE
+                        # session so the session cannot be the difference:
+                        #
+                        #   RC_2825613 (image up) -> 302
+                        #     https://iapps.courts.state.ny.us/vscms_public/
+                        #     viewer?token=v2....
+                        #   RC_2820269 (no image) -> 302  /Search/SearchError
+                        #
+                        # The clerk answers a no-image document with a
+                        # REDIRECT TO ITS OWN ERROR PAGE. The old test called
+                        # that "present", handed '/Search/SearchError' to the
+                        # puller, and requests died client-side with
+                        # MissingSchema before any request left the machine -
+                        # so the row could never resolve and never even
+                        # reached the state machine. It stayed dormant only
+                        # because next_ids() gated on image_state='present',
+                        # which no such row can match; pending_recheck() is
+                        # what put these ids in front of a miner at all.
+                        #
+                        # ⚠ THE TEST IS "AN ABSOLUTE URL WE CAN FETCH",
+                        # not "not the error page" - a relative Location of
+                        # any shape is unfetchable and must never be called
+                        # present. And this only ever produces `noimage`,
+                        # which _no_image() turns into 'pending' inside the
+                        # lag window; a verdict of 'absent' still needs the
+                        # lag to have expired AND the rd to agree.
+                        if loc[:8].lower().startswith(("http://", "https:/")):
+                            outcome = "present"
+                        else:
+                            loc, outcome = None, "noimage"
                     elif e.code == 404:
                         outcome = "noimage"     # the url itself is a dead end
                     else:
@@ -688,17 +729,41 @@ def _no_image(did):
     ⚠ Written through DBQ, the ONE writer seat - miners never touch the write
     connection. ⚠ And only over '' or 'pending': a real path is never
     overwritten, and 'absent' never silently reverts."""
-    rec = ""
+    rec = cur = ""
     try:
         with _RO_LK:
             r = _RO[0].execute("SELECT json_extract(recorded_details,"
-                               "'$.recorded') FROM navigation WHERE id=?",
-                               (did,)).fetchone()
+                               "'$.recorded'), pdf,"
+                               " json_extract(recorded_details,"
+                               "'$.image_state') FROM navigation"
+                               " WHERE id=?", (did,)).fetchone()
         rec = (r[0] if r and r[0] else "") or ""
+        cur = (r[1] if r and r[1] else "") or ""
+        shot = (r[2] if r and r[2] else "") or ""
     except Exception:
-        rec = ""                      # unreadable => treated as in-lag below
+        rec = cur = shot = ""         # unreadable => treated as in-lag below
     state = "pending" if _in_lag(rec) else "absent"
-    DBQ.put((did, state))
+    # ⚠ 'absent' NEEDS TWO SOURCES TO AGREE. The url saying "no image" is
+    # one reading and it can also be produced by a bad session; the DETAIL
+    # PAGE saying so in its own words ("No Image Available At This Time" ->
+    # image_state) is the second. If our own rd says the image is PRESENT and
+    # the url disagrees, the odd one out is far more likely to be us - so
+    # refuse the verdict and leave the row queued to be asked again. Costs one
+    # re-ask; the alternative is a fabricated determination that nothing ever
+    # revisits.
+    if state == "absent" and shot == "present":
+        with lock:
+            stat["skipped"] = stat.get("skipped", 0) + 1
+        return
+    # ⚠ A RE-ASK THAT CHANGES NOTHING MUST NOT WRITE. pending_recheck()
+    # puts the WHOLE pending set back through the miners every
+    # --pending-every seconds and nearly every answer is "still pending" -
+    # that would be 203 identical UPDATEs a sweep, ~58k a day, dirtying pages
+    # and taking the one writer seat to record no fact at all. The stat
+    # counter still moves, so a sweep that changed nothing is still visible
+    # as work done rather than looking like a dead thread.
+    if cur != state:
+        DBQ.put((did, state))
     with lock:
         stat[state] = stat.get(state, 0) + 1
 
@@ -719,6 +784,84 @@ def _in_lag(recorded):
     except (ValueError, OverflowError):
         return True
     return (time.time() - t) < a.lag_days * 86400
+
+
+def pending_recheck():
+    """RE-ASK EVERY ROW STILL WAITING ON A SCAN - the dynamic maturation.
+
+    login 2026-08-26: "is there a more dynamic way for those pending images to
+    get checked over just a nightly check?" - yes, and it is cheaper than the
+    two things that were half-doing the job.
+
+    > THE MINT REQUEST IS ALREADY THE IMAGE TEST. miner() asks
+    /ViewVscmsDocument/ViewContent with redirects OFF and reads three outcomes:
+    302+Location = the scan is up, 200 or 404 = dead end, 403/429/5xx = ours
+    and retried. So "has the scan arrived?" costs exactly ONE request per
+    document - no detail page, no listing page, and ⚠ NO GRANT RULE,
+    because the mint endpoint takes a bare id. MEASURED 2026-08-26: the
+    pending set was 203 rows over 2 recording dates, so a full sweep is 203
+    requests, ~12 s at the lane's measured 16 docs/s. At --pending-every 300
+    that is 0.68 req/s.
+
+    > WHAT IT REPLACES.
+      * rd_heal DOES re-ask pending ids - but to FIND them it opens a 30-day
+        Window and pages it at 17 rows a page: 2,701 rows / ~160 listing
+        requests every 15 min, to rediscover 203 ids we already know BY NAME.
+        Then --absent-recheck (6 h) throttles each one, so a pending document
+        was actually looked at four times a day.
+      * rc_pdf_state.py at 04:00 is NOT a checker at all - it is the calendar
+        maturation (pending -> absent at day 7), pure SQL, no network. That one
+        genuinely belongs nightly and stays, now as a safety net.
+
+    > NOTHING DOWNSTREAM NEEDED BUILDING. _no_image() already writes 'pending'
+    while the row is in lag and 'absent' once it expires, and the writer only
+    ever fills an undecided cell. Feeding these ids to the miners therefore
+    makes the MATURATION dynamic too, not just the check.
+
+    ⚠ A DEDICATED TIMER, NOT A RELAXED next_ids(). The obvious version of
+    this is to drop `image_state='present'` from next_ids(). That gate was
+    right during the backfill - it kept 24 miners off 1.39M imageless rows -
+    and removing it now would simply have those same miners spinning on the
+    same 203 rows at 16/s forever. THE INTERVAL IS THE THROTTLE.
+
+    ⚠ SELECTED THROUGH THE INDEXED PREDICATE, SPLIT IN PYTHON. A bare
+    `pdf='pending'` cannot use ix_nav_pdf_todo - SQLite will not prove
+    `='pending'` implies the IN list - and degrades to a 2.5M-row scan. That is
+    the exact drift that cost 12 minutes of cold start on 2026-08-25.
+
+    ⚠ NEVER STACK SWEEPS. hot_ids is unbounded; if the last sweep is still
+    draining, skip this one rather than queueing the same ids twice."""
+    if a.pending_every <= 0:
+        say("  PENDING RECHECK: disabled (--pending-every 0)")
+        return
+    while not STOP.is_set():
+        WAKE_PEND.wait(a.pending_every)
+        WAKE_PEND.clear()
+        if STOP.is_set():
+            return
+        if HOLD.is_set():
+            continue
+        try:
+            if not hot_ids.empty():
+                say("  PENDING RECHECK: skipped, %d id(s) still draining from"
+                    " the last sweep" % hot_ids.qsize())
+                continue
+            con = sqlite3.connect("file:%s?mode=ro" % CP.NAV_DB, uri=True,
+                                  timeout=120)
+            con.execute("PRAGMA busy_timeout=60000")
+            rows = con.execute(
+                "SELECT id, pdf FROM navigation WHERE id > 'RC'"
+                " AND id LIKE 'RC_%' AND pdf IN ('', 'pending')").fetchall()
+            con.close()
+            ids = [d for d, p in rows if p == "pending"]
+            for did in ids:
+                hot_ids.put(did)
+            say("  PENDING RECHECK: %d row(s) awaiting a scan re-asked"
+                " (1 mint request each); %d unassigned also in the queue"
+                % (len(ids), len(rows) - len(ids)))
+        except Exception as e:
+            say("  PENDING RECHECK: %s - will retry next sweep"
+                % type(e).__name__)
 
 
 def fresh(rows):
@@ -906,7 +1049,13 @@ def rd_heal():
                 # image-present rows had no pdf.
                 # ⚠ THE WINDOW IS THE WORKLIST, exactly as for rd: this is
                 # O(window) PK lookups, never a scan of 2.5M rows.
-                elif st == "present" and not got[1]:
+                # ⚠ `not got[1]` WAS WRONG AND EXCLUDED EXACTLY THE
+                # ROWS THIS BRANCH EXISTS FOR. got[1] is the pdf column, and
+                # this was written when it held only '' or a path. 'pending'
+                # is truthy, so from the day the fourth state landed, a row
+                # whose scan had JUST ARRIVED was the one row that could never
+                # reach the hot list.
+                elif st == "present" and got[1] in ("", "pending"):
                     if _now - _hot_at.get(iid, 0.0) >= a.hot_recheck:
                         _hot_at[iid] = _now
                         if a.hot_pdf:
@@ -1072,11 +1221,13 @@ def reporter():
         # dead log and reporting the lane STALE while it ran perfectly.
         say("PROGRESS %s pdfs · db %s · %.2f/s now · %.2f/s avg · %.1f GB"
             " · minted %s"
-            " (ready %d) · err %d · stale %d · synced %d - rd %d - hot %d · %d min"
+            " (ready %d) · err %d · stale %d · synced %d - rd %d - hot %d"
+            " · pending %d - absent %d · %d min"
             % ("{:,}".format(s["got"]), "{:,}".format(s["wrote"]),
                d / 60.0, s["got"] / el if el else 0,
                s["bytes"] / 1024 ** 3, "{:,}".format(s["minted"]),
-               ready.qsize(), s["err"], s["stale"], s["synced"], s["rd"], s["hot"], el / 60))
+               ready.qsize(), s["err"], s["stale"], s["synced"], s["rd"],
+               s["hot"], s.get("pending", 0), s.get("absent", 0), el / 60))
         last = s
 
 
@@ -1090,6 +1241,7 @@ if __name__ == "__main__":
             " NOT updated. Use --apply for the real thing.")
     threads = [threading.Thread(target=probe, daemon=True),
                threading.Thread(target=rd_heal, daemon=True),
+               threading.Thread(target=pending_recheck, daemon=True),
                threading.Thread(target=watchdog, daemon=True),
                threading.Thread(target=writer, daemon=True),
                threading.Thread(target=reporter, daemon=True)]

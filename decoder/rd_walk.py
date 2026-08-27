@@ -38,6 +38,7 @@ import sqlite3
 import sys
 import threading
 import time
+import urllib.error
 import urllib.request
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -60,6 +61,9 @@ ap.add_argument("--hi", default="￿", help="walk ids < this")
 a = ap.parse_args()
 
 BATCH = 200
+# consecutive 503/429s with NO success between them = a WALL,
+# not a blip. 28 workers reach this in a couple of seconds.
+H503_STOP = 40
 FAILS = CP.NAV_WORK / "rd_walk_fails.jsonl"
 
 con = sqlite3.connect(CP.NAV_DB, timeout=600, check_same_thread=False)
@@ -74,7 +78,7 @@ already = 0
 stop = threading.Event()
 lock = threading.Lock()
 q = queue.Queue(maxsize=20_000)
-stats = {"done": 0, "fail": 0, "pending": 0}
+stats = {"done": 0, "fail": 0, "pending": 0, "h503": 0}
 ua = {"User-Agent": fetch_pages.UA}
 
 
@@ -152,6 +156,7 @@ def worker():
                 flush()
             with lock:
                 stats["done"] += 1
+                stats["h503"] = 0      # success breaks the streak
         except (fetch_pages.AccessDenied, LD.Refused) as e:
             # ⚠ BOTH refusal types, 2026-08-24: check_refused() raises
             # LD.Refused, but this catch only knew fetch_pages.AccessDenied -
@@ -160,6 +165,32 @@ def worker():
             # wrong except clause is a detector that does not exist.
             stop.set()
             print(f"  REFUSED at {did} - STOPPING ALL: {e}", flush=True)
+        except urllib.error.HTTPError as e:
+            # !! 503 IS A REFUSAL THE BODY-INSPECTOR CANNOT SEE (2026-08-26
+            # 22:07). check_refused() reads the HTML of a SUCCESSFUL reply,
+            # so it can only ever catch the 200-with-notice shape. An
+            # HTTPError raises before there is a body, fell through to the
+            # generic catch below, was logged as an ordinary fail, and the
+            # worker took the next id - so the lane retried into the wall
+            # ~19,000 times in ONE MINUTE while `total` stayed frozen.
+            # A REFUSAL DETECTOR THAT ONLY READS BODIES IS BLIND TO EVERY
+            # REFUSAL THAT ARRIVES AS A STATUS CODE.
+            if e.code in (503, 429):
+                with lock:
+                    stats["h503"] += 1
+                    n = stats["h503"]
+                if n >= H503_STOP and not stop.is_set():
+                    stop.set()
+                    print("  %d CONSECUTIVE %d RESPONSES - STOPPING ALL."
+                          " ACRIS is refusing by status code. Do not retry,"
+                          " do not rotate, do not raise concurrency."
+                          % (n, e.code), flush=True)
+            with lock:
+                stats["fail"] += 1
+                with FAILS.open("a", encoding="utf-8") as fh:
+                    fh.write(json.dumps({"id": did,
+                                         "err": "HTTP%d" % e.code})
+                             + "\n")
         except Exception as e:
             with lock:
                 stats["fail"] += 1
@@ -174,8 +205,26 @@ threads = [threading.Thread(target=feeder, daemon=True)]
 threads += [threading.Thread(target=worker, daemon=True)
             for _ in range(a.workers)]
 t0 = time.time()
-for t in threads:
+# !! THE RAMP LAW (login 2026-08-24, acris_lane.py's header): "you cant cold
+# launch the code... it needs to ramp and not just restart at 80 or whatever."
+# A restart that fires every worker at once opens N cold TLS connections in
+# ONE SECOND, and ACRIS served its Bandwidth Notice one second after exactly
+# such a relaunch (trip #3) - after absorbing a governor's gentle climb all
+# morning without complaint. acris_lane runs these SAME 28 workers safely
+# because it staggers them; this file used to start them in a single loop.
+#
+# !! SO THE TRIP CONDITION IS NOT 28 CONCURRENT - IT IS 28 SIMULTANEOUS
+# HANDSHAKES. Concurrency is a steady-state property; the stampede is a
+# START property, and only the start was ever the problem. 28 x 0.5s = 14s
+# to full width, which costs ~170 documents and buys the whole run.
+STAGGER = 0.5
+threads[0].start()                 # feeder first - the queue must fill
+for i, t in enumerate(threads[1:]):
     t.start()
+    if i < len(threads) - 2:       # no trailing sleep after the last worker
+        time.sleep(STAGGER)
+print("  ramped to %d workers over %.0fs"
+      % (a.workers, (a.workers - 1) * STAGGER), flush=True)
 try:
     while any(t.is_alive() for t in threads[1:]):
         time.sleep(60)

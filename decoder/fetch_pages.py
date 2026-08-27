@@ -22,8 +22,32 @@ import fetch_budget
 #    made no difference, so this is NOT a rate limit - acris's edge
 #    discriminates on the version string itself. The lane ran ~166k requests
 #    on the long form today before it started answering 503 to it.
-UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
+# ⚠⚠ THE 503 WALL WAS THIS STRING, AGAIN (2026-08-26). ACRIS was assumed to be
+# refusing us since 2026-08-24. It was not. MEASURED, same doc, same URL,
+# seconds apart, one variable changed:
+#
+#     rd route     Chrome/126.0 -> 503   ·  acris-decoder/1.0 -> 200, 118,214 B
+#     image map    Chrome/126.0 -> 503   ·  acris-decoder/1.0 -> TotalPages=4
+#     edge route   already honest        ·  live
+#
+# ⚠ AND THE 08-24 "FIX" HAD GONE STALE. That day the wall moved when
+# Chrome/126.0.0.0 was shortened to Chrome/126.0. Chrome/126.0 now 503s too. A
+# spoofed version string is a moving target we do not control and cannot
+# re-derive on a schedule; the honest identifier is the one that has never
+# failed. Richmond reached 100% on it and rc_lane still runs it (RC.UA).
+#
+# ⚠ THIS RESOLVES A DECISION THAT WAS DELIBERATELY LEFT OPEN. acris_pdf.py
+# (2026-08-23) flagged exactly this: "THE USER-AGENT HERE IS NOT OURS ... IT IS
+# WORTH A DELIBERATE DECISION, NOT A SILENT ONE - raised with login." It is now
+# taken deliberately, on measurement, and written down here rather than in a
+# lane.
+#
+# ⚠ rc_lane IS NOT AFFECTED: it sends RC.UA from rc_sync, not this. The other
+# richmond scripts that DO read this string were on the same spoof, and the
+# 403 that once blocked richmond pdf was also this string - so they move from
+# a known-bad identifier to the known-good one.
+UA = ("acris-decoder/1.0 (public land records indexing;"
+      " contact via repo owner)")
 BASE = "https://a836-acris.nyc.gov/DS/DocumentSearch/GetImage"
 PLACEHOLDER = "4081a3f2004d7244a966995c02c730d0"
 

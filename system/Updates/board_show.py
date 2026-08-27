@@ -19,14 +19,14 @@ def show():
     c.close()
     if rows:
         print(str(rows[0]["as_of"]).replace("\ufffd", "\u00b7"))
-    print("%-10s %-8s %13s %13s %8s %9s %9s %11s"
-          % ("SOURCE", "STATUS", "LANDED", "NEEDED", "PCT",
+    print("%-16s %-10s %-8s %13s %13s %8s %9s %9s %11s"
+          % ("PHASE", "SOURCE", "STATUS", "LANDED", "NEEDED", "PCT",
              "NOW/s", "5MIN/s", "ETA"))
     for d in rows:
-        print("%-10s %-8s %13s %13s %7.2f%% %9s %9s %11s"
-              % (d["source"], d["status"], f"{d['landed']:,}",
-                 f"{d['needed']:,}", d["pct_of_total"], d["rate_now"],
-                 d["rate"], d["eta"]))
+        print("%-16s %-10s %-8s %13s %13s %7.2f%% %9s %9s %11s"
+              % (d.get("phase", "-"), d["source"], d["status"],
+                 f"{d['landed']:,}", f"{d['needed']:,}", d["pct_of_total"],
+                 d["rate_now"], d["rate"], d["eta"]))
 
 
 if __name__ == "__main__":

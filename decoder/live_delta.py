@@ -102,6 +102,22 @@ class Refused(RuntimeError):
     no routing around it. Report it."""
 
 
+def _preserve_refusal(html, kind):
+    """Write the page that triggered a refusal so the verdict can be AUDITED.
+    Never raises: failing to save evidence must not mask the refusal."""
+    try:
+        import pathlib as _pl
+        import time as _t
+        d = _pl.Path("D:/CRE Decoding System/01 Navigations"
+                     "/Legal Instruments Navigation/_working/refusals")
+        d.mkdir(parents=True, exist_ok=True)
+        f = d / ("refusal-%s-%s.html" % (_t.strftime("%Y%m%d-%H%M%S"), kind))
+        if not f.exists():
+            f.write_text(html, encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
+
 def check_refused(html):
     """⚠ A REFUSAL ARRIVES AS HTTP 200. Measured 2026-08-18: after ~13,000
     requests in a day (a 12,077-document mapper run at concurrency 16, ~48/s,
@@ -109,7 +125,30 @@ def check_refused(html):
     25,103-byte "ACRIS Bandwidth Notice" page — status 200, no error, no header.
     Parsing it fails somewhere downstream and reads as a code bug, which is how
     a refusal gets retried into a longer refusal. Detect it at the door."""
-    if "Bandwidth Notice" in html or "bandwidth" in html[:2000].lower():
+    # !! THIS COST A NIGHT ON 2026-08-26 AS A FALSE POSITIVE.
+    # The old test was:
+    #     "Bandwidth Notice" in html or "bandwidth" in html[:2000].lower()
+    # The second clause fires on ANY page whose opening merely mentions the
+    # word. At 21:55 the WIFI DROPPED (7,795 URLErrors in the same fails
+    # file). Something served during the outage - a router/ISP interstitial,
+    # the 500 login saw on reset - carried the word, every worker "REFUSED",
+    # and the lane stopped itself for the night. A probe the next minute
+    # returned HTTP 200 and 118,158 bytes of real document. ACRIS had never
+    # refused, and login was the one who challenged the verdict.
+    #
+    # !! AND THE DETECTOR DESTROYED ITS OWN EVIDENCE. It never stored the
+    # body, so "was that actually a Bandwidth Notice?" was unanswerable and
+    # I asserted it was one anyway. A DETECTOR THAT HALTS A PIPELINE MUST
+    # PRESERVE WHAT IT HALTED ON - otherwise its verdict cannot be audited,
+    # only believed.
+    #
+    # A REAL refusal is a 200 carrying the ~25,103-byte notice page and NO
+    # document. A real document ALWAYS echoes "DOCUMENT ID". So the loose
+    # clause now also requires that success marker to be ABSENT.
+    hard = "Bandwidth Notice" in html
+    soft = "bandwidth" in html[:2000].lower() and "DOCUMENT ID" not in html
+    if hard or soft:
+        _preserve_refusal(html, "hard" if hard else "soft")
         raise Refused("ACRIS served its Bandwidth Notice — REFUSED. Stop; do "
                       "not retry, do not rotate, do not raise concurrency.")
 

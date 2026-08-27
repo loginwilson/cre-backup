@@ -77,3 +77,43 @@ on the GIL; hint of two ~20 sub-pools digital/film). OPERATING POINT: rd
 4×28 + pdf 2×28 (digital arm + film arm). Film ≈3.7 pg/doc vs digital
 ≈13.4 → tilt film-first to front-load completed docs. pdf runway ≈145M
 pages / 40 ≈ 40 days continuous — the long pole; rd ≈2 days.
+
+## ⚠ 2026-08-26 — THE 4×28 OPERATING POINT NO LONGER HOLDS. ONE ARM ONLY.
+
+ACRIS served its **Bandwidth Notice twice in one day** under the old fleet shape.
+Measured curve for a SINGLE `rd_walk` arm (marginal docs/s, per-minute deltas —
+never the lane printer's lifetime average):
+
+    1 arm x 12 workers   13.8 docs/s
+    1 arm x 28 workers   26.9 docs/s
+    1 arm x 64 workers   33.6 docs/s   <- the efficient point
+    1 arm x 80 workers   34.2 docs/s   <- +1.8% for +25% connections = CEILING
+    4 arms x 28 (=112)   REFUSED, twice
+
+⚠ **THE SOURCE COUNTS CONNECTIONS, NOT ARMS.** "One arm" is not itself the rule —
+112 concurrent tripped it whether from 4 processes or 1. One arm is just a
+convenient cap. The variable to tune is TOTAL CONCURRENCY.
+
+⚠ **THE DOCSTRINGS' "GIL knee ~26 workers" IS WRONG FOR rd_walk.** 64 workers
+beat 28 by 25% in one process. The parse releases the GIL more than the note
+assumed. `image_walk`'s ~26 figure may still hold — it does far more CPU per doc
+(G4 wrapping) — but it was never re-measured.
+
+⚠ **THE BANDWIDTH NOTICE IS CUMULATIVE VOLUME, NOT INSTANTANEOUS RATE.** Proof:
+after the block, a FOREGROUND run at 4 workers refused immediately. A rate limit
+clears when the rate drops; this did not. Today's spend before the second block:
+**193,625 rd docs ≈ 23 GB**, plus ~28k page images that morning.
+
+⚠ **gzip IS NOT AVAILABLE — TESTED.** `Accept-Encoding: gzip` returns
+`Content-Encoding: (none)` and the identical 118,475 bytes. So **118 KB per
+document is fixed**, there is no compression lever, and the daily budget is
+therefore a hard document count. At 34 docs/s that is ~14.4 GB/hour — an
+overnight run would pull ~127 GB and is certain to trip.
+
+⚠ **RESTARTS ARE THEMSELVES LOAD EVENTS.** The second refusal came after
+laddering 12→20→28 workers in ~30 min, each rung restarting 4 processes, on a
+host that had already refused once that day. The notice's own words are the
+rule: *"do not retry, do not rotate, do not raise concurrency."*
+
+**Richmond is unaffected by any of this** — different host
+(richmondcountyclerk.com), ran `err 0` throughout both ACRIS blocks.

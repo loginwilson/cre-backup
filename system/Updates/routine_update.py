@@ -81,9 +81,26 @@ RATE_WINDOW = 5 * 60
 _HEARTBEAT = {
     # the consolidated lane (acris_lane.py, 2026-08-24) OR the old walker
     # fleet - whichever wrote most recently proves the pulse
-    ("acquisition rd", "acris"): ["acris_lane.log", "rd_walk_a[1-4].log"],
+    # ⚠⚠ GLOB THE ARM NAME. `rd_walk_a[1-4]` and `image_walk_i[1-3]`
+    # enumerate arms that happened to exist when they were written. On
+    # 2026-08-26 the acris pdf lanes came back as image_walk_d1/f1: NOTHING
+    # matched, so the only heartbeats found were the i1-i3 logs left over from
+    # days earlier, their mtimes were ancient, and _lane_log_stale said STALE.
+    # With worked=True and d==0 (acris `landed` is frozen between board_truth's
+    # cached counts) that is exactly the wedge branch, so the row read STALLED
+    # and the status logic then forced eta="paused" - while both arms landed
+    # ~15 docs/s. rd escaped only because its arm was named a1.
+    #
+    # This is the THIRD map keyed to hardcoded arm filenames (_CUM_SPEC and
+    # this one; PROC_SIG was already generic). An arm the board cannot NAME is
+    # an arm the board declares broken - so name a PATTERN, not an inventory.
+    #
+    # ⚠ Dead arms still match the glob and that is fine HERE: this takes
+    # max(mtime), so a live arm always outranks them. _CUM_SPEC SUMS its
+    # files, so there the dead ones had to be filtered by freshness instead.
+    ("acquisition rd", "acris"): ["acris_lane.log", "rd_walk_*.log"],
     ("synchronization", "acris"): ["acris_lane.log"],
-    ("acquisition pdf", "acris"): "image_walk_i[1-3].log",
+    ("acquisition pdf", "acris"): ["acris_lane.log", "image_walk_*.log"],
     # ⚠ rc_pdf_land.log only hears the RAW-incoming lander; the db writer is
     # rc_pdf_pull, which logs into its own cwd (the decoder dir). Watching the
     # lander's log kept a 6-hour wedge invisible until 2026-08-23 20:00.
@@ -119,10 +136,28 @@ def _lane_log_stale(phase, src, now):
 # "X total", image prints "N pdfs" (+ imageless verdicts, which also fill the
 # pdf column). Differencing THESE over our own 60s/300s samples is exact and
 # costs a file-tail read - no anchors, no baselines, no log-sum pipelines.
+# >> how recently an arm's log must have moved to count toward its cumulative
+# counter. The lanes print PROGRESS about once a minute; 600 s is generous.
+CUM_FRESH = 600
+
+# >> the acris rd todo COUNT is a ~5.4M index walk; see the note at its call
+# site. Counted at most this often, cached in between.
+# !! WAS 300.0, AND THAT THROTTLE BROKE THE RATE (2026-08-26 22:12).
+# I set it to 300s because the rd COUNT was blocking passes for 214s.
+# Re-measured tonight: 0.39-0.46s, because it now rides ix_nav_rd_todo
+# as a COVERING INDEX. The throttle was solving a problem that had
+# already been fixed elsewhere - and it turned `landed` into a STEP
+# FUNCTION, which aliased rate_now to ~2x (83.23, then 103.19) and
+# tripped the MAX_RATE basis guard, resetting the history to one
+# sample so both rates fell back to the lane's lifetime average.
+# !! A THROTTLE OUTLIVES THE SLOWNESS IT WAS ADDED FOR. Re-measure the
+# cost before keeping one - the compensation became the whole defect.
+RD_COUNT_EVERY = 60.0
+_LAST_RD = [0.0, None]
+
 _CUM_SPEC = {
     ("acquisition rd", "acris"):
-        (("acris_lane.log", "rd_walk_a1.log", "rd_walk_a2.log",
-          "rd_walk_a3.log", "rd_walk_a4.log"), r"([\d,]+) total"),
+        (("acris_lane.log", "rd_walk_*.log"), r"([\d,]+) total"),
     # ⚠ THE CONSOLIDATED ROW COUNTS READY-TO-DECODE DOCS (login 2026-08-24:
     # "one eta one code that eventually results in the level ready to
     # decode"). The lane's pdf pool is the LAST gate - pdf only ever follows
@@ -132,9 +167,16 @@ _CUM_SPEC = {
     # deliberately NOT this row's rate - rd alone is not ready.
     ("synchronization", "acris"):
         (("acris_lane.log",), r"([\d,]+) pdfs.*?([\d,]+) imageless"),
+    # ⚠⚠ GLOB, NEVER A HARDCODED ARM LIST. This named i1/i2/i3 - arms
+    # that stopped running days ago. On 2026-08-26 the acris pdf lanes came
+    # back as image_walk_d1/f1 and this row went 0.0/s STALLED while they
+    # landed ~11 docs/s: _lane_cum summed the three DEAD logs, got a frozen
+    # cum=1329, saw no movement, and zeroed rate_now - overwriting the correct
+    # LANE_RATE value computed moments earlier. rd escaped only by the
+    # accident that its arm was named rd_walk_a1.log, which WAS in its list.
+    # An arm the board cannot name is an arm the board reports as broken.
     ("acquisition pdf", "acris"):
-        (("acris_lane.log", "image_walk_i1.log", "image_walk_i2.log",
-          "image_walk_i3.log"),
+        (("acris_lane.log", "image_walk_*.log"),
          r"([\d,]+) pdfs.*?([\d,]+) imageless"),
     # rc_pdf_pull's "db N" IS rows written to the pdf column this run -
     # the exact "result the python is coding into the db" (login). Absolute
@@ -174,14 +216,37 @@ def _lane_cum(phase, src, st):
         return None
     files, pat = spec
     mem = st.setdefault("cumf", {}).setdefault("%s|%s" % (phase, src), {})
+    # >> EXPAND GLOBS so a renamed or re-sharded arm is picked up without an
+    # edit here. ⚠ `image_walk_*.log` also matches `image_walk_d1.err.log`
+    # - exclude the stderr files or every arm is counted twice, once as an
+    # empty file.
+    names = []
     for name in files:
+        if "*" in name:
+            q = pathlib.Path(name)
+            base = q.parent if q.is_absolute() else W
+            names += [(str(m) if q.is_absolute() else m.name)
+                      for m in sorted(base.glob(q.name))
+                      if not m.name.endswith(".err.log")]
+        else:
+            names.append(name)
+    # >> AND A LANE THAT STOPPED MUST STOP COUNTING. A dead arm's log still
+    # reads fine and contributes a FROZEN value forever; with a glob that is
+    # 20 dead logs, and worse, `mem` would keep them after they aged out. Only
+    # arms whose log moved within CUM_FRESH count, and `mem` is pruned to
+    # exactly those - so a stopped arm leaves the sum instead of pinning it.
+    live = set()
+    for name in names:
         p = pathlib.Path(name)
         if not p.is_absolute():
             p = W / name
         try:
+            if time.time() - p.stat().st_mtime > CUM_FRESH:
+                continue
             tail = p.read_text(encoding="utf-8", errors="replace")[-4000:]
         except OSError:
             continue
+        live.add(name)
         hits = re.findall(pat, tail)
         if not hits:
             continue                     # carry last value
@@ -189,6 +254,8 @@ def _lane_cum(phase, src, st):
         v = (sum(int(x.replace(",", "")) for x in last)
              if isinstance(last, tuple) else int(last.replace(",", "")))
         mem[name] = v                    # a drop is just the new (reset) value
+    for gone in [k for k in mem if k not in live]:
+        mem.pop(gone)                    # a stopped arm stops contributing
     return sum(mem.values()) if mem else None
 
 
@@ -567,18 +634,43 @@ def gather():
     # complete, so every blank row in the index is acris by construction.
     # Guarded on the index existing — without it this COUNT would be the
     # 24M-row blob scan this file bans; fall back to the counter figure.
-    try:
-        _nc = sqlite3.connect("file:%s?mode=ro" % CP.NAV_DB, uri=True,
-                              timeout=15)
-        _nc.execute("PRAGMA busy_timeout=15000")
-        if _nc.execute("SELECT 1 FROM sqlite_master"
-                       " WHERE name='ix_nav_rd_todo'").fetchone():
-            a_rd = need_a - _nc.execute(
-                "SELECT COUNT(*) FROM navigation"
-                " WHERE recorded_details = ''").fetchone()[0]
-        _nc.close()
-    except Exception:
-        pass
+    # ⚠⚠ BUT NOT EVERY PASS - IT IS WHAT FROZE THE BOARD (2026-08-26).
+    # This COUNT walks ~5.4M ix_nav_rd_todo entries. `timeout=15` and
+    # `busy_timeout=15000` bound LOCK WAITS ONLY, never the scan itself, so
+    # with three acris arms plus rc_lane writing to the same USB drive (D:
+    # measured 88% busy) the scan ran for MINUTES and the whole pass sat
+    # inside it: routine_update.log and Updates.db went 214 s without a write
+    # on a 60 s loop, and the board simply stopped advancing while every lane
+    # ran fine. login: "update not updating?".
+    #
+    # Same trade board_truth already makes for the acris pdf count: count at
+    # most every RD_COUNT_EVERY seconds and reuse the last exact value in
+    # between. `landed` then steps every 5 min instead of every minute - but
+    # the rd row's RATE comes from the lane logs via _CUM_SPEC, not from
+    # differencing this, so the moving numbers stay live and only the level
+    # steps. A board that updates every minute with a 5-minute-old level
+    # beats a board that stops.
+    #
+    # ⚠ ON FAILURE, KEEP THE LAST EXACT VALUE rather than silently falling
+    # back to the counter arithmetic this block exists to correct.
+    _due = (time.time() - _LAST_RD[0]) >= RD_COUNT_EVERY
+    if _LAST_RD[1] is not None and not _due:
+        a_rd = _LAST_RD[1]
+    else:
+        try:
+            _nc = sqlite3.connect("file:%s?mode=ro" % CP.NAV_DB, uri=True,
+                                  timeout=15)
+            _nc.execute("PRAGMA busy_timeout=15000")
+            if _nc.execute("SELECT 1 FROM sqlite_master"
+                           " WHERE name='ix_nav_rd_todo'").fetchone():
+                a_rd = need_a - _nc.execute(
+                    "SELECT COUNT(*) FROM navigation"
+                    " WHERE recorded_details = ''").fetchone()[0]
+                _LAST_RD[0], _LAST_RD[1] = time.time(), a_rd
+            _nc.close()
+        except Exception:
+            if _LAST_RD[1] is not None:
+                a_rd = _LAST_RD[1]
 
     # ⚠ THE `pdf` COLUMN OUTRANKS THE LOGS. Everything above this line is
     # counter arithmetic - baseline plus deltas scraped out of lane logs - and
@@ -616,6 +708,39 @@ def gather():
             rc_pdf = truth["richmond"]
             ANCHORED.add(("acquisition pdf", "richmond"))
             ANCHORED.add(("synchronization", "richmond"))
+            # >> TAKE THE DENOMINATOR FROM THE SAME MEASUREMENT AS THE
+            # NUMERATOR (login 2026-08-26: "the numbers shouldnt wait until
+            # the night, it should update live?").
+            #
+            # `need_r` above is the SYNC LEDGER's source_total, refreshed only
+            # when routine_synchronization runs. board_truth now counts
+            # richmond's total LIVE every pass (0.17 s - the 168 s calibration
+            # that forbade it expired when rc_lane made the PK's RC_ range
+            # hot). So landed moved to a live number while needed stayed 3
+            # hours old, and MEASURED at 12:15 the board held
+            # landed 2,501,930 > needed 2,501,863.
+            #
+            # ⚠ THIS FILE'S OWN HEADER CALLS THAT OUT: "landed can only
+            # exceed needed through COUNTER arithmetic ... the fix is
+            # re-baseline from a TRUE table count and retire consumed logs,
+            # NEVER A CAP." A live numerator over a stale denominator is the
+            # same defect wearing different clothes, and it would have printed
+            # 100.003% - or flipped COMPLETE off, since that status tests
+            # `landed == needed` exactly.
+            #
+            # The anchor's `total` IS the true table count (plus the ledger's
+            # source-vs-us delta, measured 0 while nav is LEVEL), so taking
+            # both from it makes them arithmetically incapable of disagreeing.
+            # And richmond's probe inserts a row within ~10 s of a filing
+            # appearing, so this denominator is FRESHER than the ledger's, not
+            # merely more convenient.
+            #
+            # ⚠ acris is deliberately NOT given the same treatment: its
+            # live count is 43.79 s cold and the lane is paused, so the ledger
+            # is both cheaper and equally true there.
+            _rt = (tj.get("sources", {}).get("richmond", {}) or {}).get("total")
+            if _rt:
+                need_r = _rt
         # ⚠ PREFER THE ANCHOR'S OWN RATE - it is the only figure here measured
         # from the TABLE. The lane alternative is `total_docs / total_minutes`,
         # a LIFETIME average, and this system already paid to learn that
@@ -623,8 +748,27 @@ def gather():
         # 89.9/s while the fleet ran 122.7/s). Cross-checked by counting the
         # column twice 448 s apart: acris 9.56/s true vs 11.06/s lifetime.
         # The anchor's span IS its own interval, so it cannot alias.
+        # ⚠⚠ BUT A CACHED ANCHOR HAS NO RATE, AND 0.0 IS NOT A
+        # MEASUREMENT. `is not None` accepted 0.0 as a real reading and
+        # CLOBBERED the lane's own ~15 docs/s with it, so `acquisition pdf`
+        # printed 0.0/0.0 while two arms landed ~900 docs a minute. MEASURED
+        # 2026-08-26, straight out of _board_truth.json:
+        #
+        #     "counted": "CACHED - ... index not rescanned this pass"
+        #     "rate": 0.0
+        #
+        # The acris todo count is throttled (it reads 19.6M index entries), so
+        # between live counts the anchor CANNOT observe movement and its rate
+        # is 0 BY CONSTRUCTION - not because the lane stalled. Preferring the
+        # anchor is right only when the anchor actually counted.
+        #
+        # ⚠ Two guards, and both are needed: truthiness rejects the 0.0,
+        # and the CACHED test rejects a stale-but-nonzero rate carried over
+        # from an earlier pass. Falling through to the lane log is safe -
+        # `fresh()` already drops logs older than 10 minutes, so an idle lane
+        # contributes no rate rather than a wrong one.
         for k, v in (tj.get("sources") or {}).items():
-            if v.get("rate") is not None:
+            if v.get("rate") and not str(v.get("counted", "")).upper()                     .startswith("CACHED"):
                 LANE_RATE[("acquisition pdf", k)] = v["rate"]
 
     out[("acquisition rd", "acris")] = (a_rd, need_a)
@@ -761,8 +905,29 @@ def main(loop):
             key = f"{phase}|{src}"
             # LIVE: every row, every pass. rate AND increase share the
             # trailing ~20-min window - one denominator, lump-proof.
-            h = [s for s in st["hist"].get(key, [])
-                 if now - s[0] <= RATE_WINDOW] + [[now, landed]]
+            # ⚠ ONLY SAMPLE WHEN THE COUNTER ACTUALLY MOVES (2026-08-26).
+            # A THROTTLED COUNT IS A STEP FUNCTION. rd|acris `landed` now
+            # refreshes every RD_COUNT_EVERY=300s, so it holds still and then
+            # jumps by five minutes of work at once. Sampling every pass put
+            # several IDENTICAL values in the window, and rate_now then
+            # differenced one 300s step across its 90s NOW_WINDOW:
+            #     300s x ~44/s = 13,200 docs / ~158s between passes = 83.2/s
+            # login saw exactly that - "last minute was 83.23" - against a
+            # true lane rate of 44.0, while the cell read 26.36 in between.
+            # A spike alternating with an under-read, neither one the rate.
+            #
+            # ⚠ THIS IS THE THIRD TIME THIS FILE HAS CAUGHT THIS DISEASE
+            # (60s samples of 60s lumps; then the 30-min pdf anchor; now a
+            # 300s throttle I added myself this afternoon). The rule the
+            # earlier two only stated per-row: **THE SAMPLE CADENCE MUST
+            # MATCH THE MEASUREMENT CADENCE.** Recording a point only when
+            # the value changes enforces it for EVERY row, including throttles
+            # nobody has added yet - so the span always covers real movement.
+            # A stepped counter then correctly falls back to the 20-min `rate`
+            # instead of inventing a short-window number it cannot support.
+            prior = [s for s in st["hist"].get(key, [])
+                     if now - s[0] <= RATE_WINDOW]
+            h = prior if (prior and prior[-1][1] == landed)                 else prior + [[now, landed]]
             # ⚠ A COUNTER THAT MOVES FASTER THAN WORK CAN = BASIS CHANGE,
             # NOT PROGRESS. These counters are monotonic and bounded: a
             # DROP (re-baseline, consumed log, restarted lane counting

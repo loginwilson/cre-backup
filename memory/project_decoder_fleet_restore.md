@@ -60,3 +60,65 @@ id 225, which NAMES the blocking process). Kill tail/grep/sleep, then a
 final "System pid 4" block is just cache flush — wait 30 s or shut down.
 
 Related: [[project-acris-refusal-20260824]], [[project-decoder-updates-board]]
+
+## ⚠⚠ A PULLED USB LEAVES PROCESSES ALIVE AND WRITING NOWHERE (2026-08-26 21:22)
+
+login unplugged the One Touch mid-run. What it looked like afterwards:
+
+    D:              back, Healthy, same free space, DB + WAL all present
+    rd_walk         STILL ALIVE, same pid, err log 0 bytes, no traceback
+    rd TODO count   4,879,825 -> 4,879,825 over 60s   <-- ZERO ROWS LANDING
+
+**Windows invalidates open handles when a volume is removed.** Replugging
+mounts a NEW volume instance; handles opened before the pull keep pointing at
+nothing. SQLite raised nothing the lane logged, so the lane looked perfectly
+healthy while writing into the void.
+
+⚠ **THE cwd DECIDES WHO DIES AND WHO WEDGES.** `routine_update` (cwd on D:)
+was killed outright by the unplug. `rd_walk` (cwd on C:) survived the pull and
+kept running - which is WORSE, because a dead process is obvious and a wedged
+one is not. Do not read "the lane is still up" as "the lane is fine".
+
+### THE ONLY CHECK THAT WORKS
+
+A log-watching monitor CANNOT see this - the failure writes nothing at all, and
+silence is identical to health. **Ask the DATABASE whether rows are landing:**
+
+    SELECT COUNT(*) FROM navigation WHERE recorded_details=''
+      AND id NOT LIKE 'RC_%'        -- twice, 60-90s apart
+
+Unchanged = wedged, no matter how alive the process looks. Watchdog written at
+scratchpad/rd_watchdog.py: polls this every 5 min and prints ONLY on trouble
+(wedge, crawl, refusal, missing process, drive gone).
+
+### RECOVERY - NOTHING IS LOST
+
+Kill and relaunch. An interrupted document is not a damaged document: its row
+simply stays `recorded_details=''` and the feeder picks it up again. In-memory
+`pend` (<=200 rows) is discarded and re-fetched. After restart: 5,323 rows in
+90s = 59.1 docs/s, err 0. **Do NOT run integrity_check** - 22 GB takes ~an hour
+and blocks everything; successful commits are stronger evidence than any
+read-only scan, and the lane commits every 200 rows.
+
+⚠ The Fleet Guard restarted `board_truth` on its own within 5 min but does NOT
+notice a wedged process - it only replaces MISSING ones. Aliveness is not the
+same predicate as usefulness. See [[project-decoder-updates-board]].
+
+### ⚠ A DETECTOR WITH NO MEMORY REPORTS A STATE, NOT AN EVENT (2026-08-26)
+
+The wedge watchdog above would have spammed every 5 minutes all night the
+moment it fired once. Two defects, both from writing it against the state that
+existed at the time:
+
+  1 it grepped the log TAIL for "refus" - but refusal text STAYS in the log,
+    so ONE event re-reports forever. Fix: remember each log's byte offset and
+    read only NEW bytes. An event is a transition; a grep sees only a state.
+  2 it called zero-rows-landing "WEDGED" - correct at 21:30, WRONG after 21:55
+    when acris was stopped ON PURPOSE. **An alarm that cannot distinguish
+    intended silence from failure is an alarm that gets ignored.**
+
+Replacement at scratchpad/night_watch.py watches only what can still break
+while acris is deliberately down: drive loss, rc_lane death, and - inverted -
+an ACRIS lane RESTARTING when nothing should have restarted it.
+⚠ It does NOT probe acris to see if the block lifted. A "has it resumed?"
+request is still a request, and the notice said stop.

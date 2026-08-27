@@ -78,7 +78,36 @@ def feeder():
         # through the same id order and never overtakes it
         rows = read.execute(
             "SELECT id, json_extract(recorded_details, '$.recorded')"
-            " FROM navigation WHERE pdf = ''"
+            # ⚠⚠ `pdf IN ('','pending')` IS THE INDEXED PREDICATE AND
+            # `pdf = ''` IS NOT. ix_nav_pdf_todo is
+            # `ON navigation(id) WHERE pdf IN ('','pending')`, and SQLite will
+            # NOT prove that `=''` implies that IN list - so the old form fell
+            # back to the PK autoindex and WALKED EVERY ROW from --lo forward.
+            # MEASURED 2026-08-26, this feeder's own query, LIMIT 3:
+            #
+            #     digital band  ['' ..3)   262.1 s      <- PK walk
+            #     BK_ band      ['B'..C)    24.0 s
+            #     FT_ film band ['FT'..G)    2.5 s
+            #
+            # EXPLAIN QUERY PLAN, same two queries:
+            #     pdf = ''                -> sqlite_autoindex_navigation_1
+            #     pdf IN ('','pending')   -> ix_nav_pdf_todo
+            #
+            # With LIMIT 5000 the digital arm needed FIVE THOUSAND matches out
+            # of that walk before it returned anything at all, which is why it
+            # sat at "0 pdfs" for minutes while its disk IO starved rd_walk
+            # from ~30 docs/s down to ~15.
+            #
+            # ⚠ IDENTICAL SEMANTICS HERE: acris never writes 'pending'
+            # (that is richmond's scan-lag state), so the IN form selects
+            # exactly the same acris rows - it just reaches them through the
+            # index instead of the table.
+            #
+            # ⚠ SAME DEFECT AS rc_lane's ix_nav_pdf_todo DRIFT (2026-08-25):
+            # the predicate and the partial index must match VERBATIM or the
+            # query silently degrades. `ready 0` was the tell there; "0 pdfs
+            # with 0 fail" was the tell here.
+            " FROM navigation WHERE pdf IN ('','pending')"
             " AND recorded_details != ''"
             " AND id > ? AND id < ? AND id NOT LIKE 'RC_%'"
             " ORDER BY id LIMIT 5000",

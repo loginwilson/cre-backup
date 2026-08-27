@@ -67,6 +67,9 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 import corpus_paths as CP                                    # noqa: E402
 
 OUT = HERE / "_board_truth.json"
+# >> the acris todo count is expensive; see the note at its call site
+ACRIS_EVERY = 300.0
+_LAST_ACRIS = [0.0]
 LOG = HERE / "board_truth.log"
 
 # ⚠ The prefix is the source split. 'RC_' sorts above every all-digit ACRIS id
@@ -97,7 +100,18 @@ def _acris_live():
              "Get-CimInstance Win32_Process -Filter \"Name='python.exe'\""
              " | Select-Object CommandLine | ConvertTo-Csv -NoTypeInformation"],
             capture_output=True, text=True, timeout=60).stdout
-        return "acris_lane.py" in txt
+        # >> THE OLD ACQUISITION LANES COUNT AS ACRIS BEING LIVE
+        # (2026-08-26). login restarted acris as rd_walk + image_walk rather
+        # than the consolidated acris_lane, so this test - which only knew the
+        # ONE script name - reported acris dead while it was landing ~27
+        # docs/s, and the board served a CACHED todo forever. login saw it
+        # immediately: "not seeing the chnage in the update on acris".
+        #
+        # ⚠ MATCH ON THE PATH SEPARATOR, NOT THE BARE NAME. "rd_walk.py"
+        # is a SUBSTRING of "rc_rd_walk.py" - richmond's own walker - so a bare
+        # `in` test would let a richmond process assert that acris is live.
+        return any(("\\" + n) in txt
+                   for n in ("acris_lane.py", "rd_walk.py", "image_walk.py"))
     except Exception:
         return True
 
@@ -143,11 +157,15 @@ def ledger_totals():
         out, when = {}, "-"
         for src in ("acris", "richmond"):
             r = con.execute(
-                "SELECT system_total + delta, run_at FROM synchronization"
-                " WHERE source=? AND system_total > 0"
+                "SELECT system_total + delta, run_at, delta FROM"
+                " synchronization WHERE source=? AND system_total > 0"
                 " ORDER BY rowid DESC LIMIT 1", (src,)).fetchone()
             if r:
                 out[src], when = r[0] or 0, r[1]
+                # >> delta kept SEPARATELY so a live system_total can be
+                # substituted without losing the source-vs-us gap. MEASURED 0
+                # for both sources 2026-08-26 (nav is LEVEL).
+                out[src + "_delta"] = r[2] or 0
         return out, when
     finally:
         con.close()
@@ -240,8 +258,22 @@ def counts(con):
     # ⚠ SKIP THE PAUSED SOURCE - see _acris_live(). The cached value is
     # LABELLED in the output; a stale count published as fresh is worse than
     # no count at all.
+    # ⚠ LIVE IS NOT THE SAME AS DUE. The acris todo count reads ~19.6M
+    # index entries: MEASURED 2026-08-26 at 43.79 s cold / 1.42 s warm, and
+    # this function's own history records it BLOCKING for 10+ minutes when
+    # rc_lane was writing ~33 MB/s to the same USB drive. There are now THREE
+    # writers on that drive (rc_lane + rd_walk + image_walk), and the json
+    # write is gated behind this count - so running it every 60 s would let
+    # acris's denominator freeze RICHMOND's live number, which is the exact
+    # failure _acris_live() was written to prevent.
+    #
+    # So: richmond keeps the 60 s tick (0.17 s, it can afford it) and acris is
+    # counted at most every ACRIS_EVERY seconds, serving the labelled cache in
+    # between. Fresh enough for a backfill that moves in hours, cheap enough
+    # not to block the source that moves in seconds.
     a_todo, t3, a_cached = None, 0.0, False
-    if not _acris_live():
+    _due = (time.time() - _LAST_ACRIS[0]) >= ACRIS_EVERY
+    if not _acris_live() or not _due:
         try:
             _p = json.loads(OUT.read_text(encoding="utf-8"))
             a_todo = _p.get("sources", {}).get("acris", {}).get("todo")
@@ -249,11 +281,16 @@ def counts(con):
             a_todo = None
         a_cached = a_todo is not None
     if a_cached:
-        say("    acris_todo    %13s  CACHED - acris is not running, so this "
-            "cannot have moved" % f"{a_todo:,}")
+        say("    acris_todo    %13s  CACHED - %s"
+            % (f"{a_todo:,}",
+               "acris is not running, so this cannot have moved"
+               if not _acris_live() else
+               "next live count in %.0fs (the %ds acris tick)"
+               % (ACRIS_EVERY - (time.time() - _LAST_ACRIS[0]), ACRIS_EVERY)))
     else:
         a_todo, t3 = one("acris_todo", "SELECT count(*) FROM navigation "
                          "WHERE pdf IN ('','pending') AND id<?", RC_LO)
+        _LAST_ACRIS[0] = time.time()
     # ⚠ TIMESTAMP THE COUNTS, NOT THE WRITE. The rate was differenced against
     # the previous anchor's `at`, which is when the file was WRITTEN - and the
     # nullprobe runs BETWEEN the counting and the write (121-217 s of it). So
@@ -271,8 +308,57 @@ def counts(con):
     totals, when = ledger_totals()
     rc_total, total = totals.get("richmond", 0), None
     a_total = totals.get("acris", 0)
-    say("    ledger totals  acris %s · richmond %s   (sync run %s)"
-        % (f"{a_total:,}", f"{rc_total:,}", when))
+
+    # >> RICHMOND'S TOTAL IS COUNTED LIVE NOW, NOT READ FROM THE LEDGER
+    # (login 2026-08-26: "the numbers shouldnt wait until the night, it should
+    # update live?"). They were right, and THE CALIBRATION THAT FORBADE IT HAD
+    # EXPIRED.
+    #
+    # The rule above says READ the total because the PK's RC_ range measured
+    # 168 s cold on 2026-08-23 - and it says why: "the PK's RC_ range is
+    # touched by nobody". That has not been true since rc_lane became one
+    # process: rd_heal does O(window) PK lookups every 15 min, _no_image() one
+    # per dead-end mint, and pending_recheck() re-reads the todo set every
+    # 300 s. The range is HOT now. RE-MEASURED 2026-08-26, twice, warm:
+    #
+    #     richmond   2,501,924 rows    0.17 s   0.18 s
+    #     acris     21,617,307 rows   43.79 s    1.42 s   <- still expensive cold
+    #     whole table                185.58 s              <- never
+    #
+    # A calibration is a value PLUS the conditions it was taken under. The
+    # conditions changed, so the value had to be re-taken - not inherited.
+    #
+    # ⚠ ACRIS STAYS ON THE LEDGER. 43.79 s cold is exactly the cost the
+    # original rule was protecting against, and acris is PAUSED - its row count
+    # cannot move, so a live count would spend 44 s to reproduce a constant.
+    # Same reasoning as _acris_live() already applies to the todo count.
+    #
+    # ⚠ THE DENOMINATOR IS STILL THE SOURCE'S COUNT. `delta` is
+    # source_total - system_total; MEASURED 0 for both sources (nav is LEVEL,
+    # checked by routine_navigation.py), so total == our row count today. It is
+    # added back anyway so this stays correct the day nav is NOT level rather
+    # than quietly reporting our own backlog as the world.
+    #
+    # ⚠ AND IT SAYS WHICH NUMBER IT USED. A live count that silently falls
+    # back to a 3-hour-old ledger reading is worse than one that never moved,
+    # because nothing on the board would look different.
+    rc_src = "ledger %s" % when
+    try:
+        _t = time.time()
+        _v = q("SELECT count(*) FROM navigation WHERE id>=? AND id<?",
+               (RC_LO, RC_HI)).fetchone()[0]
+        _el = time.time() - _t
+        if _v and _el < 30:
+            rc_total = _v + (totals.get("richmond_delta") or 0)
+            rc_src = "LIVE %.2fs" % _el
+        else:
+            rc_src = ("ledger %s  ⚠ live count took %.0fs (>30s budget) -"
+                      " FELL BACK, this number is stale" % (when, _el))
+    except Exception as _e:
+        rc_src = ("ledger %s  ⚠ live count failed (%s) - FELL BACK, this"
+                  " number is stale" % (when, type(_e).__name__))
+    say("    totals  acris %s (ledger %s) · richmond %s (%s)"
+        % (f"{a_total:,}", when, f"{rc_total:,}", rc_src))
     total, todo, t1, t2 = a_total + rc_total, a_todo + rc_todo, 0.0, 0.0
     # ⚠ NULL is the assumption-breaker. It is NOT in the todo index and NOT a
     # path, so `total - todo` would silently count it as landed. Counted here
@@ -301,6 +387,7 @@ def counts(con):
         "null_probe": nulls,
         "acris_cached": a_cached,
         "ledger_run": when,
+        "richmond_total_from": rc_src,
         "counted_at": counted_at,
     }
 
@@ -321,7 +408,7 @@ def measure():
         con.close()
 
     out = {"at": time.strftime("%Y-%m-%dT%H:%M:%S"),
-           "source": "todo counted from pdf column; total from sync ledger",
+           "source": ("todo counted from pdf column; richmond total COUNTED LIVE, acris total from sync ledger (paused)"),
            "depends_on": "navigation LEVEL (rows == ledger)",
            "ledger_run": c.get("ledger_run"),
            "counted_at": c.get("counted_at"),
