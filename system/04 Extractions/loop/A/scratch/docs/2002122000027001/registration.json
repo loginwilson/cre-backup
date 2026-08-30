@@ -1,0 +1,38 @@
+{
+  "type": "ASSIGNMENT, MORTGAGE",
+  "pages": "2",
+  "doc_date": "8/23/2002",
+  "crfn": "2003000000012",
+  "recorded": "1/6/2003 10:58:10 AM",
+  "borough": "MANHATTAN",
+  "amount": "$0.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "INTERAMERICA MORTGAGE CORPORATION",
+      "address": "ONE CROSS ISLAND PLAZA",
+      "city": "ROSEDALE",
+      "state": "NY",
+      "zip": "11422",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "OPTION ONE MORTGAGE",
+      "address": "3 ADA",
+      "city": "IRVINE",
+      "state": "CA",
+      "zip": "92618",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "1022150381",
+      "partial": "ENTIRE LOT",
+      "use": "DWELLING ONLY - 1 FAMILY",
+      "address": "124 WEST 227 STREET"
+    }
+  ],
+  "at": "2026-08-20T17:03:22"
+}

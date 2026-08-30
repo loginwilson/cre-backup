@@ -228,6 +228,13 @@ stat = {"minted": 0, "skipped": 0, "got": 0, "bytes": 0, "err": 0,
         "wrote": 0, "stale": 0, "synced": 0, "probe_req": 0, "rd": 0,
         "hot": 0}
 last_ok = [time.time()]
+# !! EVIDENCE THAT WORK WAS ATTEMPTED, not merely that it succeeded.
+# The watchdog below cannot tell 'the route died' from 'there is nothing
+# to do' without this - and richmond is at 100%, so 'nothing to do' is
+# now its NORMAL state. Measured 2026-08-27: 6 recycles in 30 minutes,
+# every 300s on the dot, each one discarding warm sockets to repair a
+# route that was never broken.
+last_try = [0.0]
 
 RESTRICTED = set()
 if RESTRICTED_F.exists():
@@ -286,10 +293,22 @@ def watchdog():
     board ever caught that."""
     while not STOP.is_set():
         time.sleep(20)
-        quiet = time.time() - last_ok[0]
-        if quiet >= a.stall_after and not HOLD.is_set():
-            recycle_session("no successful pull for %.0fs - presuming the"
-                            " route changed under us" % quiet)
+        now = time.time()
+        quiet = now - last_ok[0]
+        trying = (now - last_try[0]) < a.stall_after
+        # !! SILENCE ONLY MEANS A DEAD ROUTE IF WE WERE ACTUALLY TRYING.
+        # `last_ok` moves on a SUCCESSFUL pull, so an idle lane starves it
+        # and the old test fired forever. Requiring a RECENT ATTEMPT makes
+        # the two cases separable:
+        #   issuing + not succeeding -> the route really is dead -> recycle
+        #   not issuing at all       -> no work; silence is correct -> wait
+        # A DETECTOR THAT CANNOT DISTINGUISH INTENDED SILENCE FROM FAILURE
+        # IS ONE THAT GETS IGNORED - the same lesson the night watch learned
+        # twice on 2026-08-26.
+        if quiet >= a.stall_after and trying and not HOLD.is_set():
+            recycle_session("no successful pull for %.0fs while STILL"
+                            " ISSUING - presuming the route changed under us"
+                            % quiet)
             last_ok[0] = time.time()
 
 
@@ -570,6 +589,7 @@ def puller():
             # ⚠ stream=True, as the proven puller had it: the body is read
             # off the socket by .content below, so the READ timeout applies
             # per chunk rather than to one whole 5 MB transfer.
+            last_try[0] = time.time()      # issued - see watchdog
             r = sess.get(loc, timeout=(10, 90), stream=True)
             if r.status_code in (401, 403, 429):
                 refusal_verdict(did, r.status_code)

@@ -1,0 +1,40 @@
+{
+  "type": "AGREEMENT",
+  "pages": "3",
+  "doc_date": "11/14/2002",
+  "crfn": "2003000015145",
+  "recorded": "2/10/2003 2:30:43 PM",
+  "borough": "QUEENS",
+  "amount": "$0.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "HSBC MORTGAGE CORP.",
+      "address": "2929",
+      "address2": "WALDEN AVE",
+      "city": "DEPEW",
+      "state": "NY",
+      "zip": "14043",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "HSBC MORTGAGE CORP.",
+      "address": "2929",
+      "address2": "WALDEN AVE",
+      "city": "DEPEW",
+      "state": "NM",
+      "zip": "14043",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "4069950034",
+      "partial": "ENTIRE LOT",
+      "use": "DWELLING ONLY - 1 FAMILY",
+      "address": "75-02 UTOPIA PKWY"
+    }
+  ],
+  "at": "2026-08-20T17:03:23"
+}

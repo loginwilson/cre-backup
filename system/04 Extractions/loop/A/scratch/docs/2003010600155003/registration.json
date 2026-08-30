@@ -1,0 +1,50 @@
+{
+  "type": "ASSIGNMENT, MORTGAGE",
+  "pages": "4",
+  "doc_date": "10/26/2002",
+  "crfn": "2003000115715",
+  "recorded": "5/5/2003 10:18:03 AM",
+  "borough": "BROOKLYN",
+  "amount": "$0.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "MID-ISLAND EQUITIES CORP.",
+      "address": "900 MERCHANTS CONCOURSE",
+      "city": "WESTBURY",
+      "state": "NY",
+      "zip": "11590",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "MID-ISLAND MORTGAGE CORP.",
+      "address": "900 MERCHANTS CONCOURSE",
+      "city": "WESTBURY",
+      "state": "NY",
+      "zip": "11590",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "3052120054",
+      "partial": "ENTIRE LOT",
+      "use": "DWELLING ONLY - 1 FAMILY",
+      "address": "460 EAST 26TH STREET"
+    },
+    {
+      "bbl": "3052120054",
+      "partial": "ENTIRE LOT",
+      "use": "DWELLING ONLY - 1 FAMILY",
+      "address": "460 EAST 26TH STREET"
+    },
+    {
+      "bbl": "3052120054",
+      "partial": "ENTIRE LOT",
+      "use": "DWELLING ONLY - 1 FAMILY",
+      "address": "460 EAST 26TH STREET"
+    }
+  ],
+  "at": "2026-08-20T17:03:28"
+}

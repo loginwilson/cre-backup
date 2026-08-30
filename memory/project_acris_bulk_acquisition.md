@@ -117,3 +117,37 @@ rule: *"do not retry, do not rotate, do not raise concurrency."*
 
 **Richmond is unaffected by any of this** — different host
 (richmondcountyclerk.com), ran `err 0` throughout both ACRIS blocks.
+
+## ⚠ pdf IS ~12 REQUESTS PER DOCUMENT - PLAN IN REQUESTS, NOT DOCUMENTS
+
+From the 2026-08-24 pdf tempo ladder:
+
+    tempo  91.3 req/s  delivered  88.9  ->  7.90 docs/s   = 11.3 req/doc
+    tempo 107.3 req/s  delivered 105.6  ->  8.74 docs/s   = 12.1 req/doc
+
+A document is a metadata call PLUS one image request per page. rd is 1
+request per document. **So the thing ACRIS meters (requests) and the thing we
+count (documents) differ by ~12x on pdf and 1x on rd** - a pace that is safe
+for rd says nothing about pdf.
+
+    rd at 25.3 docs/s  =  ~25 req/s
+    pdf at that same request rate  ->  ~2 docs/s
+    pdf's own measured best        ->  8.74 docs/s
+
+~19.6M pdf remaining at 8.74/s = **~26 days continuous**. pdf is the long
+pole by a wide margin. ⚠ And at steady state, low document inflow still means
+~12 pdf requests per new filing - the lane's request rate stays pdf-dominated
+even when inflow is small.
+
+## ⚠⚠ STORAGE MAY NOT FIT - MEASURE BEFORE THE pdf CAMPAIGN
+
+    pdf store today   2,035,977 docs in ~2,640 GB  =  ~1.3 MB/doc
+    full corpus       21.6M x 1.3 MB               =  ~28 TB
+    the One Touch     18.6 TB total
+
+⚠ ROUGH, AND THE UNCERTAINTY RUNS THE WRONG WAY: unknown what fraction of
+those 2M are real files vs ZERO-BYTE `absent`/`imageless` verdicts. If many
+are verdicts, real per-document size is HIGHER, not lower. Measuring the split
+needs a table scan (pdf values other than ''/'pending' are not indexed) - do
+it while lanes are PAUSED, not during a run. Answer this before committing to
+a 26-day pdf campaign. See [[project-acris-access-shape]].

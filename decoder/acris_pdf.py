@@ -104,7 +104,22 @@ def page_count(did, timeout=90):
     LD.check_refused(text)                 # Refused - HTTP 200 notice page
     fetch_pages._check_denied(body, ct)    # AccessDenied - blocked payload
     m = _TOTAL.search(text)
-    return int(m.group(1)) if m else 0
+    # ⚠⚠ A REGEX MISS IS NOT A ZERO (found 2026-08-28, the hard way): the
+    # image host served a fixed 4,922-byte HTML page - not the Bandwidth
+    # Notice, not the Akamai denial, a THIRD shape - and this line's
+    # `else 0` turned every one into TotalPages=0, which the caller wrote
+    # down as a permanent 'imageless' verdict: ~thousands of false verdicts
+    # in 10 minutes. A TRUE imageless doc IDENTIFIES ITSELF (the viewer
+    # carries TotalPages:0 explicitly); a page without the token is an
+    # UNKNOWN SHAPE and must be a retryable failure, never a conclusion.
+    # Same family as the refusal->imageless trap this function's docstring
+    # already records.
+    if not m:
+        raise ValueError(
+            "viewer page did not identify itself (no TotalPages token,"
+            " %d bytes, ct=%s) - unknown page shape, never a verdict"
+            % (len(body), ct))
+    return int(m.group(1))
 
 
 def fetch_pdf(did, rec_date="", timeout=90, turn=None):

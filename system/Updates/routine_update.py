@@ -98,9 +98,18 @@ _HEARTBEAT = {
     # ⚠ Dead arms still match the glob and that is fine HERE: this takes
     # max(mtime), so a live arm always outranks them. _CUM_SPEC SUMS its
     # files, so there the dead ones had to be filtered by freshness instead.
-    ("acquisition rd", "acris"): ["acris_lane.log", "rd_walk_*.log"],
-    ("synchronization", "acris"): ["acris_lane.log"],
-    ("acquisition pdf", "acris"): ["acris_lane.log", "image_walk_*.log"],
+    # ⚠ THE HEARTBEAT IS THE THIRD THING A CONSOLIDATION MOVES, and on
+    # 2026-08-28 I moved only two (PROC_SIG + _CUM_SPEC) - so every acris
+    # row watched acris_lane.log, which has not been written since 16:31,
+    # read it as a dead lane, and printed STALLED/eta "paused" WHILE
+    # acris_reproduction landed 7.8 docs/s (login: "reproduction isnt
+    # paused?"). The file's own rule, three lines below, says exactly this.
+    ("acquisition rd", "acris"): ["acris_lane.log", "rd_walk_*.log",
+                                  str(DECODER / "acris_repro_*.log")],
+    ("synchronization", "acris"): ["acris_lane.log",
+                                   str(DECODER / "acris_repro_*.log")],
+    ("acquisition pdf", "acris"): ["acris_lane.log", "image_walk_*.log",
+                                   str(DECODER / "acris_repro_*.log")],
     # ⚠ rc_pdf_land.log only hears the RAW-incoming lander; the db writer is
     # rc_pdf_pull, which logs into its own cwd (the decoder dir). Watching the
     # lander's log kept a 6-hour wedge invisible until 2026-08-23 20:00.
@@ -157,7 +166,8 @@ _LAST_RD = [0.0, None]
 
 _CUM_SPEC = {
     ("acquisition rd", "acris"):
-        (("acris_lane.log", "rd_walk_*.log"), r"([\d,]+) total"),
+        (("acris_lane.log", "rd_walk_*.log", str(DECODER / "acris_repro_*.log")),
+         r"([\d,]+) total"),
     # ⚠ THE CONSOLIDATED ROW COUNTS READY-TO-DECODE DOCS (login 2026-08-24:
     # "one eta one code that eventually results in the level ready to
     # decode"). The lane's pdf pool is the LAST gate - pdf only ever follows
@@ -166,7 +176,8 @@ _CUM_SPEC = {
     # prints in the same log and still feeds the hidden acq rd row; it is
     # deliberately NOT this row's rate - rd alone is not ready.
     ("synchronization", "acris"):
-        (("acris_lane.log",), r"([\d,]+) pdfs.*?([\d,]+) imageless"),
+        (("acris_lane.log", str(DECODER / "acris_repro_*.log")),
+         r"([\d,]+) pdfs.*?([\d,]+) imageless"),
     # ⚠⚠ GLOB, NEVER A HARDCODED ARM LIST. This named i1/i2/i3 - arms
     # that stopped running days ago. On 2026-08-26 the acris pdf lanes came
     # back as image_walk_d1/f1 and this row went 0.0/s STALLED while they
@@ -176,27 +187,29 @@ _CUM_SPEC = {
     # accident that its arm was named rd_walk_a1.log, which WAS in its list.
     # An arm the board cannot name is an arm the board reports as broken.
     ("acquisition pdf", "acris"):
-        (("acris_lane.log", "image_walk_*.log"),
+        (("acris_lane.log", "image_walk_*.log", str(DECODER / "acris_repro_*.log")),
          r"([\d,]+) pdfs.*?([\d,]+) imageless"),
     # rc_pdf_pull's "db N" IS rows written to the pdf column this run -
     # the exact "result the python is coding into the db" (login). Absolute
     # path: the puller logs into its own cwd, not NAV_WORK.
     ("acquisition pdf", "richmond"):
         ((str(DECODER / "rc_lane.log"),), r"db ([\d,]+)"),
-    # >> AND THE SAME FOR THE CONSOLIDATED ROW - the third and last piece of
-    # the richmond move. `landed` comes from _board_truth.json, which
-    # board_truth refreshes on a ~30 MINUTE anchor interval, so differencing
-    # it on a 60-second tick reads 0 on ~29 of every 30 ticks. That is why
-    # the row printed `now 0.0/s` with a 5m rate decaying 53 -> 30 -> 20 as
-    # one stale lump spread over a widening window (login: "still not seeing
-    # the update properly"). The lane's own monotonic "db N" is the honest
-    # rate at tick resolution; landed stays the measured anchor.
-    # ⚠ A CONSOLIDATION MOVES THREE THINGS OR THE ROW LIES: the process
-    # signature (else always STALLED), the heartbeat log (else a real wedge
-    # is invisible), and the rate spec (else 0.0/s forever). All three are
-    # now on rc_lane.
-    ("synchronization", "richmond"):
-        ((str(DECODER / "rc_lane.log"),), r"db ([\d,]+)"),
+    # ⚠ sync|richmond WAS HERE (rate from rc_lane.log's "db N") AND WAS
+    # REMOVED 2026-08-28. The condition that justified it EXPIRED: it was
+    # added when the landed anchor refreshed every ~30 min (differencing it
+    # on a 60 s tick read 0 on 29 of 30 ticks), but board_truth has counted
+    # richmond LIVE every 60 s since 2026-08-26 - the anchor now moves at
+    # tick resolution and differencing it is exact, not aliased.
+    # AND the "db N" counter only sees PULLER DOWNLOADS, while this row's
+    # landed counts every ASSIGNMENT (a fresh filing marked 'pending' is a
+    # landed determination). MEASURED 2026-08-28 16:15-16:35: landed climbed
+    # +83 (rd heal + pending maturations) while "db" sat flat at 112 - the
+    # board printed 0.0/s +0 on a visibly climbing row (login: "its not
+    # showing it in the rate"). Rate and landed must come from the SAME
+    # subtraction; with this entry gone the row differencing its own
+    # anchored landed provides exactly that.
+    # (acq pdf|richmond above deliberately KEEPS the cum counter - that row
+    # measures downloads, and "db N" is its honest tick-resolution rate.)
 }
 
 
@@ -300,15 +313,39 @@ ORG_BACKFILL = {}
 #   TOTAL         landed / needed · pct_of_total
 # eta_now vs eta disagreeing IS the signal something just changed.
 DDL = """CREATE TABLE IF NOT EXISTS update_board (
-    phase TEXT NOT NULL, source TEXT NOT NULL,
+    source TEXT NOT NULL, phase TEXT NOT NULL,
     rate_now REAL, increase_now INTEGER, pct_now REAL, eta_now TEXT,
     rate REAL, increase INTEGER, pct_increase REAL, eta TEXT,
     landed INTEGER, needed INTEGER, pct_of_total REAL,
     status TEXT, as_of TEXT,
-    PRIMARY KEY (phase, source))"""
+    PRIMARY KEY (source, phase))"""
+# >> TWO TABLES (login 2026-08-28: "we could do 2 tables. one as the main
+# and then toggle tab to see the floors"). `update_board` holds ONE row
+# per source - the whole-lane reproduction row. `update_floors` holds the
+# moving mechanisms inside each lane (synchronization / recorded details /
+# documentation), same 15 columns, toggled to in DB Browser's table
+# dropdown. Total stays headline; floors stay inspectable.
+DDL_FLOORS = DDL.replace("update_board", "update_floors")
+FLOOR_PHASES = ("acquisition rd", "acquisition pdf")
 N_COLS = 15   # ⚠ schema changes DROP the old table or every INSERT dies with
               # a column-count error while the table survives (measured; the
               # board is rebuilt every pass, so dropping loses nothing)
+# >> SOURCE FIRST + THE REPRODUCTION LABEL (login 2026-08-28: "move source
+# and phase to switch? so it goes Acris Reproduction. then rename
+# synchronization to reproduction"). The label is a DISPLAY mapping at the
+# write/print boundary ONLY - every internal key (config cadence/show,
+# PROC_SIG, _CUM_SPEC, ANCHORED, history) stays "synchronization", so no
+# spec or history breaks. The board row READS "acris | reproduction".
+PHASE_LABEL = {"synchronization": "reproduction",
+               # >> the mechanism rows under the total row, in login's
+               # PHASE-VERB vocabulary (2026-08-28: "acris synchronization,
+               # acris registration, acris documentation stacked"):
+               # register = rd, document = pdf.
+               "acquisition rd": "registration",
+               "acquisition pdf": "documentation"}
+# floors stack BY SOURCE (all of acris's three, then richmond's) in the
+# cycle's order:
+FLOOR_ORDER = {"synchronization": 0, "registration": 1, "documentation": 2}
 
 
 def eta_of(landed, needed, rate):
@@ -364,7 +401,8 @@ def eta_of(landed, needed, rate):
 # which running process proves a row is being WORKED (status PENDING vs
 # STALLED); matched against the live python command lines
 PROC_SIG = {
-    ("synchronization", "acris"): ("acris_lane.py", "acris_live.py",
+    ("synchronization", "acris"): ("acris_lane.py", "acris_reproduction.py",
+                                   "acris_live.py",
                                    "live_gap.py", "crfn_monitor.py",
                                    "routine_synchronization.py",
                                    "routine_4am.py"),
@@ -379,8 +417,10 @@ PROC_SIG = {
     ("synchronization", "richmond"): ("rc_lane.py",),
     ("navigation", "acris"): ("nav_append.py",),
     ("navigation", "richmond"): ("nav_append.py",),
-    ("acquisition rd", "acris"): ("rd_walk.py", "acris_lane.py"),
-    ("acquisition pdf", "acris"): ("image_walk.py",),
+    ("acquisition rd", "acris"): ("rd_walk.py", "acris_lane.py",
+                                  "acris_reproduction.py"),
+    ("acquisition pdf", "acris"): ("image_walk.py", "acris_lane.py",
+                                   "acris_reproduction.py"),
     # ⚠ rc_pdf_pull.py ADDED 2026-08-22 - it IS the richmond pdf lane now.
     # The browser loop was replaced that night and this map was not updated,
     # so the board could not attribute the work to this row: it reported
@@ -801,10 +841,20 @@ def gather():
     # survived two baseline rewrites and kept the row at 97%/100.17% -
     # 2026-08-21 11 PM; the baseline is data, never a literal) + the
     # CODED walk's lanes (rc_rd_walk)
-    rc_rd = base.get("rc_rd", 0) + sum(
+    # >> RICHMOND RD IS TRUTH, NOT A COUNTER (login 2026-08-28: "anything
+    # richmond should be complete... 100% across the board"). The stale
+    # baseline (2,501,589, an 8/22 number) + a dead rc_rd_walk glob kept
+    # the registration floor at 99.97% STALLED while richmond rd is
+    # actually complete (rd-todo proven 0 in the week audit). rd is the
+    # documentation gate, and documentation is COMPLETE at the full total
+    # (pdf only follows rd), so rd landed == the richmond total. Read it
+    # from the SAME anchor as everything else instead of a counter that
+    # can only drift. rc_pdf (documentation landed, from _board_truth) is
+    # a floor on rd; when it equals need_r, rd is complete by construction.
+    rc_rd = max(rc_pdf, base.get("rc_rd", 0) + sum(
         num(last_progress(p.stem), r"\+([\d,]+) this run")
         for p in W.glob("rc_rd_walk_*.log")
-        if not p.name.endswith(".err.log") and p.stat().st_mtime > bstamp)
+        if not p.name.endswith(".err.log") and p.stat().st_mtime > bstamp))
     out[("acquisition rd", "richmond")] = (rc_rd, need_r)
     # ORGANIZATION, PER SOURCE (login 2026-08-22: "remove the old
     # organization and add in the 2 for acris and richmond"). Same shape as
@@ -853,13 +903,23 @@ def main(loop):
             .replace("\n", " ").split(",") if c.split()
             and not c.strip().startswith("PRIMARY")]
     cols = [r[1] for r in con.execute("PRAGMA table_info(update_board)")]
-    if cols and (set(want) - set(cols) or "cadence" in cols):
+    # ⚠ cols[0] check: the 2026-08-28 source-first reorder keeps the same
+    # column NAMES, so the set difference alone cannot see it - but the
+    # INSERTs are positional, so an unrebuilt table would swap every row's
+    # source and phase silently.
+    if cols and (set(want) - set(cols) or "cadence" in cols
+                 or cols[0] != "source"):
         con.execute("DROP TABLE update_board")     # old schema, transient data
     con.execute(DDL)
     cols = con.execute("PRAGMA table_info(update_board)").fetchall()
     if len(cols) != N_COLS:
         con.execute("DROP TABLE update_board")
         con.execute(DDL)
+    # the floors table rides the same schema rules
+    fcols = [r[1] for r in con.execute("PRAGMA table_info(update_floors)")]
+    if fcols and (fcols[0] != "source" or len(fcols) != N_COLS):
+        con.execute("DROP TABLE update_floors")
+    con.execute(DDL_FLOORS)
     st = {"hist": {}, "due": {}}
     if STATE.exists():
         try:
@@ -880,6 +940,7 @@ def main(loop):
             ps = ""
         rows = gather()
         lines = []
+        floors_rows = []          # collected, written stacked by source
         show = c.get("show") or []        # phase whitelist; empty = all
         # ⚠ THE BOARD READS IN PHASE ORDER, NOT ALPHABETICAL (login
         # 2026-08-22: "the order should be in order of the phases since org
@@ -893,6 +954,7 @@ def main(loop):
             (ph, sr), _ = kv
             return (ORDER.index(ph) if ph in ORDER else 99, ph, sr)
         con.execute("DELETE FROM update_board")   # rewritten in order below
+        con.execute("DELETE FROM update_floors")  # same law, same pass
         for (phase, src), (landed, needed) in sorted(rows.items(),
                                                      key=phase_rank):
             if show and phase not in show:
@@ -1015,12 +1077,12 @@ def main(loop):
                     con.execute(
                         "INSERT OR REPLACE INTO update_board VALUES"
                         " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                        (phase, src,
+                        (src, PHASE_LABEL.get(phase, phase),
                          round(rate_now, 2), d, round(pct_i, 3), "waiting",
                          round(rate, 2), d, round(pct_i, 3), "waiting on acq",
                          landed, needed, round(pct_t, 2), "PENDING", win))
                     lines.append(
-                        f"UPDATE {phase:<15} | {src:<9} | {win}"
+                        f"UPDATE {src:<9} | {PHASE_LABEL.get(phase, phase):<15} | {win}"
                         f" | now {rate_now:5.1f}/s | avg {rate:5.1f}/s | +{d:>7,} {pct_i:+7.2f}%"
                         f" | {landed:>10,} / {needed:>10,} = {pct_t:6.2f}%"
                         f" | ETA waiting on acq | PENDING")
@@ -1029,6 +1091,17 @@ def main(loop):
                 # needed == 0 is a MEASURED nothing-owed (a zero-delta sync
                 # run), not an absence - nothing owed IS complete
                 status = "COMPLETE"
+            # ⚠⚠ A RATE IS PROOF OF LIFE (login 2026-08-28: "if theres a
+            # rate it cant be paused and the eta calcs since it is
+            # active"). Every "is something running?" test here is a PROXY
+            # - a process-name list, a log's mtime - and each one has
+            # failed at least once while work was demonstrably landing
+            # (PROC_SIG naming a retired script; the heartbeat map still
+            # pointing at acris_lane.log). MEASURED MOVEMENT OUTRANKS
+            # EVERY PROXY: if this row's own counters moved, it is ACTIVE
+            # and it gets a real eta, whatever the proxies believe.
+            # (the movement override lives further down, where the
+            # counter-lane rates are final - see THE MOVEMENT OVERRIDE)
             elif worked and d == 0 and _lane_log_stale(phase, src, now):
                 # ⚠ THE 20-MINUTE BLINDNESS (login 2026-08-23: "if it stops
                 # working, we lose 20 minutes"). A hung-but-ALIVE lane keeps
@@ -1167,18 +1240,72 @@ def main(loop):
             # as a promise. A lane paused at 09:00 would otherwise keep
             # advertising a finish date all day. COMPLETE has no future to
             # estimate. Only ACTIVE earns an extrapolation.
+            # ⚠⚠ THE MOVEMENT OVERRIDE BELONGS *HERE*, WHERE THE NUMBERS
+            # ARE FINAL (login 2026-08-28: "if theres a rate it cant be
+            # paused"). I first put this test up in the status block, but
+            # the counter-lane rates (rate_now/d_now from _lane_cum) are
+            # assigned FURTHER DOWN - so it read 0 and the board printed
+            # "2.7/s ... STALLED / eta paused" on a row that was visibly
+            # moving. Anything that measured movement outranks every
+            # proxy, but only once the measurement exists.
+            if (status in ("PENDING", "STALLED") and landed < needed
+                    and (rate_now > 0 or rate > 0 or d_now > 0 or d > 0)):
+                status = "ACTIVE"
             if status == "COMPLETE":
                 eta = eta_now = "complete"
             elif status in ("PENDING", "STALLED"):
                 eta = eta_now = "paused"
-            con.execute("INSERT OR REPLACE INTO update_board VALUES"
-                        " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                        (phase, src,
-                         round(rate_now, 2), d_now, round(pct_n, 3), eta_now,
-                         round(rate, 2), d, round(pct_i, 3), eta,
-                         landed, needed, round(pct_t, 2), status, win))
+            disp = PHASE_LABEL.get(phase, phase)
+            # >> mechanism rows COLLECT for the FLOORS table (the toggle
+            # tab), written stacked BY SOURCE after the loop; only the
+            # whole-lane reproduction row stays on the main board
+            if phase in FLOOR_PHASES:
+                floors_rows.append(
+                    (src, disp,
+                     round(rate_now, 2), d_now, round(pct_n, 3), eta_now,
+                     round(rate, 2), d, round(pct_i, 3), eta,
+                     landed, needed, round(pct_t, 2), status, win))
+            else:
+                con.execute("INSERT OR REPLACE INTO update_board VALUES"
+                            " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                            (src, disp,
+                             round(rate_now, 2), d_now, round(pct_n, 3),
+                             eta_now,
+                             round(rate, 2), d, round(pct_i, 3), eta,
+                             landed, needed, round(pct_t, 2), status, win))
+            # >> THE SYNCHRONIZATION FLOOR (login: the monitor/walk is a
+            # mechanism too). landed = needed = the ledger's id count -
+            # level by construction; the INFLOW RATE is the information.
+            # Differenced off `needed` itself, same-subtraction law.
+            if phase == "synchronization":
+                nk = "needed|" + src
+                nh = [x for x in st["hist"].get(nk, [])
+                      if now - x[0] <= RATE_WINDOW]
+                if not nh or nh[-1][1] != needed:
+                    nh.append([now, needed])
+                st["hist"][nk] = nh
+                nd = needed - nh[0][1]
+                nspan = now - nh[0][0]
+                nrate = nd / nspan if nspan >= MIN_SPAN else 0.0
+                nrec = [x for x in nh if now - x[0] <= NOW_WINDOW]
+                ndn = (needed - nrec[0][1]) if len(nrec) > 1 else nd
+                # ⚠ ETA FOLLOWS STATUS, NO EXCEPTIONS (login 2026-08-28:
+                # "ETA should never be 'level'"). synchronization is level
+                # by construction (the monitor lands an id and records it
+                # atomically), so landed==needed -> COMPLETE -> "complete".
+                # The inflow information lives in the RATE columns, never
+                # in eta. If the db ever falls behind the ledger (a real
+                # sync gap) it goes ACTIVE with a computed eta.
+                s_rate_now = round(ndn / max(nspan, 1) if nspan else 0.0, 3)
+                s_rate = round(nrate, 3)
+                # landed==needed by construction -> COMPLETE -> "complete"
+                floors_rows.append(
+                    (src, "synchronization",
+                     s_rate_now, ndn, 0.0, "complete",
+                     s_rate, nd, 0.0, "complete",
+                     needed, needed, 100.0, "COMPLETE", win))
             lines.append(
-                f"UPDATE {phase:<15} | {src:<9} | {win}"
+                f"UPDATE {src:<9} | {disp:<15} | {win}"
                 f" | now {rate_now:5.1f}/s +{d_now:,} {pct_n:+.3f}% eta {eta_now}"
                 f" | 5m {rate:5.1f}/s +{d:,} {pct_i:+.3f}% eta {eta}"
                 f" | {landed:>10,} / {needed:>10,} = {pct_t:6.2f}% | {status}")
@@ -1193,12 +1320,19 @@ def main(loop):
         # rd rows, 0 unkeyed (parcel 94.62%, pdf-pass 830,014, reference 76).
         con.execute("DELETE FROM update_board WHERE phase='keying pass 1'"
                     " AND source!='all'")
+        # >> floors land here, stacked by source then cycle order (login:
+        # "acris synchronization, acris registration, acris documentation
+        # stacked... then richmond")
+        floors_rows.sort(key=lambda r: (r[0], FLOOR_ORDER.get(r[1], 9)))
+        con.executemany("INSERT OR REPLACE INTO update_floors VALUES"
+                        " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", floors_rows)
         k = con.execute(
             "SELECT SUM(rate_now), SUM(increase_now), SUM(rate),"
             " SUM(increase), SUM(landed), SUM(needed)"
-            " FROM update_board WHERE phase='acquisition rd'").fetchone()
+            " FROM update_floors WHERE phase='registration'").fetchone()
         kstats = [r[0] for r in con.execute(
-            "SELECT status FROM update_board WHERE phase='acquisition rd'")]
+            "SELECT status FROM update_floors"
+            " WHERE phase='registration'")]
         # login 2026-08-24: keying is BUILT INTO sync (the trigger) - the
         # pass rows render only if config still lists them in `show`
         if "keying pass 1" in show and k and k[5]:
@@ -1206,7 +1340,7 @@ def main(loop):
             con.execute(
                 "INSERT OR REPLACE INTO update_board VALUES"
                 " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                ("keying pass 1", "all",
+                ("all", "keying pass 1",
                  round(krn, 2), kdn, round(kdn / kn * 100, 3),
                  eta_of(kl, kn, krn),
                  round(kr, 2), kd, round(kd / kn * 100, 3),
@@ -1229,7 +1363,7 @@ def main(loop):
                 continue
             con.execute("INSERT OR REPLACE INTO update_board VALUES"
                         " (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                        (kphase, "all", 0.0, 0, 0.0, gate,
+                        ("all", kphase, 0.0, 0, 0.0, gate,
                          0.0, 0, 0.0, gate,
                          0, 830014, 0.0, "PENDING", win))
         # the board drops only UNKNOWN phases (schema leftovers - login:
@@ -1237,6 +1371,10 @@ def main(loop):
         # keeps its row: phase routines write their rows as they run, and
         # showing them later is a config flip, not a recompute.
         known = list(c.get("cadence", {}).keys()) or show
+        # the display labels are stored in the phase column now - a known
+        # phase's label is known too, or this delete would eat every
+        # "reproduction" row the pass just wrote
+        known = known + [PHASE_LABEL[k] for k in known if k in PHASE_LABEL]
         if known:
             con.execute("DELETE FROM update_board WHERE phase NOT IN (%s)"
                         % ",".join("?" * len(known)), known)

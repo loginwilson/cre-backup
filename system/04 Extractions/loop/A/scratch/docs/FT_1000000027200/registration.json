@@ -1,0 +1,27 @@
+{
+  "type": "DECLARATION",
+  "pages": "7",
+  "recorded": "4/4/1983",
+  "borough": "MANHATTAN",
+  "amount": "$0.00",
+  "map_seq": "0",
+  "reel_page": "677-354",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "EUGENE A. HOFFMAN, INC.",
+      "zip": "00000",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "1012580001",
+      "partial": "ENTIRE LOT",
+      "use": "PRE-ACRIS",
+      "address": "47 WEST 42 STREET"
+    }
+  ],
+  "remarks": "DECLARATION",
+  "at": "2026-08-20T17:12:12"
+}

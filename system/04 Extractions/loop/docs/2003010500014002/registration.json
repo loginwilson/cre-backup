@@ -1,0 +1,39 @@
+{
+  "type": "ASSIGNMENT OF LEASE",
+  "pages": "7",
+  "doc_date": "12/16/2002",
+  "crfn": "2003000000324",
+  "recorded": "1/9/2003 3:39:44 PM",
+  "borough": "MANHATTAN",
+  "amount": "$0.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "LAMONT, BETH",
+      "address": "200 RECTOR PLACE",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10280",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "JONES, RALPH",
+      "address": "377 RECTOR PLACE, UNIT 10-A",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10280",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "1000165066",
+      "partial": "ENTIRE LOT",
+      "use": "SINGLE RESIDENTIAL CONDO UNIT",
+      "address": "200 RECTOR PLACE",
+      "unit": "25B"
+    }
+  ],
+  "at": "2026-08-20T17:03:25"
+}

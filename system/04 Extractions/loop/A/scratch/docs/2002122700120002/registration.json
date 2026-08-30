@@ -1,0 +1,50 @@
+{
+  "type": "MORTGAGE",
+  "pages": "25",
+  "doc_date": "11/19/2002",
+  "crfn": "2003000112666",
+  "recorded": "5/1/2003 9:25:04 AM",
+  "borough": "QUEENS",
+  "amount": "$384,900.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "ILIE, NICLOAE",
+      "address": "69-57",
+      "address2": "62 ST",
+      "city": "GLENDALE",
+      "state": "NY",
+      "zip": "11385",
+      "country": "US"
+    },
+    {
+      "panel": "1",
+      "name": "MATEIASEVICI, GECA",
+      "address": "69-57",
+      "address2": "62 ST",
+      "city": "GLENDALE",
+      "state": "NY",
+      "zip": "11385",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "JPMORGAN CHASE BANK",
+      "address": "1",
+      "address2": "CHASE MANHATTAN PLAZA",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10081",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "4036310051",
+      "partial": "ENTIRE LOT",
+      "use": "DWELLING ONLY - 2 FAMILY",
+      "address": "69-57 62 STREET"
+    }
+  ],
+  "at": "2026-08-20T17:03:22"
+}

@@ -679,3 +679,10 @@ So: acquisition may never treat a placeholder as terminal inside the window, a p
 never be marked complete while it holds one, and anything that lands late must re-enter
 the pipeline — **a newly acquired image is new input to extraction, not just a file on
 disk.** Acquisition's job does not end at the byte.
+
+> ⚠ **READ [transport.md](transport.md) BEFORE TUNING ANY WIDTH.**
+> Whether ACRIS serves us is decided by the TRANSPORT, not the worker
+> count: a pooled client holding N warm sockets and a client opening N
+> cold TLS connections per second are different animals at the same
+> document rate. `image_walk.py` standalone is the cold path and must
+> not run — pdf goes through `acris_lane`. (2026-08-27)

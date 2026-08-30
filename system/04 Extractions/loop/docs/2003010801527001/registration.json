@@ -1,0 +1,38 @@
+{
+  "type": "ZONING LOT DESCRIPTION",
+  "pages": "5",
+  "doc_date": "12/17/2002",
+  "crfn": "2003000002597",
+  "recorded": "1/17/2003 10:36:04 AM",
+  "borough": "MANHATTAN",
+  "amount": "$0.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "FIRST MANHATTAN ABSTRACT CORP.",
+      "address": "29 EAST 10TH STREET",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10003",
+      "country": "US"
+    },
+    {
+      "panel": "1",
+      "name": "BOWERY SQUARE CORPORATION",
+      "address": "200 BOWERY",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10012",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "1004920034",
+      "partial": "ENTIRE LOT",
+      "use": "RETAIL BUILDING",
+      "address": "202 BOWERY"
+    }
+  ],
+  "at": "2026-08-20T17:05:05"
+}

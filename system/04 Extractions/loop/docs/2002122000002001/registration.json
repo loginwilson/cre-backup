@@ -1,0 +1,29 @@
+{
+  "type": "SATISFACTION OF MORTGAGE",
+  "pages": "2",
+  "doc_date": "11/20/2002",
+  "crfn": "2003000000003",
+  "recorded": "1/6/2003 10:30:58 AM",
+  "borough": "MANHATTAN",
+  "amount": "$0.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "LIPP, ANTHONY J"
+    },
+    {
+      "panel": "2",
+      "name": "CHASE MANHATTAN MORTGAGE"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "1011321063",
+      "partial": "ENTIRE LOT",
+      "use": "DWELLING ONLY - 3 FAMILY",
+      "address": "161 WEST 61 STREET",
+      "unit": "11A"
+    }
+  ],
+  "at": "2026-08-20T17:03:22"
+}

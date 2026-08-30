@@ -1,0 +1,11 @@
+{
+  "id": "2002122700179002",
+  "source_pdf_relative": "By Document\\2003\\01 Jan\\22\\2002122700179002.pdf",
+  "dpi": 300,
+  "pages": 2,
+  "artifacts": {
+    "registration.json": "e2474ccab7e729d5b13d144a560b7b308c4b5cb94e90bea735a335e4b4573cec",
+    "page-01.png": "c335faa7a322bf950b41ae7375a929cf6705f4c5b638340535f04c1feab81153",
+    "page-02.png": "749a3fa80be623568e7a618623095a8b78ac8c7717346d855db8f774a4f31e44"
+  }
+}

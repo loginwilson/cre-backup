@@ -1,0 +1,49 @@
+{
+  "type": "UCC3 TERMINATION",
+  "pages": "3",
+  "doc_date": "12/23/2002",
+  "crfn": "2003000167838",
+  "recorded": "6/12/2003 2:08:28 PM",
+  "borough": "MANHATTAN",
+  "amount": "$0.00",
+  "expiration": "6/12/2003 2:08:28 PM",
+  "collateral": "COOPERATIVE",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "PERKINS, TERRENCE MR.",
+      "address": "323 EDGECOMBE AVE",
+      "address2": "APT #5",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10031",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "323-29 EDGECOMBE AVENUE HDFC",
+      "address": "323 EDGECOMBE AVE",
+      "address2": "APT #9",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10031",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "1020530085",
+      "partial": "PARTIAL LOT",
+      "use": "SINGLE RESIDENTIAL COOP UNIT",
+      "address": "323 EDGECOMBE AVENUE",
+      "unit": "5"
+    }
+  ],
+  "references": [
+    {
+      "borough": "MANHATTAN",
+      "file_nbr": "99PN56353"
+    }
+  ],
+  "at": "2026-08-20T17:03:25"
+}

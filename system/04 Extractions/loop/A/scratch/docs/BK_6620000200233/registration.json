@@ -1,0 +1,89 @@
+{
+  "type": "ASSIGNMENT, MORTGAGE",
+  "pages": "8",
+  "doc_date": "1/7/1966",
+  "recorded": "1/7/1966",
+  "borough": "BRONX",
+  "amount": "$0.00",
+  "map_seq": "18053",
+  "reel_page": "2-233",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "JERAN REALTY CORP"
+    },
+    {
+      "panel": "2",
+      "name": "JEROME OSINOFF"
+    },
+    {
+      "panel": "2",
+      "name": "ROBERT OSINOFF CUST OF"
+    },
+    {
+      "panel": "2",
+      "name": "MARK OSINOFF CUST OF"
+    },
+    {
+      "panel": "2",
+      "name": "DAVID OSINOFF CUST OF"
+    },
+    {
+      "panel": "2",
+      "name": "GERALD K OSINOFF"
+    },
+    {
+      "panel": "2",
+      "name": "CLIFFORD OSINOFF CUST OF"
+    },
+    {
+      "panel": "2",
+      "name": "WENDY OSINOFF CUST OF"
+    },
+    {
+      "panel": "2",
+      "name": "LORI OSINOFF CUST OF"
+    },
+    {
+      "panel": "2",
+      "name": "JEAN OSINOFF"
+    },
+    {
+      "panel": "2",
+      "name": "JEROME ZUFLACHT"
+    },
+    {
+      "panel": "2",
+      "name": "PHYLLIS ZUFLACHT EX OF"
+    },
+    {
+      "panel": "2",
+      "name": "ROBERT ZUFLACHT CUST OF"
+    },
+    {
+      "panel": "2",
+      "name": "RICHARD ZUFLACHT CUST OF"
+    },
+    {
+      "panel": "2",
+      "name": "KATHIE ZUFLACHT CUST OF"
+    },
+    {
+      "panel": "2",
+      "name": "MINNA LEVITAN"
+    },
+    {
+      "panel": "2",
+      "name": "MILTON LEVITAN"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "2024340018",
+      "partial": "ENTIRE LOT",
+      "use": "PRE-ACRIS"
+    }
+  ],
+  "remarks": "A M 4096 MP 62 BOOK/PAGES: 144/206",
+  "at": "2026-08-20T17:12:07"
+}

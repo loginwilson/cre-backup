@@ -1,0 +1,18 @@
+{
+  "id": "2003010600008001",
+  "source_pdf_relative": "By Document\\2003\\01 Jan\\29\\2003010600008001.pdf",
+  "dpi": 300,
+  "pages": 9,
+  "artifacts": {
+    "registration.json": "bc75ae2f1e38a54c663b20d1688f7c83ae4e62eef346796ef66eafa3d382be13",
+    "page-01.png": "9827f0bb2a5ee59b9aa30a87c5fbca346611fc45530d4475a508ba44e5224aba",
+    "page-02.png": "8036847eb14cdc1681de3abff0b8293a0dfd0faa19eb44f409c58894dde80aba",
+    "page-03.png": "859fa8bbd95967ab3e3b7d57feab501185111cfd6825465ce5fb9ebc9fc2cba3",
+    "page-04.png": "8e5567bad6e3355a3836991c1367b97087c596b560301a619736dcd979e8dd37",
+    "page-05.png": "0e979b41b2ba0e41190fdf6b79dd10bce46ee3d4d8c4d26a65813791f194ce8d",
+    "page-06.png": "6d8f841ec9cf82d7a560028ca202fd1e5ac4b3059113964b831bec6d68db985c",
+    "page-07.png": "e9edd7142882dac397b9cd742dc871b85617153d02cbb9d5e4a54235a921abf9",
+    "page-08.png": "e3d3c0cc95f2d226f787e4d06a2bfe607518006a1b058c3c4ba23c1889164a32",
+    "page-09.png": "7aa63f28ec8cfaad5acf55279fb655161a86260dd2cda09f4b686d6a3cd092a4"
+  }
+}

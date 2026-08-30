@@ -1,0 +1,39 @@
+{
+  "type": "LEASE",
+  "pages": "7",
+  "doc_date": "12/20/2002",
+  "crfn": "2003000064553",
+  "recorded": "3/27/2003 9:04:03 AM",
+  "borough": "MANHATTAN",
+  "amount": "$0.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "THE BANK OF NEW YORK",
+      "address": "ONE WALL STREET",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10286",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "BNY REIT HOLDINGS LLC",
+      "address": "C/O THE BANK OF NEW YORK ( DELEWARE)",
+      "address2": "WHITE CLAY CENTER, SUITE 273",
+      "city": "NEWARK",
+      "state": "DE",
+      "zip": "19711",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "1001280002",
+      "partial": "ENTIRE LOT",
+      "use": "OFFICE BUILDING",
+      "address": "101 BARCLAY STREET"
+    }
+  ],
+  "at": "2026-08-20T17:03:31"
+}

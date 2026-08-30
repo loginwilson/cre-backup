@@ -1,0 +1,39 @@
+{
+  "type": "AGREEMENT",
+  "pages": "7",
+  "doc_date": "9/24/2002",
+  "crfn": "2003000007455",
+  "recorded": "1/29/2003 11:22:48 AM",
+  "borough": "MANHATTAN",
+  "amount": "$0.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "LOEVNER, KIRK",
+      "address": "79 LAIGHT STREET",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10001",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "WASHINTON MUTUAL BANK, FA",
+      "address": "540 EAST MAIN STREET",
+      "city": "STOCKTON",
+      "state": "CA",
+      "zip": "95290",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "1002171018",
+      "partial": "ENTIRE LOT",
+      "use": "DWELLING ONLY - 1 FAMILY",
+      "address": "79 LAIGHT STREET",
+      "unit": "4A"
+    }
+  ],
+  "at": "2026-08-20T17:03:26"
+}

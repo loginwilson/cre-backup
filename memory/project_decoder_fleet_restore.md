@@ -122,3 +122,29 @@ while acris is deliberately down: drive loss, rc_lane death, and - inverted -
 an ACRIS lane RESTARTING when nothing should have restarted it.
 ⚠ It does NOT probe acris to see if the block lifted. A "has it resumed?"
 request is still a request, and the notice said stop.
+
+### ⚠ TaskStop ON A MONITOR DOES NOT REAP ITS `tail` - AND IT BLOCKS THE EJECT
+
+2026-08-27 07:36, eject refused with every lane already dead. KERNEL-PNP
+**Event 225 named the blocker outright**:
+
+    tail.exe pid 21016 stopped the removal ... command line:
+    tail -F "D:/.../rd_walk_a1.log"      <- spawned by a Monitor at 20:04,
+                                            ELEVEN HOURS EARLIER
+
+Stopping a Monitor kills the supervising process but leaves the `tail`/`grep`
+children holding their files - and a held file on D: holds the VOLUME. Three
+orphaned tails and three greps had accumulated across the night.
+
+**THE FAST PATH - do not guess at handles:**
+
+    Get-WinEvent -FilterHashtable @{LogName='System'; Id=225;
+      StartTime=(Get-Date).AddMinutes(-30)}
+
+It names process, pid AND command line. Then kill tail/grep by name (⚠ NOT
+bash - the agent's own shell is one), and close any Explorer window on D:
+(`Shell.Application`.Windows() -> .Quit()), which also blocks.
+
+⚠ lanes_pause.py reports "processes RUNNING FROM D:" - which is a DIFFERENT
+predicate and was empty the whole time. A process running from C: can still
+hold a file on D:. Add the Event-225 check to the pause routine.

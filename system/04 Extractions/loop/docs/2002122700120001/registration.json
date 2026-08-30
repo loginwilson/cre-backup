@@ -1,0 +1,50 @@
+{
+  "type": "DEED, OTHER",
+  "pages": "4",
+  "doc_date": "11/19/2002",
+  "crfn": "2003000112665",
+  "recorded": "5/1/2003 9:25:04 AM",
+  "borough": "QUEENS",
+  "amount": "$440,000.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "CASTELLO, JEURIS",
+      "address": "69- 57",
+      "address2": "62 ST",
+      "city": "GLENDALE",
+      "state": "NY",
+      "zip": "11385",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "GECA, MATEIASEVICI",
+      "address": "69 -07",
+      "address2": "65 ST",
+      "city": "GLENDALE",
+      "state": "NY",
+      "zip": "11385",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "ILIE, NICOLAE",
+      "address": "69-07",
+      "address2": "65 ST",
+      "city": "GLENDALE",
+      "state": "NY",
+      "zip": "11385",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "4036310051",
+      "partial": "ENTIRE LOT",
+      "use": "DWELLING ONLY - 2 FAMILY",
+      "address": "69-57 62 STREET"
+    }
+  ],
+  "at": "2026-08-20T17:03:22"
+}

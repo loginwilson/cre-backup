@@ -1,0 +1,38 @@
+{
+  "type": "ASSIGNMENT, MORTGAGE",
+  "pages": "2",
+  "doc_date": "10/16/2002",
+  "crfn": "2003000003655",
+  "recorded": "1/22/2003 11:45:00 AM",
+  "borough": "QUEENS",
+  "amount": "$0.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "SUMMIT MORTGAGE BANKERS",
+      "address": "1 HOLLAND PLACE",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10008",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "JPMORGAN CHASE",
+      "address": "1 CHASE MANHATTAN PLAZA",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10081",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "4039050026",
+      "partial": "ENTIRE LOT",
+      "use": "DWELLING ONLY - 1 FAMILY",
+      "address": "98-17 74 AVENUE"
+    }
+  ],
+  "at": "2026-08-20T17:03:23"
+}

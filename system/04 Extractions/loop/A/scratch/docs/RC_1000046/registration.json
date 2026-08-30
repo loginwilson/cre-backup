@@ -1,0 +1,52 @@
+{
+  "instrument": "451358",
+  "book": "",
+  "page": "",
+  "doc_type": "A/LEASE",
+  "recorded": "11/15/2012",
+  "amount": "$0.00",
+  "status": "Recorded",
+  "parties": [
+    {
+      "name": "SOVEREIGN BANK, N.A.",
+      "role": "ASSIGNEE",
+      "column": "company",
+      "person": "",
+      "company": "SOVEREIGN BANK, N.A."
+    },
+    {
+      "name": "OUTERBRIDGE COMMONS LP",
+      "role": "ASSIGNOR",
+      "column": "company",
+      "person": "",
+      "company": "OUTERBRIDGE COMMONS LP"
+    },
+    {
+      "name": "OUTERBRIDGE COMMONS L.P.",
+      "role": "Assignor",
+      "column": "company",
+      "person": "",
+      "company": "OUTERBRIDGE COMMONS L.P."
+    },
+    {
+      "name": "SOVEREIGN BANK, N.A.",
+      "role": "Assignee",
+      "column": "company",
+      "person": "",
+      "company": "SOVEREIGN BANK, N.A."
+    }
+  ],
+  "image_state": "present",
+  "parcels": [
+    {
+      "bbl": "5075110001"
+    },
+    {
+      "bbl": "5075110075"
+    },
+    {
+      "bbl": "5075110150"
+    }
+  ],
+  "at": "2026-08-20T17:25:02"
+}

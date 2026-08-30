@@ -13,13 +13,12 @@
     "keying pass 2": 60,
     "keying pass 3": 60
   },
+  "_parked_note": "2026-08-29: acris documentation is paused BY US so registration owns the whole pipe (the floors contend at the source). Deliberate = PENDING, not STALLED - STALLED is the one status that means 'somebody needs to look at this' and it must stay rare enough to mean it. BOTH KEYS ARE NEEDED AND THEY ARE NOT THE SAME ROW: 'acquisition pdf|acris' is the documentation FLOOR, and 'synchronization|acris' is the MAIN update_board row (internal key 'synchronization', displayed 'reproduction' via PHASE_LABEL). Reproduction counts a row only when it has id+urls+rd+a pdf status, so the paused pdf floor is exactly what gates it - hence the same 9.44% on both and PENDING on both. Parking synchronization|acris does NOT touch the synchronization FLOOR row: that one is written separately and hardcoded COMPLETE with its own inflow rates. REMOVE BOTH the moment the document floor is un-paused in fleet.py, or the board will call a running lane paused. THIRD KEY 'acquisition rd|acris' added 13:05 2026-08-29: login paused registration to switch networks ('I will tell you when to resume') - remove it in the same edit that un-pauses acris_repro_register.",
   "parked": [
+    "acquisition pdf|acris",
     "synchronization|acris"
   ],
-  "hidden": [
-    "acquisition pdf|richmond",
-    "acquisition rd|richmond"
-  ],
+  "hidden": [],
   "_retired": {
     "navigation": "db trigger mint_urls - 100% by construction, never informative",
     "organization": "db trigger key_on_rd fills `parcel` keys free at sync time; `pdf-pass` is extraction's inbox and `reference` is resolution's. The 6.0M pre-trigger backfill is held by org_backfill_arm until acris rd hits 99.95% - re-add a row when it releases."

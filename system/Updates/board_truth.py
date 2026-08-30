@@ -110,8 +110,11 @@ def _acris_live():
         # ⚠ MATCH ON THE PATH SEPARATOR, NOT THE BARE NAME. "rd_walk.py"
         # is a SUBSTRING of "rc_rd_walk.py" - richmond's own walker - so a bare
         # `in` test would let a richmond process assert that acris is live.
+        # acris_reproduction.py added 2026-08-28: the group-entry lane
+        # (login's batched design) IS the acris process now when it runs.
         return any(("\\" + n) in txt
-                   for n in ("acris_lane.py", "rd_walk.py", "image_walk.py"))
+                   for n in ("acris_lane.py", "rd_walk.py", "image_walk.py",
+                             "acris_reproduction.py"))
     except Exception:
         return True
 
@@ -342,6 +345,44 @@ def counts(con):
     # ⚠ AND IT SAYS WHICH NUMBER IT USED. A live count that silently falls
     # back to a 3-hour-old ledger reading is worse than one that never moved,
     # because nothing on the board would look different.
+    # ⚠⚠ A FALLBACK VALUE MUST NEVER BE DIFFERENCED AGAINST A LIVE ONE, AND
+    # THE LEDGER IS THE WRONG THING TO FALL BACK TO. Measured 2026-08-29
+    # 12:54: the acris register lane at ~32 docs/s saturated the drive, so
+    # richmond's live count - normally 0.14-0.20 s - took 112 s and blew the
+    # 30 s budget. This branch then published the 2026-08-27 LEDGER figure
+    # (2,502,033) one pass after a LIVE 2,502,230, and routine_update
+    # differenced them: the board printed richmond synchronization at
+    # **-197 rows, rate -1.484/s**. login caught it: "that shouldnt make
+    # negative". A sync count cannot go down - doc ids are not un-filed -
+    # so any negative here is a MEASUREMENT artifact by construction.
+    #
+    # Two distinct bugs, both fixed by holding instead of reverting:
+    #   1 the fallback jumped BACKWARDS IN TIME (2 days), inventing a loss
+    #   2 two different measurement METHODS were subtracted from each other.
+    #     Same column, different sources, is still a method change - the
+    #     "same subtraction" law applies to the SOURCE, not just the column.
+    # So: hold the last LIVE value. It is stale-but-true (the count only
+    # ever grows, so a held value understates at worst and can never invent
+    # a loss) and it produces a delta of exactly 0 while the read is starved
+    # - which is the honest answer, because we did not measure anything.
+    _held = None
+    try:
+        _h = ((json.loads(OUT.read_text(encoding="utf-8"))
+               .get("sources", {}).get("richmond", {}) or {}).get("total"))
+        if isinstance(_h, int) and _h > 0:
+            _held = _h
+    except Exception:
+        pass                      # no prior pass - the ledger is all we have
+
+    def _fallback(why):
+        """Never returns a number older than the last thing we measured."""
+        if _held:
+            return _held, ("HELD %s  ⚠ %s - holding the LAST LIVE value, not"
+                           " the ledger; delta suppressed to 0"
+                           % (f"{_held:,}", why))
+        return rc_total, ("ledger %s  ⚠ %s - and no prior live value to hold,"
+                          " so this number is stale" % (when, why))
+
     rc_src = "ledger %s" % when
     try:
         _t = time.time()
@@ -352,11 +393,11 @@ def counts(con):
             rc_total = _v + (totals.get("richmond_delta") or 0)
             rc_src = "LIVE %.2fs" % _el
         else:
-            rc_src = ("ledger %s  ⚠ live count took %.0fs (>30s budget) -"
-                      " FELL BACK, this number is stale" % (when, _el))
+            rc_total, rc_src = _fallback(
+                "live count took %.0fs (>30s budget)" % _el)
     except Exception as _e:
-        rc_src = ("ledger %s  ⚠ live count failed (%s) - FELL BACK, this"
-                  " number is stale" % (when, type(_e).__name__))
+        rc_total, rc_src = _fallback(
+            "live count failed (%s)" % type(_e).__name__)
     say("    totals  acris %s (ledger %s) · richmond %s (%s)"
         % (f"{a_total:,}", when, f"{rc_total:,}", rc_src))
     total, todo, t1, t2 = a_total + rc_total, a_todo + rc_todo, 0.0, 0.0

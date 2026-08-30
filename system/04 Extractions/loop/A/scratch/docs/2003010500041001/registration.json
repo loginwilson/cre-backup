@@ -1,0 +1,40 @@
+{
+  "type": "INITIAL UCC1",
+  "pages": "4",
+  "doc_date": "12/23/2002",
+  "crfn": "2003000099368",
+  "recorded": "4/21/2003 4:19:09 PM",
+  "borough": "BROOKLYN",
+  "amount": "$0.00",
+  "expiration": "10/4/2004",
+  "collateral": "FIXTURE FILING",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "LIDO KNITTING MILLS, INC.",
+      "address": "694 METROPOLITAN AVENUE",
+      "city": "BROOKLYN",
+      "state": "NY",
+      "zip": "11211",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "FLUSHING SAVINGS BANK",
+      "address": "144-51 NORTHERN BOULEVARD",
+      "city": "FLUSHING",
+      "state": "NY",
+      "zip": "11354",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "3027640008",
+      "partial": "ENTIRE LOT",
+      "use": "INDUSTRIAL BUILDING",
+      "address": "692-694 METROPOLITAN AVENUE"
+    }
+  ],
+  "at": "2026-08-20T17:03:26"
+}

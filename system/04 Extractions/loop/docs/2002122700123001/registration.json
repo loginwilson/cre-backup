@@ -1,0 +1,38 @@
+{
+  "type": "MORTGAGE",
+  "pages": "6",
+  "doc_date": "10/18/2002",
+  "crfn": "2003000072032",
+  "recorded": "4/1/2003 3:53:35 PM",
+  "borough": "QUEENS",
+  "amount": "$40,000.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "ROGERS, SHARON",
+      "address": "144-01 LAKEWOOD AVE",
+      "city": "JAMAICA",
+      "state": "NY",
+      "zip": "11435",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "AMERICAN EXPRESS CENTURION BANK",
+      "address": "2730 LIBERTY AVE",
+      "city": "PITTSBURGH",
+      "state": "PA",
+      "zip": "15222",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "4100780054",
+      "partial": "ENTIRE LOT",
+      "use": "DWELLING ONLY - 1 FAMILY",
+      "address": "144-01 LAKEWOOD AVENUE"
+    }
+  ],
+  "at": "2026-08-20T17:03:22"
+}

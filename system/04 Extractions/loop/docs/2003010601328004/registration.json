@@ -1,0 +1,146 @@
+{
+  "type": "DECLARATION",
+  "pages": "5",
+  "doc_date": "12/20/2002",
+  "crfn": "2003000079681",
+  "recorded": "4/7/2003 12:59:00 PM",
+  "borough": "QUEENS",
+  "amount": "$0.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "WOODSIDE GARDENS CONDOMINIUM",
+      "address": "C/O ANDREADIS REALTY CORP",
+      "address2": "46-02 BROADWAY",
+      "city": "ASTORIA",
+      "state": "NY",
+      "zip": "11103",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "WOODSIDE GARDENS CONDOMINIUM",
+      "address": "C/O ANDREADIS REALTY CORP",
+      "address2": "46--02 BROADWAY",
+      "city": "ASTORIA",
+      "state": "NY",
+      "zip": "11103",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "4013071001",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "1A"
+    },
+    {
+      "bbl": "4013071002",
+      "partial": "PARTIAL LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "1B"
+    },
+    {
+      "bbl": "4013071003",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "1C"
+    },
+    {
+      "bbl": "4013071004",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "1D"
+    },
+    {
+      "bbl": "4013071005",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "2A"
+    },
+    {
+      "bbl": "4013071006",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "2B"
+    },
+    {
+      "bbl": "4013071007",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "2C"
+    },
+    {
+      "bbl": "4013071008",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "2D"
+    },
+    {
+      "bbl": "4013071009",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "3A"
+    },
+    {
+      "bbl": "4013071010",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "3B"
+    },
+    {
+      "bbl": "4013071011",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "3C"
+    },
+    {
+      "bbl": "4013071012",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "3D"
+    },
+    {
+      "bbl": "4013071013",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "4A"
+    },
+    {
+      "bbl": "4013071014",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "4B"
+    },
+    {
+      "bbl": "4013071015",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "4C"
+    },
+    {
+      "bbl": "4013071016",
+      "partial": "ENTIRE LOT",
+      "use": "MULTIPLE RESIDENTIAL CONDO UNT",
+      "address": "41-14 68 STREET",
+      "unit": "4D"
+    }
+  ],
+  "at": "2026-08-20T17:03:53"
+}

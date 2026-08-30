@@ -1,0 +1,61 @@
+{
+  "type": "AGREEMENT",
+  "pages": "13",
+  "doc_date": "12/9/2002",
+  "crfn": "2003000012416",
+  "recorded": "2/5/2003 4:46:05 PM",
+  "borough": "BROOKLYN",
+  "amount": "$0.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "300 FLATBUSH AVENUE REALTY CORP.",
+      "address": "5067 ROBINO CIRCLE",
+      "city": "WEST PALM BEACH",
+      "state": "FL",
+      "zip": "33417",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "TWIN TOWER EQUITIES LLC",
+      "address": "52 VANDERBILT AVENUE",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10017",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "3009390039",
+      "partial": "ENTIRE LOT",
+      "use": "OFFICE BUILDING",
+      "address": "300 FLATBUSH AVENUE"
+    },
+    {
+      "bbl": "3009390040",
+      "partial": "ENTIRE LOT",
+      "use": "OFFICE BUILDING",
+      "address": "300B FLATBUSH AVENUE"
+    },
+    {
+      "bbl": "3009390041",
+      "partial": "ENTIRE LOT",
+      "use": "OFFICE BUILDING",
+      "address": "300C FLATBUSH AVENUE"
+    },
+    {
+      "bbl": "3009390042",
+      "partial": "ENTIRE LOT",
+      "use": "OFFICE BUILDING",
+      "address": "302 FLATBUSH AVENUE"
+    }
+  ],
+  "references": [
+    {
+      "doc_id": "2003010600117001"
+    }
+  ],
+  "at": "2026-08-20T17:03:27"
+}

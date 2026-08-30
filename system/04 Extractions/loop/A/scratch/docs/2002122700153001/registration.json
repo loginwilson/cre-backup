@@ -1,0 +1,47 @@
+{
+  "type": "DEED",
+  "pages": "5",
+  "doc_date": "11/22/2002",
+  "crfn": "2003000032315",
+  "recorded": "3/3/2003 3:19:23 PM",
+  "borough": "QUEENS",
+  "amount": "$525,500.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "SIEV,, AVINADAV",
+      "address": "179-20 CROYDON RD",
+      "city": "QUEENS",
+      "state": "NY",
+      "zip": "11435",
+      "country": "US"
+    },
+    {
+      "panel": "1",
+      "name": "SIEV,, PAZIA",
+      "address": "179-20 CROYDON RD",
+      "city": "QUEENS",
+      "state": "NY",
+      "zip": "11432",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "ZHENG,, SHOU HUA",
+      "address": "136-24 MAPLE AVE #4",
+      "city": "QUEENS",
+      "state": "NY",
+      "zip": "11355",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "4063520006",
+      "partial": "ENTIRE LOT",
+      "use": "DWELLING ONLY - 1 FAMILY",
+      "address": "130-10 57 ROAD"
+    }
+  ],
+  "at": "2026-08-20T17:03:23"
+}

@@ -41,6 +41,8 @@ import time
 import urllib.error
 import urllib.request
 
+import requests
+
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 import corpus_paths as CP
@@ -80,6 +82,66 @@ lock = threading.Lock()
 q = queue.Queue(maxsize=20_000)
 stats = {"done": 0, "fail": 0, "pending": 0, "h503": 0}
 ua = {"User-Agent": fetch_pages.UA}
+
+
+# !! THE COLD-HANDSHAKE DEFECT, FOUND 2026-08-27 06:05. login: "theres
+# something we are doing different since we got to 80% but earlier days were
+# fast without tripping." This was it.
+#
+# This file used urllib.request.urlopen() PER DOCUMENT. urllib does not pool,
+# so every single document opened a brand new TCP + TLS connection:
+#
+#     rd_walk  @ 24.3 docs/s  ->  24.3 COLD HANDSHAKES PER SECOND, forever
+#     acris_lane @ 104.6 req/s ->  ~20 handshakes total, then ~0/s
+#
+# rd_walk at 24 docs/s therefore opened MORE new connections per second than
+# acris_lane did at FOUR TIMES the request rate - and acris_lane sustained
+# while rd_walk took a Bandwidth Notice in two hours.
+#
+# !! SO THE METERED QUANTITY IS HANDSHAKES, NOT DOCUMENTS. My leaky-bucket
+# model (refill 12.5 docs/s) fitted the symptom and named the wrong variable.
+# acris_lane's own note says it plainly: "Concurrency is now a WARM-CONNECTION
+# COUNT, NOT A HANDSHAKE RATE - which is what makes raising it safe."
+#
+# The pool is sized to the worker gate and pool_block=True makes that a HARD
+# ceiling: no connection can ever be opened outside it.
+def _new_session(n):
+    s = requests.Session()
+    s.headers.update({"User-Agent": fetch_pages.UA})
+    s.mount("https://", requests.adapters.HTTPAdapter(
+        pool_connections=1, pool_maxsize=n + 8,
+        max_retries=0, pool_block=True))
+    return s
+
+
+SESSION = _new_session(a.workers)
+
+
+def _get(url, referer, timeout=90):
+    """One pooled GET. Preserves urllib semantics on purpose.
+
+    !! RAISES urllib.error.HTTPError ON 4xx/5xx - DO NOT SIMPLIFY THIS AWAY.
+    urllib raises on 4xx; `requests` returns it as an ordinary response. Every
+    refusal detector in this repo - including the 503 guard below - catches
+    urllib.error.HTTPError, so a 503 arriving as a normal response would be
+    parsed as a blank page and the workers would keep hammering a server that
+    just refused us.
+    """
+    r = SESSION.get(url, headers={"Referer": referer}, timeout=timeout)
+    try:
+        if r.status_code >= 400:
+            err = urllib.error.HTTPError(url, r.status_code, r.reason,
+                                         r.headers, None)
+            err.acris_shed = r.status_code in (429, 500, 502, 503, 504)
+            raise err
+        return r.content.decode("utf-8", "replace")
+    finally:
+        # !! THE CLOSE_WAIT DEADLOCK (measured 2026-08-24 18:30): acris shed
+        # with 503s and closed its side; raising without closing left each
+        # socket in CLOSE_WAIT holding a pool slot until the pool was 100%
+        # dead connections and every worker blocked forever. A response must
+        # be closed on EVERY path - which is what finally: is for.
+        r.close()
 
 
 def feeder():
@@ -137,11 +199,9 @@ def worker():
             q.put(None)          # let the other workers see the end too
             return
         try:
-            req = urllib.request.Request(
+            html = RD.clean_html(_get(
                 LD.BASE + "/DS/DocumentSearch/DocumentDetail?doc_id=" + did,
-                headers={**ua, "Referer": LD.BASE + "/DS/DocumentSearch/"})
-            with urllib.request.urlopen(req, timeout=90) as r:
-                html = RD.clean_html(r.read().decode("utf-8", "replace"))
+                LD.BASE + "/DS/DocumentSearch/"))
             LD.check_refused(html)
             flat = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html))
             # read NOTHING until the page proves it is about this doc

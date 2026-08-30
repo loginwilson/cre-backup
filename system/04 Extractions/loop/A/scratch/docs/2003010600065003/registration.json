@@ -1,0 +1,38 @@
+{
+  "type": "LEASE",
+  "pages": "9",
+  "doc_date": "1/1/2002",
+  "crfn": "2003000023373",
+  "recorded": "2/21/2003 8:47:38 AM",
+  "borough": "MANHATTAN",
+  "amount": "$0.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "NEW YORK CITY INDUSTRIAL DEVELOPMENT AGENCY",
+      "address": "110 WILLIAMS STREET",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10038",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "YOUNG MEN''S CHRISTIAN ASSOCIATION OF GREATER N.Y.",
+      "address": "333 SEVENTH AVENUE",
+      "city": "NEW YORK",
+      "state": "NY",
+      "zip": "10003",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "1007730034",
+      "partial": "PARTIAL LOT",
+      "use": "INDUSTRIAL BUILDING",
+      "address": "213 WEST 23 STREET"
+    }
+  ],
+  "at": "2026-08-20T17:03:27"
+}

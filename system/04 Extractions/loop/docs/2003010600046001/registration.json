@@ -1,0 +1,44 @@
+{
+  "type": "DEED, OTHER",
+  "pages": "6",
+  "doc_date": "12/6/2002",
+  "crfn": "2003000001865",
+  "recorded": "1/15/2003 1:29:56 PM",
+  "borough": "MANHATTAN",
+  "amount": "$340,000.00",
+  "parties": [
+    {
+      "panel": "1",
+      "name": "MANA, MOISHE",
+      "address": "16720 SENTERRA DRIVE",
+      "city": "DELRAY",
+      "state": "FL",
+      "zip": "33484",
+      "country": "US"
+    },
+    {
+      "panel": "2",
+      "name": "324 PLEASANT, LLC",
+      "address": "3152 ALBANY CRESCENT",
+      "city": "BRONX",
+      "state": "NY",
+      "zip": "10463",
+      "country": "US"
+    }
+  ],
+  "parcels": [
+    {
+      "bbl": "1017110016",
+      "partial": "ENTIRE LOT",
+      "use": "VACANT LAND",
+      "address": "439 EAST 117 STREET"
+    },
+    {
+      "bbl": "1017100130",
+      "partial": "ENTIRE LOT",
+      "use": "VACANT LAND",
+      "address": "450 EAST 117 STREET"
+    }
+  ],
+  "at": "2026-08-20T17:03:26"
+}

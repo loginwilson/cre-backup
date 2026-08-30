@@ -179,6 +179,49 @@ def doc_store_dir(did, recorded=""):
     return DOC_STORE / "By Document" / did[:4] / did[4:8]
 
 
+# ── READING A DOCUMENT: the ONE rule, for extraction and for humans ──────
+# ⚠⚠ WRITING AND READING ARE NOT THE SAME OPERATION AND MUST NOT SHARE A
+# FUNCTION. `doc_store_dir()` above DECIDES where a file goes, from the
+# recorded date, WITH FALLBACKS (id date, then a plain 4+4 split). Which
+# branch it took is not recoverable later: normalise the recorded string,
+# or fix a bad date, and the same id re-derives a DIFFERENT folder. So a
+# reader that recomputes finds nothing and reports "missing" for a file
+# that is on disk. THE TRUTH OF WHERE A FILE IS, IS `navigation.pdf` -
+# written at the moment it landed. Read it; never re-derive it.
+#
+# ⚠ AND USE THIS, NOT A HAND-JOIN. corpus_paths defines TWO plausible
+# roots and BOTH EXIST ON DISK: DOC_STORE (the files) and the deprecated
+# STORE (resolves, never contains them). A hand-rolled `STORE / pdf`
+# returns a valid-looking path and fails as "file not found", which reads
+# like missing data rather than a wrong root. login hit exactly this by
+# hand on 2026-08-29.
+STATE_VALUES = frozenset({"", "pending", "absent", "imageless"})
+
+
+def doc_path(pdf_value):
+    """Resolve a `navigation.pdf` cell to an absolute path.
+
+    Returns a pathlib.Path, or None when the cell holds a STATE rather
+    than a filename ('' not yet checked - 'pending' scan not up yet -
+    'absent'/'imageless' determined to have no image). Returning None for
+    a state is deliberate: a state must never be string-joined onto the
+    root, because DOC_STORE / '' silently yields the store ROOT, which
+    exists - so the caller would 'find' a directory and carry on.
+
+        >>> doc_path("By Document/1917/03 Mar/28/RC_988537.pdf")
+        WindowsPath('D:/.../Legal Instruments Acquisition/By Document/...')
+        >>> doc_path("pending") is None
+        True
+
+    Existence is NOT checked here - that is the caller's decision, and a
+    recorded path with no file behind it is a store/db disagreement worth
+    reporting, not a lookup failure to swallow.
+    """
+    if pdf_value is None or pdf_value in STATE_VALUES:
+        return None
+    return DOC_STORE / pdf_value
+
+
 def pid_file(tag):
     return STATE / f"_{tag}.pid"
 
