@@ -102,7 +102,50 @@ sends a referee to a different image.
 **⏳ Outstanding: nothing.** All five tables gate clean. A's search record is now nine
 regions, 0 malformed.
 
-### ⏭ NEXT — m2
+---
+
+# ▶ PHASE A — IN FLIGHT
+
+**`RC_970273` · Richmond DEED · 2 pages · recorded 1955-12-21.** Package already
+built; nothing fetched. **Three readers: B, C, D.** A and E deliberately idle — idle
+costs nothing, and A is held in reserve as referee, since it did the round's most
+rigorous measurement work.
+
+Output: `loop/<X>/RC_970273/table-v2.md`, gate-clean before sealing.
+
+⚠ **Class membership is UNCONFIRMED and that is deliberate.** rd types it `DEED`; m1
+was 1911 and this is 1955, so the developer is almost certainly different. Readers
+were told to judge membership themselves against the spec's §1 signals and say so.
+**If it is not a member, that is a clean result about the signals, not a wasted
+round** — and it cost 3 reader-runs on a 2-page document to find out.
+
+Readers were given the standing §7 prediction and told explicitly that **deviation is
+a finding, not a correction** — the prediction exists to be wrong in a measurable way.
+The anchoring risk of showing them the prediction is accepted knowingly: coverage
+cannot be scored without it.
+
+## ▶ PHASE B — QUEUED, not dispatched
+
+**`2002122000002001` · SATISFACTION OF MORTGAGE · 2 pages · ACRIS digital, 2003.**
+
+Chosen as the sharpest available discriminator. On m1, `CAPITAL` fired **0 times in
+99 rows** and `TERMINATE` **0 times**. A satisfaction should fire both. If it does,
+the class spec is confirmed to be genuinely class-specific rather than a description
+of documents in general — and it costs the same as m1, because size drives cost and
+this is 2 pages.
+
+Run it **under the same frozen framework** as phase A, then rule both together. No
+framework change between them, or phase B stops being a test.
+
+### Budget
+
+6 reader-runs total (3 + 3), against ~13 already spent this session. Both documents
+are 2 pages; the largest packaged document is 25 pages and would cost ~12× m1 per
+reader. **Size dominates cost, not reader count.**
+
+---
+
+### ⏭ THEN — how to choose m3
 
 **Three readers, not five.** The council localises ambiguity, and the schema now
 states most of what it was localising; generalisation is the open question.
