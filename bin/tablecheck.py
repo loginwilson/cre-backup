@@ -263,7 +263,10 @@ def check(path):
     #    Without it: a document with no fee stamp and a document nobody looked at
     #    produce identical tables.
     SEARCHED = re.compile(r"p(\d+)\s*·\s*(\[[^\]]*\])", re.I)
-    DPI = re.compile(r"\b(\d{2,5})\s*dpi\b|\|\s*(\d{2,5})\s*\|", re.I)
+    # >> `native` is a legal sensitivity, and for a page carrying an embedded scan
+    #    it is the ONLY honest one: there is no single dpi (m1's scan is 329.6
+    #    across, 301.9 down), so a number sends a referee to a different image.
+    DPI = re.compile(r"\b(\d{2,5})\s*dpi\b|\bnative\b|\|\s*(\d{2,5})\s*\|", re.I)
     # >> match and split must agree on case, or a differently-cased heading
     #    matches here and then IndexErrors on the split.  It did, on two tables.
     _sr = re.split(r"SEARCH\s+RECORD", md, maxsplit=1, flags=re.I)

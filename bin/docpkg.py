@@ -189,6 +189,40 @@ def zoom(did: str, page_no: int, dpi: int, rect: str | None,
     doc = fitz.open(src)
     page = doc[page_no - 1]
 
+    # >> CROP THE SCAN, NOT THE PAGE BOX.
+    #    build() was fixed to hand over the native bitmap unresampled; zoom() was
+    #    not, and rasterised page-box geometry for another whole round.  On
+    #    RC_1598772 the box is 10.00 x 17.00 in while the scan is 3296 x 5132 --
+    #    329.6 dpi across, 301.9 down -- so every crop came out **9.18% narrow**,
+    #    and every mark rect in five sealed tables was verified against a
+    #    distorted image.  The readings held; the evidence path did not.
+    #
+    #    Reported by a reader restating its search regions, who noticed that the
+    #    dpi it was being asked to record "is an approximation of a number that
+    #    does not exist for this document."  It is right: for a native page there
+    #    is no single dpi, and the falsification target is the SHARED PAGE IMAGE,
+    #    not a re-render.  So a native crop is tagged `native`, not a number.
+    info = native_bitmap(doc, page)
+    if info is not None and rect:
+        from io import BytesIO
+        from PIL import Image
+        x0, y0, x1, y1 = (float(v) for v in rect.split(","))
+        im = Image.open(BytesIO(info["image"]))
+        W, H = im.size
+        box = (int(round(x0 * W)), int(round(y0 * H)),
+               int(round(x1 * W)), int(round(y1 * H)))
+        if box[2] <= box[0] or box[3] <= box[1]:
+            doc.close()
+            sys.exit("empty crop: %s of a %dx%d scan" % (rect, W, H))
+        zdir = _zoomdir(out, did)
+        img = zdir / ("p%02d-native-%s.png" % (page_no, rect.replace(",", "_")))
+        im.crop(box).save(img)
+        doc.close()
+        print(img)
+        print("  cropped from the %dx%d native scan, unresampled. Cite it as "
+              "`native`, not a dpi." % (W, H))
+        return
+
     clip = None
     tag = "p%02d-%ddpi" % (page_no, dpi)
     if rect:
@@ -204,6 +238,16 @@ def zoom(did: str, page_no: int, dpi: int, rect: str | None,
     #    listing alone told a later reader exactly which regions someone else had
     #    thought worth 900 dpi.  That is a pointer, and a pointer is contact.
     #    Blind has to include "blind about where the others looked."
+    zdir = _zoomdir(out, did)
+    img = zdir / ("%s.png" % tag)
+    page.get_pixmap(dpi=dpi, clip=clip).save(img)
+    doc.close()
+    print(img)
+    print("  NOT native: rasterised from the page box at %d dpi. If the page has "
+          "an embedded scan,\n  this may not match its aspect." % dpi)
+
+
+def _zoomdir(out: str | None, did: str) -> pathlib.Path:
     zdir = (pathlib.Path(out) if out else pathlib.Path.cwd()) / "zoom" / did
     # >> Hard guard, and the FIRST version of it was wrong.  It only refused the
     #    shared PACKAGE, so a reader whose cwd was <loop> itself wrote to
@@ -225,10 +269,7 @@ def zoom(did: str, page_no: int, dpi: int, rect: str | None,
             "folder tells the others where\nyou looked. Run from your own "
             "folder (loop/<you>), or pass --out <your folder>." % z)
     zdir.mkdir(parents=True, exist_ok=True)
-    img = zdir / ("%s.png" % tag)
-    page.get_pixmap(dpi=dpi, clip=clip).save(img)
-    doc.close()
-    print(img)
+    return zdir
 
 
 def main() -> None:

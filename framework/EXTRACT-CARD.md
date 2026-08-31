@@ -32,6 +32,19 @@ containing something; a search record cites **coverage and sensitivity** — whe
 looked and how closely. "Not there at 300 dpi" and "not there at 900" are different
 findings.
 
+⚠ **Write `native`, not a number, when the page carries an embedded scan.** For those
+pages there is no single dpi: on m1 the scan is 3296 × 5132 in a 10 × 17 in box —
+**329.6 across, 301.9 down**. A number in that column is an approximation of a
+quantity that does not exist, and it sends a referee to a *different image*.
+`docpkg.py --rect` now crops the scan itself and names the file `native`.
+
+> *Found by a reader restating its search regions: "`330` is an approximation of a
+> number that does not exist for this document, and a referee following the rule
+> will not reproduce my percentages." It was right, and it was worse than it knew —
+> the crop path was rasterising the page box, so **every crop made this round came
+> out 9.18% narrow**, including every mark rect in five sealed tables. The readings
+> held; the evidence path did not.*
+
 > *Three readers reached this independently when the registry lane became
 > CITE-checked and their negative rows had no quote. All three removed the row rather
 > than manufacture one. One put it exactly right: **"a document with no fee stamp and
