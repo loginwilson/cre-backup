@@ -43,20 +43,46 @@ the `until < date` row check, which was dead on every v4 table.
 cannot judge whether a criterion is evaluable, and three readers contest the
 framework's own worked failure case.
 
-### ⏭ NEXT, in order
+### ✅ DONE since the batch closed
 
-1. **Rebuild `framework/specs/DEED-RESTRICTIVE-COVENANT.md` from the five sealed
-   tables** — not by patching. Every error corrected above traces to one cause: the
-   spec was seeded from the orchestrator's reading of m1, which is the reading five
-   readers overturned 5–0. Patching a bad source yields a patched bad source, and
-   LOOP.md's rule is that a spec is built from banked members. Needs fresh context
-   (~120 KB of tables).
-2. **Rule the ten schema gaps** in `RE-EMIT-1.md`. Five carry 4–5 independent
-   confirmations; `until`'s missing third state and the homeless private approval
-   right carry **5 of 5**. Route to spec / checker / card — the card set is capped at
-   twelve, so a new card must **displace** one.
-3. **Then m2** — three readers, not five, and a document structurally unlike an 1911
-   handwritten covenant deed.
+**1. Class spec rebuilt from measurement** (`8ef52d8`). §2 is now counted across 99
+rows from five readers, not guessed. The guess listed six functions; **eight fired**.
+`ENTITLEMENT` (9 rows) was unpredicted — the grantor's reserved rights are
+development rights attaching to land. `CAPITAL`/`PERMIT`/`AS_BUILT` came in at
+**0 of 99**, which is the first prediction in this project written before the fact
+and confirmed by count. New §7 carries the measured baseline m2 is scored against.
+
+**2. The ten gaps ruled** (`c3da82d`). Accepted the five with 3+ independent
+confirmations: `until` gains `UNKNOWN(<reason>)`; party rows carry the subject BBLs;
+`basis` gains `recorded`; registry rows are CITE-checked and FEED-exempt by design
+rather than by accident; card 3 claims the mark, not the moment. **Held** the
+single-source five — the homeless private approval right has two instances but only
+one document, and the promotion bar is a third.
+
+The new lane check found **uncited registry rows in three of five tables** on its
+first run. A, C and D have been asked to fix them; FEED is unaffected.
+
+### ⏭ NEXT — m2
+
+**Three readers, not five.** The council localises ambiguity, and the schema now
+states most of what it was localising; generalisation is the open question.
+
+**Choose the document deliberately, and note the tension:**
+- *Same class* (another platted-subdivision covenant deed) scores the standing
+  prediction in §7 — coverage and structural surprise become real numbers, and
+  `LOOP.md`'s unit of work is a **class batch**, so this is the orthodox choice.
+- *Different class* (a modern typed ACRIS instrument) tests whether the framework
+  generalises beyond one 1911 handwritten deed — every rule in it still comes from
+  that single document.
+
+**Recommendation: same class.** The prediction is written and unscored; a class batch
+converges when two consecutive members add no structural surprise, and nothing can
+converge if every draw is a different class. That was `LOOP.md`'s founding diagnosis —
+nineteen classes in twenty runs, and no rule ever got a second instance.
+
+Finding a sibling means one indexed lookup, not a corpus walk. The spec names the
+cheapest source: **the grantor's other deeds in the same plat** carry near-identical
+covenant text.
 
 > ⚠ **Ten hours were lost to a liveness hole.** All five were dispatched; four
 > rendered crops and did real work, and every transcript ended on *"writing the
