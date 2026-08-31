@@ -131,7 +131,7 @@ The rest are **context**, for a human and for Derive.
 | 1 | `#` | — | `E1`, `E2`, … in page order | — |
 | 2 | `citation` | — | `page · rect · mark · quote` | a quote with no rect on a mark-dependent row |
 | 3 | **`date`** | **yes** | ISO `YYYY-MM-DD`, or `UNKNOWN` | `April 25, 1911` · `1911` · `circa 1911` |
-| 4 | `basis` | yes | `effective` · `instrument` · `execution` · `acknowledgment` · `UNSUPPORTED` | `recorded` — recording is not an event date |
+| 4 | `basis` | yes | `effective` · `instrument` · `execution` · `acknowledgment` · `recorded` · `UNSUPPORTED` | a term of your own — `filed`, `dated` |
 | 5 | `until` | yes | ISO date · **blank** = does not stop · `UNKNOWN(<reason>)` | a duration (*"three years"*) — compute it |
 | 6 | **`function`** | **yes** | exactly one of the eleven | two functions in one cell · anything else |
 | 7 | `mode` | yes | `ASSERT` · `TRANSFER` · `CREATE` · `MODIFY` · `TERMINATE` · `STRUCK` | a verb of your own |
@@ -217,20 +217,34 @@ Every value below is transcribed from a sealed reader table on `RC_1598772`. The
 is a reader's measured value, not an illustration.
 
 ```
-| #  | citation                                             | date       | basis      | until | function    | mode   | bbls                    | parties                | quantity | terms                                  | summary                              |
-| E6 | p1 · [0.33,0.633,0.79,0.647] · struck ·              | 1911-04-14 | instrument |       | ENCUMBRANCE | STRUCK | 5004030016, 5004030017  | WOOD HARMON RICHMOND   | UNKNOWN  | Ruled through in ink on the printed    | The deed as executed is not subject  |
-|    | "subject, however, to all assessments"               |            |            |       |             |        |                         | REALTY COMPANY → Ella  | (no sum  | form before execution. Mark is citable;| to assessment liens; the clause was  |
-|    |                                                      |            |            |       |             |        |                         | J. Bergen              | stated)  | struck-BEFORE-execution is not.        | removed before signing.              |
+| #  | citation                                     | date       | basis      | until | function    | mode   | bbls                   | parties                     | quantity  | terms                                    | summary                             |
+| E6 | p1 · [0.33,0.633,0.79,0.647] · struck ·     | 1911-04-14 | instrument |       | ENCUMBRANCE | STRUCK | 5004030016, 5004030017 | asserted by: the instrument | 1 clause  | The printed habendum qualifier is ruled  | The clause taking the conveyance    |
+|    | "subject, however, to all assessments that  |            |            |       |             |        |                        | about: the conveyed         | removed   | out. Left standing it would have taken   | subject to assessment liens was     |
+|    | have become a lien since the"               |            |            |       |             |        |                        | premises                    |           | the grantee subject to assessment liens, | ruled out.                          |
+|    |                                             |            |            |       |             |        |                        |                             |           | so it changes what the instrument does   |                                     |
+|    |                                             |            |            |       |             |        |                        |                             |           | (card 3). ⚠ WHEN is not recoverable —    |                                     |
+|    |                                             |            |            |       |             |        |                        |                             |           | bitonal scans lose stroke order.         |                                     |
 ```
 
 Machine fields: **`1911-04-14` sorts**, **`ENCUMBRANCE` projects**, **the two BBLs
-fan**. Everything else is context.
+fan**. Everything else is context. Note `parties` uses a **labelled relation**, not
+an arrow — a `STRUCK` row records no movement between parties.
 
-> ⚠ **The previous worked example was wrong in five ways at once** — function, page,
-> quote, scope and party direction — because it was written from the orchestrator's
-> reading rather than transcribed from the page. Four readers caught it
-> independently. **A worked example is what the next reader calibrates against, so it
-> is the single worst place in the system to guess.** Transcribe, never compose.
+> ⚠ **This example has now been wrong twice, and the second time was worse.**
+>
+> The first version was composed from the orchestrator's reading and was wrong on
+> function, page, quote, scope and party direction. The replacement was published
+> under the words *"every value below is transcribed from a sealed reader table"* —
+> and **carried a grantee name, `Ella J. Bergen`, that appears on no page and in no
+> table.** The m1 grantee is `MINNIE A. SWEENEY`, in all five sealed tables and in
+> crisp typewriting on p1. The `parties` cell was the wrong *shape* too.
+>
+> Two readers caught it independently, on a different document, while doing something
+> else. One noted it sat directly beneath this warning box.
+>
+> **Claiming transcription is not transcribing.** The row above is now copied
+> character-for-character from a sealed table. If you find it wrong, say so — that is
+> worth more than any row you extract.
 
 ### Above and below the table
 

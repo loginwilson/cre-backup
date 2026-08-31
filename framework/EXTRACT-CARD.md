@@ -158,10 +158,20 @@ confirm, write *"accepted — rd sole witness"*.
 
 ## 10 · THE EVENT DATE IS WHEN IT HAPPENED
 
-Say which date you used: effective, instrument, execution, acknowledgment, or
-`UNSUPPORTED`. **Recording date is never the event date** — it belongs to the
-registry lane. When several candidates coincide, **say so** rather than reporting a
-basis you did not have to choose.
+Say which date you used: `effective` · `instrument` · `execution` ·
+`acknowledgment` · `recorded` · `UNSUPPORTED`. When several candidates coincide,
+**say so** rather than reporting a basis you did not have to choose.
+
+⚠ **For an event on the parcel, the recording date is never the event date** — the
+instrument existed before the clerk saw it. But **`recorded` is a legal basis**,
+because some acts genuinely happen at recording: the registry's own act, and a
+documentary stamp cancelled with the recording stamp. Use it only when the act you
+are dating *is* the filing.
+
+> *Three readers reported this file contradicting itself — the row table and this
+> card called `recorded` invalid while `tablecheck` accepted it. One used it anyway
+> and said why: "I followed the checker as the mechanical authority. One of the three
+> needs to change." It was the two prose files.*
 
 ## 11 · VERIFY AGAINST THE ARTIFACT, NEVER AGAINST THE BRIEF
 

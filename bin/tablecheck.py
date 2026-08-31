@@ -269,7 +269,17 @@ def check(path):
     DPI = re.compile(r"\b(\d{2,5})\s*dpi\b|\bnative\b|\|\s*(\d{2,5})\s*\|", re.I)
     # >> match and split must agree on case, or a differently-cased heading
     #    matches here and then IndexErrors on the split.  It did, on two tables.
-    _sr = re.split(r"SEARCH\s+RECORD", md, maxsplit=1, flags=re.I)
+    # >> ANCHOR TO A HEADING.  Splitting on the first occurrence anywhere meant a
+    #    reader's prose cross-reference -- "(see SEARCH RECORD)" inside a `terms`
+    #    cell -- moved the block start into the table, and the region count read
+    #    **16 instead of 5**: silently inflated, 0 malformed, no failure.
+    #
+    #    A search record that OVER-REPORTS coverage is the one failure mode this
+    #    check exists to prevent, so this was the check defeating its own purpose.
+    #    Found by the reader it inflated, which renamed its cross-reference rather
+    #    than loosen the check, and asked for the anchor.
+    _sr = re.split(r"^[ \t]*#*[ \t]*SEARCH\s+RECORD\b.*$", md,
+                   maxsplit=1, flags=re.I | re.M)
     if len(_sr) > 1:
         block = _sr[1]
         regions, bad = 0, 0
@@ -472,9 +482,27 @@ def check(path):
     for m in LOTWORD.finditer(md):
         body_lots |= {int(x) for x in re.findall(r"\d+", m.group(1))}
     body_blocks = {int(m.group(1)) for m in BLOCKWORD.finditer(md)}
-    if body_lots and idx_lots and not (body_lots & idx_lots):
+    # >> Do not compare against a placeholder.  When the index lot is 0000 there is
+    #    NOTHING to agree or disagree with, so a body lot "sharing nothing with" it
+    #    is arithmetic about a non-value.  On RC_970273 rd carries 5001590000 --
+    #    block confirmed, lot absent -- and the document names map lots 24 and 25 in
+    #    a different numbering system entirely.  The check printed its own
+    #    placeholder warning and then FAILED the correct table anyway.
+    #
+    #    Two readers reported it; one passed only because the deed's phrasing
+    #    happened not to match LOTWORD, and said so rather than take the pass:
+    #    "that is luck of phrasing, not correctness, and the next reader who
+    #    paraphrases will get a false FAIL and may 'fix' a correct table to clear
+    #    it."  A checker that pressures a reader into breaking a good table is
+    #    worse than no checker.
+    real_idx = {l for l in idx_lots if l != 0}
+    if body_lots and real_idx and not (body_lots & real_idx):
         fails.append("BBL   body lots %s share nothing with index lots %s"
-                     % (sorted(body_lots), sorted(idx_lots)))
+                     % (sorted(body_lots), sorted(real_idx)))
+    elif body_lots and idx_lots and not real_idx:
+        notes.append("BBL   body lots %s NOT_CHECKABLE against the index -- its "
+                     "only lot is the 0000 placeholder (card 9: that is not "
+                     "agreement)" % sorted(body_lots))
     if body_blocks and idx_blocks and not (body_blocks & idx_blocks):
         fails.append("BBL   body blocks %s share nothing with index blocks %s"
                      % (sorted(body_blocks), sorted(idx_blocks)))
