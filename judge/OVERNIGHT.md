@@ -38,6 +38,35 @@ sequence against a spec written before any of them is opened.
         7  append surprises to the spec's §6. CHANGE NOTHING ELSE.
         8  next member
 
+## ⚠ LIVENESS — the hole that silently ate a whole night
+
+**A reader can end its turn mid-work with everything in context and nothing on
+disk.** It does not error, it does not report, and it does not appear stalled: the
+orchestrator is simply waiting for a message that will never arrive.
+
+> *Measured 2026-08-31. Five readers were dispatched, four rendered crops and did
+> real work — one had already settled the marks by measurement, "strikes 22.1% and
+> 7.5% longest dark run, flourishes 1.8% and 1.6%" — and every transcript ended on
+> the words "writing the table." No table existed. **Ten hours passed**, and it was
+> found only because the user asked whether anything had happened.*
+
+Two rules follow, and the harness is not unattended-safe without both:
+
+**1. Readers write first and refine after.** The brief must say so explicitly: *a
+partial table on disk beats a perfect one in context.* An artifact that exists can
+be gated, scored and resumed; one held in context is lost the moment the turn ends.
+
+**2. The orchestrator polls for liveness, and never just waits.** A reader is
+STALLED when its output file is absent AND nothing in its folder has changed for
+30 minutes. On detecting a stall: **nudge once** — resume, do not re-dispatch, since
+its reading is still in context and redoing it wastes the expensive half. If the
+file is still absent 30 minutes after the nudge, that reader is **dead for this
+round**: record it, proceed with the readers that sealed, and do not block the batch
+on it.
+
+Liveness is checkable from disk alone — file present? folder mtime recent? — so it
+costs nothing and needs no cooperation from the reader.
+
 ## Stop conditions — any one halts the batch
 
 1. **An integrity problem** — `doc_path()` returns a path and the file is absent.

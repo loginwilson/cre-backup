@@ -10,7 +10,20 @@ Last updated: 2026-08-31, at dispatch of phase 1.
 
 ## Where the run is
 
-**PHASE 1 — RE-EMIT TEST. Dispatched, awaiting all five.**
+**PHASE 1 — RE-EMIT TEST. Dispatched, stalled, resumed. Awaiting all five.**
+
+> ⚠ **Ten hours were lost to a liveness hole.** All five were dispatched; four
+> rendered crops and did real work, and every transcript ended on *"writing the
+> table"* with no file on disk. Nothing errored, so nothing reported. It surfaced
+> only because the user asked.
+>
+> All five have been **resumed, not re-dispatched** — their reading is still in
+> context and redoing it would waste the expensive half. The resume says: write the
+> file first, even if incomplete, then gate it.
+>
+> The rule is now in `OVERNIGHT.md` under LIVENESS: readers write first and refine
+> after, and the orchestrator polls disk rather than waiting for a message.
+> **Never wait on a reader without a timeout.**
 
 Five readers, identical brief, re-emitting their sealed `RC_1598772` tables into the
 redefined schema. **No new reading, no new disk access** — the package already
