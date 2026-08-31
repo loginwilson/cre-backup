@@ -94,8 +94,10 @@ held by the grantor, not government.
 - **The filed map** (m1: no. 995 B, Richmond County Clerk). The parcel description is
   meaningless without it, and it is a separate instrument in a separate series.
 - **The plat's other lots.** The covenants bind *"any part of South New York,
-  Addition Number Four"* — land this deed does not convey. Those rows are
-  `OTHER:`, never `SUBJECT`.
+  Addition Number Four"* — land this deed does not convey. Those rows carry
+  `bbls: SET: all lots in plat 995 B`, never the subject BBL. The set is real and
+  enumerable once the filed map is decoded; writing it as a description instead
+  loses it.
 - **The grantor's other deeds in the same plat.** A uniform scheme is enforceable
   across the subdivision, so siblings should carry near-identical covenant text.
   **This is the cheapest available cross-document check for this class.**
@@ -107,7 +109,7 @@ because there was no spec to surprise. Recorded for m2 to score against:
 
 *Structural (the framework had no place to put it):*
 - a clause **deleted before execution** — no mode fitted → `STRUCK`
-- a covenant **expiry** — `time` held one date → `until`
+- a covenant **expiry** — the row held one date and the scheme has two → `until`
 - the **registry's own act**, its time, and the return-to party → registry lane
 - a **private discretionary approval right** — `PERMIT` is government-only, and
   `ENVELOPE` captures the constraint while losing the veto holder. **Still has no
