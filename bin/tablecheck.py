@@ -514,11 +514,27 @@ def check(path):
     # Where a line says "total"/"aggregate", test whether some subset of the
     # other amounts on the page reaches it.  Reported, never failed: a total
     # may legitimately cover parts not in the table.
+    # >> READ THE CELL, NOT THE ROW.  This scanned each LINE for the word "total"
+    #    and then took max() of every amount on it -- but in a markdown table a
+    #    whole row is one line, so a row quoting "TOTAL: $0.00" beside a $42.00 fee
+    #    reported "stated total 42.00 NOT reconciled".  A false alarm, and a
+    #    checker that cries wolf gets ignored.
+    #
+    #    This is the SAME cell-versus-row defect that killed the DATE check and
+    #    that MARK had to fix afterwards -- third occurrence of one mistake.
+    #    Reported with a two-case probe by the reader it false-alarmed, which
+    #    phrased around it and said so rather than dodging quietly.
     amounts = money(md)
     for line in md.splitlines():
         if not re.search(r"\btotal\b|\baggregate\b", line, re.I):
             continue
-        want = money(line)
+        s = line.strip()
+        if s.startswith("|") and s.endswith("|"):
+            cells = [c for c in s.strip("|").split("|")
+                     if re.search(r"\btotal\b|\baggregate\b", c, re.I)]
+            want = [a for c in cells for a in money(c)]
+        else:
+            want = money(line)
         if not want:
             continue
         t = max(want)
