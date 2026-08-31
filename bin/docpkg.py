@@ -205,6 +205,13 @@ def zoom(did: str, page_no: int, dpi: int, rect: str | None,
     #    thought worth 900 dpi.  That is a pointer, and a pointer is contact.
     #    Blind has to include "blind about where the others looked."
     zdir = (pathlib.Path(out) if out else pathlib.Path.cwd()) / "zoom" / did
+    # >> Hard guard, not a convention.  cwd can be anything, and the one place a
+    #    crop must never land is the package every reader shares.
+    if DOCS.resolve() in zdir.resolve().parents or zdir.resolve() == DOCS.resolve():
+        sys.exit("refusing to write crops into the shared package (%s).\n"
+                 "Crops are yours alone: their filenames are the rects you chose,\n"
+                 "and that tells every other reader where you looked. Use --out,\n"
+                 "or run from your own folder." % DOCS)
     zdir.mkdir(parents=True, exist_ok=True)
     img = zdir / ("%s.png" % tag)
     page.get_pixmap(dpi=dpi, clip=clip).save(img)

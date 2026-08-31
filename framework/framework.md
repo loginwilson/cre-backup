@@ -20,6 +20,25 @@ row. Then write a short brief.
 Readers work independently, with no contact, until every table is sealed. Then they
 meet, read each other's **tables**, and propose changes to this file.
 
+## How you reach a document
+
+**You are handed a package. You never go and get one.** The orchestrator builds it
+once with `docpkg.py <id>`, so every reader holds byte-identical inputs. Your inputs
+are the numbered page images in that package, plus `docpkg.py --page --rect` to zoom.
+
+**Never touch the corpus yourself.** No directory walk over the acquisition store,
+no query against the navigation DB, no acquisition or reproduction script, no
+network. The full contract for *how* a package is resolved is
+`04 Extractions/DOCUMENT ACCESS.md`; `docpkg.py` implements it and is the only path.
+
+> *Earned the hard way: a judge session ran an ad-hoc corpus-wide PDF walk for three
+> and a half hours against the same USB volume a live registration lane was writing
+> to — the exact reader/writer contention that document's §6 measured at 0.14 s → 112 s.
+> The sanctioned tool was already correct. It was bypassed.*
+
+If a tool you need does not exist, **say so and stop.** Do not improvise one that
+touches the corpus.
+
 ## The eleven functions
 
 Ask all eleven on every page. Not the ones the document type suggests.
