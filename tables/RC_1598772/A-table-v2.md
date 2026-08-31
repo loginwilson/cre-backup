@@ -49,23 +49,41 @@ are not scored as event rows.
 | R1 | p2 · [0.161,0.820,0.461,0.912] · plain · "Recorded April, 25, 1911 at 9 a.m." | 1911-04-25 | — | — | — | INSTRUMENT | Richmond County Clerk → the record | The registry's own act. Recording date **and time**; rd carries the date and not the time. Never an event date (card 10) |
 | R2 | p2 · [0.161,0.820,0.461,0.912] · plain · "C. Livingston Bostwick, for Wood, Harmon & Co., Broadway, N.Y. City." | 1911-04-25 | — | — | — | INSTRUMENT | return-to: C. Livingston Bostwick for Wood, Harmon & Co. | The only agent address in the document. **"Wood, Harmon & Co." is not the grantor** — the grantor is Wood Harmon Richmond Realty Company |
 
-### Search record — fee, tax and revenue stamps
+## SEARCH RECORD — fee, tax and revenue stamps
 
 **Not a row.** This is card 5's first state — *I found nothing* — and an absence has no quote,
 so it cannot carry a citation and must not sit in a table whose every row asserts one. It was
 a row in my first draft; the CITE check was right to refuse it.
 
-Searched: both margins of both pages, by ink projection over the full page height.
+Method: ink projection over the delivered native page raster (3296 × 5132), threshold
+luminance < 128, per-row ink counted against 2% of band width, runs ≥ 10 rows reported.
 
-| band | ink | what the ink is |
+| region | dpi | found |
 |---|---|---|
-| p1 left, x < 0.18 | 0.047% | one cluster at y 0.002–0.005 — the "Vol. 396 PG 1" vendor caption |
-| p1 right, x > 0.90 | 0.006% | no cluster above threshold |
-| p2 left, x < 0.18 | 0.072% | "Vol. 396 PG 2" caption, plus the handwritten leaf numeral "2" at y 0.015–0.027 |
-| p2 right, x > 0.90 | 0.415% | eight clusters, y 0.072–0.206, all last words of justified body lines — verified by crop: "house", "et in", "and", "LTY", "said", "orge,", "king", "ring", "any" |
+| p1 · [0.00,0.00,0.18,1.00] | 330 | ink 0.047%, 1 cluster y 0.002–0.005 — the "Vol. 396 PG 1" vendor caption overlay. No stamp |
+| p1 · [0.90,0.00,1.00,1.00] | 330 | ink 0.006%, 0 clusters. Empty. No stamp |
+| p1 · [0.00,0.00,1.00,0.045] | 330 | ink 0.522%, below cluster threshold because the marks are sparse rather than line-scale: the vendor caption, the handwritten volume numeral "396", one diagonal pen stroke, and the leaf numeral "1". No stamp |
+| p1 · [0.00,0.93,1.00,1.00] | 330 | ink 0.038%, 0 clusters. Empty. No stamp |
+| p2 · [0.00,0.00,0.18,1.00] | 330 | ink 0.072%, 3 clusters y 0.002–0.005, 0.015–0.018, 0.024–0.027 — the "Vol. 396 PG 2" caption and the handwritten leaf numeral "2". No stamp |
+| p2 · [0.90,0.00,1.00,1.00] | 330 | ink 0.415%, 19 clusters y 0.072–0.206+ — all last words of justified body lines, crop-verified: "house", "et in", "and", "LTY", "said", "orge,", "king", "ring", "any". No stamp |
+| p2 · [0.00,0.00,1.00,0.045] | 330 | ink 0.240%, below cluster threshold: the vendor caption and the leaf numeral "2". No stamp |
+| p2 · [0.00,0.93,1.00,1.00] | 330 | ink 0.000%. Wholly empty. No stamp |
 
-**No fee, tax or revenue stamp appears anywhere in either margin.** The document does not
-assert their absence; I looked and did not find them.
+**No fee, tax or revenue stamp appears anywhere in either margin, at the head or at the foot
+of either page.** The document does not assert their absence; I looked and did not find them.
+
+⚠ **The dpi column is not reproducible through `docpkg --rect` on this document, and 330 is
+an approximation of a number that does not exist.** The full-page build hands over the native
+bitmap unresampled — 3296 × 5132, which is what I measured. The `--rect` zoom path instead
+calls `get_pixmap(dpi=…, clip=…)` on the **page box**, and the box is 10.00 × 17.00 in: it
+renders 3000 × 5100 at 300 dpi. Native is therefore **329.6 dpi across and 301.9 dpi down** —
+the embedded bitmap's aspect differs from the page box's by **9.2%**, the same class of
+distortion `docpkg` was changed to stop delivering, still present on the crop path. So a
+referee who re-renders `p1 · [0.00,0.00,0.18,1.00] --dpi 330` gets an image 9.2% narrower
+than the one these percentages were taken from, and will not reproduce them. Falsifying this
+negative requires the native page raster, not a re-render. I have stated 330 because the
+column requires one number and the run-length measurements are taken along the horizontal
+axis; the vertical figure is 302.
 
 ## Index check (card 9)
 

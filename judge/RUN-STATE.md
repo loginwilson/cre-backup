@@ -79,10 +79,28 @@ only by having read both pages whole."* Another corrected its own *"both margins
 900 dpi"* on finding only one had been. **The row form let a weak negative look
 strong.**
 
-**⏳ Outstanding:** A's search record uses bands (`p1 left x<0.18`) rather than rects
-and fails the new check. Its analysis is *more* rigorous than the rule requires — full
-ink projection with thresholds — so it has been asked for the notation only, and told
-to push back if the rect form loses something. **B, C, D, E are clean.**
+**4. `--rect` cropped the page box, not the scan** (`69abab5`). `build()` was fixed
+long ago to hand over the native bitmap unresampled; **`zoom()` never was.** On m1 the
+box is 10 × 17 in while the scan is 3296 × 5132 — 329.6 dpi across, 301.9 down — so
+**every crop made this round was 9.18% narrow**, including every mark rect verified in
+five sealed tables. Now crops the scan: the band `[0,0,0.18,1]` renders 593 × 5132,
+against 540 × 5100 before.
+
+*Rects are unaffected* — they are normalised, and the ink-run ratios that settled the
+flourish dispute divide out any uniform horizontal scale. **The readings held; the
+evidence path did not.**
+
+Consequently `native` is a legal sensitivity in a `SEARCH RECORD`, and is the only
+honest one for a page with an embedded scan: there is no single dpi, so a number
+sends a referee to a different image.
+
+> **Twice now, changing the *form* of a claim exposed something it was hiding.**
+> Restating a row as a search record made a reader discover it had swept only two
+> margins; restating regions as rects made it find the crop distortion, and its
+> coverage went from four regions to eight.
+
+**⏳ Outstanding: nothing.** All five tables gate clean. A's search record is now nine
+regions, 0 malformed.
 
 ### ⏭ NEXT — m2
 
