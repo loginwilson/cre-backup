@@ -24,18 +24,32 @@ because then no two rounds have the same composition and nothing can be compared
 ## The readers
 
 All Claude Opus 5. Blind — each workspace contains only its own folder while
-reading.
+reading. **Identical instructions, deliberately.**
 
-| reader | method | catches what the others miss |
-| --- | --- | --- |
-| **1 Sequential** | page 1 to N, as a person reads | narrative flow; what the document is *for*; clauses that modify earlier clauses |
-| **2 Function sweep** | one function across all pages, then the next | the party wall inside a surveyor's third boundary course |
-| **3 Index-first** | read the registry row, then hunt the document for each field | what the index gets wrong, and what it omits |
-| **4 Strict** | nothing is an event without an operative verb and a named party | over-emission — the sixteen fee rows a cover page can manufacture |
-| **5 Inclusive** | every clause does something until proven otherwise | omission — a covenant expiry buried in one sentence |
+> ⚠ **This section previously assigned each reader a different method** —
+> sequential, function sweep, index-first, strict, inclusive. That is no longer the
+> design, and it sat here contradicting practice for a full round. It is recorded
+> rather than deleted because the reason for the change matters.
 
-Readers 4 and 5 disagree **by construction**. That is the design working: their
-splits land on the framework's open boundary questions instead of surfacing by luck.
+**Why identical.** If five readers use five methods and diverge, the divergence is
+uninterpretable: it could be framework ambiguity or it could be method. With
+identical instructions, **every divergence is a fact about the framework** — it
+localises exactly where the instructions admit two readings. Divergence becomes a
+measurement instead of noise.
+
+It also passed the field test. On `RC_1598772`, five identical readers produced
+16 / 26 / 27 / 27 / 29 rows and the spread was almost entirely **splitting policy** —
+which is precisely the kind of framework gap this arrangement is meant to expose,
+and it would have been unattributable under five different methods.
+
+**What the method diversity used to buy is now bought elsewhere.** The function
+sweep became a separate coverage probe, run *after* the readers seal so it cannot
+contaminate them; strict-versus-inclusive became the splitting rule, stated in the
+schema rather than embodied in two disagreeing readers.
+
+> *Grounded in the finding at the top of this file: same model, different method
+> diverges as much as different model, same method. If method alone produces
+> divergence, then method must be held constant for divergence to mean anything.*
 
 ## Convening
 
