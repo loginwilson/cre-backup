@@ -388,15 +388,20 @@ def check(path):
             notes.append("DATE  expires %s (%d days after instrument)"
                          % (exp, (exp - ins).days))
 
-    if "time" in hdr and "until" in hdr:
+    # >> This guard read `time`, which a v4 header does not have -- so the check
+    #    was DEAD on every table it was written for, and fired only on the v3
+    #    shape it replaced.  Reported by a reader, not by me: I renamed the
+    #    column and never updated its guard.
+    _when = "date" if "date" in hdr else "time"
+    if _when in hdr and "until" in hdr:
         for r in ev:
-            t, u = cell(r, hdr, "time"), cell(r, hdr, "until")
+            t, u = cell(r, hdr, _when), cell(r, hdr, "until")
             if not t or not u:
                 continue
             td, ud = all_dates(t), all_dates(u)
             if td and ud and ud[0][0] < td[0][0]:
-                fails.append("DATE  row %s until %s is before time %s"
-                             % (r[0].strip("` *"), ud[0][0], td[0][0]))
+                fails.append("DATE  row %s until %s is before %s %s"
+                             % (r[0].strip("` *"), ud[0][0], _when, td[0][0]))
 
     # ---- BBL / lots ------------------------------------------------------
     bbls = set(BBL.findall(md))

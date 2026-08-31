@@ -205,13 +205,25 @@ def zoom(did: str, page_no: int, dpi: int, rect: str | None,
     #    thought worth 900 dpi.  That is a pointer, and a pointer is contact.
     #    Blind has to include "blind about where the others looked."
     zdir = (pathlib.Path(out) if out else pathlib.Path.cwd()) / "zoom" / did
-    # >> Hard guard, not a convention.  cwd can be anything, and the one place a
-    #    crop must never land is the package every reader shares.
-    if DOCS.resolve() in zdir.resolve().parents or zdir.resolve() == DOCS.resolve():
-        sys.exit("refusing to write crops into the shared package (%s).\n"
-                 "Crops are yours alone: their filenames are the rects you chose,\n"
-                 "and that tells every other reader where you looked. Use --out,\n"
-                 "or run from your own folder." % DOCS)
+    # >> Hard guard, and the FIRST version of it was wrong.  It only refused the
+    #    shared PACKAGE, so a reader whose cwd was <loop> itself wrote to
+    #    <loop>/zoom/<id> -- shared by every reader, and 27 crops landed there
+    #    before a reader noticed and reported it.  The orchestrator's check had
+    #    looked under docs/ and under each reader's folder, and never at <loop>
+    #    itself: it looked where the bug was expected, not where it was.
+    #
+    #    So: refuse anything that is not strictly inside a per-reader folder.
+    #    A crop's filename IS the rect it was cut from, which tells the next
+    #    reader exactly where to look.  Blind has to include that.
+    z = zdir.resolve()
+    shared = (DOCS.resolve() in z.parents or z == DOCS.resolve()
+              or z.parent == LOOP.resolve() or z.parent.parent == LOOP.resolve())
+    if shared:
+        sys.exit(
+            "refusing to write crops to %s -- that path is visible to every "
+            "reader.\nA crop's filename is the rect you chose, so a shared "
+            "folder tells the others where\nyou looked. Run from your own "
+            "folder (loop/<you>), or pass --out <your folder>." % z)
     zdir.mkdir(parents=True, exist_ok=True)
     img = zdir / ("%s.png" % tag)
     page.get_pixmap(dpi=dpi, clip=clip).save(img)
