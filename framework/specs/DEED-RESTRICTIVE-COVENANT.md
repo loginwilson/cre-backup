@@ -47,21 +47,46 @@ wrong.
 
 ## 2 · THE EVENT — which of the eleven fire
 
-**Signature (expected):**
+**MEASURED, not predicted.** Counted across **99 event rows from five independent
+readers** of m1 (`judge/batches/RE-EMIT-1.md`). This replaces the orchestrator's
+guess, which was wrong about two functions.
 
-| function | mode | why |
+| function | rows | dominant mode | what fires it |
+|---|---|---|---|
+| **IDENTITY** | 22 | `ASSERT` | corporate existence, signing capacity, execution, acknowledgment |
+| **ENVELOPE** | 22 | `CREATE` | setbacks, building lines, materials, building form |
+| **OCCUPANCY** | 16 | `CREATE` | family counts, prohibited trades, liquor, use bans |
+| **ENCUMBRANCE** | 14 | `CREATE` · `STRUCK` · `ASSERT` | the covenant scheme; the struck assessments clause; the covenant against encumbrances |
+| **ENTITLEMENT** | 9 | `CREATE` | ⚠ **the grantor's reserved rights** — see below |
+| **TITLE** | 6 | `TRANSFER` | the conveyance itself — one row per reader |
+| **COST** | 5 | `CREATE` | the building cost floor — **one per reader, unanimous** |
+| **VALUE** | 5 | `ASSERT` | recited consideration — **one per reader, unanimous** |
+
+**Confirmed NOT to fire — 0 rows out of 99, all five readers:**
+`CAPITAL` (a deed carries no debt) · `PERMIT` (approvals here are **private**) ·
+`AS_BUILT` (nothing is built on a vacant platted lot). **The seed spec predicted
+this and it held.**
+
+### ⚠ Two corrections the measurement forced
+
+**`ENTITLEMENT` fires and the seed spec did not predict it — 9 rows.** The grantor's
+reserved rights (to build on the plat, to approve plans, to grant use rights) are
+*development rights attaching to land that survive their owner*, which is exactly
+`ENTITLEMENT`'s question. The seed listed only six functions; **eight fired.**
+
+**`COST` is confirmed by count, not by argument** — five rows, one per reader,
+after the file's self-contradiction was settled.
+
+### Modes
+
+| mode | rows | note |
 |---|---|---|
-| **TITLE** | `TRANSFER` | the conveyance itself — one row |
-| **ENCUMBRANCE** | `CREATE` | the covenant scheme as a burden running with the land |
-| **ENVELOPE** | `CREATE` | setbacks, building lines, materials |
-| **COST** | `CREATE` | building cost floors — a duty to spend. ⚠ **not ENVELOPE**; settled 2026-08-31 |
-| **OCCUPANCY** | `CREATE` | family counts, prohibited trades, use restrictions |
-| **IDENTITY** | `ASSERT` | grantor's corporate existence and the officer's capacity |
-| **VALUE** | `ASSERT` | recited consideration |
-
-**Expected NOT to fire:** `AS_BUILT` — on a vacant platted lot nothing has been
-built. `CAPITAL` — a deed carries no debt. `PERMIT` — approvals here are **private**,
-held by the grantor, not government.
+| `CREATE` | 57 | the covenant scheme dominates the instrument |
+| `ASSERT` | 32 | identity, capacity, consideration |
+| `TRANSFER` | 5 | one per reader — the grant |
+| `STRUCK` | 5 | **one per reader, unanimous** — the assessments clause |
+| `MODIFY` | 0 | — |
+| `TERMINATE` | 0 | ⚠ **and it should be 0.** One reader deleted its TERMINATE row on the merits: *"a TERMINATE row invents an act on a date when nothing happened."* `until` is the mechanism for a self-expiring scheme. |
 
 ⚠ Deviation from this signature is a finding, not a correction.
 
@@ -139,13 +164,39 @@ because there was no spec to surprise. Recorded for m2 to score against:
 
 ---
 
+## 7 · MEASURED BASELINE — what m2 is scored against
+
+From 99 rows, five readers, m1. These are counts, not opinions.
+
+**`bbls` forms actually used:**
+
+| form | rows | reading |
+|---|---|---|
+| BBL list | **81** | the overwhelming default — rd supplies it, nobody derived one |
+| `SET:` | 10 | ~2 per reader: the reservation over the plat, and the four-street carve-out |
+| `INSTRUMENT` | 7 | used for execution / acknowledgment rows — **outside its stated scope**, which readers flagged |
+| `UNPLACED` | **1** | a single row in 99. One reader chose it and said it was false |
+
+**`until` populated: 9 · 16 · 7 · 14 · 10** — 56 of 99 rows, and **the spread is the
+open gap made visible.** The expiry sentence sweeps *"all restrictions and covenants
+in this instrument"*, and whether it reaches the grantor's reserved rights is
+unsettleable from the page. Blank asserts perpetuity; a date asserts expiry; there is
+no third state, so five readers guessed differently on the same clause. **A two-fold
+spread on a machine field is the cost of the missing `UNKNOWN(reason)` form.**
+
+---
+
 ## THE STANDING PREDICTION FOR m2
 
 Written **before** m2 is drawn, so it can be scored:
 
-1. The six-function signature in §2 fires, and `AS_BUILT`/`CAPITAL`/`PERMIT` do not.
-2. A filed-map reference is present and **is not in rd**.
-3. The covenant scheme carries a stated expiry.
+1. **The eight-function signature in §2 fires**, and `AS_BUILT` / `CAPITAL` /
+   `PERMIT` do not. (m1: 0 rows out of 99 for all three.)
+2. `ENTITLEMENT` fires on the grantor's reserved rights — **now a measured
+   expectation, not a guess.**
+3. `STRUCK` and `TERMINATE` do not both appear; a self-expiring scheme uses `until`.
+4. A filed-map reference is present and **is not in rd**.
+5. The covenant scheme carries a stated expiry.
 4. A private approval right appears and still has no home in the eleven.
 5. Structural surprise **≤ 3**.
 
