@@ -12,6 +12,18 @@ independent, and the round is void.
 Record each table's sha256 before widening anything. That is the proof the reading
 was sealed first.
 
+**A table is not sealed until `python bin/tablecheck.py <table.md>` returns clean.**
+The peer fixes its own failures and re-seals; a new hash is recorded. This is a
+gate, not a report.
+
+> *Why this moved to the top.* On `RC_1598772` it was the last item on this
+> checklist, and it never ran. Extractor A's table carried **no labelled date
+> block** — a binding rule — and that passed through a full council round and a
+> published ruling undetected. Three other tables asserted a `struck` mark with no
+> geometry. The rule existed. The checker existed. Nothing connected them.
+>
+> A check that runs after the conclusions are written is a comment, not a check.
+
 ## 1. Widen
 
 Each peer's workspace currently holds only its own folder. Add the other peers'
