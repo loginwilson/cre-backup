@@ -186,12 +186,6 @@ event. That is what `EXTRACT-CARD.md` is for, and what the class specs accumulat
 machine fields.** Five careful blind readers, and nothing consumable — because the
 table had never been defined this way. That number is the baseline. It should not
 stay at zero for a second document.
-`recorded:`, `expires:`, `UNKNOWN` where unstated. Below it, the **registry lane**:
-recording date *and time*, the registry's own act, the return-to party, and any fee
-or stamp. Same citation discipline. Not one of the eleven — it asks about the
-**instrument**, not the parcel.
-
-Then a brief: six to ten lines, no new facts, everything traceable to a row.
 
 ## How a round is measured
 
