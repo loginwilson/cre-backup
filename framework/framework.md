@@ -154,6 +154,31 @@ burden forever, and every statement about that parcel after 1915 would be wrong.
 evaluate it. *"lots on four named streets"* is prose — it reaches no parcel, and it
 is a row that failed.
 
+### ⚠ A BBL is a reference **in a state in time**, and you never derive one
+
+**Parcels change.** Lots merge, split, and get renumbered. A 1911 deed's *"lot 17,
+block 200"* is not today's BBL and must never be written as if it were.
+
+So record **what was true then**, from the two sources that actually state it:
+
+| source | gives you |
+|---|---|
+| **rd** (`recorded_details`) | the BBL as the registry held it for this instrument — this is where most of it comes from |
+| **the document** | the parcel designation in its own words — lot, block, filed map — which is the **context** rd does not carry |
+
+**Write rd's BBL when rd has one.** Put the document's own designation in `terms`
+whenever it differs in form, and say so. Where they disagree, record both and
+correct neither — that disagreement is a real finding (card 9).
+
+**Never compose a BBL yourself** from a borough plus a lot and block on the page.
+It renders exactly like a measured value and it is a guess (card 4). If rd has no
+BBL and the document gives only a map designation, that is `UNPLACED` plus the
+designation in `terms` — a parcel this instrument names but does not resolve.
+
+> *Connecting 1911's lot 17 block 200 to the lot it is today is **lineage**, built by
+> Resolve across many documents. It is not something a reader can see on one page,
+> and a reader who tries has invented it.*
+
 ### A worked row, so there is nothing to interpret
 
 ```
