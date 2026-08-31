@@ -83,21 +83,79 @@ what filing it elsewhere loses.
 answers, and note in `terms` that it bears on the other. Do not emit one act twice —
 but **do** emit separate rows when one sentence genuinely does two things.
 
+## What the row is FOR
+
+Extraction is step 1 of Reconstruction. Steps 2 and 3 are **Reorganize** (fan each
+event into the BBLs it affects, sort chronologically) and **Resolve** (turn the
+ordered events into a function-by-time state record — the Temporal State Matrix).
+
+**Those two run mechanically, or they do not run at all.** So the bar for extraction
+is not "faithful to the document." It is **faithful AND determinate**: every field a
+downstream program needs must be a value it can read, never prose it must interpret.
+
+### The consumability test — three questions per row
+
+1. **Can a program list the BBLs this event affects?** (Reorganize)
+2. **Can a program place it in time?** (Resolve)
+3. **Can a program tell what state it writes under its function?** (Resolve)
+
+If any answer is *"a model would have to read the prose,"* **the row is incomplete —
+however accurate it is.** A faithful row that cannot be consumed has moved the work
+downstream, not done it.
+
 ## The row
 
-| column | holds |
-| --- | --- |
-| `#` | E1, E2, … in page order |
-| `citation` | `page · rect · mark · quote` — see card 1 |
-| `time` | the date **and which date it is** |
-| `until` | when it stops, or blank if it does not |
-| `function` | one of the eleven |
-| `mode` | `ASSERT` · `TRANSFER` · `CREATE` · `MODIFY` · `TERMINATE` · `STRUCK` |
-| `where` | `SUBJECT` + BBL · `OTHER:` + description · `INSTRUMENT` · `UNPLACED` |
-| `parties` | `from → to` for a directed act; a **labelled relation** otherwise |
-| `quantity` | number + unit, or `UNKNOWN` with the reason |
-| `terms` | the operative conditions |
-| `summary` | one line, plain English |
+| column | holds | consumed by |
+| --- | --- | --- |
+| `#` | E1, E2, … in page order | — |
+| `citation` | `page · rect · mark · quote` — card 1 | audit |
+| `date` | ISO `YYYY-MM-DD`, or `UNKNOWN` | Resolve |
+| `basis` | `effective` · `instrument` · `execution` · `acknowledgment` · `UNSUPPORTED` | Resolve |
+| `until` | ISO date, or blank if it does not stop | Resolve |
+| `function` | one of the eleven | Resolve |
+| `mode` | `ASSERT` · `TRANSFER` · `CREATE` · `MODIFY` · `TERMINATE` · `STRUCK` | Resolve |
+| `bbls` | **a list.** See below — never prose | **Reorganize** |
+| `sets` | **the state this event writes.** See below — never prose | **Resolve** |
+| `parties` | `from → to` for a directed act; a labelled relation otherwise | Resolve |
+| `quantity` | number + unit, or `UNKNOWN` with the reason | Derive |
+| `terms` | the operative conditions, in prose | human |
+| `summary` | one line, plain English | human |
+
+**`date` and `basis` are separate columns** because Resolve sorts on one and audits
+the other. One cell holding *"1911-04-14 (instrument date)"* forces a parse.
+
+### `bbls` — a list, because one event binds many lots
+
+| form | means | Reorganize |
+|---|---|---|
+| `5004030016` | one BBL | fans to one |
+| `5004030016, 5004030017` | several | fans to each |
+| `SET: <criterion>` | a set the document defines but does not enumerate — *"all lots in plat 995 B"* | **deferred**, resolvable once the plat is decoded |
+| `INSTRUMENT` | about the paper, not a parcel — registry lane | no fan |
+| `UNPLACED` | the document does not place it | no fan, flagged |
+
+⚠ **`SET:` is a promise, not prose.** It names a criterion a later pass can evaluate.
+*"lots on four named streets"* written as description is not a `SET:` — it is a row
+that failed the test.
+
+### `sets` — the value that lands in the state matrix
+
+Every cell in the Temporal State Matrix is written by some event. **This column is
+that write.** `MODIFY` on `ENCUMBRANCE` with `sets` empty tells Resolve that
+something changed and nothing about what it changed to.
+
+The legal values are **per function and per class, and they live in
+`specs/<CLASS>.md`** — not here. A shared vocabulary invented from one document
+would be wrong for the next ten. What is universal is only this: **`sets` is never
+prose, and never empty.** When the document does not determine the value, write
+`UNKNOWN(<reason>)` — that is a real state, and Resolve treats it as a known gap
+rather than a silent one.
+
+Above the table, a labelled date block — `instrument:`, `acknowledged:`,
+`recorded:`, `expires:`, `UNKNOWN` where unstated. Below it, the **registry lane**:
+recording date *and time*, the registry's own act, the return-to party, and any fee
+or stamp. Same citation discipline. Not one of the eleven — it asks about the
+**instrument**, not the parcel.
 
 `from → to` means **the act moves from the first party to the second**. On an
 `ASSERT` row there is usually no such movement — write `asserted by: X  about: Y`.

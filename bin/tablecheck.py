@@ -118,8 +118,37 @@ RECT = re.compile(r"\[\s*(\d*\.?\d+)\s*,\s*(\d*\.?\d+)\s*,"
 MARKS = ("plain", "struck", "inserted", "flourish", "marginal", "uncertain")
 MARKWORD = re.compile(r"(?<![\w-])(" + "|".join(MARKS) + r")(?![\w-])", re.I)
 MODES = ("ASSERT", "TRANSFER", "CREATE", "MODIFY", "TERMINATE", "STRUCK")
-COLNAMES = ("#", "citation", "time", "until", "function", "mode", "where",
-            "parties", "quantity", "terms", "summary")
+COLNAMES = ("#", "citation", "time", "date", "basis", "until", "function", "mode",
+            "where", "bbls", "sets", "parties", "quantity", "terms", "summary")
+
+# >> FEED -- is this row consumable by Reorganize and Resolve?
+#
+#    Extraction is step 1 of Reconstruction; steps 2 and 3 run MECHANICALLY or
+#    not at all.  So a row can be perfectly faithful to the document and still
+#    be useless: if `bbls` is prose, Reorganize cannot fan it; if `sets` is
+#    prose, every cell of the Temporal State Matrix needs a model to re-read it.
+#    That is not extraction, it is deferral.
+#
+#    This check needs NO ground truth.  It is a property of the table alone,
+#    which makes it the one accuracy-adjacent number available on every round
+#    from the first document onward.
+FUNCS = ("IDENTITY", "TITLE", "ENTITLEMENT", "ENVELOPE", "ENCUMBRANCE", "CAPITAL",
+         "PERMIT", "AS_BUILT", "OCCUPANCY", "COST", "VALUE")
+BASES = ("effective", "instrument", "execution", "acknowledgment", "unsupported")
+ISO = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+BBLS_OK = re.compile(r"^(?:\d{10}(?:\s*,\s*\d{10})*|SET:\s*\S.*|INSTRUMENT|UNPLACED)$")
+
+
+def determinate(value):
+    """A value Resolve can write into a cell -- not a sentence about one."""
+    v = (value or "").strip().strip("`* ")
+    if not v:
+        return False, "empty"
+    if len(v) > 80:
+        return False, "%d chars -- that is prose, not a value" % len(v)
+    if ". " in v:
+        return False, "contains a sentence"
+    return True, None
 
 
 def header_index(md):
@@ -249,6 +278,64 @@ def check(path):
                  % (n_rect, len(ev),
                     ("; " + ", ".join("%s x%d" % kv for kv in sorted(seen.items())))
                     if seen else ""))
+
+    # ---- FEED ------------------------------------------------------------
+    ready = 0
+    for r in ev:
+        rid = r[0].strip("` *")
+        ok = True
+
+        # Q1 -- can Reorganize list the BBLs this event affects?
+        b = cell(r, hdr, "bbls")
+        if b is not None:
+            bv = b.strip().strip("`* ")
+            if not BBLS_OK.match(bv):
+                fails.append("FEED  row %s bbls %r is not fannable -- needs a BBL "
+                             "list, SET:<criterion>, INSTRUMENT or UNPLACED. A "
+                             "description is a row that failed the test." % (rid, bv[:50]))
+                ok = False
+        else:
+            ok = False                      # no column: not consumable, not a fail
+
+        # Q2 -- can Resolve place it in time?
+        d = cell(r, hdr, "date")
+        if d is not None:
+            dv = d.strip().strip("`* ")
+            if not (ISO.match(dv) or dv.upper().startswith("UNKNOWN")):
+                fails.append("FEED  row %s date %r is not sortable -- ISO "
+                             "YYYY-MM-DD or UNKNOWN" % (rid, dv[:40]))
+                ok = False
+            bs = (cell(r, hdr, "basis") or "").strip().strip("`* ").lower()
+            if bs and bs not in BASES:
+                fails.append("FEED  row %s basis %r is not one of %s"
+                             % (rid, bs[:30], "/".join(BASES)))
+                ok = False
+        else:
+            ok = False
+
+        # Q3 -- can Resolve tell what state this writes?
+        s = cell(r, hdr, "sets")
+        if s is not None:
+            good, why = determinate(s)
+            if not good:
+                fails.append("FEED  row %s sets is %s -- Resolve writes this cell "
+                             "of the state matrix verbatim; prose means a model "
+                             "must re-read the row downstream" % (rid, why))
+                ok = False
+        else:
+            ok = False
+
+        f = (cell(r, hdr, "function") or "").strip().strip("`* ").upper()
+        if f and f not in FUNCS:
+            fails.append("FEED  row %s function %r is not one of the eleven" % (rid, f))
+            ok = False
+
+        if ok:
+            ready += 1
+    if ev:
+        notes.append("FEED  %d of %d rows Reconstruction-ready (%.0f%%) -- "
+                     "fannable bbls, sortable date, determinate sets"
+                     % (ready, len(ev), 100.0 * ready / len(ev)))
 
     # ---- DATE ------------------------------------------------------------
     # Collect every ISO date in the file with the word nearest it, then assert
@@ -411,6 +498,18 @@ def _row(cite, time="1911-04-24", until="", mode="ASSERT"):
 
 _Q = '"subject, however, to all assessments"'
 
+# the v4+ row shape, for the FEED probes
+_F = ("| # | citation | date | basis | until | function | mode | bbls | sets | "
+      "parties | quantity | terms | summary |\n"
+      "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n")
+
+
+def _frow(n="E1", date="1911-04-14", basis="instrument", func="ENCUMBRANCE",
+          bbls="5004030016", sets="restricted", parties="asserted by: the company"):
+    return ("| %s | p2 · [0.1,0.2,0.5,0.3] · plain · %s | %s | %s |  | %s | CREATE "
+            "| %s | %s | %s | UNKNOWN | conditions | one line |\n"
+            % (n, _Q, date, basis, func, bbls, sets, parties))
+
 PROBES = [
     # the whole reason rule 1 exists: an unfalsifiable STRUCK claim
     ("STRUCK cited by characters only is refused",
@@ -464,6 +563,41 @@ PROBES = [
     ("a row with no quote is refused",
      _D + _H + _row("p2, third paragraph"),
      ["carries no quoted evidence"]),
+
+    # ---- FEED: consumability by Reorganize and Resolve --------------------
+    ("prose in bbls is refused -- Reorganize cannot fan a description",
+     _D + _F + _frow(bbls="lots on four named streets"),
+     ["is not fannable"]),
+
+    ("a BBL list and a SET criterion both pass",
+     _D + _F + _frow(bbls="5004030016, 5004030017")
+        + _frow(n="E2", bbls="SET: all lots in plat 995 B"),
+     []),
+
+    ("prose in sets is refused -- Resolve writes that cell verbatim",
+     _D + _F + _frow(sets="the grantee takes subject to the covenants. They run "
+                          "with the land until 1915."),
+     ["Resolve writes this cell"]),
+
+    ("an empty sets is refused -- MODIFY with no value says nothing changed to what",
+     _D + _F + _frow(sets=""),
+     ["Resolve writes this cell"]),
+
+    ("UNKNOWN with a reason is a real state and passes",
+     _D + _F + _frow(sets="UNKNOWN(no share stated)"),
+     []),
+
+    ("an unsortable date is refused",
+     _D + _F + _frow(date="April 25, 1911"),
+     ["is not sortable"]),
+
+    ("a basis outside the vocabulary is refused",
+     _D + _F + _frow(basis="recorded"),
+     ["is not one of"]),
+
+    ("a function outside the eleven is refused",
+     _D + _F + _frow(func="REGISTRY"),
+     ["not one of the eleven"]),
 
     # >> a v3-era table has no rects and no STRUCK rows.  It must PASS, with the
     #    gap stated in a note.  A checker that fails everything gets ignored,

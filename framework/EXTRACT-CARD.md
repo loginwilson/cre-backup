@@ -29,9 +29,10 @@ The rect need not be tight. The test is that **cropping it shows the marked text
 little else**. `docpkg.py --rect` takes the same shape, so record the rect you
 zoomed to.
 
-⚠ **Mark *type* is measurable; mark *order* is not.** Bitonal scans lose stroke
-sequence, so `struck` is citable and *struck-before-execution* is permanently
-`uncertain`.
+⚠ **Mark *type* is measurable; mark *order* is not.** These scans are bitonal, so
+**stroke sequence is unrecoverable** — nobody, including a referee with the images,
+can settle *drawn before or after* from them. `struck` is a citable claim;
+*struck-before-execution* is permanently `uncertain`.
 
 ## 2 · ONE ROW PER OPERATIVE ACT
 
