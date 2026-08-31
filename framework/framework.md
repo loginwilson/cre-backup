@@ -95,13 +95,19 @@ downstream program needs must be a value it can read, never prose it must interp
 
 ### The consumability test — three questions per row
 
-1. **Can a program list the BBLs this event affects?** (Reorganize)
-2. **Can a program place it in time?** (Resolve)
-3. **Can a program tell what state it writes under its function?** (Resolve)
+1. **Can a program list the BBLs this event affects?** (Reorganize fans on this)
+2. **Can a program place it in time?** (Reorganize sorts on this)
+3. **Is the function one of the eleven?** (Resolve projects on this)
 
 If any answer is *"a model would have to read the prose,"* **the row is incomplete —
 however accurate it is.** A faithful row that cannot be consumed has moved the work
 downstream, not done it.
+
+**That is the whole requirement.** Given every event for a BBL, ordered, each tagged
+with a function, the functional state record follows — `mode` already says whether
+an event adds (`CREATE`), changes (`MODIFY`), moves (`TRANSFER`), ends (`TERMINATE`)
+or merely states (`ASSERT`) what came before. Resolution is **ordering and
+projection, not re-interpretation.** Extraction does not need to pre-compute state.
 
 ## The row
 
@@ -115,7 +121,6 @@ downstream, not done it.
 | `function` | one of the eleven | Resolve |
 | `mode` | `ASSERT` · `TRANSFER` · `CREATE` · `MODIFY` · `TERMINATE` · `STRUCK` | Resolve |
 | `bbls` | **a list.** See below — never prose | **Reorganize** |
-| `sets` | **the state this event writes.** See below — never prose | **Resolve** |
 | `parties` | `from → to` for a directed act; a labelled relation otherwise | Resolve |
 | `quantity` | number + unit, or `UNKNOWN` with the reason | Derive |
 | `terms` | the operative conditions, in prose | human |
@@ -137,19 +142,6 @@ the other. One cell holding *"1911-04-14 (instrument date)"* forces a parse.
 ⚠ **`SET:` is a promise, not prose.** It names a criterion a later pass can evaluate.
 *"lots on four named streets"* written as description is not a `SET:` — it is a row
 that failed the test.
-
-### `sets` — the value that lands in the state matrix
-
-Every cell in the Temporal State Matrix is written by some event. **This column is
-that write.** `MODIFY` on `ENCUMBRANCE` with `sets` empty tells Resolve that
-something changed and nothing about what it changed to.
-
-The legal values are **per function and per class, and they live in
-`specs/<CLASS>.md`** — not here. A shared vocabulary invented from one document
-would be wrong for the next ten. What is universal is only this: **`sets` is never
-prose, and never empty.** When the document does not determine the value, write
-`UNKNOWN(<reason>)` — that is a real state, and Resolve treats it as a known gap
-rather than a silent one.
 
 Above the table, a labelled date block — `instrument:`, `acknowledged:`,
 `recorded:`, `expires:`, `UNKNOWN` where unstated. Below it, the **registry lane**:
