@@ -109,52 +109,83 @@ an event adds (`CREATE`), changes (`MODIFY`), moves (`TRANSFER`), ends (`TERMINA
 or merely states (`ASSERT`) what came before. Resolution is **ordering and
 projection, not re-interpretation.** Extraction does not need to pre-compute state.
 
-## The row
+## THE ROW — the complete definition
 
-| column | holds | consumed by |
-| --- | --- | --- |
-| `#` | E1, E2, … in page order | — |
-| `citation` | `page · rect · mark · quote` — card 1 | audit |
-| `date` | ISO `YYYY-MM-DD`, or `UNKNOWN` | Resolve |
-| `basis` | `effective` · `instrument` · `execution` · `acknowledgment` · `UNSUPPORTED` | Resolve |
-| `until` | ISO date, or blank if it does not stop | Resolve |
-| `function` | one of the eleven | Resolve |
-| `mode` | `ASSERT` · `TRANSFER` · `CREATE` · `MODIFY` · `TERMINATE` · `STRUCK` | Resolve |
-| `bbls` | **a list.** See below — never prose | **Reorganize** |
-| `parties` | `from → to` for a directed act; a labelled relation otherwise | Resolve |
-| `quantity` | number + unit, or `UNKNOWN` with the reason | Derive |
-| `terms` | the operative conditions, in prose | human |
-| `summary` | one line, plain English | human |
+**One row = one operative act.** Not one per constraint, not one per citation, not
+one per sentence. That is the granularity rule, and it is the largest single source
+of disagreement between readers.
 
-**`date` and `basis` are separate columns** because Resolve sorts on one and audits
-the other. One cell holding *"1911-04-14 (instrument date)"* forces a parse.
+Three columns are **machine fields** — a program reads them and must never guess.
+The rest are **context**, for a human and for Derive.
 
-### `bbls` — a list, because one event binds many lots
+| # | column | machine? | legal form | invalid looks like |
+|---|---|---|---|---|
+| 1 | `#` | — | `E1`, `E2`, … in page order | — |
+| 2 | `citation` | — | `page · rect · mark · quote` | a quote with no rect on a mark-dependent row |
+| 3 | **`date`** | **yes** | ISO `YYYY-MM-DD`, or `UNKNOWN` | `April 25, 1911` · `1911` · `circa 1911` |
+| 4 | `basis` | yes | `effective` · `instrument` · `execution` · `acknowledgment` · `UNSUPPORTED` | `recorded` — recording is not an event date |
+| 5 | `until` | yes | ISO date, or **blank** if it does not stop | a duration (*"three years"*) — compute it |
+| 6 | **`function`** | **yes** | exactly one of the eleven | two functions in one cell · anything else |
+| 7 | `mode` | yes | `ASSERT` · `TRANSFER` · `CREATE` · `MODIFY` · `TERMINATE` · `STRUCK` | a verb of your own |
+| 8 | **`bbls`** | **yes** | see below | any description of a place |
+| 9 | `parties` | — | `X → Y`, or `asserted by: X  about: Y` | an undirected list |
+| 10 | `quantity` | — | number + unit, or `UNKNOWN(<reason>)` | a bare number with no unit |
+| 11 | `terms` | — | the operative conditions, prose | — |
+| 12 | `summary` | — | one line, plain English | — |
+
+**`date` and `basis` are separate columns.** Resolve sorts on one and audits the
+other; a cell reading *"1911-04-14 (instrument date)"* forces a parse.
+
+**`until` exists because some states end themselves.** A covenant expiring
+1915-01-01 has no terminating document — without `until`, Resolve would carry the
+burden forever, and every statement about that parcel after 1915 would be wrong.
+
+### `bbls` — a list, because one event can bind many parcels
 
 | form | means | Reorganize |
 |---|---|---|
 | `5004030016` | one BBL | fans to one |
-| `5004030016, 5004030017` | several | fans to each |
-| `SET: <criterion>` | a set the document defines but does not enumerate — *"all lots in plat 995 B"* | **deferred**, resolvable once the plat is decoded |
-| `INSTRUMENT` | about the paper, not a parcel — registry lane | no fan |
+| `5004030016, 5004030017, …` | several — an 8-way air rights transfer is eight | fans to each |
+| `SET: <criterion>` | a set the document defines but does not enumerate — *"all lots in plat 995 B"* | **deferred**, resolvable when the plat is decoded |
+| `INSTRUMENT` | about the paper, not a parcel — registry lane rows | no fan |
 | `UNPLACED` | the document does not place it | no fan, flagged |
 
-⚠ **`SET:` is a promise, not prose.** It names a criterion a later pass can evaluate.
-*"lots on four named streets"* written as description is not a `SET:` — it is a row
-that failed the test.
+⚠ **`SET:` is a criterion, not a description.** A later pass must be able to
+evaluate it. *"lots on four named streets"* is prose — it reaches no parcel, and it
+is a row that failed.
 
-Above the table, a labelled date block — `instrument:`, `acknowledged:`,
-`recorded:`, `expires:`, `UNKNOWN` where unstated. Below it, the **registry lane**:
-recording date *and time*, the registry's own act, the return-to party, and any fee
-or stamp. Same citation discipline. Not one of the eleven — it asks about the
-**instrument**, not the parcel.
+### A worked row, so there is nothing to interpret
 
-`from → to` means **the act moves from the first party to the second**. On an
-`ASSERT` row there is usually no such movement — write `asserted by: X  about: Y`.
-Two relations wearing one notation reads as agreement between readers who meant
-different things.
+```
+| #  | citation                                          | date       | basis      | until      | function    | mode   | bbls                        | parties                    | quantity      | terms                                   | summary                          |
+| E4 | p2 · [0.15,0.32,0.95,0.36] · plain · "no dwelling  | 1911-04-14 | instrument | 1915-01-01 | ENVELOPE    | CREATE | SET: all lots in plat 995 B | The Wood, Harmon Co. → all | $2,000 USD    | $2,000 on Heberton; $3,000 on the       | Every house on the plat must     |
+|    | shall cost less than Two Thousand Dollars"        |            |            |            |             |        |                             | grantees in the plat       |               | avenue frontage. Runs with the land.    | cost at least $2,000 until 1915. |
+```
 
-Above the table, a labelled date block — `instrument:`, `acknowledged:`,
+Machine fields: `1911-04-14` sorts, `ENVELOPE` projects, `SET:` fans once the plat
+is decoded. Everything else is context.
+
+### Above and below the table
+
+A labelled date block — `instrument:`, `acknowledged:`, `recorded:`, `expires:`,
+`UNKNOWN` where unstated. Then the **registry lane**: recording date *and time*, the
+registry's own act, the return-to party, and any fee or stamp. Same citation
+discipline. Not one of the eleven — it asks about the **instrument**, not a parcel,
+and its rows carry `bbls: INSTRUMENT`.
+
+Then a brief: six to ten lines, no new facts, everything traceable to a row.
+
+## Where the difficulty actually is
+
+The schema above is small and fixed. **Everything hard is in reading the document
+well enough to fill it** — which of the eleven fires, where one act ends and the
+next begins, whether a mark is a strike or a flourish, which of four dates is the
+event. That is what `EXTRACT-CARD.md` is for, and what the class specs accumulate.
+
+**Measured on the five sealed RC_1598772 tables: 0 of 125 rows clear the three
+machine fields.** Five careful blind readers, and nothing consumable — because the
+table had never been defined this way. That number is the baseline. It should not
+stay at zero for a second document.
 `recorded:`, `expires:`, `UNKNOWN` where unstated. Below it, the **registry lane**:
 recording date *and time*, the registry's own act, the return-to party, and any fee
 or stamp. Same citation discipline. Not one of the eleven — it asks about the
