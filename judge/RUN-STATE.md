@@ -104,7 +104,38 @@ regions, 0 malformed.
 
 ---
 
-# ▶ PHASE A — IN FLIGHT
+# ✅ PHASE A — COMPLETE. Full report: `judge/batches/PHASE-A-RC_970273.md`
+
+**`RC_970273` is NOT a member of the class — 3 of 3 readers, 1 of 4 signals.** A Form
+8002 bargain-and-sale deed with no restrictive covenant of any kind. **m2 does not
+bank; the class still has one member.**
+
+**FEED 100% and COVERAGE 100% on all three, on a cold read** — the stronger result,
+since the re-emit round had the reading already done. Structural surprise 6 · 5 · 4.
+
+**The finding: demote §1 signal 2.** The filed-map reference fired on a non-member;
+both m1 and m2 cite Richmond maps filed in 1907. *"Not diagnostic of the class —
+diagnostic of Richmond conveyancing."* §1's operative test held; the signal list
+under it did not.
+
+**Method change adopted:** settle class membership *before* scoring a prediction. One
+reader marked the standing prediction FAILED, another UNTESTABLE — *"reporting them as
+failures would score the spec against a document it never claimed to cover."* The
+second is right; otherwise every non-member manufactures fake failures.
+
+**Held across a different class:** `CAPITAL` and `PERMIT` at 0. **Deviated:**
+`AS_BUILT` fired 3/3 (all three volunteering the boilerplate caveat unprompted);
+`COST` fired on revenue stamps, an unrelated trigger to m1's cost floor.
+
+**Five defects of mine found and fixed** — including a **fabricated party** in the
+worked example, published under the words *"transcribed from a sealed reader table"*.
+See the report. Still open: `RC_970273`'s package predates the native fix and carries
+a ~1.9% anisotropic squeeze; **deliberately not rebuilt**, because phase A read those
+images and rebuilding would invalidate the round.
+
+---
+
+# ▶ PHASE B — IN FLIGHT
 
 **`RC_970273` · Richmond DEED · 2 pages · recorded 1955-12-21.** Package already
 built; nothing fetched. **Three readers: B, C, D.** A and E deliberately idle — idle
@@ -124,9 +155,22 @@ a finding, not a correction** — the prediction exists to be wrong in a measura
 The anchoring risk of showing them the prediction is accepted knowingly: coverage
 cannot be scored without it.
 
-## ▶ PHASE B — QUEUED, not dispatched
-
 **`2002122000002001` · SATISFACTION OF MORTGAGE · 2 pages · ACRIS digital, 2003.**
+Dispatched to B, C, D. **Package rebuilt native first** (2544×3347 and 2544×4200 —
+different heights, which the native path preserves); `RC_970273` deliberately left
+alone.
+
+⚠ **Readers were NOT told what is expected to fire.** For phase A they were shown the
+standing prediction, because coverage cannot be scored without it. Here the whole
+question is *which framework rules were fitted to one 1911 handwritten deed* — naming
+the hypothesis would return it. They were asked instead for the function/mode
+distribution they emitted, and, inverted from a normal round, **which of the twelve
+cards never fired and whether that is parochialism or non-applicability.**
+
+*Kept out of the brief, to be checked against what comes back:* on m1, `CAPITAL` fired
+0 of 99 rows and `TERMINATE` 0; on m2 both held at 0. A satisfaction should fire both.
+**If it does, the class spec is confirmed genuinely class-specific rather than a
+description of documents in general.**
 
 Chosen as the sharpest available discriminator. On m1, `CAPITAL` fired **0 times in
 99 rows** and `TERMINATE` **0 times**. A satisfaction should fire both. If it does,
