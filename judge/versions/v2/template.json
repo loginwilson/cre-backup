@@ -1,0 +1,86 @@
+{
+  "_note": "Canonical empty instance, generated from extraction.schema.json. Assembly loads this to know the shape it must emit; the schema itself is validated by a conforming Draft 2020-12 validator, never read by a model (FR-SCHEMA-005). Every required top-level key is present in FR-REC-001 order.",
+  "_generated_from": "extraction.schema.json",
+  "framework_version": "v2",
+  "bundle_manifest": {},
+  "document": {},
+  "page_inventory": [],
+  "function_sweep_ledger": [],
+  "coverage_ledger": [],
+  "evidence_registry": [],
+  "derivation_records": [],
+  "party_registry": [],
+  "party_relationship_registry": [],
+  "quantity_registry": [],
+  "external_reference_registry": [],
+  "incorporated_section_references": [],
+  "registration_annotations": [],
+  "evidence_time_registry": [],
+  "transactions": [],
+  "observations_dated": [],
+  "observations_unplaced": [],
+  "notices": [],
+  "conditional_events": [],
+  "temporal_boundaries": [],
+  "ordering_relations": [],
+  "exceptions": {
+    "framework_gaps": [],
+    "unclassifiable_content": [],
+    "incorporated_sections_not_supplied": [],
+    "registration_annotations": [],
+    "boundary_orphans": [],
+    "illegible_final": [],
+    "unplaced_parcel": [],
+    "input_failures": []
+  },
+  "counts": {},
+  "validation": {
+    "overall": "",
+    "checks": [
+      {
+        "check_id": "FR-QC-001",
+        "result": ""
+      },
+      {
+        "check_id": "FR-QC-002",
+        "result": ""
+      },
+      {
+        "check_id": "FR-QC-003",
+        "result": ""
+      },
+      {
+        "check_id": "FR-QC-004",
+        "result": ""
+      },
+      {
+        "check_id": "FR-QC-005",
+        "result": ""
+      },
+      {
+        "check_id": "FR-QC-006",
+        "result": ""
+      },
+      {
+        "check_id": "FR-QC-007",
+        "result": ""
+      },
+      {
+        "check_id": "FR-QC-008",
+        "result": ""
+      },
+      {
+        "check_id": "FR-QC-009",
+        "result": ""
+      },
+      {
+        "check_id": "FR-QC-010",
+        "result": ""
+      },
+      {
+        "check_id": "FR-QC-011",
+        "result": ""
+      }
+    ]
+  }
+}

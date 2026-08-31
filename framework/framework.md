@@ -3,8 +3,10 @@
 Replaces v3. Every rule here exists because a named document forced it. **A rule
 with no document behind it does not belong in this file.**
 
-Version history is in `CHANGES.md` beside this file. It is provenance, not
-instruction — an extractor needs the rules, not the story of how they arrived.
+**This file is the whole of what you are given.** Version history, prior rulings,
+other readers' findings and retired frameworks are held by the judge and are
+deliberately not in your workspace — an extractor needs the rules, not the story of
+how they arrived, and least of all the answers a previous round reached.
 
 **Cap: 20 KB.** Past that, something here is answering a question no document asked.
 That is how v2 reached 129 KB.
@@ -24,9 +26,13 @@ Ask all eleven on every page. Not the ones the document type suggests.
 
 A function is **a kind of question about a parcel**. Together they are meant to
 cover everything a recorded instrument can do. If something on the page fits none
-of them, that is a finding — write it down under an explicit heading rather than
-forcing it, and say what would be lost by filing it under the nearest function.
-Candidates live in `framework/UNNAMED-FUNCTIONS.md`.
+of them, that is a finding — write it down under an explicit heading **in your own
+folder**, rather than forcing it, and say what would be lost by filing it under the
+nearest function.
+
+**You are not shown the candidates other readers have raised.** A list of things to
+look for is a list of things you will find. The judge collects them; a candidate
+becomes a function only when a third document forces it.
 
 | function | the question it asks | fires on |
 | --- | --- | --- |
@@ -70,7 +76,8 @@ rides on it. A deed conveying a lot subject to restrictions produces one of each
 **ENTITLEMENT vs PERMIT.** `ENTITLEMENT` is a right attaching to the land that
 survives its owner. `PERMIT` is a government act, or an application, about a
 specific project. **`PERMIT` is government only.** A private party holding a
-discretionary approval right is not a `PERMIT` — see `UNNAMED-FUNCTIONS.md` §2.
+discretionary approval right is not a `PERMIT`; if you find one, say what filing it
+elsewhere loses.
 
 ### When two functions both fit
 
@@ -204,9 +211,8 @@ checker reach, not one of the eleven functions.
 | the return-to party | *C. Livingston Bostwick, for Wood, Harmon & Co., Broadway, N.Y. City* |
 | fee, tax, revenue stamps | with rule 5 applied — an unlabelled number is not a fee |
 
-**Not a twelfth function.** REGISTRY ACT stays a candidate in
-`UNNAMED-FUNCTIONS.md` until a third document forces it. A lane costs nothing to
-withdraw; a function does.
+**Not a twelfth function.** A registry act stays a candidate until a third document
+forces it. A lane costs nothing to withdraw; a function does.
 
 > *`RC_1598772`: the return-to party is the only appearance in the entire document
 > of the grantor's agent and address. An early round already lost party addresses as

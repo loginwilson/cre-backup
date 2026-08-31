@@ -1,0 +1,592 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cred.nyc/v2/discovery.schema.json",
+  "title": "NYC C.R.E.D. v2 discovery and support pass output",
+  "description": "Loaded by a discovery lens and by the DOCUMENT_SUPPORT pass. The pass carries its function once; cells inherit it. Assembly writes pass identity into each ledger row.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "framework_version",
+    "document_id",
+    "pass",
+    "question_set_version",
+    "cells"
+  ],
+  "properties": {
+    "framework_version": {
+      "const": "v2"
+    },
+    "document_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pass": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "function"
+          ],
+          "properties": {
+            "kind": {
+              "const": "DISCOVERY_LENS"
+            },
+            "function": {
+              "$ref": "#/$defs/function"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind"
+          ],
+          "properties": {
+            "kind": {
+              "const": "DOCUMENT_SUPPORT"
+            }
+          }
+        }
+      ]
+    },
+    "question_set_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cells": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/cell"
+      }
+    },
+    "support_spans": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/support_span"
+      }
+    },
+    "residuals": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/residual"
+      }
+    }
+  },
+  "$defs": {
+    "function": {
+      "enum": [
+        "IDENTITY",
+        "TITLE",
+        "ENTITLEMENT",
+        "ENVELOPE",
+        "ENCUMBRANCE",
+        "CAPITAL",
+        "PERMIT",
+        "AS_BUILT",
+        "OCCUPANCY",
+        "COST",
+        "VALUE"
+      ]
+    },
+    "zone": {
+      "enum": [
+        "TOP",
+        "UPPER",
+        "MIDDLE",
+        "LOWER",
+        "BOTTOM",
+        "MARGIN_L",
+        "MARGIN_R",
+        "STAMP",
+        "HANDWRITTEN"
+      ]
+    },
+    "legibility": {
+      "enum": [
+        "CLEAR",
+        "PARTIAL",
+        "UNREADABLE"
+      ]
+    },
+    "encoded_resolution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "width_px",
+        "height_px",
+        "effective_dpi"
+      ],
+      "properties": {
+        "width_px": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height_px": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "effective_dpi": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "anchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "anchor_id",
+        "page_id",
+        "zone",
+        "identity_component",
+        "occurrence_index",
+        "atomic_class",
+        "legibility"
+      ],
+      "properties": {
+        "anchor_id": {
+          "type": "string",
+          "pattern": "^A[0-9a-f]{16}$"
+        },
+        "page_id": {
+          "type": "string",
+          "pattern": "^p[0-9]{2,}$"
+        },
+        "zone": {
+          "$ref": "#/$defs/zone"
+        },
+        "identity_component": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64
+        },
+        "occurrence_index": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "atomic_class": {
+          "enum": [
+            "HEADING",
+            "CLAUSE",
+            "FORM_ROW",
+            "FORM_FIELD",
+            "SIGNATURE_LINE",
+            "ACKNOWLEDGMENT",
+            "STAMP",
+            "MARGINAL_ANNOTATION",
+            "HANDWRITTEN_INSERTION",
+            "NONCHARACTER_MARK",
+            "EXHIBIT_ITEM",
+            "ADMINISTRATIVE",
+            "UNATTRIBUTED_ANNOTATION"
+          ]
+        },
+        "legibility": {
+          "$ref": "#/$defs/legibility"
+        },
+        "role": {
+          "enum": [
+            "ACT_CANDIDATE",
+            "SUPPORT_ONLY"
+          ]
+        },
+        "proving_span": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quote_is_label": {
+          "type": "boolean"
+        },
+        "mark_status": {
+          "const": "NONCHARACTER_OR_UNRESOLVED"
+        },
+        "candidate_readings": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "candidate_claims": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/candidate_claim"
+          }
+        }
+      }
+    },
+    "cell": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/cell_base"
+        }
+      ],
+      "unevaluatedProperties": false,
+      "description": "A page-function result. The function is the pass's, carried once on the envelope."
+    },
+    "boundary_exclusion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_claim_id",
+        "anchor_id",
+        "excluded_to"
+      ],
+      "description": "Records that this lens declined one candidate claim. It never nominates the other function. Two claims on one anchor carry two candidate_claim_ids and resolve independently.",
+      "properties": {
+        "candidate_claim_id": {
+          "type": "string",
+          "pattern": "^CC[0-9a-f]{12}$"
+        },
+        "anchor_id": {
+          "type": "string",
+          "pattern": "^A[0-9a-f]{16}$"
+        },
+        "excluded_to": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_raw": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rule_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "uncertainty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "uncertainty_kind",
+        "candidates",
+        "affected_paths"
+      ],
+      "properties": {
+        "uncertainty_kind": {
+          "enum": [
+            "VISUAL_CANDIDATES",
+            "VISUAL_ATTACHMENT_CANDIDATES",
+            "RULE_BRANCH_CANDIDATES",
+            "FRAMEWORK_GAP",
+            "DOCUMENT_CONFLICT",
+            "MISSING_CONTENT",
+            "NOT_STATED"
+          ]
+        },
+        "candidates": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "affected_paths": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "escalation_eligible": {
+          "type": "boolean"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "uncertainty_kind": {
+                "enum": [
+                  "VISUAL_CANDIDATES",
+                  "VISUAL_ATTACHMENT_CANDIDATES",
+                  "RULE_BRANCH_CANDIDATES"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "escalation_eligible": {
+                "const": true
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "escalation_eligible": {
+                "const": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    "support_span": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "anchor_id",
+        "span_kind",
+        "raw"
+      ],
+      "description": "FR-SWP-007 cross-cutting subcheck. Raw spans only; classification happens at enrichment.",
+      "properties": {
+        "anchor_id": {
+          "type": "string",
+          "pattern": "^A[0-9a-f]{16}$"
+        },
+        "span_kind": {
+          "enum": [
+            "PARTY_NAME",
+            "PARTY_ROLE_WORDS",
+            "PARTY_CAPACITY_WORDS",
+            "PARTY_RELATION_WORDS",
+            "ADDRESS_WORDS",
+            "PHONE_WORDS",
+            "EMAIL_WORDS",
+            "ENTITY_FORM_WORDS",
+            "OBJECT_WORDS",
+            "PARCEL_OR_SCOPE_WORDS",
+            "QUANTITY_WORDS",
+            "VALUE_WORDS",
+            "DATE_WORDS",
+            "EXTENT_WORDS",
+            "ORDER_WORDS",
+            "CONDITION_WORDS",
+            "POINTER_WORDS",
+            "INCORPORATION_WORDS",
+            "EXPRESS_ABSENCE_WORDS"
+          ]
+        },
+        "raw": {
+          "type": "string",
+          "minLength": 1
+        },
+        "governing_preposition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "legibility": {
+          "$ref": "#/$defs/legibility"
+        }
+      }
+    },
+    "residual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "anchor_id",
+        "disposition"
+      ],
+      "description": "FR-SUP-002. A region no lens anchored. Backfilled through all eleven boundary tests before closure.",
+      "properties": {
+        "anchor_id": {
+          "type": "string",
+          "pattern": "^A[0-9a-f]{16}$"
+        },
+        "disposition": {
+          "enum": [
+            "ADMINISTRATIVE",
+            "BACKFILL_CANDIDATE",
+            "NO_LENS_CLAIM"
+          ]
+        },
+        "backfill_functions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/function"
+          }
+        },
+        "backfill_status": {
+          "const": "SWEEP_BACKFILL"
+        }
+      }
+    },
+    "ledger_function": {
+      "enum": [
+        "IDENTITY",
+        "TITLE",
+        "ENTITLEMENT",
+        "ENVELOPE",
+        "ENCUMBRANCE",
+        "CAPITAL",
+        "PERMIT",
+        "AS_BUILT",
+        "OCCUPANCY",
+        "COST",
+        "VALUE",
+        "DOCUMENT_SUPPORT"
+      ]
+    },
+    "cell_base": {
+      "type": "object",
+      "required": [
+        "page_id",
+        "status",
+        "search_completed",
+        "question_set_version",
+        "encoded_resolution"
+      ],
+      "properties": {
+        "page_id": {
+          "type": "string",
+          "pattern": "^p[0-9]{2,}$"
+        },
+        "status": {
+          "enum": [
+            "HIT",
+            "SUPPORT_ONLY",
+            "NO_HIT",
+            "UNCERTAIN"
+          ]
+        },
+        "search_completed": {
+          "const": true
+        },
+        "encoded_resolution": {
+          "$ref": "#/$defs/encoded_resolution"
+        },
+        "anchors": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/anchor"
+          }
+        },
+        "boundary_exclusions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/boundary_exclusion"
+          }
+        },
+        "uncertainty": {
+          "$ref": "#/$defs/uncertainty"
+        },
+        "question_set_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "empty_fields_searched": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "NO_HIT"
+              }
+            }
+          },
+          "then": {
+            "not": {
+              "anyOf": [
+                {
+                  "required": [
+                    "anchors"
+                  ]
+                },
+                {
+                  "required": [
+                    "boundary_exclusions"
+                  ]
+                }
+              ]
+            },
+            "description": "NO_HIT carries no anchors and no support; it records that a search reported no span."
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "UNCERTAIN"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "uncertainty"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "HIT",
+                  "SUPPORT_ONLY"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "anchors"
+            ],
+            "properties": {
+              "anchors": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "allOf": [
+                    {
+                      "$ref": "#/$defs/anchor"
+                    },
+                    {
+                      "anyOf": [
+                        {
+                          "required": [
+                            "proving_span"
+                          ]
+                        },
+                        {
+                          "required": [
+                            "candidate_readings"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      ],
+      "description": "Cell shape without closure. Closed at each point of use, because additionalProperties in a $ref'd def cannot see a wrapper's own properties."
+    },
+    "candidate_claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_claim_id",
+        "claim_raw"
+      ],
+      "properties": {
+        "candidate_claim_id": {
+          "type": "string",
+          "pattern": "^CC[0-9a-f]{12}$"
+        },
+        "claim_raw": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "description": "One anchor may carry several claims. Every claim is identified whether it is hit, supported, or excluded, so a resolution can name the claim it answers."
+    }
+  }
+}

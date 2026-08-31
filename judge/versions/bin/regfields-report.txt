@@ -1,0 +1,183 @@
+
+== KEY PATHS BY SCARCITY (rarest first — the interesting end) ==
+path                                cells     max%   where
+file_nbr                                2   100.0%   film_ft/MAPS +1 more
+rptt                                    2   100.0%   film_ft/DEED +1 more
+parcels[].subterranean                  6     1.3%   acris/UCC3 CONTINUATION +5 more
+parcels[].remarks                       9    42.9%   film_ft/DECLARATION +8 more
+collateral                             10   100.0%   acris/INITIAL COOP UCC1 +9 more
+expiration                             10   100.0%   acris/INITIAL COOP UCC1 +9 more
+pct                                    10   100.0%   acris/LIFE ESTATE DEED +9 more
+parcels[].easement                     11    60.0%   acris/NOTICE OF APPROPRIATION +10 more
+parcels[].air_rights                   15    18.6%   acris/SUBORDINATION OF LEASE +14 more
+map_seq                                33   100.0%   film_bk/AGREEMENT +32 more
+reel_page                              33   100.0%   film_bk/AGREEMENT +32 more
+references[].file_nbr                  34   100.0%   acris/UCC3 PARTIAL ASSIGNMENT +33 more
+references[].borough                   38   100.0%   acris/UCC3 PARTIAL ASSIGNMENT +37 more
+book                                   43   100.0%   richmond/A/LEASE +42 more
+doc_type                               43   100.0%   richmond/A/LEASE +42 more
+image_state                            43   100.0%   richmond/A/LEASE +42 more
+instrument                             43   100.0%   richmond/A/LEASE +42 more
+page                                   43   100.0%   richmond/A/LEASE +42 more
+parties[].column                       43   100.0%   richmond/A/LEASE +42 more
+parties[].company                      43   100.0%   richmond/A/LEASE +42 more
+parties[].person                       43   100.0%   richmond/A/LEASE +42 more
+parties[].role                         43   100.0%   richmond/A/LEASE +42 more
+status                                 43   100.0%   richmond/A/LEASE +42 more
+references[].crfn                      48    66.7%   acris/UCC 5 CORRECTION STATEMENT +47 more
+references[].doc_id                    54    78.9%   acris/COLLATERAL MORTGAGE +53 more
+references                             59   100.0%   acris/UCC3 AMENDMENT +58 more
+parcels[].unit                         71   100.0%   acris/UNIT ASSIGNMENT +70 more
+parties[].address2                     75   100.0%   acris/ESTOPPAL REMOVAL OFFICE USE ON +74 more
+remarks                                76   100.0%   film_bk/AGREEMENT +75 more
+parties[].address                      80   100.0%   acris/AGREEMENT +79 more
+parties[].city                         80   100.0%   acris/AGREEMENT +79 more
+parties[].state                        80   100.0%   acris/AGREEMENT +79 more
+crfn                                   87   100.0%   acris/ADDITIONAL MORTGAGE TAX +86 more
+doc_date                               99   100.0%   acris/AGREEMENT +98 more
+parties[].country                     102   100.0%   acris/AGREEMENT +101 more
+parties[].zip                         102   100.0%   acris/AGREEMENT +101 more
+parcels[].address                     109   100.0%   acris/ADDITIONAL MORTGAGE TAX +108 more
+borough                               120   100.0%   acris/ADDITIONAL MORTGAGE TAX +119 more
+pages                                 120   100.0%   acris/ADDITIONAL MORTGAGE TAX +119 more
+parcels[].partial                     120   100.0%   acris/ADDITIONAL MORTGAGE TAX +119 more
+parcels[].use                         120   100.0%   acris/ADDITIONAL MORTGAGE TAX +119 more
+parties[].panel                       120   100.0%   acris/ADDITIONAL MORTGAGE TAX +119 more
+type                                  120   100.0%   acris/ADDITIONAL MORTGAGE TAX +119 more
+at                                    148   100.0%   acris/ADDITIONAL MORTGAGE TAX +147 more
+parcels[].bbl                         162   100.0%   acris/ADDITIONAL MORTGAGE TAX +161 more
+amount                                163   100.0%   acris/ADDITIONAL MORTGAGE TAX +162 more
+parcels                               163   100.0%   acris/ADDITIONAL MORTGAGE TAX +162 more
+parties                               163   100.0%   acris/ADDITIONAL MORTGAGE TAX +162 more
+parties[].name                        163   100.0%   acris/ADDITIONAL MORTGAGE TAX +162 more
+recorded                              163   100.0%   acris/ADDITIONAL MORTGAGE TAX +162 more
+
+== TYPE-CONDITIONAL WITHIN A CELL (<90% of sampled rows) ==
+A key absent from some rows of ONE (source, doc_type) cell is not
+type-conditional — it is row-conditional, and an adapter that
+assumes it is present has no symptom when it is not.
+  acris/ADDITIONAL MORTGAGE TAX (n=49): references[].borough 4%, references[].file_nbr 4%, references[].doc_id 10%, references[].crfn 14%, parties[].address2 16%, parcels[].unit 20%, references 29%
+  acris/AGREEMENT (n=150): references[].borough 1%, references[].file_nbr 1%, remarks 1%, references[].crfn 4%, parties[].address2 15%, parcels[].unit 20%, references[].doc_id 30%, references 34%
+  acris/AMENDED CONDO DECLARATION (n=117): parcels[].easement 1%, parcels[].subterranean 1%, remarks 3%, references[].doc_id 5%, references[].crfn 13%, parties[].address2 15%, references 17%, parcels[].unit 88%
+  acris/ASGN OF ASGN OF L&R (n=150): remarks 1%, references[].borough 1%, parcels[].unit 14%, references[].crfn 14%, parties[].address2 17%, references[].doc_id 41%, references 55%
+  acris/ASSIGN/TERM OF CONTRACT/BID (n=47): pct 4%, references 11%, references[].doc_id 11%, parcels[].unit 26%, parties[].address2 32%
+  acris/ASSIGNMENT OF LEASE (n=113): pct 1%, references[].borough 1%, references[].crfn 1%, references[].file_nbr 1%, remarks 1%, parcels[].unit 12%, references[].doc_id 17%, references 19%, parties[].address2 37%
+  acris/ASSIGNMENT OF LEASES AND RENTS (n=150): references[].file_nbr 1%, references[].borough 1%, references[].crfn 7%, parcels[].unit 8%, parties[].address2 29%, references[].doc_id 77%, references 85%
+  acris/ASSIGNMENT OF TAX LIEN (n=14): parcels[].unit 7%, references 7%, references[].crfn 7%, parties[].address2 14%
+  acris/ASSIGNMENT, MORTGAGE (n=150): references[].borough 1%, references[].file_nbr 1%, references[].crfn 3%, parcels[].unit 13%, parties[].address2 19%, references[].doc_id 20%, references 24%
+  acris/ASSUMPTION OF MORTGAGE (n=110): references[].borough 1%, references[].file_nbr 1%, references[].crfn 8%, references[].doc_id 8%, parcels[].unit 12%, references 15%, parties[].address2 43%
+  acris/BOND (n=2): parties[].address2 50%
+  acris/BOTH RPTT AND RETT (n=150): pct 1%, references[].crfn 2%, references[].file_nbr 2%, references[].borough 3%, references[].doc_id 29%, parties[].address2 33%, references 33%, parcels[].unit 85%
+  acris/CANCEL/TERM ASGN L&R (n=150): references[].borough 1%, references[].file_nbr 1%, references[].crfn 2%, references[].doc_id 2%, references 5%, parcels[].unit 11%, parties[].address2 27%
+  acris/CERTIFICATE (n=150): remarks 1%, parcels[].unit 7%, parties[].address2 10%
+  acris/CERTIFICATE OF REDUCTION (n=9): references[].crfn 11%, parties[].address2 22%, references 22%, references[].doc_id 22%, parcels[].unit 33%
+  acris/COLLATERAL MORTGAGE (n=38): remarks 5%, parcels[].unit 8%, references[].crfn 16%, parties[].address2 26%, references[].doc_id 79%, references 87%
+  acris/CONDEMNATION PROCEEDINGS (n=24): references 21%, references[].doc_id 21%, parcels[].easement 54%
+  acris/CONDO DECLARATION (n=149): references[].borough 1%, references[].crfn 1%, references[].doc_id 1%, parcels[].air_rights 2%, references 2%, parties[].address2 13%, remarks 13%, parcels[].unit 79%
+  acris/CONFIRMATORY DEED (n=40): remarks 8%, references[].doc_id 10%, parcels[].unit 12%, references[].crfn 15%, parties[].address2 20%, references 22%
+  acris/CONSENT (n=22): parcels[].air_rights 5%, remarks 5%, parcels[].unit 50%
+  acris/CONTRACT OF SALE (n=91): parcels[].subterranean 1%, parcels[].unit 3%, parties[].address2 16%
+  acris/CORRECTION DEED (n=150): remarks 3%, references[].crfn 3%, pct 4%, references[].doc_id 7%, references 10%, parcels[].unit 12%, parties[].address2 19%
+  acris/CORRECTION DOC-OFFICE USE ONLY (n=125): references[].borough 1%, references[].file_nbr 1%, references[].doc_id 2%, remarks 2%, references[].crfn 7%, references 9%, parties[].address2 13%, parcels[].unit 18%, parties[].address 88%, parties[].city 88%, parties[].state 88%, parties[].zip 88%
+  acris/CORRECTION MORTGAGE (n=150): remarks 1%, references[].doc_id 3%, parties[].address2 15%, parcels[].unit 21%, references[].crfn 26%, references 29%
+  acris/COURT ORDER (n=140): references[].crfn 1%, references[].doc_id 1%, references[].borough 1%, references[].file_nbr 1%, references 3%, parcels[].unit 10%, remarks 12%, parties[].address2 27%
+  acris/COURT ORDER ADVERSE POSS. (n=2): remarks 50%
+  acris/DECLARATION (n=150): parcels[].easement 2%, remarks 4%, parcels[].unit 12%, parties[].address2 18%
+  acris/DECLARATION OF MERGER (n=3): parties[].address2 33%
+  acris/DECLARATION OF MODIFI OF MRT (n=150): references[].crfn 1%, references[].borough 1%, references[].file_nbr 1%, remarks 2%, parties[].address2 11%, parcels[].unit 14%, references[].doc_id 25%, references 27%
+  acris/DEED (n=150): references[].file_nbr 2%, remarks 2%, pct 3%, references[].borough 3%, references[].doc_id 3%, references 5%, parties[].address2 15%, parcels[].unit 23%
+  acris/DEED, OTHER (n=150): pct 1%, references[].borough 1%, references[].file_nbr 1%, references[].doc_id 3%, references 3%, remarks 3%, parcels[].unit 13%, parties[].address2 21%
+  acris/DEVELOPMENT RIGHTS (n=45): parcels[].unit 4%, remarks 4%, references 7%, references[].doc_id 7%, parcels[].air_rights 13%, parties[].address2 47%
+  acris/DISCHARGE OF TAX LIEN (n=150): references[].crfn 1%, remarks 1%, references[].doc_id 3%, references 3%, parcels[].unit 9%, parties[].address2 13%
+  acris/EASEMENT (n=150): parcels[].air_rights 1%, remarks 1%, parcels[].unit 5%, parties[].address2 10%, parcels[].easement 13%
+  acris/INITIAL COOP UCC1 (n=150): parcels[].air_rights 1%, remarks 1%, doc_date 25%, parties[].address2 37%
+  acris/INITIAL UCC1 (n=150): parcels[].unit 21%, parties[].address2 25%, doc_date 45%
+  acris/JUDGMENT (n=30): parcels[].unit 3%, references[].crfn 3%, references[].doc_id 7%, remarks 7%, parties[].address2 10%, references 10%, parties[].zip 73%, parties[].address 87%, parties[].city 87%
+  acris/LEASE (n=150): parcels[].easement 1%, remarks 1%, parcels[].unit 8%, parties[].address2 38%
+  acris/LETTERS PATENT (n=2): parties[].address2 50%
+  acris/LICENSE (n=3): parties[].address2 33%, parcels[].unit 67%
+  acris/LIEN OF COMMON CHARGES (n=150): parcels[].subterranean 1%, parcels[].easement 1%, parties[].address2 52%
+  acris/MAPS (n=150): parcels[].air_rights 2%, parties[].address2 12%, parcels[].unit 79%, parties[].address 84%, parties[].city 84%, parties[].state 84%, parties[].zip 84%, parties[].country 85%
+  acris/MEMORANDUM OF CONTRACT (n=28): remarks 4%, parcels[].unit 14%, parties[].address2 54%
+  acris/MEMORANDUM OF LEASE (n=150): parcels[].air_rights 1%, pct 1%, references[].borough 1%, references 3%, references[].doc_id 3%, parcels[].unit 19%, parties[].address2 53%
+  acris/MISCELLANEOUS (n=150): parcels[].unit 2%, references[].crfn 2%, references[].borough 3%, references[].file_nbr 3%, references[].doc_id 11%, references 16%, parcels 22%, parcels[].address 22%, parcels[].bbl 22%, parcels[].partial 22%, parcels[].use 22%, parties[].address2 25%
+  acris/MORTGAGE (n=150): references[].borough 1%, references[].crfn 1%, references[].file_nbr 1%, remarks 1%, references[].doc_id 6%, references 7%, parcels[].unit 14%, parties[].address2 19%
+  acris/MORTGAGE AND CONSOLIDATION (n=150): remarks 1%, references[].borough 2%, references[].file_nbr 2%, references[].crfn 7%, parcels[].unit 12%, parties[].address2 13%, references[].doc_id 14%, references 23%
+  acris/MORTGAGE SPREADER AGREEMENT (n=124): parcels[].air_rights 1%, remarks 2%, references[].crfn 6%, parcels[].unit 19%, references[].doc_id 35%, references 42%, parties[].address2 44%
+  acris/NOTICE OF APPROPRIATION (n=5): parties[].address2 40%, parcels[].easement 60%
+  acris/NYC REAL PROPERTY TRANSFER TAX (n=150): references[].crfn 1%, references[].borough 2%, references[].doc_id 2%, references[].file_nbr 2%, references 5%, parties[].address2 35%, parcels[].unit 89%
+  acris/NYS REAL ESTATE TRANSFER TAX (n=150): references[].crfn 1%, references[].doc_id 1%, references[].borough 1%, references[].file_nbr 1%, references 3%, parties[].address2 31%
+  acris/PARTIAL RELEASE OF MORTGAGE (n=150): parcels[].air_rights 1%, references[].borough 1%, references[].file_nbr 1%, remarks 1%, references[].crfn 3%, references[].doc_id 5%, references 9%, parties[].address2 32%, parcels[].unit 69%
+  acris/PARTIAL SATISFACTION (n=102): references[].doc_id 1%, remarks 1%, references[].crfn 4%, references 5%, parcels[].unit 22%
+  acris/POWER OF ATTORNEY (n=150): references[].borough 1%, references[].crfn 1%, references[].file_nbr 1%, references[].doc_id 3%, references 5%, parties[].address2 25%, parcels[].unit 56%
+  acris/RELEASE (n=150): remarks 1%, references[].doc_id 4%, references[].crfn 5%, references 9%, parties[].address2 35%, parcels[].unit 66%
+  acris/RESOLUTION (n=5): parties[].address2 20%
+  acris/REVOCATION OF POWER OF ATTORNE (n=30): parcels[].unit 3%, references[].doc_id 3%, remarks 3%, parties[].address2 7%, references[].crfn 13%, references 17%, parcels[].address 73%, parcels 77%, parcels[].bbl 77%, parcels[].partial 77%, parcels[].use 77%
+  acris/SATISFACTION OF MORTGAGE (n=150): parcels[].easement 1%, remarks 1%, references[].borough 1%, references[].file_nbr 1%, references[].crfn 4%, references 5%, parcels[].unit 12%
+  acris/SUBORDINATION OF LEASE (n=43): references[].file_nbr 2%, references[].borough 5%, references[].crfn 7%, parcels[].air_rights 19%, parcels[].unit 21%, parties[].address2 26%, references[].doc_id 42%, references 51%
+  acris/SUBORDINATION OF MORTGAGE (n=150): references[].borough 1%, references[].file_nbr 1%, references[].crfn 5%, parties[].address2 18%, references[].doc_id 18%, parcels[].unit 21%, references 24%
+  acris/SUNDRY AGREEMENT (n=150): references[].crfn 1%, remarks 3%, references[].doc_id 4%, references 5%, parties[].address2 13%, parcels[].unit 14%
+  acris/SUNDRY MISCELLANEOUS (n=150): remarks 1%, parcels[].air_rights 2%, references[].crfn 2%, references[].doc_id 5%, references 7%, parties[].address2 35%, parcels[].unit 39%
+  acris/SUNDRY MORTGAGE (n=13): parcels[].unit 15%, parties[].address2 54%
+  acris/TAX LIEN SALE CERTIFICATE (n=15): parties[].address2 13%, parcels[].address 87%
+  acris/TERM OF LIEN OF COMMON CHARGES (n=150): parcels[].subterranean 1%, references[].doc_id 4%, references[].crfn 20%, references 24%, parties[].address2 40%
+  acris/TERMINATION OF ASSIGN OF L&R (n=150): parcels[].air_rights 1%, references[].borough 1%, references[].crfn 1%, references[].file_nbr 1%, references[].doc_id 2%, references 3%, parcels[].unit 15%, parties[].address2 25%
+  acris/TERMINATION OF LEASE OR MEMO (n=64): pct 2%, references[].borough 2%, references[].file_nbr 2%, references[].doc_id 3%, parcels[].unit 6%, references[].crfn 6%, references 11%, parties[].address2 16%
+  acris/TERMINATION OF TRUST (n=11): parties[].address2 9%, references 9%, references[].borough 9%, references[].file_nbr 9%, parcels[].unit 45%
+  acris/UCC 5 CORRECTION STATEMENT (n=18): collateral 11%, doc_date 11%, references[].doc_id 11%, remarks 17%, references[].borough 22%, references[].file_nbr 22%, parties[].address2 39%, references[].crfn 67%, expiration 78%, parcels[].unit 78%, references 89%
+  acris/UCC3 AMENDMENT (n=150): parcels[].air_rights 1%, parcels[].easement 1%, parcels[].subterranean 1%, references[].doc_id 2%, remarks 3%, parties[].address2 21%, references[].borough 44%, references[].file_nbr 44%, doc_date 53%, references[].crfn 55%, parcels[].unit 85%
+  acris/UCC3 ASSIGNMENT (n=150): references[].doc_id 1%, references[].crfn 30%, parties[].address2 41%, doc_date 45%, references[].borough 69%, references[].file_nbr 69%, parcels[].unit 70%
+  acris/UCC3 CONTINUATION (n=150): parcels[].easement 1%, parcels[].subterranean 1%, references[].doc_id 1%, parcels[].air_rights 2%, remarks 8%, parcels[].unit 21%, parties[].address2 21%, doc_date 83%, parcels[].partial 89%
+  acris/UCC3 PARTIAL ASSIGNMENT (n=2): doc_date 50%, parcels[].unit 50%
+  acris/UCC3 RELEASE/UCC AMENDMENT (n=150): remarks 3%, references[].crfn 4%, parties[].address2 36%, doc_date 49%
+  acris/UCC3 SUBORDINATION (n=150): references[].doc_id 1%, remarks 1%, references[].crfn 11%, parties[].address2 21%, doc_date 42%, references[].borough 89%, references[].file_nbr 89%
+  acris/UCC3 TERMINATION (n=150): references[].doc_id 1%, references[].crfn 2%, parties[].address2 29%, doc_date 44%, parcels[].unit 87%
+  acris/UNIT ASSIGNMENT (n=142): pct 1%, references[].borough 1%, remarks 1%, references 1%, references[].doc_id 1%, parties[].address2 35%
+  acris/VACATE ORDER (n=71): remarks 1%, parties[].address2 3%, parcels[].unit 15%, references[].doc_id 39%, references[].crfn 44%, references 83%
+  acris/ZONING LOT DESCRIPTION (n=150): parcels[].easement 1%, parcels[].air_rights 1%, parcels[].unit 2%, parties[].address2 13%
+  film_ft/AGREEMENT (n=87): parcels[].remarks 1%
+  film_ft/ASSIGNMENT, MORTGAGE (n=150): parcels[].remarks 2%
+  film_ft/CONTRACT OF SALE (n=5): parcels[].address 60%
+  film_ft/COURT ORDER (n=3): parcels[].address 67%
+  film_ft/DECLARATION (n=7): parcels[].remarks 43%, remarks 57%, parcels[].address 71%
+  film_ft/DEED (n=150): remarks 8%
+  film_ft/EASEMENT (n=2): rptt 50%
+  film_ft/MISCELLANEOUS (n=16): parcels[].remarks 6%, parcels[].address 88%
+  film_ft/MORTGAGE (n=150): parcels[].remarks 1%, references 16%, references[].doc_id 16%, remarks 75%
+  film_ft/POWER OF ATTORNEY (n=85): parcels[].remarks 27%, remarks 73%
+  film_ft/RELEASE (n=42): parcels[].remarks 5%
+  film_ft/SATISFACTION OF MORTGAGE (n=150): parcels[].remarks 1%
+  film_ft/SUNDRY AGREEMENT (n=14): parcels[].remarks 7%
+  richmond/A/LEASE (n=91): at 7%
+  richmond/A/MTG (n=150): at 3%
+  richmond/AFFIDAVIT (n=46): at 15%
+  richmond/AGREEMENTS (n=150): at 5%
+  richmond/ASSIGNMENTS (n=97): at 3%
+  richmond/CONSOLIDATION AGR (n=150): at 2%
+  richmond/DECLARATION (n=150): at 3%
+  richmond/DEED (n=150): at 4%
+  richmond/EASEMENT (n=118): at 8%
+  richmond/EXHIBIT (n=137): at 2%
+  richmond/EXTENSON AGREMENT (n=150): at 5%
+  richmond/LEASE (n=36): at 3%
+  richmond/LIEN (n=150): at 1%
+  richmond/MODIFICATION AGR (n=131): at 1%
+  richmond/MORTGAGE (n=150): at 3%
+  richmond/NOTICE (n=27): at 15%
+  richmond/ORDER (n=32): at 3%
+  richmond/P/ATTY (n=150): at 3%
+  richmond/PARTIAL REL OF MTG (n=53): at 4%
+  richmond/R/LIEN (n=150): at 14%
+  richmond/REL (n=150): at 5%
+  richmond/S/LIEN (n=123): at 2%
+  richmond/SAT (n=150): at 2%
+  richmond/SUBORDINATION AGR (n=150): at 1%
+  richmond/TERMINATION (n=50): at 2%
+  richmond/UCC (n=150): at 3%
+  richmond/WAIVER (n=148): at 8%
+
+cells=163  reads=13443  2.3 min  ->  regfields-inventory.json
+
+NOT A CHECK YET. This is the corpus half. The check is the DIFF
+against the paths each v1 adapter declares it consumes; the
+unconsumed set is the deliverable.

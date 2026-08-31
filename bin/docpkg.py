@@ -182,7 +182,8 @@ def build(did: str, dpi: int) -> pathlib.Path:
     return out
 
 
-def zoom(did: str, page_no: int, dpi: int, rect: str | None) -> None:
+def zoom(did: str, page_no: int, dpi: int, rect: str | None,
+         out: str | None = None) -> None:
     _, _, pdf_value = row(did)
     src = resolve(did, pdf_value)
     doc = fitz.open(src)
@@ -197,7 +198,13 @@ def zoom(did: str, page_no: int, dpi: int, rect: str | None) -> None:
                          r.x0 + x1 * r.width, r.y0 + y1 * r.height)
         tag += "-%s" % rect.replace(",", "_")
 
-    zdir = DOCS / did / "zoom"
+    # >> Crops land in the CALLER's own folder, never in the shared package.
+    #    They used to go to <loop>/docs/<id>/zoom/, which all five readers can
+    #    read, and each filename IS the rect it was cut from -- so the directory
+    #    listing alone told a later reader exactly which regions someone else had
+    #    thought worth 900 dpi.  That is a pointer, and a pointer is contact.
+    #    Blind has to include "blind about where the others looked."
+    zdir = (pathlib.Path(out) if out else pathlib.Path.cwd()) / "zoom" / did
     zdir.mkdir(parents=True, exist_ok=True)
     img = zdir / ("%s.png" % tag)
     page.get_pixmap(dpi=dpi, clip=clip).save(img)
@@ -210,11 +217,15 @@ def main() -> None:
     ap.add_argument("id")
     ap.add_argument("--dpi", type=int, default=DEFAULT_DPI)
     ap.add_argument("--page", type=int)
-    ap.add_argument("--rect", help="x0,y0,x1,y1 as fractions of the page")
+    ap.add_argument("--rect", help="x0,y0,x1,y1 as fractions of the page -- the "
+                                   "same shape a v4 citation carries, so record "
+                                   "the rect you zoomed to")
+    ap.add_argument("--out", help="where crops go (default: ./zoom/<id>/). Keep "
+                                  "this inside your own folder.")
     a = ap.parse_args()
 
     if a.page:
-        zoom(a.id, a.page, a.dpi, a.rect)
+        zoom(a.id, a.page, a.dpi, a.rect, a.out)
     else:
         build(a.id, a.dpi)
 

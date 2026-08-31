@@ -15,6 +15,12 @@
 
      CITE   every row carries a quote.  A row with no citation is a
             hallucination, whoever wrote it, and it is invisible in prose.
+     MARK   a row whose meaning depends on a MARK carries a rect.  Framework v4
+            rule 1.  A quotation of struck words is byte-identical to a
+            quotation of live words, so STRUCK cited by characters alone is a
+            claim nobody downstream -- human or model -- can ever falsify.  On
+            RC_1598772 that distinction was the difference between conveying two
+            lots and conveying none.
      DATE   instrument <= acknowledgment <= recording.  A document cannot be
             recorded before it is signed.  This is what made FT_1000000027200's
             "sworn 1981, recorded 1983" suspicious before anyone zoomed -- the
@@ -101,6 +107,79 @@ POINTER = re.compile(
 LOTWORD = re.compile(r"\blots?\s+(?:no\.?\s*)?([\d,\s and]+?)(?=\s*(?:in\s+)?block)", re.I)
 BLOCKWORD = re.compile(r"\bblock\s+(?:no\.?\s*)?(\d{1,5})\b", re.I)
 
+# >> Framework v4 rule 1.  A citation format bounds the class of claims it can
+#    support.  Ours encoded characters, so it could support claims about WHICH
+#    WORDS are on the page and nothing about HOW THEY ARE MARKED -- and marks
+#    are not characters, so no amount of better OCR closes that.
+#
+#    p2 | [0.12,0.34,0.71,0.38] | struck | "subject, however, to all assessments"
+RECT = re.compile(r"\[\s*(\d*\.?\d+)\s*,\s*(\d*\.?\d+)\s*,"
+                  r"\s*(\d*\.?\d+)\s*,\s*(\d*\.?\d+)\s*\]")
+MARKS = ("plain", "struck", "inserted", "flourish", "marginal", "uncertain")
+MARKWORD = re.compile(r"(?<![\w-])(" + "|".join(MARKS) + r")(?![\w-])", re.I)
+MODES = ("ASSERT", "TRANSFER", "CREATE", "MODIFY", "TERMINATE", "STRUCK")
+COLNAMES = ("#", "citation", "time", "until", "function", "mode", "where",
+            "parties", "quantity", "terms", "summary")
+
+
+def header_index(md):
+    """Map column name -> position, from the table's own header row.
+
+    >> Read the table's declared shape instead of assuming column order.  The
+       DATE check died once already by assuming a format the writer did not
+       have to match.
+    """
+    for line in md.splitlines():
+        s = line.strip()
+        if not (s.startswith("|") and s.endswith("|")):
+            continue
+        cells = [c.strip().strip("`* ").lower() for c in s.strip("|").split("|")]
+        hit = {c: i for i, c in enumerate(cells) if c in COLNAMES}
+        if len(hit) >= 4:
+            return hit
+    return {}
+
+
+def cell(row, hdr, name):
+    i = hdr.get(name)
+    return row[i] if i is not None and i < len(row) else None
+
+
+def rect_of(text):
+    """(rect, why-it-is-unusable).  A malformed box is worse than none: it
+    looks like evidence and points nowhere."""
+    m = RECT.search(text)
+    if not m:
+        return None, None
+    v = [float(g) for g in m.groups()]
+    if any(x < 0.0 or x > 1.0 for x in v):
+        return v, "outside 0..1 -- coordinates must be normalised to the page"
+    if v[0] >= v[2] or v[1] >= v[3]:
+        return v, "x0>=x1 or y0>=y1 -- empty or transposed box"
+    return v, None
+
+
+def mode_of(row, hdr):
+    c = cell(row, hdr, "mode")
+    if c is not None:
+        t = c.strip("`* ").upper()
+        return t if t in MODES else None
+    for x in row:                       # no header: a bare cell equal to a mode
+        t = x.strip("`* ").upper()
+        if t in MODES:
+            return t
+    return None
+
+
+def cite_of(row, hdr):
+    c = cell(row, hdr, "citation")
+    if c is not None:
+        return c
+    for x in row:
+        if '"' in x or "“" in x:
+            return x
+    return " ".join(row)
+
 
 def rows(md):
     """Every pipe-table data row, as a list of cell strings."""
@@ -121,9 +200,11 @@ def money(s):
 
 
 def check(path):
-    md = path.read_text(encoding="utf-8", errors="replace")
+    md = path.read_text(encoding="utf-8", errors="replace") \
+        if hasattr(path, "read_text") else path
     fails, notes = [], []
     data = rows(md)
+    hdr = header_index(md)
 
     # ---- CITE ------------------------------------------------------------
     # An event row is one whose first cell looks like an event id (E1, EV003,
@@ -135,6 +216,39 @@ def check(path):
             fails.append("CITE  row %s carries no quoted evidence" % r[0].strip("` *"))
     notes.append("CITE  %d event rows, %d without a quote"
                  % (len(ev), sum(1 for f in fails if f.startswith("CITE"))))
+
+    # ---- MARK ------------------------------------------------------------
+    # >> Fail only the claims geometry is LOAD-BEARING for -- a STRUCK row, or
+    #    any declared mark that is not `plain`.  A v3-era table has neither, so
+    #    it passes with a note saying how few rows carry a rect.  That is the
+    #    honest report: the gap is stated, and no wolf is cried.  A checker that
+    #    cries wolf gets ignored, and then the real failure passes too.
+    n_rect, seen = 0, {}
+    for r in ev:
+        rid = r[0].strip("` *")
+        cc = cite_of(r, hdr)
+        rect, err = rect_of(cc)
+        if rect and not err:
+            n_rect += 1
+        if err:
+            fails.append("MARK  row %s rect %s -- %s" % (rid, rect, err))
+        mw = MARKWORD.search(cc)
+        mark = mw.group(1).lower() if mw else None
+        if mark:
+            seen[mark] = seen.get(mark, 0) + 1
+        if mode_of(r, hdr) == "STRUCK" and not rect:
+            fails.append(
+                "MARK  row %s is STRUCK with no rect -- a quotation of struck "
+                "words is byte-identical to a quotation of live words, so "
+                "nothing downstream can tell this from a fabrication" % rid)
+        elif mark and mark != "plain" and not rect:
+            fails.append(
+                "MARK  row %s claims mark '%s' with no rect -- a mark is not a "
+                "character, and geometry is its only evidence" % (rid, mark))
+    notes.append("MARK  %d of %d event rows carry a rect%s"
+                 % (n_rect, len(ev),
+                    ("; " + ", ".join("%s x%d" % kv for kv in sorted(seen.items())))
+                    if seen else ""))
 
     # ---- DATE ------------------------------------------------------------
     # Collect every ISO date in the file with the word nearest it, then assert
@@ -161,8 +275,9 @@ def check(path):
     #
     #    So: parse the three labels and nothing else.  A date the writer did not
     #    label is not a claim about this document's chronology.
-    LABEL = re.compile(r"^\s*(instrument|acknowledged|recorded)\s*[:=]\s*(\S+)",
-                       re.I | re.M)
+    LABEL = re.compile(
+        r"^\s*(instrument|acknowledged|recorded|expires)\s*[:=]\s*(\S+)",
+        re.I | re.M)
     kinds = {}
     labelled = False
     for m in LABEL.finditer(md):
@@ -186,6 +301,29 @@ def check(path):
     if order:
         notes.append("DATE  " + " <= ".join(
             "%s %s" % (k, min(kinds[k])) for k in order))
+
+    # >> v4 added `expires`.  It sits outside the instrument<=ack<=recorded
+    #    chain -- it is the end of a term, not a step in filing it.  On
+    #    RC_1598772 every covenant expires 1915-01-01, stated once on page 2;
+    #    a table that omits it is wrong about the parcel from 1915 onward.
+    if "expires" in kinds and "instrument" in kinds:
+        exp, ins = min(kinds["expires"]), min(kinds["instrument"])
+        if exp < ins:
+            fails.append("DATE  expires %s is BEFORE instrument %s -- a term "
+                         "cannot end before it begins" % (exp, ins))
+        else:
+            notes.append("DATE  expires %s (%d days after instrument)"
+                         % (exp, (exp - ins).days))
+
+    if "time" in hdr and "until" in hdr:
+        for r in ev:
+            t, u = cell(r, hdr, "time"), cell(r, hdr, "until")
+            if not t or not u:
+                continue
+            td, ud = all_dates(t), all_dates(u)
+            if td and ud and ud[0][0] < td[0][0]:
+                fails.append("DATE  row %s until %s is before time %s"
+                             % (r[0].strip("` *"), ud[0][0], td[0][0]))
 
     # ---- BBL / lots ------------------------------------------------------
     bbls = set(BBL.findall(md))
@@ -249,10 +387,128 @@ def check(path):
     return fails, notes
 
 
+# ---------------------------------------------------------------------------
+# >> PROBES.  This file has shipped broken three times -- twice on DATE, once on
+#    SUM -- and each time it printed confident output while the defect it was
+#    built for walked straight through.  v2 of DATE let a deed recorded EIGHT
+#    YEARS BEFORE IT WAS SIGNED pass clean, in the exact format this project
+#    mandates.  It was caught by an extractor writing two probes, not by review.
+#
+#    So the probes live here now, beside the code, and run with --selftest.
+#    Each states the defect it plants and the failure it demands.  A check that
+#    has never been shown to fire is not a check; it is a comment that runs.
+_H = ("| # | citation | time | until | function | mode | where | parties | "
+      "quantity | terms | summary |\n"
+      "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n")
+_D = "instrument: 1911-04-24\nacknowledged: 1911-04-24\nrecorded: 1911-04-25\n\n"
+
+
+def _row(cite, time="1911-04-24", until="", mode="ASSERT"):
+    return ("| E1 | %s | %s | %s | ENCUMBRANCE | %s | SUBJECT 5004030016 | "
+            "asserted by: the company | UNKNOWN | ruled out in ink | one line |\n"
+            % (cite, time, until, mode))
+
+
+_Q = '"subject, however, to all assessments"'
+
+PROBES = [
+    # the whole reason rule 1 exists: an unfalsifiable STRUCK claim
+    ("STRUCK cited by characters only is refused",
+     _D + _H + _row("p2 · " + _Q, mode="STRUCK"),
+     ["STRUCK with no rect"]),
+
+    ("STRUCK with a rect passes",
+     _D + _H + _row("p2 · [0.12,0.34,0.71,0.38] · struck · " + _Q, mode="STRUCK"),
+     []),
+
+    ("a transposed box is refused, not silently accepted",
+     _D + _H + _row("p2 · [0.71,0.34,0.12,0.38] · struck · " + _Q, mode="MODIFY"),
+     ["transposed box"]),
+
+    ("un-normalised coordinates are refused",
+     _D + _H + _row("p2 · [0.12,0.34,1.71,0.38] · struck · " + _Q, mode="MODIFY"),
+     ["must be normalised"]),
+
+    ("any non-plain mark without a rect is refused",
+     _D + _H + _row("p2 · inserted · " + _Q, mode="MODIFY"),
+     ["claims mark 'inserted' with no rect"]),
+
+    # >> the word `struck` also appears in this row's `terms` and `summary`.
+    #    Parsing the CITATION CELL rather than the joined row is what keeps that
+    #    from reading as a mark claim.  Row-level scanning is how the DATE check
+    #    died: every field fell inside every other field's window.
+    ("prose containing a mark word is not a mark claim",
+     _D + _H + _row("p2 · " + _Q, mode="ASSERT"),
+     []),
+
+    ("a term cannot end before it begins",
+     "instrument: 1911-04-24\nrecorded: 1911-04-25\nexpires: 1909-01-01\n\n"
+     + _H + _row("p2 · " + _Q),
+     ["expires 1909-01-01 is BEFORE instrument"]),
+
+    ("a row cannot expire before it starts",
+     _D + _H + _row("p2 · " + _Q, time="1911-04-24", until="1905-01-01"),
+     ["until 1905-01-01 is before time 1911-04-24"]),
+
+    # >> the regression that must never come back.  Extractor C planted exactly
+    #    this and v2 of the DATE check reported zero failures.
+    ("recorded eight years before signed still fails, in the mandated format",
+     "instrument: 1911-04-24\nacknowledged: 1911-04-24\nrecorded: 1903-04-25\n\n"
+     + _H + _row("p2 · " + _Q),
+     ["impossible order"]),
+
+    ("a missing date block never reads as a pass",
+     _H + _row("p2 · " + _Q),
+     ["no labelled date block"]),
+
+    ("a row with no quote is refused",
+     _D + _H + _row("p2, third paragraph"),
+     ["carries no quoted evidence"]),
+
+    # >> a v3-era table has no rects and no STRUCK rows.  It must PASS, with the
+    #    gap stated in a note.  A checker that fails everything gets ignored,
+    #    and then the real failure passes too.
+    ("a v3 table passes and its gap is reported, not failed",
+     _D + "| # | citation | time | function | mode | where | parties |\n"
+          "| --- | --- | --- | --- | --- | --- | --- |\n"
+          "| E1 | p2 " + _Q + " | 1911-04-24 | ENCUMBRANCE | CREATE | "
+          "SUBJECT 5004030016 | grantor → grantee |\n",
+     []),
+]
+
+
+def selftest():
+    bad = 0
+    for name, text, expect in PROBES:
+        fails, notes = check(text)
+        missing = [e for e in expect if not any(e in f for f in fails)]
+        unmatched = [f for f in fails if not any(e in f for e in expect)]
+        ok = not missing and not unmatched
+        print("  %-4s %s" % ("ok" if ok else "FAIL", name))
+        if not ok:
+            bad += 1
+            for e in missing:
+                print("        demanded a failure containing %r -- none fired" % e)
+            for f in unmatched:
+                print("        unexpected failure: %s" % f)
+    print("\n%d probe(s) failed" % bad)
+    if not bad:
+        print("Every check fires on the defect it was built for, and on nothing\n"
+              "else. Both earlier versions of the DATE check claimed as much\n"
+              "without evidence, and both claims were false.")
+    return 1 if bad else 0
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("tables", nargs="+")
+    ap.add_argument("tables", nargs="*")
+    ap.add_argument("--selftest", action="store_true",
+                    help="prove the checks fire, and fire only where intended")
     a = ap.parse_args()
+    if a.selftest:
+        return selftest()
+    if not a.tables:
+        ap.error("give one or more tables, or --selftest")
     bad = 0
     for t in a.tables:
         p = pathlib.Path(t)

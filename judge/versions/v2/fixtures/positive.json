@@ -1,0 +1,238 @@
+{
+  "_note": "Positive minimal fixtures. Every entry must VALIDATE. This is the test the loop was missing: negative fixtures alone cannot detect a schema that rejects everything. Run with fixturecheck.py.",
+  "fixtures": [
+    {
+      "name": "ledger_row",
+      "why": "R2-1. A sweep cell flattened with its pass identity. Rejected by revision 2 because additionalProperties in the $ref'd cell could not see the wrapper's own properties.",
+      "schema": "extraction.schema.json#/$defs/ledger_row",
+      "instance": {
+        "page_id": "p03",
+        "status": "NO_HIT",
+        "search_completed": true,
+        "question_set_version": "v2.0",
+        "encoded_resolution": { "width_px": 1191, "height_px": 1568, "effective_dpi": 140 },
+        "function": "PERMIT",
+        "pass_kind": "DISCOVERY_LENS"
+      }
+    },
+    {
+      "name": "ledger_row_support",
+      "why": "The DOCUMENT_SUPPORT completion row MX-VIEW-002 requires. It is not one of the eleven functions.",
+      "schema": "extraction.schema.json#/$defs/ledger_row",
+      "instance": {
+        "page_id": "p03",
+        "status": "SUPPORT_ONLY",
+        "search_completed": true,
+        "question_set_version": "v2.0",
+        "encoded_resolution": { "width_px": 1191, "height_px": 1568, "effective_dpi": 140 },
+        "anchors": [
+          {
+            "anchor_id": "A0123456789abcdef",
+            "page_id": "p03",
+            "zone": "MARGIN_R",
+            "identity_component": "HUSBAND AND WIFE",
+            "occurrence_index": 1,
+            "atomic_class": "UNATTRIBUTED_ANNOTATION",
+            "legibility": "PARTIAL",
+            "role": "SUPPORT_ONLY",
+            "proving_span": "HUSBAND AND WIFE",
+            "candidate_claims": [
+              { "candidate_claim_id": "CC0123456789ab", "claim_raw": "HUSBAND AND WIFE" }
+            ]
+          }
+        ],
+        "function": "DOCUMENT_SUPPORT",
+        "pass_kind": "DOCUMENT_SUPPORT"
+      }
+    },
+    {
+      "name": "quantity",
+      "why": "R2-1. A final registry quantity. Rejected by revision 2 for the same reason as ledger_row.",
+      "schema": "extraction.schema.json#/$defs/quantity",
+      "instance": {
+        "kind": "NOMINAL_CONSIDERATION",
+        "label_raw": "in consideration of",
+        "value_raw": "$10.00",
+        "value_normalized": "10",
+        "currency_or_unit": "USD",
+        "scope": "EVENT",
+        "allocation_status": "NOT_APPLICABLE",
+        "support": { "kind": "QUOTE", "evidence_ids": ["2003010600411001-E042"] },
+        "quantity_id": "2003010600411001-Q001",
+        "target_event_ids": ["2003010600411001-EV015"]
+      }
+    },
+    {
+      "name": "quantity_party_share",
+      "why": "The air-rights shape. PARTY_SHARE targets a party and pairs with its value through allocation_group_id.",
+      "schema": "extraction.schema.json#/$defs/quantity",
+      "instance": {
+        "kind": "DEVELOPMENT_RIGHTS",
+        "label_raw": "square feet of development rights",
+        "value_raw": "12,400 sf",
+        "value_normalized": "12400",
+        "currency_or_unit": "sf",
+        "scope": "PARTY_SHARE",
+        "target_party_refs": ["P002"],
+        "allocation_status": "EXPLICIT",
+        "allocation_group_id": "AG001",
+        "support": { "kind": "QUOTE", "evidence_ids": ["x-E010"] },
+        "quantity_id": "x-Q001",
+        "target_party_ids": ["x-P002"]
+      }
+    },
+    {
+      "name": "interval_unknown",
+      "why": "schemacheck reports interval UNSAT. That is a synthesiser artifact: it picks the first enum value SUPPORTED and does not honour the if/then that then requires interval_start. The UNKNOWN branch is the minimal instance.",
+      "schema": "extraction.schema.json#/$defs/interval",
+      "instance": { "status": "UNKNOWN", "reason": "NOT_STATED" }
+    },
+    {
+      "name": "interval_supported",
+      "why": "The other branch, to prove the conditional is satisfiable in both directions and not merely unreachable.",
+      "schema": "extraction.schema.json#/$defs/interval",
+      "instance": {
+        "status": "SUPPORTED",
+        "interval_start": "2002-11-16",
+        "interval_end": "2002-11-16",
+        "precision": "DAY",
+        "basis": "INSTRUMENT_DATE",
+        "support": { "kind": "QUOTE", "evidence_ids": ["x-E001"] }
+      }
+    },
+    {
+      "name": "evidence_time",
+      "why": "Reported UNSAT for the same synthesiser reason: it nests a broken interval.",
+      "schema": "extraction.schema.json#/$defs/evidence_time",
+      "instance": {
+        "evidence_time_id": "x-T001",
+        "event_id": "x-EV003",
+        "occurrence": { "status": "UNKNOWN", "reason": "NOT_STATED" }
+      }
+    },
+    {
+      "name": "assertion_no_op",
+      "why": "R2-4. An observation payload has no op. A lifecycle operation in an observation lane must be unconstructable.",
+      "schema": "enrichment.schema.json#/$defs/assertion",
+      "instance": {
+        "path": "occupancy.use",
+        "value_type": "RAW_TERM",
+        "value": "residential",
+        "scope": "UNIT",
+        "support": { "kind": "QUOTE", "evidence_ids": ["x-E020"] }
+      }
+    },
+    {
+      "name": "field_op_with_op",
+      "why": "R2-4. A transaction delta does carry an op.",
+      "schema": "enrichment.schema.json#/$defs/field_op",
+      "instance": {
+        "path": "title.holders",
+        "value_type": "INTEREST_LEDGER",
+        "op": "SET",
+        "value": { "add": [{ "party_id": "x-P003", "share": "UNKNOWN" }], "remove": [] },
+        "support": { "kind": "QUOTE", "evidence_ids": ["x-E005"] }
+      }
+    },
+    {
+      "name": "boundary_orphan",
+      "why": "R2-3/Return 5. Claim-level, with all three resolution tests exhaustive.",
+      "schema": "extraction.schema.json#/$defs/boundary_orphan",
+      "instance": {
+        "candidate_claim_id": "CCaabbccddeeff",
+        "anchor_id": "Afedcba9876543210",
+        "claim_raw": "the Unit shall be used for residential purposes only",
+        "exclusions": [
+          {
+            "candidate_claim_id": "CCaabbccddeeff",
+            "anchor_id": "Afedcba9876543210",
+            "excluded_to": "ENCUMBRANCE",
+            "claim_raw": "the Unit shall be used for residential purposes only"
+          }
+        ],
+        "resolution_link": {
+          "resolved": false,
+          "tests": [
+            { "test": "EVENT_HIT", "outcome": "ABSENT", "checked_event_ids": ["x-EV014"] },
+            { "test": "SUPPORT_RECEIVING_PATH", "outcome": "ABSENT", "checked_paths": ["encumbrance.legal_scope"] },
+            { "test": "NAMED_NO_EVENT_RULE", "outcome": "ABSENT", "checked_rule_ids": ["FR-PKG-002"] }
+          ]
+        }
+      }
+    },
+    {
+      "name": "validation_eleven_ordered",
+      "why": "Return 4. Eleven ordered distinct check ids; eleven duplicates must not validate.",
+      "schema": "extraction.schema.json#/$defs/validation",
+      "instance": {
+        "overall": "EXCEPTION",
+        "checks": [
+          { "check_id": "FR-QC-001", "result": "PASS" },
+          { "check_id": "FR-QC-002", "result": "PASS" },
+          { "check_id": "FR-QC-003", "result": "PASS" },
+          { "check_id": "FR-QC-004", "result": "PASS" },
+          { "check_id": "FR-QC-005", "result": "PASS" },
+          { "check_id": "FR-QC-006", "result": "PASS" },
+          { "check_id": "FR-QC-007", "result": "PASS" },
+          { "check_id": "FR-QC-008", "result": "NOT_APPLICABLE", "detail": "version gate" },
+          { "check_id": "FR-QC-009", "result": "EXCEPTION" },
+          { "check_id": "FR-QC-010", "result": "NOT_APPLICABLE", "detail": "version gate" },
+          { "check_id": "FR-QC-011", "result": "NOT_SATISFIABLE", "detail": "one recorded-year band" }
+        ]
+      }
+    }
+  ],
+  "negative_fixtures": [
+    {
+      "name": "cell_hit_without_anchors",
+      "why": "A HIT with no anchor must be rejected.",
+      "schema": "discovery.schema.json#/$defs/cell",
+      "instance": {
+        "page_id": "p01", "status": "HIT", "search_completed": true,
+        "question_set_version": "v2.0",
+        "encoded_resolution": { "width_px": 100, "height_px": 100, "effective_dpi": 72 },
+        "anchors": []
+      }
+    },
+    {
+      "name": "lane_character_mismatch",
+      "why": "A transactions[] member claiming NOTICE must be rejected.",
+      "schema": "extraction.schema.json#/$defs/transaction",
+      "instance": { "epistemic_character": "NOTICE" }
+    },
+    {
+      "name": "validation_eleven_duplicates",
+      "why": "Eleven copies of FR-QC-001 must be rejected.",
+      "schema": "extraction.schema.json#/$defs/validation",
+      "instance": {
+        "overall": "PASS",
+        "checks": [
+          { "check_id": "FR-QC-001", "result": "PASS" }, { "check_id": "FR-QC-001", "result": "PASS" },
+          { "check_id": "FR-QC-001", "result": "PASS" }, { "check_id": "FR-QC-001", "result": "PASS" },
+          { "check_id": "FR-QC-001", "result": "PASS" }, { "check_id": "FR-QC-001", "result": "PASS" },
+          { "check_id": "FR-QC-001", "result": "PASS" }, { "check_id": "FR-QC-001", "result": "PASS" },
+          { "check_id": "FR-QC-001", "result": "PASS" }, { "check_id": "FR-QC-001", "result": "PASS" },
+          { "check_id": "FR-QC-001", "result": "PASS" }
+        ]
+      }
+    },
+    {
+      "name": "assertion_with_op",
+      "why": "R2-4. An observation assertion carrying a lifecycle-bearing op must be rejected.",
+      "schema": "enrichment.schema.json#/$defs/assertion",
+      "instance": {
+        "path": "occupancy.use", "value_type": "RAW_TERM", "op": "SET",
+        "support": { "kind": "QUOTE", "evidence_ids": ["x-E020"] }
+      }
+    },
+    {
+      "name": "null_value_in_field_op",
+      "why": "FR-SER-001 bans JSON null.",
+      "schema": "enrichment.schema.json#/$defs/field_op",
+      "instance": {
+        "path": "title.holders", "value_type": "SCALAR", "op": "SET", "value": null,
+        "support": { "kind": "QUOTE", "evidence_ids": ["x-E005"] }
+      }
+    }
+  ]
+}
