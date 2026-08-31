@@ -60,7 +60,29 @@ single-source five — the homeless private approval right has two instances but
 one document, and the promotion bar is a third.
 
 The new lane check found **uncited registry rows in three of five tables** on its
-first run. A, C and D have been asked to fix them; FEED is unaffected.
+first run — and closing them produced the round's best finding.
+
+**3. `SEARCH RECORD` — a negative is not a row** (`abd822c`). All three readers with
+an uncited registry row **removed it rather than manufacture a quote**, then
+independently asked for the same rule. Their reason beat mine: *"I found nothing"* is
+not an event — nothing happened — and its evidence is **coverage and sensitivity**,
+not a rect around a thing. One reader: *"a document with no fee stamp and a document
+nobody looked at produce identical row tables unless the search itself is recorded."*
+
+Negatives now live in a `SEARCH RECORD` block below the table, each region as
+`p<N> · [x0,y0,x1,y1]` plus a dpi, so they are falsifiable by re-rendering. The
+checker validates the rects and flags a missing dpi.
+
+⚠ **Changing the form changed the substance** — one reader: *"stating it that way
+forced me to actually do the search rather than assert it; my original row was backed
+only by having read both pages whole."* Another corrected its own *"both margins at
+900 dpi"* on finding only one had been. **The row form let a weak negative look
+strong.**
+
+**⏳ Outstanding:** A's search record uses bands (`p1 left x<0.18`) rather than rects
+and fails the new check. Its analysis is *more* rigorous than the rule requires — full
+ink projection with thresholds — so it has been asked for the notation only, and told
+to push back if the rect form loses something. **B, C, D, E are clean.**
 
 ### ⏭ NEXT — m2
 
