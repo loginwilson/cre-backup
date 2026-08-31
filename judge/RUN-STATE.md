@@ -10,7 +10,53 @@ Last updated: 2026-08-31, at dispatch of phase 1.
 
 ## Where the run is
 
-**PHASE 1 — RE-EMIT TEST. Dispatched, stalled, resumed. Awaiting all five.**
+**PHASE 1 — RE-EMIT TEST. ✅ COMPLETE. Batch closed, partially ruled.**
+
+**FEED went 0 of 125 → 100% on all five**, gate clean on the first run, no loosening.
+Full report: `judge/batches/RE-EMIT-1.md`. Tables archived with hashes in the backup
+repo under `tables/RC_1598772/`.
+
+| reader | v1 → v2 rows | FEED | sha256 |
+|---|---|---|---|
+| A | 16 → 16 | 100% | `57a414ebb5924ad9` |
+| C | 29 → **16** | 100% | `bb2000d53487514e` |
+| E | 27 → 19 | 100% | `41a8a2ef6224ff6a` |
+| D | 26 → 22 | 100% | `2069674c063f6179` |
+| B | 27 → **26** | 100% | `2e731f51e6984984` |
+
+**Ruled and applied** (these blocked m2, because the worked example is what the next
+reader calibrates against):
+- grantor is `WOOD HARMON RICHMOND REALTY COMPANY` — three distinct names had been
+  merged into one
+- covenants bind *"the herein-described premises"*; the plat phrase is the grantor's
+  **reservation**. The old spec would have fanned fourteen rows to the wrong parcels.
+- cost floors vary by **family count**, not street
+- a building cost floor is **`COST`**, not `ENVELOPE` — `function` is a machine field,
+  so the file's self-contradiction was making identical readings produce different
+  state records
+- the worked example is now **transcribed from a sealed reader table**, not composed
+
+**Fixed in code:** the zoom leak (27 crops had landed in a shared `loop/zoom/`), and
+the `until < date` row check, which was dead on every v4 table.
+
+**Still open:** `BBLS_OK` accepts `SET:` + any prose. Left deliberately — a regex
+cannot judge whether a criterion is evaluable, and three readers contest the
+framework's own worked failure case.
+
+### ⏭ NEXT, in order
+
+1. **Rebuild `framework/specs/DEED-RESTRICTIVE-COVENANT.md` from the five sealed
+   tables** — not by patching. Every error corrected above traces to one cause: the
+   spec was seeded from the orchestrator's reading of m1, which is the reading five
+   readers overturned 5–0. Patching a bad source yields a patched bad source, and
+   LOOP.md's rule is that a spec is built from banked members. Needs fresh context
+   (~120 KB of tables).
+2. **Rule the ten schema gaps** in `RE-EMIT-1.md`. Five carry 4–5 independent
+   confirmations; `until`'s missing third state and the homeless private approval
+   right carry **5 of 5**. Route to spec / checker / card — the card set is capped at
+   twelve, so a new card must **displace** one.
+3. **Then m2** — three readers, not five, and a document structurally unlike an 1911
+   handwritten covenant deed.
 
 > ⚠ **Ten hours were lost to a liveness hole.** All five were dispatched; four
 > rendered crops and did real work, and every transcript ended on *"writing the
