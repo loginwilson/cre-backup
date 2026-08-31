@@ -68,6 +68,14 @@ promise to repay is `CAPITAL`; the lien burdening the lot until it is repaid is
 `VALUE`; a $2.50 recording fee is `COST`; *"shall cost not less than $2,000"* is a
 `COST` obligation even though no money has moved.
 
+> **Settled 2026-08-31 — a building-cost floor is `COST`, not `ENVELOPE`.** This file
+> named the clause under COST while its worked example and the class spec filed it
+> under ENVELOPE. Three readers reported the contradiction; four filed COST, on the
+> grounds that the normative table defines the function and an example only
+> illustrates it. **This mattered because `function` is a machine field:** Resolve
+> projects on it, so two readers with identical readings were producing different
+> state records. A file contradicting itself reads as reader disagreement and is not.
+
 **ENVELOPE vs AS_BUILT vs OCCUPANCY.** `AS_BUILT` is what **is**. `ENVELOPE` is what
 **may be built**. `OCCUPANCY` is who may **use** it.
 
@@ -181,14 +189,24 @@ designation in `terms` — a parcel this instrument names but does not resolve.
 
 ### A worked row, so there is nothing to interpret
 
+Every value below is transcribed from a sealed reader table on `RC_1598772`. The rect
+is a reader's measured value, not an illustration.
+
 ```
-| #  | citation                                          | date       | basis      | until      | function    | mode   | bbls                        | parties                    | quantity      | terms                                   | summary                          |
-| E4 | p2 · [0.15,0.32,0.95,0.36] · plain · "no dwelling  | 1911-04-14 | instrument | 1915-01-01 | ENVELOPE    | CREATE | SET: all lots in plat 995 B | The Wood, Harmon Co. → all | $2,000 USD    | $2,000 on Heberton; $3,000 on the       | Every house on the plat must     |
-|    | shall cost less than Two Thousand Dollars"        |            |            |            |             |        |                             | grantees in the plat       |               | avenue frontage. Runs with the land.    | cost at least $2,000 until 1915. |
+| #  | citation                                             | date       | basis      | until | function    | mode   | bbls                    | parties                | quantity | terms                                  | summary                              |
+| E6 | p1 · [0.33,0.633,0.79,0.647] · struck ·              | 1911-04-14 | instrument |       | ENCUMBRANCE | STRUCK | 5004030016, 5004030017  | WOOD HARMON RICHMOND   | UNKNOWN  | Ruled through in ink on the printed    | The deed as executed is not subject  |
+|    | "subject, however, to all assessments"               |            |            |       |             |        |                         | REALTY COMPANY → Ella  | (no sum  | form before execution. Mark is citable;| to assessment liens; the clause was  |
+|    |                                                      |            |            |       |             |        |                         | J. Bergen              | stated)  | struck-BEFORE-execution is not.        | removed before signing.              |
 ```
 
-Machine fields: `1911-04-14` sorts, `ENVELOPE` projects, `SET:` fans once the plat
-is decoded. Everything else is context.
+Machine fields: **`1911-04-14` sorts**, **`ENCUMBRANCE` projects**, **the two BBLs
+fan**. Everything else is context.
+
+> ⚠ **The previous worked example was wrong in five ways at once** — function, page,
+> quote, scope and party direction — because it was written from the orchestrator's
+> reading rather than transcribed from the page. Four readers caught it
+> independently. **A worked example is what the next reader calibrates against, so it
+> is the single worst place in the system to guess.** Transcribe, never compose.
 
 ### Above and below the table
 

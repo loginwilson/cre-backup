@@ -25,9 +25,14 @@ not the grant.
 Signals, in expected order of reliability — **none yet confirmed on a second
 member**:
 
-1. **The grantor is a company whose name contains the development.** m1: *The Wood,
-   Harmon Company*, and the plat is *South New York, Addition Number Four, surveyed
-   for Wood Harmon & Co.* The grantor named the subdivision.
+1. **The grantor is a development company.** m1: **`WOOD HARMON RICHMOND REALTY
+   COMPANY`**, printed in caps, six times across two pages.
+   
+   ⚠ **This document carries THREE similar names and they are not stated to be the
+   same entity.** *Wood, Harmon & Co.* appears only as the firm the plat was
+   *surveyed for* and as the *return-to* party. An earlier version of this spec
+   merged all three; five readers caught it independently. **Do not assume a
+   relationship the deed does not state.**
 2. **A filed-map reference the lot numbers depend on.** m1: *map no. 995 B*, filed
    Richmond County Clerk 1907-07-05. **Without the map, "lot 16, block 403" is not a
    location.**
@@ -48,7 +53,8 @@ wrong.
 |---|---|---|
 | **TITLE** | `TRANSFER` | the conveyance itself — one row |
 | **ENCUMBRANCE** | `CREATE` | the covenant scheme as a burden running with the land |
-| **ENVELOPE** | `CREATE` | setbacks, building lines, materials, cost floors |
+| **ENVELOPE** | `CREATE` | setbacks, building lines, materials |
+| **COST** | `CREATE` | building cost floors — a duty to spend. ⚠ **not ENVELOPE**; settled 2026-08-31 |
 | **OCCUPANCY** | `CREATE` | family counts, prohibited trades, use restrictions |
 | **IDENTITY** | `ASSERT` | grantor's corporate existence and the officer's capacity |
 | **VALUE** | `ASSERT` | recited consideration |
@@ -69,7 +75,7 @@ held by the grantor, not government.
 | lot + block | always | description | rd, and the filed map | — |
 | **filed map number** | expected always | description | ⚠ **not in rd** — document only | *"or intended to be filed"* |
 | covenant expiry | expected always | covenant block | calendar arithmetic | scheme runs forever — check twice |
-| building cost floor | usually | covenant block | may vary by street | — |
+| building cost floor | usually | covenant block | varies by **family count** — `COST` | — |
 | prohibited trades | usually | covenant block | one row, list in `terms` | — |
 | private approval right | expected usually | reserved rights | — | ⚠ has no home in the eleven |
 | struck clauses | sometimes | printed form | **rect + mark (card 1)** | — |
@@ -86,18 +92,26 @@ held by the grantor, not government.
   a recording date once by a checker.
 - **Lot numbers against the filed map**, never against the index alone.
 - **Every strike gets a rect** before any claim rests on it (card 1).
-- **Cost floors may vary by street** — check whether one clause carries two numbers
-  before splitting it into two rows (card 2).
+- **Cost floors vary by FAMILY COUNT, not street** (m1, p1): $2,000 *"if built for
+  use and occupancy of one family only"*; $3,000 *"if built as a double house … or
+  as a double tenement."* Nothing ties either figure to a street. One clause, two
+  numbers — **one row** under card 2, and the function is `COST`.
 
 ## 5 · CHAIN — what this class points at and does not contain
 
 - **The filed map** (m1: no. 995 B, Richmond County Clerk). The parcel description is
   meaningless without it, and it is a separate instrument in a separate series.
-- **The plat's other lots.** The covenants bind *"any part of South New York,
-  Addition Number Four"* — land this deed does not convey. Those rows carry
-  `bbls: SET: all lots in plat 995 B`, never the subject BBL. The set is real and
-  enumerable once the filed map is decoded; writing it as a description instead
-  loses it.
+- **The plat's other lots — and ⚠ NOT via the covenants.** The covenants bind *"any
+  part of the **herein-described premises**"* only, so covenant rows carry the
+  **subject BBLs**. The phrase reaching the plat — *"any part of South New York,
+  Addition Number Four"* — sits in the grantor's **reservation**, its exemption from
+  its own scheme. Only the reservation rows carry `SET:`.
+  
+  ⚠ **An earlier version of this spec had this backwards.** One reader: *"Had I
+  followed the spec, fourteen rows would have fanned to the wrong parcels — the
+  covenants would have reached the whole subdivision and missed lots 16 and 17
+  entirely."* That is a wrong parcel history produced silently at Reorganize, which
+  is worse than a wrong reading because nothing downstream would flag it.
 - **The grantor's other deeds in the same plat.** A uniform scheme is enforceable
   across the subdivision, so siblings should carry near-identical covenant text.
   **This is the cheapest available cross-document check for this class.**
