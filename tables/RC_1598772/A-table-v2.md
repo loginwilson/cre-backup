@@ -48,7 +48,24 @@ are not scored as event rows.
 |---|---|---|---|---|---|---|---|---|
 | R1 | p2 · [0.161,0.820,0.461,0.912] · plain · "Recorded April, 25, 1911 at 9 a.m." | 1911-04-25 | — | — | — | INSTRUMENT | Richmond County Clerk → the record | The registry's own act. Recording date **and time**; rd carries the date and not the time. Never an event date (card 10) |
 | R2 | p2 · [0.161,0.820,0.461,0.912] · plain · "C. Livingston Bostwick, for Wood, Harmon & Co., Broadway, N.Y. City." | 1911-04-25 | — | — | — | INSTRUMENT | return-to: C. Livingston Bostwick for Wood, Harmon & Co. | The only agent address in the document. **"Wood, Harmon & Co." is not the grantor** — the grantor is Wood Harmon Richmond Realty Company |
-| R3 | p1, p2 · whole margins · plain · *no quote — nothing found* | — | — | — | — | INSTRUMENT | — | **I found nothing** (card 5, first state): no fee, tax or revenue stamp in either margin of either page. The document does not assert their absence |
+
+### Search record — fee, tax and revenue stamps
+
+**Not a row.** This is card 5's first state — *I found nothing* — and an absence has no quote,
+so it cannot carry a citation and must not sit in a table whose every row asserts one. It was
+a row in my first draft; the CITE check was right to refuse it.
+
+Searched: both margins of both pages, by ink projection over the full page height.
+
+| band | ink | what the ink is |
+|---|---|---|
+| p1 left, x < 0.18 | 0.047% | one cluster at y 0.002–0.005 — the "Vol. 396 PG 1" vendor caption |
+| p1 right, x > 0.90 | 0.006% | no cluster above threshold |
+| p2 left, x < 0.18 | 0.072% | "Vol. 396 PG 2" caption, plus the handwritten leaf numeral "2" at y 0.015–0.027 |
+| p2 right, x > 0.90 | 0.415% | eight clusters, y 0.072–0.206, all last words of justified body lines — verified by crop: "house", "et in", "and", "LTY", "said", "orge,", "king", "ring", "any" |
+
+**No fee, tax or revenue stamp appears anywhere in either margin.** The document does not
+assert their absence; I looked and did not find them.
 
 ## Index check (card 9)
 

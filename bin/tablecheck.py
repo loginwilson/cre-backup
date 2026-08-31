@@ -252,6 +252,39 @@ def check(path):
     if lane:
         notes.append("CITE  %d registry-lane row(s), cited but exempt from FEED "
                      "(no function of the eleven asks about filing)" % len(lane))
+
+    # ---- SEARCH ----------------------------------------------------------
+    # >> A negative is not a row: "I found nothing" has no text to quote and no
+    #    event to record.  It states COVERAGE and SENSITIVITY -- where you looked
+    #    and how closely -- so it is checked on those, not on a quote.  Three
+    #    readers reached this independently after the lane became CITE-checked,
+    #    and all three removed the row rather than manufacture a quote.
+    #
+    #    Without it: a document with no fee stamp and a document nobody looked at
+    #    produce identical tables.
+    SEARCHED = re.compile(r"p(\d+)\s*·\s*(\[[^\]]*\])", re.I)
+    DPI = re.compile(r"\b(\d{2,5})\s*dpi\b|\|\s*(\d{2,5})\s*\|", re.I)
+    # >> match and split must agree on case, or a differently-cased heading
+    #    matches here and then IndexErrors on the split.  It did, on two tables.
+    _sr = re.split(r"SEARCH\s+RECORD", md, maxsplit=1, flags=re.I)
+    if len(_sr) > 1:
+        block = _sr[1]
+        regions, bad = 0, 0
+        for m in SEARCHED.finditer(block):
+            regions += 1
+            _, err = rect_of(m.group(2))
+            if err:
+                fails.append("SEARCH region %s on p%s -- %s"
+                             % (m.group(2), m.group(1), err))
+                bad += 1
+        if not regions:
+            fails.append("SEARCH  a SEARCH RECORD with no region rect proves "
+                         "nothing -- a negative is falsified by re-rendering "
+                         "what you searched, so it must say where and at what dpi")
+        else:
+            notes.append("SEARCH  %d region(s) recorded, %d malformed%s"
+                         % (regions, bad,
+                            "" if DPI.search(block) else " -- NO dpi stated"))
     for r in ev:
         joined = " ".join(r)
         if '"' not in joined and "“" not in joined and "'" not in joined:
@@ -611,6 +644,24 @@ PROBES = [
     # >> a v3-era table has no rects and no STRUCK rows.  It must PASS, with the
     #    gap stated in a note.  A checker that fails everything gets ignored,
     #    and then the real failure passes too.
+    # ---- SEARCH: a negative must state where it looked --------------------
+    ("a SEARCH RECORD with region rects and dpi passes",
+     _D + _F + _frow() + "\nSEARCH RECORD\n"
+     "| region | dpi | found |\n| --- | --- | --- |\n"
+     "| p1 · [0.00,0.920,1.00,1.000] | 1200 | a printed rule, nothing else |\n",
+     []),
+
+    ("a SEARCH RECORD asserting an absence with no region is refused",
+     _D + _F + _frow() + "\nSEARCH RECORD\n"
+     "No fee, tax or revenue stamp anywhere on either page.\n",
+     ["a SEARCH RECORD with no region rect"]),
+
+    ("a malformed search region is refused, not silently accepted",
+     _D + _F + _frow() + "\nSEARCH RECORD\n"
+     "| region | dpi | found |\n| --- | --- | --- |\n"
+     "| p1 · [0.90,0.920,0.10,1.000] | 1200 | nothing |\n",
+     ["transposed box"]),
+
     ("a v3 table passes and its gap is reported, not failed",
      _D + "| # | citation | time | function | mode | where | parties |\n"
           "| --- | --- | --- | --- | --- | --- | --- |\n"

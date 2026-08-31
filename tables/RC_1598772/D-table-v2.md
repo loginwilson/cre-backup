@@ -69,7 +69,16 @@ series so nothing here is scored as an event.
 | R1 | p2 · [0.15,0.830,0.48,0.878] · plain · "Recorded April, 25, 1911 At 9 a. m." | 1911-04-25 | registry act | INSTRUMENT | The registry's own act, with a time of day. rd `recorded` reads `4/25/1911` — agrees on the date; the 9 a.m. has no rd field, so NOT_CHECKABLE. |
 | R2 | p2 · [0.15,0.885,0.48,0.925] · plain · "C. Livingston Bostwick, for Wood, Harmon & Co. Broadway, N. Y. City." | 1911-04-25 | return-to party | INSTRUMENT | ⚠ **"Wood, Harmon & Co." is not the grantor's name.** The grantor is Wood Harmon Richmond Realty Company; p1 separately says the plan was "surveyed for Wood Harmon & Co., 1906". Same entity, affiliate, or unrelated is UNKNOWN — the deed never connects them. Street with no number. |
 | R3 | p1 · [0.00,0.000,1.00,0.075] · plain · handwritten "396" and "1"; p2 · [0.00,0.000,0.30,0.045] · plain · handwritten "2" | 1911-04-25 | book and page | INSTRUMENT | rd gives book 396 page 1. The instrument occupies book pages 1 and 2. Digital overlay slugs read `Vol. 396 PG 1` and `Vol. 396 PG 2`; those are added by the imaging pipeline, not document evidence. Reported, not reconciled (card 8). |
-| R4 | p1 · [0.00,0.870,1.00,1.000] · plain · no stamp, no fee notation, no revenue stamp in either margin at 900 dpi; p2 · [0.00,0.900,1.00,1.000] · plain · likewise | 1911-04-25 | fee or stamp | INSTRUMENT | Card 5 case 1 — **I found nothing.** The document does not assert that no fee was paid. |
+
+**Fee or stamp — no row, and that is the finding.** Spec §3 expects the lane to carry
+one. I searched p1 [0.00,0.870,1.00,1.000] and p2 [0.00,0.900,1.00,1.000] at 900 dpi,
+plus both full pages, and found no fee notation, tax stamp or revenue stamp anywhere.
+
+This is card 5 case 1 — **I found nothing** — and it cannot be a row in a CITE-checked
+table, because there is no text to quote. A row asserts *the document says this*; an
+unfound thing has no words. Card 5 case 2 (*the document asserts none*) would quote;
+case 1 cannot, by construction. Recorded here instead of the table, with the rects and
+the dpi, so the negative is auditable: anyone can crop exactly what I looked at.
 
 ## Index check — trust neither side, correct nothing
 

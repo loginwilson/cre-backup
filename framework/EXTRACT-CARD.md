@@ -17,6 +17,35 @@ Page · rect in normalised page coordinates · mark type · the quote, isolated 
 it proves. Mark is one of `plain | struck | inserted | flourish | marginal |
 uncertain`.
 
+**A NEGATIVE IS NOT A ROW.** *"I found nothing"* (card 5, state 1) has no text to
+quote, because an unfound thing has no words — and it is not an event, because
+nothing happened. It is a record of **what the reader did**, and it goes in a
+`SEARCH RECORD` block below the table:
+
+    SEARCH RECORD
+    | region                         | dpi  | found |
+    | p1 · [0.00,0.920,1.00,1.000]   | 1200 | a printed rule at the left, nothing else |
+    | p2 · [0.00,0.900,1.00,1.000]   | 1200 | tail of the return-to block, nothing else |
+
+**Different claim, different evidence, different falsification.** A row cites a rect
+containing something; a search record cites **coverage and sensitivity** — where you
+looked and how closely. "Not there at 300 dpi" and "not there at 900" are different
+findings.
+
+> *Three readers reached this independently when the registry lane became
+> CITE-checked and their negative rows had no quote. All three removed the row rather
+> than manufacture one. One put it exactly right: **"a document with no fee stamp and
+> a document nobody looked at produce identical row tables unless the search itself
+> is recorded."***
+>
+> *And writing it as a search record made the claim honest: **"stating it that way
+> forced me to actually do the search rather than assert it. My original row was
+> backed only by having read both pages whole, which is weaker than the row
+> implied."*** A second reader corrected its own earlier claim of *"both margins at
+> 900 dpi"* on discovering only one had been.
+
+⚠ **The row form let a weak negative look strong.** That is why it moves out.
+
 **A citation format bounds the class of claims it can support.** Characters support
 *which words are on the page* and **nothing about how they are marked** — marks are
 not characters, so better OCR never closes it. A quotation of struck words is

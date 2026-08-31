@@ -51,7 +51,29 @@ eleven — **there is none for a recording act**, so a registry row cannot be an
 | R1 | p2 · [0.15,0.8250,0.55,0.8900] · plain · "Recorded April, 25, 1911 At 9 a.m." | 1911-04-25 | INSTRUMENT | The registry's own act, with a **time** rd has no field for. rd `recorded` reads `4/25/1911` — agrees. |
 | R2 | p2 · [0.14,0.8700,0.55,0.9200] · plain · "C. Livingston Bostwick, for Wood, Harmon & Co. Broadway, N.Y. City." | 1911-04-25 | INSTRUMENT | Return-to party and the only agent address on either page. A faint mark above "25, 1911" reads as show-through from the reverse; I cannot make it out and do not guess (card 12). |
 | R3 | p1 · [0.00,0.000,1.00,0.070] · marginal · "Vol. 396 PG 1" with handwritten "396" and "1" | 1911-04-25 | INSTRUMENT | Liber and page endorsement. rd `book` 396, `page` 1 — agrees. Page 2 carries "Vol. 396 PG 2" and a handwritten "2". Three counts, reconciled to none (card 8). |
-| R4 | — | — | INSTRUMENT | **No fee, tax or revenue stamp found in either margin at 900 dpi.** Card 5 first state: *I found nothing*, not *the document says there is none*. No rect: there is nothing to point at. |
+
+### Search record — not a row
+
+**No fee, tax or revenue stamp found.** This was `R4`. It is not a lane row, because
+a lane row records what the instrument says and this records **what I did**: card 5's
+first state, *I found nothing*, which is not *the document says there is none*. There
+is no quote because there is nothing on the page to quote, and CITE is right to
+refuse a row asserting an absence with no citation — that is indistinguishable from
+one somebody invented.
+
+What can be pointed at is the search itself, so here it is in a form anyone can
+re-run and falsify:
+
+| region searched | dpi | what is there |
+| --- | --- | --- |
+| p1 · [0.00,0.000,1.00,0.070] | 900 | "Vol. 396 PG 1" scan header; handwritten "396", a slash, "1" |
+| p1 · [0.00,0.920,1.00,1.000] | 1200 | a printed horizontal rule at the left, nothing else |
+| p2 · [0.00,0.000,1.00,0.045] | 900 | "Vol. 396 PG 2" scan header; handwritten "2" |
+| p2 · [0.00,0.900,1.00,1.000] | 1200 | tail of the return-to block, nothing else |
+
+No stamp, no fee figure, no revenue marking in any of the four. rd carries no fee
+field either, so this is `NOT_CHECKABLE` against the index rather than agreement
+(card 9).
 
 ## Index check — rd vs the document
 
