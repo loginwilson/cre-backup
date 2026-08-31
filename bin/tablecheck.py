@@ -140,16 +140,43 @@ def check(path):
     # Collect every ISO date in the file with the word nearest it, then assert
     # signing <= acknowledgment <= recording.  Only fires when at least two of
     # the three are present, so a document that states one date is not failed.
+    # >> READ THE LABELLED BLOCK. Do not scan prose.
+    #
+    #    v2 of this check harvested every date in the file and assigned roles by
+    #    looking for trigger words within +/-140 characters.  The labelled block
+    #    this project now mandates is about 70 characters long, so ALL THREE
+    #    dates sit inside each other's windows and match all three vocabularies.
+    #    `kinds` collapsed to three identical sets and `min(a) > max(b)` became
+    #    unsatisfiable.
+    #
+    #    Extractor C proved it with two probes: the same three dates written on
+    #    consecutive lines AS INSTRUCTED reported zero failures, while the same
+    #    dates separated by 420 characters of filler failed correctly.  A deed
+    #    recorded eight years before it was signed passed clean in the required
+    #    format.  The check built for FT_1000000027200's "sworn 1981, recorded
+    #    1983" was dead on every table written to spec.
+    #
+    #    Worse, scanning the whole file ingested the extractor's own prose
+    #    WARNING about a map-filing date as a date claim.
+    #
+    #    So: parse the three labels and nothing else.  A date the writer did not
+    #    label is not a claim about this document's chronology.
+    LABEL = re.compile(r"^\s*(instrument|acknowledged|recorded)\s*[:=]\s*(\S+)",
+                       re.I | re.M)
     kinds = {}
-    for d, s, e in all_dates(md):
-        window = md[max(0, s - 140):e + 140].lower()
-        for key, words in (("instrument", ("instrument", "made this", "made the",
-                                           "dated", "effective", "date of the deed")),
-                           ("acknowledged", ("acknowledg", "before me", "notar",
-                                             "sworn", "personally came", "jurat")),
-                           ("recorded", ("record", "filed", "endors", "registry"))):
-            if any(w in window for w in words):
-                kinds.setdefault(key, set()).add(d)
+    labelled = False
+    for m in LABEL.finditer(md):
+        labelled = True
+        val = m.group(2).strip().strip("`*|")
+        if val.upper().startswith("UNKNOWN"):
+            continue
+        got = all_dates(val)
+        if got:
+            kinds[m.group(1).lower()] = {got[0][0]}
+    if not labelled:
+        fails.append("DATE  no labelled date block "
+                     "(instrument:/acknowledged:/recorded:) -- chronology "
+                     "unverifiable, and a missing block must never read as a pass")
     order = [k for k in ("instrument", "acknowledged", "recorded") if k in kinds]
     for a, b in zip(order, order[1:]):
         lo, hi = min(kinds[a]), max(kinds[b])
