@@ -139,7 +139,12 @@ COLNAMES = ("#", "citation", "time", "date", "basis", "until", "function", "mode
 #    from the first document onward.
 FUNCS = ("IDENTITY", "TITLE", "ENTITLEMENT", "ENVELOPE", "ENCUMBRANCE", "CAPITAL",
          "PERMIT", "AS_BUILT", "OCCUPANCY", "COST", "VALUE")
-BASES = ("effective", "instrument", "execution", "acknowledgment", "unsupported")
+# >> `recorded` was listed as INVALID, while framework.md mandates a registry lane
+#    whose rows are about the recording.  Readers had to write a basis they knew was
+#    false (`effective`) and the checker passed it silently.  A vocabulary that
+#    excludes the one honest value for a mandated row is the defect, not the row.
+BASES = ("effective", "instrument", "execution", "acknowledgment", "recorded",
+         "unsupported")
 ISO = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 BBLS_OK = re.compile(r"^(?:\d{10}(?:\s*,\s*\d{10})*|SET:\s*\S.*|INSTRUMENT|UNPLACED)$")
 
@@ -232,6 +237,21 @@ def check(path):
     # An event row is one whose first cell looks like an event id (E1, EV003,
     # RC_x-EV001).  Header rows and sub-tables are skipped, not failed.
     ev = [r for r in data if re.match(r"^[`*\s]*(?:[A-Z0-9_]+-)?E[V]?\d+", r[0])]
+    # >> Registry-lane rows are numbered R1, R2 ... precisely BECAUSE they carry no
+    #    function of the eleven.  That put them outside CITE, MARK and FEED at once,
+    #    so the lane holding the fee, the recording hour and the return-to party was
+    #    checked by nothing.  Three readers reported it; one noted that counting them
+    #    as events would have dropped its score from 100% to 84% and flagged it
+    #    rather than take the higher number.  They are cited like any other row, so
+    #    CITE applies -- FEED does not, and that exemption is now explicit.
+    lane = [r for r in data if re.match(r"^[`*\s]*R\d+\b", r[0])]
+    for r in lane:
+        if not any(q in " ".join(r) for q in ('"', "“", "'")):
+            fails.append("CITE  registry row %s carries no quoted evidence"
+                         % r[0].strip("` *"))
+    if lane:
+        notes.append("CITE  %d registry-lane row(s), cited but exempt from FEED "
+                     "(no function of the eleven asks about filing)" % len(lane))
     for r in ev:
         joined = " ".join(r)
         if '"' not in joined and "“" not in joined and "'" not in joined:
@@ -572,9 +592,17 @@ PROBES = [
      _D + _F + _frow(date="April 25, 1911"),
      ["is not sortable"]),
 
+    # >> this probe used to assert `recorded` was invalid.  It was -- and that was
+    #    the defect: framework.md mandates a registry lane whose rows ARE about the
+    #    recording, so the vocabulary excluded the only honest value for a mandated
+    #    row.  `recorded` is now legal; the probe tests a genuinely absent term.
     ("a basis outside the vocabulary is refused",
-     _D + _F + _frow(basis="recorded"),
+     _D + _F + _frow(basis="filed"),
      ["is not one of"]),
+
+    ("`recorded` is a legal basis, for registry-lane rows",
+     _D + _F + _frow(basis="recorded"),
+     []),
 
     ("a function outside the eleven is refused",
      _D + _F + _frow(func="REGISTRY"),

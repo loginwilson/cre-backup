@@ -48,9 +48,16 @@ location; the variation goes in `terms`. Twenty prohibited trades in one covenan
 
 ## 3 · `STRUCK` IS A MODE, AND NOT EVERY STRIKE EARNS A ROW
 
-The instrument **considered this and removed it before execution.** Not `TERMINATE`
-(which reads downstream as *a burden was released* — false), not `MODIFY` (which
-says the world changed when only the form did), not an asserted absence.
+The instrument **considered this clause and removed it.** Not `TERMINATE` (which
+reads downstream as *a burden was released* — false), not `MODIFY` (which says the
+world changed when only the form did), not an asserted absence.
+
+⚠ **`STRUCK` claims the mark, not the moment.** An earlier wording defined it as
+removal *"before execution"* — which card 1 says is permanently unrecoverable from
+these scans. **The mode's own definition asserted what the card set forbids
+claiming.** Three readers reported the contradiction; all used the mode anyway,
+because it is plainly right, and said so in `terms`. If timing matters to a consumer,
+it is `uncertain`.
 
 **A strike earns a row when the struck text, if left standing, would have changed
 what the instrument does.** Otherwise it goes in `terms`.

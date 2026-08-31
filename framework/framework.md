@@ -132,7 +132,7 @@ The rest are **context**, for a human and for Derive.
 | 2 | `citation` | — | `page · rect · mark · quote` | a quote with no rect on a mark-dependent row |
 | 3 | **`date`** | **yes** | ISO `YYYY-MM-DD`, or `UNKNOWN` | `April 25, 1911` · `1911` · `circa 1911` |
 | 4 | `basis` | yes | `effective` · `instrument` · `execution` · `acknowledgment` · `UNSUPPORTED` | `recorded` — recording is not an event date |
-| 5 | `until` | yes | ISO date, or **blank** if it does not stop | a duration (*"three years"*) — compute it |
+| 5 | `until` | yes | ISO date · **blank** = does not stop · `UNKNOWN(<reason>)` | a duration (*"three years"*) — compute it |
 | 6 | **`function`** | **yes** | exactly one of the eleven | two functions in one cell · anything else |
 | 7 | `mode` | yes | `ASSERT` · `TRANSFER` · `CREATE` · `MODIFY` · `TERMINATE` · `STRUCK` | a verb of your own |
 | 8 | **`bbls`** | **yes** | see below | any description of a place |
@@ -148,6 +148,19 @@ other; a cell reading *"1911-04-14 (instrument date)"* forces a parse.
 1915-01-01 has no terminating document — without `until`, Resolve would carry the
 burden forever, and every statement about that parcel after 1915 would be wrong.
 
+> ⚠ **`until` has three states, and blank is a claim.** Blank means *this does not
+> stop* — an affirmative assertion of perpetuity. When an expiry clause exists but
+> you cannot tell whether it reaches this row, write **`UNKNOWN(<reason>)`**. Never
+> use blank as a shrug.
+>
+> *Forced by m1, 5 of 5 readers, and it has a measured cost:* the expiry sentence
+> sweeps *"all restrictions and covenants in this instrument"*, and whether that
+> reaches the grantor's reserved rights is unsettleable from the page. With only two
+> states available, five readers with identical instructions populated `until` on
+> **9 · 16 · 7 · 14 · 10** rows — a two-fold spread on a machine field, from one
+> clause. One reader wrote blank and a date on two adjacent rows and called it
+> *"opposite guesses, same unresolvable clause."*
+
 ### `bbls` — a list, because one event can bind many parcels
 
 | form | means | Reorganize |
@@ -157,6 +170,17 @@ burden forever, and every statement about that parcel after 1915 would be wrong.
 | `SET: <criterion>` | a set the document defines but does not enumerate — *"all lots in plat 995 B"* | **deferred**, resolvable when the plat is decoded |
 | `INSTRUMENT` | about the paper, not a parcel — registry lane rows | no fan |
 | `UNPLACED` | the document does not place it | no fan, flagged |
+
+**A row about a *party* carries the subject BBLs.** Corporate existence, signing
+capacity, execution, acknowledgment — these are not about the paper and the document
+does place them, so neither `INSTRUMENT` nor `UNPLACED` is true. *Who owned this in
+1911, and were they competent to convey it* **is** per-parcel history, and Reorganize
+must be able to fan it or the parcel loses its own chain.
+
+> *Forced by m1, 4 of 5 readers, who split three ways on the same rows and each said
+> the schema gave them no true option. `INSTRUMENT` was used 7 times across 99 rows,
+> outside its own stated scope. Stated here so the choice is deterministic rather
+> than per-reader.*
 
 ⚠ **`SET:` is a criterion, not a description.** A later pass must be able to
 evaluate it. *"lots on four named streets"* is prose — it reaches no parcel, and it
